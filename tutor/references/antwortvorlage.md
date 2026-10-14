@@ -1,10 +1,12 @@
 # Antwortvorlage
 
-Abschnitte in genau dieser Reihenfolge ausgeben. In Klammern steht, in welchem Modus ein Abschnitt erscheint (K = Kurz, S = Standard, V = Vollständig).
+Katalog aller Abschnitte. Ausgeben in der Reihenfolge ihrer Nummern, aber nur die, die die Moduldatei vorsieht.
 
 Die Überschriften stehen immer genau so auf Deutsch da, in jeder Erklärsprache: Sie sind das Prüfungsvokabular und machen die Struktur wiedererkennbar. Der Text unter den Überschriften steht in der Erklärsprache, außer bei 📄 Aufgabentext und 🇩🇪 Klausur-Lösung.
 
-## A. Kern (K, S, V)
+Welche Abschnitte ein Modus ausgibt, steht in seiner Datei unter `modes/`. Abschnitte mit * erscheinen nur, wenn ihre Bedingung zutrifft (Foto/PDF, neues Werkzeug, Erklärsprache nicht Deutsch, Versuch vorhanden).
+
+## A. Kern
 
 0. **🔍 Diagnose deines Versuchs** – nur wenn ein Lösungsversuch dabei ist: was richtig ist, wo der erste Fehler liegt, Fehlerart (konzeptionell / Rechenfehler / Einheiten / Vorzeichen). Danach normal weiter.
 1. **📄 Aufgabentext** – in Originalsprache (meist Deutsch), nur bei Foto/PDF.
@@ -18,7 +20,7 @@ Die Überschriften stehen immer genau so auf Deutsch da, in jeder Erklärsprache
 9. **🇩🇪 Klausur-Lösung** – immer auf Deutsch, so knapp wie in der Klausur: Ansatz, wesentliche Schritte, Ergebnis.
 10. **🎓 Klausur-Tipp** – Stolpersteine, schnellerer Weg falls vorhanden, was für volle Punktzahl üblicherweise hingeschrieben wird.
 
-## B. Vertiefung (nur V)
+## B. Vertiefung
 
 11. **🎯 Kernidee** – ein Satz: welches Prinzip diesen Aufgabentyp lösbar macht.
 12. **🚫 Falscher Weg** – ein verlockender Fehlansatz und warum er scheitert.
@@ -26,15 +28,15 @@ Die Überschriften stehen immer genau so auf Deutsch da, in jeder Erklärsprache
 14. **🔀 Alternativer Weg** – nur wenn schneller oder klausurüblich, höchstens zwei.
 15. **🗂 Wiederholungskarte** – eine Frage, eine kurze Antwort, zum Wiederholen nach zwei Tagen.
 
-## C. Übung (S, V)
+## C. Übung
 
 16. **🏋️ Übung** – zwei kurze Aufgaben desselben Typs: Übung 1 halb gelöst (der Lernende ergänzt), Übung 2 ungelöst. Bei sehr einfachen Aufgaben genügt eine.
 
-## D. Abschluss (alle Modi)
+## D. Abschluss
 
-17. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist (in jedem Modus): Tabelle Erklärsprache | Deutsch, nur neue Begriffe.
+17. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist: Tabelle Erklärsprache | Deutsch, nur neue Begriffe.
 18. **➡️ Nächster Schritt** – genau eine konkrete Aktion mit Zeitangabe.
-19. **🔒 Lösungen** – ganz am Ende, für alle Aufgaben gesammelt: kurze Lösungen der Übungen. Nur in S und V.
+19. **🔒 Lösungen** – ganz am Ende, für alle Aufgaben gesammelt: kurze Lösungen der Übungen (im Modus Tipp zusätzlich die vollständige Lösung der Aufgabe).
 
 ## Mini-Beispiel für Abschnitt 6 (Form, nicht Inhalt; Erklärsprache Deutsch)
 
