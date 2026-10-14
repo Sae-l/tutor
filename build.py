@@ -26,6 +26,15 @@ for m in MODES:  # file names -> headings of the appended sections
 out = out.replace("`references/antwortvorlage.md`", "dem Abschnitt „Antwortvorlage“ unten")
 
 assert "references/" not in out and "modes/" not in out, "unresolved file reference left in prompt"
+
+# Hand-written short version for instruction fields with a character limit (Custom GPT: 8000).
+SHORT_LIMIT = 8000
+short = (SKILL / "references" / "kurzfassung.md").read_text(encoding="utf-8").strip() + "\n"
+assert len(short) <= SHORT_LIMIT, f"Kurzfassung hat {len(short)} Zeichen, Limit {SHORT_LIMIT}"
+assert "references/" not in short and "modes/" not in short, "file reference left in short prompt"
+
 (ROOT / "dist").mkdir(exist_ok=True)
 (ROOT / "dist" / "system-prompt.md").write_text(out, encoding="utf-8")
+(ROOT / "dist" / "system-prompt-kurz.md").write_text(short, encoding="utf-8")
 print(f"dist/system-prompt.md: {len(out)} Zeichen")
+print(f"dist/system-prompt-kurz.md: {len(short)} Zeichen (Limit {SHORT_LIMIT})")

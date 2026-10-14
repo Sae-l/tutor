@@ -30,7 +30,11 @@ Die Befehle verstehen auch natürliche Wörter in allen fünf Sprachen (z. B. �
 |---|---|
 | `tutor/` | Quelle: Claude-Skill (`SKILL.md` + `references/`) |
 | `dist/system-prompt.md` | Erzeugt: eine einzige, selbstständige Prompt-Datei für alle anderen Plattformen |
+| `tutor/references/kurzfassung.md` | Quelle: handgeschriebene Kurzfassung (höchstens 8000 Zeichen, Build bricht sonst ab) |
+| `dist/system-prompt-kurz.md` | Erzeugt: Kurzfassung für Felder mit Zeichenlimit (Custom GPT: 8000; Gemini und Copilot nicht geprüft, 8000 als vorsichtiger Wert) |
 | `build.py` | Erzeugt `dist/` aus der Quelle |
+
+Die Kurzfassung ist eine eigene Textquelle und wird **nicht** automatisch aus den Moduldateien abgeleitet. Ändert sich Verhalten in `tutor/`, die Kurzfassung von Hand angleichen; die Tests prüfen nur Länge, Befehle, Sprachcodes und Kernregeln.
 
 Änderungen nur in `tutor/` machen, danach `python build.py` ausführen und beides committen.
 

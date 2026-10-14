@@ -68,6 +68,34 @@ class BuildTests(unittest.TestCase):
         self.assertNotEqual(self.build().returncode, 0)
         self.assertEqual(before, target.read_bytes())
 
+    def test_short_prompt_fits_limit_and_is_current(self):
+        self.assertEqual(self.build().returncode, 0)
+        built = (self.root / "dist/system-prompt-kurz.md").read_bytes()
+        self.assertEqual(built, (ROOT / "dist/system-prompt-kurz.md").read_bytes())
+        self.assertLessEqual(len(built.decode("utf-8")), 8000)
+        self.assertNotRegex(built.decode("utf-8"), r"(?:references/|modes/|SKILL\.md)")
+
+    def test_short_prompt_keeps_commands_languages_and_core_rules(self):
+        router = (self.root / "tutor/SKILL.md").read_text(encoding="utf-8")
+        commands = re.findall(r"^\| (?:\(keiner\) oder )?`!([^`]+)`", router, re.M)
+        self.assertEqual(len(commands), 9)
+        self.assertEqual(self.build().returncode, 0)
+        short = (self.root / "dist/system-prompt-kurz.md").read_text(encoding="utf-8").lower()
+        for command in commands:
+            self.assertIn(command.lower(), short, command)
+        for needle in ("[ar]", "[tr]", "[uk]", "[fr]", "[de]", "!an", "!aus",
+                       "lösungsschutz", "$$", "\\boxed", "ascii", "dezimalkomma"):
+            self.assertIn(needle, short, needle)
+
+    def test_overlong_short_prompt_does_not_overwrite_output(self):
+        self.assertEqual(self.build().returncode, 0)
+        targets = [self.root / "dist/system-prompt.md", self.root / "dist/system-prompt-kurz.md"]
+        before = [t.read_bytes() for t in targets]
+        with (self.root / "tutor/references/kurzfassung.md").open("a", encoding="utf-8") as file:
+            file.write("\n" + "x" * 8000 + "\n")
+        self.assertNotEqual(self.build().returncode, 0)
+        self.assertEqual(before, [t.read_bytes() for t in targets])
+
     def test_display_examples_have_ascii_and_balanced_braces(self):
         examples = []
         for path in (self.root / "tutor").rglob("*.md"):

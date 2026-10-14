@@ -20,6 +20,7 @@ Lern-Agent für Physik und Mathematik im ersten Studienjahr (B.Eng. Elektrotechn
 - Fertig: 9 Modi, Ein-Wort-Befehle, Dauermodus `!an`/`!aus` mit Statuszeile, Hilfe-Karte, Eskalation erklär → tipp → lösung, 5 Sprachen, Universal-Prompt.
 - Geprüft: Skill-Validierung, Konsistenz Befehle ↔ Moduldateien ↔ Abschnittsnummern.
 - Überarbeitet: Moduspriorität, Sprachpersistenz, deutsche Aufgabenübersetzung, Lösungsschutz auf Abruf, Mehrfachaufgaben ohne Lösungsverrat, Check ohne erfundene Fehler.
+- Kurzfassung: `tutor/references/kurzfassung.md` → `dist/system-prompt-kurz.md` (6 408 Zeichen, Limit 8 000 im Build); von Hand mit den Moduldateien abgleichen, nicht automatisch abgeleitet. Im Modell nicht getestet.
 - Build-Regressionstests: `python -B -m unittest discover -s tests -v`. Manuelle Abnahmefälle stehen in `tests/akzeptanz.md`; sie sind vorbereitet, nicht ausgeführt.
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
