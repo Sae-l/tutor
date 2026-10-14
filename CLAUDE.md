@@ -8,6 +8,7 @@ Lern-Agent für Physik und Mathematik im ersten Studienjahr (B.Eng. Elektrotechn
 - `tutor/references/antwortvorlage.md` – Katalog der nummerierten Abschnitte 0–19; Moduldateien wählen Abschnitte per Nummer.
 - `tutor/references/latex-regeln.md` – Formatregeln (nur `$$…$$`, nur ASCII in LaTeX); aus echten Darstellungsfehlern entstanden.
 - `build.py` → `dist/system-prompt.md` (alles in einer Datei, Dateiverweise durch Abschnittsnamen ersetzt).
+- `docs/KONZEPT.md` – Hintergrund: Ziel, lernwissenschaftliche Grundlagen mit Quellen, Funktionen, Architekturentscheidungen. Vor inhaltlichen Änderungen an Modi lesen.
 
 ## Arbeitsregeln
 - Nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten.
