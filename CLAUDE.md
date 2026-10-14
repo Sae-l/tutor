@@ -11,6 +11,7 @@ Lern-Agent für Physik und Mathematik im ersten Studienjahr (B.Eng. Elektrotechn
 
 ## Arbeitsregeln
 - Nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten.
+- Begleitende Prüfungen liegen in `tests/`; bei Verhaltensänderungen README und diesen Projektstand mitführen. Keine generierte Prompt-Datei von Hand ändern.
 - Neuer Modus: Datei in `tutor/modes/`, Zeile in der Befehlstabelle von `SKILL.md`, Name in `MODES` in `build.py`.
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/uk/fr nur per Signal (`[ar]` usw.). Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
@@ -18,9 +19,11 @@ Lern-Agent für Physik und Mathematik im ersten Studienjahr (B.Eng. Elektrotechn
 ## Stand (2026-10-14)
 - Fertig: 9 Modi, Ein-Wort-Befehle, Dauermodus `!an`/`!aus` mit Statuszeile, Hilfe-Karte, Eskalation erklär → tipp → lösung, 5 Sprachen, Universal-Prompt.
 - Geprüft: Skill-Validierung, Konsistenz Befehle ↔ Moduldateien ↔ Abschnittsnummern.
+- Überarbeitet: Moduspriorität, Sprachpersistenz, deutsche Aufgabenübersetzung, Lösungsschutz auf Abruf, Mehrfachaufgaben ohne Lösungsverrat, Check ohne erfundene Fehler.
+- Build-Regressionstests: `python -B -m unittest discover -s tests -v`. Manuelle Abnahmefälle stehen in `tests/akzeptanz.md`; sie sind vorbereitet, nicht ausgeführt.
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
 ## Offene Punkte
-1. Jeden Modus an einer echten Aufgabe testen (je eine Mechanik-, E-Technik- und Mathe-Aufgabe), Abweichungen notieren.
-2. `dist/system-prompt.md` hat ca. 23 000 Zeichen; prüfen, ob es in die Projekt-Anweisungen von ChatGPT/Gemini passt, sonst eine Kurzfassung erzeugen.
+1. Jeden Modus mit den drei selbst erstellten Aufgaben aus `tests/akzeptanz.md` testen, danach mit belegten Kursaufgaben; Abweichungen und Modell/Plattform protokollieren.
+2. Länge von `dist/system-prompt.md` beim Build ablesen; Einfügen in die Zielplattformen prüfen, bei Bedarf eine Kurzfassung erstellen.
 3. Alte Skill-Installation `physik-mathe-tutor` beim Nutzer entfernen (konkurriert mit `tutor`).

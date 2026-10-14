@@ -10,3 +10,4 @@ Ziel: Den eigenen Lösungsversuch prüfen und nur dort helfen, wo er falsch ist.
 - Den **ersten** Fehler benennen, mit Art (konzeptionell / Rechenfehler / Einheiten / Vorzeichen) und Grund. Folgefehler nicht einzeln aufzählen.
 - Ab dem ersten Fehler korrekt weiterrechnen; was vorher stimmt, nicht wiederholen.
 - Unleserliche Stellen im Foto als [unleserlich] markieren und nicht als Fehler werten.
+- Ist alles korrekt, das konkret bestätigen und keine Fehler oder Korrektur erfinden. Fehlt ein Versuch, genau einmal darum bitten; keine vollständige Neulösung ausgeben.

@@ -4,7 +4,7 @@ Lern-Tutor für Physik und Mathematik im ersten Studienjahr (B.Eng. Elektrotechn
 
 **Sprache:** standardmäßig Deutsch. Umschalten mit einem Signal in der Nachricht: `[ar]` Arabisch, `[tr]` Türkisch, `[uk]` Ukrainisch, `[fr]` Französisch, `[de]` zurück zu Deutsch. Überschriften, Aufgabentext und Klausur-Lösung bleiben immer deutsch.
 
-**Befehle:** ein Wort als erstes Wort oder als ganze Nachricht (z. B. Foto + „tipp“), oder mit `!` irgendwo; kombinierbar mit dem Sprachcode, z. B. `tipp [ar]`. „tutor“ oder „hilfe“ zeigt die Befehlskarte. Empfohlene Reihenfolge beim Lernen: **erklär → tipp → lösung**.
+**Befehle:** ein Befehlswort oder eine aufgeführte Wortgruppe am Nachrichtenanfang (z. B. Foto + „tipp“), oder mit `!` in der eigenen Anweisung; kombinierbar mit dem Sprachcode, z. B. `tipp [ar]` oder `[ar] tipp`. „tutor“ oder „hilfe“ zeigt die Befehlskarte. Empfohlene Reihenfolge beim Lernen: **erklär → tipp → lösung**.
 
 | Befehl | Wirkung |
 |---|---|
@@ -22,6 +22,8 @@ Die Befehle verstehen auch natürliche Wörter in allen fünf Sprachen (z. B. �
 
 **Dauermodus:** `!an tipp` (oder ein anderer Befehl) gilt für alle folgenden Aufgaben, bis `!aus` kommt. Ein Einzelbefehl überschreibt ihn nur für diese eine Nachricht. Jede Antwort zeigt dann oben den aktiven Modus und die Sprache.
 
+**Lösungsschutz:** Ohne geprüfte Aufklappfunktion bleiben Übungs- und Tipp-Lösungen bis zum ausdrücklichen Abruf zurückgehalten. `lösung Übung 2` zeigt gezielt die zweite Lösung. Das Symbol 🔒 allein versteckt keinen Text. Im Erklärmodus bleiben auch bei mehreren Aufgaben die Originalergebnisse zurückgehalten.
+
 ## Aufbau
 
 | Pfad | Zweck |
@@ -31,6 +33,12 @@ Die Befehle verstehen auch natürliche Wörter in allen fünf Sprachen (z. B. �
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 
 Änderungen nur in `tutor/` machen, danach `python build.py` ausführen und beides committen.
+
+## Prüfung
+
+`python -B -m unittest discover -s tests -v` prüft den reproduzierbaren Build, die neun Modusdateien, offene Dateiverweise, Formel-Beispiele und den Erhalt der bisherigen Ausgabe bei fehlenden Quellen.
+
+[tests/akzeptanz.md](tests/akzeptanz.md) enthält 27 vorbereitete Fach-/Modusfälle und 18 Zustands- und Grenzfälle. Diese Modelltests sind noch nicht ausgeführt; bestandene Strukturtests belegen kein korrektes Tutorverhalten. Die Testdaten sind selbst erstellte Aufgaben.
 
 ## Einrichtung je Plattform
 
