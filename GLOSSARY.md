@@ -15,7 +15,7 @@ Der Lern-Agent als Ganzes, unabhängig davon, in welcher Form er läuft.
 _Avoid_: Bot, Assistent
 
 **Skill**:
-Die Claude-Quelle in `tutor/` aus `SKILL.md`, `modes/` und `references/`; einzige Quelle der Wahrheit.
+Die gemeinsame Quelle in `tutor/` aus `SKILL.md`, `modes/` und `references/`; einzige Quelle der Wahrheit für Claude, natives ChatGPT-Plugin und System-Prompt.
 _Avoid_: Agent-Ordner
 
 **System-Prompt**:
@@ -29,6 +29,9 @@ _Avoid_: Kurzfassung (abgelöst), Mini-Prompt, Light-Version
 **Kurspaket**:
 Eine optionale Datei mit Notation und Stoffumfang eines bestimmten Kurses, die der Lernende zusätzlich mitgibt; liegt in `kurse/`, nie im Skill.
 _Avoid_: Kursreferenz
+
+**ChatGPT-Plugin**:
+Das aus der Skillquelle erzeugte Paket mit Manifest und Lizenz unter `dist/chatgpt/plugins/tutor/` und als Importarchiv `dist/tutor-chatgpt.zip`. Der lokale Marketplace unter `dist/chatgpt/` ist ein zusätzlicher Desktop-Installationsweg; er ist keine öffentliche Veröffentlichung.
 
 ### Steuerung
 

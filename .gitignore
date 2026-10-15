@@ -5,9 +5,14 @@ skills-lock.json
 # Python und Testläufe
 __pycache__/
 .test-build-*/
+.build-*/
+# Der erzeugte Marketplace gehört zu dist/, nicht zu lokalen Werkzeugzuständen.
+!dist/chatgpt/.agents/
+!dist/chatgpt/.agents/**
 # Kursunterlagen des Dozenten, nur lokal als Kontext; nicht weitergeben
 referenzen/
 # Lokal gebaute Release-Pakete
 *.zip
+!dist/tutor-chatgpt.zip
 SHA256SUMS*
 .claude/

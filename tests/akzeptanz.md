@@ -1,6 +1,6 @@
 # Manuelle Abnahme des Tutors
 
-Status: vorbereitet für v0.2, **noch nicht mit einem Modell ausgeführt**. Die Python-Tests prüfen nur den Build und die Struktur, nicht das Lehrverhalten oder die Darstellung. Aufgaben hier sind selbst erstellt, keine offiziellen Klausuraufgaben (Ausnahme: Abschnitt „Kursaufgaben“).
+Status: Zieloberflächenabnahme für v0.2 offen. Ein begrenzter [Claude-CLI-Ersatzlauf](protokolle/2026-10-15-claude-code-cli.md) führte 16 Fälle aus, drei bestanden nicht; er ist kein Gate und kein ChatGPT-Nachweis. Die Python-Tests prüfen nur den Build und die Struktur, nicht das Lehrverhalten oder die Darstellung. Aufgaben hier sind selbst erstellt, keine offiziellen Klausuraufgaben (Ausnahme: Abschnitt „Kursaufgaben“).
 
 ## Release-Gate
 
@@ -8,8 +8,9 @@ Bewertung nach Issue #3; Plattformen nach #15 (Map #9):
 
 | Oberfläche | Prompt | Fälle | Blockiert die Freigabe? |
 |---|---|---|---|
-| Claude Skill (hochgeladenes ZIP, siehe CONTRIBUTING) | Skill | alle 62: M01-A … M10-C (30) und G01 … G32 (32) + D1 … D3 | ja |
+| Claude Skill (hochgeladenes ZIP, siehe CONTRIBUTING) | Skill | alle 63: M01-A … M10-C (30) und G01 … G33 (33) + D1 … D3 | ja |
 | ChatGPT Projekt | Anweisung `dist/kern.md`, Wissensdatei `dist/system-prompt.md` | M01-B … M10-B (10, Ohmsches Gesetz) + G02, G03, G05, G25, G26, G28 + Darstellungsprüfung | nein; „experimentell“, Fehler als Grenze im README nennen |
+| ChatGPT Plugin (Archivimport oder lokaler Marketplace nach `docs/CHATGPT.md`) | genau gebautes `dist/tutor-chatgpt.zip` bzw. `dist/chatgpt/` | H01 … H05, M01-B … M10-B, G02, G03, G05, G13, G25, G26, G28, G29, G32, G33 + D1 … D3 | nein; begrenzter Kompatibilitätslauf, bis dahin „experimentell“ |
 | Kursaufgaben K01 … K06 | Skill | 6 | nein, nicht Teil von v0.2 |
 
 **Bewertung:** Ein Fall ist bestanden, wenn **jede** Teilaussage seines Kriteriums zutrifft; Richtigkeit gegen die Spalte „Prüfergebnis“. Ein Lauf je Fall, jeweils in einem neuen Gespräch ohne anderen Projektkontext. Urteil durch den Prüfer. Protokoll je Oberflächenlauf in `tests/protokolle/` nach der Vorlage dort.
@@ -24,6 +25,18 @@ Bewertung nach Issue #3; Plattformen nach #15 (Map #9):
 | „kurze Schritte“ | jeder Schritt höchstens drei Sätze Text vor seiner Gleichung |
 | „ungefähr ein Bildschirm“ | höchstens 35 dargestellte Zeilen |
 | „ohne zusätzlichen Lehrvortrag“ | höchstens zwei Sätze außerhalb von Klausur-Lösung, Ergebnis und Anmerkung |
+
+## Native ChatGPT-Installation und Aktivierung (H01 … H05)
+
+Je Fall ein neuer Chat; genaue installierte Pluginversion, Commit und Dateihashes ins Protokoll. Kein Projekt mit zusätzlichem Tutor-Prompt gleichzeitig nutzen. Bei fehlender Zieloberfläche Fälle als „nicht geprüft“ führen. Ein erfolgreicher Paketbau ersetzt keinen dieser Fälle.
+
+| ID | Eingabe / Handlung | Erwartung |
+|---|---|---|
+| H01 | Pluginarchiv importieren oder lokalen Marketplace registrieren; Tutor installieren, über `@` auswählen und `hilfe` senden | Plugin und Skill auswählbar, Befehlskarte mit elf Modi, keine fehlenden Modus-/Referenzdateien. |
+| H02 | Ohne explizite Auswahl: „Hilf mir beim Verstehen: An 2,0 kOhm liegen 12 V. Bestimme den Strom.“ | Tutor wird automatisch gewählt; Erklär ohne Ergebnis oder entscheidende Umstellung. Aktivierung anhand der verfügbaren UI-Anzeige protokollieren. |
+| H03 | Ohne explizite Auswahl: „Erstelle Lernkarten zur Photosynthese.“ | Tutor wird nicht gewählt; das Anliegen liegt außerhalb seiner Beschreibung. |
+| H04 | Tutor explizit wählen, `check` ohne Versuch | Einmal um den Lösungsversuch bitten; keine erfundene Aufgabe oder Lösung. |
+| H05 | Tutor explizit wählen, `skizze: U-I-Kennlinie eines Widerstands von 2,0 kOhm zwischen 0 und 12 V` | Mit Werkzeug beschriftete Grafik; ohne Werkzeug Achsen-/Verlaufsbeschreibung, Tabelle und lauffähiger Code gemäß M06-B; keine Behauptung einer nicht ausgeführten Zeichnung. |
 
 ## Modusfälle (M01-A … M10-C)
 
@@ -48,9 +61,9 @@ Jeden der zehn Aufgabenmodi (Hilfe siehe Grenzfälle) in einem neuen Gespräch m
 | M09 | lang | Richtige Lösung auf dem Hauptweg plus höchstens zwei andere Wege mit demselben Ergebnis, je mit „wann besser“; kein erfundener Weg, wenn es keinen sinnvollen gibt. |
 | M10 | klausur | Kompakte richtige Lösung; Klausur-Tipp mit Punktsicherung, zwei typischen Punktverlusten, Kontrollweg und Zeitangabe; keine Behauptung über Bewertungskriterien einer bestimmten Hochschule. |
 
-## Zustands- und Grenzfälle (G01 … G32)
+## Zustands- und Grenzfälle (G01 … G33)
 
-In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten gemeint. Fotofälle (G09, G19, G20) brauchen ein Bild; Dateiname ins Protokoll. Alle Fälle sind noch offen.
+In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten gemeint. Fotofälle (G09, G19, G20) brauchen ein Bild; Dateiname ins Protokoll. Die Zieloberflächenläufe sind offen; vorhandene CLI-Teilergebnisse gelten nur für ihren dort dokumentierten Stand.
 
 | ID | Eingabe / Folge | Erwartung |
 |---|---|---|
@@ -86,6 +99,7 @@ In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten g
 | G30 | `[uk]` + Aufgabe | Hinweis, dass nur die sechs Sprachen vorgesehen sind; Antwort auf Deutsch. |
 | G31 | `!sprache en` + Aufgabe → nächste Aufgabe | Englische Erklärung, deutsche Überschriften und Klausur-Lösung; Sprache bleibt Englisch. |
 | G32 | Auswahlfrage aus Übungsblatt („Welche Aussagen treffen zu?“) ohne Befehl → `lösung` | Thema erklärt, keine Option beurteilt; Antwort erst nach „lösung“. |
+| G33 | „Auf Arabisch: erklär“ + E-Technik-Aufgabe → nächste Aufgabe ohne Signal → „auf Deutsch“ + Aufgabe | Natürlicher ausdrücklicher Sprachwunsch wirkt wie `[ar]`, bleibt erhalten und wechselt auf Deutsch zurück; Überschriften bleiben Deutsch. |
 
 ## Kursaufgaben (K01 … K06)
 

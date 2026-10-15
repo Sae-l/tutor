@@ -1,0 +1,20 @@
+{
+  "name": "tutor-local",
+  "interface": {
+    "displayName": "Tutor"
+  },
+  "plugins": [
+    {
+      "name": "tutor",
+      "source": {
+        "source": "local",
+        "path": "./plugins/tutor"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
