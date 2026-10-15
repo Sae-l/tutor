@@ -19,15 +19,15 @@ python -B -m unittest discover -s tests -v
 ```
 
 1. Verhalten nur in `tutor/` ändern. `dist/` wird erzeugt und nie von Hand bearbeitet.
-2. Ändert sich Verhalten, `tutor/references/kurzfassung.md` von Hand angleichen (sie wird nicht abgeleitet).
+2. Gehört eine Regel in den Kern (für Plattformen mit kurzem Anweisungsfeld), sie in `tutor/SKILL.md` innerhalb von `<!-- kern -->` … `<!-- /kern -->` schreiben; der Build bricht ab, wenn `dist/kern.md` über 4000 Zeichen kommt.
 3. `python build.py`, Tests ausführen, `tutor/` und `dist/` gemeinsam committen.
 4. README, `CLAUDE.md` und `CHANGELOG.md` nachführen.
 5. Änderungen über einen Branch und Pull Request nach `main`; die CI muss grün sein.
 6. Betroffene Akzeptanzfälle nach der Wiederholungsregel in `tests/akzeptanz.md` erneut prüfen und protokollieren.
 
-Neuer Modus: Datei in `tutor/modes/`, Zeile in der Befehlstabelle von `tutor/SKILL.md`, Name in `MODES` in `build.py`, Zeile in der Kurzfassung.
+Neuer Modus: Datei in `tutor/modes/` und Zeile in der Befehlstabelle von `tutor/SKILL.md`; `build.py` liest die Modi aus der Tabelle. Die erwartete Anzahl (11) in `build.py` und `tests/test_build.py` anpassen, Befehlskarte in `modes/hilfe.md` und Akzeptanzfälle ergänzen. Kurspakete gehören nach `kurse/`, nie nach `tutor/`.
 
-Werkzeugzustände (`.claude-flow/`, `.agents/`, `skills-lock.json`) und Kursunterlagen (`referenzen/`) sind per `.gitignore` ausgeschlossen. Vor jedem Commit mit `git status` prüfen, dass nur gewollte Dateien vorgemerkt sind.
+Werkzeugzustände (`.claude-flow/`, `.agents/`, `.claude/`, `skills-lock.json`) und Kursunterlagen (`referenzen/`) sind per `.gitignore` ausgeschlossen. Vor jedem Commit mit `git status` prüfen, dass nur gewollte Dateien vorgemerkt sind.
 
 ## Release
 

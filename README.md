@@ -1,23 +1,22 @@
-# tutor – Physik- und Mathe-Tutor als Claude-Skill und System-Prompt
+# tutor – MINT-Lern-Tutor als Claude-Skill und System-Prompt
 
-Prompt- und Skill-Sammlung für einen Lern-Tutor in Physik und Mathematik im ersten Studienjahr (B.Eng. Elektrotechnik, TH Köln). Ausgelegt für Anfänger mit ADHS (Designziel, keine nachgewiesene Wirkung): erst anschaulich, dann schrittweise Rechnung, Klausur-Lösung auf Deutsch, Lösungen von Übungen erst auf Abruf. Kein Programm, kein Dienst: Der Tutor läuft als Anweisung in Claude oder ChatGPT.
+Lern-Tutor für Aufgaben aus dem ersten Studienjahr in MINT-Fächern (Physik, Mathematik, E-Technik) an deutschsprachigen Hochschulen. Erst verstehen, dann selbst lösen: Erklärung ohne fertige Lösung, Leitfragen, Fehlerdiagnose des eigenen Versuchs, Klausur-Lösung auf Deutsch, Lösungen erst auf Abruf. Erklärungen auf Deutsch oder auf Wunsch in Arabisch, Türkisch, Französisch, Englisch oder Urdu. ADHS-freundlich gestaltet (kurze Schritte, feste Struktur; Designziel, keine nachgewiesene Wirkung). Kein Programm, kein Dienst: Der Tutor läuft als Anweisung in Claude oder ChatGPT.
 
-## Status und Nutzung
+## Status
 
-- **Status: Vorabstand, nicht abgenommen.** Build und Strukturtests laufen; die Abnahme des Lehrverhaltens mit einem Modell ([tests/akzeptanz.md](tests/akzeptanz.md)) ist vorbereitet, aber noch nicht ausgeführt. Releases sind bis dahin Vorabversionen (`v0.x.0-rc.N`).
-- **Nutzung:** persönliches Projekt eines einzelnen Lernenden; Weitergabe an andere wird nicht unterstützt ([Issue #2](https://github.com/Sae-l/tutor/issues/2)).
-- **Rechte:** [MIT-Lizenz](LICENSE). Kursunterlagen des Dozenten gehören nicht zum Projekt und werden nicht versioniert (`referenzen/` ist ausgeschlossen).
+- **Vorabstand v0.2, nicht abgenommen.** Build und Strukturtests laufen; die Abnahme des Lehrverhaltens mit einem Modell ([tests/akzeptanz.md](tests/akzeptanz.md)) ist vorbereitet, aber noch nicht ausgeführt.
+- **Rechte:** [MIT-Lizenz](LICENSE).
+- **Feedback:** [Issue anlegen](https://github.com/Sae-l/tutor/issues/new) oder im Tutor `!issue` schreiben. Issues sind öffentlich: keine Aufgabentexte, Namen oder Fotos mit persönlichen Daten einfügen.
 
 ## Welche Variante?
 
-Freigabematrix nach [Issue #4](https://github.com/Sae-l/tutor/issues/4):
-
-| Plattform | Datei | Stand |
+| Plattform | Dateien | Stand |
 |---|---|---|
-| **Claude Skill** (empfohlen) | Ordner `tutor/` als ZIP | primär; Abnahme mit allen Akzeptanzfällen vorgesehen |
-| ChatGPT Projekt | `dist/system-prompt.md` | sekundär; Teilabnahme vorgesehen |
-| Claude Projekt, Gemini Gem, Copilot | `dist/system-prompt.md` | experimentell, nicht geprüft |
-| ChatGPT Custom GPT | `dist/system-prompt-kurz.md` | experimentell, nicht geprüft |
+| **Claude Skill** (empfohlen) | Ordner `tutor/` als ZIP | primär; Release-Gate mit allen Akzeptanzfällen |
+| ChatGPT Projekt | Anweisung `dist/kern.md`, Datei `dist/system-prompt.md` | experimentell; Teilabnahme vorgesehen |
+| Gemini (Gem bzw. Gemini-Skill) | wie ChatGPT Projekt | experimentell, nicht geprüft |
+
+Custom GPTs werden von OpenAI für neue private Konten eingestellt und sind nicht mehr vorgesehen; Gemini-Gems werden zu „Gemini skills“ ([Recherche](https://github.com/Sae-l/tutor/issues/11)).
 
 ## Schnellstart (Claude Skill)
 
@@ -28,70 +27,61 @@ Freigabematrix nach [Issue #4](https://github.com/Sae-l/tutor/issues/4):
    ```
 
 2. In Claude unter *Einstellungen → Skills* `tutor-skill.zip` hochladen.
-3. Projekt „Tutor“ anlegen und dort lernen: Foto der Aufgabe schicken, optional mit einem Befehlswort.
+3. Ein Projekt „Tutor“ anlegen und dort lernen: Foto der Aufgabe schicken, optional mit einem Befehlswort.
 
-Beispiel: Foto einer Aufgabe + `tipp` → vier bis sechs Leitfragen, keine Lösung. Danach eigener Rechenweg als Nachricht → Fehlerdiagnose (Check). Fertig gelöst: `lösung`.
-
-Den Ordner `tutor/` nicht direkt aus dem Arbeitsordner zippen: Dort können lokale Werkzeugzustände liegen (z. B. `.claude-flow/`), die nicht hochgeladen werden sollen.
+Beispiel: Foto einer Aufgabe + `tipp` → vier bis sechs Leitfragen, keine Lösung. Danach eigener Rechenweg als Nachricht → Fehlerdiagnose (Check). Zum Vergleichen: `kurz`.
 
 ## Bedienung
 
-**Sprache:** standardmäßig Deutsch. Umschalten mit einem Signal in der Nachricht: `[ar]` Arabisch, `[tr]` Türkisch, `[uk]` Ukrainisch, `[fr]` Französisch, `[de]` zurück zu Deutsch. Überschriften, Aufgabentext und Klausur-Lösung bleiben immer deutsch.
+**Sprache:** standardmäßig Deutsch, auch wenn du in einer anderen Sprache schreibst. Umschalten mit `[ar]` Arabisch, `[tr]` Türkisch, `[fr]` Französisch, `[en]` Englisch, `[ur]` Urdu, `[de]` zurück, oder `!sprache ar` usw. Überschriften, Aufgabentext und Klausur-Lösung bleiben immer deutsch, damit das Prüfungsvokabular mitgelernt wird.
 
-**Befehle:** ein Befehlswort oder eine aufgeführte Wortgruppe am Nachrichtenanfang (z. B. Foto + „tipp“), oder mit `!` in der eigenen Anweisung; kombinierbar mit dem Sprachcode, z. B. `tipp [ar]` oder `[ar] tipp`. `hilfe` oder `help` (allein oder als `!hilfe`) zeigt die Befehlskarte mit einer Erklärung je Befehl. Empfohlene Reihenfolge beim Lernen: **erklär → tipp → ausführlich → lösung**. Lösungen von Übungen, Tipp-Aufgabe und Verständnisfrage stehen nie sichtbar in derselben Antwort, sondern kommen erst mit `lösung`.
+**Befehle:** ein Befehlswort am Nachrichtenanfang (z. B. Foto + „tipp“) oder mit `!` irgendwo in der eigenen Anweisung. `hilfe` zeigt die Befehlskarte. Empfohlene Reihenfolge: **erklär → tipp → voll → kurz**.
 
 | Befehl | Wirkung |
 |---|---|
-| (keiner) / `erklär` | Thema und nötige Gleichungen erklärt, **ohne** Beispiel und **ohne** Lösung der Aufgabe |
-| `standard` | Erklärung mittlerer Tiefe mit Lösung + zwei Übungen |
-| `!ausführlich` (oder `!detail`) | anschaulich und mathematisch erklärt, mit vorgerechnetem Beispiel einer ähnlichen Aufgabe |
-| `!kurz` | kurze Erklärung, dann vereinfachte Lösung |
-| `!lösung` | direkt die Klausur-Lösung |
-| `!tipp` | Leitfragen, die man sich selbst stellt, um zur Lösung zu kommen; Lösung zurückgehalten |
-| `!check` | Fehlerdiagnose des eigenen Versuchs (automatisch, wenn ein Versuch mitkommt) |
-| `!übung` | drei neue Aufgaben desselben Typs |
-| `!konzept` | Begriff oder Satz verstehen, ohne Rechenaufgabe |
-| `!hilfe` | diese Befehlsliste |
+| (keiner) / `erklär` | Thema und nötige Gleichungen, **ohne** Beispiel und **ohne** Lösung |
+| `voll` | anschaulich und mathematisch, mit vorgerechnetem Beispiel einer anderen Aufgabe |
+| `thema` | Begriff oder Gesetz verstehen und wie es beim Lösen hilft |
+| `tipp` | Leitfragen, die man sich selbst stellt; Lösung zurückgehalten |
+| `check` | Fehlerdiagnose des eigenen Versuchs (automatisch, wenn ein Versuch mitkommt) |
+| `skizze` | Skizze, Diagramm oder Graph (mit Zeichenwerkzeug als Bild, sonst Beschreibung + TikZ/matplotlib) |
+| `kurz` | Klausur-Lösung auf Deutsch plus eine Anmerkung |
+| `mittel` | Erklärung mittlerer Tiefe mit vollständiger Lösung |
+| `lang` | vollständige Lösung plus bis zu zwei andere Lösungswege |
+| `klausur` | schnelle Lösung mit Tipps für volle Punktzahl |
+| `hilfe` | Befehlskarte |
+| `!issue` | Link für Feedback |
 
-Die Befehle verstehen auch natürliche Wörter in allen fünf Sprachen (z. B. „kurz“, „سريع“, „hızlı“).
+**Dauermodus:** `!an tipp` (oder ein anderer Befehl) gilt für alle folgenden Aufgaben, bis `!aus` kommt.
 
-**Dauermodus:** `!an tipp` (oder ein anderer Befehl) gilt für alle folgenden Aufgaben, bis `!aus` kommt. Ein Einzelbefehl überschreibt ihn nur für diese eine Nachricht. Jede Antwort zeigt dann oben den aktiven Modus und die Sprache.
+**Lösungsschutz:** Die Lösung nach `tipp` und Antworten auf Verständnisfragen kommen erst mit `lösung`. Das Symbol 🔒 allein versteckt keinen Text.
 
-**Lösungsschutz:** Ohne geprüfte Aufklappfunktion bleiben Übungs- und Tipp-Lösungen bis zum ausdrücklichen Abruf zurückgehalten. `lösung Übung 2` zeigt gezielt die zweite Lösung. Das Symbol 🔒 allein versteckt keinen Text. Im Erklär- und im Ausführlich-Modus bleiben auch bei mehreren Aufgaben die Originalergebnisse zurückgehalten.
+**Kurspaket (optional):** Eine Datei mit Notation und Stoffumfang eines bestimmten Kurses kann zusätzlich hochgeladen werden, z. B. [kurse/mpg1.md](kurse/mpg1.md) als Beispiel. Sie gehört nicht zum Skill.
 
-## Einrichtung auf anderen Plattformen
+## Einrichtung auf anderen Plattformen (experimentell)
 
-**ChatGPT (Projekt)** – Inhalt von `dist/system-prompt.md` in die Projekt-Anweisungen kopieren.
+**ChatGPT Projekt / Gemini:** Inhalt von `dist/kern.md` (höchstens 4000 Zeichen, vom Build geprüft) in die Anweisungen kopieren und `dist/system-prompt.md` als Datei hochladen. Feldgrenzen, Formeldarstellung und Aufklappblöcke sind dort nicht offiziell dokumentiert und nicht geprüft.
 
-**Claude Projekt** (experimentell) – Inhalt von `dist/system-prompt.md` in die Projekt-Anweisungen kopieren.
+## Datenschutz
 
-**ChatGPT (Custom GPT)** (experimentell) – Das Anweisungsfeld fasst höchstens 8000 Zeichen. Zwei Wege, beide nicht geprüft:
-- Inhalt von `dist/system-prompt-kurz.md` als Anweisung eintragen (passt ins Feld, enthält aber weniger Einzelregeln), oder
-- `dist/system-prompt.md` unter *Wissen* hochladen und als Anweisung eintragen:
-
-  > Du bist ein Physik- und Mathe-Tutor. Lies vor jeder Antwort die Datei system-prompt.md im Wissen und befolge sie vollständig, besonders Sprache, Antwortvorlage und LaTeX-Regeln. Standardsprache ist Deutsch.
-
-**Gemini (Gem), Microsoft Copilot, GitHub Copilot** (experimentell) – Inhalt von `dist/system-prompt.md` in die Anweisungen eintragen; ist das Feld zu kurz, `dist/system-prompt-kurz.md` verwenden. Feldgrenzen, Formeldarstellung und Aufklappblöcke dieser Plattformen sind nicht geprüft.
+Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter (Anthropic, OpenAI, Google) nach dessen Bedingungen. `!issue` erzeugt nur einen Link mit festem Titel und schickt keine Gesprächsinhalte. Was du in ein GitHub-Issue schreibst, ist öffentlich.
 
 ## Aufbau
 
 | Pfad | Zweck |
 |---|---|
-| `tutor/` | Quelle: Claude-Skill (`SKILL.md` + `modes/` + `references/`) |
-| `tutor/references/kurs-mpg1.md` | Kursnotation MPG1, Stoffumfang, Regeln zu Endantworten der Übungsblätter (eigene Zusammenfassung) |
-| `tutor/references/kurzfassung.md` | Quelle: handgeschriebene Kurzfassung (höchstens 8000 Zeichen, Build bricht sonst ab) |
-| `dist/system-prompt.md` | Erzeugt: eine einzige, selbstständige Prompt-Datei für alle anderen Plattformen |
-| `dist/system-prompt-kurz.md` | Erzeugt: Kurzfassung für Felder mit Zeichenlimit |
+| `tutor/` | Quelle: Claude-Skill (`SKILL.md` als Router + `modes/` + `references/`) |
+| `kurse/` | optionale Kurspakete, nicht Teil des Skills |
+| `dist/system-prompt.md` | Erzeugt: alles in einer Datei, für andere Plattformen |
+| `dist/kern.md` | Erzeugt: Kern aus den `<!-- kern -->`-Abschnitten von `SKILL.md`, höchstens 4000 Zeichen |
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
 | `GLOSSARY.md` | Festgelegte Begriffe |
 
-Die Kurzfassung ist eine eigene Textquelle und wird **nicht** automatisch aus den Moduldateien abgeleitet. Ändert sich Verhalten in `tutor/`, die Kurzfassung von Hand angleichen; die Tests prüfen nur Länge, Befehle, Sprachcodes und Kernregeln.
-
 ## Entwicklung
 
-Voraussetzung: Git und Python 3.14 (damit geprüft; nur Standardbibliothek).
+Voraussetzung: Git und Python 3.14 (nur Standardbibliothek).
 
 ```bash
 python build.py
@@ -101,15 +91,15 @@ python build.py
 python -B -m unittest discover -s tests -v
 ```
 
-Änderungen nur in `tutor/` machen, danach `python build.py` ausführen und beides committen. Die Tests prüfen den reproduzierbaren Build, die zehn Modusdateien, offene Dateiverweise (auch unter `python -O`), Formel-Beispiele und den Erhalt der bisherigen Ausgabe bei fehlerhaften Quellen. Die CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) führt dasselbe auf Linux und Windows aus.
+Änderungen nur in `tutor/` machen, danach `python build.py` ausführen und beides committen. Die Tests prüfen den reproduzierbaren Build, dass Befehlstabelle und Moduldateien übereinstimmen (11 Modi), Kurs-Neutralität des Skills, Länge und Inhalt des Kerns, Formel-Beispiele und den Erhalt der bisherigen Ausgabe bei fehlerhaften Quellen (auch unter `python -O`). Die CI führt dasselbe auf Linux und Windows aus.
 
-[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 27 Modusfälle, 27 Zustands- und Grenzfälle und 6 Kursaufgaben aus MPG1, je mit stabiler ID; Protokolle nach [tests/protokolle/VORLAGE.md](tests/protokolle/VORLAGE.md). Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
+[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle und 31 Zustands- und Grenzfälle, je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
 
-Ablauf, Release-Checkliste und Paketbau: [CONTRIBUTING.md](CONTRIBUTING.md). Sicherheit und Meldeweg: [SECURITY.md](SECURITY.md). Änderungen: [CHANGELOG.md](CHANGELOG.md).
+Ablauf, Release-Checkliste und Paketbau: [CONTRIBUTING.md](CONTRIBUTING.md). Sicherheit: [SECURITY.md](SECURITY.md). Änderungen: [CHANGELOG.md](CHANGELOG.md).
 
 ## Grenzen
 
-- Formeln werden nur dann sauber dargestellt, wenn die Plattform `$$ ... $$` rendert. In Claude und ChatGPT bisher nur informell beobachtet, nicht protokolliert; Gemini und Copilot sind nicht geprüft.
-- Bei hochgeladenen Wissensdateien (Custom GPT, Copilot) liest das Modell die Datei nicht immer vollständig. Direkt eingefügte Anweisungen sind zuverlässiger.
-- Der Tutor kennt keine internen Bewertungskriterien der TH Köln. Ergebnisse mit offiziellen Musterlösungen abgleichen.
-- Die Lernprinzipien in [docs/KONZEPT.md](docs/KONZEPT.md) sind aus dem Gedächtnis zitiert und nicht nachrecherchiert. Sie begründen das Design, belegen aber keine Wirksamkeit dieses Tutors, auch nicht für ADHS.
+- Formeln werden nur dann sauber dargestellt, wenn die Plattform `$$ ... $$` rendert; nur informell beobachtet, nicht protokolliert.
+- Hochgeladene Dateien liest das Modell nicht immer vollständig; deshalb stehen die wichtigsten Regeln im Kern.
+- Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.
+- Die Lernprinzipien in [docs/KONZEPT.md](docs/KONZEPT.md) begründen das Design, belegen aber keine Wirksamkeit dieses Tutors, auch nicht für ADHS.

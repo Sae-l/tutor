@@ -4,6 +4,26 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+Öffentliche Version v0.2 (Map #9); Akzeptanzfälle noch nicht ausgeführt.
+
+### Geändert
+- Zielgruppe: Studierende im ersten Studienjahr eines deutschsprachigen MINT-Studiengangs statt einer einzelnen Person; ADHS-Freundlichkeit als Gestaltungsprinzip.
+- Befehlssatz v0.2 mit 11 Modi: erklär, voll (bisher detail/ausführlich), thema (bisher konzept, plus „So hilft es beim Lösen“), tipp, check, skizze, kurz (jetzt Klausur-Lösung + eine Anmerkung), mittel (bisher standard, ohne Übungen), lang, klausur, hilfe. Eskalation erklär → tipp → voll → kurz.
+- Erklärsprachen: Deutsch, Arabisch, Türkisch, Französisch, Englisch, Urdu; `!sprache xx` als Signal.
+- `SKILL.md` ist ein schlanker Router; Sprache und Didaktik in `references/sprache.md` und `references/didaktik.md`.
+- Kurs MPG1 als optionales Kurspaket `kurse/mpg1.md` außerhalb des Skills; Skill ohne Hochschul- oder Kursbezug.
+- Build erzeugt `dist/kern.md` (höchstens 4000 Zeichen) aus markierten Abschnitten von `SKILL.md`.
+- Plattformen: Claude Skill (Release-Gate), ChatGPT Projekt und Gemini experimentell.
+
+### Hinzugefügt
+- Modi Skizze, Lang und Klausur; Befehl `!issue` (Feedback-Link ohne Gesprächsinhalt) und Datenschutzhinweis im README.
+- Akzeptanzfälle für v0.2: M01-A … M10-C, G01 … G31.
+
+### Entfernt
+- Modi Übung, Standard und Lösung als eigene Befehle; „lösung“ bleibt der Abruf zurückgehaltener Lösungen.
+- Ukrainisch als Erklärsprache.
+- Handgeschriebene Kurzfassung (`dist/system-prompt-kurz.md`) und Custom GPT als Zielplattform.
+
 ## [0.1.0-rc.1] – 2026-10-15
 
 Erste Vorabversion; Akzeptanzfälle noch nicht ausgeführt.

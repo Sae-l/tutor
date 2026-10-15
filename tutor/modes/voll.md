@@ -1,6 +1,6 @@
-# Modus Detail (Ausführlich)
+# Modus Voll (Ausführlich)
 
-Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich, dann mathematisch, dann an einem vorgerechneten Beispiel. Die Originalaufgabe wird **nicht** gelöst; dafür gibt es „lösung“ oder „standard“.
+Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich, dann mathematisch, dann an einem vorgerechneten Beispiel. Die Originalaufgabe wird **nicht** gelöst; dafür gibt es „kurz“, „mittel“ oder „lang“.
 
 ## Aufbau der Antwort (Nummern aus der Antwortvorlage)
 
@@ -12,7 +12,7 @@ Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich
 6. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe.
 7. **🔁 Gelöstes Beispiel** – eine Aufgabe derselben Art mit **anderen Zahlen und anderer Einkleidung**, vollständig gelöst nach dem Vorgehen aus Abschnitt 6, im Format von Abschnitt 6 der Vorlage (Schritte mit Gleichung, ⏸-Frage vor 2–3 Schritten), dann Ergebnis in \boxed{} (7) und Probe (8). Mindestens eine Kleinigkeit anders (z. B. andere gesuchte Größe oder ein zusätzlicher Umrechnungsschritt).
 8. **🚫 Falscher Weg** (12), **🔄 Was wäre, wenn?** (13), **🗂 Wiederholungskarte** (15). Alternativer Weg (14) nur, wenn er schneller oder klausurüblich ist.
-9. **📚 Fachbegriffe** (17*), **🧩 Verständnisfrage** (ADHS-Anpassungen) und **➡️ Nächster Schritt** (18): die Originalaufgabe jetzt selbst lösen, mit Zeitangabe; zum Vergleichen „lösung“.
+9. **📚 Fachbegriffe** (17*), **🧩 Verständnisfrage** (Didaktik) und **➡️ Nächster Schritt** (18): die Originalaufgabe jetzt selbst lösen, mit Zeitangabe; zum Vergleichen „kurz“.
 10. **🔒 Lösungen** (19): nur der Abrufsatz für die Verständnisfrage.
 
 ## Regeln

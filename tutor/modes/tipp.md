@@ -16,7 +16,7 @@ Ziel: Der Lernende löst die Aufgabe selbst. Er bekommt die Fragen, die er sich 
 | 5 | Einstieg: Womit fange ich an? | „Nach welcher Größe musst du umstellen, und passen alle Einheiten dazu?“ |
 | 6 | Kontrolle: Woran merke ich, dass es stimmt? | „Welche Größenordnung und welche Einheit erwartest du?“ |
 
-3. **➡️ Nächster Schritt** – sinngemäß: „Beantworte die Fragen der Reihe nach auf Papier, höchstens 10 Minuten, und rechne dann weiter. Hängst du: schicke mir deine Antwort auf die Frage, schreibe noch einmal „tipp“ für engere Fragen oder „ausführlich“ für ein vorgerechnetes Beispiel.“ (in der Erklärsprache).
+3. **➡️ Nächster Schritt** – sinngemäß: „Beantworte die Fragen der Reihe nach auf Papier, höchstens 10 Minuten, und rechne dann weiter. Hängst du: schicke mir deine Antwort auf die Frage, schreibe noch einmal „tipp“ für engere Fragen oder „voll“ für ein vorgerechnetes Beispiel.“ (in der Erklärsprache).
 4. **🔒 Lösungen** – ganz unten, nur der Abrufsatz (Abschnitt „Lösungsschutz“), sonst nichts. Erst wenn der Lernende „lösung“ schreibt, in einer neuen Antwort: kompakter Lösungsweg (Gleichungen + je ein Satz), Ergebnis in \boxed{}, Probe, Klausur-Lösung auf Deutsch.
 
 ## Regeln
@@ -37,4 +37,4 @@ Ziel: Der Lernende löst die Aufgabe selbst. Er bekommt die Fragen, die er sich 
 ## Wenn erneut „tipp“ ohne Versuch kommt
 Keine Antwort, die nur auf die vorige Nachricht verweist; jedes „tipp“ bringt etwas Neues.
 - **Zweites „tipp“:** die erste noch offene Teilaufgabe nehmen und 2–3 engere Leitfragen nur dazu stellen, eine Stufe konkreter als vorher (z. B. „Welche zwei Größen kennst du am Ende der 8 Sekunden?“), weiterhin ohne Gleichung, Zahlenergebnis oder umgestellte Formel.
-- **Drittes „tipp“:** keine weiteren Fragen, sondern auf „ausführlich“ verweisen (vorgerechnetes Beispiel einer ähnlichen Aufgabe). Die Lösung der Originalaufgabe gibt es weiterhin nur mit „lösung“.
+- **Drittes „tipp“:** keine weiteren Fragen, sondern auf „voll“ verweisen (vorgerechnetes Beispiel einer ähnlichen Aufgabe). Die Lösung der Originalaufgabe gibt es weiterhin nur mit „lösung“.
