@@ -9,7 +9,7 @@
 - `kurse/` – optionale Kurspakete (z. B. `mpg1.md`), nicht Teil des Skills.
 - `build.py` → `dist/system-prompt.md` (alles in einer Datei) und `dist/kern.md` (≤ 4000 Zeichen). Modi werden aus der Befehlstabelle gelesen.
 - `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten.
-- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G31), `protokolle/`.
+- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G32), `protokolle/`.
 
 ## Arbeitsregeln
 - Nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten. Änderungen in `CHANGELOG.md` eintragen.
@@ -35,7 +35,6 @@
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
 ## Offene Punkte
-1. Altdateien löschen: `tutor/modes/uebung.md`, `tutor/modes/loesung.md`, `tutor/references/kurzfassung.md`, `dist/system-prompt-kurz.md`, `tutor/modes/.claude-flow/` (bis dahin schlagen zwei Strukturtests fehl).
-2. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
-3. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen.
-4. Nach grüner CI: `main` schützen, Vorab-Release v0.2.0-rc.1 nach CONTRIBUTING.
+1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
+2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen.
+3. Nach grüner CI: `main` schützen, Vorab-Release v0.2.0-rc.1 nach CONTRIBUTING.

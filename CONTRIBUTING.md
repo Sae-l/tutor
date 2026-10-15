@@ -43,16 +43,16 @@ Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Rele
 3. Prüfsummen erzeugen:
 
    ```bash
-   sha256sum tutor-skill.zip dist/system-prompt.md dist/system-prompt-kurz.md > SHA256SUMS.txt
+   sha256sum tutor-skill.zip dist/system-prompt.md dist/kern.md > SHA256SUMS.txt
    ```
 
 4. Für eine stabile Version: Abnahme mit genau diesem ZIP durchführen, Protokoll in `tests/protokolle/` committen.
 5. Tag setzen und Release anlegen; Anhänge: ZIP, beide Promptdateien, `SHA256SUMS.txt`. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen als „Pre-release“ markieren:
 
    ```bash
-   git tag -a v0.1.0-rc.1 -m "v0.1.0-rc.1"
-   git push origin v0.1.0-rc.1
-   gh release create v0.1.0-rc.1 --prerelease --notes-file notizen.md tutor-skill.zip dist/system-prompt.md dist/system-prompt-kurz.md SHA256SUMS.txt
+   git tag -a v0.2.0-rc.1 -m "v0.2.0-rc.1"
+   git push origin v0.2.0-rc.1
+   gh release create v0.2.0-rc.1 --prerelease --notes-file notizen.md tutor-skill.zip dist/system-prompt.md dist/kern.md SHA256SUMS.txt
    ```
 
 Nur tatsächlich geprüfte Plattformen als geprüft aufführen.

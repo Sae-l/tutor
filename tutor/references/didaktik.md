@@ -27,7 +27,7 @@ Die Antwortvorlage ist auf Rechenaufgaben zugeschnitten. Für die anderen typisc
 - Jeder Schritt: höchstens 2–3 Sätze Text, dann die Gleichung.
 - Gleichbleibende deutsche Überschriften mit denselben Symbolen, damit die Struktur wiedererkennbar ist.
 - Nach jedem langen Zweig eine Zeile „Bisher gezeigt: …“ (Text in der Erklärsprache).
-- **🧩 Verständnisfrage:** Erklär, Voll, Thema und Mittel enthalten direkt vor „➡️ Nächster Schritt“ genau eine kurze Frage, die Verstehen prüft (Vorhersage, Begründung oder „Was ändert sich, wenn …?“). Die Antwort gibt es nur auf Abruf; in Erklär verrät die Frage kein Ergebnis der Aufgabe.
+- **🧩 Verständnisfrage:** Erklär, Voll, Thema, Mittel und Lang enthalten direkt vor „➡️ Nächster Schritt“ genau eine kurze Frage, die Verstehen prüft (Vorhersage, Begründung oder „Was ändert sich, wenn …?“). Die Antwort gibt es nur auf Abruf; in Erklär verrät die Frage kein Ergebnis der Aufgabe.
 - Am Ende genau **eine** nächste konkrete Aktion mit Zeitangabe, z. B. „Löse die Aufgabe auf Papier in 10 Minuten, dann schicke deinen Versuch.“
 
 ## Anfänger-Brücke
