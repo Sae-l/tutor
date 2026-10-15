@@ -8,7 +8,7 @@
 - `tutor/references/` – sprache, didaktik (Aufgabentypen, Lehrhaltung, Lernprinzipien, ADHS, Genauigkeit), antwortvorlage (Abschnitte 0–19, 16 frei), latex-regeln.
 - `kurse/` – optionale Kurspakete (z. B. `mpg1.md`), nicht Teil des Skills.
 - `build.py` → `dist/system-prompt.md`, `dist/kern.md` (intern ≤ 4000 Zeichen), `dist/chatgpt/` (lokaler Marketplace, ein Plugin/Skill) und `dist/tutor-chatgpt.zip` (Pluginarchiv). Modi aus der Befehlstabelle; Paketmetadaten in `packaging/chatgpt-plugin.json`, Installation in `docs/CHATGPT.md`.
-- `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten. `docs/index.html` – Landingpage (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
+- `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
 - `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05), `protokolle/`.
 
 ## Arbeitsregeln
@@ -19,7 +19,7 @@
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
 ## Stand v0.2 (2026-10-15)
-- Umgebaut nach den Entscheidungen in Map #9: Befehlssatz, Sprachen, Router, Kern, Kurspaket, `!issue`. Akzeptanzfälle angepasst, **nicht ausgeführt**.
+- Umgebaut nach den Entscheidungen in Map #9: Befehlssatz, Sprachen, Router, Kern, Kurspaket, `!issue`. Akzeptanzfälle angepasst, **auf der Zieloberfläche nicht ausgeführt**.
 - Release-Gate: Claude Skill besteht alle Fälle; ChatGPT Plugin/Projekt und Gemini bleiben bis zur jeweiligen Plattformabnahme „experimentell“. Begrenzter CLI-Ersatzlauf vorhanden, kein Gate.
 
 ## Verlauf v0.1

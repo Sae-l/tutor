@@ -5,7 +5,7 @@ Reihenfolge A → B → C; ein Repository und eine Skillquelle. Abschlussbasis d
 ## A. Gemeinsamen Tutorvertrag widerspruchsfrei machen
 
 ```text
-/make-plan Vereinheitliche den bestehenden Tutor-Skill für identische Lernsemantik auf Claude, ChatGPT und Gemini. Einziger Einstieg bleibt tutor/SKILL.md. Lies PATHFINDER-2026-10-15/01-flowcharts/tutor-dialog.md, 02-duplication-report.md D1/D2 sowie 03-unified-proposal.md Abschnitt 1. Alle Pfade relativ zur Git-Wurzel D:/Saeed/Projekts/Tutor/tutor.
+/make-plan Vereinheitliche den bestehenden Tutor-Skill für identische Lernsemantik auf Claude, ChatGPT und Gemini. Einziger Einstieg bleibt tutor/SKILL.md. Lies docs/planung/2026-10-15-plattformen/01-flowcharts/tutor-dialog.md, 02-duplication-report.md D1/D2 sowie 03-unified-proposal.md Abschnitt 1. Alle Pfade relativ zur Git-Wurzel.
 
 Konkrete Stellen: tutor/references/antwortvorlage.md:3 gegenüber tutor/modes/kurz.md:6, lang.md:6, voll.md:8–16: Vorlage als Abschnittskatalog, Reihenfolge durch jeweiligen Modus; keine globale numerische Umsortierung. Abschlussregeln in references/antwortvorlage.md:34–35 und didaktik.md:30–31 mit modes/erklaer.md:14–15 und thema.md:6 ausrichten: Fachbegriffe vor Verständnisfrage, diese vor nächster Aktion, Abrufsatz zuletzt. Präzisiere die globale Aktionsregel tutor/SKILL.md:57 für Lernmodi mit Abschluss; Kurz, Hilfe und issue bleiben knapp in ihrer bestehenden Form.
 
@@ -17,7 +17,7 @@ Historischen Bericht tests/protokolle/2026-10-15-claude-code-cli.md:51–71 lese
 ## B. Alle nativen Pakete aus einem Build erzeugen
 
 ```text
-/make-plan Ergänze den vorhandenen Einstieg python build.py um Claude- und Gemini-Skillpakete aus genau derselben Skillquelle wie das vorhandene ChatGPT-Plugin. Lies PATHFINDER-2026-10-15/01-flowcharts/plattformausgabe.md, 02-duplication-report.md D3–D6 und 03-unified-proposal.md Abschnitt 2. Verwende am Umsetzungstag verifizierte offizielle Importformate; https://support.google.com/gemini/answer/17094296 beschreibt nativen Skillimport, nicht nur Gems.
+/make-plan Ergänze den vorhandenen Einstieg python build.py um Claude- und Gemini-Skillpakete aus genau derselben Skillquelle wie das vorhandene ChatGPT-Plugin. Lies docs/planung/2026-10-15-plattformen/01-flowcharts/plattformausgabe.md, 02-duplication-report.md D3–D6 und 03-unified-proposal.md Abschnitt 2. Verwende am Umsetzungstag verifizierte offizielle Importformate; https://support.google.com/gemini/answer/17094296 beschreibt nativen Skillimport, nicht nur Gems.
 
 Vorhandene Allowlist in build.py:27–35,91–92 wiederverwenden: SKILL.md, elf modes und vier references. Erzeuge dist/tutor-skill.zip mit tutor/ am Root für Claude und dist/tutor-gemini.zip mit SKILL.md an Archivwurzel für Gemini; identische Quelldateien mit passenden Präfixen. Gemini-Format als erst am realen Importer bestätigbar kennzeichnen. Bestehendes dist/tutor-chatgpt.zip, dist/chatgpt/, kern.md und system-prompt.md erhalten. Keine neue Plattformruntime, rekursive Workspacekopie, Registry, Factory oder zusätzliche Abhängigkeit. Neue ZIP-Metadaten wie beim bestehenden ZIP reproduzierbar festsetzen. Alle Ausgaben vor Veröffentlichung validieren; bestehende Pfadprüfung, vollständigen dist-Austausch und Rollback in build.py:105–134 beibehalten. Keine globalen Git-/Benutzerkonfigurationen ändern.
 
@@ -29,7 +29,7 @@ README.md:38–44 und CONTRIBUTING.md:39–48 auf gemeinsamen Builder aus einem 
 ## C. Gleichwertige Kompatibilitätsprüfung und echte Abnahme
 
 ```text
-/make-plan Ergänze den bestehenden Prüfeinstieg python -B -m unittest discover -s tests -v plus tests/akzeptanz.md für drei native Tutor-Oberflächen. Lies PATHFINDER-2026-10-15/01-flowcharts/pruefung.md und 03-unified-proposal.md Abschnitt 3. Keine neue Testsuite und keine Modell-API als Ersatz für native UI-Abnahme.
+/make-plan Ergänze den bestehenden Prüfeinstieg python -B -m unittest discover -s tests -v plus tests/akzeptanz.md für drei native Tutor-Oberflächen. Lies docs/planung/2026-10-15-plattformen/01-flowcharts/pruefung.md und 03-unified-proposal.md Abschnitt 3. Keine neue Testsuite und keine Modell-API als Ersatz für native UI-Abnahme.
 
 Konkrete Stellen: tests/akzeptanz.md:9–18: Claude Skill, ChatGPT Plugin und Gemini Skill mit derselben Menge aller 63 Kernfälle M01-A bis M10-C und G01 bis G33 plus D1–D3. Gemeinsame Freigabe erst nach vollständigem dokumentiertem Pass auf allen drei Zielen. Das ist eine Änderung des bisherigen nur Claude-verpflichtenden Gates und muss als neues Releasekriterium sichtbar sein. ChatGPT Projekt und Gem-Fallback getrennt erhalten. H01–H05 historisch ChatGPT lassen, analoge native Installations-/Aktivierungsfälle mit stabilen eindeutigen IDs ergänzen. Alle elf Modi inkl. Hilfe sowie explizite/automatische Auswahl, negative Aktivierung und fehlende Eingabe abdecken.
 

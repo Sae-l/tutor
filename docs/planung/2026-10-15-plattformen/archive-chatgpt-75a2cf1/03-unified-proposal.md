@@ -2,7 +2,7 @@
 
 **Empfehlung:** `tutor/` als einzige Verhaltensquelle behalten. Den bestehenden Build um eine kleine, serverlose ChatGPT-Verpackung ergänzen und diese auf der Zieloberfläche prüfen. Kein API-Dienst und keine neue Agenten-Engine nötig. Der Tutor ist bereits ein Lern-Agent in Form von Anweisungen, nicht ein selbstständig laufendes Programm (`GLOSSARY.md:13–26`, `tutor/SKILL.md:14–18`).
 
-Dies ist die Pathfinder-Planung, noch keine implementierte Ausgabe. Der aufgerufene [Skill](C:/Users/salha/.agents/skills/pathfinder/SKILL.md) verlangt „You do not write implementation code.“
+Dies ist die Pathfinder-Planung, noch keine implementierte Ausgabe. Der aufgerufene Skill „pathfinder“ verlangt „You do not write implementation code.“
 
 ## 1. Gemeinsames Tutorverhalten
 

@@ -41,7 +41,7 @@ Tests verändern ausschließlich ihre temporären Kopien und starten lokale Pyth
 Am 15.10.2026 im Elternauftrag ausgeführt:
 
 ```powershell
-& 'C:\Users\salha\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -B -m unittest discover -s tests -v
+python -B -m unittest discover -s tests -v
 ```
 
 Ergebnis: **9 Tests, OK**, 1,230 Sekunden. Der Reproduzierbarkeitstest baut isoliert und vergleicht mit `dist/`. Keine Verhaltens- oder UI-Prüfung daraus ableiten.

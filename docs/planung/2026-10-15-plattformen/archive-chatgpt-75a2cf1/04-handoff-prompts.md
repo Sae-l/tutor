@@ -5,7 +5,7 @@ Reihenfolge: gemeinsames Verhalten klären, Bereitstellung ergänzen, Plattforma
 ## A. Gemeinsames Tutorverhalten
 
 ```text
-/make-plan Vereinheitliche die Sprachsignale des Tutors an der vorhandenen gemeinsamen Quelle. Eintritt bleibt tutor/SKILL.md. Lies PATHFINDER-2026-10-15/01-flowcharts/tutor-dialog.md und 02-duplication-report.md CROSS-Sprachbefund.
+/make-plan Vereinheitliche die Sprachsignale des Tutors an der vorhandenen gemeinsamen Quelle. Eintritt bleibt tutor/SKILL.md. Lies docs/planung/2026-10-15-plattformen/01-flowcharts/tutor-dialog.md und 02-duplication-report.md CROSS-Sprachbefund.
 
 Konkrete Stellen: tutor/SKILL.md:15 gegenüber tutor/references/sprache.md:7–12; beide werden in build.py:41 und :44–50 in Vollprompt und Kern übernommen. Erhalte die bereits erlaubten Tags, !sprache und natürlichen Sprachwünsche. Formuliere den kurzen Routertext passend zur vollständigen Referenz, ohne einen zweiten Signalsatz für ChatGPT anzulegen. Das 4000-Zeichen-Budget muss weiter gelten. Ergänze einen Akzeptanzfall für natürliche Sprachwünsche mit Sprachpersistenz; bestehende Tags weiter prüfen.
 
@@ -15,7 +15,7 @@ Verhalten nur in tutor/ ändern, danach dist/ über build.py erzeugen. CHANGELOG
 ## B. Gemeinsame Bereitstellung mit nativem ChatGPT-Paket
 
 ```text
-/make-plan Ergänze den bestehenden Einstieg python build.py um den minimalen nativen ChatGPT-Bereitstellungsweg aus PATHFINDER-2026-10-15/03-unified-proposal.md, Abschnitt 2. Lies 01-flowcharts/plattformausgabe.md und 02-duplication-report.md. Verwende die am Umsetzungstag verifizierte offizielle Skill-/Pluginspezifikation.
+/make-plan Ergänze den bestehenden Einstieg python build.py um den minimalen nativen ChatGPT-Bereitstellungsweg aus docs/planung/2026-10-15-plattformen/03-unified-proposal.md, Abschnitt 2. Lies 01-flowcharts/plattformausgabe.md und 02-duplication-report.md. Verwende die am Umsetzungstag verifizierte offizielle Skill-/Pluginspezifikation.
 
 Einzige Verhaltensquelle bleibt tutor/. Erzeuge dist/chatgpt/ als lokale Marketplace-Wurzel mit genau einem Tutor-Plugin und einem enthaltenen Skill. Paketmetadaten ohne Lernregeln in packaging/chatgpt-plugin.json; MIT-Lizenz beilegen. Verwende die bekannte Router-/Referenz-/Modusdateiliste aus build.py:22–30, keine ungefilterte rekursive Workspacekopie. Quelldateien bytegleich übernehmen. Bestehendes dist/kern.md, dist/system-prompt.md und Claude-ZIP erhalten. Entfernte Dateien dürfen nicht als Altlasten im erzeugten Paket verbleiben. Pfade vor jeder rekursiven Bereinigung absolut auf den exakt vorgesehenen generierten Unterordner prüfen; keine Quelle oder bestehende Nutzerdatei löschen. Alle Prüfungen vor gültiger Ausgabe; Fehler klar melden.
 
@@ -29,7 +29,7 @@ Keine zweite Tutorquelle, neue Abhängigkeit, MCP-Server, API-App, Hooks, mehrfa
 ## C. Gemeinsame Prüfung und echte ChatGPT-Abnahme
 
 ```text
-/make-plan Ergänze den vorhandenen Prüfpfad für ChatGPT nativ und ChatGPT Projekt. Lies PATHFINDER-2026-10-15/01-flowcharts/pruefung.md und 03-unified-proposal.md Abschnitt 3. Einstieg bleibt python -B -m unittest discover -s tests -v plus manuelle Akzeptanzmatrix; keinen zweiten Prüfrahmen anlegen.
+/make-plan Ergänze den vorhandenen Prüfpfad für ChatGPT nativ und ChatGPT Projekt. Lies docs/planung/2026-10-15-plattformen/01-flowcharts/pruefung.md und 03-unified-proposal.md Abschnitt 3. Einstieg bleibt python -B -m unittest discover -s tests -v plus manuelle Akzeptanzmatrix; keinen zweiten Prüfrahmen anlegen.
 
 Konkrete Stellen: tests/test_build.py:31–38 muss nach dem zweiten Build beide Markdown-Ausgaben vergleichen; neue Paketprüfung in derselben Suite. tests/akzeptanz.md:9–17 um native ChatGPT-Oberfläche ergänzen; tests/protokolle/VORLAGE.md:7–12 um exakte Installationsart und Paketidentität erweitern. README-Status mit dem vorhandenen begrenzten CLI-Protokoll abgleichen; keine bereits vorhandenen Fehlbefunde löschen.
 

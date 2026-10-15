@@ -4,11 +4,11 @@ Stand: 15.10.2026. Auftrag: eine gemeinsame Skillquelle mit mehreren Modi für a
 
 ## Quellenstand und Arbeitsgrenze
 
-- Git-Wurzel: `D:/Saeed/Projekts/Tutor/tutor`; Start-HEAD `75a2cf1c12fa3ec154acf78c328d8d3e713eff4e`; Abschlussbasis `431347fa905a8ac1509c33d4bf428e3670ce49c9`.
+- Start-HEAD `75a2cf1c12fa3ec154acf78c328d8d3e713eff4e`; Abschlussbasis `431347fa905a8ac1509c33d4bf428e3670ce49c9`.
 - Der äußere Workspace ist keine zweite Quelle. `physik-mathe-tutor/`, Auditkopien und lokale Werkzeugordner sind ausgeschlossen. Keine AGENTS.md im durchsuchten Workspace gefunden.
 - Zu Beginn nur dieser Pathfinder-Ordner unversioniert; keine versionierten Änderungen. Kein Branchwechsel, Commit, Push, Release oder Benutzerkonfigurationswechsel.
 - Frühere ChatGPT-Analyse bytegleich in `archive-chatgpt-75a2cf1/` erhalten. Sie beschreibt einen älteren Implementierungsstand.
-- Der [Pathfinder-Skill](C:/Users/salha/.agents/skills/pathfinder/SKILL.md) verlangt: "You do not write implementation code." Dieser Lauf liefert Architektur und Umsetzungsaufträge, keine abgeschlossene Plattformkompatibilität.
+- Der Pathfinder-Skill verlangt: "You do not write implementation code." Dieser Lauf liefert Architektur und Umsetzungsaufträge, keine abgeschlossene Plattformkompatibilität.
 
 ## Phase 0: geprüfte und freigegebene Featuregrenzen
 
