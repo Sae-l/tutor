@@ -8,6 +8,6 @@ labels: enhancement
 
 **Warum?** Welches Lernproblem löst es?
 
-**Betroffene Dateien:** z. B. `tutor/modes/tipp.md`, Kurzfassung, README
+**Betroffene Dateien:** z. B. `tutor/modes/tipp.md`, Kern in `tutor/SKILL.md`, README
 
 **Wie wird es abgenommen?** Neuer oder geänderter Akzeptanzfall in `tests/akzeptanz.md`

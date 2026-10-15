@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Actions sind auf SHAs festgelegt; Dependabot hält sie aktuell.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
