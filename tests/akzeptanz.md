@@ -8,7 +8,7 @@ Bewertung nach Issue #3; Plattformen nach #15 (Map #9):
 
 | Oberfläche | Prompt | Fälle | Blockiert die Freigabe? |
 |---|---|---|---|
-| Claude Skill (hochgeladenes ZIP, siehe CONTRIBUTING) | Skill | alle 61: M01-A … M10-C (30) und G01 … G31 (31) + D1 … D3 | ja |
+| Claude Skill (hochgeladenes ZIP, siehe CONTRIBUTING) | Skill | alle 62: M01-A … M10-C (30) und G01 … G32 (32) + D1 … D3 | ja |
 | ChatGPT Projekt | Anweisung `dist/kern.md`, Wissensdatei `dist/system-prompt.md` | M01-B … M10-B (10, Ohmsches Gesetz) + G02, G03, G05, G25, G26, G28 + Darstellungsprüfung | nein; „experimentell“, Fehler als Grenze im README nennen |
 | Kursaufgaben K01 … K06 | Skill | 6 | nein, nicht Teil von v0.2 |
 
@@ -48,7 +48,7 @@ Jeden der zehn Aufgabenmodi (Hilfe siehe Grenzfälle) in einem neuen Gespräch m
 | M09 | lang | Richtige Lösung auf dem Hauptweg plus höchstens zwei andere Wege mit demselben Ergebnis, je mit „wann besser“; kein erfundener Weg, wenn es keinen sinnvollen gibt. |
 | M10 | klausur | Kompakte richtige Lösung; Klausur-Tipp mit Punktsicherung, zwei typischen Punktverlusten, Kontrollweg und Zeitangabe; keine Behauptung über Bewertungskriterien einer bestimmten Hochschule. |
 
-## Zustands- und Grenzfälle (G01 … G31)
+## Zustands- und Grenzfälle (G01 … G32)
 
 In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten gemeint. Fotofälle (G09, G19, G20) brauchen ein Bild; Dateiname ins Protokoll. Alle Fälle sind noch offen.
 
@@ -85,6 +85,7 @@ In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten g
 | G29 | `[ur] erklär` + Aufgabe | Urdu-Text, deutsche Überschriften, Formeln als eigene Zeilen, Fachbegriffe deutsch in Klammern. |
 | G30 | `[uk]` + Aufgabe | Hinweis, dass nur die sechs Sprachen vorgesehen sind; Antwort auf Deutsch. |
 | G31 | `!sprache en` + Aufgabe → nächste Aufgabe | Englische Erklärung, deutsche Überschriften und Klausur-Lösung; Sprache bleibt Englisch. |
+| G32 | Auswahlfrage aus Übungsblatt („Welche Aussagen treffen zu?“) ohne Befehl → `lösung` | Thema erklärt, keine Option beurteilt; Antwort erst nach „lösung“. |
 
 ## Kursaufgaben (K01 … K06)
 

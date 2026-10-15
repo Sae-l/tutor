@@ -14,10 +14,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Kurs MPG1 als optionales Kurspaket `kurse/mpg1.md` außerhalb des Skills; Skill ohne Hochschul- oder Kursbezug.
 - Build erzeugt `dist/kern.md` (höchstens 4000 Zeichen) aus markierten Abschnitten von `SKILL.md`.
 - Plattformen: Claude Skill (Release-Gate), ChatGPT Projekt und Gemini experimentell.
+- Thema beurteilt Begründungs- und Auswahlfragen aus Übungsblättern erst nach „lösung“ (Lösungsschutz); Verständnisfrage auch in Lang laut Didaktik.
+- `docs/KONZEPT.md` und Release-Ablauf in `CONTRIBUTING.md` auf v0.2 (`dist/kern.md`) nachgeführt.
 
 ### Hinzugefügt
 - Modi Skizze, Lang und Klausur; Befehl `!issue` (Feedback-Link ohne Gesprächsinhalt) und Datenschutzhinweis im README.
-- Akzeptanzfälle für v0.2: M01-A … M10-C, G01 … G31.
+- Akzeptanzfälle für v0.2: M01-A … M10-C, G01 … G32.
 
 ### Entfernt
 - Modi Übung, Standard und Lösung als eigene Befehle; „lösung“ bleibt der Abruf zurückgehaltener Lösungen.

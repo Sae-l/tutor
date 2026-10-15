@@ -32,7 +32,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 
 17. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist: Tabelle Erklärsprache | Deutsch, nur neue Begriffe.
 18. **➡️ Nächster Schritt** – genau eine konkrete Aktion mit Zeitangabe. In Erklär, Voll, Thema, Mittel und Lang steht direkt davor „🧩 Verständnisfrage“ mit genau einer Frage (siehe Didaktik).
-19. **🔒 Lösungen** – ganz am Ende. Ohne geprüfte Aufklappfunktion steht hier wörtlich nur der Abrufsatz aus dem Abschnitt „Lösungsschutz“ und sonst nichts. Erst auf Abruf, in einer eigenen Antwort: die Antwort der Verständnisfrage, im Modus Tipp die vollständige Lösung der Aufgabe.
+19. **🔒 Lösungen** – ganz am Ende. Ohne geprüfte Aufklappfunktion steht hier wörtlich nur der Abrufsatz aus dem Abschnitt „Lösungsschutz“ und sonst nichts. Erst auf Abruf, in einer eigenen Antwort: die Antwort der Verständnisfrage, im Modus Tipp die vollständige Lösung der Aufgabe, im Modus Thema die Antwort einer Begründungs- oder Auswahlfrage.
 
 ## Mini-Beispiel für Abschnitt 6 (Form, nicht Inhalt; Erklärsprache Deutsch)
 
