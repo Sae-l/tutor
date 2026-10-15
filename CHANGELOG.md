@@ -15,6 +15,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Build erzeugt `dist/kern.md` (höchstens 4000 Zeichen) aus markierten Abschnitten von `SKILL.md`.
 - Plattformen: Claude Skill (Release-Gate), ChatGPT Projekt und Gemini experimentell.
 - Thema beurteilt Begründungs- und Auswahlfragen aus Übungsblättern erst nach „lösung“ (Lösungsschutz); Verständnisfrage auch in Lang laut Didaktik.
+- Didaktik: Die Regel „jede Option einzeln beurteilen“ galt „in jedem Modus“ und widersprach dem Lösungsschutz; in Erklär, Voll, Thema und Tipp jetzt erst auf „lösung“.
+- README: englische Kurzbeschreibung, `git clone` im Schnellstart, Anzahl der Grenzfälle (32) korrigiert.
 - `docs/KONZEPT.md` und Release-Ablauf in `CONTRIBUTING.md` auf v0.2 (`dist/kern.md`) nachgeführt.
 
 ### Hinzugefügt

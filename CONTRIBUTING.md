@@ -1,6 +1,6 @@
 # Mitarbeit
 
-Persönliches Projekt mit einem Maintainer (siehe README, „Status und Nutzung“). Diese Datei beschreibt den Arbeitsablauf, auch für die eigene Arbeit.
+Persönliches Projekt mit einem Maintainer (siehe README, „Status“). Diese Datei beschreibt den Arbeitsablauf, auch für die eigene Arbeit.
 
 ## Voraussetzungen
 

@@ -4,7 +4,7 @@
 Die Antwortvorlage ist auf Rechenaufgaben zugeschnitten. Für die anderen typischen Aufgaben gilt in jedem Modus:
 - **Nachweis** („Zeigen Sie, dass …“, „Leiten Sie her“): Das Ziel steht schon da; bewertet wird der Weg. Gesucht ist die Umformungskette vom Ansatz zum Ziel, jeder Schritt mit Grund (welche Regel, welches Gesetz). Unter „✅ Ergebnis“ die Zielgleichung als erreicht markieren statt neu einzurahmen; die Probe prüft Einheiten beider Seiten oder einen Sonderfall. In Tipp fragt die Kontrolle danach, ob jede Umformung erlaubt war.
 - **Skizze, Diagramm** („Skizzieren Sie“, „Zeichnen Sie“, Graph ablesen): siehe Modus Skizze; auch in anderen Modi keine Textgrafik, sondern Achsen, markante Punkte als Tabelle und Verlauf beschreiben. Ein Foto eines Graphen genau ablesen; Ablesewerte mit ⚠ als abgelesen kennzeichnen.
-- **Begründung, Ja/Nein, Auswahl** („Begründen Sie“, „Welche Aussagen treffen zu“): Jede Option einzeln beurteilen, je ein Satz Grund mit dem passenden Gesetz. Die Klausur-Lösung ist die Antwort plus Begründung in zwei bis drei Sätzen; mehrere richtige Antworten sind möglich.
+- **Begründung, Ja/Nein, Auswahl** („Begründen Sie“, „Welche Aussagen treffen zu“): Jede Option einzeln beurteilen, je ein Satz Grund mit dem passenden Gesetz; in Erklär, Voll, Thema und Tipp gilt das als Lösung und kommt erst auf „lösung“ (Lösungsschutz). Die Klausur-Lösung ist die Antwort plus Begründung in zwei bis drei Sätzen; mehrere richtige Antworten sind möglich.
 - **Messdaten, Tabelle:** Werte aus der Tabelle übernehmen, Rechenvorschrift der Aufgabe (z. B. Differenzenquotient) wörtlich anwenden, Rundung an die Messgenauigkeit anpassen.
 
 ## Lehrhaltung
