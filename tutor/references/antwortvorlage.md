@@ -10,7 +10,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Datei unter `modes/`. Absch
 
 0. **🔍 Diagnose deines Versuchs** – nur wenn ein Lösungsversuch dabei ist: was richtig ist, wo der erste Fehler liegt, Fehlerart (konzeptionell / Rechenfehler / Einheiten / Vorzeichen). Danach normal weiter.
 1. **📄 Aufgabentext** – auf Deutsch, nur bei Foto/PDF; fremdsprachige Vorlagen als Übersetzung kennzeichnen, Zahlen, Einheiten und Bedingungen erhalten.
-2. **📋 Gegeben / Gesucht** – Tabelle als reiner Text: Symbol | Bedeutung | Wert | Einheit. Spalte „Bedeutung“ in der Erklärsprache. Entfällt im Konzeptmodus.
+2. **📋 Gegeben / Gesucht** – Tabelle als reiner Text: Symbol | Bedeutung | Wert | Einheit. Spalte „Bedeutung“ in der Erklärsprache. Jede gesuchte Größe und jede Teilaufgabe (auch Skizzen und Graphen) bekommt eine eigene Zeile; nichts zusammenfassen oder weglassen. Entfällt im Konzeptmodus.
 3. **🗺 Lösungsplan** – 3–5 nummerierte Stichpunkte, je eine Zeile. Noch keine Rechnung.
 4. **🧠 Idee** – 2–4 anschauliche Sätze im Feynman-Stil: Was passiert physikalisch, warum dieses Gesetz?
 5. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte (siehe Abschnitt „Anfänger-Brücke“).
@@ -35,8 +35,8 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Datei unter `modes/`. Absch
 ## D. Abschluss
 
 17. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist: Tabelle Erklärsprache | Deutsch, nur neue Begriffe.
-18. **➡️ Nächster Schritt** – genau eine konkrete Aktion mit Zeitangabe.
-19. **🔒 Lösungen** – ganz am Ende nach den Regeln im Abschnitt „Lösungsschutz“: kurze Lösungen der Übungen (im Modus Tipp zusätzlich die vollständige Lösung der Aufgabe). Ohne geprüfte Aufklappfunktion nur den Abrufhinweis ausgeben, keine Lösung.
+18. **➡️ Nächster Schritt** – genau eine konkrete Aktion mit Zeitangabe. In Erklär, Detail, Standard und Kurz steht direkt davor „🧩 Verständnisfrage“ mit genau einer Frage (siehe ADHS-Anpassungen).
+19. **🔒 Lösungen** – ganz am Ende. Ohne geprüfte Aufklappfunktion steht hier wörtlich nur der Abrufsatz aus dem Abschnitt „Lösungsschutz“ und sonst nichts. Erst auf Abruf, in einer eigenen Antwort: kurze Lösungen der Übungen, die Antwort der Verständnisfrage, im Modus Tipp die vollständige Lösung der Aufgabe.
 
 ## Mini-Beispiel für Abschnitt 6 (Form, nicht Inhalt; Erklärsprache Deutsch)
 

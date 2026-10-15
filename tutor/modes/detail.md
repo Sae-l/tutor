@@ -1,10 +1,22 @@
-# Modus Detail
+# Modus Detail (Ausführlich)
 
-Ziel: Tiefes Verständnis des Aufgabentyps, nicht nur dieser Aufgabe.
+Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich, dann mathematisch, dann an einem vorgerechneten Beispiel. Die Originalaufgabe wird **nicht** gelöst; dafür gibt es „lösung“ oder „standard“.
 
-## Abschnitte (Nummern aus der Antwortvorlage)
-0*, 1*, 2–10, 11–15, 16, 17*, 18, 19.
+## Aufbau der Antwort (Nummern aus der Antwortvorlage)
+
+1. **📄 Aufgabentext** (1*) und **📋 Gegeben / Gesucht** (2).
+2. **🎯 Kernidee** (11) – ein Satz.
+3. **🧠 Anschauliche Erklärung** – 4–6 Sätze ohne Formeln: Bild, Analogie oder Alltags- bzw. Elektronikbeispiel; was passiert, und warum gilt dieses Gesetz?
+4. **🧮 Mathematische Erklärung** – das Gesetz als $$-Zeile mit deutschem Namen; dann in 2–4 kleinen Schritten, woher es kommt oder warum es so aussieht, wann es gilt, was die Einheiten zeigen und was im Grenzfall passiert.
+5. **🧰 Werkzeug** (5*).
+6. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe.
+7. **🔁 Gelöstes Beispiel** – eine Aufgabe derselben Art mit **anderen Zahlen und anderer Einkleidung**, vollständig gelöst nach dem Vorgehen aus Abschnitt 6, im Format von Abschnitt 6 der Vorlage (Schritte mit Gleichung, ⏸-Frage vor 2–3 Schritten), dann Ergebnis in \boxed{} (7) und Probe (8). Mindestens eine Kleinigkeit anders (z. B. andere gesuchte Größe oder ein zusätzlicher Umrechnungsschritt).
+8. **🚫 Falscher Weg** (12), **🔄 Was wäre, wenn?** (13), **🗂 Wiederholungskarte** (15). Alternativer Weg (14) nur, wenn er schneller oder klausurüblich ist.
+9. **📚 Fachbegriffe** (17*), **🧩 Verständnisfrage** (ADHS-Anpassungen) und **➡️ Nächster Schritt** (18): die Originalaufgabe jetzt selbst lösen, mit Zeitangabe; zum Vergleichen „lösung“.
+10. **🔒 Lösungen** (19): nur der Abrufsatz für die Verständnisfrage.
 
 ## Regeln
-- Wie Standard, zusätzlich alle Vertiefungsabschnitte (Kernidee, Falscher Weg, Was wäre wenn, Alternativer Weg, Wiederholungskarte).
+- **Zwei getrennte Erklärungen:** Abschnitt 3 enthält keine Formeln, Abschnitt 4 keine Bildersprache. Beides steht, damit der Lernende zwei Zugänge hat, nicht damit etwas doppelt gesagt wird.
+- **Gleichungen in der Sprache der Klausur:** Gesetzesname und Symbolbezeichnungen immer auf Deutsch, auch bei anderer Erklärsprache.
+- **Das Beispiel trägt die Methode:** Jeder Schritt nennt, welcher Schritt des Vorgehens gerade dran ist. Kein Zwischenergebnis und keine Werte der Originalaufgabe.
 - Trotz Tiefe: jeder Schritt höchstens 3 Sätze. Tiefe entsteht durch mehr Abschnitte, nicht durch längere Absätze.

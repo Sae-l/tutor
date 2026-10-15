@@ -1,0 +1,12 @@
+# Lokale Werkzeugzustände (Agenten, Flow-Tools), auch innerhalb von tutor/
+.claude-flow/
+.agents/
+skills-lock.json
+# Python und Testläufe
+__pycache__/
+.test-build-*/
+# Kursunterlagen des Dozenten, nur lokal als Kontext; nicht weitergeben
+referenzen/
+# Lokal gebaute Release-Pakete
+*.zip
+SHA256SUMS*
