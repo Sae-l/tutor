@@ -4,7 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
-Öffentliche Version v0.2 (Map #9); Akzeptanzfälle noch nicht ausgeführt.
+## [0.2.0-rc.1] – 2026-10-15
+
+Zweite Vorabversion: öffentliche Version v0.2 (Map #9); Akzeptanzfälle noch nicht ausgeführt.
 
 ### Geändert
 - Zielgruppe: Studierende im ersten Studienjahr eines deutschsprachigen MINT-Studiengangs statt einer einzelnen Person; ADHS-Freundlichkeit als Gestaltungsprinzip.
@@ -18,7 +20,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Didaktik: Die Regel „jede Option einzeln beurteilen“ galt „in jedem Modus“ und widersprach dem Lösungsschutz; in Erklär, Voll, Thema und Tipp jetzt erst auf „lösung“.
 - README: englische Kurzbeschreibung, `git clone` im Schnellstart, Anzahl der Grenzfälle (32) korrigiert.
 - `docs/KONZEPT.md` und Release-Ablauf in `CONTRIBUTING.md` auf v0.2 (`dist/kern.md`) nachgeführt.
-- SECURITY.md, PR- und Issue-Vorlage auf v0.2 nachgeführt (öffentliches Repo, Vorabversionen, Kern statt Kurzfassung).
+- SECURITY.md, PR- und Issue-Vorlage auf v0.2 nachgeführt (öffentliches Repo, Vorabversionen, Kern statt Kurzfassung); vertrauliche Funde über GitHubs private Schwachstellenmeldung.
 
 ### Hinzugefügt
 - Dependabot für die auf SHAs festgelegten GitHub Actions (`.github/dependabot.yml`).
