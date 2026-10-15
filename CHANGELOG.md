@@ -4,6 +4,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.1.0-rc.1] – 2026-10-15
+
+Erste Vorabversion; Akzeptanzfälle noch nicht ausgeführt.
+
 ### Hinzugefügt
 - Modus Hilfe (Befehlskarte) als zehnter Modus.
 - Kurzfassung `dist/system-prompt-kurz.md` (höchstens 8000 Zeichen) für Anweisungsfelder mit Längenlimit.
