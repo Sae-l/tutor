@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- Landingpage lädt v0.2.0-rc.2 herunter und nennt das ChatGPT-Plugin im Release.
+
 ## [0.2.0-rc.2] – 2026-10-15
 
 Dritte Vorabversion: natives ChatGPT-Plugin, aufgeräumtes Repo, neue README. Weiterhin keine Abnahme auf einer Zieloberfläche.
