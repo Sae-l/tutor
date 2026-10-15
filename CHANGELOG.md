@@ -10,6 +10,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Landingpage `docs/index.html` für GitHub Pages: Ablauf, 11 Modi, Erklärsprachen mit Beispiel, Einrichtung, häufige Fragen, Stand der Vorabversion. Schriften lokal in `docs/fonts/` (SIL OFL), keine Anfragen an Dritte.
 
 ### Geändert
+- Aufgeräumt für Besucher: Planungsnotizen aus `PATHFINDER-2026-10-15/` nach `docs/planung/` verschoben, lokale Rechnerpfade entfernt, Plattformrecherche aus dem ungemergten Branch `research/platform-limits` übernommen; README verlinkt die Landingpage. Testprotokoll des CLI-Ersatzlaufs liegt jetzt in `tests/protokolle/`.
 - Sprachwechsel im Router/Kern schließt natürliche ausdrückliche Sprachwünsche aus der bestehenden Sprachreferenz ein. Kern bleibt innerhalb des internen 4000-Zeichen-Budgets.
 - Bytegleiche Skill- und Paketdateien durch feste LF-Zeilenenden; erneuter Buildvergleich für alle Ausgaben. ChatGPT-Akzeptanzmatrix und Protokollvorlage ergänzt, begrenzten CLI-Ersatzlauf im aktuellen Status berücksichtigt.
 - README: Schnellstart mit fertigem Release-ZIP, aktuellen Claude-Menüpfaden (Customize → Skills), Voraussetzung Code-Ausführung, Test mit `tutor`, Aktualisieren und Fehlerbehebung; Kurspaket als Projektwissen; Schritte für ChatGPT Projekt und Gemini.

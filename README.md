@@ -7,6 +7,7 @@ Lern-Tutor für Aufgaben aus dem ersten Studienjahr in MINT-Fächern (Physik, Ma
 ## Status
 
 - **Vorabstand v0.2, nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
+- **Überblick:** [Landingpage](https://sae-l.github.io/tutor/).
 - **Rechte:** [MIT-Lizenz](LICENSE).
 - **Feedback:** [Issue anlegen](https://github.com/Sae-l/tutor/issues/new) oder im Tutor `!issue` schreiben. Issues sind öffentlich: keine Aufgabentexte, Namen oder Fotos mit persönlichen Daten einfügen.
 
@@ -109,6 +110,7 @@ Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter (A
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
+| `docs/planung/` | Planungsnotizen und Recherchen (Stand jeweils im Dateinamen), keine Anleitung |
 | `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build); Schriften lokal in `docs/fonts/` (SIL OFL) |
 | `GLOSSARY.md` | Festgelegte Begriffe |
 

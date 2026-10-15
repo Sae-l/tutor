@@ -2,7 +2,7 @@
 
 **Entscheidung:** `tutor/` bleibt die einzige gepflegte Verhaltensquelle. Alle elf Modi bleiben in einem Skill: erklär, voll, thema, tipp, check, skizze, kurz, mittel, lang, klausur, hilfe. Unterschiedliche Importpakete enthalten dieselben Skillbytes. Kein eigenständiger Agentendienst, kein API-Schlüssel, keine neue App.
 
-Dies ist der Architekturvorschlag, keine implementierte Kompatibilitätszusage. Der aufgerufene [Pathfinder-Skill](C:/Users/salha/.agents/skills/pathfinder/SKILL.md) verlangt "You do not write implementation code." Iststand und Discovery: [00-features.md](00-features.md), [02-duplication-report.md](02-duplication-report.md).
+Dies ist der Architekturvorschlag, keine implementierte Kompatibilitätszusage. Der aufgerufene Pathfinder-Skill verlangt "You do not write implementation code." Iststand und Discovery: [00-features.md](00-features.md), [02-duplication-report.md](02-duplication-report.md).
 
 ## 1. Gemeinsames Tutorverhalten
 
