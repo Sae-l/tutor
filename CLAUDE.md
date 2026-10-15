@@ -31,11 +31,10 @@
 - Kurzfassung `dist/system-prompt-kurz.md` (handgeschrieben, ≤ 8000 Zeichen); in v0.2 durch den erzeugten Kern `dist/kern.md` ersetzt und entfernt.
 - Build-Regressionstests: `python -B -m unittest discover -s tests -v` (auch CI auf Linux/Windows). Build-Prüfungen sind explizite Fehler statt `assert`, damit `python -O` sie nicht abschaltet.
 - Manuelle Abnahme: `tests/akzeptanz.md` mit Release-Gate nach #3/#4, IDs M01-A…M09-C, G01…G27, K01…K06, D1…D4; vorbereitet, nicht ausgeführt.
-- Repo-Audit vom 2026-10-14 umgesetzt, soweit im Repo möglich (README-Status, `.gitignore`, CI, SECURITY, CONTRIBUTING, CHANGELOG, Vorlagen). GitHub-Einstellungen inzwischen erledigt (Branchschutz mit CI-Pflicht, Beschreibung, Themen, Secret Scanning mit Push-Schutz); Vorab-Release v0.1.0-rc.1 erschienen.
+- Repo-Audit vom 2026-10-14 umgesetzt, soweit im Repo möglich (README-Status, `.gitignore`, CI, SECURITY, CONTRIBUTING, CHANGELOG, Vorlagen). GitHub-Einstellungen inzwischen erledigt (Branchschutz mit CI-Pflicht, Beschreibung, Themen, Secret Scanning mit Push-Schutz, private Schwachstellenmeldung); Vorab-Release v0.1.0-rc.1 erschienen.
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
 ## Offene Punkte
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
 2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen.
 3. Vorab-Release v0.2.0-rc.1 nach CONTRIBUTING (`main` ist geschützt, CI Pflicht).
-4. Private Schwachstellenmeldung auf GitHub aktivieren und SECURITY.md anpassen; Altrepo `Sae-l/physik-mathe-tutor` mit Verweis auf dieses Repo archivieren.

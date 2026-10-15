@@ -14,10 +14,10 @@ Bisher gibt es nur Vorabversionen (`v0.x.0-rc.N`). Unterstützt wird nur der akt
 
 ## Meldeweg
 
-Das Repository ist öffentlich und hat einen Maintainer (GitHub: [@Sae-l](https://github.com/Sae-l)). Ein eigener privater Meldekanal (z. B. GitHubs private Schwachstellenmeldung) ist **noch nicht eingerichtet**.
+Das Repository ist öffentlich und hat einen Maintainer (GitHub: [@Sae-l](https://github.com/Sae-l)). GitHubs private Schwachstellenmeldung ist aktiviert.
 
 - Nicht vertrauliche Funde: Issue mit der Vorlage „Fehler im Tutorverhalten“.
-- Vertrauliche Funde (Zugangsdaten, private Daten im Verlauf, Umgehung des Lösungsschutzes mit Missbrauchspotenzial): im Issue nur „vertraulicher Sicherheitsfund, bitte Kontakt“ schreiben, ohne Details. Der Maintainer meldet sich über einen privaten Weg.
+- Vertrauliche Funde (Zugangsdaten, private Daten im Verlauf, Umgehung des Lösungsschutzes mit Missbrauchspotenzial): privat melden über [Security → Report a vulnerability](https://github.com/Sae-l/tutor/security/advisories/new), nicht als Issue. Nur der Maintainer sieht die Meldung.
 
 ## Aufgabenbilder und Kursunterlagen
 
