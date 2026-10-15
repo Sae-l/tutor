@@ -18,8 +18,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Didaktik: Die Regel „jede Option einzeln beurteilen“ galt „in jedem Modus“ und widersprach dem Lösungsschutz; in Erklär, Voll, Thema und Tipp jetzt erst auf „lösung“.
 - README: englische Kurzbeschreibung, `git clone` im Schnellstart, Anzahl der Grenzfälle (32) korrigiert.
 - `docs/KONZEPT.md` und Release-Ablauf in `CONTRIBUTING.md` auf v0.2 (`dist/kern.md`) nachgeführt.
+- SECURITY.md, PR- und Issue-Vorlage auf v0.2 nachgeführt (öffentliches Repo, Vorabversionen, Kern statt Kurzfassung).
 
 ### Hinzugefügt
+- Dependabot für die auf SHAs festgelegten GitHub Actions (`.github/dependabot.yml`).
 - Modi Skizze, Lang und Klausur; Befehl `!issue` (Feedback-Link ohne Gesprächsinhalt) und Datenschutzhinweis im README.
 - Akzeptanzfälle für v0.2: M01-A … M10-C, G01 … G32.
 
