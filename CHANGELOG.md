@@ -5,7 +5,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 ## [Unveröffentlicht]
 
 ### Hinzugefügt
-- Landingpage `docs/index.html` für GitHub Pages: Ablauf, 11 Modi, Erklärsprachen mit Beispiel, Einrichtung, Stand der Vorabversion.
+- Landingpage `docs/index.html` für GitHub Pages: Ablauf, 11 Modi, Erklärsprachen mit Beispiel, Einrichtung, häufige Fragen, Stand der Vorabversion. Schriften lokal in `docs/fonts/` (SIL OFL), keine Anfragen an Dritte.
+
+### Geändert
+- README: Schnellstart mit fertigem Release-ZIP, aktuellen Claude-Menüpfaden (Customize → Skills), Voraussetzung Code-Ausführung, Test mit `tutor`, Aktualisieren und Fehlerbehebung; Kurspaket als Projektwissen; Schritte für ChatGPT Projekt und Gemini.
 
 ## [0.2.0-rc.1] – 2026-10-15
 
