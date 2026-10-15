@@ -81,6 +81,7 @@ Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter (A
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
+| `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build) |
 | `GLOSSARY.md` | Festgelegte Begriffe |
 
 ## Entwicklung
