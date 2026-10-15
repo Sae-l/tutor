@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- Landingpage `docs/index.html` für GitHub Pages: Ablauf, 11 Modi, Erklärsprachen mit Beispiel, Einrichtung, Stand der Vorabversion.
+
 ## [0.2.0-rc.1] – 2026-10-15
 
 Zweite Vorabversion: öffentliche Version v0.2 (Map #9); Akzeptanzfälle noch nicht ausgeführt.

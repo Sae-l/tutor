@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutor – Physik und Mathe verstehen</title>
+<meta name="description" content="Lern-Tutor für Physik, Mathe und E-Technik im ersten Studienjahr. Erklärt, gibt Leitfragen und hält die Lösung zurück, bis du sie willst. Als Claude Skill.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500&family=Noto+Nastaliq+Urdu&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
+:root {
+  --paper: #FAFAF9;
+  --sheet: #FFFFFF;
+  --ink: #1C1917;
+  --pencil: #57534E;
+  --hairline: #E7E5E4;
+  --accent: #2F6F5E;
+  --accent-hover: #285F51;
+  --wash: #E8F1EE;
+  --amber: #B45309;
+  --shadow: 0 1px 2px rgba(28,25,23,.04), 0 8px 24px rgba(28,25,23,.05);
+  --sans: "Satoshi", ui-sans-serif, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section: clamp(3rem, 8vw, 6rem);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+code, .mono { font-family: var(--mono); font-size: .9375em; }
+p { margin: 0 0 1rem; max-width: 65ch; }
+h1, h2, h3 { margin: 0; letter-spacing: -.02em; line-height: 1.15; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 700; }
+h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -.01em; }
+.lead { color: var(--pencil); font-size: 1.125rem; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter); }
+section { padding: var(--section) 0; }
+section + section { border-top: 1px solid var(--hairline); }
+.eyebrow { font: 500 .8125rem/1 var(--mono); color: var(--pencil); margin-bottom: 1rem; display: block; }
+
+/* Header */
+.top { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
+.brand { font-weight: 700; font-size: 1.125rem; color: var(--ink); text-decoration: none; display: inline-flex; gap: .5rem; align-items: center; min-height: 44px; }
+.top nav { display: flex; gap: 1.5rem; }
+.top nav a { color: var(--pencil); text-decoration: none; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding-top: clamp(2rem, 6vw, 5rem); }
+.hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.hero h1 { font-size: clamp(2.25rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1.5rem; }
+.sketch-inline {
+  display: inline-block; vertical-align: -.08em; height: .78em; width: auto;
+  border: 1px solid var(--hairline); border-radius: .5rem; background: var(--sheet);
+  padding: .06em .18em; margin: 0 .08em;
+}
+.sketch-mobile { display: none; }
+.hero .lead { margin-bottom: 2rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; padding: 0 1.4rem;
+  background: var(--accent); color: var(--paper); border-radius: .75rem; text-decoration: none;
+  font-weight: 700; transition: transform .2s cubic-bezier(.2,.8,.2,1), background .2s;
+}
+.btn:hover { background: var(--accent-hover); color: var(--paper); }
+.btn:active { transform: translateY(1px); }
+.version { margin-top: 1rem; font: 400 .875rem var(--mono); color: var(--pencil); }
+
+.card { background: var(--sheet); border: 1px solid var(--hairline); border-radius: 1.25rem; box-shadow: var(--shadow); }
+.chat { padding: 1.25rem; font-size: .9688rem; margin: 0; }
+.chat-label { font: 500 .75rem var(--mono); color: var(--pencil); margin-bottom: .75rem; display: flex; justify-content: space-between; gap: 1rem; }
+.msg-user { background: var(--paper); border: 1px solid var(--hairline); border-radius: .9rem .9rem .25rem .9rem; padding: .75rem 1rem; margin: 0 0 1rem 2.5rem; }
+.msg-user .cmd { display: inline-block; margin-top: .4rem; font: 500 .8125rem var(--mono); color: var(--accent); }
+.msg-tutor h4 { margin: 1rem 0 .3rem; font-size: .8125rem; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
+.msg-tutor h4:first-child { margin-top: 0; }
+.msg-tutor p { margin: 0 0 .5rem; }
+.msg-tutor .katex-display { margin: .5rem 0; }
+.locked { margin-top: .75rem; padding: .6rem .8rem; border: 1px dashed var(--hairline); border-radius: .6rem; color: var(--pencil); font-size: .875rem; }
+
+/* Escalation */
+.sec-head { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); align-items: end; }
+.sec-head p { margin: 0; color: var(--pencil); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; }
+.steps li { position: relative; padding: 1.5rem 1.5rem 0 0; border-top: 2px solid var(--hairline); }
+.steps li::before {
+  counter-increment: s; content: counter(s);
+  position: absolute; top: -.85rem; left: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--accent); color: var(--accent);
+  font: 500 .75rem/1.25rem var(--mono); text-align: center;
+}
+.steps li:first-child { border-top-color: var(--accent); }
+.steps code { display: inline-block; font-size: 1.125rem; font-weight: 500; color: var(--ink); margin: .5rem 0 .4rem; }
+.steps p { color: var(--pencil); font-size: 1rem; margin: 0; }
+
+/* Modes */
+.modes { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.feature { padding: clamp(1.5rem, 3vw, 2.25rem); }
+.badge { display: inline-block; font: 500 .75rem/1 var(--mono); padding: .4rem .6rem; border-radius: 999px; background: var(--wash); color: var(--accent); }
+.badge.neutral { background: var(--paper); color: var(--pencil); border: 1px solid var(--hairline); }
+.feature h3 { font-size: 1.5rem; margin: 1rem 0 .75rem; }
+.feature h3 code { font-size: .9em; }
+.feature ul { margin: 1rem 0 0; padding-left: 1.1rem; color: var(--pencil); }
+.feature li { margin-bottom: .35rem; }
+.mode-list { list-style: none; margin: 0; padding: 0; }
+.mode-list li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--hairline); }
+.mode-list code { font-weight: 500; color: var(--accent); }
+.mode-list span { color: var(--pencil); }
+.mode-list li.group-label { display: block; font: 500 .75rem var(--mono); color: var(--pencil); padding: 1.5rem 0 .5rem; }
+.mode-list li.group-label:first-child { padding-top: 0; }
+
+/* Languages */
+.lang-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 1rem; }
+.chip {
+  min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--hairline);
+  background: var(--sheet); color: var(--ink); font: 500 .9375rem var(--sans); cursor: pointer;
+  display: inline-flex; align-items: center; gap: .5rem; transition: background .2s, border-color .2s;
+}
+.chip small { font: 400 .75rem var(--mono); color: var(--pencil); }
+.chip:hover { border-color: var(--pencil); }
+.chip[aria-pressed="true"] { background: var(--wash); border-color: var(--accent); }
+.chip[aria-pressed="true"] small { color: var(--accent); }
+.note { font-size: .9375rem; color: var(--pencil); }
+.sample { padding: clamp(1.25rem, 3vw, 2rem); }
+.sample h4 { margin: 0 0 .4rem; font-size: .8125rem; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
+.sample .body { margin-bottom: 1.25rem; min-height: 6.6em; }
+.sample [dir="rtl"] { font-size: 1.125rem; line-height: 1.9; }
+.sample [lang="ar"] { font-family: "Noto Naskh Arabic", var(--sans); }
+.sample [lang="ur"] { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", var(--sans); line-height: 2.3; }
+.terms { width: 100%; border-collapse: collapse; font-size: .9375rem; table-layout: fixed; }
+.terms th:first-child, .terms td:first-child { padding-inline-end: 1.5rem; }
+.terms th { text-align: start; font: 500 .75rem var(--mono); color: var(--pencil); padding: 0 0 .4rem; }
+.terms td { padding: .5rem 0; border-top: 1px solid var(--hairline); text-align: start; }
+.terms td:last-child { color: var(--pencil); }
+.terms[hidden], .terms-de[hidden] { display: none; }
+.terms-de { color: var(--pencil); font-size: .9375rem; margin: 0; }
+
+/* Setup */
+.setup { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.setup-main { padding: clamp(1.5rem, 3vw, 2.25rem); }
+.setup-main h3, .setup-side h3 { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 1.25rem; }
+.setup ol { margin: 0; padding: 0; list-style: none; counter-reset: n; }
+.setup ol > li { counter-increment: n; display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; padding: .75rem 0; border-top: 1px solid var(--hairline); }
+.setup ol > li::before { content: counter(n); font: 500 .875rem/1.9 var(--mono); color: var(--accent); }
+.setup ol > li p { margin: 0; }
+.setup-side { padding-top: clamp(0rem, 2vw, 2.25rem); }
+.setup-side p { color: var(--pencil); }
+.cmdline {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  background: var(--paper); border: 1px solid var(--hairline); border-radius: .75rem;
+  padding: .25rem .25rem .25rem 1rem; margin-top: .75rem;
+}
+.cmdline code { overflow-wrap: anywhere; }
+.copy {
+  min-height: 44px; min-width: 44px; padding: 0 .9rem; border: 1px solid var(--hairline); border-radius: .6rem;
+  background: var(--sheet); color: var(--ink); font: 500 .8125rem var(--sans); cursor: pointer; flex-shrink: 0;
+}
+.copy:hover { border-color: var(--pencil); }
+
+/* Honest */
+.honest { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; }
+.honest ul { margin: 0; padding: 0; list-style: none; }
+.honest li { padding: .75rem 0; border-top: 1px solid var(--hairline); max-width: 65ch; }
+.honest li:first-child { border-top: 0; padding-top: 0; }
+.honest .warn { color: var(--amber); font-weight: 500; }
+
+/* Footer */
+footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem) 0; font-size: .9375rem; color: var(--pencil); }
+.foot { display: grid; grid-template-columns: 5fr 4fr 3fr; gap: 2rem; }
+.foot h3 { color: var(--ink); font-size: .9375rem; margin-bottom: .5rem; }
+.foot p { margin: 0 0 .5rem; }
+.foot ul { list-style: none; margin: 0; padding: 0; }
+.foot li a { display: inline-flex; min-height: 44px; align-items: center; }
+
+/* Reveal (only with JS, only without reduced motion) */
+.js .reveal { opacity: 0; transform: translateY(8px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0ms); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .top nav { display: none; }
+  .hero-grid, .sec-head, .modes, .lang-grid, .setup, .honest, .foot { grid-template-columns: 1fr; }
+  .sketch-inline { display: none; }
+  .sketch-mobile { display: block; height: 3rem; width: auto; margin: -.5rem 0 1.25rem; }
+  .steps { grid-template-columns: 1fr; }
+  .steps li { border-top: 0; border-left: 2px solid var(--hairline); padding: 0 0 1.75rem 1.75rem; }
+  .steps li:first-child { border-left-color: var(--accent); }
+  .steps li::before { left: -.85rem; top: 0; }
+  .steps li code { margin-top: 0; }
+  .mode-list li { grid-template-columns: 6rem 1fr; }
+  .msg-user { margin-left: 1rem; }
+  .btn { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20 L12 4 L21 20" stroke="#2F6F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 13.5 h9" stroke="#1C1917" stroke-width="2" stroke-linecap="round"/></svg>
+      tutor
+    </a>
+    <nav aria-label="Seitenbereiche">
+      <a href="#ablauf">Ablauf</a>
+      <a href="#modi">Modi</a>
+      <a href="#sprachen">Sprachen</a>
+      <a href="#einrichten">Einrichten</a>
+    </nav>
+  </header>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Physik · Mathe · E-Technik · 1. Studienjahr</span>
+        <h1>
+          Verstehen
+          <svg class="sketch-inline" viewBox="0 0 64 40" aria-hidden="true"><path d="M6 34 Q32 -14 58 34" fill="none" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="10" r="3" fill="#1C1917"/></svg>
+          statt
+          <svg class="sketch-inline" viewBox="0 0 64 40" aria-hidden="true"><path d="M8 32 L52 10" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round"/><path d="M42 8 L54 9 L48 20" fill="none" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 32 h22" stroke="#1C1917" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round"/></svg>
+          abschreiben.
+        </h1>
+        <svg class="sketch-mobile" viewBox="0 0 140 40" aria-hidden="true"><path d="M6 34 Q38 -14 70 34" fill="none" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round"/><circle cx="38" cy="10" r="3" fill="#1C1917"/><path d="M84 32 L126 10" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round"/><path d="M116 8 L128 9 L122 20" fill="none" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="lead">Ein Lern-Tutor für Physik- und Mathe-Aufgaben im ersten Semester. Er erklärt das Thema, stellt Leitfragen und hält die Lösung zurück, bis du sie wirklich willst.</p>
+        <a class="btn" href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1">
+          Tutor herunterladen
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="version">v0.2.0-rc.1 · Vorabversion · MIT</div>
+      </div>
+
+      <figure class="card chat reveal" style="--d:120ms" aria-label="Ausschnitt einer Antwort im Modus Erklär" lang="de">
+        <div class="chat-label"><span>Ausschnitt · Modus Erklär</span><span>gekürzt</span></div>
+        <div class="msg-user">
+          Ein Ball wird mit 12 m/s senkrecht nach oben geworfen. Wie hoch steigt er?
+          <br><span class="cmd">erklär</span>
+        </div>
+        <div class="msg-tutor">
+          <h4>Idee</h4>
+          <p>Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie.</p>
+          <h4>Gleichungen</h4>
+          <p>Energieerhaltung (ohne Reibung):</p>
+          $$\tfrac{1}{2}\,m\,v^2 + m\,g\,h = \text{konst.}$$
+          <h4>Verständnisfrage</h4>
+          <p>Hängt die Steighöhe von der Masse des Balls ab?</p>
+          <div class="locked">Lösungen: Mit „lösung“ abrufen.</div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Escalation -->
+  <section id="ablauf">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">So arbeitet der Tutor</span><h2>Erst selbst denken, dann Schritt für Schritt mehr Hilfe.</h2></div>
+        <p>Jede Antwort endet mit genau einem nächsten Schritt. Reicht die Erklärung nicht, schreibst du das nächste Befehlswort.</p>
+      </div>
+      <ol class="steps">
+        <li class="reveal" style="--d:0ms"><code>erklär</code><p>Thema und nötige Gleichungen. Kein Beispiel, keine Lösung.</p></li>
+        <li class="reveal" style="--d:60ms"><code>tipp</code><p>Leitfragen, die du dir selbst stellst. Die Lösung bleibt zurückgehalten.</p></li>
+        <li class="reveal" style="--d:120ms"><code>voll</code><p>Anschaulich und mathematisch, mit vorgerechnetem Beispiel einer anderen Aufgabe.</p></li>
+        <li class="reveal" style="--d:180ms"><code>kurz</code><p>Klausur-Lösung auf Deutsch zum Vergleichen, plus eine Anmerkung.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Modes -->
+  <section id="modi">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Befehle</span><h2>11 Modi, ein Befehlswort.</h2></div>
+        <p>Foto der Aufgabe schicken, optional mit einem Befehlswort. <code>!an tipp</code> hält einen Modus für alle folgenden Aufgaben, <code>!aus</code> beendet ihn.</p>
+      </div>
+      <div class="modes">
+        <article class="card feature reveal">
+          <span class="badge">Voreinstellung</span>
+          <h3><code>erklär</code> – das Thema verstehen</h3>
+          <p>Ohne Befehlswort antwortet der Tutor im Modus Erklär: worum es in der Aufgabe geht und welche Gleichungen sie braucht.</p>
+          <ul>
+            <li>Idee in drei bis fünf Sätzen</li>
+            <li>Ein bis drei Gesetze mit Bedeutung jedes Symbols</li>
+            <li>Allgemeines Vorgehen, ohne die Zahlen der Aufgabe</li>
+            <li>Die zwei häufigsten Stolpersteine</li>
+          </ul>
+        </article>
+        <ul class="mode-list reveal" style="--d:100ms">
+          <li class="group-label">Verstehen</li>
+          <li><code>voll</code><span>Mit vorgerechnetem Beispiel einer anderen Aufgabe</span></li>
+          <li><code>thema</code><span>Begriff oder Gesetz verstehen und wie es beim Lösen hilft</span></li>
+          <li><code>tipp</code><span>Leitfragen, Lösung zurückgehalten</span></li>
+          <li><code>check</code><span>Ersten Fehler im eigenen Versuch finden</span></li>
+          <li><code>skizze</code><span>Skizze, Diagramm oder Graph</span></li>
+          <li class="group-label">Lösen</li>
+          <li><code>kurz</code><span>Klausur-Lösung plus eine Anmerkung</span></li>
+          <li><code>mittel</code><span>Erklärung mittlerer Tiefe mit vollständiger Lösung</span></li>
+          <li><code>lang</code><span>Lösung plus bis zu zwei andere Wege</span></li>
+          <li><code>klausur</code><span>Schnelle Lösung mit Tipps für volle Punktzahl</span></li>
+          <li class="group-label">Sonstiges</li>
+          <li><code>hilfe</code><span>Befehlskarte</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section id="sprachen">
+    <div class="wrap lang-grid">
+      <div class="reveal">
+        <span class="eyebrow">Erklärsprachen</span>
+        <h2>Erklärt in deiner Sprache, geprüft auf Deutsch.</h2>
+        <div class="chips" role="group" aria-label="Erklärsprache wählen">
+          <button class="chip" type="button" data-lang="de" aria-pressed="true">Deutsch <small>[de]</small></button>
+          <button class="chip" type="button" data-lang="ar" aria-pressed="false"><span lang="ar">العربية</span> <small>[ar]</small></button>
+          <button class="chip" type="button" data-lang="tr" aria-pressed="false"><span lang="tr">Türkçe</span> <small>[tr]</small></button>
+          <button class="chip" type="button" data-lang="fr" aria-pressed="false"><span lang="fr">Français</span> <small>[fr]</small></button>
+          <button class="chip" type="button" data-lang="en" aria-pressed="false"><span lang="en">English</span> <small>[en]</small></button>
+          <button class="chip" type="button" data-lang="ur" aria-pressed="false"><span lang="ur">اردو</span> <small>[ur]</small></button>
+        </div>
+        <p class="note">Umschalten mit <code>[ar]</code> oder <code>!sprache ar</code>. Überschriften, Aufgabentext und Klausur-Lösung bleiben Deutsch, damit du das Prüfungsvokabular mitlernst.</p>
+      </div>
+      <div class="card sample reveal" style="--d:100ms" aria-live="polite">
+        <h4 lang="de">Idee</h4>
+        <div class="body" id="sample-text" lang="de">Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie. Das ist eine Aufgabe zur Energieerhaltung ohne Reibung.</div>
+        <h4 lang="de">Fachbegriffe</h4>
+        <p class="terms-de" id="terms-de">Erscheinen nur, wenn die Erklärsprache nicht Deutsch ist.</p>
+        <table class="terms" id="terms" hidden>
+          <thead><tr><th id="terms-head">Erklärsprache</th><th>Deutsch</th></tr></thead>
+          <tbody id="terms-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup -->
+  <section id="einrichten">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Einrichten</span><h2>In fünf Minuten startklar.</h2></div>
+        <p>Der Tutor ist kein Programm und kein Dienst. Er läuft als Anweisung in deinem Chat-Konto.</p>
+      </div>
+      <div class="setup">
+        <div class="card setup-main reveal">
+          <h3>Claude Skill <span class="badge">empfohlen · Release-Gate</span></h3>
+          <ol>
+            <li><p><code>tutor-skill.zip</code> aus dem <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1">aktuellen Release</a> herunterladen.</p></li>
+            <li><p>In Claude unter <strong>Einstellungen → Skills</strong> die ZIP-Datei hochladen.</p></li>
+            <li><div><p>Ein Projekt „Tutor“ anlegen und ein Foto der Aufgabe schicken, optional mit Befehlswort:</p>
+              <div class="cmdline"><code>tipp</code><button class="copy" type="button" data-copy="tipp">Kopieren</button></div></div>
+            </li>
+          </ol>
+        </div>
+        <div class="setup-side reveal" style="--d:100ms">
+          <h3>ChatGPT Projekt · Gemini <span class="badge neutral">experimentell</span></h3>
+          <p>Inhalt von <code>kern.md</code> in die Anweisungen kopieren und <code>system-prompt.md</code> als Datei hochladen. Beide Dateien liegen im Release.</p>
+          <p>Formeldarstellung und Feldgrenzen sind dort nicht geprüft.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honest -->
+  <section>
+    <div class="wrap honest">
+      <div class="reveal"><span class="eyebrow">Stand</span><h2>Ehrlich gesagt.</h2></div>
+      <ul class="reveal" style="--d:100ms">
+        <li><span class="warn">Vorabversion, nicht abgenommen.</span> Die Akzeptanzfälle für das Lehrverhalten (30 Modusfälle, 32 Grenzfälle) sind vorbereitet, aber noch nicht ausgeführt.</li>
+        <li>ADHS-freundlich ist ein Designziel: kurze Schritte, feste Struktur. Eine Wirkung ist nicht nachgewiesen.</li>
+        <li>Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.</li>
+        <li>Alle Änderungen stehen im <a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Changelog</a>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h3>tutor</h3>
+      <p lang="en">A study tutor for first-year STEM exercises at German-speaking universities, packaged as a Claude Skill. It explains and asks guiding questions before revealing solutions.</p>
+    </div>
+    <div>
+      <h3>Datenschutz</h3>
+      <p>Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter. <code>!issue</code> erzeugt nur einen Feedback-Link und schickt keine Gesprächsinhalte.</p>
+    </div>
+    <div>
+      <h3>Projekt</h3>
+      <ul>
+        <li><a href="https://github.com/Sae-l/tutor">Quellcode auf GitHub</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/issues/new">Feedback geben</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/blob/main/LICENSE">MIT-Lizenz</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true}],throwOnError:false})"></script>
+<script>
+document.documentElement.classList.add('js');
+
+// Reveal once on scroll
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+
+// Language sample: headings stay German, body follows the Erklärsprache
+const SAMPLES = {
+  de: { name: 'Deutsch', rtl: false, text: 'Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie. Das ist eine Aufgabe zur Energieerhaltung ohne Reibung.', terms: [] },
+  ar: { name: 'العربية', rtl: true, text: 'تتباطأ الكرة أثناء صعودها حتى تتوقف لحظة عند أعلى نقطة. وخلال ذلك تتحول طاقتها الحركية بالكامل إلى طاقة وضع. هذه مسألة حفظ الطاقة دون احتكاك.',
+        terms: [['حفظ الطاقة', 'Energieerhaltung'], ['الطاقة الحركية', 'kinetische Energie'], ['طاقة الوضع', 'potentielle Energie']] },
+  tr: { name: 'Türkçe', rtl: false, text: 'Top yükselirken yavaşlar ve en yüksek noktada bir an durur. Bu sırada kinetik enerjisi tamamen potansiyel enerjiye dönüşür. Bu, sürtünmesiz bir enerjinin korunumu sorusudur.',
+        terms: [['enerjinin korunumu', 'Energieerhaltung'], ['kinetik enerji', 'kinetische Energie'], ['potansiyel enerji', 'potentielle Energie']] },
+  fr: { name: 'Français', rtl: false, text: 'La balle ralentit en montant jusqu’à s’arrêter un instant au point le plus haut. Son énergie cinétique se transforme entièrement en énergie potentielle. C’est un exercice de conservation de l’énergie sans frottement.',
+        terms: [['conservation de l’énergie', 'Energieerhaltung'], ['énergie cinétique', 'kinetische Energie'], ['énergie potentielle', 'potentielle Energie']] },
+  en: { name: 'English', rtl: false, text: 'The ball slows down as it rises until it briefly stops at the highest point. Along the way its kinetic energy turns completely into potential energy. This is an energy-conservation problem without friction.',
+        terms: [['conservation of energy', 'Energieerhaltung'], ['kinetic energy', 'kinetische Energie'], ['potential energy', 'potentielle Energie']] },
+  ur: { name: 'اردو', rtl: true, text: 'گیند اوپر جاتے ہوئے آہستہ ہوتی جاتی ہے اور سب سے اونچے نقطے پر ایک لمحے کے لیے رک جاتی ہے۔ اس دوران اس کی حرکی توانائی پوری طرح مخفی توانائی میں بدل جاتی ہے۔ یہ رگڑ کے بغیر توانائی کی بقا کا سوال ہے۔',
+        terms: [['توانائی کی بقا', 'Energieerhaltung'], ['حرکی توانائی', 'kinetische Energie'], ['مخفی توانائی', 'potentielle Energie']] }
+};
+const textEl = document.getElementById('sample-text');
+const termsEl = document.getElementById('terms');
+const termsDe = document.getElementById('terms-de');
+const termsBody = document.getElementById('terms-body');
+document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
+  const code = chip.dataset.lang, s = SAMPLES[code];
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+  textEl.textContent = s.text;
+  textEl.lang = code;
+  textEl.dir = s.rtl ? 'rtl' : 'ltr';
+  termsBody.replaceChildren(...s.terms.map(([x, de]) => {
+    const tr = document.createElement('tr'), a = document.createElement('td'), b = document.createElement('td');
+    a.textContent = x; a.lang = code; b.textContent = de; b.lang = 'de';
+    tr.append(a, b); return tr;
+  }));
+  document.getElementById('terms-head').textContent = s.name;
+  termsEl.dir = s.rtl ? 'rtl' : 'ltr';
+  termsEl.hidden = !s.terms.length;
+  termsDe.hidden = !!s.terms.length;
+}));
+
+// Copy buttons
+document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = 'Kopiert'; }
+  catch { btn.textContent = 'Nicht möglich'; }
+  setTimeout(() => { btn.textContent = 'Kopieren'; }, 1800);
+}));
+</script>
+</body>
+</html>
