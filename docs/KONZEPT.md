@@ -13,19 +13,19 @@
 
 ## 2. Wissenschaftliche Grundlagen
 
-Einschränkung vorweg: Es wurde **keine eigene systematische Literaturrecherche** durchgeführt. Die Prinzipien stammen aus gut etablierter Lernforschung und sind aus dem Gedächtnis zitiert. Sie belegen die **Prinzipien**, nicht die Wirksamkeit dieses Agenten; der Agent selbst ist noch nicht empirisch getestet.
+Einschränkung vorweg: Es wurde **keine eigene systematische Literaturrecherche** durchgeführt. Die Prinzipien stammen aus gut etablierter Lernforschung und sind aus dem Gedächtnis zitiert. Sie belegen die **Prinzipien**, nicht die Wirksamkeit dieses Agenten; der Agent selbst ist noch nicht empirisch getestet. Vor einer Weitergabe des Projekts sind die Quellen mit vollständigen Angaben (Zeitschrift, DOI) nachzuweisen und die Evidenzspalte zu prüfen.
 
 | Prinzip | Kernaussage | Quelle (bekannte Arbeit) | Umsetzung im Agenten | Evidenz |
 |---|---|---|---|---|
-| Worked-Example-Effekt | Anfänger lernen aus vollständig gelösten Beispielen mehr als aus eigenem Probieren ohne Anleitung | Sweller & Cooper 1985; Cognitive Load Theory (Sweller) | ähnliches gelöstes Beispiel in `erklär` | stark |
-| Expertise-Reversal / Fading | Mit wachsendem Können schaden vollständige Lösungen eher; Hilfe schrittweise ausblenden | Kalyuga u. a. 2003; Renkl & Atkinson 2003 | Übungen halb gelöst → ungelöst; Eskalation erklär → tipp → lösung | stark |
-| Abruf-/Testeffekt | Aktives Abrufen festigt stärker als Wiederlesen | Roediger & Karpicke 2006; Übersicht Dunlosky u. a. 2013 | ⏸-Denkpunkte, Übungen, Wiederholungskarte, Lösungen unter 🔒 | sehr stark |
+| Worked-Example-Effekt | Anfänger lernen aus vollständig gelösten Beispielen mehr als aus eigenem Probieren ohne Anleitung | Sweller & Cooper 1985; Cognitive Load Theory (Sweller) | vorgerechnetes Beispiel einer anderen Aufgabe in `ausführlich` | stark |
+| Expertise-Reversal / Fading | Mit wachsendem Können schaden vollständige Lösungen eher; Hilfe schrittweise ausblenden | Kalyuga u. a. 2003; Renkl & Atkinson 2003 | Übungen halb gelöst → ungelöst; Eskalation erklär → tipp → ausführlich → lösung | stark |
+| Abruf-/Testeffekt | Aktives Abrufen festigt stärker als Wiederlesen | Roediger & Karpicke 2006; Übersicht Dunlosky u. a. 2013 | ⏸-Denkpunkte, Übungen, Verständnisfrage, Lösungen nur auf Abruf | sehr stark |
 | Generierungseffekt | Selbst Erzeugtes bleibt besser haften | Slamecka & Graf 1978 | erst vorhersagen, dann weiterlesen (⏸) | stark |
 | Selbsterklärung | Wer Schritte selbst begründet, versteht tiefer | Chi u. a. 1989/1994 | „warum“ zu jedem Schritt; `check` diagnostiziert den eigenen Versuch | stark |
 | Verteiltes Lernen | Wiederholen über Tage schlägt Massenlernen | Cepeda u. a. 2006 | Wiederholungskarte „nach zwei Tagen“ | sehr stark |
 | Interleaving | Gemischte Aufgabentypen verbessern das Erkennen des Lösungswegs | Rohrer & Taylor 2007 | `übung` verändert die Aufgabe wesentlich, nicht nur die Zahlen | mittel bis stark |
 | Problemlöse-Heuristik | Verstehen → planen → ausführen → prüfen | Pólya, *How to Solve It*, 1945 | Gegeben/Gesucht → Lösungsplan → Lösungsweg → Probe | etablierte Didaktik, wenig experimentell |
-| Sokratische Methode | Gezielte Fragen statt fertiger Antworten | Didaktik-Tradition; Fragetypen nach Paul & Elder | Hinweisleiter in `tipp` (Klärung → Werkzeug → erster Schritt) | Praxiswissen, gemischte Evidenz |
+| Sokratische Methode | Gezielte Fragen statt fertiger Antworten | Didaktik-Tradition; Fragetypen nach Paul & Elder | 4–6 Leitfragen in `tipp`, die sich der Lernende selbst stellt | Praxiswissen, gemischte Evidenz |
 | Fehlkonzepte konfrontieren | Falsche Vorstellungen müssen ausdrücklich widerlegt werden | Physikdidaktik (z. B. Hestenes, Force Concept Inventory) | Abschnitt „Falscher Weg“ | gut belegt in Physik |
 | Feynman-Technik | Erst anschaulich, dann formal | didaktische Faustregel, keine Studie | Abschnitt „Idee“ vor jeder Rechnung | Heuristik |
 | Universal Design for Learning | Was für Lernende mit Einschränkungen hilft, hilft meist allen | CAST (UDL-Rahmen) | eine Struktur für alle statt einer Sonderversion für ADHS | Rahmenmodell, Wirksamkeitsbelege gemischt |
@@ -43,24 +43,25 @@ Diese Annahmen sind plausibel, für diesen Agenten aber nicht geprüft.
 ## 3. Funktionen
 
 ### Modi
-| Befehl | Zweck | Gibt die Lösung? |
+| Befehl | Zweck | Gibt die Lösung der Originalaufgabe? |
 |---|---|---|
-| (keiner) / `erklär` | Gesetze, Gültigkeit, Vorgehen und ein **ähnliches gelöstes Beispiel** | nein |
-| `tipp` | drei Hinweisstufen (Orientierung → Werkzeug → erster Schritt) | versteckt |
-| `lösung` | Ergebnis + Klausur-Lösung zum Vergleichen | ja |
-| `kurz` | knapper Weg bei wenig Zeit | ja |
-| `check` | prüft den eigenen Versuch: was stimmt, **erster** Fehler mit Fehlerart | ab dem Fehler |
-| `übung` | drei neue Aufgaben (leicht, mittel, klausurnah) | versteckt |
+| (keiner) / `erklär` | Thema und nötige Gleichungen erklären, **ohne** Beispiel | nein |
+| `tipp` | 4–6 Leitfragen, die sich der Lernende selbst stellt | nein, nur auf Abruf |
+| `ausführlich` / `detail` | anschaulich und mathematisch, mit vorgerechnetem Beispiel einer **anderen** Aufgabe | nein |
+| `lösung` | Klausur-Lösung zum Vergleichen | ja |
+| `kurz` | kurze Erklärung, dann vereinfachte Lösung | ja |
+| `standard` | Erklärung mittlerer Tiefe mit Lösung + zwei Übungen | ja |
+| `check` | prüft den eigenen Versuch: was stimmt, **erster** Fehler mit Grund | ab dem Fehler |
+| `übung` | drei neue Aufgaben (leicht, mittel, klausurnah) | nur auf Abruf |
 | `konzept` | Begriff, Gesetz oder Beweis verstehen | – |
-| `standard` | Erklärung mit vollständiger Lösung + zwei Übungen | ja |
-| `detail` | wie `standard` + Vertiefung (Kernidee, Falscher Weg, Was wäre wenn, Alternativweg) | ja |
+| `hilfe` | Befehlskarte mit einer Erklärung je Befehl | – |
 
-**Empfohlene Lernkette:** `erklär` → bei Hängen `tipp` → zum Vergleichen `lösung` oder eigenen Versuch schicken (`check`).
+**Empfohlene Lernkette:** `erklär` → bei Hängen `tipp` → `ausführlich` → `lösung`; eigenen Versuch jederzeit schicken (`check`).
 
 ### Weitere Funktionen
 - **Ein-Wort-Befehle:** als erstes Wort oder als ganze Nachricht (z. B. Foto + „tipp“); mit `!` auch mitten im Text. Normale Wörter im Aufgabentext lösen so keinen Befehl aus.
 - **Dauermodus:** `!an tipp` gilt für alle folgenden Aufgaben, `!aus` schaltet zurück. Eine Statuszeile zeigt den Zustand, damit er in langen Chats nicht verloren geht.
-- **Hilfe:** „tutor“ oder „hilfe“ zeigt eine Befehlskarte mit höchstens 10 Zeilen.
+- **Hilfe:** „tutor“, „hilfe“ oder „help“ als ganze Nachricht zeigt die Befehlskarte: zehn Befehle mit je einer Erklärung.
 - **Sprachen:** Standard Deutsch; `[ar]`, `[tr]`, `[uk]`, `[fr]` wechseln die Erklärsprache. Überschriften, Aufgabentext und Klausur-Lösung bleiben immer Deutsch (Prüfungsvokabular); in anderen Sprachen kommen deutsche Fachbegriffe in Klammern und eine Begriffstabelle dazu.
 - **Foto/PDF:** Der Aufgabentext wird zuerst abgeschrieben; Unleserliches wird als [unleserlich] markiert statt geraten.
 - **Genauigkeit:**
@@ -81,12 +82,16 @@ Diese Annahmen sind plausibel, für diesen Agenten aber nicht geprüft.
 ```
 tutor/
 ├── SKILL.md                 Router: Sprache, Befehle → Moduldatei, gemeinsame Regeln
-├── modes/                   ein Modus pro Datei (9 Dateien)
+├── modes/                   ein Modus pro Datei (10 Dateien)
 └── references/
     ├── antwortvorlage.md    Katalog der Abschnitte 0–19 (Moduldateien wählen per Nummer)
+    ├── kurs-mpg1.md         Kursnotation, Stoffumfang, Endantworten
+    ├── kurzfassung.md       handgeschriebene Kurzfassung (≤ 8000 Zeichen)
     └── latex-regeln.md      Formatregeln mit Fehlbeispielen
-build.py                     erzeugt dist/system-prompt.md
+build.py                     erzeugt dist/ und bricht bei offenen Verweisen ab
 dist/system-prompt.md        alles in einer Datei für ChatGPT, Gemini, Copilot
+dist/system-prompt-kurz.md   Kurzfassung für Felder mit Zeichenlimit
+tests/                       Strukturtests, Akzeptanzfälle, Protokolle
 ```
 
 **Begründung:**
@@ -97,9 +102,9 @@ dist/system-prompt.md        alles in einer Datei für ChatGPT, Gemini, Copilot
 
 ## 5. Stand und Grenzen
 
-- **Geprüft:** Skill-Validierung; Konsistenzskript (alle 9 Befehle zeigen auf existierende Moduldateien, alle Abschnittsnummern existieren).
+- **Geprüft:** Strukturtests (`tests/test_build.py`, auch in der CI): reproduzierbarer Build, alle Befehle zeigen auf existierende Moduldateien, keine offenen Dateiverweise, Länge der Kurzfassung.
 - **Nicht geprüft:**
-  - echte Aufgaben in den einzelnen Modi;
+  - Lehrverhalten mit einem Modell (Akzeptanzfälle in `tests/akzeptanz.md` sind vorbereitet, nicht ausgeführt);
   - Formeldarstellung in Gemini und Copilot;
-  - ob der Universal-Prompt (ca. 23 000 Zeichen) in alle Anweisungsfelder passt.
+  - Wirksamkeit für das Lernen, auch nicht für ADHS.
 - **Grundsätzliche Grenze:** Der Lerneffekt entsteht nur, wenn Denkpunkte und Übungen wirklich selbst bearbeitet werden. Wer immer sofort `lösung` nutzt, landet beim reinen Lesen von Lösungen, laut Forschung der schwächsten Lernform.
