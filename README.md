@@ -22,18 +22,35 @@ Custom GPTs werden von OpenAI für neue private Konten eingestellt und sind nich
 
 ## Schnellstart (Claude Skill)
 
-1. Repository klonen und das Skill-Paket bauen (nur versionierte Dateien, keine lokalen Werkzeugdaten):
+Voraussetzung: ein Claude-Konto. Laut [Claude-Hilfe](https://support.claude.com/en/articles/12512180-use-skills-in-claude) gibt es Skills in allen Tarifen (Free, Pro, Max, Team, Enterprise); sie brauchen eingeschaltete Code-Ausführung. Menünamen hier wie in der englischen Oberfläche; in der deutschen können sie anders heißen.
 
-   ```bash
-   git clone https://github.com/Sae-l/tutor.git
-   cd tutor
-   git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
-   ```
-
-2. In Claude unter *Einstellungen → Skills* `tutor-skill.zip` hochladen.
-3. Ein Projekt „Tutor“ anlegen und dort lernen: Foto der Aufgabe schicken, optional mit einem Befehlswort.
+1. [`tutor-skill.zip`](https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.1/tutor-skill.zip) aus dem [aktuellen Release](https://github.com/Sae-l/tutor/releases) herunterladen. Nicht entpacken.
+2. Auf [claude.ai](https://claude.ai) unter *Settings → Capabilities* „Code execution and file creation“ einschalten. Team und Enterprise: Das schaltet die Administration unter *Organization settings → Plugins & skills* frei.
+3. Unter *Customize → Skills* auf „+“ → „Create skill“ → „Upload a skill“ klicken und `tutor-skill.zip` hochladen. Der Skill „tutor“ muss eingeschaltet sein.
+4. **Testen:** In einem neuen Chat nur `tutor` schreiben. Erscheint die Befehlskarte, ist der Tutor aktiv.
+5. Lernen: Foto der Aufgabe schicken, optional mit einem Befehlswort. Für ein Kurspaket ein Projekt „Tutor“ anlegen (siehe unten).
 
 Beispiel: Foto einer Aufgabe + `tipp` → vier bis sechs Leitfragen, keine Lösung. Danach eigener Rechenweg als Nachricht → Fehlerdiagnose (Check). Zum Vergleichen: `kurz`.
+
+**Aktualisieren:** Neue `tutor-skill.zip` herunterladen, unter *Customize → Skills* den Skill „tutor“ öffnen, ausschalten, über „…“ → „Delete“ löschen und die neue Datei hochladen. Änderungen stehen im [CHANGELOG](CHANGELOG.md).
+
+**Selbst bauen** (statt Download, z. B. für einen ungeprüften Stand von `main`):
+
+```bash
+git clone https://github.com/Sae-l/tutor.git
+cd tutor
+git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
+```
+
+### Fehlerbehebung
+
+| Problem | Lösung |
+|---|---|
+| Hochladen schlägt fehl | ZIP unverändert hochladen. Neu gepackte Archive haben oft nicht den Ordner `tutor/` an oberster Stelle; dann erkennt Claude den Skill nicht. |
+| `tutor` zeigt keine Befehlskarte | Code-Ausführung und Skill „tutor“ eingeschaltet? Neuen Chat öffnen. Sonst Skill löschen und neu hochladen. |
+| Formeln erscheinen als `$$…$$` | Die Plattform rendert kein LaTeX. In Claude im Browser normalerweise kein Problem; ChatGPT und Gemini sind nicht geprüft. |
+| Antwort verrät die Lösung zu früh | Fehler im Lösungsschutz: bitte als [Issue](https://github.com/Sae-l/tutor/issues/new) melden, ohne Aufgabentext oder persönliche Daten. |
+| Handy-App | Den Skill einmal im Browser hochladen. Ob er in der Claude-App genauso greift, ist nicht geprüft. |
 
 ## Bedienung
 
@@ -60,11 +77,16 @@ Beispiel: Foto einer Aufgabe + `tipp` → vier bis sechs Leitfragen, keine Lösu
 
 **Lösungsschutz:** Die Lösung nach `tipp` und Antworten auf Verständnisfragen kommen erst mit `lösung`. Das Symbol 🔒 allein versteckt keinen Text.
 
-**Kurspaket (optional):** Eine Datei mit Notation und Stoffumfang eines bestimmten Kurses kann zusätzlich hochgeladen werden, z. B. [kurse/mpg1.md](kurse/mpg1.md) als Beispiel. Sie gehört nicht zum Skill.
+**Kurspaket (optional):** Eine Markdown-Datei mit Notation und Stoffumfang eines bestimmten Kurses, z. B. [kurse/mpg1.md](kurse/mpg1.md). In Claude ein Projekt anlegen, die Datei dort als Projektwissen hochladen und in diesem Projekt lernen. Sie gehört nicht zum Skill; bei Bezeichnungen und Stoffumfang hat sie Vorrang.
 
 ## Einrichtung auf anderen Plattformen (experimentell)
 
-**ChatGPT Projekt / Gemini:** Inhalt von `dist/kern.md` (höchstens 4000 Zeichen, vom Build geprüft) in die Anweisungen kopieren und `dist/system-prompt.md` als Datei hochladen. Feldgrenzen, Formeldarstellung und Aufklappblöcke sind dort nicht offiziell dokumentiert und nicht geprüft.
+`kern.md` und `system-prompt.md` aus dem [aktuellen Release](https://github.com/Sae-l/tutor/releases) herunterladen (identisch mit `dist/`).
+
+- **ChatGPT Projekt:** neues Projekt anlegen, in den Projekteinstellungen den Inhalt von `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Projektdatei hinzufügen.
+- **Gemini:** neuen Gem anlegen, `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Wissen hochladen.
+
+`kern.md` hat höchstens 4000 Zeichen (vom Build geprüft). Menünamen können abweichen; Feldgrenzen, Formeldarstellung und Aufklappblöcke sind dort nicht offiziell dokumentiert und nicht geprüft.
 
 ## Datenschutz
 
@@ -81,7 +103,7 @@ Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter (A
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
-| `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build) |
+| `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build); Schriften lokal in `docs/fonts/` (SIL OFL) |
 | `GLOSSARY.md` | Festgelegte Begriffe |
 
 ## Entwicklung

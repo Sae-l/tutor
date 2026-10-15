@@ -5,12 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tutor – Physik und Mathe verstehen</title>
 <meta name="description" content="Lern-Tutor für Physik, Mathe und E-Technik im ersten Studienjahr. Erklärt, gibt Leitfragen und hält die Lösung zurück, bis du sie willst. Als Claude Skill.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500&family=Noto+Nastaliq+Urdu&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <style>
+/* Schriften lokal (SIL OFL, Lizenzen in fonts/): keine Anfragen an Dritte */
+@font-face { font-family: "Geist"; font-weight: 100 900; font-display: swap; src: url(fonts/geist-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Geist"; font-weight: 100 900; font-display: swap; src: url(fonts/geist-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C0, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url(fonts/jetbrains-mono-400.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url(fonts/jetbrains-mono-500.woff2) format("woff2"); }
+@font-face { font-family: "Noto Naskh Arabic"; font-weight: 400; font-display: swap; src: url(fonts/noto-naskh-arabic.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: "Noto Nastaliq Urdu"; font-weight: 400; font-display: swap; src: url(fonts/noto-nastaliq-urdu.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
 :root {
   --paper: #FAFAF9;
   --sheet: #FFFFFF;
@@ -22,7 +28,7 @@
   --wash: #E8F1EE;
   --amber: #B45309;
   --shadow: 0 1px 2px rgba(28,25,23,.04), 0 8px 24px rgba(28,25,23,.05);
-  --sans: "Satoshi", ui-sans-serif, "Segoe UI", Roboto, sans-serif;
+  --sans: "Geist", ui-sans-serif, "Segoe UI", Roboto, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
   --gutter: clamp(1rem, 4vw, 3rem);
   --section: clamp(3rem, 8vw, 6rem);
@@ -83,7 +89,7 @@ section + section { border-top: 1px solid var(--hairline); }
 .msg-tutor h4 { margin: 1rem 0 .3rem; font-size: .8125rem; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
 .msg-tutor h4:first-child { margin-top: 0; }
 .msg-tutor p { margin: 0 0 .5rem; }
-.msg-tutor .katex-display { margin: .5rem 0; }
+.msg-tutor math[display="block"] { margin: .5rem 0; font-size: 1.15em; }
 .locked { margin-top: .75rem; padding: .6rem .8rem; border: 1px dashed var(--hairline); border-radius: .6rem; color: var(--pencil); font-size: .875rem; }
 
 /* Escalation */
@@ -166,6 +172,18 @@ section + section { border-top: 1px solid var(--hairline); }
 }
 .copy:hover { border-color: var(--pencil); }
 
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; }
+.faq details { border-top: 1px solid var(--hairline); }
+.faq details:last-child { border-bottom: 1px solid var(--hairline); }
+.faq summary {
+  min-height: 44px; padding: .9rem 2rem .9rem 0; cursor: pointer; font-weight: 500; list-style: none; position: relative;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: .25rem; top: .8rem; font: 400 1.25rem var(--mono); color: var(--accent); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: var(--pencil); padding-bottom: 1rem; margin: 0; }
+
 /* Honest */
 .honest { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; }
 .honest ul { margin: 0; padding: 0; list-style: none; }
@@ -192,7 +210,7 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
 /* Mobile */
 @media (max-width: 767px) {
   .top nav { display: none; }
-  .hero-grid, .sec-head, .modes, .lang-grid, .setup, .honest, .foot { grid-template-columns: 1fr; }
+  .hero-grid, .sec-head, .modes, .lang-grid, .setup, .faq-grid, .honest, .foot { grid-template-columns: 1fr; }
   .sketch-inline { display: none; }
   .sketch-mobile { display: block; height: 3rem; width: auto; margin: -.5rem 0 1.25rem; }
   .steps { grid-template-columns: 1fr; }
@@ -219,6 +237,7 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
       <a href="#modi">Modi</a>
       <a href="#sprachen">Sprachen</a>
       <a href="#einrichten">Einrichten</a>
+      <a href="#fragen">Fragen</a>
     </nav>
   </header>
 </div>
@@ -238,11 +257,11 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
         </h1>
         <svg class="sketch-mobile" viewBox="0 0 140 40" aria-hidden="true"><path d="M6 34 Q38 -14 70 34" fill="none" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round"/><circle cx="38" cy="10" r="3" fill="#1C1917"/><path d="M84 32 L126 10" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round"/><path d="M116 8 L128 9 L122 20" fill="none" stroke="#2F6F5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <p class="lead">Ein Lern-Tutor für Physik- und Mathe-Aufgaben im ersten Semester. Er erklärt das Thema, stellt Leitfragen und hält die Lösung zurück, bis du sie wirklich willst.</p>
-        <a class="btn" href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1">
+        <a class="btn" href="https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.1/tutor-skill.zip">
           Tutor herunterladen
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <div class="version">v0.2.0-rc.1 · Vorabversion · MIT</div>
+        <div class="version">tutor-skill.zip · v0.2.0-rc.1 · Vorabversion · <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1">alle Dateien</a></div>
       </div>
 
       <figure class="card chat reveal" style="--d:120ms" aria-label="Ausschnitt einer Antwort im Modus Erklär" lang="de">
@@ -256,7 +275,9 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
           <p>Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie.</p>
           <h4>Gleichungen</h4>
           <p>Energieerhaltung (ohne Reibung):</p>
-          $$\tfrac{1}{2}\,m\,v^2 + m\,g\,h = \text{konst.}$$
+          <math display="block" aria-label="ein halb m v Quadrat plus m g h gleich konstant">
+            <mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mtext>konst.</mtext>
+          </math>
           <h4>Verständnisfrage</h4>
           <p>Hängt die Steighöhe von der Masse des Balls ab?</p>
           <div class="locked">Lösungen: Mit „lösung“ abrufen.</div>
@@ -352,25 +373,67 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
   <section id="einrichten">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="eyebrow">Einrichten</span><h2>In fünf Minuten startklar.</h2></div>
-        <p>Der Tutor ist kein Programm und kein Dienst. Er läuft als Anweisung in deinem Chat-Konto.</p>
+        <div><span class="eyebrow">Einrichten</span><h2>Einmal hochladen, dann lernen.</h2></div>
+        <p>Der Tutor ist kein Programm und kein Dienst. Er läuft als Anweisung in deinem Claude-Konto; du brauchst nur einen Browser.</p>
       </div>
       <div class="setup">
         <div class="card setup-main reveal">
           <h3>Claude Skill <span class="badge">empfohlen · Release-Gate</span></h3>
           <ol>
-            <li><p><code>tutor-skill.zip</code> aus dem <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1">aktuellen Release</a> herunterladen.</p></li>
-            <li><p>In Claude unter <strong>Einstellungen → Skills</strong> die ZIP-Datei hochladen.</p></li>
-            <li><div><p>Ein Projekt „Tutor“ anlegen und ein Foto der Aufgabe schicken, optional mit Befehlswort:</p>
-              <div class="cmdline"><code>tipp</code><button class="copy" type="button" data-copy="tipp">Kopieren</button></div></div>
+            <li><p><a href="https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.1/tutor-skill.zip"><code>tutor-skill.zip</code> herunterladen</a>. Nicht entpacken.</p></li>
+            <li><p>Auf <a href="https://claude.ai">claude.ai</a> unter <strong>Settings → Capabilities</strong> „Code execution and file creation“ einschalten. Ohne das laufen keine Skills.</p></li>
+            <li><p>Unter <strong>Customize → Skills</strong> auf „+“ → „Create skill“ → „Upload a skill“ klicken und die ZIP-Datei wählen. Der Skill „tutor“ muss eingeschaltet sein.</p></li>
+            <li><div><p>Zum Testen in einem neuen Chat nur dieses Wort schreiben – es erscheint die Befehlskarte:</p>
+              <div class="cmdline"><code>tutor</code><button class="copy" type="button" data-copy="tutor">Kopieren</button></div></div>
             </li>
+            <li><p>Danach ein Foto der Aufgabe schicken, optional mit Befehlswort wie <code>tipp</code>.</p></li>
           </ol>
+          <p class="note" style="margin:1rem 0 0">Menünamen laut <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Claude-Hilfe</a>; in der deutschen Oberfläche können sie anders heißen. Team- und Enterprise-Konten: Skills schaltet die Administration frei.</p>
         </div>
         <div class="setup-side reveal" style="--d:100ms">
           <h3>ChatGPT Projekt · Gemini <span class="badge neutral">experimentell</span></h3>
-          <p>Inhalt von <code>kern.md</code> in die Anweisungen kopieren und <code>system-prompt.md</code> als Datei hochladen. Beide Dateien liegen im Release.</p>
-          <p>Formeldarstellung und Feldgrenzen sind dort nicht geprüft.</p>
+          <p>Aus dem <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1">Release</a> <code>kern.md</code> und <code>system-prompt.md</code> herunterladen.</p>
+          <p><strong>ChatGPT:</strong> neues Projekt anlegen, in den Projekteinstellungen den Inhalt von <code>kern.md</code> in die Anweisungen kopieren und <code>system-prompt.md</code> als Projektdatei hinzufügen.</p>
+          <p><strong>Gemini:</strong> neuen Gem anlegen, <code>kern.md</code> in die Anweisungen kopieren und <code>system-prompt.md</code> als Wissen hochladen.</p>
+          <p>Menünamen können abweichen; Formeldarstellung und Feldgrenzen sind dort nicht geprüft.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="fragen">
+    <div class="wrap faq-grid">
+      <div class="reveal"><span class="eyebrow">Fragen</span><h2>Häufige Fragen.</h2></div>
+      <div class="faq reveal" style="--d:100ms">
+        <details>
+          <summary>Was kostet der Tutor?</summary>
+          <p>Der Tutor selbst ist kostenlos (MIT-Lizenz). Du brauchst ein Claude-Konto; laut <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Claude-Hilfe</a> gibt es Skills in allen Tarifen einschließlich Free. Nutzungsgrenzen hängen von deinem Tarif ab.</p>
+        </details>
+        <details>
+          <summary>Funktioniert das auf dem Handy?</summary>
+          <p>Den Skill lädst du einmal im Browser auf claude.ai hoch. Ob er in der Claude-App auf dem Handy genauso greift, ist noch nicht geprüft. Im Handy-Browser kannst du Fotos von Aufgaben direkt schicken.</p>
+        </details>
+        <details>
+          <summary>Der Tutor reagiert nicht wie beschrieben.</summary>
+          <p>Prüfe, ob „Code execution and file creation“ eingeschaltet und der Skill „tutor“ unter Customize → Skills aktiv ist. Dann einen neuen Chat öffnen und nur <code>tutor</code> schreiben. Kommt keine Befehlskarte, den Skill löschen und die ZIP-Datei erneut hochladen.</p>
+        </details>
+        <details>
+          <summary>Das Hochladen schlägt fehl.</summary>
+          <p>Die ZIP-Datei unverändert hochladen. Wer sie entpackt und neu packt, verliert oft den Ordner <code>tutor/</code> an oberster Stelle; dann erkennt Claude den Skill nicht.</p>
+        </details>
+        <details>
+          <summary>Formeln erscheinen als Code mit Dollarzeichen.</summary>
+          <p>Dann stellt die Plattform LaTeX nicht dar. In Claude im Browser werden Formeln normalerweise gerendert; in ChatGPT und Gemini ist das nicht geprüft.</p>
+        </details>
+        <details>
+          <summary>Wie bekomme ich eine neue Version?</summary>
+          <p>Neue ZIP-Datei herunterladen, unter Customize → Skills den alten Skill öffnen, ausschalten, über „…“ löschen und die neue Datei hochladen. Was sich geändert hat, steht im <a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Changelog</a>.</p>
+        </details>
+        <details>
+          <summary>Kann ich meinen Kurs einbinden?</summary>
+          <p>Ja, mit einem Kurspaket: eine Markdown-Datei mit Notation und Stoffumfang, z. B. <a href="https://github.com/Sae-l/tutor/blob/main/kurse/mpg1.md"><code>kurse/mpg1.md</code></a>. Lege in Claude ein Projekt an, lade die Datei dort als Projektwissen hoch und lerne in diesem Projekt.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -398,6 +461,7 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
     <div>
       <h3>Datenschutz</h3>
       <p>Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter. <code>!issue</code> erzeugt nur einen Feedback-Link und schickt keine Gesprächsinhalte.</p>
+      <p>Diese Seite lädt keine Schriften oder Skripte von Dritten; das Hosting übernimmt GitHub Pages.</p>
     </div>
     <div>
       <h3>Projekt</h3>
@@ -410,9 +474,6 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
   </div>
 </footer>
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true}],throwOnError:false})"></script>
 <script>
 document.documentElement.classList.add('js');
 
