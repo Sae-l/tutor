@@ -2,6 +2,8 @@
 
 Lern-Tutor für Aufgaben aus dem ersten Studienjahr in MINT-Fächern (Physik, Mathematik, E-Technik) an deutschsprachigen Hochschulen. Erst verstehen, dann selbst lösen: Erklärung ohne fertige Lösung, Leitfragen, Fehlerdiagnose des eigenen Versuchs, Klausur-Lösung auf Deutsch, Lösungen erst auf Abruf. Erklärungen auf Deutsch oder auf Wunsch in Arabisch, Türkisch, Französisch, Englisch oder Urdu. ADHS-freundlich gestaltet (kurze Schritte, feste Struktur; Designziel, keine nachgewiesene Wirkung). Kein Programm, kein Dienst: Der Tutor läuft als Anweisung in Claude oder ChatGPT.
 
+> **In English:** A study tutor for first-year STEM exercises (physics, maths, electrical engineering) at German-speaking universities, packaged as a Claude Skill plus a generated system prompt for other chatbots. It explains and asks guiding questions before revealing solutions. Answers are in German by default; Arabic, Turkish, French, English or Urdu on request. The docs are in German because the target audience studies in German.
+
 ## Status
 
 - **Vorabstand v0.2, nicht abgenommen.** Build und Strukturtests laufen; die Abnahme des Lehrverhaltens mit einem Modell ([tests/akzeptanz.md](tests/akzeptanz.md)) ist vorbereitet, aber noch nicht ausgeführt.
@@ -20,9 +22,11 @@ Custom GPTs werden von OpenAI für neue private Konten eingestellt und sind nich
 
 ## Schnellstart (Claude Skill)
 
-1. Skill-Paket aus dem Repository bauen (nur versionierte Dateien, keine lokalen Werkzeugdaten):
+1. Repository klonen und das Skill-Paket bauen (nur versionierte Dateien, keine lokalen Werkzeugdaten):
 
    ```bash
+   git clone https://github.com/Sae-l/tutor.git
+   cd tutor
    git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
    ```
 
@@ -93,7 +97,7 @@ python -B -m unittest discover -s tests -v
 
 Änderungen nur in `tutor/` machen, danach `python build.py` ausführen und beides committen. Die Tests prüfen den reproduzierbaren Build, dass Befehlstabelle und Moduldateien übereinstimmen (11 Modi), Kurs-Neutralität des Skills, Länge und Inhalt des Kerns, Formel-Beispiele und den Erhalt der bisherigen Ausgabe bei fehlerhaften Quellen (auch unter `python -O`). Die CI führt dasselbe auf Linux und Windows aus.
 
-[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle und 31 Zustands- und Grenzfälle, je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
+[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle und 32 Zustands- und Grenzfälle, je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
 
 Ablauf, Release-Checkliste und Paketbau: [CONTRIBUTING.md](CONTRIBUTING.md). Sicherheit: [SECURITY.md](SECURITY.md). Änderungen: [CHANGELOG.md](CHANGELOG.md).
 
