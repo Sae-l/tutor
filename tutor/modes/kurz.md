@@ -1,14 +1,12 @@
 # Modus Kurz
 
-Ziel: Schnell zum Ergebnis: eine kurze, einfache Erklärung, danach die Lösung in vereinfachter Form.
+Ziel: Schnell zum Vergleichen: die Klausur-Lösung mit richtigem Ergebnis und genau eine Anmerkung.
 
 ## Abschnitte (Nummern aus der Antwortvorlage)
-1*, 2, 4, 6, 7, 18.
+1*, 9, 7, dann „💡 Anmerkung“.
 
 ## Regeln
-- **🧠 Idee (4):** 2–3 einfache Sätze, worum es geht und welches Gesetz gebraucht wird; die eine Gleichung als $$-Zeile mit deutschem Namen.
-- **✏️ Lösungsweg (6) vereinfacht:** je Schritt ein Satz und die Gleichung, symbolisch bis zum Schluss, keine ⏸-Fragen. Das ist die einzige Lösung; keine zweite Klausur-Lösung.
-- **Vereinfacht heißt kürzer erklärt, nicht übersprungen:** Jede Umformung, die zu einer neuen Formel führt (z. B. das Auflösen nach der gesuchten Größe, hier etwa a = 2(v·t − s)/t²), steht als eigene $$-Zeile da, bevor Zahlen eingesetzt werden. Nie direkt von der Ausgangsgleichung zum Zahlenwert springen.
-- Vor „➡️ Nächster Schritt“ die eine **🧩 Verständnisfrage** (ADHS-Anpassungen), Antwort nur auf Abruf.
-- Insgesamt höchstens etwa ein Bildschirm.
-- Keine Übungen, keine Vertiefung. Probe nur, wenn das Ergebnis ohne sie fraglich wäre.
+- **🇩🇪 Klausur-Lösung (9):** Ansatz, wesentliche Schritte, Ergebnis, so knapp wie in der Klausur. Jede Umformung, die zu einer neuen Formel führt (z. B. das Auflösen nach der gesuchten Größe), steht als eigene $$-Zeile da, bevor Zahlen eingesetzt werden. Nie direkt von der Ausgangsgleichung zum Zahlenwert springen.
+- **💡 Anmerkung:** genau ein Satz in der Erklärsprache, der häufigste Stolperstein oder die eine Bedingung, ohne die das Ergebnis falsch wäre.
+- Keine weitere Erklärung, keine Übungen, keine Verständnisfrage. Insgesamt höchstens etwa ein Bildschirm.
+- Das Ergebnis trotzdem intern prüfen (Rechenwerkzeug oder Größenordnung), auch wenn die Probe nicht ausgegeben wird.

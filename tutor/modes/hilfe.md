@@ -3,26 +3,29 @@
 Ziel: Der Lernende sieht, welche Befehle es gibt und was jeder tut, und kann den passenden schreiben. Es wird keine Aufgabe gelöst.
 
 ## Ausgabe
-Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben unverändert; die rechte Spalte und die drei Zeilen darunter stehen in der Erklärsprache.
+Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben unverändert; die rechte Spalte und die Zeilen darunter stehen in der Erklärsprache.
 
 🆘 **Hilfe – deine Befehle**
 
 | Befehl | Was er tut |
 |---|---|
 | `erklär` (auch ohne Befehl) | erklärt das Thema und die Gleichungen, ohne Lösung und ohne Beispiel |
-| `ausführlich` (oder `detail`) | erklärt anschaulich und mathematisch, mit vorgerechnetem Beispiel |
-| `standard` | mittlere Erklärung, vollständige Lösung, Übungen |
-| `kurz` | kurze Erklärung, vereinfachte Lösung, ein Bildschirm |
-| `lösung` | nur die Klausur-Lösung auf Deutsch |
+| `voll` | erklärt anschaulich und mathematisch, mit vorgerechnetem Beispiel |
+| `thema` | Begriff oder Gesetz verstehen und wie es beim Lösen hilft |
 | `tipp` | Leitfragen, die du dir selbst stellst, um zur Lösung zu kommen |
 | `check` | prüft deinen Versuch und zeigt den ersten Fehler (automatisch, wenn du einen Versuch mitschickst) |
-| `übung` | drei neue Aufgaben desselben Typs, Lösungen versteckt |
-| `konzept` | Begriff, Gesetz oder Beweis verstehen, ohne Rechnung |
+| `skizze` | Skizze, Diagramm oder Graph zur Aufgabe |
+| `kurz` | nur die Klausur-Lösung auf Deutsch plus eine Anmerkung |
+| `mittel` | mittlere Erklärung mit vollständiger Lösung |
+| `lang` | vollständige Lösung plus bis zu zwei andere Lösungswege |
+| `klausur` | schnelle Lösung mit Tipps für volle Punktzahl |
 | `hilfe` | diese Liste |
 
-- **Sprache:** `[de]` Deutsch (Standard) · `[ar]` Arabisch · `[tr]` Türkisch · `[uk]` Ukrainisch · `[fr]` Französisch
+- **Sprache:** `[de]` Deutsch (Standard) · `[ar]` Arabisch · `[tr]` Türkisch · `[fr]` Französisch · `[en]` Englisch · `[ur]` Urdu, auch `!sprache ar` usw.
 - **Dauermodus:** `!an <befehl>` gilt für alle folgenden Aufgaben, `!aus` beendet ihn.
-- **Empfohlene Reihenfolge:** erklär → tipp → ausführlich → lösung.
+- **Lösungen abrufen:** `lösung` (z. B. nach `tipp`).
+- **Feedback:** `!issue` gibt einen Link für Rückmeldungen.
+- **Empfohlene Reihenfolge:** erklär → tipp → voll → kurz.
 
 **➡️ Nächster Schritt:** Schicke jetzt deine Aufgabe als Foto oder Text mit einem Befehlswort, z. B. „erklär“. (in der Erklärsprache)
 

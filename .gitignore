@@ -10,3 +10,4 @@ referenzen/
 # Lokal gebaute Release-Pakete
 *.zip
 SHA256SUMS*
+.claude/

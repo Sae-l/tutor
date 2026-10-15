@@ -1,13 +1,13 @@
 # Tutor
 
-Lern-Agent für Physik und Mathematik im ersten Studienjahr, für einen Anfänger mit ADHS. Dieses Glossar legt die Wörter fest, mit denen Skill, Prompt, Tests und Planung über ihn sprechen.
+Lern-Agent für MINT-Fächer im ersten Studienjahr, öffentlich nutzbar; ADHS-Freundlichkeit ist Gestaltungsprinzip. Dieses Glossar legt die Wörter fest, mit denen Skill, Prompt, Tests und Planung über ihn sprechen.
 
 ## Language
 
 ### Beteiligte und Artefakte
 
 **Lernender**:
-Die Person, die den Tutor benutzt: Erstsemester, berufsbegleitend, mit ADHS.
+Die Person, die den Tutor benutzt: Studierende im ersten Studienjahr eines deutschsprachigen MINT-Studiengangs.
 _Avoid_: Nutzer, Student, User
 
 **Tutor**:
@@ -22,14 +22,18 @@ _Avoid_: Agent-Ordner
 Die aus dem Skill erzeugte Einzeldatei `dist/system-prompt.md` für Plattformen ohne Dateizugriff.
 _Avoid_: Universal-Prompt (nur als Beiname), Export
 
-**Kurzfassung**:
-Die handgeschriebene Variante des System-Prompts mit höchstens 8000 Zeichen für Felder mit Längenlimit; wird nicht automatisch abgeleitet.
-_Avoid_: Mini-Prompt, Light-Version
+**Kern**:
+Die aus markierten Abschnitten des Skills erzeugte Kurzform `dist/kern.md` mit höchstens 4000 Zeichen für Anweisungsfelder; der System-Prompt liegt daneben als Datei.
+_Avoid_: Kurzfassung (abgelöst), Mini-Prompt, Light-Version
+
+**Kurspaket**:
+Eine optionale Datei mit Notation und Stoffumfang eines bestimmten Kurses, die der Lernende zusätzlich mitgibt; liegt in `kurse/`, nie im Skill.
+_Avoid_: Kursreferenz
 
 ### Steuerung
 
 **Modus**:
-Eine Antwortart des Tutors mit eigener Moduldatei in `tutor/modes/`; es gibt zehn (neun Aufgabenmodi und Hilfe).
+Eine Antwortart des Tutors mit eigener Moduldatei in `tutor/modes/`; es gibt elf (zehn Aufgabenmodi und Hilfe).
 _Avoid_: Stufe, Variante
 
 **Befehl**:
@@ -38,10 +42,7 @@ _Avoid_: Kommando, Schalter
 
 **Voreinstellung**:
 Der Modus Erklär, wenn weder Einzelbefehl noch Dauermodus noch automatische Wahl greift.
-_Avoid_: Standard (reserviert für den Modus `standard`), Default
-
-**Standard**:
-Der Modus mit mittlerer Erklärtiefe, vollständiger Lösung und zwei Übungen; kein Beiname der Voreinstellung.
+_Avoid_: Standard, Default
 
 **Einzelbefehl**:
 Ein Befehl, der nur für die Nachricht gilt, in der er steht.
@@ -51,7 +52,7 @@ Ein mit `!an <befehl>` gesetzter Modus, der für alle folgenden Aufgaben gilt, b
 _Avoid_: Sitzungsmodus
 
 **Eskalation**:
-Die empfohlene Folge erklär, tipp, ausführlich, lösung, wenn der Lernende nicht weiterkommt.
+Die empfohlene Folge erklär, tipp, voll, kurz, wenn der Lernende nicht weiterkommt.
 
 **Statuszeile**:
 Die Zeile oben in der Antwort, die tatsächlichen Modus, gespeicherten Dauermodus und Sprache nennt.
@@ -59,7 +60,7 @@ Die Zeile oben in der Antwort, die tatsächlichen Modus, gespeicherten Dauermodu
 ### Sprache
 
 **Erklärsprache**:
-Die Sprache der Erklärtexte (Deutsch, Arabisch, Türkisch, Ukrainisch, Französisch); wechselt nur per Sprachsignal.
+Die Sprache der Erklärtexte (Deutsch, Arabisch, Türkisch, Französisch, Englisch, Urdu); wechselt nur per Sprachsignal.
 _Avoid_: Antwortsprache, Sprache der Nachricht
 
 **Sprachsignal**:
@@ -78,7 +79,7 @@ _Avoid_: Block, Kapitel
 Die immer deutsche, knappe Lösung im Stil der Klausur: Ansatz, wesentliche Schritte, Ergebnis.
 
 **Lösungsschutz**:
-Die Regel, dass Übungs- und Tipp-Lösungen erst auf ausdrücklichen Abruf erscheinen, solange keine Aufklappfunktion nachweislich unterstützt wird.
+Die Regel, dass die Tipp-Lösung und Antworten auf Verständnisfragen erst erscheinen, wenn der Lernende „lösung“ schreibt; „lösung“ ist kein Modus.
 _Avoid_: Spoiler-Schutz
 
 **Verständnisfrage**:

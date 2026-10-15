@@ -8,6 +8,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+LANGS = ("[de]", "[ar]", "[tr]", "[fr]", "[en]", "[ur]")
 
 
 class BuildTests(unittest.TestCase):
@@ -24,33 +25,38 @@ class BuildTests(unittest.TestCase):
             capture_output=True, encoding="utf-8",
         )
 
+    def read(self, rel):
+        return (self.root / rel).read_text(encoding="utf-8")
+
     def test_build_is_current_and_reproducible(self):
         result = self.build()
         self.assertEqual(result.returncode, 0, result.stderr)
-        target = self.root / "dist/system-prompt.md"
-        first = target.read_bytes()
-        self.assertEqual(first, (ROOT / "dist/system-prompt.md").read_bytes())
+        for rel in ("dist/system-prompt.md", "dist/kern.md"):
+            first = (self.root / rel).read_bytes()
+            self.assertEqual(first, (ROOT / rel).read_bytes(), rel)
         self.assertEqual(self.build().returncode, 0)
-        self.assertEqual(first, target.read_bytes())
-        prompt = first.decode("utf-8")
-        self.assertNotRegex(prompt, r"(?:references/|modes/|SKILL\.md)")
+        self.assertEqual(first, (self.root / "dist/kern.md").read_bytes())
+        self.assertNotRegex(self.read("dist/system-prompt.md"), r"(?:references/|modes/|SKILL\.md)")
 
-    def test_router_and_all_ten_modes_are_included(self):
-        source = self.root / "tutor"
-        router = (source / "SKILL.md").read_text(encoding="utf-8")
+    def test_router_lists_exactly_the_eleven_mode_files(self):
+        router = self.read("tutor/SKILL.md")
         paths = re.findall(r"`((?:modes|references)/[^`]+\.md)`", router)
-        self.assertTrue(paths)
         for path in paths:
-            self.assertTrue((source / path).is_file(), path)
-        modes = list((source / "modes").glob("*.md"))
-        self.assertEqual(len(modes), 10)
+            self.assertTrue((self.root / "tutor" / path).is_file(), path)
+        listed = {p for p in paths if p.startswith("modes/")}
+        on_disk = {"modes/" + m.name for m in (self.root / "tutor/modes").glob("*.md")}
+        self.assertEqual(len(listed), 11)
+        self.assertEqual(listed, on_disk, "Moduldatei ohne Befehlszeile oder umgekehrt")
         self.assertEqual(self.build().returncode, 0)
-        prompt = (self.root / "dist/system-prompt.md").read_text(encoding="utf-8")
-        for mode in modes:
-            self.assertIn("modes/" + mode.name, paths)
-            heading = mode.read_text(encoding="utf-8").splitlines()[0]
-            self.assertEqual(prompt.count(heading + "\n"), 1, mode.name)
-        self.assertIn("# Kurs MPG1: Notation, Umfang, Endantworten\n", prompt)
+        prompt = self.read("dist/system-prompt.md")
+        for path in listed:
+            heading = self.read("tutor/" + path).splitlines()[0]
+            self.assertEqual(prompt.count(heading + "\n"), 1, path)
+
+    def test_skill_is_course_neutral(self):
+        for path in (self.root / "tutor").rglob("*.md"):
+            text = path.read_text(encoding="utf-8")
+            self.assertNotRegex(text, r"TH Köln|MPG1|kurs-mpg1|\[uk\]", path.name)
 
     def test_missing_mode_does_not_overwrite_existing_output(self):
         self.assertEqual(self.build().returncode, 0)
@@ -70,34 +76,37 @@ class BuildTests(unittest.TestCase):
             self.assertNotEqual(self.build(*flags).returncode, 0, flags)
         self.assertEqual(before, target.read_bytes())
 
-    def test_short_prompt_fits_limit_and_is_current(self):
+    def test_kern_fits_limit_and_keeps_commands_languages_and_rules(self):
         self.assertEqual(self.build().returncode, 0)
-        built = (self.root / "dist/system-prompt-kurz.md").read_bytes()
-        self.assertEqual(built, (ROOT / "dist/system-prompt-kurz.md").read_bytes())
-        self.assertLessEqual(len(built.decode("utf-8")), 8000)
-        self.assertNotRegex(built.decode("utf-8"), r"(?:references/|modes/|SKILL\.md)")
-
-    def test_short_prompt_keeps_commands_languages_and_core_rules(self):
-        router = (self.root / "tutor/SKILL.md").read_text(encoding="utf-8")
+        kern = self.read("dist/kern.md")
+        self.assertLessEqual(len(kern), 4000)
+        self.assertNotRegex(kern, r"(?:references/|modes/|SKILL\.md)")
+        router = self.read("tutor/SKILL.md")
         commands = re.findall(r"^\| (?:\(keiner\) oder )?`!([^`]+)`", router, re.M)
-        self.assertEqual(len(commands), 10)
-        self.assertEqual(self.build().returncode, 0)
-        short = (self.root / "dist/system-prompt-kurz.md").read_text(encoding="utf-8").lower()
-        for command in commands:
-            self.assertIn(command.lower(), short, command)
-        for needle in ("[ar]", "[tr]", "[uk]", "[fr]", "[de]", "!an", "!aus",
-                       "lösungsschutz", "$$", "\\boxed", "ascii", "dezimalkomma"):
-            self.assertIn(needle, short, needle)
+        self.assertEqual(len(commands), 11)
+        low = kern.lower()
+        for needle in [c.lower() for c in commands] + list(LANGS) + [
+                "!an", "!aus", "!sprache", "!issue", "lösungsschutz", "„lösung“",
+                "$$", "boxed{}", "ascii", "dezimalkomma"]:
+            self.assertIn(needle, low, needle)
 
-    def test_overlong_short_prompt_does_not_overwrite_output(self):
+    def test_overlong_kern_does_not_overwrite_output(self):
         self.assertEqual(self.build().returncode, 0)
-        targets = [self.root / "dist/system-prompt.md", self.root / "dist/system-prompt-kurz.md"]
+        targets = [self.root / "dist/system-prompt.md", self.root / "dist/kern.md"]
         before = [t.read_bytes() for t in targets]
-        with (self.root / "tutor/references/kurzfassung.md").open("a", encoding="utf-8") as file:
-            file.write("\n" + "x" * 8000 + "\n")
+        skill = self.root / "tutor/SKILL.md"
+        text = skill.read_text(encoding="utf-8")
+        skill.write_text(text.replace("<!-- /kern -->", "x" * 4000 + "\n<!-- /kern -->", 1), encoding="utf-8")
         for flags in ((), ("-O",)):  # checks must survive python -O
             self.assertNotEqual(self.build(*flags).returncode, 0, flags)
         self.assertEqual(before, [t.read_bytes() for t in targets])
+
+    def test_all_languages_have_a_signal(self):
+        sprache = self.read("tutor/references/sprache.md")
+        hilfe = self.read("tutor/modes/hilfe.md")
+        for code in LANGS:
+            self.assertIn(code, sprache, code)
+            self.assertIn(code, hilfe, code)
 
     def test_display_examples_have_ascii_and_balanced_braces(self):
         examples = []
