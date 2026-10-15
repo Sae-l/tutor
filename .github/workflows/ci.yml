@@ -24,7 +24,10 @@ jobs:
       - name: Build
         run: python build.py
       - name: dist/ entspricht dem Commit
-        run: git diff --exit-code -- dist/
+        shell: bash
+        run: |
+          git diff --exit-code -- dist/
+          test -z "$(git ls-files --others --exclude-standard -- dist/)"
       - name: Strukturtests
         run: python -B -m unittest discover -s tests -v
       - name: Skill-Paket enthält nur Markdown-Dateien

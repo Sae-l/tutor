@@ -1,4 +1,4 @@
-# tutor – MINT-Lern-Tutor als Claude-Skill und System-Prompt
+# tutor – MINT-Lern-Tutor für Claude und ChatGPT
 
 Lern-Tutor für Aufgaben aus dem ersten Studienjahr in MINT-Fächern (Physik, Mathematik, E-Technik) an deutschsprachigen Hochschulen. Erst verstehen, dann selbst lösen: Erklärung ohne fertige Lösung, Leitfragen, Fehlerdiagnose des eigenen Versuchs, Klausur-Lösung auf Deutsch, Lösungen erst auf Abruf. Erklärungen auf Deutsch oder auf Wunsch in Arabisch, Türkisch, Französisch, Englisch oder Urdu. ADHS-freundlich gestaltet (kurze Schritte, feste Struktur; Designziel, keine nachgewiesene Wirkung). Kein Programm, kein Dienst: Der Tutor läuft als Anweisung in Claude oder ChatGPT.
 
@@ -6,7 +6,7 @@ Lern-Tutor für Aufgaben aus dem ersten Studienjahr in MINT-Fächern (Physik, Ma
 
 ## Status
 
-- **Vorabstand v0.2, nicht abgenommen.** Build und Strukturtests laufen; die Abnahme des Lehrverhaltens mit einem Modell ([tests/akzeptanz.md](tests/akzeptanz.md)) ist vorbereitet, aber noch nicht ausgeführt.
+- **Vorabstand v0.2, nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
 - **Rechte:** [MIT-Lizenz](LICENSE).
 - **Feedback:** [Issue anlegen](https://github.com/Sae-l/tutor/issues/new) oder im Tutor `!issue` schreiben. Issues sind öffentlich: keine Aufgabentexte, Namen oder Fotos mit persönlichen Daten einfügen.
 
@@ -15,10 +15,11 @@ Lern-Tutor für Aufgaben aus dem ersten Studienjahr in MINT-Fächern (Physik, Ma
 | Plattform | Dateien | Stand |
 |---|---|---|
 | **Claude Skill** (empfohlen) | Ordner `tutor/` als ZIP | primär; Release-Gate mit allen Akzeptanzfällen |
+| [ChatGPT Plugin](docs/CHATGPT.md#native-variante-plugin-archiv) | `dist/tutor-chatgpt.zip`; alternativ lokaler Marketplace `dist/chatgpt/` | experimentell; noch nicht auf ChatGPT abgenommen |
 | ChatGPT Projekt | Anweisung `dist/kern.md`, Datei `dist/system-prompt.md` | experimentell; Teilabnahme vorgesehen |
 | Gemini (Gem bzw. Gemini-Skill) | wie ChatGPT Projekt | experimentell, nicht geprüft |
 
-Custom GPTs werden von OpenAI für neue private Konten eingestellt und sind nicht mehr vorgesehen; Gemini-Gems werden zu „Gemini skills“ ([Recherche](https://github.com/Sae-l/tutor/issues/11)).
+Für ChatGPT sind Plugin und Projektweg vorgesehen, kein neuer Custom GPT. Die [OpenAI-Dokumentation](https://learn.chatgpt.com/docs/build-skills) beschreibt Skills und ihre Verteilung als Plugins; Konto- und Oberflächenfreigaben separat prüfen.
 
 ## Schnellstart (Claude Skill)
 
@@ -81,12 +82,14 @@ git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
 
 ## Einrichtung auf anderen Plattformen (experimentell)
 
+**ChatGPT:** Die [Schritt-für-Schritt-Anleitung](docs/CHATGPT.md) beschreibt das native lokale Plugin, den Projektweg und die Funktionsprüfung. Das Plugin wird mit `python build.py` erzeugt; im bisherigen Release `v0.2.0-rc.1` ist es noch nicht enthalten.
+
 `kern.md` und `system-prompt.md` aus dem [aktuellen Release](https://github.com/Sae-l/tutor/releases) herunterladen (identisch mit `dist/`).
 
 - **ChatGPT Projekt:** neues Projekt anlegen, in den Projekteinstellungen den Inhalt von `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Projektdatei hinzufügen.
 - **Gemini:** neuen Gem anlegen, `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Wissen hochladen.
 
-`kern.md` hat höchstens 4000 Zeichen (vom Build geprüft). Menünamen können abweichen; Feldgrenzen, Formeldarstellung und Aufklappblöcke sind dort nicht offiziell dokumentiert und nicht geprüft.
+`kern.md` hat höchstens 4000 Zeichen (internes Buildbudget, keine offizielle Plattformgrenze). Menünamen können abweichen; Formeldarstellung, RTL und Aufklappblöcke sind dort nicht abgenommen.
 
 ## Datenschutz
 
@@ -96,10 +99,13 @@ Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter (A
 
 | Pfad | Zweck |
 |---|---|
-| `tutor/` | Quelle: Claude-Skill (`SKILL.md` als Router + `modes/` + `references/`) |
+| `tutor/` | Gemeinsame Skillquelle (`SKILL.md` als Router + `modes/` + `references/`) |
 | `kurse/` | optionale Kurspakete, nicht Teil des Skills |
 | `dist/system-prompt.md` | Erzeugt: alles in einer Datei, für andere Plattformen |
 | `dist/kern.md` | Erzeugt: Kern aus den `<!-- kern -->`-Abschnitten von `SKILL.md`, höchstens 4000 Zeichen |
+| `dist/chatgpt/` | Erzeugter lokaler Marketplace mit einem Tutor-Plugin, Skilldateien und MIT-Lizenz |
+| `dist/tutor-chatgpt.zip` | Erzeugtes Pluginarchiv für den ChatGPT-Importer |
+| `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Plugins |
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
@@ -118,9 +124,9 @@ python build.py
 python -B -m unittest discover -s tests -v
 ```
 
-Änderungen nur in `tutor/` machen, danach `python build.py` ausführen und beides committen. Die Tests prüfen den reproduzierbaren Build, dass Befehlstabelle und Moduldateien übereinstimmen (11 Modi), Kurs-Neutralität des Skills, Länge und Inhalt des Kerns, Formel-Beispiele und den Erhalt der bisherigen Ausgabe bei fehlerhaften Quellen (auch unter `python -O`). Die CI führt dasselbe auf Linux und Windows aus.
+Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und die erzeugte Ausgabe mitcommitten. `dist/` wird vollständig ersetzt; dort nichts von Hand ablegen. Die Tests prüfen reproduzierbare Ausgaben, Pluginmanifest und Paketinhalt, Bytegleichheit zur Skillquelle, elf Modi, Kursneutralität, Kernbudget, Formelbeispiele und den Erhalt vorhandener Ausgaben bei ungültigen Quellen/Metadaten sowie fehlgeschlagenem Verzeichnistausch. Die CI führt denselben Build und dieselben Tests auf Linux und Windows aus.
 
-[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle und 32 Zustands- und Grenzfälle, je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
+[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle, 33 Zustands- und Grenzfälle und fünf native ChatGPT-Installations-/Aktivierungsfälle, je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
 
 Ablauf, Release-Checkliste und Paketbau: [CONTRIBUTING.md](CONTRIBUTING.md). Sicherheit: [SECURITY.md](SECURITY.md). Änderungen: [CHANGELOG.md](CHANGELOG.md).
 

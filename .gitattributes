@@ -1,0 +1,6 @@
+# Identische Skillbytes und erzeugte Dateien auf Windows und Linux.
+tutor/** text eol=lf
+dist/** text eol=lf
+dist/*.zip binary
+packaging/*.json text eol=lf
+LICENSE text eol=lf
