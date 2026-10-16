@@ -16,3 +16,5 @@ referenzen/
 !dist/tutor-chatgpt.zip
 SHA256SUMS*
 .claude/
+# Persönliche Obsidian-Einstellungen und Arbeitszustände, kein Teil der Wissensbasis.
+.obsidian/

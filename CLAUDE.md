@@ -10,6 +10,7 @@
 - `build.py` → `dist/system-prompt.md`, `dist/kern.md` (intern ≤ 4000 Zeichen), `dist/chatgpt/` (lokaler Marketplace, ein Plugin/Skill) und `dist/tutor-chatgpt.zip` (Pluginarchiv). Modi aus der Befehlstabelle; Paketmetadaten in `packaging/chatgpt-plugin.json`, Installation in `docs/CHATGPT.md`.
 - `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
 - `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05), `protokolle/`.
+- `Obsidian-tutor/` – öffentliche deutsche Wissensbasis mit 20 Notizen und Canvas. `python -B Obsidian-tutor/verify_vault.py` prüft Navigation, Canvas, Modusabdeckung und normalisierte Quellhashes. Bei Quelländerungen betroffene Artikel bewerten und Hashmanifest bewusst aktualisieren; persönliche `.obsidian/`-Dateien bleiben lokal.
 
 ## Arbeitsregeln
 - Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten. `dist/` wird vollständig ersetzt. Änderungen in `CHANGELOG.md` eintragen.

@@ -152,6 +152,8 @@ Feedback: [Issue anlegen](https://github.com/Sae-l/tutor/issues/new) oder im Tut
 
 ## Mitmachen
 
+Die [deutsche Wissensbasis](Obsidian-tutor/00%20Startseite.md) erklärt Funktionsweise, alle elf Modi, wissenschaftliche Grundlagen, Plattformgrenzen, Bau, Fehlerdiagnose, Sicherheit und Website. Für Wikilinks, Graph und die [Canvas-Landkarte](Obsidian-tutor/Tutor-Landkarte.canvas) das Repository klonen und den Unterordner `Obsidian-tutor` in Obsidian als Vault öffnen. Community-Plugins, Sync und Publish sind nicht erforderlich.
+
 <details>
 <summary>Aufbau des Repos</summary>
 
@@ -167,6 +169,7 @@ Feedback: [Issue anlegen](https://github.com/Sae-l/tutor/issues/new) oder im Tut
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
+| `Obsidian-tutor/` | Deutsche Wissensbasis mit 20 Notizen, Canvas, Quellnachweisen und lesender Prüfung |
 | `docs/planung/` | Planungsnotizen und Recherchen (Stand jeweils im Dateinamen), keine Anleitung |
 | `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build); Schriften lokal in `docs/fonts/` (SIL OFL) |
 | `GLOSSARY.md` | Festgelegte Begriffe |

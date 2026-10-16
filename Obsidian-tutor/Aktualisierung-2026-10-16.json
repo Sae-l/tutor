@@ -1,0 +1,185 @@
+{
+  "checked_at_utc": "2026-10-16 12:04:00 UTC",
+  "display_timezone": "Europe/Berlin",
+  "scope": "Datierter lesender Recherchebeleg; fuer die oeffentliche Wissensbasis von persoenlichen Metadaten bereinigt",
+  "repository": {
+    "full_name": "Sae-l/tutor",
+    "visibility": "public",
+    "default_branch": "main",
+    "sha": "921409f2f7e0ccbe54e962ec8218024f74bc3fab",
+    "protected": true,
+    "required_checks": [
+      "build-und-tests (ubuntu-latest)",
+      "build-und-tests (windows-latest)"
+    ],
+    "enforcement_level": "non_admins",
+    "limit": "Kein vollstaendiger Schutzregel- oder Rechteaudit"
+  },
+  "tree": {
+    "sha": "921409f2f7e0ccbe54e962ec8218024f74bc3fab",
+    "truncated": false,
+    "files": 92
+  },
+  "runs": [
+    {
+      "id": 38799636397,
+      "head_sha": "921409f2f7e0ccbe54e962ec8218024f74bc3fab",
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Sae-l/tutor/actions/runs/38799636397"
+    },
+    {
+      "id": 38799637520,
+      "head_sha": "921409f2f7e0ccbe54e962ec8218024f74bc3fab",
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Sae-l/tutor/actions/runs/38799637520"
+    }
+  ],
+  "releases": [
+    {
+      "tag": "v0.2.0-rc.2",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "kern.md",
+          "size": 4138,
+          "digest": "sha256:0608321f9580c74ba60e2475b9cb27adfb9fe595c50a60fad69d86504e6dd462"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 323,
+          "digest": "sha256:7631d4415222b80134eb76fe681248668b6b07005cbec1c37f6e3233dbb8d5b4"
+        },
+        {
+          "name": "system-prompt.md",
+          "size": 38671,
+          "digest": "sha256:0c1228fd101bf84b4c897ab20e53440e0206d42f7e424232147f0e64841eefec"
+        },
+        {
+          "name": "tutor-chatgpt.zip",
+          "size": 43118,
+          "digest": "sha256:d6f6d1031d1e6d43b9a5a2a4d7ff839a2273a9cc90a53b0b7112dda6382e6179"
+        },
+        {
+          "name": "tutor-skill.zip",
+          "size": 23165,
+          "digest": "sha256:d78a902f96757b978bd4553359a527844a089531792c00e15bf5f990dc5b2fd2"
+        }
+      ],
+      "url": "https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2"
+    },
+    {
+      "tag": "v0.2.0-rc.1",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "kern.md",
+          "size": 4173,
+          "digest": "sha256:d4ae0040cbe92a3da45df86b91a3d8b4b8a0e2370f0fbe331b5b66b0a922c73a"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 249,
+          "digest": "sha256:46cfc04274c12f9ada597325075a25cb663e5746a36252fd83f9524f4b4973b5"
+        },
+        {
+          "name": "system-prompt.md",
+          "size": 39124,
+          "digest": "sha256:c85fad571fc54ee547ab8a01f19efb6899ea7c1f62c5ec12569866f3cf234314"
+        },
+        {
+          "name": "tutor-skill.zip",
+          "size": 23158,
+          "digest": "sha256:b3d4eb857e692e7b163cb70a2e92989331f48fe4757fab84e4a5122cfb13680f"
+        }
+      ],
+      "url": "https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.1"
+    },
+    {
+      "tag": "v0.1.0-rc.1",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "SHA256SUMS.txt",
+          "size": 253,
+          "digest": "sha256:7e52c89a390fe605ebd7fca237b8fd5d8e020d2f43ad1b4052ef63a916a40220"
+        },
+        {
+          "name": "system-prompt-kurz.md",
+          "size": 8562,
+          "digest": "sha256:fff23d9372c27e2300b9f3b564b9b9a20d1036b89d7fa6add8d441774266511b"
+        },
+        {
+          "name": "system-prompt.md",
+          "size": 44267,
+          "digest": "sha256:e11ae23b6aa97e2fa7917cf8e55bc044b6d467030d3895c4d13bb8987b3c74da"
+        },
+        {
+          "name": "tutor-skill.zip",
+          "size": 28327,
+          "digest": "sha256:9ad7ece09264f7b26b79f7b90d1abfa11fb22319650404d7ada42282869bb1bc"
+        }
+      ],
+      "url": "https://github.com/Sae-l/tutor/releases/tag/v0.1.0-rc.1"
+    }
+  ],
+  "open_planning_issue": {
+    "number": 9,
+    "title": "Map: Tutor public release v0.2",
+    "url": "https://github.com/Sae-l/tutor/issues/9"
+  },
+  "sources": [
+    "https://api.github.com/repos/Sae-l/tutor",
+    "https://api.github.com/repos/Sae-l/tutor/branches/main",
+    "https://api.github.com/repos/Sae-l/tutor/git/trees/921409f2f7e0ccbe54e962ec8218024f74bc3fab?recursive=1",
+    "https://api.github.com/repos/Sae-l/tutor/releases?per_page=5",
+    "https://api.github.com/repos/Sae-l/tutor/actions/runs?head_sha=921409f2f7e0ccbe54e962ec8218024f74bc3fab&per_page=5",
+    "https://api.github.com/repos/Sae-l/tutor/issues?state=open&per_page=30"
+  ],
+  "external_verification": [
+    {
+      "url": "https://support.google.com/gemini/answer/17094296?hl=en",
+      "result": "Nativer Skillimport mit SKILL.md am Root und Referenzen dokumentiert; Tutor-Paket noch geplant; kein Import durchgefuehrt"
+    },
+    {
+      "url": "https://support.claude.com/en/articles/12512180-use-skills-in-claude",
+      "result": "Offizielle Einrichtungsanleitung gelesen; keine Kontoaktion"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+      "result": "Projektanleitung gelesen; keine Kontoaktion"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "result": "Skillformat und Pluginverteilung gelesen; kein Import"
+    },
+    {
+      "url": "https://hamsabastani.github.io/education_llm.pdf",
+      "result": "Autorenfassung und Aussagen zu Guardrails geprueft; keine vollstaendige methodische Neubewertung"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41598-025-97652-6",
+      "result": "Direktabruf fehlgeschlagen; Verlags-Suchauszug mit Studiendesign lesbar; kein neuer Volltextreview"
+    }
+  ],
+  "limits": [
+    "Release-Downloadbytes nicht erneut geprueft",
+    "Keine native Obsidian-Darstellungspruefung",
+    "Keine KI-Plattformabnahme",
+    "Keine Lernwirksamkeits- oder ADHS-Studie",
+    "Kein vollstaendiger Geheimnis-, Rechte- oder Verlaufsaudit"
+  ],
+  "product_changed": false,
+  "website": {
+    "url": "https://sae-l.github.io/tutor/",
+    "http_status": 200,
+    "normalized_text_matches_local": true,
+    "remote_normalized_sha256": "5863825a1712cd8925aeaddafe48e76f5a2c699a94f073b416a810cbda174397",
+    "local_normalized_sha256": "5863825a1712cd8925aeaddafe48e76f5a2c699a94f073b416a810cbda174397",
+    "limit": "HTML-Vergleich; kein Browser- oder Netzwerkaudit",
+    "local_source": "docs/index.html"
+  }
+}
