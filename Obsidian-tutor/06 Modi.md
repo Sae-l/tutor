@@ -1,7 +1,7 @@
 ---
 title: Die elf Tutor-Modi
 tags: [tutor, modi]
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # Die elf Modi
@@ -16,7 +16,7 @@ Die Befehlsnamen gehören zur Bedienoberfläche und werden unverändert verwende
 | `voll` — `voll.md` | Anschauliche und mathematische Erklärung; anderes Beispiel mit anderen Zahlen und anderem Kontext; falscher Weg und Wiederholungskarte. | Original zurückgehalten; anderes Beispiel sichtbar gelöst. | Die Methode vor dem eigenen Versuch sehen. |
 | `thema` — `thema.md` | Begriff, Gesetz oder Beweis; Bedingungen, Nutzen beim Lösen und Verständnisfrage. | Antwort der eigentlichen Aufgabe zurückgehalten; Auswahlaufgaben erst auf Abruf entscheiden. | Konzeptfrage oder Beweis ohne anderen Befehl. |
 | `tipp` — `tipp.md` | Vier bis sechs passende Leitfragen; weder Gesetz noch Ergebnis in einer Frage verstecken. | Bis `lösung` zurückgehalten. | Selbst lösen, mit Anleitung. |
-| `check` — `check.md` | Zuerst Richtiges nennen, dann den ersten Fehler mit Grund und ab dort korrigieren. Bei korrektem Versuch keinen Fehler erfinden. | Korrektur ab dem Fehler sichtbar. | Eigenen Versuch schicken; automatische Wahl ohne höherrangigen Befehl. |
+| `check` — `check.md` | Zuerst Richtiges nennen, dann nur die erste fehlerhafte Stelle mit Art und Grund lokal korrigieren; danach stoppen. Bei korrektem Versuch keinen Fehler erfinden. | Nur lokale Fehlerkorrektur sichtbar, keine restliche Neulösung. | Eigenen Versuch schicken; automatische Wahl ohne höherrangigen Befehl. |
 | `skizze` — `skizze.md` | Mit Werkzeug beschriftete Grafik; sonst Beschreibung, Punktetabelle und TikZ- oder matplotlib-Code. | Auf die Skizze beschränkt; restliche Rechenaufgabe nicht lösen. | Kräfte oder eine Funktion darstellen. |
 | `kurz` — `kurz.md` | Deutsche Klausur-Lösung mit Ansatz, Umformungen vor Zahlen, Ergebnis und genau einer Anmerkung. Keine Übungen oder Verständnisfrage. | Sichtbar. | Nach eigenem Versuch vergleichen. |
 | `mittel` — `mittel.md` | Erklärung mittlerer Tiefe und vollständige Lösung; kurze Schritte, Denkpunkte und Verständnisfrage, keine Zusatzübungen. | Lösung sichtbar; Antwort auf Verständnisfrage zurückgehalten. | Erklärung zusammen mit dem Lösungsweg. |
@@ -44,3 +44,7 @@ Erwartet werden Fragen ohne Ergebnis. Erst in einer späteren Nachricht `lösung
 
 > [!note] Lösung auf Wunsch
 > Auch `kurz`, `mittel`, `lang` und `klausur` sind ausdrückliche Wünsche nach einer Lösung. Der Abruf ist nicht auf das Wort `lösung` beschränkt. Ein 🔒-Symbol schützt keinen darunter geschriebenen Text.
+
+## Änderung für rc.3 (17.10.2026)
+
+Die Schutzentscheidung [#34](https://github.com/Sae-l/tutor/issues/34) ist in der gemeinsamen Quelle umgesetzt: Schutz aller Medien und Nachweise, lokale Check-Korrektur, begrenzte Graphfreigabe und eindeutiger Abruf. Zwölf neue Fälle in `tests/akzeptanz.md` sind noch nicht nativ geprüft. Die alten Testergebnisse und Live-Abfragen oben bleiben Nachweise ihres damaligen Stands; #32 und die offenen Plattform-/Gateentscheidungen bleiben offen.

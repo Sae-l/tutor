@@ -114,7 +114,7 @@ Ein Befehlswort steht am Anfang der Nachricht (z. B. Foto + „tipp“). Mit `!`
 | `hilfe` | Befehlskarte |
 | `!issue` | Link für Feedback |
 
-- **Lösungsschutz:** Die Lösung nach `tipp` und Antworten auf Verständnisfragen kommen erst mit `lösung`. Das Symbol 🔒 allein versteckt keinen Text.
+- **Lösungsschutz:** Erklär, Thema, Tipp und Voll halten die Originalrechnung, vollständige Beweise und Auswahlantworten zurück, auch in Bildern und Code. Skizzen zeigen Gegebenes; ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Check korrigiert nur die erste fehlerhafte Stelle. `lösung` ruft den eindeutig gemeinten Inhalt ab; bei mehreren offenen Aufgaben oder Fragen wird einmal nachgefragt. Kurz, Mittel, Lang und Klausur erlauben die Lösung. 🔒 allein versteckt keinen Text. Native Prüfung dieser Regeln bleibt offen.
 - **Dauermodus:** `!an tipp` (oder ein anderer Befehl) gilt für alle folgenden Aufgaben, bis `!aus` kommt.
 - **Sprache:** `[ar]` Arabisch, `[tr]` Türkisch, `[fr]` Französisch, `[en]` Englisch, `[ur]` Urdu, `[de]` zurück, oder `!sprache ar` usw. Ohne Wunsch antwortet der Tutor auf Deutsch, auch wenn du anders schreibst. Überschriften, Aufgabentext und Klausur-Lösung bleiben deutsch, damit das Prüfungsvokabular mitgelernt wird.
 - **Kurspaket (optional):** eine Markdown-Datei mit Notation und Stoffumfang eines Kurses, z. B. [kurse/mpg1.md](kurse/mpg1.md). In Claude ein Projekt anlegen und die Datei dort als Projektwissen hochladen. Sie gehört nicht zum Skill; bei Bezeichnungen und Stoffumfang hat sie Vorrang.
@@ -128,7 +128,7 @@ Ein Befehlswort steht am Anfang der Nachricht (z. B. Foto + „tipp“). Mit `!`
 | ChatGPT Projekt | `kern.md` als Anweisung, `system-prompt.md` als Datei | experimentell; Teilabnahme vorgesehen |
 | Gemini (Gem bzw. Gemini-Skill) | wie ChatGPT Projekt | experimentell, nicht geprüft |
 
-Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases) und sind identisch mit `dist/`.
+Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatGPT-ZIP und Promptdateien entsprechen `dist/`; das Claude-Skill-ZIP enthält die versionierte Quelle `tutor/`.
 
 - **ChatGPT:** Plugin, Projektweg und Funktionsprüfung beschreibt die [Schritt-für-Schritt-Anleitung](docs/CHATGPT.md). Vorgesehen sind Plugin und Projekt, kein neuer Custom GPT ([OpenAI zu Skills und Plugins](https://learn.chatgpt.com/docs/build-skills)).
 - **ChatGPT Projekt:** neues Projekt anlegen, den Inhalt von `kern.md` in die Projektanweisungen kopieren und `system-prompt.md` als Projektdatei hinzufügen.

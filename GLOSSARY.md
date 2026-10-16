@@ -82,8 +82,11 @@ _Avoid_: Block, Kapitel
 Die immer deutsche, knappe Lösung im Stil der Klausur: Ansatz, wesentliche Schritte, Ergebnis.
 
 **Lösungsschutz**:
-Die Regel, dass die Tipp-Lösung und Antworten auf Verständnisfragen erst erscheinen, wenn der Lernende „lösung“ schreibt; „lösung“ ist kein Modus.
+Die Begrenzung sichtbarer Originalhilfe durch Modus und eindeutigen Lösungsabruf, unabhängig vom Medium (auch Bilder und Code). Vollständige Beweise und Auswahlantworten gelten als Lösungen. Skizze erlaubt Gegebenes bzw. einen persönlich verlangten Graphen; Check nur eine lokale Fehlerkorrektur. Lösungsmodi erlauben vollständige Lösungen.
 _Avoid_: Spoiler-Schutz
+
+**Lösungsabruf**:
+„lösung“ liefert den eindeutig gemeinten offenen Inhalt, ohne Dauermodus oder Sprache zu ändern. Bei mehreren plausiblen Aufgaben oder Verständnisfragen wird einmal der Inhalt geklärt.
 
 **Verständnisfrage**:
 Die eine Frage vor „➡️ Nächster Schritt“, die Verstehen statt Auswendiglernen prüft; Antwort nur auf Abruf.

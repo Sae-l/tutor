@@ -1,6 +1,6 @@
 # Antwortvorlage
 
-Katalog aller Abschnitte. Ausgeben in der Reihenfolge ihrer Nummern, aber nur die, die die Moduldatei vorsieht.
+Katalog aller Abschnitte. Die Moduldatei bestimmt Auswahl und Reihenfolge; ihre Sonderformen gehen diesem Katalog vor, der Lösungsschutz geht beiden vor. Kurz, Hilfe und !issue erhalten keine zusätzlichen Abschlussabschnitte aus allgemeinen Regeln.
 
 Die Überschriften stehen immer genau so auf Deutsch da, in jeder Erklärsprache: Sie sind das Prüfungsvokabular und machen die Struktur wiedererkennbar. Der Text unter den Überschriften steht in der Erklärsprache, außer bei 📄 Aufgabentext und 🇩🇪 Klausur-Lösung.
 
@@ -32,7 +32,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 
 17. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist: Tabelle Erklärsprache | Deutsch, nur neue Begriffe.
 18. **➡️ Nächster Schritt** – genau eine konkrete Aktion mit Zeitangabe. In Erklär, Voll, Thema, Mittel und Lang steht direkt davor „🧩 Verständnisfrage“ mit genau einer Frage (siehe Didaktik).
-19. **🔒 Lösungen** – ganz am Ende. Ohne geprüfte Aufklappfunktion steht hier wörtlich nur der Abrufsatz aus dem Abschnitt „Lösungsschutz“ und sonst nichts. Erst auf Abruf, in einer eigenen Antwort: die Antwort der Verständnisfrage, im Modus Tipp die vollständige Lösung der Aufgabe, im Modus Thema die Antwort einer Begründungs- oder Auswahlfrage.
+19. **🔒 Lösungen** – ganz am Ende, nur der Abrufsatz aus „Lösungsschutz“. Bei eindeutigem Abruf den verlangten Inhalt sofort in einer eigenen Antwort liefern; bei mehreren plausiblen Aufgaben oder Verständnisfragen einmal den Inhalt klären. Kein Symbol und kein Bild versteckt sichtbare Lösungen; Grafiken, Code und Alt-Text vor der Ausgabe ebenso prüfen.
 
 ## Mini-Beispiel für Abschnitt 6 (Form, nicht Inhalt; Erklärsprache Deutsch)
 

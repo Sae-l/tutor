@@ -1,7 +1,7 @@
 ---
 title: Lokales Prüfergebnis und Grenzen
 tags: [tutor, pruefung]
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # Prüfergebnis
@@ -52,3 +52,7 @@ Datierter früherer Live-Nachweis: [[Live-Nachweise.json|Live-Nachweise.json]]. 
 - Genaue GitHub-Schutzregeln, private Schwachstellenmeldung und Secret Scanning; vollständige Prüfung von Verlauf, Geheimnissen, Release-Downloadbytes und Rechten. Der CI-Erfolg und die erreichbare Website sind jetzt separat belegt.
 
 Diese für GitHub ausgewählte Fassung liegt innerhalb des Repositorys. Persönliche Obsidian-Einstellungen, Gesprächskennungen und private Testdaten sind ausgeschlossen. Es wurde keine Erweiterung installiert und kein Lernmaterial an einen Chatbot übertragen. Die Wissensbasis bleibt deutschsprachig. Die CI prüft den Vault zusätzlich auf Linux und Windows.
+
+## Änderung für rc.3 (17.10.2026)
+
+Die Schutzentscheidung [#34](https://github.com/Sae-l/tutor/issues/34) ist in der gemeinsamen Quelle umgesetzt: Schutz aller Medien und Nachweise, lokale Check-Korrektur, begrenzte Graphfreigabe und eindeutiger Abruf. Zwölf neue Fälle in `tests/akzeptanz.md` sind noch nicht nativ geprüft. Die alten Testergebnisse und Live-Abfragen oben bleiben Nachweise ihres damaligen Stands; #32 und die offenen Plattform-/Gateentscheidungen bleiben offen.

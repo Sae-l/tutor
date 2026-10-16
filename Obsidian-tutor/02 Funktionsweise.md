@@ -55,8 +55,8 @@ Bei mehreren Befehlen gilt der letzte; ebenso bei mehreren Sprachsignalen.
 
 - Ein 🔒-Titel oder eine Leerzeile verbirgt keinen Text. Zurückgehaltene Lösungen werden erst auf `lösung` ausgegeben; ausdrücklich lösende Modi zeigen ihre Lösung direkt.
 - `lösung` ist ein Abruf und kein Modus; der gespeicherte Dauermodus bleibt bestehen.
-- Bei mehreren offenen Aufgaben wird einmal nach der Nummer gefragt. Welche von mehreren offenen Verständnisfragen gemeint ist, bleibt im freien Test als Regelungslücke dokumentiert.
-- Vor dem Senden dürfen die Verständnis-Modi weder Ergebnis, Zwischenergebnis noch eine entscheidende umgestellte Gleichung der Originalaufgabe enthalten.
+- Bei mehreren plausiblen Aufgaben oder Verständnisfragen wird einmal nach Nummer bzw. Inhalt gefragt. Ein eindeutiger Abruf wird sofort bedient; Sprache und Dauermodus bleiben unverändert (rc.3, Entscheidung #34).
+- Vor dem Senden dürfen die Verständnis-Modi weder Originalrechnung, Beweiskette noch Auswahlantwort enthalten, auch nicht in Bildern, Code, Legenden oder Alt-Text. Skizze zeigt Gegebenes; ein persönlich verlangter Graph erlaubt nur die nötigen Graphberechnungen. Endbilder tatsächlich prüfen oder auf kontrollierte Zeichnung/Beschreibung zurückfallen. Check korrigiert nur die erste fehlerhafte Stelle. Native Prüfung offen.
 
 ## Eskalation
 

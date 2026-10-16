@@ -2,7 +2,7 @@
 title: Tutor – Wissenslandkarte
 aliases: [Tutor, Skill-Dokumentation]
 tags: [tutor, index]
-updated: 2026-10-16
+updated: 2026-10-17
 status: repository-dokumentation
 ---
 
@@ -73,3 +73,7 @@ Nachweise und genaue Grenzen: [[13 Quellen und Nachweise]] und [[16 Prüfergebni
 In Obsidian „Ordner als Vault öffnen“ wählen und `Obsidian-tutor` angeben. In dieser Startseite einen Lesepfad wählen; `Tutor-Landkarte.canvas` öffnet die verschiebbaren Dateikarten. Wikilinks verbinden die Notizen auch in der Graph-Ansicht. Die Python-Prüfung liest die Quellen aus der übergeordneten Repositorywurzel. Den gesamten Checkout behalten; beim Kopieren allein dieses Ordners bleiben die Artikel lesbar, die Quellen lassen sich dort ohne Repository nicht erneut prüfen. Wikilinks und Canvas sind für Obsidian bestimmt; GitHub stellt diese Formate nicht vollständig als Navigation dar.
 
 Diese für GitHub aufbereitete Fassung enthält Fachnotizen, Canvas und Prüfwerkzeug; persönliche Obsidian-Einstellungen sind ausgeschlossen. Quellenprüfung: 2026-10-16, Zeitzone Europe/Berlin. Die Wissensbasis im Repository und die bestehende Produktwebsite sind getrennte Einstiege.
+
+## Änderung für rc.3 (17.10.2026)
+
+Die Schutzentscheidung [#34](https://github.com/Sae-l/tutor/issues/34) ist in der gemeinsamen Quelle umgesetzt: Schutz aller Medien und Nachweise, lokale Check-Korrektur, begrenzte Graphfreigabe und eindeutiger Abruf. Zwölf neue Fälle in `tests/akzeptanz.md` sind noch nicht nativ geprüft. Die alten Testergebnisse und Live-Abfragen oben bleiben Nachweise ihres damaligen Stands; #32 und die offenen Plattform-/Gateentscheidungen bleiben offen.

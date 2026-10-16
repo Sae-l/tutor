@@ -1,7 +1,7 @@
 ---
 title: Abnahme von Verhalten und Darstellung
 tags: [tutor, abnahme]
-updated: 2026-10-16
+updated: 2026-10-17
 status: zieloberflaechen-offen
 ---
 
@@ -64,3 +64,7 @@ Jeden Fall in einem neuen Gespräch ohne weiteren Tutor-Prompt beginnen. Mehrere
 Nach Quellregel: Bei Änderung einer Modusdatei ihre drei Fachfälle und zugehörige Grenzfälle wiederholen; bei Router- oder Referenzänderungen alle Fälle. Verpackungsänderungen erfordern neue Installationstests, Plattform- oder Formeländerungen neue Darstellungsprüfungen. Modellupdates begründen eine erneute Prüfung kritischer Verhaltensregeln.
 
 Vorhanden sind ein älterer CLI-Teillauf mit 13/16 Erfolgen und ein freier ChatGPT-Test mit Abweichungen; kein Gemini-Protokoll. Hier wird kein vollständiger Erfolg ergänzt. Einzelheiten: [[13 Quellen und Nachweise]].
+
+## Änderung für rc.3 (17.10.2026)
+
+Die Schutzentscheidung [#34](https://github.com/Sae-l/tutor/issues/34) ist in der gemeinsamen Quelle umgesetzt: Schutz aller Medien und Nachweise, lokale Check-Korrektur, begrenzte Graphfreigabe und eindeutiger Abruf. Zwölf neue Fälle in `tests/akzeptanz.md` sind noch nicht nativ geprüft. Die alten Testergebnisse und Live-Abfragen oben bleiben Nachweise ihres damaligen Stands; #32 und die offenen Plattform-/Gateentscheidungen bleiben offen.

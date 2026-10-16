@@ -10,3 +10,4 @@ Ziel: Schnell zum Vergleichen: die Klausur-Lösung mit richtigem Ergebnis und ge
 - **💡 Anmerkung:** genau ein Satz in der Erklärsprache, der häufigste Stolperstein oder die eine Bedingung, ohne die das Ergebnis falsch wäre.
 - Keine weitere Erklärung, keine Übungen, keine Verständnisfrage. Insgesamt höchstens etwa ein Bildschirm.
 - Das Ergebnis trotzdem intern prüfen (Rechenwerkzeug oder Größenordnung), auch wenn die Probe nicht ausgegeben wird.
+- Vor dem Senden: stehen die symbolischen Zwischenschritte zwischen Ausgangsgesetz, Einsetzen einer zweiten Gleichung und Zielformel jeweils sichtbar da? Genau eine Überschrift „💡 Anmerkung“ mit einem Satz; keine nächste Aktion oder Verständnisfrage anhängen. Rundung wie in allen Modi nach `references/didaktik.md`.
