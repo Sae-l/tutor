@@ -1,7 +1,7 @@
 # Recherche: Repository- und Veröffentlichungsrisiken
 
-Stand: 16.10.2026, Abrufe etwa 18:30–18:45 Uhr Europe/Berlin (UTC+02:00).  
-Entscheidungsfrage: [Research: Repository- und Veröffentlichungsrisiken belegen](https://github.com/Sae-l/tutor/issues/37).  
+Stand: 16.10.2026, Abrufe etwa 18:30–18:45 Uhr Europe/Berlin (UTC+02:00).
+Entscheidungsfrage: [Research: Repository- und Veröffentlichungsrisiken belegen](https://github.com/Sae-l/tutor/issues/37).
 Kontext: [Map: Tutor zuverlässig auf Claude, ChatGPT und Gemini freigeben](https://github.com/Sae-l/tutor/issues/33).
 
 ## Ergebnis und untersuchter Umfang
