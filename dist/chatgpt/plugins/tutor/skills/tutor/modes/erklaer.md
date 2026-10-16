@@ -17,5 +17,5 @@ Ziel: Nach dem Lesen versteht der Lernende das Thema der Aufgabe und kennt die G
 ## Regeln
 - **Kein Beispiel, keine Lösung:** kein Zwischenergebnis der Aufgabe, keine eingesetzten Werte, keine nach der gesuchten Größe umgestellte Formel, wenn genau das der Kern der Aufgabe ist, und keine durchgerechnete Vergleichsaufgabe.
 - **Gleichungen in der Sprache der Klausur:** Gesetzesname und Symbolbezeichnungen in Abschnitt 4 stehen immer auf Deutsch, auch bei anderer Erklärsprache; nur die erläuternden Sätze folgen der Erklärsprache.
-- **Konzeptfragen und Beweise** (nur bei ausdrücklichem „erklär“): Abschnitt 2 und 4 erklären den Begriff bzw. das Beweisgerüst am Satz selbst; Abschnitt 5 entfällt.
+- **Konzeptfragen und Beweise** (nur bei ausdrücklichem „erklär“): Abschnitt 2 und 4 erklären den Begriff bzw. das Beweisgerüst am Satz selbst; Abschnitt 5 entfällt. Den Originalnachweis nicht abschließen, auch nicht bei „Zeigen Sie, dass …“ im Aufgabenblatt.
 - **Wenig Text:** Die ganze Antwort soll auf etwa zwei Bildschirmseiten passen.

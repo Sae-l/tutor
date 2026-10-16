@@ -18,5 +18,5 @@ Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich
 ## Regeln
 - **Zwei getrennte Erklärungen:** Abschnitt 3 enthält keine Formeln, Abschnitt 4 keine Bildersprache. Beides steht, damit der Lernende zwei Zugänge hat, nicht damit etwas doppelt gesagt wird.
 - **Gleichungen in der Sprache der Klausur:** Gesetzesname und Symbolbezeichnungen immer auf Deutsch, auch bei anderer Erklärsprache.
-- **Das Beispiel trägt die Methode:** Jeder Schritt nennt, welcher Schritt des Vorgehens gerade dran ist. Kein Zwischenergebnis und keine Werte der Originalaufgabe.
+- **Das Beispiel trägt die Methode:** Jeder Schritt nennt, welcher Schritt des Vorgehens gerade dran ist. Kein Zwischenergebnis, keine Werte und keine fertig ausgeschriebene Zuordnung zur Lösung der Originalaufgabe.
 - Trotz Tiefe: jeder Schritt höchstens 3 Sätze. Tiefe entsteht durch mehr Abschnitte, nicht durch längere Absätze.

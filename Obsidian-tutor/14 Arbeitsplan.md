@@ -1,7 +1,7 @@
 ---
 title: Vault-Arbeitsplan und offene Produktarbeiten
 tags: [tutor, plan]
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # Arbeitsplan
@@ -50,3 +50,7 @@ Fehlerdiagnose, Bauanleitung und bereinigter Gesprächskontext sind unter [[17 F
 | 6 | Öffentliche Wissensbasis weiter pflegen | Nur bereinigte Fachinhalte; Links, Canvas, Quellhashes und CI bei jeder Änderung prüfen. |
 
 Dies sind spätere Produktarbeiten mit vorbereiteten Kriterien. Ihre Erledigung wird nicht aus dem Erstellen der Dokumentation abgeleitet.
+
+## Änderung für rc.3 (17.10.2026)
+
+Die Schutzentscheidung [#34](https://github.com/Sae-l/tutor/issues/34) ist in der gemeinsamen Quelle umgesetzt: Schutz aller Medien und Nachweise, lokale Check-Korrektur, begrenzte Graphfreigabe und eindeutiger Abruf. Zwölf neue Fälle in `tests/akzeptanz.md` sind noch nicht nativ geprüft. Die alten Testergebnisse und Live-Abfragen oben bleiben Nachweise ihres damaligen Stands; #32 und die offenen Plattform-/Gateentscheidungen bleiben offen.

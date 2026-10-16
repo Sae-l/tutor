@@ -19,7 +19,10 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
-## Stand v0.2 (2026-10-15)
+## Stand v0.2.0-rc.3 (2026-10-17)
+- Beschlossene Schutzregeln aus #34 implementiert: alle Medien, enger Check, Graph-Ausnahme, eindeutiger Abruf und Regelhierarchie. Kurz/Hilfe, Mittel/Lang und nächste Befehle präzisiert. Native Abnahme weiterhin offen.
+
+## Vorheriger Stand v0.2 (2026-10-15)
 - Umgebaut nach den Entscheidungen in Map #9: Befehlssatz, Sprachen, Router, Kern, Kurspaket, `!issue`. Akzeptanzfälle angepasst, **auf der Zieloberfläche nicht ausgeführt**.
 - Release-Gate: Claude Skill besteht alle Fälle; ChatGPT Plugin/Projekt und Gemini bleiben bis zur jeweiligen Plattformabnahme „experimentell“. Begrenzter CLI-Ersatzlauf vorhanden, kein Gate.
 
@@ -38,4 +41,4 @@
 ## Offene Punkte
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
 2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen.
-3. Vorab-Release v0.2.0-rc.1 nach CONTRIBUTING (`main` ist geschützt, CI Pflicht).
+3. rc.3 nach CONTRIBUTING veröffentlichen; neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.

@@ -4,11 +4,25 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.2.0-rc.3] – 2026-10-17
+
+Vierte Vorabversion. Regeln aus Entscheidung #34 umgesetzt; keine neue native Plattformabnahme und keine stabile Freigabe. #32 bleibt bis zum Bildtest offen.
+
+### Behoben
+- Lösungsschutz für Text, Tabellen, Code, SVG, Endbilder und Alt-Text; Originalbeweise und Auswahlantworten geschützt. Unterstützende Skizzen nur mit Gegebenem, persönlich verlangte Graphen mit begrenzter Berechnungsfreigabe.
+- Check korrigiert nur die erste fehlerhafte Stelle. Eindeutiger Lösungsabruf sofort; bei mehreren Aufgaben oder Verständnisfragen genau eine Auswahlfrage. Persönliches `!issue` hat Vorrang.
+- Modusdatei bestimmt Auswahl und Reihenfolge der Abschnitte; Kurz und Hilfe behalten ihre Sonderform. Kurz zeigt symbolische Zwischenschritte; Mittel/Lang erfinden keine neue Übungsaufgabe oder unnötige Alternativwege.
+- Website-Zähler und Downloadversion, Obsidian-Verweis sowie Prüfsummenbefehl mit herunterladbaren Dateinamen berichtigt.
+
+### Geändert
+- Pluginversion und erzeugte Ausgaben auf `0.2.0-rc.3`; zwölf manuelle Schutzregressionen ergänzt, Check-/Skizzenkriterien präzisiert und Kernschutz gegen Verlust beim Build abgesichert.
+- Deutsche Wissensbasis an die geänderten Schutzregeln angepasst; historische Live- und Testnachweise bleiben als datierte Belege erhalten.
+
 ### Hinzugefügt
 - Öffentliche deutsche Obsidian-Wissensbasis mit 20 verknüpften Notizen, Canvas, Bau- und Reparaturanleitung, Forschungsnachweisen und klaren Plattformgrenzen. Persönliche Obsidian-Einstellungen und Gesprächsmetadaten sind ausgeschlossen; Navigation und Quellhashes werden in der bestehenden Linux-/Windows-CI geprüft.
 
 ### Geändert
-- Landingpage lädt v0.2.0-rc.2 herunter und nennt das ChatGPT-Plugin im Release.
+- Landingpage lädt v0.2.0-rc.3 herunter und nennt das ChatGPT-Plugin im Release.
 
 ## [0.2.0-rc.2] – 2026-10-15
 

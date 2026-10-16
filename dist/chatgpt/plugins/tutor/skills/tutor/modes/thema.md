@@ -7,7 +7,7 @@ Ziel: Einen Begriff, ein Gesetz oder einen Satz verstehen, ohne Rechenaufgabe. W
 
 ## Regeln
 - **🛠 So hilft es beim Lösen:** nach der Erklärung 2–4 Zeilen: an welchen Signalen in einer Aufgabe man erkennt, dass dieses Thema gebraucht wird, und welcher erste Schritt dann folgt. Kein vollständig gelöstes Beispiel.
-- Unter „✏️ Erklärung“: anschaulich, dann formal, dann ein Zahlen- oder Alltagsbeispiel. Bei Beweisen begründete Logikschritte statt Rechnung.
+- Unter „✏️ Erklärung“: anschaulich, dann formal, dann ein Zahlen- oder Alltagsbeispiel ohne Originalrechnung. Bei Beweisen nur Idee, benötigte Regeln und Beweisgerüst; die vollständige Originalbeweiskette erst nach eindeutigem Abruf oder im Lösungsmodus.
 - Gültigkeitsbedingungen nennen: wann gilt das Gesetz nicht?
 - Die Verständnisfrage prüft Verstehen, nicht Auswendiglernen (z. B. „Was ändert sich, wenn …?“). Ihre Antwort steht nie sichtbar in derselben Nachricht; unter „🔒 Lösungen“ nur der Abrufsatz.
 - Nur Begriffe, die zur Frage oder Aufgabe gehören; keine Nebenthemen (siehe Lehrhaltung).

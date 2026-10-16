@@ -31,7 +31,7 @@ Produktbasis der datierten Recherche: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`
 | Nicht veröffentlichter freier ChatGPT-Testbericht | Nur historische Zusammenfassung: Abweichungen bei Eskalation, Kurz und Hilfe; fehlende Versionsdaten. Kein öffentlicher Abnahmebeleg. |
 | `SECURITY.md`, `.gitignore`, `.github/workflows/ci.yml`, `.github/dependabot.yml` | Lokale Richtlinien und Einstellungen; kein Nachweis des Serverzustands. |
 | `docs/index.html`, `docs/fonts/` | Website, Versionslinks, feste Beispiele und lokale Schriften. |
-| `packaging/chatgpt-plugin.json`, `LICENSE` | Version `0.2.0-rc.2` und MIT. |
+| `packaging/chatgpt-plugin.json`, `LICENSE` | Version `0.2.0-rc.3` und MIT; ältere Releasebelege unten sind historisch. |
 | `docs/planung/2026-10-15-plattformen/00-features.md`, `03-unified-proposal.md`, `04-handoff-prompts.md` | Gemeinsame Drei-Plattform-Architektur, Regelkonflikte und noch nicht implementierte Umsetzungsaufträge. |
 
 Öffentliche Quellen öffnen: [Router](https://github.com/Sae-l/tutor/blob/main/tutor/SKILL.md), [Akzeptanzfälle](https://github.com/Sae-l/tutor/blob/main/tests/akzeptanz.md), [Konzept](https://github.com/Sae-l/tutor/blob/main/docs/KONZEPT.md), [Websitequelle](https://github.com/Sae-l/tutor/blob/main/docs/index.html). Diese Links führen zu den öffentlichen Repositorydateien; der dokumentierte Produktstand ist oben benannt.
@@ -70,7 +70,7 @@ Die neue lesende GitHub-Abfrage bestätigte Repository, `main`, vollständigen B
 
 ## Bekannte Unterschiede
 
-- Website: 32 Grenzfälle; aktuelle Matrix: 33.
+- Die frühere Website-Abweichung 32/33 ist in rc.3 korrigiert; zwölf zusätzliche Schutzregressionen sind vorbereitet und noch nicht nativ geprüft.
 - Das ältere Konzept nennt Modelltests als nicht durchgeführt, später liegen Teilversuche vor. Daraus folgt keine vollständige Abnahme.
 - Die allgemeine Regel fordert eine nächste Handlung; `kurz` endet laut eigener Datei mit einer knappen Anmerkung. Konsistenz in der Quelle später klären.
 - `lösung` bei mehreren offenen Verständnisfragen bleibt im freien Test unklar; der Vault erfindet dafür keine neue Regel.

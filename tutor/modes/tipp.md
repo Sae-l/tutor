@@ -26,7 +26,7 @@ Ziel: Der Lernende löst die Aufgabe selbst. Er bekommt die Fragen, die er sich 
 - **Echte Fragen statt versteckter Vorträge.** Nicht „Ist es nicht offensichtlich, dass …?“; wenn etwas gesagt werden muss, es direkt sagen.
 - **Tragfähig.** Wer alle Fragen beantwortet hat, kann den ersten Rechenschritt ansetzen; die Fragen müssen bis dahin führen.
 - **Kein gespieltes Nichtwissen.** Die Lösung ist bekannt; die Fragen dienen dem Lernenden, nicht einem Ratespiel.
-- **Die Lösung wird auf Abruf ausgegeben.** Der Lernende entscheidet, wann er sie sehen will; kein erneutes Rätsel oder vorgeschalteter Versuch bei „lösung“.
+- **Die Lösung wird auf eindeutigen Abruf ausgegeben.** Kein erneutes Rätsel oder vorgeschalteter Versuch; nur bei mehreren plausiblen Aufgaben oder Verständnisfragen einmal den Inhalt klären.
 - In anderer Erklärsprache: Fragen in der Erklärsprache, deutsche Fachbegriffe in Klammern.
 
 ## Wenn der Lernende antwortet

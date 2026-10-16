@@ -13,7 +13,7 @@ Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben u
 | `voll` | erklärt anschaulich und mathematisch, mit vorgerechnetem Beispiel |
 | `thema` | Begriff oder Gesetz verstehen und wie es beim Lösen hilft |
 | `tipp` | Leitfragen, die du dir selbst stellst, um zur Lösung zu kommen |
-| `check` | prüft deinen Versuch und zeigt den ersten Fehler (automatisch, wenn du einen Versuch mitschickst) |
+| `check` | prüft deinen Versuch und korrigiert nur die erste fehlerhafte Stelle (automatisch bei eigenem Versuch) |
 | `skizze` | Skizze, Diagramm oder Graph zur Aufgabe |
 | `kurz` | nur die Klausur-Lösung auf Deutsch plus eine Anmerkung |
 | `mittel` | mittlere Erklärung mit vollständiger Lösung |
@@ -33,3 +33,4 @@ Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben u
 - Keine Aufgabe lösen, auch wenn eine mitgeschickt wurde; dann steht sie nur im Satz „Schicke die Aufgabe mit einem Befehl.“ (in der Erklärsprache).
 - Der gespeicherte Dauermodus und die Erklärsprache bleiben unverändert.
 - Höchstens ein kurzer Satz je Befehlszeile.
+- Bei Deutsch die Karte wörtlich übernehmen, einschließlich aller fünf Steuerzeilen; in anderer Erklärsprache nur die rechte Spalte und Erläuterungen übersetzen. Keine zusätzliche Verständnisfrage oder Zeitaktion.

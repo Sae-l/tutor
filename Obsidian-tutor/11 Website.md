@@ -16,7 +16,7 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe und Version; lokaler Downloadlink auf `v0.2.0-rc.2` festgelegt. |
+| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.0-rc.3` festgelegt; Veröffentlichung separat prüfen. |
 | Schrittweise Hilfe | Übergang zwischen Verständnis, Leitfragen, Beispiel und Lösung. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
@@ -34,7 +34,7 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 ## Dokumentierter Synchronisationsbedarf
 
-Der lokale und der erneut abgerufene öffentliche Statusabschnitt nennen **30 Modusfälle und 32 Grenzfälle**. Die aktuelle `tests/akzeptanz.md` enthält **30 + 33** sowie Darstellungs- und Pluginfälle. Auch spätere Teilversuche sind dort nicht vollständig abgebildet. Ein korrigierter Zähler rechtfertigt keine Änderung von „nicht abgenommen“ zu „garantiert“.
+In rc.3 nennt die Website **30 Modusfälle, 33 Grenzfälle und 12 Schutzregressionen**, verlinkt den öffentlichen Vault und bewahrt den Status „nicht abgenommen“. Die frühere Abweichung 32/33 ist damit in der Quelle korrigiert. Deployment und tatsächlich gelieferte Dateien separat prüfen; historische Live-Nachweise bleiben datiert.
 
 ## Website später ändern
 

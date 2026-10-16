@@ -8,4 +8,4 @@ Ziel: Verstehen und vollständige Lösung in einer Antwort, mittlere Tiefe, ohne
 ## Regeln
 - Im Lösungsweg vor 2–3 entscheidenden Schritten eine „⏸“-Frage.
 - Erklärung mittlerer Tiefe: jeder Schritt 1–3 Sätze, keine Vertiefungsabschnitte.
-- Keine Übungsaufgaben. Vor „➡️ Nächster Schritt“ die eine 🧩 Verständnisfrage, Antwort nur auf Abruf.
+- Keine Übungsaufgaben, auch nicht im „➡️ Nächster Schritt“: keine neue Aufgabe und keine Variante mit anderen Zahlen. Die nächste Aktion bezieht sich auf diese Aufgabe. Vorher die eine 🧩 Verständnisfrage, Antwort nur auf Abruf.

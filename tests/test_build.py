@@ -193,6 +193,15 @@ with patch.object(Path, "rename", fail_publish):
                                   for p in (self.root / "dist").rglob("*") if p.is_file()})
         self.assertFalse(list(self.root.glob(".build-*")))
 
+    def test_compact_core_keeps_solution_protection_across_media(self):
+        self.assertEqual(self.build().returncode, 0)
+        for rel in ("dist/kern.md", "dist/system-prompt.md"):
+            text = self.read(rel)
+            for rule in ("Code, SVG, Bildern", "Alt-Text", "Endbild prüfen",
+                         "nur lokalen Fehler korrigieren", "persönlich verlangter Graph",
+                         "Aufgabe und Verständnisfrage", "Beweiskette", "Schutz → Modusdatei"):
+                self.assertIn(rule, text, (rel, rule))
+
     def test_display_examples_have_ascii_and_balanced_braces(self):
         examples = []
         for path in (self.root / "tutor").rglob("*.md"):

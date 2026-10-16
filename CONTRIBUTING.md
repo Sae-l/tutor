@@ -37,26 +37,28 @@ Ausnahme: Der erzeugte Katalog `dist/chatgpt/.agents/plugins/marketplace.json` g
 
 Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Release-Gate in `tests/akzeptanz.md` bestanden und protokolliert ist.
 
-1. `main` ist sauber, CI grün, `CHANGELOG.md` hat einen Abschnitt für die neue Version.
+1. Aus einem separaten sauberen Checkout des exakten `main`-Commits arbeiten; CI für diesen Commit ist grün, `CHANGELOG.md` und Pluginmanifest nennen die neue Version. `python build.py`, Strukturtests und Vaultprüfung ausführen; `git diff --exit-code -- dist/` muss danach leer sein. Keine lokalen Änderungen oder privaten Protokolle übernehmen.
 2. Skill-Paket aus dem Commit bauen, nicht aus dem Arbeitsordner (so gelangen nur versionierte Dateien hinein):
 
    ```bash
-   git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
+   release_dir=$(mktemp -d)
+   git archive --format=zip --prefix=tutor/ -o "$release_dir/tutor-skill.zip" HEAD:tutor
    ```
 
-3. Prüfsummen erzeugen:
+3. Prüfsummen im separaten Releaseordner erzeugen (Dateinamen ohne `dist/`, damit heruntergeladene Assets direkt prüfbar sind). Die Bash-Befehle laufen in derselben Sitzung von der Repositorywurzel:
 
    ```bash
-   sha256sum tutor-skill.zip dist/tutor-chatgpt.zip dist/system-prompt.md dist/kern.md > SHA256SUMS.txt
+   cp dist/tutor-chatgpt.zip dist/system-prompt.md dist/kern.md "$release_dir/"
+   (cd "$release_dir" && sha256sum tutor-skill.zip tutor-chatgpt.zip system-prompt.md kern.md > SHA256SUMS.txt && sha256sum -c SHA256SUMS.txt)
    ```
 
 4. Für eine stabile Version: Abnahme mit genau diesem ZIP durchführen, Protokoll in `tests/protokolle/` committen.
-5. Tag setzen und Release anlegen; Anhänge: beide ZIPs, beide Promptdateien, `SHA256SUMS.txt`. Das ChatGPT-ZIP ist für den Plugin-Importer, kein Chat-Attachment. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen als „Pre-release“ markieren. Vor dem nächsten Release Pluginversion und Releaseversion abstimmen; bestehende Tags nicht neu belegen. Beispiel für die noch unveröffentlichte rc.2:
+5. Tag setzen und Release anlegen; Anhänge: beide ZIPs, beide Promptdateien, `SHA256SUMS.txt`. Das ChatGPT-ZIP ist für den Plugin-Importer, kein Chat-Attachment. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen als „Pre-release“ markieren. Vor dem nächsten Release Pluginversion und Releaseversion abstimmen; bestehende Tags nicht neu belegen. Beispiel für rc.3; erst nach grüner CI des zu veröffentlichenden Commits:
 
    ```bash
-   git tag -a v0.2.0-rc.2 -m "v0.2.0-rc.2"
-   git push origin v0.2.0-rc.2
-   gh release create v0.2.0-rc.2 --prerelease --notes-file notizen.md tutor-skill.zip dist/tutor-chatgpt.zip dist/system-prompt.md dist/kern.md SHA256SUMS.txt
+   git tag -a v0.2.0-rc.3 -m "v0.2.0-rc.3"
+   git push origin v0.2.0-rc.3
+   gh release create v0.2.0-rc.3 --verify-tag --prerelease --notes-file docs/releases/v0.2.0-rc.3.md "$release_dir/tutor-skill.zip" "$release_dir/tutor-chatgpt.zip" "$release_dir/system-prompt.md" "$release_dir/kern.md" "$release_dir/SHA256SUMS.txt"
    ```
 
 Nur tatsächlich geprüfte Plattformen als geprüft aufführen.
