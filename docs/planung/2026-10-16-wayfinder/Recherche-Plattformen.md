@@ -1,6 +1,6 @@
 # Recherche: Native Tutor-Pakete und Plattformgrenzen
 
-Stand und Quellenabruf: **16.10.2026**. Recherche für [Research: Native Tutor-Pakete und Plattformgrenzen prüfen](https://github.com/Sae-l/tutor/issues/35), Teil von [Tutor: Weg zu einer belastbaren Drei-Plattform-Freigabe](https://github.com/Sae-l/tutor/issues/33). Rechercheartefakt auf einem Wegwerfzweig, keine Produktänderung oder Freigabe.
+Stand und Quellenabruf: **16.10.2026**. Recherche für [Research: Native Tutor-Pakete und Plattformgrenzen prüfen](https://github.com/Sae-l/tutor/issues/35), Teil von [Map: Tutor zuverlässig auf Claude, ChatGPT und Gemini freigeben](https://github.com/Sae-l/tutor/issues/33). Rechercheartefakt auf einem Wegwerfzweig, keine Produktänderung oder Freigabe.
 
 ## Ergebnis und Nachweisgrenze
 
@@ -16,7 +16,7 @@ Skills werden laut [Claude-Hilfe](https://support.claude.com/en/articles/1251218
 
 Die [Erstellungsanleitung](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) verlangt den benannten Skillordner als oberste ZIP-Ebene und YAML-Metadaten. Daher passt `tutor/SKILL.md` mit `tutor/modes/` und `tutor/references/` zum bisherigen Verpackungsprinzip.
 
-**Dokumentationskonflikt:** Die Erstellungsanleitung nennt für `name` 64 und `description` 200 Zeichen und schreibt `skill.md` klein. Die [offene Agent-Skills-Spezifikation](https://agentskills.io/specification) verlangt `SKILL.md` und erlaubt 1024 Beschreibungszeichen. Tutors aktuelle Beschreibung hat **889 Zeichen**. Das ist ein konkret nachzumessender Importerfall, kein Beleg eines bereits gescheiterten Imports. Keine zweite Verhaltensquelle und keine automatische Kürzung einführen. Maximale Claude-ZIP-Größe ist in den hier ausgewerteten Hilfeseiten nicht numerisch angegeben.
+**Dokumentationskonflikt:** Unter „Required metadata fields“ nennt die Erstellungsanleitung für `name` 64 und ausdrücklich für die Beschreibung 200 Zeichen. Die [offene Agent-Skills-Spezifikation](https://agentskills.io/specification) erlaubt 1024 Beschreibungszeichen. Tutors aktuelle Beschreibung hat **889 Zeichen**. Das ist ein konkret nachzumessender Importerfall, kein Beleg eines bereits gescheiterten Imports. Die Claude-Hilfe verwendet `skill.md` auch im ZIP-Beispiel klein; daraus folgt keine belegte Groß-/Kleinschreibungspflicht des Importers. Das vorhandene `SKILL.md` erhalten. Keine zweite Verhaltensquelle und keine automatische Kürzung einführen. Maximale Claude-ZIP-Größe ist in den hier ausgewerteten Hilfeseiten nicht numerisch angegeben.
 
 ### ChatGPT und Codex
 
@@ -63,4 +63,3 @@ Keine privaten Kursunterlagen, Fotos, personenbezogenen Daten, Zugangsdaten oder
 5. **Verhaltensnachweis:** Identische semantische Kernfälle auf drei nativen Zielen, mit Datum, Oberfläche, exaktem Modell, Quellcommit, Archiv-SHA-256, beobachteten Werkzeugen und sichtbaren Ergebnissen. Fehlende Oberflächen als „nicht geprüft“ behandeln. Wiederholungen und harte Fehlerkriterien, besonders für Medien-Lösungsschutz, gehören in eine eigene menschliche Abnahmeentscheidung.
 
 Nicht durchgeführt: Installation, Kontoprüfung, Einstellungsänderung, Upload, Modelllauf oder neue Paketimplementierung. Die Recherche klärt die dokumentierte Ausgangslage; sie bestätigt weder Plattformkompatibilität noch Lernwirksamkeit.
-
