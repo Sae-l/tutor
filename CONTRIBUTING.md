@@ -42,8 +42,10 @@ Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Rele
 
    ```bash
    release_dir=$(mktemp -d)
-   git archive --format=zip --prefix=tutor/ -o "$release_dir/tutor-skill.zip" HEAD:tutor
+   git archive --format=zip -o "$release_dir/tutor-skill.zip" HEAD tutor/
    ```
+
+   Den Pfad `HEAD tutor/` verwenden, damit die `.gitattributes` der Repositorywurzel gelten. `HEAD:tutor` verliert diesen Pfadkontext und kann bei `core.autocrlf=true` andere Paketbytes erzeugen.
 
 3. Prüfsummen im separaten Releaseordner erzeugen (Dateinamen ohne `dist/`, damit heruntergeladene Assets direkt prüfbar sind). Die Bash-Befehle laufen in derselben Sitzung von der Repositorywurzel:
 

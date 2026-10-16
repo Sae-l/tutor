@@ -1,5 +1,6 @@
 """Structural checks only; these do not evaluate model responses."""
 from pathlib import Path
+from io import BytesIO
 import json
 import re
 import shutil
@@ -14,6 +15,15 @@ LANGS = ("[de]", "[ar]", "[tr]", "[fr]", "[en]", "[ur]")
 
 
 class BuildTests(unittest.TestCase):
+    def test_claude_archive_keeps_source_bytes_with_windows_line_endings(self):
+        data = subprocess.check_output(
+            ["git", "-c", "core.autocrlf=true", "archive", "--format=zip", "HEAD", "tutor/"], cwd=ROOT)
+        with ZipFile(BytesIO(data)) as archive:
+            expected = {p.relative_to(ROOT).as_posix(): p.read_bytes()
+                        for p in (ROOT / "tutor").rglob("*.md")}
+            actual = {name: archive.read(name) for name in archive.namelist() if not name.endswith("/")}
+            self.assertEqual(actual, expected)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix=".test-build-", dir=ROOT)
         self.addCleanup(self.temp.cleanup)

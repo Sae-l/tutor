@@ -63,14 +63,14 @@ python -B -m unittest discover -s tests -v
 Claude-Paket aus der Repositorywurzel:
 
 ```powershell
-git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
+git archive --format=zip -o tutor-skill.zip HEAD tutor/
 Get-FileHash -Algorithm SHA256 tutor-skill.zip
 Get-FileHash -Algorithm SHA256 dist\tutor-chatgpt.zip
 Get-FileHash -Algorithm SHA256 dist\kern.md
 Get-FileHash -Algorithm SHA256 dist\system-prompt.md
 ```
 
-Dieser Archivbefehl liest HEAD; `build.py` liest den Arbeitsbaum. Für Releasevergleiche muss der Checkout sauber und exakt benannt sein. Änderungen im Arbeitsbaum vor einem Commit sind im Claude-ZIP nicht enthalten. Dateinamen in einer Prüfsummenliste müssen zu den tatsächlichen heruntergeladenen Assetnamen passen; der historische Review fand hier einen Unterschied zwischen `dist/name` und `name`.
+Dieser Archivbefehl liest HEAD und behält den Pfadkontext für `.gitattributes` (wichtig auf Windows); `build.py` liest den Arbeitsbaum. Für Releasevergleiche muss der Checkout sauber und exakt benannt sein. Änderungen im Arbeitsbaum vor einem Commit sind im Claude-ZIP nicht enthalten. Dateinamen in einer Prüfsummenliste müssen zu den tatsächlichen heruntergeladenen Assetnamen passen; der historische Review fand hier einen Unterschied zwischen `dist/name` und `name`.
 
 ## Den Skill schrittweise weiterentwickeln
 

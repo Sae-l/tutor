@@ -13,6 +13,7 @@ Vierte Vorabversion. Regeln aus Entscheidung #34 umgesetzt; keine neue native Pl
 - Check korrigiert nur die erste fehlerhafte Stelle. Eindeutiger Lösungsabruf sofort; bei mehreren Aufgaben oder Verständnisfragen genau eine Auswahlfrage. Persönliches `!issue` hat Vorrang.
 - Modusdatei bestimmt Auswahl und Reihenfolge der Abschnitte; Kurz und Hilfe behalten ihre Sonderform. Kurz zeigt symbolische Zwischenschritte; Mittel/Lang erfinden keine neue Übungsaufgabe oder unnötige Alternativwege.
 - Website-Zähler und Downloadversion, Obsidian-Verweis sowie Prüfsummenbefehl mit herunterladbaren Dateinamen berichtigt.
+- Claude-Archiv behält den Repository-Pfadkontext, damit `.gitattributes` auch unter Windows LF-Bytes erzwingt; Regressionstest mit `core.autocrlf=true`.
 
 ### Geändert
 - Pluginversion und erzeugte Ausgaben auf `0.2.0-rc.3`; zwölf manuelle Schutzregressionen ergänzt, Check-/Skizzenkriterien präzisiert und Kernschutz gegen Verlust beim Build abgesichert.
