@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "ee5d043edd8f015129331017e3cd5b1f363177fbe40302877b51759eb7380e58",
+      "sha256": "223fa4967f46e375ead8c705ac7e8a851d42c2f1af88a9dfd9ca50d58a423598",
       "normalization": "utf8-lf"
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "52326d0127b4196a8d61e5dfa2f8c12700659f8d0e54b9f4c31607b700762ac8",
+      "sha256": "720f5ddf9b1f57a899970559044172fc64e78dc128324c4f62ac62115204dd9f",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "e53441f9bb4afe5459318802eddd26dd6a82c010764e2d800e3c626c36f09920",
+      "sha256": "a1e07408bfc8908e9bf29ac7834ddfe110179b553fe29dcb2025850f791398e7",
       "normalization": "utf8-lf"
     },
     {
