@@ -1,0 +1,210 @@
+{
+  "checked_at_utc": "2026-10-16T11:50:46+00:00",
+  "display_timezone": "Europe/Berlin",
+  "scope": "Datierter lesender Recherchebeleg; fuer die oeffentliche Wissensbasis von persoenlichen Metadaten bereinigt",
+  "repository": {
+    "full_name": "Sae-l/tutor",
+    "visibility": "public",
+    "archived": false,
+    "default_branch": "main",
+    "source_url": "https://api.github.com/repos/Sae-l/tutor"
+  },
+  "main": {
+    "sha": "921409f2f7e0ccbe54e962ec8218024f74bc3fab",
+    "protected": true,
+    "matches_local_head": true,
+    "source_url": "https://api.github.com/repos/Sae-l/tutor/branches/main",
+    "limit": "Schutzkennzeichen; keine Details oder Ausnahmen der Regeln geprueft"
+  },
+  "ci": {
+    "head_sha": "921409f2f7e0ccbe54e962ec8218024f74bc3fab",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Sae-l/tutor/actions/runs/38799637520",
+    "updated_at": "2026-10-15T20:09:40Z"
+  },
+  "release": {
+    "tag_name": "v0.2.0-rc.2",
+    "prerelease": true,
+    "published_at": "2026-10-15T20:06:42Z",
+    "html_url": "https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2",
+    "assets": [
+      {
+        "name": "kern.md",
+        "size": 4138,
+        "browser_download_url": "https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.2/kern.md"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 323,
+        "browser_download_url": "https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.2/SHA256SUMS.txt"
+      },
+      {
+        "name": "system-prompt.md",
+        "size": 38671,
+        "browser_download_url": "https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.2/system-prompt.md"
+      },
+      {
+        "name": "tutor-chatgpt.zip",
+        "size": 43118,
+        "browser_download_url": "https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.2/tutor-chatgpt.zip"
+      },
+      {
+        "name": "tutor-skill.zip",
+        "size": 23165,
+        "browser_download_url": "https://github.com/Sae-l/tutor/releases/download/v0.2.0-rc.2/tutor-skill.zip"
+      }
+    ],
+    "limit": "Nur Asset-Metadaten; Downloadbytes nicht erneut geprueft"
+  },
+  "website": {
+    "url": "https://sae-l.github.io/tutor/",
+    "http_status": 200,
+    "local_source": "docs/index.html",
+    "remote_raw_sha256": "5863825a1712cd8925aeaddafe48e76f5a2c699a94f073b416a810cbda174397",
+    "local_raw_sha256": "ff4fe81f8fb3b7e4c0ff2718c755933f2faa32a56a6c6416e480160915e2769a",
+    "remote_normalized_sha256": "5863825a1712cd8925aeaddafe48e76f5a2c699a94f073b416a810cbda174397",
+    "local_normalized_sha256": "5863825a1712cd8925aeaddafe48e76f5a2c699a94f073b416a810cbda174397",
+    "normalization": "UTF-8 dekodieren, CRLF durch LF ersetzen, UTF-8 kodieren",
+    "normalized_text_matches_local": true,
+    "pages_configuration_api_http_status": 404,
+    "limit": "Keine Browserdarstellung; anonyme Pages-API bestaetigt keine Konfiguration"
+  },
+  "research": [
+    {
+      "doi": "10.1177/1529100612453266",
+      "title": "Improving Students’ Learning With Effective Learning Techniques",
+      "journal": "Psychological Science in the Public Interest",
+      "volume": "14",
+      "issue": "1",
+      "pages": "4-58",
+      "article_number": null,
+      "year": 2013,
+      "source_url": "https://api.crossref.org/works/10.1177%2F1529100612453266",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1111/j.1467-9280.2006.01693.x",
+      "title": "Test-Enhanced Learning",
+      "journal": "Psychological Science",
+      "volume": "17",
+      "issue": "3",
+      "pages": "249-255",
+      "article_number": null,
+      "year": 2006,
+      "source_url": "https://api.crossref.org/works/10.1111%2Fj.1467-9280.2006.01693.x",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1207/s15516709cog1302_1",
+      "title": "Self‐Explanations: How Students Study and Use Examples in Learning to Solve Problems",
+      "journal": "Cognitive Science",
+      "volume": "13",
+      "issue": "2",
+      "pages": "145-182",
+      "article_number": null,
+      "year": 1989,
+      "source_url": "https://api.crossref.org/works/10.1207%2Fs15516709cog1302_1",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1037/0033-2909.132.3.354",
+      "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis.",
+      "journal": "Psychological Bulletin",
+      "volume": "132",
+      "issue": "3",
+      "pages": "354-380",
+      "article_number": null,
+      "year": 2006,
+      "source_url": "https://api.crossref.org/works/10.1037%2F0033-2909.132.3.354",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1073/pnas.2422633122",
+      "title": "Generative AI without guardrails can harm learning: Evidence from high school mathematics",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "volume": "122",
+      "issue": "26",
+      "pages": null,
+      "article_number": "e2422633122",
+      "year": 2025,
+      "source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2422633122",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1038/s41598-025-97652-6",
+      "title": "AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting",
+      "journal": "Scientific Reports",
+      "volume": "15",
+      "issue": "1",
+      "pages": null,
+      "article_number": "17458",
+      "year": 2025,
+      "source_url": "https://api.crossref.org/works/10.1038%2Fs41598-025-97652-6",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1207/s1532690xci0201_3",
+      "title": "The Use of Worked Examples as a Substitute for Problem Solving in Learning Algebra",
+      "journal": "Cognition and Instruction",
+      "volume": "2",
+      "issue": "1",
+      "pages": "59-89",
+      "article_number": null,
+      "year": 1985,
+      "source_url": "https://api.crossref.org/works/10.1207%2Fs1532690xci0201_3",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1207/s15326985ep3801_4",
+      "title": "The Expertise Reversal Effect",
+      "journal": "Educational Psychologist",
+      "volume": "38",
+      "issue": "1",
+      "pages": "23-31",
+      "article_number": null,
+      "year": 2003,
+      "source_url": "https://api.crossref.org/works/10.1207%2Fs15326985ep3801_4",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1207/s15326985ep3801_3",
+      "title": "Structuring the Transition From Example Study to Problem Solving in Cognitive Skill Acquisition: A Cognitive Load Perspective",
+      "journal": "Educational Psychologist",
+      "volume": "38",
+      "issue": "1",
+      "pages": "15-22",
+      "article_number": null,
+      "year": 2003,
+      "source_url": "https://api.crossref.org/works/10.1207%2Fs15326985ep3801_3",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    },
+    {
+      "doi": "10.1037/0278-7393.4.6.592",
+      "title": "The generation effect: Delineation of a phenomenon.",
+      "journal": "Journal of Experimental Psychology: Human Learning and Memory",
+      "volume": "4",
+      "issue": "6",
+      "pages": "592-604",
+      "article_number": null,
+      "year": 1978,
+      "source_url": "https://api.crossref.org/works/10.1037%2F0278-7393.4.6.592",
+      "scope": "Bibliografische Metadaten; keine vollstaendige Bewertung der Studie"
+    }
+  ],
+  "research_limits": [
+    "Verlagsabrufe fuer Sweller, Kalyuga und Renkl lieferten HTTP 403; Suchauszuege fuer Kalyuga und Renkl verfuegbar.",
+    "APA-Abruf zu Slamecka durch robots.txt gesperrt.",
+    "Nature-Abruf zu Kestin ohne auswertbaren Artikeltext; nur DOI-Metadaten erneut bestaetigt.",
+    "Bastani-Verlagsfassung lesbar; keine systematische Literaturuebersicht oder Tutor-Wirksamkeitsstudie."
+  ],
+  "unverified": [
+    "Detaillierte Branchregeln",
+    "Secret Scanning",
+    "Private Schwachstellenmeldung",
+    "Vollstaendiger Geheimnisscan und Rechtepruefung",
+    "Native Obsidian-Darstellung",
+    "Abnahme der drei KI-Zielplattformen"
+  ]
+}

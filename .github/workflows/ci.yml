@@ -30,6 +30,8 @@ jobs:
           test -z "$(git ls-files --others --exclude-standard -- dist/)"
       - name: Strukturtests
         run: python -B -m unittest discover -s tests -v
+      - name: Obsidian-Wissensbasis
+        run: python -B Obsidian-tutor/verify_vault.py
       - name: Skill-Paket enthält nur Markdown-Dateien
         shell: bash
         run: |

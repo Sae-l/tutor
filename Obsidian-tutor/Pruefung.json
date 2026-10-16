@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "notes": 20,
+  "wikilinks": 119,
+  "canvas_nodes": 25,
+  "canvas_edges": 23,
+  "canvas_file_cards": 20,
+  "all_notes_on_canvas": true,
+  "source_hashes": 43,
+  "modes": 11,
+  "negative_self_checks": 2,
+  "limits": [
+    "Keine native Obsidian-Darstellungsprüfung",
+    "Keine Modell- oder Plattformabnahme"
+  ],
+  "checked_date": "2026-10-16",
+  "timezone": "Europe/Berlin",
+  "documentation_language": "de",
+  "scope": "Oeffentliche Fassung; keine persoenlichen Obsidian-Einstellungen oder Gespraechskennungen",
+  "source_hash_normalization": "utf8-lf for text; raw for ZIP",
+  "native_ui_checked": false,
+  "platform_acceptance_performed": false
+}

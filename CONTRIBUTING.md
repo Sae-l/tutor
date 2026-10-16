@@ -25,6 +25,8 @@ python -B -m unittest discover -s tests -v
 5. Änderungen über einen Branch und Pull Request nach `main`; die CI muss grün sein.
 6. Betroffene Akzeptanzfälle nach der Wiederholungsregel in `tests/akzeptanz.md` erneut prüfen und protokollieren.
 
+Die deutsche Wissensbasis liegt unter `Obsidian-tutor/`. Nach Änderungen an ihren Quellen die betroffenen Notizen prüfen und `Quellen.sha256.json` bewusst aktualisieren: SHA-256 über UTF-8-Text mit LF-Zeilenenden, ZIP-Dateien über unveränderte Bytes. `python -B Obsidian-tutor/verify_vault.py` prüft Links, Canvas, Modusabdeckung und Quellstand; dieselbe Prüfung läuft in CI auf Linux und Windows. Neue Notizen benötigen eine Verknüpfung von der Startseite und genau eine Canvas-Dateikarte. Persönliche Obsidian-Einstellungen, Chatkennungen und private Kurs-/Testunterlagen bleiben ausgeschlossen.
+
 Neuer Modus: Datei in `tutor/modes/` und Zeile in der Befehlstabelle von `tutor/SKILL.md`; `build.py` liest die Modi aus der Tabelle. Die erwartete Anzahl (11) in `build.py` und `tests/test_build.py` anpassen, Befehlskarte in `modes/hilfe.md` und Akzeptanzfälle ergänzen. Kurspakete gehören nach `kurse/`, nie nach `tutor/`.
 
 Werkzeugzustände (`.claude-flow/`, `.agents/`, `.claude/`, `skills-lock.json`) und Kursunterlagen (`referenzen/`) sind per `.gitignore` ausgeschlossen. Vor jedem Commit mit `git status` prüfen, dass nur gewollte Dateien vorgemerkt sind.

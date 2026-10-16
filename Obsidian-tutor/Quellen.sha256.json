@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Europe/Berlin",
+  "scope": "Produktbasis plus Dokumentationsaenderungen; nur oeffentliche Repositoryquellen; Text UTF-8 mit LF, Binaerdateien roh. Bei Quellaenderungen bewusst neu bewerten.",
+  "files": [
+    {
+      "path": "tutor/modes/check.md",
+      "sha256": "752478dddc6246fa89216a44a2d0b4c528d466d4bc28bd1f5f2c1a2b62173422",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/erklaer.md",
+      "sha256": "ab51f39d975a8f400bd7448a299ba2ca4e15acb370e914bd185b7c00313840d8",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/hilfe.md",
+      "sha256": "a494dbcac54f16b843d67f57d4760ac932d4bd62cf5c59316808bdc15fb912d9",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/klausur.md",
+      "sha256": "e3d7b2f5d11e647046dad344cb9d928f00711e0a9c1099c15e81d0805ec212bc",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/kurz.md",
+      "sha256": "298a86dd2a9bd554855de06152432d1153d5676814dc1c8c2e62fe63ca1a5364",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/lang.md",
+      "sha256": "64d031f42d504745b9d90697c831aa57062a0bd2dd920af4b53bae44db92ea1d",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/mittel.md",
+      "sha256": "66be8518e15872bff72b350899a3a8961a15c791d359182a58aabf4488bba7a0",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/skizze.md",
+      "sha256": "a4b93c5753788c087f051e68f776864b11ff0835772e234eeb48037bad2e8f2f",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/thema.md",
+      "sha256": "3d71ed8acdaa878d473dbcc2fbac236e23b66e6976a35056274883c9915f5a3f",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/tipp.md",
+      "sha256": "c9d04fba3b75538ea20c40c624c8258202d0a53a113cd5e469cad00922066a84",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/modes/voll.md",
+      "sha256": "cfe92487ac3e96aa534d9e4d5e9bdaa116a2139496a4ffcfdd1c9a0deeba3e19",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/references/antwortvorlage.md",
+      "sha256": "5b8dd6f0754d83353bff456c98d90adaf15c39cb5d550c64ad00a00eb224523b",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/references/didaktik.md",
+      "sha256": "bcce7eb30fff0a0708022bc6aea68fd41733b9219f1ba5e30df07359ef201cdd",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/references/latex-regeln.md",
+      "sha256": "f194ea12b2d8c6e633a041be20bdbd379afb3907a35cc9de85011c547342e689",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/references/sprache.md",
+      "sha256": "99a137c447934292e2ed0ed6e0ec00bec55db6b2ddef569efade78640de75146",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tutor/SKILL.md",
+      "sha256": "f99a12b8348c39a5c1c94b75ddd13deb1268c7c35656c7f02627302a841af469",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tests/akzeptanz.md",
+      "sha256": "f038ce409666c791e46c7d121ad8c5408dda49d4b6a3c534f33120b4a8f28025",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tests/protokolle/2026-10-15-chatgpt-plugin-vorbereitung.md",
+      "sha256": "788a40613750a11b3d68670b7e8378747147f613cf89f3d8ebfa2897e3198088",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tests/protokolle/2026-10-15-claude-code-cli.md",
+      "sha256": "6e15d3f9c670cd02d3824b7149098a7392327551568515facf63b2d749ef589d",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tests/protokolle/VORLAGE.md",
+      "sha256": "537e2b2df6635040e96317a849326443caa7e303402deb8b1834e6fbd3a1de1d",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "tests/test_build.py",
+      "sha256": "2ac1997883423ad051c7fc68d1acbf5a6aaa445849a1fa42e39acc8354ebebb6",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "build.py",
+      "sha256": "51cd623680ff4596790f53c1e44ead6ddebb26c99a946f40ecc6f2c7345e0528",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3d15b0368a0bf855e5cdabb95ed5186058a40c1ad41c510965e8400926f53551",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "GLOSSARY.md",
+      "sha256": "db5c1a6a33c452dc13edb1239914898f742afbc3be47c8679cec62d655baa1e7",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "a015f973a7b9e5a6ba9ccce11457b453368d4f13ddb1f22adf726bbe4454323c",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "2aca56e43d493f4edaf540c7e90c9b33ddc2d8f396c2bbc1f0331ec85f9d11b4",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "e32c7e7c4470fe77c096e545d2b438055f8b8d18597357190e6bddeecfa9a975",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "eec82d4840d0597cb2e8825b1f9097e2587adba3de6f425c0a10e667eb972c6b",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "c293f5637f45626f93fb3cab437904b694adc5374f1aa7c5af8fa20065d16efd",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "2763cdec9b590e528aefe5a7a63242f546bfe736a8196ccc3e2771cf281b0819",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "88ce2eddbb254c9e2929d5e3456d83615a9202b74fa6a3fd2968131fdfc9bcb6",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "docs/KONZEPT.md",
+      "sha256": "05b3b687d43cc3fd9802b434ee9a407911d53431112d1e5a27ee8d70f9d311d5",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "docs/CHATGPT.md",
+      "sha256": "5afe128b452e4dab4822fcdbfde17f4c158912c54caa0e53d016ca2abf75eab3",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "5863825a1712cd8925aeaddafe48e76f5a2c699a94f073b416a810cbda174397",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "78ce1279899ce5ed195dcb0dcf56b5a7980b682b85f7abb7e800e97634da8169",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "sha256": "4a30776ce41bbde2988acc275f96c868b43d5ca59dddbf78e98d33b6a9101c69",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "packaging/chatgpt-plugin.json",
+      "sha256": "edb600fb5f83ff111daa4a758bfa62c7629b20a4a10a78fba473887d5abf782f",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "dist/kern.md",
+      "sha256": "0608321f9580c74ba60e2475b9cb27adfb9fe595c50a60fad69d86504e6dd462",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "dist/system-prompt.md",
+      "sha256": "0c1228fd101bf84b4c897ab20e53440e0206d42f7e424232147f0e64841eefec",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "dist/tutor-chatgpt.zip",
+      "sha256": "d6f6d1031d1e6d43b9a5a2a4d7ff839a2273a9cc90a53b0b7112dda6382e6179",
+      "normalization": "raw"
+    },
+    {
+      "path": "docs/planung/2026-10-15-plattformen/00-features.md",
+      "sha256": "d54c855165438b324d4c1410767b2f5309569df000c5b0f30186b40e1705ad00",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "docs/planung/2026-10-15-plattformen/03-unified-proposal.md",
+      "sha256": "5dcb4313c190264a82f39505570eb6e4b8added031a61f758c802a9c742a6ee3",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "docs/planung/2026-10-15-plattformen/04-handoff-prompts.md",
+      "sha256": "ae2df150a5ff4ae7260d4044d8d45606332bf408dfda8b0bd0faf3e23377d880",
+      "normalization": "utf8-lf"
+    }
+  ],
+  "base_git_head": "921409f2f7e0ccbe54e962ec8218024f74bc3fab"
+}

@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- Öffentliche deutsche Obsidian-Wissensbasis mit 20 verknüpften Notizen, Canvas, Bau- und Reparaturanleitung, Forschungsnachweisen und klaren Plattformgrenzen. Persönliche Obsidian-Einstellungen und Gesprächsmetadaten sind ausgeschlossen; Navigation und Quellhashes werden in der bestehenden Linux-/Windows-CI geprüft.
+
 ### Geändert
 - Landingpage lädt v0.2.0-rc.2 herunter und nennt das ChatGPT-Plugin im Release.
 
