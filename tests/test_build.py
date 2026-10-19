@@ -225,6 +225,17 @@ with patch.object(Path, "rename", fail_publish):
                 self.assertGreaterEqual(depth, 0, formula)
             self.assertEqual(depth, 0, formula)
 
+    def test_claude_plugin_ships_skill_source_with_chatgpt_version(self):
+        plugin = json.loads((ROOT / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
+        market = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
+        chatgpt = json.loads((ROOT / "packaging/chatgpt-plugin.json").read_text(encoding="utf-8"))
+        entry, = market["plugins"]
+        self.assertEqual((plugin["name"], entry["name"], entry["source"]), ("tutor", "tutor", "./"))
+        self.assertEqual(plugin["version"], entry["version"])
+        self.assertEqual(plugin["version"], chatgpt["version"])
+        self.assertEqual(plugin["skills"], ["./tutor"])
+        self.assertTrue((ROOT / "tutor/SKILL.md").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()

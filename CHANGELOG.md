@@ -4,6 +4,14 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- Claude-Code-Plugin: `.claude-plugin/plugin.json` und Marketplace im Repository-Root liefern den Skill direkt aus `tutor/`; Installation mit `/plugin marketplace add Sae-l/tutor` und `/plugin install tutor@tutor`. Strukturtest hält die Version gleich mit dem ChatGPT-Plugin.
+- Regressionen R-LS13 (sichtbare Skizze, #45) und R-LS14 (Formelrendering und Notation, #44); nicht nativ ausgeführt.
+
+### Geändert
+- Skizze: Zeichnung in derselben Antwort sichtbar einbetten (z. B. Inline-SVG); Link oder Rohcode allein ist kein Ergebnis, nie eine nicht sichtbare Zeichnung behaupten (#45).
+- Formelregeln: bei gemeldetem LaTeX-Rohcode Klartextformeln statt `$$`; Formelzeichen mit Bedeutung und Einheit, Notation nach DIN 1338 / ISO 80000 ohne erfundene Pflichtschreibweise (#44).
+
 ## [0.2.0-rc.3] – 2026-10-17
 
 Vierte Vorabversion. Regeln aus Entscheidung #34 umgesetzt; keine neue native Plattformabnahme und keine stabile Freigabe. #32 bleibt bis zum Bildtest offen.
