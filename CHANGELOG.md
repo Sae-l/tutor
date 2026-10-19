@@ -4,6 +4,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- Landingpage: animiertes Flowchart zum Lernablauf, neuer Abschnitt „Unter der Haube“ mit Build-Weg und Kennzahlen, Dunkelmodus, fester Kopf mit Lesefortschritt, Sprunglink, Favicon und Open-Graph-Angaben. Bewegung nur einmalig; bei reduzierter Bewegung alles sofort sichtbar.
+- README mit Seitenausschnitt (hell/dunkel) und Mermaid-Flowcharts zu Lernablauf und Build; Vault-Notiz „11 Website“ und Quellhashes nachgezogen.
+
 ## [0.2.0-rc.3] – 2026-10-17
 
 Vierte Vorabversion. Regeln aus Entscheidung #34 umgesetzt; keine neue native Plattformabnahme und keine stabile Freigabe. #32 bleibt bis zum Bildtest offen.
