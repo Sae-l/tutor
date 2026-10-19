@@ -11,6 +11,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 ### Geändert
 - Skizze: Zeichnung in derselben Antwort sichtbar einbetten (z. B. Inline-SVG); Link oder Rohcode allein ist kein Ergebnis, nie eine nicht sichtbare Zeichnung behaupten (#45).
 - Formelregeln: bei gemeldetem LaTeX-Rohcode Klartextformeln statt `$$`; Formelzeichen mit Bedeutung und Einheit, Notation nach DIN 1338 / ISO 80000 ohne erfundene Pflichtschreibweise (#44).
+- Landingpage: animiertes Flowchart zum Lernablauf, neuer Abschnitt „Unter der Haube“ mit Build-Weg und Kennzahlen, Dunkelmodus, fester Kopf mit Lesefortschritt, Sprunglink, Favicon und Open-Graph-Angaben. Bewegung nur einmalig; bei reduzierter Bewegung alles sofort sichtbar.
+- README mit Seitenausschnitt (hell/dunkel) und Mermaid-Flowcharts zu Lernablauf und Build; Vault-Notiz „11 Website“ und Quellhashes nachgezogen.
 
 ## [0.2.0-rc.3] – 2026-10-17
 

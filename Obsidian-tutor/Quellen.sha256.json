@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "8136e1afe6beeaf92c5708906217410a168f3c8dd489b13136b44e1c792379f4",
+      "sha256": "24548bcbd97bc2c921386ca781d60d2080ccb8aa5c11dc9af3c230406466b35f",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "40dbfab2c41dde612b38e4b4f476d6ec92cedc8f16d387ce17f8425d5db082f9",
+      "sha256": "f214d4f0a1502d8d4a2c1a3f170e1db1bbf2444123ac59c73843092b5df9c46c",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "45a9087bf685b20cdf9b39bd1998b7381ada6444f04099cfa9df5df3b5e5475b",
+      "sha256": "cf3e6dae59c69bce6b986f45e8071705a1a8a416d8c58ee51ffecaa3ee097e5d",
       "normalization": "utf8-lf"
     },
     {

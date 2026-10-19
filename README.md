@@ -1,5 +1,12 @@
 # tutor
 
+<a href="https://sae-l.github.io/tutor/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.png">
+    <img alt="Landingpage des Tutors: Verstehen statt abschreiben – mit Ausschnitt einer Antwort im Modus Erklär" src="docs/assets/hero-light.png">
+  </picture>
+</a>
+
 **MINT-Aufgaben verstehen und selbst lösen, statt Lösungen abzuschreiben.**
 Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste Studienjahr in Physik, Mathematik und E-Technik an deutschsprachigen Hochschulen.
 
@@ -7,7 +14,7 @@ Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste
 [![Release](https://img.shields.io/github/v/release/Sae-l/tutor?include_prereleases&label=Vorabversion)](https://github.com/Sae-l/tutor/releases)
 [![Lizenz: MIT](https://img.shields.io/badge/Lizenz-MIT-blue.svg)](LICENSE)
 
-[Landingpage](https://sae-l.github.io/tutor/) · [Schnellstart](#schnellstart-claude) · [Befehle](#befehle) · [Andere Plattformen](#andere-plattformen-experimentell) · [Grenzen](#stand-und-grenzen)
+[Landingpage](https://sae-l.github.io/tutor/) · [So lernst du damit](#so-lernst-du-damit) · [Schnellstart](#schnellstart-claude) · [Befehle](#befehle) · [Andere Plattformen](#andere-plattformen-experimentell) · [Grenzen](#stand-und-grenzen)
 
 > **In English:** A study tutor for first-year STEM exercises (physics, maths, electrical engineering) at German-speaking universities, packaged as a Claude Skill plus a generated system prompt for other chatbots. It explains and asks guiding questions before revealing solutions. Answers are in German by default; Arabic, Turkish, French, English or Urdu on request. The docs are in German because the target audience studies in German.
 
@@ -20,6 +27,27 @@ Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste
 - **Feste Struktur:** kurze Schritte, immer gleiche Abschnitte. ADHS-freundlich gestaltet; das ist ein Designziel, keine nachgewiesene Wirkung.
 
 Kein Programm und kein Dienst: Der Tutor ist eine Anweisung, die im Chatbot deiner Wahl läuft. Er speichert nichts selbst.
+
+## So lernst du damit
+
+```mermaid
+flowchart LR
+    A["Foto der Aufgabe"] --> B["erklär<br/>Thema und Gleichungen"]
+    B --> C{"Verstanden?"}
+    C -- ja --> D["Selbst rechnen"]
+    D --> E["check<br/>erster Fehler"]
+    E -. weiterrechnen .-> D
+    C -- nein --> F["tipp<br/>Leitfragen"]
+    F -. Fragen beantwortet .-> D
+    F --> G["voll<br/>anderes Beispiel"]
+    G --> H["kurz<br/>Lösung zum Vergleichen"]
+    classDef key fill:#E8F1EE,stroke:#2F6F5E,color:#1C1917
+    classDef lock stroke-dasharray:5 4
+    class B,E key
+    class H lock
+```
+
+Die Lösung kommt nie von selbst: Erst `lösung`, `kurz`, `mittel`, `lang` oder `klausur` geben sie heraus.
 
 ## So sieht das aus
 
@@ -192,6 +220,17 @@ Die [deutsche Wissensbasis](Obsidian-tutor/00%20Startseite.md) erklärt Funktion
 
 <details>
 <summary>Entwicklung und Tests</summary>
+
+Eine Quelle, alle Pakete:
+
+```mermaid
+flowchart LR
+    S["tutor/<br/>SKILL.md · 11 Modi · 4 Referenzen"] --> B(["python build.py"])
+    B --> C["tutor-skill.zip<br/>Claude"]
+    B --> O["tutor-chatgpt.zip<br/>ChatGPT, experimentell"]
+    B --> K["kern.md + system-prompt.md<br/>Gemini, experimentell"]
+    T["tests/ · CI Linux und Windows"] -. prüft .-> B
+```
 
 Voraussetzung: Git und Python 3.14 (nur Standardbibliothek).
 

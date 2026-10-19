@@ -1,7 +1,7 @@
 ---
 title: Die Website erklärt
 tags: [tutor, website]
-updated: 2026-10-16
+updated: 2026-10-19
 ---
 
 # Die Website
@@ -17,13 +17,30 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
 | Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.0-rc.3` festgelegt; Veröffentlichung separat prüfen. |
-| Schrittweise Hilfe | Übergang zwischen Verständnis, Leitfragen, Beispiel und Lösung. |
+| Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
 | Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege. |
+| Unter der Haube | Build-Weg von `tutor/` über `build.py` zu den Paketen; Kennzahlen 11 Modi, 6 Erklärsprachen, 30 Modus- und 33 Grenzfälle. |
 | Häufige Fragen | Aktivierung, Sprache und Art des Produkts. |
 | Ehrlich gesagt | Vorabversion, Prüfgrenzen und ADHS als Gestaltungsziel. |
 | Fußbereich | Datenschutz, GitHub, Feedback und MIT. |
+
+## Gestaltung seit 2026-10-19
+
+```mermaid
+flowchart TD
+    N["Fester Kopf mit Lesefortschritt und aktivem Abschnitt"] --> H["Einstieg: Karopapier, Skizzen zeichnen sich einmal"]
+    H --> A["Ablauf: Flowchart baut sich beim ersten Sichtkontakt auf"]
+    A --> M["11 Modi"] --> S["Sprachbeispiel"] --> E["Einrichten"]
+    E --> T["Unter der Haube: Build-Weg und Kennzahlen"] --> F["Fragen und Stand"]
+```
+
+- Hell- und Dunkelmodus folgen der Systemeinstellung; Farben stehen als CSS-Variablen in `:root`, Inline-SVGs nutzen dieselben Variablen.
+- Bewegung nur einmalig und nur mit `transform`, `opacity` und Strichlänge; keine Endlosschleifen. `prefers-reduced-motion` zeigt alles sofort und vollständig.
+- Neu: Sprunglink zum Inhalt, Favicon als Daten-URI, Open-Graph-Angaben. Weiterhin keine externen Schriften oder Skripte.
+- Die README zeigt einen Ausschnitt der Seite (`docs/assets/hero-light.png`, `hero-dark.png`) und zwei Mermaid-Flowcharts.
+- Geprüft: lokale Darstellung in Chrome (hell, dunkel, reduzierte Bewegung, schmale Ansicht) und Strukturtests. Nicht geprüft: das veröffentlichte GitHub-Pages-Deployment.
 
 ## Technische Funktionsweise
 
