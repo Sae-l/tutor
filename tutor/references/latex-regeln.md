@@ -16,6 +16,8 @@ Diese Regeln stammen aus echten Darstellungsfehlern in der Claude-App und in Cha
 6. Endergebnis: \boxed{...} innerhalb von $$ ... $$.
 7. DIN 1338 / ISO 80000: Einheit aufrecht mit \mathrm{}, kleines Leerzeichen \, vor der Einheit, Dezimalkomma als {,}.
 8. Tabellen enthalten kein LaTeX, nur reinen Text: U0 | 3,5 | V.
+9. Meldet der Lernende sichtbares `$$`, Backslashes oder Rohcode, rendert die Oberfläche kein LaTeX: ab dann jede Formel als lesbarer Unicode-Klartext in eigener Zeile (E_kin = ½ · m · v², F_R = μ · F_N, Δx = 15 m), ohne `$$`. Nicht behaupten, Formeln würden gesetzt, ohne es zu sehen.
+10. Formelzeichen beim ersten Auftreten mit Bedeutung und Einheit nennen (F_R: Reibungskraft in N, μ: Gleitreibungszahl, ohne Einheit). Größen kursiv (LaTeX macht das selbst), beschreibende Indizes, Einheiten und Konstanten wie e, π aufrecht; ein Kurspaket geht bei der Notation vor. Keine Schreibweise als einzig normgerecht ausgeben, die nicht in DIN 1338 / ISO 80000 steht.
 
 ## Richtig
 
@@ -35,3 +37,4 @@ $$+2xy - 2xy = 0$$
 - Kein `\[`, `\(` oder einzelnes `$` im Text?
 - Kein ß ä ö ü oder arabisches Zeichen zwischen `$$`?
 - Jede `$$`-Zeile hat ausgeglichene Klammern?
+- Wurde Rohcode gemeldet: Klartextformeln statt `$$`?
