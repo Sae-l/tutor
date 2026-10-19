@@ -225,18 +225,21 @@ with patch.object(Path, "rename", fail_publish):
                 self.assertGreaterEqual(depth, 0, formula)
             self.assertEqual(depth, 0, formula)
 
-    def test_claude_plugin_ships_skill_source_with_chatgpt_version(self):
-        plugin = json.loads((ROOT / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
-        market = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
+    def test_repo_marketplaces_ship_built_plugin(self):
+        # Claude Code and Codex install the same generated folder, never the whole repository.
+        plugin = ROOT / "dist/chatgpt/plugins/tutor"
         chatgpt = json.loads((ROOT / "packaging/chatgpt-plugin.json").read_text(encoding="utf-8"))
-        entry, = market["plugins"]
-        self.assertEqual(market["name"], "tutor", "README-Befehl tutor@tutor")
-        self.assertEqual((plugin["name"], entry["name"], entry["source"]), ("tutor", "tutor", "./"))
-        self.assertEqual(plugin["version"], entry["version"])
-        self.assertEqual(plugin["version"], chatgpt["version"])
-        self.assertEqual(plugin["skills"], ["./tutor"])
-        self.assertTrue((ROOT / "tutor/SKILL.md").is_file())
-
+        claude = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
+        codex = json.loads((ROOT / ".agents/plugins/marketplace.json").read_text(encoding="utf-8"))
+        claude_entry, = claude["plugins"]
+        codex_entry, = codex["plugins"]
+        self.assertEqual((claude["name"], claude_entry["name"]), ("tutor", "tutor"), "README-Befehl tutor@tutor")
+        self.assertEqual((codex["name"], codex_entry["name"]), ("tutor", "tutor"))
+        self.assertEqual((ROOT / claude_entry["source"]).resolve(), plugin.resolve())
+        self.assertEqual((ROOT / codex_entry["source"]["path"]).resolve(), plugin.resolve())
+        self.assertEqual(claude_entry["version"], chatgpt["version"])
+        self.assertFalse((ROOT / ".claude-plugin/plugin.json").exists(), "Manifest kommt aus dist/")
+        self.assertTrue((plugin / "skills/tutor/SKILL.md").is_file())
 
 if __name__ == "__main__":
     unittest.main()

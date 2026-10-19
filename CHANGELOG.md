@@ -4,11 +4,18 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.2.0-rc.4] – 2026-10-20
+
+Fünfte Vorabversion: ein gemeinsames Pluginpaket für Claude Code und Codex/ChatGPT. Keine neue native Plattformabnahme und keine stabile Freigabe.
+
 ### Hinzugefügt
-- Claude-Code-Plugin: `.claude-plugin/plugin.json` und Marketplace im Repository-Root liefern den Skill direkt aus `tutor/`; Installation mit `/plugin marketplace add Sae-l/tutor` und `/plugin install tutor@tutor`. Strukturtest hält die Version gleich mit dem ChatGPT-Plugin.
+- Claude-Code-Plugin: Marketplace im Repository-Root; Installation mit `/plugin marketplace add Sae-l/tutor` und `/plugin install tutor@tutor`.
+- Codex/ChatGPT-Repo-Marketplace `.agents/plugins/marketplace.json`: `codex plugin marketplace add Sae-l/tutor` ohne eigenen Build.
 - Regressionen R-LS13 (sichtbare Skizze, #45) und R-LS14 (Formelrendering und Notation, #44); nicht nativ ausgeführt.
 
 ### Geändert
+- Claude Code und Codex installieren dasselbe erzeugte Plugin `dist/chatgpt/plugins/tutor/` (18 Dateien) statt des ganzen Repositorys; `.claude-plugin/plugin.json` entfällt, `claude plugin validate` läuft ohne Warnung. Strukturtest prüft beide Marketplaces und die Version.
+- Pluginversion und erzeugte Ausgaben auf `0.2.0-rc.4`.
 - Skizze: Zeichnung in derselben Antwort sichtbar einbetten (z. B. Inline-SVG); Link oder Rohcode allein ist kein Ergebnis, nie eine nicht sichtbare Zeichnung behaupten (#45).
 - Formelregeln: bei gemeldetem LaTeX-Rohcode Klartextformeln statt `$$`; Formelzeichen mit Bedeutung und Einheit, Notation nach DIN 1338 / ISO 80000 ohne erfundene Pflichtschreibweise (#44).
 - Landingpage: animiertes Flowchart zum Lernablauf, neuer Abschnitt „Unter der Haube“ mit Build-Weg und Kennzahlen, Dunkelmodus, fester Kopf mit Lesefortschritt, Sprunglink, Favicon und Open-Graph-Angaben. Bewegung nur einmalig; bei reduzierter Bewegung alles sofort sichtbar.

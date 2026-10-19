@@ -1,7 +1,7 @@
 ---
 title: Repository und Buildpfad
 tags: [tutor, repository, architektur]
-updated: 2026-10-16
+updated: 2026-10-20
 ---
 
 # Aufbau des GitHub-Repositorys
@@ -27,6 +27,8 @@ tutor/                         ← Git-Wurzel im übergeordneten Arbeitsordner
 │   ├── modes/                  Elf Modusdateien
 │   └── references/             Vier gemeinsame Referenzen
 ├── kurse/                     Optionale Kurskontexte
+├── .claude-plugin/marketplace.json  Claude-Code-Marketplace → dist/chatgpt/plugins/tutor
+├── .agents/plugins/marketplace.json Codex-Marketplace → dist/chatgpt/plugins/tutor
 ├── packaging/chatgpt-plugin.json
 ├── build.py
 ├── dist/                      Generierte Ausgaben
