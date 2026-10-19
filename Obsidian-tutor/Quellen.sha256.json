@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "e7f06f5806d7504e06659b079dec6f16d5182e8405600b9f91936728152f3c98",
+      "sha256": "ad143d122c9e14e6df14451948c89955113c23149b15ef9bfc29be2a4f63c00b",
       "normalization": "utf8-lf"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "bc2482388770cdcdebaa1b124f4270b3ca558242478cf84dab583f274eee8fbe",
+      "sha256": "8136e1afe6beeaf92c5708906217410a168f3c8dd489b13136b44e1c792379f4",
       "normalization": "utf8-lf"
     },
     {

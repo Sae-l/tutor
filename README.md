@@ -94,7 +94,7 @@ Das Repository ist zugleich ein Claude-Code-Marketplace; das Plugin liefert dens
 /plugin install tutor@tutor
 ```
 
-Ab Claude Code 2.1.275 geht es in einem Schritt: `/plugin install tutor --marketplace Sae-l/tutor`. Aktualisieren mit `/plugin marketplace update tutor`. Der Skill heißt dann `tutor:tutor`; in Claude Code ist er nicht nach dem Release-Gate abgenommen.
+Ab Claude Code 2.1.275 geht es in einem Schritt: `/plugin install tutor --marketplace Sae-l/tutor`. Aktualisieren mit `/plugin marketplace update tutor`. Der Skill heißt dann `tutor:tutor`; in Claude Code ist er nicht nach dem Release-Gate abgenommen. Im Terminal erscheinen Formeln zunächst als Rohcode; ein kurzer Hinweis darauf schaltet auf Klartextformeln um.
 
 </details>
 

@@ -230,6 +230,7 @@ with patch.object(Path, "rename", fail_publish):
         market = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
         chatgpt = json.loads((ROOT / "packaging/chatgpt-plugin.json").read_text(encoding="utf-8"))
         entry, = market["plugins"]
+        self.assertEqual(market["name"], "tutor", "README-Befehl tutor@tutor")
         self.assertEqual((plugin["name"], entry["name"], entry["source"]), ("tutor", "tutor", "./"))
         self.assertEqual(plugin["version"], entry["version"])
         self.assertEqual(plugin["version"], chatgpt["version"])
