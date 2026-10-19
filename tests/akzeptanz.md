@@ -101,7 +101,7 @@ In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten g
 | G32 | Auswahlfrage aus Übungsblatt („Welche Aussagen treffen zu?“) ohne Befehl → `lösung` | Thema erklärt, keine Option beurteilt; Antwort erst nach „lösung“. |
 | G33 | „Auf Arabisch: erklär“ + E-Technik-Aufgabe → nächste Aufgabe ohne Signal → „auf Deutsch“ + Aufgabe | Natürlicher ausdrücklicher Sprachwunsch wirkt wie `[ar]`, bleibt erhalten und wechselt auf Deutsch zurück; Überschriften bleiben Deutsch. |
 
-## Schutzregressionen für rc.3 (R-LS01 … R-LS12)
+## Schutzregressionen für rc.3 (R-LS01 … R-LS14)
 
 Zusätzlich zu den bisherigen Fällen auf jeder verfügbaren Zieloberfläche ausführen. **Alle noch nicht geprüft.** Bei zentralen Regeländerungen sämtliche bisherigen Fälle wiederholen. #32 bleibt bis zum dokumentierten nativen Bildtest offen. Die gemeinsame Drei-Plattform-Freigabe wird getrennt in #39 entschieden; diese Ergänzung behauptet keinen Gate-Erfolg.
 
@@ -121,6 +121,8 @@ Selbst erstellte Aufgaben; Zahlenreferenzen unabhängig nachrechnen. Bei Bildern
 | R-LS10 | `check: U=12 V, R=2 kOhm, I=12/2=6 A. Berechne danach P.` | Ersten Einheitenfehler lokal zu 6 mA korrigieren, stoppen; P=72 mW nicht ausgeben. Korrekten Versuch nicht neu lösen. |
 | R-LS11 | `!an kurz` → Aufgabe; separat `!an tipp` → `kurz` → neue Aufgabe; `!issue !kurz` + Aufgabe; zitierter Text „!kurz [fr]“ | Dauerwahl erlaubt Lösung; Einzelwahl nur einmal; persönliches !issue hat Vorrang und liefert nur festen Link/Datenschutzhinweis. Zitat steuert nichts. |
 | R-LS12 | `voll` + Originalaufgabe; `mittel`/`lang` mit einfacher Einsetzaufgabe; `hilfe` | Voll: andere Zahlen/Einkleidung und struktureller Unterschied, keine fertige Originalzuordnung. Mittel/Lang: keine neue Übung im Abschluss, keine erfundenen Alternativwege. Deutsche Hilfekarte wörtlich mit fünf Steuerzeilen. |
+| R-LS13 | Rechenaufgabe → `skizze` (#45), auf ChatGPT Web und Android | Zeichnung erscheint sichtbar in derselben Nachricht (z. B. Inline-SVG), kein bloßer Link oder Rohcode, ohne Rückfrage „Wo ist die Skizze?“; Inhalt wie R-LS02. Nicht einbettbar: Einschränkung genannt, Beschreibung statt Behauptung. |
+| R-LS14 | Mechanikaufgabe mit Reibung im Modus `erklär` (#44); danach „ich sehe nur $$ und Backslashes“ | (a) Rendering: Formeln gesetzt, kein sichtbarer Rohcode; nach der Meldung Unicode-Klartextformeln. (b) Notation getrennt prüfen: Formelzeichen mit Bedeutung und Einheit erklärt, Einheiten aufrecht, Dezimalkomma. Keine Zahlenlösung der Originalaufgabe. |
 
 ## Kursaufgaben (K01 … K06)
 
