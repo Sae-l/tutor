@@ -64,3 +64,11 @@ Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Rele
    ```
 
 Nur tatsächlich geprüfte Plattformen als geprüft aufführen.
+
+## Offizielle Verzeichnisse
+
+Das Pluginpaket `dist/chatgpt/plugins/tutor/` erfüllt die Paketregeln beider Verzeichnisse (`claude plugin validate --strict` besteht). Die Einreichung braucht das Konto des Maintainers und geht nicht über das Repository. Gemini hat kein öffentliches Skill-Verzeichnis; dort ist der Upload von `tutor-skill.zip` der offizielle Weg.
+
+- **Claude** ([Checkliste](https://claude.com/docs/plugins/pre-submission-checklist)): bezahlter claude.ai-Tarif. In [claude.ai/directory/manage](https://claude.ai/directory/manage) „Submit new“ → „Plugin bundle“, Repository `Sae-l/tutor`, Pluginpfad `dist/chatgpt/plugins/tutor`, „Validate“, Befunde mit „Blocking“ beheben, einreichen. Der Name `tutor` ist allgemein und kann für eine Prüfung durch Anthropic zurückgehalten werden.
+- **ChatGPT und Codex** ([Einreichung](https://developers.openai.com/plugins/deploy/submission)): Identität in den Organisationseinstellungen auf platform.openai.com verifizieren. Unter [Plugins](https://platform.openai.com/plugins) „Upload new or existing plugin“ wählen, `tutor-chatgpt.zip` hochladen, „Metadata & Skills“ prüfen, „Submit for review“ wählen und nach der Freigabe „Publish plugin“. `interface.developerName` muss zur verifizierten Identität passen.
+- Jede neue Version erst nach Erhöhen von `version` in `packaging/chatgpt-plugin.json` und im Claude-Marketplace-Eintrag einreichen.

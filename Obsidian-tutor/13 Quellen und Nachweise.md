@@ -31,7 +31,7 @@ Produktbasis der datierten Recherche: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`
 | Nicht veröffentlichter freier ChatGPT-Testbericht | Nur historische Zusammenfassung: Abweichungen bei Eskalation, Kurz und Hilfe; fehlende Versionsdaten. Kein öffentlicher Abnahmebeleg. |
 | `SECURITY.md`, `.gitignore`, `.github/workflows/ci.yml`, `.github/dependabot.yml` | Lokale Richtlinien und Einstellungen; kein Nachweis des Serverzustands. |
 | `docs/index.html`, `docs/fonts/` | Website, Versionslinks, feste Beispiele und lokale Schriften. |
-| `packaging/chatgpt-plugin.json`, `LICENSE` | Version `0.2.0` und MIT; ältere Releasebelege unten sind historisch. |
+| `packaging/chatgpt-plugin.json`, `LICENSE` | Version `0.2.0`, MIT und Angaben für die Verzeichnisse von Claude und OpenAI; ältere Releasebelege unten sind historisch. |
 | `docs/planung/2026-10-15-plattformen/00-features.md`, `03-unified-proposal.md`, `04-handoff-prompts.md` | Gemeinsame Drei-Plattform-Architektur, Regelkonflikte und noch nicht implementierte Umsetzungsaufträge. |
 
 Öffentliche Quellen öffnen: [Router](https://github.com/Sae-l/tutor/blob/main/tutor/SKILL.md), [Akzeptanzfälle](https://github.com/Sae-l/tutor/blob/main/tests/akzeptanz.md), [Konzept](https://github.com/Sae-l/tutor/blob/main/docs/KONZEPT.md), [Websitequelle](https://github.com/Sae-l/tutor/blob/main/docs/index.html). Diese Links führen zu den öffentlichen Repositorydateien; der dokumentierte Produktstand ist oben benannt.

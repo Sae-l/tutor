@@ -61,7 +61,8 @@ try:
 except (OSError, ValueError) as error:
     sys.exit(f"Build abgebrochen: Pluginmanifest: {error}")
 check(isinstance(manifest, dict), "Pluginmanifest muss ein Objekt sein")
-check(set(manifest) == {"$schema", "name", "version", "description", "license", "repository"},
+check(set(manifest) == {"$schema", "name", "version", "description", "author", "homepage",
+                        "repository", "license", "keywords", "extensions"},
       "Pluginmanifest enthält fehlende oder unerwartete Felder")
 check(manifest["$schema"] == "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
       "unbekanntes Pluginschema")
@@ -73,6 +74,26 @@ check(isinstance(manifest["description"], str) and manifest["description"].strip
       "Pluginbeschreibung fehlt")
 check(manifest["license"] == "MIT" and manifest["repository"] == "https://github.com/Sae-l/tutor",
       "Pluginlizenz oder Repository stimmt nicht")
+try:
+    interface = manifest["extensions"]["com.openai"]["interface"]
+except (KeyError, TypeError):
+    sys.exit("Build abgebrochen: extensions.com.openai.interface fehlt")
+check(isinstance(interface, dict), "interface muss ein Objekt sein")
+# Limits from the OpenAI directory submission rules.
+for key, limit in (("displayName", 30), ("shortDescription", 30), ("longDescription", 4000), ("developerName", 80)):
+    check(isinstance(interface.get(key), str) and 0 < len(interface[key]) <= limit,
+          f"interface.{key} fehlt oder ist länger als {limit} Zeichen")
+check(interface.get("logo") == interface.get("composerIcon") == "./assets/logo.svg", "Pluginlogo fehlt")
+check(isinstance(interface.get("capabilities"), list), "interface.capabilities muss eine Liste sein")
+prompts = interface.get("defaultPrompt")
+check(isinstance(prompts, list) and 0 < len(prompts) <= 3 and all(isinstance(x, str) and 0 < len(x) <= 128 for x in prompts),
+      "interface.defaultPrompt: 1 bis 3 Texte mit höchstens 128 Zeichen")
+check(all(re.fullmatch(r"#[0-9A-Fa-f]{6}", str(interface.get(key))) for key in ("brandColor", "brandColorDark")),
+      "Markenfarben im Format #RRGGBB")
+# Claude Code reads only .claude-plugin/plugin.json; it gets the same facts without the OpenAI block.
+claude_manifest = {key: manifest[key] for key in ("name", "version", "description", "author", "homepage",
+                                                  "repository", "license", "keywords")}
+claude_manifest["displayName"] = interface["displayName"]
 
 marketplace = {
     "name": "tutor-local",
@@ -86,7 +107,10 @@ outputs = {
     "kern.md": kern.encode("utf-8"),
     "chatgpt/.agents/plugins/marketplace.json": (json.dumps(marketplace, indent=2) + "\n").encode("utf-8"),
     "chatgpt/plugins/tutor/plugin.json": (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"),
+    "chatgpt/plugins/tutor/.claude-plugin/plugin.json": (json.dumps(claude_manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"),
     "chatgpt/plugins/tutor/LICENSE": (ROOT / "LICENSE").read_bytes(),
+    "chatgpt/plugins/tutor/README.md": (ROOT / "packaging/plugin-README.md").read_bytes(),
+    "chatgpt/plugins/tutor/assets/logo.svg": (ROOT / "packaging/logo.svg").read_bytes(),
 }
 for source in [SKILL / "SKILL.md"] + files:
     outputs["chatgpt/plugins/tutor/skills/tutor/" + source.relative_to(SKILL).as_posix()] = source.read_bytes()
@@ -94,7 +118,8 @@ for source in [SKILL / "SKILL.md"] + files:
 archive = BytesIO()
 with ZipFile(archive, "w") as bundle:
     for path, data in sorted(outputs.items()):
-        if path.startswith("chatgpt/plugins/tutor/"):
+        # The OpenAI archive needs exactly one supported manifest, so the Claude manifest stays out.
+        if path.startswith("chatgpt/plugins/tutor/") and "/.claude-plugin/" not in path:
             entry = ZipInfo(path.removeprefix("chatgpt/plugins/tutor/"))
             # Fixed timestamps, permissions and host make the ZIP reproducible across OSes.
             entry.create_system = 3

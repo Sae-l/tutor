@@ -139,13 +139,19 @@ class BuildTests(unittest.TestCase):
         self.assertEqual((package / marketplace["plugins"][0]["source"]["path"]).resolve(), plugin.resolve())
         sources = list((self.root / "tutor").rglob("*.md"))
         self.assertEqual(len(sources), 16)
-        expected = {"plugin.json", "LICENSE"}
+        expected = {"plugin.json", "LICENSE", "README.md", "assets/logo.svg"}
         for source in sources:
             relative = "skills/tutor/" + source.relative_to(self.root / "tutor").as_posix()
             expected.add(relative)
             self.assertEqual((plugin / relative).read_bytes(), source.read_bytes(), relative)
-        self.assertEqual({p.relative_to(plugin).as_posix() for p in plugin.rglob("*") if p.is_file()}, expected)
+        claude = json.loads((plugin / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
+        self.assertNotIn("extensions", claude)
+        self.assertEqual({k: claude[k] for k in ("name", "version", "description", "author", "license")},
+                         {k: manifest[k] for k in ("name", "version", "description", "author", "license")})
+        self.assertEqual({p.relative_to(plugin).as_posix() for p in plugin.rglob("*") if p.is_file()},
+                         expected | {".claude-plugin/plugin.json"})
         self.assertEqual((plugin / "LICENSE").read_bytes(), (self.root / "LICENSE").read_bytes())
+        self.assertGreaterEqual(len((plugin / "README.md").read_text(encoding="utf-8").split()), 40)
         with ZipFile(self.root / "dist/tutor-chatgpt.zip") as archive:
             self.assertEqual(set(archive.namelist()), expected)
             self.assertIsNone(archive.testzip())
@@ -163,8 +169,14 @@ class BuildTests(unittest.TestCase):
         original = json.loads(self.read("packaging/chatgpt-plugin.json"))
         invalid = ["{", "[]"]
         for change in ({"name": "../other"}, {"version": 2}, {"description": " "},
-                       {"skills": "../../private"}, {"license": "other"}):
+                       {"skills": "../../private"}, {"license": "other"}, {"extensions": {}},
+                       {"extensions": {"com.openai": {"interface": []}}},
+                       {"extensions": {"com.openai": {"interface": {"displayName": "x" * 31}}}}):
             invalid.append(json.dumps(original | change))
+        interface = original["extensions"]["com.openai"]["interface"]
+        for change in ({"shortDescription": "x" * 31}, {"logo": "./other.svg"},
+                       {"defaultPrompt": ["x"] * 4}, {"brandColor": "green"}):
+            invalid.append(json.dumps(original | {"extensions": {"com.openai": {"interface": interface | change}}}))
         for value in invalid:
             (self.root / "packaging/chatgpt-plugin.json").write_text(value, encoding="utf-8")
             for flags in ((), ("-O",)):

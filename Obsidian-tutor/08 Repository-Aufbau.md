@@ -29,7 +29,7 @@ tutor/                         ← Git-Wurzel im übergeordneten Arbeitsordner
 ├── kurse/                     Optionale Kurskontexte
 ├── .claude-plugin/marketplace.json  Claude-Code-Marketplace → dist/chatgpt/plugins/tutor
 ├── .agents/plugins/marketplace.json Codex-Marketplace → dist/chatgpt/plugins/tutor
-├── packaging/chatgpt-plugin.json
+├── packaging/                 Manifestquelle, Plugin-README und Logo
 ├── build.py
 ├── dist/                      Generierte Ausgaben
 │   ├── kern.md

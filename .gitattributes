@@ -2,6 +2,6 @@
 tutor/** text eol=lf
 dist/** text eol=lf
 dist/*.zip binary
-packaging/*.json text eol=lf
+packaging/** text eol=lf
 LICENSE text eol=lf
 Obsidian-tutor/** text eol=lf
