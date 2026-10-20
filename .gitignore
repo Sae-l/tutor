@@ -9,6 +9,10 @@ __pycache__/
 # Der erzeugte Marketplace gehört zu dist/, nicht zu lokalen Werkzeugzuständen.
 !dist/chatgpt/.agents/
 !dist/chatgpt/.agents/**
+# Repo-Marketplace für Codex/ChatGPT; andere lokale Agentenzustände bleiben ignoriert.
+!/.agents/
+/.agents/*
+!/.agents/plugins/
 # Kursunterlagen des Dozenten, nur lokal als Kontext; nicht weitergeben
 referenzen/
 # Lokal gebaute Release-Pakete

@@ -55,12 +55,12 @@ Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Rele
    ```
 
 4. Für eine stabile Version: Abnahme mit genau diesem ZIP durchführen, Protokoll in `tests/protokolle/` committen.
-5. Tag setzen und Release anlegen; Anhänge: beide ZIPs, beide Promptdateien, `SHA256SUMS.txt`. Das ChatGPT-ZIP ist für den Plugin-Importer, kein Chat-Attachment. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen als „Pre-release“ markieren. Vor dem nächsten Release Pluginversion und Releaseversion abstimmen; bestehende Tags nicht neu belegen. Beispiel für rc.3; erst nach grüner CI des zu veröffentlichenden Commits:
+5. Tag setzen und Release anlegen; Anhänge: beide ZIPs, beide Promptdateien, `SHA256SUMS.txt`. Das ChatGPT-ZIP ist für den Plugin-Importer, kein Chat-Attachment. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen als „Pre-release“ markieren. Vor dem nächsten Release Pluginversion und Releaseversion abstimmen; bestehende Tags nicht neu belegen. Beispiel für rc.4; erst nach grüner CI des zu veröffentlichenden Commits:
 
    ```bash
-   git tag -a v0.2.0-rc.3 -m "v0.2.0-rc.3"
-   git push origin v0.2.0-rc.3
-   gh release create v0.2.0-rc.3 --verify-tag --prerelease --notes-file docs/releases/v0.2.0-rc.3.md "$release_dir/tutor-skill.zip" "$release_dir/tutor-chatgpt.zip" "$release_dir/system-prompt.md" "$release_dir/kern.md" "$release_dir/SHA256SUMS.txt"
+   git tag -a v0.2.0-rc.4 -m "v0.2.0-rc.4"
+   git push origin v0.2.0-rc.4
+   gh release create v0.2.0-rc.4 --verify-tag --prerelease --notes-file docs/releases/v0.2.0-rc.4.md "$release_dir/tutor-skill.zip" "$release_dir/tutor-chatgpt.zip" "$release_dir/system-prompt.md" "$release_dir/kern.md" "$release_dir/SHA256SUMS.txt"
    ```
 
 Nur tatsächlich geprüfte Plattformen als geprüft aufführen.

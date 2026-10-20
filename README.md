@@ -113,9 +113,9 @@ Du brauchst ein Claude-Konto. Skills gibt es laut [Claude-Hilfe](https://support
 </details>
 
 <details>
-<summary>Als Plugin in Claude Code (ungeprüfter Stand von <code>main</code>)</summary>
+<summary>Als Plugin in Claude Code oder Codex</summary>
 
-Das Repository ist zugleich ein Claude-Code-Marketplace; das Plugin liefert denselben Skill aus `tutor/`. In Claude Code:
+Das Repository ist zugleich ein Marketplace für Claude Code und Codex; beide installieren dasselbe erzeugte Plugin aus `dist/chatgpt/plugins/tutor/`. In Claude Code:
 
 ```text
 /plugin marketplace add Sae-l/tutor
@@ -123,6 +123,14 @@ Das Repository ist zugleich ein Claude-Code-Marketplace; das Plugin liefert dens
 ```
 
 Ab Claude Code 2.1.275 geht es in einem Schritt: `/plugin install tutor --marketplace Sae-l/tutor`. Aktualisieren mit `/plugin marketplace update tutor`. Der Skill heißt dann `tutor:tutor`; in Claude Code ist er nicht nach dem Release-Gate abgenommen. Im Terminal erscheinen Formeln zunächst als Rohcode; ein kurzer Hinweis darauf schaltet auf Klartextformeln um.
+
+In der Codex CLI bzw. ChatGPT Desktop (experimentell):
+
+```text
+codex plugin marketplace add Sae-l/tutor
+```
+
+Danach die Quelle **Tutor** im Pluginverzeichnis öffnen und **tutor** installieren; weitere Schritte in [docs/CHATGPT.md](docs/CHATGPT.md).
 
 </details>
 

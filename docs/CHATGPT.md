@@ -4,7 +4,7 @@ Zwei Wege: das native Tutor-Plugin oder ein ChatGPT-Projekt mit Anweisung und Pr
 
 ## Native Variante: Plugin-Archiv
 
-Stand rc.3: Schutzregeln gelten auch für Bilder und Code; Check korrigiert nur die erste fehlerhafte Stelle. Ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Die zwölf Schutzregressionen in `tests/akzeptanz.md` müssen auf der tatsächlichen Oberfläche samt Endbildern geprüft werden. #32 bleibt bis dahin offen; Pakettests sind kein Nachweis der Modellregeltreue.
+Stand rc.4: Claude Code und Codex nutzen dasselbe Pluginpaket. Seit rc.3 gelten Schutzregeln gelten auch für Bilder und Code; Check korrigiert nur die erste fehlerhafte Stelle. Ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Die zwölf Schutzregressionen in `tests/akzeptanz.md` müssen auf der tatsächlichen Oberfläche samt Endbildern geprüft werden. #32 bleibt bis dahin offen; Pakettests sind kein Nachweis der Modellregeltreue.
 
 Im Repository `python build.py` ausführen. Das erzeugte [`dist/tutor-chatgpt.zip`](../dist/tutor-chatgpt.zip) enthält das Plugin mit allen Skilldateien und Lizenz.
 
@@ -19,16 +19,22 @@ Das ZIP ist für den Plugin-Importer bestimmt; es nur als Datei an einen normale
 
 Voraussetzungen: Git, Python 3.14 und eine ChatGPT-Desktop-Oberfläche mit lokalen Plugin-Marketplaces. Für den Registrierungsbefehl muss die Codex CLI verfügbar sein. Je nach Konto, Oberfläche und Workspace können lokale Quellen fehlen oder gesperrt sein. Ein lokaler Marketplace macht das Plugin nicht automatisch auf dem Handy oder im Web verfügbar.
 
-Im Repositoryverzeichnis:
+Am einfachsten direkt aus GitHub, ohne Klonen und Bauen:
+
+```powershell
+codex plugin marketplace add Sae-l/tutor
+```
+
+Die Quelle heißt dann **Tutor** (`tutor`); entfernen mit `codex plugin marketplace remove tutor`. Alternativ aus einem eigenen Build im Repositoryverzeichnis:
 
 ```powershell
 python build.py
 codex plugin marketplace add ./dist/chatgpt
 ```
 
-Der zweite Befehl registriert die lokale Quelle in deiner Codex-Konfiguration. Der Build selbst ändert keine Benutzereinstellungen. Danach:
+Der Befehl registriert die Quelle in deiner Codex-Konfiguration. Der Build selbst ändert keine Benutzereinstellungen. Danach:
 
-1. ChatGPT Desktop neu starten, das Pluginverzeichnis öffnen und die Quelle **Tutor** (`tutor-local`) auswählen.
+1. ChatGPT Desktop neu starten, das Pluginverzeichnis öffnen und die Quelle **Tutor** (`tutor` bzw. beim eigenen Build `tutor-local`) auswählen.
 2. Das Plugin **tutor** installieren und aktivieren. Es enthält genau einen Skill.
 3. Einen neuen Chat öffnen, über `@` den Tutor auswählen und `hilfe` schreiben. Die Befehlskarte muss erscheinen. Der angezeigte Auswahlname kann den Plugin-Namensraum enthalten.
 4. Danach eine selbst erstellte Aufgabe senden, etwa `tipp: An 2,0 kOhm liegen 12 V. Wie groß ist der Strom?`. Erwartet: Leitfragen ohne Ergebnis. Anschließend `lösung` zum Abrufen.
