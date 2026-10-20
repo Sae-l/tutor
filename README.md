@@ -198,7 +198,15 @@ Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatG
 
 Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter (Anthropic, OpenAI, Google) nach dessen Bedingungen. `!issue` erzeugt nur einen Link mit festem Titel und schickt keine Gesprächsinhalte.
 
-Feedback: [Issue anlegen](https://github.com/Sae-l/tutor/issues/new) oder im Tutor `!issue` schreiben. Issues sind öffentlich: keine Aufgabentexte, Namen oder Fotos mit persönlichen Daten einfügen. Sicherheitslücken bitte privat melden, siehe [SECURITY.md](SECURITY.md).
+Feedback: [Issue anlegen](https://github.com/Sae-l/tutor/issues/new/choose) oder im Tutor `!issue` schreiben. Issues sind öffentlich: keine Aufgabentexte, Namen oder Fotos mit persönlichen Daten einfügen. Sicherheitslücken bitte privat melden, siehe [SECURITY.md](SECURITY.md).
+
+## Unterstützen und Kontakt
+
+Der Tutor ist frei und quelloffen. Wenn er dir hilft, kannst du das Projekt über [PayPal unterstützen](https://www.paypal.me/saaidalhallak).
+
+- **Über mich:** [LinkedIn](https://www.linkedin.com/in/saeed-alhalak/) · [Instagram](https://www.instagram.com/s.hlllk/) · [PayPal](https://www.paypal.me/saaidalhallak)
+- **GitHub:** [Quellcode](https://github.com/Sae-l/tutor) · [Probleme, Wünsche, Verbesserungsvorschläge](https://github.com/Sae-l/tutor/issues/new/choose)
+- **Website:** [sae-l.github.io/tutor](https://sae-l.github.io/tutor/)
 
 ## Mitmachen
 

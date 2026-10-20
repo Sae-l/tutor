@@ -4,8 +4,13 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- `.github/FUNDING.yml` mit PayPal-Link für den Sponsor-Button auf GitHub.
+
 ### Geändert
 - CONTRIBUTING nennt die Ausnahme für v0.2.0 und ein stabiles Releasebeispiel; SECURITY nennt v0.2.0 als unterstützte Version; Landingpage-Badge „Release-Gate“ entfernt; Vault-Notiz „11 Website“ auf v0.2.0.
+- Landingpage-Footer neu gegliedert: Marke mit deutscher Kurzbeschreibung und PayPal-Unterstützung, Spalten „GitHub“ (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis) und „Über mich“ (LinkedIn, Instagram, PayPal), Datenschutz sowie Abschlusszeile mit Lizenz, Version und „Nach oben“.
+- README: Abschnitt „Unterstützen und Kontakt“; Feedback-Link führt zur Vorlagenauswahl.
 
 ## [0.2.0] – 2026-10-20
 
