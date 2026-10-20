@@ -214,12 +214,18 @@ section + section { border-top: 1px solid var(--hairline); }
 .honest .warn { color: var(--amber); font-weight: 500; }
 
 /* Footer */
-footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem) 0; font-size: .9375rem; color: var(--pencil); }
-.foot { display: grid; grid-template-columns: 5fr 4fr 3fr; gap: 2rem; }
+footer { border-top: 1px solid var(--hairline); background: var(--sheet); padding: clamp(2.5rem, 6vw, 4rem) 0 1.5rem; font-size: .9375rem; color: var(--pencil); }
+.foot { display: grid; grid-template-columns: 4fr 3fr 3fr 3fr; gap: 2rem; }
 .foot h3 { color: var(--ink); font-size: .9375rem; margin-bottom: .5rem; }
-.foot p { margin: 0 0 .5rem; }
+.foot .brand { margin-bottom: .75rem; }
+.foot p { margin: 0 0 .75rem; }
 .foot ul { list-style: none; margin: 0; padding: 0; }
 .foot li a { display: inline-flex; min-height: 44px; align-items: center; }
+.foot .btn { min-height: 44px; padding: 0 1.1rem; font-size: .9375rem; margin-top: .25rem; }
+.foot-base { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 2rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--hairline); font: 400 .8125rem var(--mono); }
+.foot-base a { color: var(--pencil); display: inline-flex; min-height: 44px; align-items: center; }
+.foot-base a:hover { color: var(--accent); }
+@media (max-width: 1023px) { .foot { grid-template-columns: 1fr 1fr; } }
 
 /* Sticky header with reading progress */
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
@@ -640,22 +646,41 @@ p, li { text-wrap: pretty; }
 <footer>
   <div class="wrap foot">
     <div>
-      <h3>tutor</h3>
-      <p lang="en">A study tutor for first-year STEM exercises at German-speaking universities, packaged as a Claude Skill. It explains and asks guiding questions before revealing solutions.</p>
+      <span class="brand">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20 L12 4 L21 20" style="stroke:var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 13.5 h9" style="stroke:var(--ink)" stroke-width="2" stroke-linecap="round"/></svg>
+        tutor
+      </span>
+      <p>Lern-Tutor für MINT-Aufgaben im ersten Studienjahr. Erklärt, stellt Leitfragen und hält die Lösung zurück, bis du sie willst. Frei und quelloffen.</p>
+      <p>Hilft dir der Tutor? Eine kleine Unterstützung hält das Projekt am Laufen.</p>
+      <a class="btn" href="https://www.paypal.me/saaidalhallak">Projekt unterstützen (PayPal)</a>
     </div>
+    <nav aria-labelledby="foot-github">
+      <h3 id="foot-github">GitHub</h3>
+      <ul>
+        <li><a href="https://github.com/Sae-l/tutor">Quellcode</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/issues/new/choose">Probleme, Wünsche, Verbesserungsvorschläge</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Changelog</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/tree/main/Obsidian-tutor">Deutsche Obsidian-Wissensbasis</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="foot-me">
+      <h3 id="foot-me">Über mich</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/saeed-alhalak/">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/s.hlllk/">Instagram</a></li>
+        <li><a href="https://www.paypal.me/saaidalhallak">PayPal</a></li>
+      </ul>
+    </nav>
     <div>
       <h3>Datenschutz</h3>
       <p>Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter. <code>!issue</code> erzeugt nur einen Feedback-Link und schickt keine Gesprächsinhalte.</p>
-      <p>Diese Seite lädt keine Schriften oder Skripte von Dritten; das Hosting übernimmt GitHub Pages.</p>
+      <p>Diese Seite lädt keine Schriften oder Skripte von Dritten; das Hosting übernimmt GitHub Pages. Externe Links führen zu GitHub, LinkedIn, Instagram und PayPal.</p>
     </div>
-    <div>
-      <h3>Projekt</h3>
-      <ul>
-        <li><a href="https://github.com/Sae-l/tutor">Quellcode auf GitHub</a></li>
-        <li><a href="https://github.com/Sae-l/tutor/tree/main/Obsidian-tutor">Deutsche Obsidian-Wissensbasis</a></li>
-        <li><a href="https://github.com/Sae-l/tutor/issues/new">Feedback geben</a></li>
-        <li><a href="https://github.com/Sae-l/tutor/blob/main/LICENSE">MIT-Lizenz</a></li>
-      </ul>
+  </div>
+  <div class="wrap">
+    <div class="foot-base">
+      <span>© 2026 Saeed Alhalak · <a href="https://github.com/Sae-l/tutor/blob/main/LICENSE">MIT-Lizenz</a></span>
+      <span><a href="https://github.com/Sae-l/tutor/releases">v0.2.0-rc.4 · Vorabversion</a> · <a href="#">Nach oben</a></span>
     </div>
   </div>
 </footer>

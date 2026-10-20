@@ -4,6 +4,13 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- `.github/FUNDING.yml` mit PayPal-Link für den Sponsor-Button auf GitHub.
+
+### Geändert
+- Landingpage-Footer neu gegliedert: Marke mit deutscher Kurzbeschreibung und PayPal-Unterstützung, Spalten „GitHub“ (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis) und „Über mich“ (LinkedIn, Instagram, PayPal), Datenschutz sowie Abschlusszeile mit Lizenz, Version und „Nach oben“.
+- README: Abschnitt „Unterstützen und Kontakt“; Feedback-Link führt zur Vorlagenauswahl.
+
 ## [0.2.0-rc.4] – 2026-10-20
 
 Fünfte Vorabversion: ein gemeinsames Pluginpaket für Claude Code und Codex/ChatGPT. Keine neue native Plattformabnahme und keine stabile Freigabe.
