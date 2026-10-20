@@ -10,7 +10,7 @@ Der Tutor ist eine Sammlung von Prompt- und Skill-Dateien plus ein Build-Skript 
 
 ## Unterstützte Versionen
 
-Bisher gibt es nur Vorabversionen (`v0.x.0-rc.N`). Unterstützt wird nur der aktuelle Stand von `main`; ältere Vorabversionen bekommen keine Korrekturen.
+Erste stabile Version ist `v0.2.0`. Unterstützt werden die neueste Version und der aktuelle Stand von `main`; ältere Versionen und Vorabversionen bekommen keine Korrekturen.
 
 ## Meldeweg
 
