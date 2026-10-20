@@ -16,7 +16,7 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.0` festgelegt; Veröffentlichung separat prüfen. |
+| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.1` festgelegt; Veröffentlichung separat prüfen. |
 | Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |

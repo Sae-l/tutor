@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "34e8aeacec0c6df559e7564550a95f9934d5e78d8a54340f5374486e8c7cf6b2",
+      "sha256": "7a7d1731fb80d41e08d100388e6d77079aefecea66575d995edfe68349db35d5",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "bb9427d7770e3b6999ec67f9f6a83a1abc8c7d74625733c93cd0605e97621c45",
+      "sha256": "913cafb16e3a029acc853f88da016da66c1332a093b54e4134e6c2055e13d69d",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "0c59d8c8421786555eba553dc8876e3a3f8de262dd66f90ed7cc69f3d1e54601",
+      "sha256": "dfa0e884749f768987ce2f9f4c193cfbd0550ab202a84b1b75c0a76895403f18",
       "normalization": "utf8-lf"
     },
     {
@@ -165,12 +165,12 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "c3867b0ec5c3dae9ed88a359f538acec656d8733930f91cd3469cd61f64d5742",
+      "sha256": "1b2f2837962ec2fca78e0162e928b85285874d797e474dd4c78f588b3e8de6e7",
       "normalization": "utf8-lf"
     },
     {
       "path": "docs/index.html",
-      "sha256": "a7ebfe7c58a8918618c1be318c3dae67e29df4962131620a94435c90f7e9b7f8",
+      "sha256": "a11946c5a882d81774e98a5f64426b715dddaf779172a803b4b3e327306d3d46",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "6397c7521023c41b4a6b3e4ab4eeaacc362b795a5b3671d0ae115a75a945c1b4",
+      "sha256": "342c7e2a6ee1be361ef7d5022fe553f3f7e0aff62758a3bc7676ec0c4eea5d93",
       "normalization": "utf8-lf"
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "21a671515fb1b267e905f99ec5ea50c200e4a00308eaccac30ebe44b76f3d22f",
+      "sha256": "4c77617945aefb23a8f50f089aab3b83963bebf1b9d18885cadf796fa6f76da9",
       "normalization": "raw"
     },
     {
