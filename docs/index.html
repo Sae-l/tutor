@@ -220,6 +220,10 @@ footer { border-top: 1px solid var(--hairline); padding: clamp(2.5rem, 6vw, 4rem
 .foot p { margin: 0 0 .5rem; }
 .foot ul { list-style: none; margin: 0; padding: 0; }
 .foot li a { display: inline-flex; min-height: 44px; align-items: center; }
+.support { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 2.5rem; padding: clamp(1.25rem, 3vw, 1.75rem); }
+.support h3 { color: var(--ink); font-size: 1.0625rem; margin-bottom: .4rem; }
+.support p { margin: 0; }
+.support .btn { flex-shrink: 0; }
 
 /* Sticky header with reading progress */
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
@@ -331,6 +335,7 @@ p, li { text-wrap: pretty; }
   .mode-list li { grid-template-columns: 6rem 1fr; }
   .msg-user { margin-left: 1rem; }
   .btn { width: 100%; justify-content: center; }
+  .support { flex-direction: column; align-items: stretch; }
   .flow { display: none; }
   .pipe { grid-template-columns: 1fr; }
   .link { width: 2px; height: 1.75rem; justify-self: center; }
@@ -646,7 +651,7 @@ p, li { text-wrap: pretty; }
     <div>
       <h3>Datenschutz</h3>
       <p>Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter. <code>!issue</code> erzeugt nur einen Feedback-Link und schickt keine Gesprächsinhalte.</p>
-      <p>Diese Seite lädt keine Schriften oder Skripte von Dritten; das Hosting übernimmt GitHub Pages.</p>
+      <p>Diese Seite lädt keine Schriften oder Skripte von Dritten; das Hosting übernimmt GitHub Pages. Beiträge laufen direkt über PayPal; dort gelten deren Datenschutzregeln.</p>
     </div>
     <div>
       <h3>Projekt</h3>
@@ -655,8 +660,18 @@ p, li { text-wrap: pretty; }
         <li><a href="https://github.com/Sae-l/tutor/tree/main/Obsidian-tutor">Deutsche Obsidian-Wissensbasis</a></li>
         <li><a href="https://github.com/Sae-l/tutor/issues/new">Feedback geben</a></li>
         <li><a href="https://github.com/Sae-l/tutor/blob/main/LICENSE">MIT-Lizenz</a></li>
+        <li><a href="https://www.paypal.me/saaidalhallak" rel="noopener">Projekt unterstützen</a></li>
       </ul>
     </div>
+  </div>
+  <div class="wrap">
+    <aside class="support card" aria-labelledby="support-head">
+      <div>
+        <h3 id="support-head">Hat dir der Tutor geholfen?</h3>
+        <p>Der Tutor bleibt kostenlos, ohne Werbung und ohne Tracking. Mit einem kleinen Beitrag hilfst du, neue Modi, Kurspakete und Tests für die nächste Klausurphase zu bauen.</p>
+      </div>
+      <a class="btn" href="https://www.paypal.me/saaidalhallak" rel="noopener">Mit PayPal unterstützen</a>
+    </aside>
   </div>
 </footer>
 
