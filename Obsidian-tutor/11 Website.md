@@ -16,14 +16,14 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.0-rc.3` festgelegt; Veröffentlichung separat prüfen. |
+| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.0` festgelegt; Veröffentlichung separat prüfen. |
 | Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
 | Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege. |
 | Unter der Haube | Build-Weg von `tutor/` über `build.py` zu den Paketen; Kennzahlen 11 Modi, 6 Erklärsprachen, 30 Modus- und 33 Grenzfälle. |
 | Häufige Fragen | Aktivierung, Sprache und Art des Produkts. |
-| Ehrlich gesagt | Vorabversion, Prüfgrenzen und ADHS als Gestaltungsziel. |
+| Ehrlich gesagt | Erste stabile Version ohne Abnahme, Prüfgrenzen und ADHS als Gestaltungsziel. |
 | Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis), Über mich (LinkedIn, Instagram, PayPal), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
 
 ## Gestaltung seit 2026-10-19

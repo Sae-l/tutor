@@ -8,8 +8,19 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - `.github/FUNDING.yml` mit PayPal-Link für den Sponsor-Button auf GitHub.
 
 ### Geändert
+- CONTRIBUTING nennt die Ausnahme für v0.2.0 und ein stabiles Releasebeispiel; SECURITY nennt v0.2.0 als unterstützte Version; Landingpage-Badge „Release-Gate“ entfernt; Vault-Notiz „11 Website“ auf v0.2.0.
 - Landingpage-Footer neu gegliedert: Marke mit deutscher Kurzbeschreibung und PayPal-Unterstützung, Spalten „GitHub“ (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis) und „Über mich“ (LinkedIn, Instagram, PayPal), Datenschutz sowie Abschlusszeile mit Lizenz, Version und „Nach oben“.
 - README: Abschnitt „Unterstützen und Kontakt“; Feedback-Link führt zur Vorlagenauswahl.
+
+## [0.2.0] – 2026-10-20
+
+Erste stabile Version von v0.2; Tutor-Verhalten unverändert gegenüber 0.2.0-rc.4. Release-Gate laut CONTRIBUTING (native Abnahme mit genau diesem ZIP) bewusst noch nicht erfüllt; Lehrverhalten auf den Zieloberflächen nicht abgenommen.
+
+### Hinzugefügt
+- Recherchenotizen zu Lernforschung, nativen Plattformen und Veröffentlichungsbaseline in `docs/planung/2026-10-16-wayfinder/` (aus den aufgelösten `research/*`-Branches).
+
+### Geändert
+- Pluginversion und erzeugte Ausgaben auf `0.2.0`; Landingpage-Downloads, README-Badge und Statushinweise auf das stabile Release.
 
 ## [0.2.0-rc.4] – 2026-10-20
 

@@ -1,7 +1,7 @@
 {
   "date": "2026-10-20",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer rc.4 (gemeinsames Pluginpaket fuer Claude Code und Codex) bewertet; Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
+  "scope": "Quellen fuer v0.2.0 (wie rc.4: gemeinsames Pluginpaket fuer Claude Code und Codex) bewertet; Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "70f5d42a944eb24d48e3548434155dbb91c0be17a88994a574c581119d789bf9",
+      "sha256": "510a8b1a0422f773ef3c9bd4701990778e321676ba333e074051fa6c201bf00d",
       "normalization": "utf8-lf"
     },
     {
@@ -125,17 +125,17 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "8d0a6c980b0f9890e3db9df04020453dc332e842e8b318882048b0b82f5eb38f",
+      "sha256": "053cff6d583c4e5ba7a3261f51c878f2bfd186ca326d22d5b2815861908e965e",
       "normalization": "utf8-lf"
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "eed630c770e2793b5f8c356df94ad38d56bb2acab676e147512b7a49bd83b75a",
+      "sha256": "8a16869954512e81b14413d21b4d37decd5d08cd223da90b8bc1e02319f0fff3",
       "normalization": "utf8-lf"
     },
     {
       "path": "SECURITY.md",
-      "sha256": "e32c7e7c4470fe77c096e545d2b438055f8b8d18597357190e6bddeecfa9a975",
+      "sha256": "e36c68ec875578a5cdc1d05a24ba10712018a1362ee116b956e83368b3b17f76",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "c4ac617561a8d1e37ef06a72afef67ece9d355ea4b3da0051b1740eb0d2d3a84",
+      "sha256": "cfac58f8df46e5d6631fae7800c7641f362d1649ffe919262b5b4a74a122a636",
       "normalization": "utf8-lf"
     },
     {
@@ -165,12 +165,12 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "0cf7fbc1de83d9cd199b30be875e92ede818580625beceec9b1bf3d58687cf87",
+      "sha256": "28b484607ac170bbae8234d642b3fa879a96cf80946d0623c49d08fa54b881de",
       "normalization": "utf8-lf"
     },
     {
       "path": "docs/index.html",
-      "sha256": "8cdb6700a01005800f74649c2f87e1ced27d23d53a1fc3dcc39eb59c8f775dbb",
+      "sha256": "41b8b22a82927dd267e0aec8db7f3a39430597046360545418f2864cfbc9f2c0",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "fce85bcff492ec5eb7b3f75941410f6de8820b80de17a9e2cb8b6b8d0d2c452e",
+      "sha256": "ecf92d761d9a14eb94f9d9b07b3e88374c4c3e75e94c1f46d9258ac478424cb5",
       "normalization": "utf8-lf"
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "179b7722673bccfa1487ec2bfbbe7bfb7cee9a056ce81d8880651b03651392fe",
+      "sha256": "45d7cfbd2cfd465e0535c5edea256965a1de0a2ef79d753cd20fbbd653db74fd",
       "normalization": "raw"
     },
     {
