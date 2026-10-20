@@ -4,6 +4,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.2.1] – 2026-10-20
+
+Paketversion für die offiziellen Verzeichnisse; Tutor-Verhalten unverändert gegenüber 0.2.0.
+
 ### Hinzugefügt
 - Pluginpaket für die offiziellen Verzeichnisse von Claude und ChatGPT/Codex vorbereitet: Autor, Homepage, Schlagwörter und OpenAI-Angaben (`extensions["com.openai"].interface`) in `packaging/chatgpt-plugin.json`; Build erzeugt zusätzlich `.claude-plugin/plugin.json`, `README.md` und `assets/logo.svg`. `claude plugin validate --strict` besteht. Einreichungsschritte in CONTRIBUTING.
 - Landingpage „Einrichten“: Einzeiler für Claude Code und Codex mit Kopierknopf; ChatGPT-Web-Upload als Workspace-Admin-Weg.
@@ -20,6 +24,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Footer: Unterstützungstext nennt den Nutzen (kostenlos, werbefrei, ohne Tracking); doppelter PayPal-Link unter „Über mich“ entfernt, ein klarer Aufruf bleibt.
 - Footer: kürzerer Unterstützungstext („Hilft er dir? Ein kleiner Beitrag hält ihn am Laufen.“), Link „Mit PayPal unterstützen“ mit Herz-Icon, öffnet in neuem Tab (`noopener noreferrer`).
 - README: Abschnitt „Unterstützen und Kontakt“; Feedback-Link führt zur Vorlagenauswahl.
+- Pluginversion, Landingpage-Downloads und Statushinweise auf `0.2.1`.
 
 ## [0.2.0] – 2026-10-20
 
