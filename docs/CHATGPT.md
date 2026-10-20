@@ -4,7 +4,7 @@ Zwei Wege: das native Tutor-Plugin oder ein ChatGPT-Projekt mit Anweisung und Pr
 
 ## Native Variante: Plugin-Archiv
 
-Stand rc.4: Claude Code und Codex nutzen dasselbe Pluginpaket. Seit rc.3 gelten Schutzregeln gelten auch für Bilder und Code; Check korrigiert nur die erste fehlerhafte Stelle. Ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Die zwölf Schutzregressionen in `tests/akzeptanz.md` müssen auf der tatsächlichen Oberfläche samt Endbildern geprüft werden. #32 bleibt bis dahin offen; Pakettests sind kein Nachweis der Modellregeltreue.
+Stand v0.2.0: Claude Code und Codex nutzen dasselbe Pluginpaket. Seit rc.3 gelten Schutzregeln auch für Bilder und Code; Check korrigiert nur die erste fehlerhafte Stelle. Ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Die zwölf Schutzregressionen in `tests/akzeptanz.md` müssen auf der tatsächlichen Oberfläche samt Endbildern geprüft werden. #32 bleibt bis dahin offen; Pakettests sind kein Nachweis der Modellregeltreue.
 
 Im Repository `python build.py` ausführen. Das erzeugte [`dist/tutor-chatgpt.zip`](../dist/tutor-chatgpt.zip) enthält das Plugin mit allen Skilldateien und Lizenz.
 

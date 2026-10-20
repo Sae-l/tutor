@@ -1,7 +1,7 @@
 {
   "date": "2026-10-20",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer rc.4 (gemeinsames Pluginpaket fuer Claude Code und Codex) bewertet; Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
+  "scope": "Quellen fuer v0.2.0 (wie rc.4: gemeinsames Pluginpaket fuer Claude Code und Codex) bewertet; Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "64ff0908b7bb2e60e2a12ac1099d797667189b24c18c31a966cb4eaafa37e79f",
+      "sha256": "09d5fe69ec8978fcc07745c730d274995f57fe18b16e6579156adcff41b6659e",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "8d0a6c980b0f9890e3db9df04020453dc332e842e8b318882048b0b82f5eb38f",
+      "sha256": "053cff6d583c4e5ba7a3261f51c878f2bfd186ca326d22d5b2815861908e965e",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "ea5b0036b728cfad69364a8d8f88e94fe08e7ebec024993a3c11301d38324151",
+      "sha256": "73f43e5ab4f59e11f61563e974b546e767d5db9a595be09de484e15a7c128c15",
       "normalization": "utf8-lf"
     },
     {
@@ -165,12 +165,12 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "0cf7fbc1de83d9cd199b30be875e92ede818580625beceec9b1bf3d58687cf87",
+      "sha256": "28b484607ac170bbae8234d642b3fa879a96cf80946d0623c49d08fa54b881de",
       "normalization": "utf8-lf"
     },
     {
       "path": "docs/index.html",
-      "sha256": "0d4642038d11d4c0c759864df0dac4d5d4a37ae927e25aef992bba1e90ac1b81",
+      "sha256": "8049308972dae330823415df22349c47d44e29f61de5e1c6bcb24082ad705f80",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "fce85bcff492ec5eb7b3f75941410f6de8820b80de17a9e2cb8b6b8d0d2c452e",
+      "sha256": "ecf92d761d9a14eb94f9d9b07b3e88374c4c3e75e94c1f46d9258ac478424cb5",
       "normalization": "utf8-lf"
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "179b7722673bccfa1487ec2bfbbe7bfb7cee9a056ce81d8880651b03651392fe",
+      "sha256": "45d7cfbd2cfd465e0535c5edea256965a1de0a2ef79d753cd20fbbd653db74fd",
       "normalization": "raw"
     },
     {

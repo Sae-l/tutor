@@ -19,6 +19,9 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
+## Stand v0.2.0 (2026-10-20)
+- Erste stabile Version (kein Pre-Release), Verhalten wie rc.4. Native Abnahme weiterhin offen. Nur noch Branch `main`; Recherche-Branches in `docs/planung/` übernommen.
+
 ## Stand v0.2.0-rc.4 (2026-10-20)
 - Ein Pluginpaket `dist/chatgpt/plugins/tutor/` für Claude Code (`.claude-plugin/marketplace.json`) und Codex/ChatGPT (`.agents/plugins/marketplace.json`); kein eigenes Claude-Manifest mehr.
 
@@ -44,4 +47,4 @@
 ## Offene Punkte
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
 2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen.
-3. rc.4 veröffentlicht; neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
+3. v0.2.0 veröffentlicht; neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.

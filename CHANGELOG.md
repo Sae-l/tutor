@@ -4,6 +4,16 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.2.0] – 2026-10-20
+
+Erste stabile Version von v0.2; Tutor-Verhalten unverändert gegenüber 0.2.0-rc.4. Release-Gate laut CONTRIBUTING (native Abnahme mit genau diesem ZIP) bewusst noch nicht erfüllt; Lehrverhalten auf den Zieloberflächen nicht abgenommen.
+
+### Hinzugefügt
+- Recherchenotizen zu Lernforschung, nativen Plattformen und Veröffentlichungsbaseline in `docs/planung/2026-10-16-wayfinder/` (aus den aufgelösten `research/*`-Branches).
+
+### Geändert
+- Pluginversion und erzeugte Ausgaben auf `0.2.0`; Landingpage-Downloads, README-Badge und Statushinweise auf das stabile Release.
+
 ## [0.2.0-rc.4] – 2026-10-20
 
 Fünfte Vorabversion: ein gemeinsames Pluginpaket für Claude Code und Codex/ChatGPT. Keine neue native Plattformabnahme und keine stabile Freigabe.

@@ -11,7 +11,7 @@
 Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste Studienjahr in Physik, Mathematik und E-Technik an deutschsprachigen Hochschulen.
 
 [![CI](https://github.com/Sae-l/tutor/actions/workflows/ci.yml/badge.svg)](https://github.com/Sae-l/tutor/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/Sae-l/tutor?include_prereleases&label=Vorabversion)](https://github.com/Sae-l/tutor/releases)
+[![Release](https://img.shields.io/github/v/release/Sae-l/tutor?label=Release)](https://github.com/Sae-l/tutor/releases)
 [![Lizenz: MIT](https://img.shields.io/badge/Lizenz-MIT-blue.svg)](LICENSE)
 
 [Landingpage](https://sae-l.github.io/tutor/) · [So lernst du damit](#so-lernst-du-damit) · [Schnellstart](#schnellstart-claude) · [Befehle](#befehle) · [Andere Plattformen](#andere-plattformen-experimentell) · [Grenzen](#stand-und-grenzen)
@@ -188,7 +188,7 @@ Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatG
 
 ## Stand und Grenzen
 
-- **Vorabversion v0.2, nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
+- **Version v0.2.0, Lehrverhalten nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
 - Formeln werden nur sauber dargestellt, wenn die Plattform `$$ ... $$` rendert; das ist nur informell beobachtet, nicht protokolliert.
 - Hochgeladene Dateien liest das Modell nicht immer vollständig; deshalb stehen die wichtigsten Regeln im Kern.
 - Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.
