@@ -35,7 +35,7 @@ Ausnahme: Der erzeugte Katalog `dist/chatgpt/.agents/plugins/marketplace.json` g
 
 ## Release
 
-Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Release-Gate in `tests/akzeptanz.md` bestanden und protokolliert ist.
+Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Release-Gate in `tests/akzeptanz.md` bestanden und protokolliert ist. Ausnahme: v0.2.0 wurde am 2026-10-20 auf Entscheidung des Maintainers ohne bestandenes Gate stabil veröffentlicht (#32 offen); für spätere stabile Versionen gilt die Regel wieder.
 
 1. Aus einem separaten sauberen Checkout des exakten `main`-Commits arbeiten; CI für diesen Commit ist grün, `CHANGELOG.md` und Pluginmanifest nennen die neue Version. `python build.py`, Strukturtests und Vaultprüfung ausführen; `git diff --exit-code -- dist/` muss danach leer sein. Keine lokalen Änderungen oder privaten Protokolle übernehmen.
 2. Skill-Paket aus dem Commit bauen, nicht aus dem Arbeitsordner (so gelangen nur versionierte Dateien hinein):
@@ -55,12 +55,12 @@ Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Rele
    ```
 
 4. Für eine stabile Version: Abnahme mit genau diesem ZIP durchführen, Protokoll in `tests/protokolle/` committen.
-5. Tag setzen und Release anlegen; Anhänge: beide ZIPs, beide Promptdateien, `SHA256SUMS.txt`. Das ChatGPT-ZIP ist für den Plugin-Importer, kein Chat-Attachment. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen als „Pre-release“ markieren. Vor dem nächsten Release Pluginversion und Releaseversion abstimmen; bestehende Tags nicht neu belegen. Beispiel für rc.4; erst nach grüner CI des zu veröffentlichenden Commits:
+5. Tag setzen und Release anlegen; Anhänge: beide ZIPs, beide Promptdateien, `SHA256SUMS.txt`. Das ChatGPT-ZIP ist für den Plugin-Importer, kein Chat-Attachment. Notizen: Commit, Änderungen, geprüfte Plattformen, bekannte Grenzen. Vorabversionen mit `--prerelease`, stabile Versionen mit `--latest` veröffentlichen. Vor dem nächsten Release Pluginversion und Releaseversion abstimmen; bestehende Tags nicht neu belegen. Beispiel für v0.2.0; erst nach grüner CI des zu veröffentlichenden Commits:
 
    ```bash
-   git tag -a v0.2.0-rc.4 -m "v0.2.0-rc.4"
-   git push origin v0.2.0-rc.4
-   gh release create v0.2.0-rc.4 --verify-tag --prerelease --notes-file docs/releases/v0.2.0-rc.4.md "$release_dir/tutor-skill.zip" "$release_dir/tutor-chatgpt.zip" "$release_dir/system-prompt.md" "$release_dir/kern.md" "$release_dir/SHA256SUMS.txt"
+   git tag -a v0.2.0 -m "v0.2.0"
+   git push origin v0.2.0
+   gh release create v0.2.0 --verify-tag --latest --notes-file docs/releases/v0.2.0.md "$release_dir/tutor-skill.zip" "$release_dir/tutor-chatgpt.zip" "$release_dir/system-prompt.md" "$release_dir/kern.md" "$release_dir/SHA256SUMS.txt"
    ```
 
 Nur tatsächlich geprüfte Plattformen als geprüft aufführen.

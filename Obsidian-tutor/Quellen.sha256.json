@@ -130,12 +130,12 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "eed630c770e2793b5f8c356df94ad38d56bb2acab676e147512b7a49bd83b75a",
+      "sha256": "8a16869954512e81b14413d21b4d37decd5d08cd223da90b8bc1e02319f0fff3",
       "normalization": "utf8-lf"
     },
     {
       "path": "SECURITY.md",
-      "sha256": "e32c7e7c4470fe77c096e545d2b438055f8b8d18597357190e6bddeecfa9a975",
+      "sha256": "e36c68ec875578a5cdc1d05a24ba10712018a1362ee116b956e83368b3b17f76",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "73f43e5ab4f59e11f61563e974b546e767d5db9a595be09de484e15a7c128c15",
+      "sha256": "a0ba1f314d33a18f26ac1b9876cf5702df7c58bc39a02fcf2a80bc79d954798b",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "8049308972dae330823415df22349c47d44e29f61de5e1c6bcb24082ad705f80",
+      "sha256": "b95b6743d4ea4f44c87d5f66038c37037e813d96232a9673191f0abac18225e9",
       "normalization": "utf8-lf"
     },
     {

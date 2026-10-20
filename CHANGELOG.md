@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- CONTRIBUTING nennt die Ausnahme für v0.2.0 und ein stabiles Releasebeispiel; SECURITY nennt v0.2.0 als unterstützte Version; Landingpage-Badge „Release-Gate“ entfernt; Vault-Notiz „11 Website“ auf v0.2.0.
+
 ## [0.2.0] – 2026-10-20
 
 Erste stabile Version von v0.2; Tutor-Verhalten unverändert gegenüber 0.2.0-rc.4. Release-Gate laut CONTRIBUTING (native Abnahme mit genau diesem ZIP) bewusst noch nicht erfüllt; Lehrverhalten auf den Zieloberflächen nicht abgenommen.
