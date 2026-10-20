@@ -17,7 +17,7 @@ Alle Quellpfade beziehen sich auf die Repositorywurzel. `tutor/` enthält die Sk
 | Moduswahl, Lösungsschutz und Zustand | `tutor/SKILL.md` | Alle Plattformen, Kern und sämtliche Verhaltenstests |
 | Verhalten eines Modus | `tutor/modes/<name>.md` | Modusfälle in drei Fächern und zugehörige Grenzfälle |
 | Sprache, Genauigkeit, Vorlage oder Formeln | `tutor/references/` | Gemeinsam genutzte Regeln; vollständige Wiederholungsabnahme |
-| Paketname oder Version | `packaging/chatgpt-plugin.json` | Manifest, Marketplace und ZIP |
+| Paketname, Version oder Verzeichnisangaben | `packaging/chatgpt-plugin.json`, `packaging/plugin-README.md`, `packaging/logo.svg` | beide Manifeste, Plugin-README, Logo, Marketplace und ZIP |
 | Kurskontext | `kurse/` | Passender Kurs; kein Bestandteil des Skills |
 | Produktbeschreibung | `README.md`, `docs/index.html` | Besuchereinstieg, Anleitung und Aussagen zu Grenzen |
 

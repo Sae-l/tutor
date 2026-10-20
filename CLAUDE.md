@@ -23,7 +23,7 @@
 - Erste stabile Version (kein Pre-Release), Verhalten wie rc.4. Native Abnahme weiterhin offen. Nur noch Branch `main`; Recherche-Branches in `docs/planung/` übernommen.
 
 ## Stand v0.2.0-rc.4 (2026-10-20)
-- Ein Pluginpaket `dist/chatgpt/plugins/tutor/` für Claude Code (`.claude-plugin/marketplace.json`) und Codex/ChatGPT (`.agents/plugins/marketplace.json`); kein eigenes Claude-Manifest mehr.
+- Ein Pluginpaket `dist/chatgpt/plugins/tutor/` für Claude Code (`.claude-plugin/marketplace.json`) und Codex/ChatGPT (`.agents/plugins/marketplace.json`). Seit 2026-10-20 erzeugt `build.py` daraus zusätzlich `.claude-plugin/plugin.json`, `README.md` und `assets/logo.svg` für die offiziellen Verzeichnisse; das OpenAI-ZIP enthält das Claude-Manifest nicht. Einreichung in CONTRIBUTING.
 
 ## Stand v0.2.0-rc.3 (2026-10-17)
 - Beschlossene Schutzregeln aus #34 implementiert: alle Medien, enger Check, Graph-Ausnahme, eindeutiger Abruf und Regelhierarchie. Kurz/Hilfe, Mittel/Lang und nächste Befehle präzisiert. Native Abnahme weiterhin offen.

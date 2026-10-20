@@ -225,7 +225,8 @@ Die [deutsche Wissensbasis](Obsidian-tutor/00%20Startseite.md) erklärt Funktion
 | `dist/kern.md` | Erzeugt: Kern aus den `<!-- kern -->`-Abschnitten von `SKILL.md`, höchstens 4000 Zeichen |
 | `dist/chatgpt/` | Erzeugter lokaler Marketplace mit einem Tutor-Plugin, Skilldateien und MIT-Lizenz |
 | `dist/tutor-chatgpt.zip` | Erzeugtes Pluginarchiv für den ChatGPT-Importer |
-| `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Plugins |
+| `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Pluginssowie Angaben für die Verzeichnisse von Claude und OpenAI |
+| `packaging/plugin-README.md`, `packaging/logo.svg` | README und Logo im Pluginpaket |
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |

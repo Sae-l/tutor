@@ -521,7 +521,7 @@ p, li { text-wrap: pretty; }
     <div class="wrap">
       <div class="sec-head reveal">
         <div><span class="eyebrow">Einrichten</span><h2>Einmal hochladen, dann lernen.</h2></div>
-        <p>Der Tutor ist kein Programm und kein Dienst. Er läuft als Anweisung in deinem Claude-Konto; du brauchst nur einen Browser.</p>
+        <p>Der Tutor ist kein Programm und kein Dienst. Er läuft als Skill in deinem Claude-, ChatGPT- oder Gemini-Konto; du brauchst nur einen Browser.</p>
       </div>
       <div class="setup">
         <div class="card setup-main reveal">
@@ -531,16 +531,20 @@ p, li { text-wrap: pretty; }
             <li><p>Auf <a href="https://claude.ai">claude.ai</a> unter <strong>Settings → Capabilities</strong> „Code execution and file creation“ einschalten. Ohne das laufen keine Skills.</p></li>
             <li><p>Unter <strong>Customize → Skills</strong> auf „+“ → „Create skill“ → „Upload a skill“ klicken und die ZIP-Datei wählen. Der Skill „tutor“ muss eingeschaltet sein.</p></li>
             <li><div><p>Zum Testen in einem neuen Chat nur dieses Wort schreiben – es erscheint die Befehlskarte:</p>
-              <div class="cmdline"><code>tutor</code><button class="copy" type="button" data-copy="tutor">Kopieren</button></div></div>
+              <div class="cmdline"><code id="cmd-1">tutor</code><button class="copy" type="button" data-copy="tutor" aria-describedby="cmd-1">Kopieren</button></div></div>
             </li>
             <li><p>Danach ein Foto der Aufgabe schicken, optional mit Befehlswort wie <code>tipp</code>.</p></li>
           </ol>
           <p class="note" style="margin:1rem 0 0">Menünamen laut <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Claude-Hilfe</a>; in der deutschen Oberfläche können sie anders heißen. Team- und Enterprise-Konten: Skills schaltet die Administration frei.</p>
+          <p class="note" style="margin:1rem 0 0"><strong>Claude Code:</strong> als Plugin in einer Zeile installieren (ab Version 2.1.275):</p>
+          <div class="cmdline"><code id="cmd-2">/plugin install tutor --marketplace Sae-l/tutor</code><button class="copy" type="button" data-copy="/plugin install tutor --marketplace Sae-l/tutor" aria-describedby="cmd-2">Kopieren</button></div>
         </div>
         <div class="setup-side reveal" style="--d:100ms">
-          <h3>ChatGPT · Gemini <span class="badge neutral">experimentell</span></h3>
+          <h3>ChatGPT · Codex · Gemini <span class="badge neutral">experimentell</span></h3>
           <p>Alle Dateien liegen im <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.0">Release</a>.</p>
-          <p><strong>ChatGPT:</strong> natives Tutor-Plugin <code>tutor-chatgpt.zip</code> aus dem Release oder den Projektweg mit <code>kern.md</code> und <code>system-prompt.md</code> nutzen. <a href="https://github.com/Sae-l/tutor/blob/main/docs/CHATGPT.md">Einrichtung und Funktionsprüfung</a>. Beide ChatGPT-Wege sind noch nicht abgenommen.</p>
+          <p><strong>Codex und ChatGPT Desktop:</strong> Pluginquelle hinzufügen, dann in Codex <code>/plugins</code> bzw. im Pluginverzeichnis von ChatGPT Desktop „Tutor“ installieren.</p>
+          <div class="cmdline"><code id="cmd-3">codex plugin marketplace add Sae-l/tutor</code><button class="copy" type="button" data-copy="codex plugin marketplace add Sae-l/tutor" aria-describedby="cmd-3">Kopieren</button></div>
+          <p style="margin-top:1rem"><strong>ChatGPT im Web:</strong> Workspace-Admins laden <code>tutor-chatgpt.zip</code> unter <strong>Admin → Plugins → Plugin hochladen</strong> hoch. Ohne Plugin geht der Projektweg mit <code>kern.md</code> und <code>system-prompt.md</code>. <a href="https://github.com/Sae-l/tutor/blob/main/docs/CHATGPT.md">Einrichtung und Funktionsprüfung</a>. Die ChatGPT-Wege sind noch nicht abgenommen.</p>
           <p><strong>Gemini:</strong> in der Gemini-App unter <strong>Einstellungen → Skills → Erstellen</strong> <code>tutor-skill.zip</code> unverändert hochladen; aufrufen mit <code>/</code> oder <code>@</code>. Voraussetzungen laut <a href="https://support.google.com/gemini/answer/17094296">Google-Hilfe</a>: 18+, „Keep Activity“ an, Hochladen nur im Web oder in der Mac-App. Nicht geprüft; offen ist, ob Gemini das ZIP mit dem Ordner <code>tutor/</code> an oberster Stelle annimmt.</p>
           <p><strong>Gemini Gem (auslaufend):</strong> <code>kern.md</code> als Anweisung, <code>system-prompt.md</code> als Wissen. Gems enden für private Konten ab November 2026, für Workspace 2027.</p>
           <p>Menünamen können abweichen; Formeldarstellung und Feldgrenzen sind dort nicht geprüft.</p>
@@ -687,6 +691,8 @@ p, li { text-wrap: pretty; }
   </div>
 </footer>
 
+<p id="copy-status" role="status" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></p>
+
 <script>
 document.documentElement.classList.add('js');
 
@@ -769,11 +775,13 @@ document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click'
   termsDe.hidden = !!s.terms.length;
 }));
 
-// Copy buttons
+// Copy buttons; a focused button's new label is not always read aloud, so the status region repeats it
+const copyStatus = document.getElementById('copy-status');
 document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = 'Kopiert'; }
   catch { btn.textContent = 'Nicht möglich'; }
-  setTimeout(() => { btn.textContent = 'Kopieren'; }, 1800);
+  copyStatus.textContent = btn.textContent;
+  setTimeout(() => { btn.textContent = 'Kopieren'; copyStatus.textContent = ''; }, 1800);
 }));
 </script>
 </body>

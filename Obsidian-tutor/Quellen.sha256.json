@@ -105,17 +105,17 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "9018749856dd77502bf5e9c545613766614fde6bc41aa62bbb2b111684e3ce8e",
+      "sha256": "bc291441bd3f8e00f8b66a82df9701c0373791bcb49b217ad5de8fabeb9cfec7",
       "normalization": "utf8-lf"
     },
     {
       "path": "build.py",
-      "sha256": "56b8c144b0ad201f8419007624085dbef1e83370acb3b1c062a7a02c4f8875af",
+      "sha256": "7a3a186266fdc5e329437c7c6aad7e02b48d948c12e9dc8feac32b82bcde9483",
       "normalization": "utf8-lf"
     },
     {
       "path": "README.md",
-      "sha256": "a66b5c7a8e6e606ecb8b22f3b35c2767fae0da90ef06d73b4d66ae563919c42a",
+      "sha256": "34e8aeacec0c6df559e7564550a95f9934d5e78d8a54340f5374486e8c7cf6b2",
       "normalization": "utf8-lf"
     },
     {
@@ -125,12 +125,12 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "4fa4dae23f51129bb5c417c4bd8c05371f227ebccf06ed2644235db5b9ab5b1f",
+      "sha256": "bb9427d7770e3b6999ec67f9f6a83a1abc8c7d74625733c93cd0605e97621c45",
       "normalization": "utf8-lf"
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "8a16869954512e81b14413d21b4d37decd5d08cd223da90b8bc1e02319f0fff3",
+      "sha256": "76c9b8438b2a00dd486baaf67afbe1887c072dd4be0fa8a41825f70b6517a651",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "0eb4025d30504c8185e0d576de0652531a1f8d434629b4e1eb3ec54b74be0fe6",
+      "sha256": "0c59d8c8421786555eba553dc8876e3a3f8de262dd66f90ed7cc69f3d1e54601",
       "normalization": "utf8-lf"
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "path": ".gitattributes",
-      "sha256": "88ce2eddbb254c9e2929d5e3456d83615a9202b74fa6a3fd2968131fdfc9bcb6",
+      "sha256": "b1ceec00ad121fd078f40ec5249c0856841c9d59280283d168baf4b1e1b1ffd3",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "ea8e90ad25a61ab11e4cd89e1414d47481b3c5d7bc1fcc43ba7af36036b2e3d3",
+      "sha256": "a7ebfe7c58a8918618c1be318c3dae67e29df4962131620a94435c90f7e9b7f8",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "ecf92d761d9a14eb94f9d9b07b3e88374c4c3e75e94c1f46d9258ac478424cb5",
+      "sha256": "6397c7521023c41b4a6b3e4ab4eeaacc362b795a5b3671d0ae115a75a945c1b4",
       "normalization": "utf8-lf"
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "45d7cfbd2cfd465e0535c5edea256965a1de0a2ef79d753cd20fbbd653db74fd",
+      "sha256": "21a671515fb1b267e905f99ec5ea50c200e4a00308eaccac30ebe44b76f3d22f",
       "normalization": "raw"
     },
     {

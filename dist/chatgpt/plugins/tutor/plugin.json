@@ -3,6 +3,44 @@
   "name": "tutor",
   "version": "0.2.0",
   "description": "MINT-Aufgaben verstehen und selbst lösen: Erklärungen, Leitfragen und Fehlerdiagnose; Deutsch mit fünf weiteren Erklärsprachen.",
+  "author": {
+    "name": "Saeed Alhalak",
+    "url": "https://github.com/Sae-l"
+  },
+  "homepage": "https://sae-l.github.io/tutor/",
+  "repository": "https://github.com/Sae-l/tutor",
   "license": "MIT",
-  "repository": "https://github.com/Sae-l/tutor"
+  "keywords": [
+    "tutor",
+    "mint",
+    "physik",
+    "mathematik",
+    "elektrotechnik",
+    "lernen",
+    "studium",
+    "adhs"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Tutor",
+        "shortDescription": "MINT-Aufgaben selbst lösen",
+        "longDescription": "Lern-Tutor für Physik, Mathematik und Elektrotechnik im ersten Studienjahr an deutschsprachigen Hochschulen. Er erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich willst. Elf Ein-Wort-Befehle wie erklär, tipp, check und klausur steuern die Antwort. Erklärsprache Deutsch, auf Wunsch Arabisch, Türkisch, Französisch, Englisch oder Urdu; Fachbegriffe und Überschriften bleiben Deutsch. ADHS-freundlich: kurze Abschnitte und klare nächste Schritte.",
+        "developerName": "Saeed Alhalak",
+        "category": "Education & Research",
+        "capabilities": [],
+        "websiteURL": "https://sae-l.github.io/tutor/",
+        "supportURL": "https://github.com/Sae-l/tutor/issues",
+        "defaultPrompt": [
+          "erklär: Ein Ball wird mit 12 m/s senkrecht nach oben geworfen. Wie hoch steigt er?",
+          "tipp: Wie berechne ich den Ersatzwiderstand dieser Schaltung?",
+          "hilfe"
+        ],
+        "brandColor": "#2F6F5E",
+        "brandColorDark": "#6FB39F",
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
 }

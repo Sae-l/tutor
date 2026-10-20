@@ -5,6 +5,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 ## [Unveröffentlicht]
 
 ### Hinzugefügt
+- Pluginpaket für die offiziellen Verzeichnisse von Claude und ChatGPT/Codex vorbereitet: Autor, Homepage, Schlagwörter und OpenAI-Angaben (`extensions["com.openai"].interface`) in `packaging/chatgpt-plugin.json`; Build erzeugt zusätzlich `.claude-plugin/plugin.json`, `README.md` und `assets/logo.svg`. `claude plugin validate --strict` besteht. Einreichungsschritte in CONTRIBUTING.
+- Landingpage „Einrichten“: Einzeiler für Claude Code und Codex mit Kopierknopf; ChatGPT-Web-Upload als Workspace-Admin-Weg.
 - `.github/FUNDING.yml` mit PayPal-Link für den Sponsor-Button auf GitHub.
 - Recherchenotiz `docs/planung/2026-10-20-plattform-anforderungen.md`: aktuelle Anforderungen von Claude, ChatGPT/Codex und Gemini an Skills, Plugins und Marketplaces, Kompatibilitätsprüfung von v0.2.0 und empfohlene Änderungen (u. a. Gemini-Skill statt auslaufender Gems).
 
