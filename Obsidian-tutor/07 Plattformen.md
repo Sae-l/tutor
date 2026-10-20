@@ -82,4 +82,4 @@ Anweisungen und Dateiquellen beschreibt die [offizielle Google-Anleitung](https:
 | Zustand | Sprache und Dauermodus über Nachrichten; Einzelbefehl ändert gespeicherten Zustand nicht. |
 | Kontextgrenzen und Speicher | Getrennte Gespräche und Wiederholung; keine unbegrenzte Persistenz annehmen. |
 
-Anleitungen erneut geprüft am 2026-10-16; am 2026-10-20 nach [Plattformanforderungen](../docs/planung/2026-10-20-plattform-anforderungen.md) angeglichen: Gemini-Skill mit `tutor-skill.zip` als Hauptweg, Gem auslaufend. Zur Vault-Erstellung wurde Tutor auf keiner Plattform im Benutzerkonto ausgeführt. Historie und geplante Architektur: [[19 Entscheidungen und Gesprächskontext]].
+Anleitungen erneut geprüft am 2026-10-16; am 2026-10-20 nach `docs/planung/2026-10-20-plattform-anforderungen.md` angeglichen: Gemini-Skill mit `tutor-skill.zip` als Hauptweg, Gem auslaufend. Zur Vault-Erstellung wurde Tutor auf keiner Plattform im Benutzerkonto ausgeführt. Historie und geplante Architektur: [[19 Entscheidungen und Gesprächskontext]].
