@@ -35,7 +35,7 @@ flowchart TD
     M --> B["build.py"]
     B --> C["Claude: Skill"]
     B --> O["ChatGPT: Plugin oder Projekt"]
-    B --> J["Gemini: Gem; nativer Skill geplant"]
+    B --> J["Gemini: Skill; Gem auslaufend"]
     C --> T["Jede Zieloberfläche getrennt prüfen"]
     O --> T
     J --> T

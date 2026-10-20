@@ -8,8 +8,8 @@ Stand v0.2.0: Claude Code und Codex nutzen dasselbe Pluginpaket. Seit rc.3 gelte
 
 Im Repository `python build.py` ausführen. Das erzeugte [`dist/tutor-chatgpt.zip`](../dist/tutor-chatgpt.zip) enthält das Plugin mit allen Skilldateien und Lizenz.
 
-1. In ChatGPT **Plugins → Hinzufügen → Plugin-Archiv hochladen** auswählen (am 15.10.2026 in der deutschen Weboberfläche sichtbar).
-2. `tutor-chatgpt.zip` unverändert auswählen, Importergebnis prüfen und das Plugin aktivieren. Dieser Weg hängt von Konto und Oberfläche ab.
+1. Als **Workspace-Admin** in ChatGPT **Admin → Plugins → Hinzufügen → „Plugin hochladen“** auswählen. Laut ChatGPT-Hilfe ist das eine Admin-Funktion; bei Enterprise ist die Berechtigung standardmäßig aus. Die Hilfeseite war nur über Suchausschnitte lesbar. Für Plus/Pro-Einzelkonten ist kein Upload-Weg belegt; dort den [lokalen Marketplace](#zusätzlicher-desktop-weg-lokaler-marketplace) in ChatGPT Desktop nutzen.
+2. `tutor-chatgpt.zip` unverändert auswählen, Importergebnis prüfen und das Plugin aktivieren.
 3. Einen neuen Chat beginnen, über `@` den Tutor auswählen und `hilfe` senden. Erwartet: Befehlskarte mit elf Modi.
 4. Eine Aufgabe mit `tipp` senden, dann `lösung`. Vor Abruf darf kein Ergebnis erscheinen. Anschließend automatische Aktivierung und weitere Fälle nach der Akzeptanzmatrix prüfen.
 
@@ -32,7 +32,11 @@ python build.py
 codex plugin marketplace add ./dist/chatgpt
 ```
 
-Der Befehl registriert die Quelle in deiner Codex-Konfiguration. Der Build selbst ändert keine Benutzereinstellungen. Danach:
+Der Befehl registriert die Quelle in deiner Codex-Konfiguration. Der Build selbst ändert keine Benutzereinstellungen.
+
+**Codex CLI:** In der Codex-TUI `/plugins` aufrufen, die Quelle **Tutor** wählen und **tutor** installieren. Danach eine neue Sitzung starten, damit der Skill geladen wird. Die IDE-Erweiterung unterstützt keine Plugins.
+
+**ChatGPT Desktop:**
 
 1. ChatGPT Desktop neu starten, das Pluginverzeichnis öffnen und die Quelle **Tutor** (`tutor` bzw. beim eigenen Build `tutor-local`) auswählen.
 2. Das Plugin **tutor** installieren und aktivieren. Es enthält genau einen Skill.
@@ -77,4 +81,4 @@ Beim automatisierten Importversuch am 15.10.2026 war der Web-Importer erreichbar
 
 Das Plugin bringt keine Netzwerkwerkzeuge mit. Deine Gespräche und hochgeladenen Dateien verarbeitet ChatGPT nach deinen Konto-/Workspaceeinstellungen. `!issue` gibt nur einen öffentlichen GitHub-Link aus; keine privaten Aufgaben, Fotos oder persönlichen Daten in Issues schreiben.
 
-Offizielle Grundlagen, am 15.10.2026 geprüft: [Skillformat und Oberflächen](https://learn.chatgpt.com/docs/build-skills), [Pluginpakete und lokale Marketplaces](https://developers.openai.com/plugins/build/plugins), [Installation und Auswahl](https://learn.chatgpt.com/docs/plugins). Diese Dokumentation belegt den Bereitstellungsweg, keine erfolgreiche Tutorinstallation auf deinem Konto.
+Offizielle Grundlagen, am 20.10.2026 abgerufen: [Skillformat und Oberflächen](https://learn.chatgpt.com/docs/build-skills), [Pluginpakete](https://developers.openai.com/plugins/build/plugins), [Codex-Marketplace](https://developers.openai.com/codex/plugins/build), [Installation und `/plugins`](https://learn.chatgpt.com/docs/plugins), [zulässige Kategorien](https://developers.openai.com/plugins/deploy/submission-errors), [Agent Plugins](https://agent-plugins.org/specification). Der Admin-Upload stammt aus Suchausschnitten der ChatGPT-Hilfe (unbestätigt). Einzelheiten: [Planungsnotiz](planung/2026-10-20-plattform-anforderungen.md). Diese Dokumentation belegt den Bereitstellungsweg, keine erfolgreiche Tutorinstallation auf deinem Konto.
