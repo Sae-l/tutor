@@ -24,8 +24,8 @@ status: zieloberflaechen-offen
 | Claude Skill | M01-A…M10-C = 30, G01…G33 = 33, dazu D1…D3 | Jede Teilaussage jedes Falls besteht; Protokoll für den hochgeladenen Skill. Das ist das Release-Gate. |
 | ChatGPT Projekt | M01-B…M10-B, G02/G03/G05/G25/G26/G28 und Darstellung | Gilt nur für diesen Weg; keine Übertragung der Pluginbewertung. |
 | ChatGPT Plugin | H01…H05, M01-B…M10-B, G02/G03/G05/G13/G25/G26/G28/G29/G32/G33, D1…D3 | Installation, Aktivierung, Verhalten und Darstellung dokumentiert; Build allein genügt nicht. |
-| Gemini Gem – **hier neu vorgeschlagen** | Projektgruppe plus G13/G29/G32/G33 sowie Erstellen, Speichern und Aufrufen des Gems | Gruppe noch festlegen und ausführen; die aktuelle Quelle hat kein eigenes Gemini-Gate. |
-| Gemini nativer Skill – **Architekturvorschlag** | Dieselben 63 Kernfälle und D1…D3 wie Claude, plus eigene Import-/Aktivierungsfälle | Erst Paket erzeugen und installieren; kein geltendes Repository-Gate und kein ausgeführter Lauf. |
+| Gemini Gem (auslaufend) – **hier neu vorgeschlagen** | Projektgruppe plus G13/G29/G32/G33 sowie Erstellen, Speichern und Aufrufen des Gems | Gruppe noch festlegen und ausführen; die aktuelle Quelle hat kein eigenes Gemini-Gate. |
+| Gemini Skill – **hier neu vorgeschlagen** | Dieselben 63 Kernfälle und D1…D3 wie Claude, plus eigene Import-/Aktivierungsfälle | Erst Import von `tutor-skill.zip` testen; kein geltendes Repository-Gate und kein ausgeführter Lauf. |
 
 H01…H05 gehören zum Plugin; H01 nicht als Gem-Installationstest umdeuten. D4 zum Aufklappblock ist informativ und kein Gate, da Lösungen ohnehin erst auf Abruf erscheinen. Die Kursfälle K01…K06 sind vom v0.2-Gate getrennt.
 

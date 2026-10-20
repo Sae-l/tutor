@@ -79,7 +79,7 @@ marketplace = {
     "interface": {"displayName": "Tutor"},
     "plugins": [{"name": "tutor", "source": {"source": "local", "path": "./plugins/tutor"},
                  "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
-                 "category": "Productivity"}],
+                 "category": "Education & Research"}],
 }
 outputs = {
     "system-prompt.md": out.encode("utf-8"),

@@ -1,7 +1,7 @@
 ---
 title: Claude, ChatGPT und Gemini
 tags: [tutor, kompatibilitaet]
-updated: 2026-10-16
+updated: 2026-10-20
 status: abnahme-offen
 ---
 
@@ -19,8 +19,8 @@ status: abnahme-offen
 | Claude Skill | Skillquelle und ZIP-Verpackungsweg | Claude-Code-CLI-Protokoll vom 2026-10-15: 16 Fälle, 13 bestanden und drei fehlgeschlagen, älterer Commit | Erfüllt nicht das Gate für einen auf claude.ai hochgeladenen Skill. |
 | ChatGPT Plugin | `dist/tutor-chatgpt.zip` und lokaler Marketplace | Vorbereitungsprotokoll: automatischer Import nicht abgeschlossen. Separater freier Test: Skill und Plugin verwendet, jedoch Modell, Hash und Installationsversion nicht erfasst | Teilversuch mit Abweichungen; keine Abnahme. |
 | ChatGPT Projekt | `dist/kern.md` und `dist/system-prompt.md` | Anleitung und geplante Fälle; kein eigener vollständiger Abnahmelauf gefunden | Experimentell. |
-| Gemini Gem | Kern und System-Prompt als Wissen | Kein Gemini-Ausführungsprotokoll gefunden | Nicht geprüft. |
-| Gemini nativer Skill | In der Plattformplanung vorgesehen; noch kein `dist/tutor-gemini.zip` | Kein Tutor-Import oder Modellergebnis gefunden | Vorgeschlagen, nicht implementiert oder abgenommen. |
+| Gemini Skill (Hauptweg) | Vorhandenes `tutor-skill.zip`; kein eigenes Gemini-Paket | Kein Tutor-Import oder Modellergebnis gefunden | Dokumentiert, experimentell, nicht geprüft. |
+| Gemini Gem (auslaufend) | Kern und System-Prompt als Wissen | Kein Gemini-Ausführungsprotokoll gefunden | Nicht geprüft; endet für private Konten ab November 2026, Workspace 2027. |
 
 Das freie ChatGPT-Protokoll war bei der Vault-Erstellung lokal unversioniert; eine Veröffentlichung auf GitHub wird nicht vorausgesetzt. Modellnamen im Claude-Protokoll sind Angaben des damaligen Laufs; ihre heutige Verfügbarkeit wurde nicht geprüft.
 
@@ -36,7 +36,7 @@ Die erneute GitHub-Abfrage bestätigt die vorhandenen Pakete der [Vorabversion v
 Bei Bedarf lokal aus dem letzten Commit bauen, aus der Repository-Wurzel:
 
 ```powershell
-git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
+git archive --format=zip -o tutor-skill.zip HEAD tutor/
 Get-FileHash -Algorithm SHA256 tutor-skill.zip
 ```
 
@@ -51,17 +51,19 @@ Dieser Befehl verwendet **HEAD**, ohne uncommittete Änderungen. Die getestete D
 
 ## ChatGPT: Plugin
 
-`docs/CHATGPT.md` beschreibt den Import von `dist/tutor-chatgpt.zip` über Plugins, sofern im Konto verfügbar, sowie einen lokalen Marketplace über Codex Desktop. Die [offizielle Anleitung Build skills](https://learn.chatgpt.com/docs/build-skills) erläutert die Plattform. Verfügbarkeit hängt von Konto und Oberfläche ab.
+`docs/CHATGPT.md` beschreibt den Import von `dist/tutor-chatgpt.zip` als Workspace-Admin-Funktion (für Plus/Pro nicht belegt), einen lokalen Marketplace für ChatGPT Desktop sowie die Installation über `/plugins` in der Codex CLI. Die [offizielle Anleitung Build skills](https://learn.chatgpt.com/docs/build-skills) erläutert die Plattform. Verfügbarkeit hängt von Konto und Oberfläche ab.
 
 Mit `@tutor` auswählen und `hilfe` senden; automatische Aktivierung separat testen. Während der Messung keinen zusätzlichen Tutor-Projektprompt verwenden. Kopierte Dateien oder eine Auswahl über `@` belegen weder automatische Aktivierung noch korrekte Grafiken. Bei der Vault-Erstellung wurden weder Browserrechte verändert noch Dateien hochgeladen.
 
-## Gemini: nativer Skill
+## Gemini: Skill (Hauptweg)
 
-Die [offizielle Skill-Anleitung](https://support.google.com/gemini/answer/17094296?hl=en) beschreibt den Import unter Customize → Skills → Upload: `SKILL.md` im Hauptordner sowie Referenzen gemeinsam hochladen. Für Tutor ist ein entsprechendes ZIP mit unveränderten Quellen geplant; `build.py` erzeugt es noch nicht. Claude- und ChatGPT-Archive nicht ungeprüft als Gemini-Paket bezeichnen.
+Die [offizielle Skill-Anleitung](https://support.google.com/gemini/answer/17094296?hl=en) beschreibt den Import unter Einstellungen → Skills → Erstellen: `SKILL.md`, Ordner oder ZIP mit `SKILL.md` im Hauptordner; Name gleich Ordnername, höchstens 100 MB. README und Website nennen dafür das vorhandene `tutor-skill.zip`. Offen ist, ob Gemini das ZIP mit dem Ordner `tutor/` an oberster Stelle annimmt. Erst mit diesem ZIP testen; nur bei Fehlschlag ein eigenes Gemini-Paket bauen.
 
-Google nennt aktuell ein aktiviertes „Keep Activity“ als Voraussetzung. Das betrifft die Datenentscheidung im eigenen Konto; diese Dokumentation verändert keine Aktivitätseinstellung. Nach verfügbarer Installation explizite und automatische Aktivierung, Modulzugriff und dieselben Verhaltensfälle getrennt prüfen. Es liegt kein Testergebnis für Tutor vor.
+Voraussetzungen laut Google: 18+, aktiviertes „Keep Activity“, Hochladen nur im Web oder in der Mac-App; Aufruf mit `/` oder `@`, sonst automatische Auswahl. „Keep Activity“ betrifft die Datenentscheidung im eigenen Konto; diese Dokumentation verändert keine Aktivitätseinstellung. Nach der Installation explizite und automatische Aktivierung, Modulzugriff und dieselben Verhaltensfälle getrennt prüfen. Es liegt kein Testergebnis für Tutor vor.
 
-## Gemini: bisheriger Gem-Weg
+## Gemini: Gem-Weg (auslaufend)
+
+Gems werden laut [Google](https://support.google.com/gemini/answer/18560919) für private Konten ab November 2026 und für Workspace 2027 in Skills umgewandelt. Der Weg bleibt nur bis dahin als Zusatz.
 
 1. In Gemini Gems → New Gem öffnen.
 2. `kern.md` als Anweisung und `system-prompt.md` unter Knowledge → Add files hinzufügen; speichern.
@@ -80,4 +82,4 @@ Anweisungen und Dateiquellen beschreibt die [offizielle Google-Anleitung](https:
 | Zustand | Sprache und Dauermodus über Nachrichten; Einzelbefehl ändert gespeicherten Zustand nicht. |
 | Kontextgrenzen und Speicher | Getrennte Gespräche und Wiederholung; keine unbegrenzte Persistenz annehmen. |
 
-Anleitungen erneut geprüft am 2026-10-16; nativen Gemini-Skillweg ergänzt. Zur Vault-Erstellung wurde Tutor auf keiner Plattform im Benutzerkonto ausgeführt. Historie und geplante Architektur: [[19 Entscheidungen und Gesprächskontext]].
+Anleitungen erneut geprüft am 2026-10-16; am 2026-10-20 nach [Plattformanforderungen](../docs/planung/2026-10-20-plattform-anforderungen.md) angeglichen: Gemini-Skill mit `tutor-skill.zip` als Hauptweg, Gem auslaufend. Zur Vault-Erstellung wurde Tutor auf keiner Plattform im Benutzerkonto ausgeführt. Historie und geplante Architektur: [[19 Entscheidungen und Gesprächskontext]].

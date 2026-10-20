@@ -9,6 +9,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Recherchenotiz `docs/planung/2026-10-20-plattform-anforderungen.md`: aktuelle Anforderungen von Claude, ChatGPT/Codex und Gemini an Skills, Plugins und Marketplaces, Kompatibilitätsprüfung von v0.2.0 und empfohlene Änderungen (u. a. Gemini-Skill statt auslaufender Gems).
 
 ### Geändert
+- Gemini: Skill-Upload von `tutor-skill.zip` (Einstellungen → Skills → Erstellen; 18+, Keep Activity, Upload im Web oder in der Mac-App, Aufruf mit `/` oder `@`) als Hauptweg in README, Landingpage und Vault; Gem-Weg als auslaufend gekennzeichnet (private Konten ab November 2026, Workspace 2027). Experimentell, nicht geprüft; offen, ob Gemini das ZIP mit `tutor/` an oberster Stelle annimmt.
+- Codex-Marketplace: Kategorie „Education & Research“ statt „Productivity“ (`.agents/plugins/marketplace.json`, erzeugter lokaler Marketplace).
+- `docs/CHATGPT.md`: Web-Upload als Workspace-Admin-Funktion gekennzeichnet, Einzelkonten auf den Desktop-Marketplace verwiesen, Installation über `/plugins` in der Codex CLI ergänzt, Quellen auf Stand 20.10.2026.
+- README „Selbst bauen“ und Vault-Notiz „07 Plattformen“: `git archive --format=zip -o tutor-skill.zip HEAD tutor/` wie in CONTRIBUTING.
 - CONTRIBUTING nennt die Ausnahme für v0.2.0 und ein stabiles Releasebeispiel; SECURITY nennt v0.2.0 als unterstützte Version; Landingpage-Badge „Release-Gate“ entfernt; Vault-Notiz „11 Website“ auf v0.2.0.
 - Landingpage-Footer neu gegliedert: Marke mit deutscher Kurzbeschreibung und PayPal-Unterstützung, Spalten „GitHub“ (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis) und „Über mich“ (LinkedIn, Instagram, PayPal), Datenschutz sowie Abschlusszeile mit Lizenz, Version und „Nach oben“.
 - Footer: Unterstützungstext nennt den Nutzen (kostenlos, werbefrei, ohne Tracking); doppelter PayPal-Link unter „Über mich“ entfernt, ein klarer Aufruf bleibt.

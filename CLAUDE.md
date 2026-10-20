@@ -1,6 +1,6 @@
 # tutor – Projektstand
 
-Öffentlicher Lern-Tutor für MINT-Aufgaben im ersten Studienjahr an deutschsprachigen Hochschulen; ADHS-freundlich gestaltet. Gemeinsame Skillquelle für Claude und das erzeugte ChatGPT-Plugin; System-Prompt und Kern für ChatGPT Projekt und Gemini. ChatGPT-Wege experimentell, noch nicht auf der Zieloberfläche abgenommen. Planung: Map #9 „Tutor public release v0.2“.
+Öffentlicher Lern-Tutor für MINT-Aufgaben im ersten Studienjahr an deutschsprachigen Hochschulen; ADHS-freundlich gestaltet. Gemeinsame Skillquelle für Claude, Gemini-Skill (experimentell, `tutor-skill.zip`) und das erzeugte ChatGPT-Plugin; System-Prompt und Kern für ChatGPT Projekt und den auslaufenden Gemini-Gem. ChatGPT-Wege experimentell, noch nicht auf der Zieloberfläche abgenommen. Planung: Map #9 „Tutor public release v0.2“.
 
 ## Aufbau
 - `tutor/SKILL.md` – Router: Zweck, Ablauf, Befehlstabelle (11 Modi), Lösungsschutz, Haltung. Abschnitte zwischen `<!-- kern -->` und `<!-- /kern -->` bilden `dist/kern.md`.

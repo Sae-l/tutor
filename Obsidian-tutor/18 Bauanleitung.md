@@ -56,9 +56,8 @@ python -B -m unittest discover -s tests -v
 | Ziel | Heute vorhanden | Bauweg |
 |---|---|---|
 | ChatGPT Plugin | `dist/tutor-chatgpt.zip` | `python build.py`; Pluginmanifest an der Archivwurzel, Skill unter `skills/tutor/`. |
-| ChatGPT Projekt / bisheriger Gem | `dist/kern.md`, `dist/system-prompt.md` | Derselbe Builder; Einrichtung getrennt nach [[07 Plattformen]]. |
-| Claude Skill | Releaseanhang `tutor-skill.zip` | Separater Git-Archivschritt aus dem Commit. |
-| Gemini nativer Skill | Architekturvorschlag für `dist/tutor-gemini.zip` | Noch kein solches Builderprodukt. `SKILL.md` soll an der Archivwurzel liegen. Import und Verhalten bleiben zu prüfen. |
+| ChatGPT Projekt / Gem (auslaufend) | `dist/kern.md`, `dist/system-prompt.md` | Derselbe Builder; Einrichtung getrennt nach [[07 Plattformen]]. |
+| Claude Skill und Gemini Skill | Releaseanhang `tutor-skill.zip` | Separater Git-Archivschritt aus dem Commit. Für Gemini zuerst dieses ZIP testen; ein eigenes Gemini-Paket nur bei Fehlschlag des Imports. |
 
 Claude-Paket aus der Repositorywurzel:
 

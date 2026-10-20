@@ -140,7 +140,7 @@ Danach die Quelle **Tutor** im Pluginverzeichnis öffnen und **tutor** installie
 ```bash
 git clone https://github.com/Sae-l/tutor.git
 cd tutor
-git archive --format=zip --prefix=tutor/ -o tutor-skill.zip HEAD:tutor
+git archive --format=zip -o tutor-skill.zip HEAD tutor/
 ```
 
 </details>
@@ -176,13 +176,15 @@ Ein Befehlswort steht am Anfang der Nachricht (z. B. Foto + „tipp“). Mit `!`
 | **Claude Skill** (empfohlen) | `tutor-skill.zip` | primär; Release-Gate mit allen Akzeptanzfällen |
 | [ChatGPT Plugin](docs/CHATGPT.md#native-variante-plugin-archiv) | `tutor-chatgpt.zip`; alternativ lokaler Marketplace `dist/chatgpt/` | experimentell; noch nicht auf ChatGPT abgenommen |
 | ChatGPT Projekt | `kern.md` als Anweisung, `system-prompt.md` als Datei | experimentell; Teilabnahme vorgesehen |
-| Gemini (Gem bzw. Gemini-Skill) | wie ChatGPT Projekt | experimentell, nicht geprüft |
+| Gemini Skill | `tutor-skill.zip` | experimentell, nicht geprüft; offen, ob Gemini das ZIP mit dem Ordner `tutor/` an oberster Stelle annimmt |
+| Gemini Gem (auslaufend) | wie ChatGPT Projekt | endet für private Konten ab November 2026, für Workspace 2027; nicht geprüft |
 
-Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatGPT-ZIP und Promptdateien entsprechen `dist/`; das Claude-Skill-ZIP enthält die versionierte Quelle `tutor/`.
+Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatGPT-ZIP und Promptdateien entsprechen `dist/`; das Skill-ZIP (Claude, Gemini) enthält die versionierte Quelle `tutor/`.
 
 - **ChatGPT:** Plugin, Projektweg und Funktionsprüfung beschreibt die [Schritt-für-Schritt-Anleitung](docs/CHATGPT.md). Vorgesehen sind Plugin und Projekt, kein neuer Custom GPT ([OpenAI zu Skills und Plugins](https://learn.chatgpt.com/docs/build-skills)).
 - **ChatGPT Projekt:** neues Projekt anlegen, den Inhalt von `kern.md` in die Projektanweisungen kopieren und `system-prompt.md` als Projektdatei hinzufügen.
-- **Gemini:** neuen Gem anlegen, `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Wissen hochladen.
+- **Gemini Skill:** in der [Gemini-App](https://gemini.google.com) unter *Einstellungen → Skills → Erstellen* `tutor-skill.zip` unverändert hochladen; aufrufen mit `/` oder `@`. Voraussetzungen laut [Google-Hilfe](https://support.google.com/gemini/answer/17094296): 18+, „Keep Activity“ eingeschaltet, Hochladen nur im Web oder in der Mac-App. Ungetestet; ob der Import mit dem Ordner `tutor/` an oberster Stelle klappt, ist offen.
+- **Gemini Gem (auslaufend):** neuen Gem anlegen, `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Wissen hochladen. Gems werden laut [Google](https://support.google.com/gemini/answer/18560919) für private Konten ab November 2026 und für Workspace 2027 in Skills umgewandelt.
 
 `kern.md` hat höchstens 4000 Zeichen (internes Buildbudget, keine offizielle Plattformgrenze). Menünamen können abweichen; Formeldarstellung, RTL und Aufklappblöcke sind dort nicht abgenommen.
 
@@ -242,9 +244,9 @@ Eine Quelle, alle Pakete:
 ```mermaid
 flowchart LR
     S["tutor/<br/>SKILL.md · 11 Modi · 4 Referenzen"] --> B(["python build.py"])
-    B --> C["tutor-skill.zip<br/>Claude"]
+    B --> C["tutor-skill.zip<br/>Claude; Gemini experimentell"]
     B --> O["tutor-chatgpt.zip<br/>ChatGPT, experimentell"]
-    B --> K["kern.md + system-prompt.md<br/>Gemini, experimentell"]
+    B --> K["kern.md + system-prompt.md<br/>ChatGPT Projekt; Gem auslaufend"]
     T["tests/ · CI Linux und Windows"] -. prüft .-> B
 ```
 

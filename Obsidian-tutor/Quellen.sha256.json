@@ -1,7 +1,7 @@
 {
   "date": "2026-10-20",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer v0.2.0 (wie rc.4: gemeinsames Pluginpaket fuer Claude Code und Codex) bewertet; Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
+  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -110,12 +110,12 @@
     },
     {
       "path": "build.py",
-      "sha256": "51cd623680ff4596790f53c1e44ead6ddebb26c99a946f40ecc6f2c7345e0528",
+      "sha256": "56b8c144b0ad201f8419007624085dbef1e83370acb3b1c062a7a02c4f8875af",
       "normalization": "utf8-lf"
     },
     {
       "path": "README.md",
-      "sha256": "510a8b1a0422f773ef3c9bd4701990778e321676ba333e074051fa6c201bf00d",
+      "sha256": "a66b5c7a8e6e606ecb8b22f3b35c2767fae0da90ef06d73b4d66ae563919c42a",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "053cff6d583c4e5ba7a3261f51c878f2bfd186ca326d22d5b2815861908e965e",
+      "sha256": "4fa4dae23f51129bb5c417c4bd8c05371f227ebccf06ed2644235db5b9ab5b1f",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "05a29d2781510fc52f86c247bfe2c036d48552fb8fc19340a2567d476e7aa4f2",
+      "sha256": "0eb4025d30504c8185e0d576de0652531a1f8d434629b4e1eb3ec54b74be0fe6",
       "normalization": "utf8-lf"
     },
     {
@@ -165,12 +165,12 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "28b484607ac170bbae8234d642b3fa879a96cf80946d0623c49d08fa54b881de",
+      "sha256": "c3867b0ec5c3dae9ed88a359f538acec656d8733930f91cd3469cd61f64d5742",
       "normalization": "utf8-lf"
     },
     {
       "path": "docs/index.html",
-      "sha256": "2d649ed27a19d05e664ec60846c0f3856bc0e7114fdc33bff97d3b9db0c3ecc2",
+      "sha256": "c5e02a4b00c6b83165b318d80496c9828cdb33d28407104cd04bfc8acf61845d",
       "normalization": "utf8-lf"
     },
     {
