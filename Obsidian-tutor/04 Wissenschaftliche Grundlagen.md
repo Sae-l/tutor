@@ -1,10 +1,14 @@
 ---
 title: Wissenschaftliche Grundlagen und Aussagegrenzen
 tags: [tutor, forschung, evidenz]
-updated: 2026-10-16
+updated: 2026-10-24
 ---
 
 # Wissenschaftliche Grundlagen
+
+## Einordnung des neuen Erklärstils
+
+Feynman-inspiriert bedeutet hier: einfacher Kern, neue Begriffe erläutern, bei Nutzen eine Analogie mit Grenze, Rückkehr zum Gesetz und aktive Verständnisfrage. Die Selbst-Erklärungsforschung motiviert diese Gestaltung; weder das Etikett noch ein schöner Text belegt Lernwirksamkeit des Tutors. Allgemeine Wissenschaftssprache nutzt Neugier und sparsamen Humor, ohne einzelne Kreatoren nachzuahmen. Pauschale kausale Lernversprechen wurden aus den Verhaltensregeln entfernt.
 
 ← [[00 Startseite]] · [[01 Ziel]] · [[12 Abnahmeplan]]
 

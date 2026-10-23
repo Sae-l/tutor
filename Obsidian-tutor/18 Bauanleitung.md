@@ -1,11 +1,15 @@
 ---
 title: Tutor aus den Quellen bauen und weiterentwickeln
 tags: [tutor, build, entwicklung]
-updated: 2026-10-16
+updated: 2026-10-24
 status: reproduzierbare-anleitung
 ---
 
 # Bauanleitung
+
+## Wiederholung für v0.3.0-rc.1
+
+Aus einem sauberen Git-Checkout bauen, Änderungen committen und danach alle 21 Tests ausführen: Der Archivtest vergleicht HEAD mit den Quelldateien. Anschließend Vaultprüfung und `claude plugin validate --strict ./dist/chatgpt/plugins/tutor`. Für den Tag beide ZIPs und Promptdateien aus exakt dem geprüften Commit bauen, Prüfsummen mit einfachen Assetnamen erzeugen und veröffentlichte Dateien unabhängig zurücklesen. Ohne vollständiges natives Gate nur als Vorabversion veröffentlichen.
 
 ← [[00 Startseite]] · [[03 Umsetzung]] · [[08 Repository-Aufbau]] · [[17 Fehlerdiagnose und Reparatur]]
 

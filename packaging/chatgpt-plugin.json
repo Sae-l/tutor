@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tutor",
-  "version": "0.2.1",
-  "description": "MINT-Aufgaben verstehen und selbst lösen: Erklärungen, Leitfragen und Fehlerdiagnose; Deutsch mit fünf weiteren Erklärsprachen.",
+  "version": "0.3.0-rc.1",
+  "description": "MINT verstehen: anschauliche Erklärungen, begründete Herleitungen, etablierte Lösungswege und technische Skizzen.",
   "author": {
     "name": "Saeed Alhalak",
     "url": "https://github.com/Sae-l"
@@ -10,7 +10,17 @@
   "homepage": "https://sae-l.github.io/tutor/",
   "repository": "https://github.com/Sae-l/tutor",
   "license": "MIT",
-  "keywords": ["tutor", "mint", "physik", "mathematik", "elektrotechnik", "lernen", "studium", "adhs"],
+  "keywords": [
+    "tutor",
+    "mint",
+    "physik",
+    "mathematik",
+    "elektrotechnik",
+    "lernen",
+    "studium",
+    "adhs",
+    "mechanik"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {

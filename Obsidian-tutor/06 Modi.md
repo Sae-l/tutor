@@ -1,10 +1,20 @@
 ---
 title: Die elf Tutor-Modi
 tags: [tutor, modi]
-updated: 2026-10-17
+updated: 2026-10-24
 ---
 
 # Die elf Modi
+
+## Präzisierungen in v0.3.0-rc.1
+
+- Erklär/Thema: einfacher Kern und Gesetz mit Voraussetzungen; Analogie nur bei Nutzen samt fachlicher Grenze. Erklär weiterhin ohne gelöstes Beispiel.
+- Voll: nachvollziehbare symbolische Schritte am anderen Beispiel; Originalherleitung bleibt geschützt.
+- Mittel/Lang: Voraussetzungen und Definitionsbereich vor kritischen Umformungen; Zahlen erst nach symbolischem Ansatz; Probe an der Originalaufgabe.
+- Lang: insgesamt bis zu drei passende etablierte Wege; verwandte Ansätze nicht als unabhängige Beweise verkaufen. Keine erzwungene Methodenanzahl oder erfundene Literatur.
+- Skizze: vorhandenes SVG/matplotlib beziehungsweise geeignete TikZ-Umgebung, kein kostenpflichtiger Bilderdienst; eindeutige Kräfte und Knoten, lesbar und farbunabhängig. Ein Normkatalog oder eine Zeichenoption belegt keine vollständige Normkonformität.
+- Eine kleine passive SVG-Vorlage für Rechteckwiderstand, Knoten und unverbundene Kreuzung ist mit Formreferenz circuitikz 1.8.7 enthalten; sie ersetzt keine Normprüfung.
+- Check/Kurz/Hilfe behalten ihre Sonderformen; Lösungsschutz gilt ebenso in Code, Legende und Alttext.
 
 ← [[00 Startseite]] · [[02 Funktionsweise]]
 

@@ -1,11 +1,15 @@
 ---
 title: Projektentscheidungen und Herkunft
 tags: [tutor, entscheidungen, herkunft]
-updated: 2026-10-17
+updated: 2026-10-24
 status: oeffentliche-zusammenfassung
 ---
 
 # Projektentscheidungen und Herkunft
+
+## Entscheidungen für v0.3.0-rc.1
+
+Freigegeben sind Umsetzung, Audit/Review, neue GitHub-Veröffentlichung und deutsche Vaultdokumentation. Bestehende elf Modi werden verbessert; keine neue Dienste- oder Agentenarchitektur im Produkt. Der Stil nutzt allgemeine Eigenschaften anschaulicher Wissenschaftsvermittlung. Mehrere Verfahren müssen fachlich unterschiedlich und anwendbar sein. Skizzen werden deterministisch mit vorhandenen Werkzeugen erzeugt. Eine Vorabversion trennt den technischen Abschluss vom weiterhin offenen nativen Gate. ECC-Konventionen dienen dem Arbeitsablauf; die Python-/Markdown-Konventionen des Tutors bleiben maßgeblich.
 
 ← [[00 Startseite]] · [[13 Quellen und Nachweise]] · [[14 Arbeitsplan]]
 
