@@ -9,7 +9,7 @@ status: reproduzierbare-anleitung
 
 ## Wiederholung für v0.3.0-rc.1
 
-Aus einem sauberen Git-Checkout bauen, Änderungen committen und danach alle 20 Tests ausführen: Der Archivtest vergleicht HEAD mit den Quelldateien. Anschließend Vaultprüfung und `claude plugin validate --strict ./dist/chatgpt/plugins/tutor`. Für den Tag beide ZIPs und Promptdateien aus exakt dem geprüften Commit bauen, Prüfsummen mit einfachen Assetnamen erzeugen und veröffentlichte Dateien unabhängig zurücklesen. Ohne vollständiges natives Gate nur als Vorabversion veröffentlichen.
+Aus einem sauberen Git-Checkout bauen, Änderungen committen und danach alle 21 Tests ausführen: Der Archivtest vergleicht HEAD mit den Quelldateien. Anschließend Vaultprüfung und `claude plugin validate --strict ./dist/chatgpt/plugins/tutor`. Für den Tag beide ZIPs und Promptdateien aus exakt dem geprüften Commit bauen, Prüfsummen mit einfachen Assetnamen erzeugen und veröffentlichte Dateien unabhängig zurücklesen. Ohne vollständiges natives Gate nur als Vorabversion veröffentlichen.
 
 ← [[00 Startseite]] · [[03 Umsetzung]] · [[08 Repository-Aufbau]] · [[17 Fehlerdiagnose und Reparatur]]
 

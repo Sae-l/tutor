@@ -40,7 +40,7 @@
     },
     {
       "path": "tutor/modes/skizze.md",
-      "sha256": "9e8dc48988a03169d9deddc95fe55a7d34f1d779e981dee039963a8d38a4909b",
+      "sha256": "f9b382b2e0db944cd1b0d4216b124fa8a18b886093cb76e13496cc663a8d7ab1",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "a7c8e9f41c515c75c2f68a4296aad8a38301104f990a4b3dedc4bda69be5dc74",
+      "sha256": "224b72933d973acfb631dc91e25ae5a91ce12e5b54241130e6ecd24789d28b0a",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "385f1bf12c47c50e534a098d0f048be605a286471f805a2a75222495893792a0",
+      "sha256": "dc525ff842b418c1070f4fc97761700e0bd4a4397c393fd4e0e1bd837e8477c0",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "bbf5ce7aaa7819b023cb43ff6b40d6539d0692fcb4dc0e8a5160e0b40417e03c",
+      "sha256": "cfbadc50a7ebd8ee949e2c9f60112347c6b422a01d23121d90a9ab5c8c3bae3c",
       "normalization": "raw"
     },
     {
@@ -221,7 +221,7 @@
     {
       "path": "tests/modi-v030.md",
       "normalization": "utf8-lf",
-      "sha256": "58b5c4df5913d010932fe5db0943c858fe9229561d13feea46e9cf95b0a72667"
+      "sha256": "b31f063df1dd364cc78f3e4de38d63356745dabb6507efa21b91f35d7e430d28"
     },
     {
       "path": "tests/test_fachreferenzen.py",
@@ -231,12 +231,17 @@
     {
       "path": "tests/protokolle/2026-10-24-v030-audit.md",
       "normalization": "utf8-lf",
-      "sha256": "dac4e8fda1726a29c008d15b6fe381dd0fafa9400bdf76cf465161a4267e1074"
+      "sha256": "b050f358ba4ad790bba4560e318295ce24ef12e9031e0aacd6c776ff6b4d1f80"
     },
     {
       "path": "docs/releases/v0.3.0-rc.1.md",
       "normalization": "utf8-lf",
-      "sha256": "9df6bc61335d371417f6988c6a99862ba56a1de4607d46e6d5d41515ab0a02ce"
+      "sha256": "e63858f7607d73d78127cae95cd472d46816ef6c60bb80b9fafc585aad8b7608"
+    },
+    {
+      "path": "tests/test_skizzenvorlagen.py",
+      "normalization": "utf8-lf",
+      "sha256": "621736514103edfc4d35ff7cc2a0a3eeb1d77a80c764976eae04da9db9071aea"
     }
   ],
   "base_git_head": "122a7f960b85328bfd8cba7804c34079c4b8bfa5"
