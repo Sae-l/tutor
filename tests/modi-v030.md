@@ -4,7 +4,7 @@ Diese selbst erstellten Aufgaben ergänzen `akzeptanz.md`. Sollwerte bleiben bei
 
 | ID | Eingabe | Fachliches und verhaltensbezogenes Kriterium |
 |---|---|---|
-| D01 | `thema: Was macht ein Kondensator?` | Einfacher Kern; falls Analogie, ihre Grenze; Ladung, Spannung, Kapazität und Gültigkeitsbedingungen verständlich; genau eine Verständnisfrage, Antwort zurückgehalten. Drei frische Gespräche. |
+| D01 | `thema: Was macht ein Kondensator?` | Einfacher Kern zu Ladungstrennung/-speicherung, Spannung und Kapazität; höchstens zwei nötige Gleichungen. Falls Analogie, konkrete fachlich richtige Grenze. Keine zusätzliche Überblicksvorlesung zu Wechselstrom, RC-Zeitverhalten oder Eigenresonanz. Genau eine unbeantwortete Verständnisfrage zu einer bereits erklärten Beziehung. Ideales und reales Bauteil nicht vermischen. Drei frische Gespräche. |
 | D02 | `erklär: Leiten Sie s(t) bei konstanter Beschleunigung aus v(t) her.` | Gesetze und Gerüst, keine vollständige Originalintegration oder fertige Beweiskette. |
 | D03 | `voll: Zwei Widerstände 1 kOhm und 2 kOhm liegen an 12 V in Reihe. Bestimme den Strom.` | Anderes Beispiel mit anderen Zahlen und Kontext plus mindestens einem sachlichen Unterschied; begründete Schritte; keine Originalrechnung oder fertige Zuordnung. |
 | D04 | `[ar] thema: Was bedeutet die Ableitung an einer Stelle?` | Arabischer Erklärungstext, deutsche Überschriften, einfacher Zugang, formale Bedeutung und unbeantwortete Verständnisfrage. Formeldarstellung auf Oberfläche gesondert prüfen. |

@@ -290,6 +290,8 @@ Ziel: Einen Begriff, ein Gesetz oder einen Satz verstehen, ohne Rechenaufgabe. W
 4, 5*, 6 als „✏️ Erklärung“, 11, 12, 17*, 🧩 Verständnisfrage, 18, 19.
 
 ## Regeln
+- **Offene Anfängerfrage:** genau den zentralen Zusammenhang erklären, höchstens zwei dafür nötige Gleichungen und ein kurzes Beispiel. Weitere Gesetze, Anwendungen oder Spezialfälle nur, wenn die konkrete Frage sie benötigt. Keine Überblicksvorlesung. Die Verständnisfrage prüft genau eine bereits erklärte Beziehung, keine neue Situation mit mehreren unbekannten Größen.
+- **Analogiegrenze:** den konkreten Unterschied zum fachlichen Modell benennen; keine pauschalen Aussagen über nicht behandelte Eigenschaften erfinden. Lässt sich die Grenze nicht sicher erklären, die Analogie weglassen. Ideales Bauteil und reales Verhalten ausdrücklich unterscheiden, wenn eine Aussage wie „kein Strom“ sonst zu allgemein wäre.
 - **🛠 So hilft es beim Lösen:** nach der Erklärung 2–4 Zeilen: an welchen Signalen in einer Aufgabe man erkennt, dass dieses Thema gebraucht wird, und welcher erste Schritt dann folgt. Kein vollständig gelöstes Beispiel.
 - Unter „✏️ Erklärung“: vom einfachen Kern aus „🧠 Idee“ zum Gesetz oder Satz mit Bedeutung der Symbole und Voraussetzungen übergehen; dann ein zulässiges Zahlen- oder Alltagsbeispiel ohne Originalrechnung. Eine hilfreiche Analogie ist optional und nennt ihre Grenze; keine Analogie erzwingen. Bei Beweisen nur Idee, benötigte Regeln und Beweisgerüst; die vollständige Originalbeweiskette erst nach eindeutigem Abruf oder im Lösungsmodus.
 - Gültigkeitsbedingungen nennen: wann gilt das Gesetz nicht?
