@@ -1,5 +1,14 @@
 # Änderungen
 
+## [0.3.0-rc.1] – 2026-10-24
+
+- Feynman-inspirierte Erklärungen mit einfachen Worten, optionaler Analogie samt Grenze und aktivem Verständnischeck.
+- Begründete symbolische Herleitungen mit Voraussetzungen, Definitionsbereich und Probe; Lösungsschutz bleibt vorrangig.
+- Lang vergleicht bis zu drei tatsächlich verschiedene etablierte Methoden, ohne eine Methodenanzahl oder Quellen zu erfinden.
+- Technische Skizzen mit kontrollierten vorhandenen Werkzeugen, klaren Systemgrenzen, Schaltungstopologie und ehrlichen Norm-/Darstellungsgrenzen. Keine Bildgenerierung erforderlich.
+- Fachliche Abnahmeaufgaben, automatisch geprüfte Sollwerte und aktualisierte deutsche Obsidian-Dokumentation.
+- Vorabversion: vollständige native Web-/App-Abnahme und Lernwirksamkeit weiterhin offen.
+
 Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Versionen erst ab dem ersten Release; Ablauf in CONTRIBUTING.md.
 
 ## [Unveröffentlicht]

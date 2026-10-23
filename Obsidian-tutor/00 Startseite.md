@@ -2,11 +2,15 @@
 title: Tutor – Wissenslandkarte
 aliases: [Tutor, Skill-Dokumentation]
 tags: [tutor, index]
-updated: 2026-10-17
+updated: 2026-10-24
 status: repository-dokumentation
 ---
 
 # Tutor – von der Idee zur Anwendung
+
+## Aktueller Stand: v0.3.0-rc.1 (24.10.2026)
+
+Die neuen Regeln verbessern verständliche Ideen, Herleitungen, Methodenvergleich und technische Skizzen. Elf Befehle, Sprachwahl und Lösungsschutz bleiben erhalten. Es handelt sich um eine Vorabversion mit offener nativer Modellabnahme. Einstieg: [[06 Modi]], [[12 Abnahmeplan]], [[16 Prüfergebnis]] und [[19 Entscheidungen und Gesprächskontext]]. Ältere datierte Nachweise in diesem Vault bleiben historische Befunde.
 
 > [!abstract] Hier beginnen
 > Dieser deutschsprachige Obsidian-Vault erklärt den Lern-Tutor, seine Gestaltung, Dateien und Prüfverfahren. Nach dem Klonen den Unterordner `Obsidian-tutor` in Obsidian als Vault öffnen und mit dieser Seite beginnen. Community-Plugins und ein Veröffentlichungsabonnement sind nicht erforderlich.

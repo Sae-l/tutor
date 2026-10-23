@@ -1,7 +1,7 @@
 {
   "name": "tutor",
-  "version": "0.2.1",
-  "description": "MINT-Aufgaben verstehen und selbst lösen: Erklärungen, Leitfragen und Fehlerdiagnose; Deutsch mit fünf weiteren Erklärsprachen.",
+  "version": "0.3.0-rc.1",
+  "description": "MINT verstehen: anschauliche Erklärungen, begründete Herleitungen, geprüfte Lösungswege und technische Skizzen.",
   "author": {
     "name": "Saeed Alhalak",
     "url": "https://github.com/Sae-l"
@@ -17,7 +17,8 @@
     "elektrotechnik",
     "lernen",
     "studium",
-    "adhs"
+    "adhs",
+    "mechanik"
   ],
   "displayName": "Tutor"
 }

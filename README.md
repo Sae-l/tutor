@@ -18,6 +18,10 @@ Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste
 
 > **In English:** A study tutor for first-year STEM exercises (physics, maths, electrical engineering) at German-speaking universities, packaged as a Claude Skill plus a generated system prompt for other chatbots. It explains and asks guiding questions before revealing solutions. Answers are in German by default; Arabic, Turkish, French, English or Urdu on request. The docs are in German because the target audience studies in German.
 
+## Neu in v0.3.0-rc.1
+
+Einfache Erklärungen mit passenden Vergleichen und deren Grenzen, begründete Herleitungen sowie bis zu drei sinnvolle Lösungswege. Technische Skizzen entstehen mit kontrolliertem Zeichencode statt kostenpflichtiger Bildgenerierung. Vorhandene Befehle und Lösungsschutz bleiben erhalten. Die Regeln richten sich weiterhin an das erste MINT-Studienjahr; ein Nutzen für jeden Studierenden ist ein Ziel, kein Wirksamkeitsnachweis. [Abnahmekriterien](tests/modi-v030.md) und [Releasegrenzen](docs/releases/v0.3.0-rc.1.md).
+
 ## Was der Tutor macht
 
 - **Erst verstehen:** erklärt Thema und nötige Gleichungen, stellt Leitfragen und findet den ersten Fehler im eigenen Rechenweg.
@@ -190,7 +194,7 @@ Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatG
 
 ## Stand und Grenzen
 
-- **Version v0.2.1, Lehrverhalten nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
+- **Vorabversion v0.3.0-rc.1, Lehrverhalten nicht vollständig abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
 - Formeln werden nur sauber dargestellt, wenn die Plattform `$$ ... $$` rendert; das ist nur informell beobachtet, nicht protokolliert.
 - Hochgeladene Dateien liest das Modell nicht immer vollständig; deshalb stehen die wichtigsten Regeln im Kern.
 - Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.

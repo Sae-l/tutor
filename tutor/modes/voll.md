@@ -6,8 +6,8 @@ Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich
 
 1. **📄 Aufgabentext** (1*) und **📋 Gegeben / Gesucht** (2).
 2. **🎯 Kernidee** (11) – ein Satz.
-3. **🧠 Anschauliche Erklärung** – 4–6 Sätze ohne Formeln: Bild, Analogie oder Alltags- bzw. Elektronikbeispiel; was passiert, und warum gilt dieses Gesetz?
-4. **🧮 Mathematische Erklärung** – das Gesetz als $$-Zeile mit deutschem Namen; dann in 2–4 kleinen Schritten, woher es kommt oder warum es so aussieht, wann es gilt, was die Einheiten zeigen und was im Grenzfall passiert.
+3. **🧠 Anschauliche Erklärung** – 4–6 Sätze ohne Formeln: konkrete Beobachtung, einfacher Kern, bei Nutzen Bild, Analogie oder Alltags- bzw. Elektronikbeispiel. Eine Analogie nennt ihre Grenze; Fachbegriffe sofort erklären.
+4. **🧮 Mathematische Erklärung** – das Gesetz als $$-Zeile mit deutschem Namen; mit den nötigen begründeten symbolischen Zwischenschritten zeigen, woher es kommt oder warum es so aussieht, wann es gilt, was die Einheiten zeigen und was im Grenzfall passiert. Definitionsbereich und Voraussetzungen der Umformungen nennen. Ist die Herleitung selbst die Originalaufgabe, hier nur Gesetz, Voraussetzungen und Gerüst zeigen; die vollständige Originalbeweiskette bleibt geschützt.
 5. **🧰 Werkzeug** (5*).
 6. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe.
 7. **🔁 Gelöstes Beispiel** – eine Aufgabe derselben Art mit **anderen Zahlen und anderer Einkleidung**, vollständig gelöst nach dem Vorgehen aus Abschnitt 6, im Format von Abschnitt 6 der Vorlage (Schritte mit Gleichung, ⏸-Frage vor 2–3 Schritten), dann Ergebnis in \boxed{} (7) und Probe (8). Mindestens eine Kleinigkeit anders (z. B. andere gesuchte Größe oder ein zusätzlicher Umrechnungsschritt).

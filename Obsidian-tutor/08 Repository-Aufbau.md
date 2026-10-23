@@ -1,10 +1,14 @@
 ---
 title: Repository und Buildpfad
 tags: [tutor, repository, architektur]
-updated: 2026-10-20
+updated: 2026-10-24
 ---
 
 # Aufbau des GitHub-Repositorys
+
+## Neue Prüfreferenzen
+
+`tests/modi-v030.md` enthält selbst erstellte fachliche und verhaltensbezogene Abnahmefälle. `tests/test_fachreferenzen.py` kontrolliert vier Gruppen ihrer Sollwerte mit der Standardbibliothek. `tests/protokolle/2026-10-24-v030-audit.md` trennt technische Prüfungen, Review und nicht ausgeführte Modellläufe. Releaseänderungen: `docs/releases/v0.3.0-rc.1.md`.
 
 ← [[00 Startseite]] · [[03 Umsetzung]] · [[09 Besucher und Inhalte]]
 

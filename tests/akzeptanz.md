@@ -1,5 +1,7 @@
 # Manuelle Abnahme des Tutors
 
+Zusätzlich für v0.3.0-rc.1: [verbesserte Modi und Fachreferenzen](modi-v030.md). Die dortigen Kriterien ergänzen das bestehende Release-Gate; Referenzrechnungen sind keine Modellabnahme.
+
 Status: Zieloberflächenabnahme für v0.2 offen. Ein begrenzter [Claude-CLI-Ersatzlauf](protokolle/2026-10-15-claude-code-cli.md) führte 16 Fälle aus, drei bestanden nicht; er ist kein Gate und kein ChatGPT-Nachweis. Die Python-Tests prüfen nur den Build und die Struktur, nicht das Lehrverhalten oder die Darstellung. Aufgaben hier sind selbst erstellt, keine offiziellen Klausuraufgaben (Ausnahme: Abschnitt „Kursaufgaben“).
 
 ## Release-Gate
