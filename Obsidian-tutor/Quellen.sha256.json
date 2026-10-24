@@ -231,12 +231,12 @@
     {
       "path": "tests/protokolle/2026-10-24-v030-audit.md",
       "normalization": "utf8-lf",
-      "sha256": "d6f6cc8697419765b6959575f57d2a05287d37282e3a95f2ed92371397f3bfd6"
+      "sha256": "3049ad1c1b2ee9b6c1df0521d664aab1357b8e341025d4ebd00f4642f4c12708"
     },
     {
       "path": "docs/releases/v0.3.0-rc.1.md",
       "normalization": "utf8-lf",
-      "sha256": "170091821bb893f8edac255f9013b7955af7c91ed2e7deac83e87d24ecb2c5ad"
+      "sha256": "5d3cfc279a5f5bfee16a711049173bbc2e1e35303a39345bc0d3ea8cec5f8e1b"
     },
     {
       "path": "tests/test_skizzenvorlagen.py",
