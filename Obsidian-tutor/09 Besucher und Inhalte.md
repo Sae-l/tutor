@@ -1,7 +1,7 @@
 ---
 title: Sichtbare und lokale Inhalte
 tags: [tutor, veroeffentlichung, datenschutz]
-updated: 2026-10-16
+updated: 2026-10-24
 ---
 
 # Besucher und Inhalte
@@ -19,7 +19,7 @@ flowchart LR
     E --> F["Grenzen, Datenschutz und Feedback"]
 ```
 
-## Vorgeschlagene Inhaltsaufteilung
+## Inhaltsaufteilung
 
 | Inhalt | Hauptwebsite | Repository oder Dokumentation | Lokal oder privat |
 |---|---|---|---|
@@ -35,6 +35,8 @@ flowchart LR
 | Agentenzustand, Speicher und Gerätepfade | Kein Nutzen für den Einstieg | Ausschließen | `.claude/`, `.agents/`, `.claude-flow/` |
 | Obsidian-Arbeitszustand | Nicht veröffentlichen | Nicht für den Einstieg nötig | `.obsidian/workspace*.json`; Sync- und Kontoeinstellungen privat prüfen |
 | Planungsverlauf | Einstieg nicht überladen | Bereinigte Auszüge bei Nutzen | Private Details lokal |
+
+Die Website und die gestraffte README führen von Verständnis und Moduswahl zur Einrichtung. `docs/README.md` bündelt Plattformanleitungen, Nachweise und Entwicklungswege. Builddetails bleiben über diesen Einstieg erreichbar. Beispiele sind redaktionell gekennzeichnet; Vorabstatus und offene native Abnahme stehen neben den Einrichtungswegen.
 
 ## Ausblenden ist kein Zugriffsschutz
 

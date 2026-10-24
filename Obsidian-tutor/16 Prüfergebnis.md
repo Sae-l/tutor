@@ -6,6 +6,10 @@ updated: 2026-10-24
 
 # Prüfergebnis
 
+## Besucherüberarbeitung vom 2026-10-24
+
+Zusätzlich zu den 21 Tests am Releasecommit bestehen lokal drei neue Websiteprüfungen (24 insgesamt), darunter drei Node-Verhaltensfälle. Die Vaultprüfung umfasst 55 Quellhashes. Die alte Aussage zur HTML-Gleichheit im Release-Nachweis gilt für dessen Abrufzeitpunkt; die Besucherseite wurde danach überarbeitet. Browserfälle und Grenzen sind in `tests/protokolle/2026-10-24-website.md` dokumentiert. Diese Änderungen erzeugen keine neue Tutor-Paketversion und schließen kein natives Plattform-Gate.
+
 ## Veröffentlichter und zurückgelesener Stand
 
 [v0.3.0-rc.1](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1) ist als **Pre-release** veröffentlicht. Tag und Pakete beziehen sich auf `ad7b056e3bc56c981377a96db74e427d0c34bebc`. Die fünf veröffentlichten Assets wurden erneut heruntergeladen: alle Bytes und SHA-256-Werte stimmen mit dem lokalen Releasebau überein; die Prüfsummendatei ist erfolgreich geprüft. GitHub CI und Pages für denselben Commit sind erfolgreich; die öffentliche Website liefert HTTP 200 und entspricht nach UTF-8/LF-Normalisierung der Releasequelle.

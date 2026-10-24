@@ -59,7 +59,11 @@ Ein Doppelklick auf eine Karte öffnet die zugehörige Notiz. Die Graph-Ansicht 
 > [!warning] Projektstatus
 > Dokumentiert ist der lokale Stand bei Commit `921409f2f7e0ccbe54e962ec8218024f74bc3fab` als Produktbasis; Dokumentationsänderungen dieser Fassung kommen hinzu. Vollständige Kompatibilität und Lernwirksamkeit sind nicht nachgewiesen. Eine Plattformanleitung oder ein erfolgreicher Paketbau ersetzt keine Abnahme. Siehe [[07 Plattformen]] und [[12 Abnahmeplan]].
 
-## Aktueller Nachweisstand
+## Besucherüberarbeitung vom 2026-10-24
+
+Website und README führen jetzt von Lernweg und Moduswahl zur Einrichtung. `docs/README.md` bündelt die Dokumentation. Lokal bestanden 24 automatische Tests einschließlich Websiteprüfungen; der Vault prüft 20 Notizen und 55 Quellhashes. Details und Grenzen stehen in `11 Website.md` und `tests/protokolle/2026-10-24-website.md`. Die Tutor-Pakete bleiben auf v0.3.0-rc.1; die native Verhaltensabnahme bleibt offen.
+
+## Historischer Nachweisstand vom 2026-10-16
 
 | Gegenstand | Ergebnis der Aktualisierung vom 2026-10-16 |
 |---|---|

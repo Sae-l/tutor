@@ -1,7 +1,7 @@
 {
   "date": "2026-10-24",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer v0.3.0-rc.1 nach inhaltlicher Bewertung der deutschen Notizen aktualisiert. Historische Live-Nachweise bleiben datiert. UTF-8/LF fuer Text, Binaerdateien roh.",
+  "scope": "Quellen nach Besucherueberarbeitung 2026-10-24 bewertet; Release-Nachweise bleiben historisch datiert. UTF-8/LF fuer Text, Binaerdateien roh.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "d2b98c493b2e6952431bbc04cdda5952b7e7fa1adf3d4cdf8cd4edc848857c80",
+      "sha256": "f3e9d99ed157923911505686acc8a894be26606693765b4f31b06a905eb53be1",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "19f58e917400ed4f1fb665c2894d7b4ef62bc8ded9d4ff800b6dde688cb1807c",
+      "sha256": "af390ad5ac905a1a51f4b48709d7cc6561464b5aa1aa1e8ff7df6ded60b80603",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "2eea8cdaef4734f7e18625b91b41c320a0fd42eb20e6553db37f978379265130",
+      "sha256": "cfcb24f3f2d470229929a62d0c8f2a8ab197402727cd5c704746767976951d69",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "c05b0a5340152954121162ef0fc9bfa134f5198b13d509efc2df56ffef48782a",
+      "sha256": "bc3b8dc74581ca6127db20d15269b90ca9f4e1a15b198e7cee61b62dbd89e109",
       "normalization": "utf8-lf"
     },
     {
@@ -242,6 +242,41 @@
       "path": "tests/test_skizzenvorlagen.py",
       "normalization": "utf8-lf",
       "sha256": "621736514103edfc4d35ff7cc2a0a3eeb1d77a80c764976eae04da9db9071aea"
+    },
+    {
+      "path": "docs/styles.css",
+      "normalization": "utf8-lf",
+      "sha256": "5e0e7418e01389a6394f05f4a927da808880e7117adc384d4c405bae69592b74"
+    },
+    {
+      "path": "docs/site.js",
+      "normalization": "utf8-lf",
+      "sha256": "6c5a330321e8cf1277d5ad99a5e140df9a93c3967672bcbf2497cba9f08b152f"
+    },
+    {
+      "path": "docs/README.md",
+      "normalization": "utf8-lf",
+      "sha256": "ab6f347dce804c0ed92e309a32a3bf0b6c270c4987cac0967e769a7981a25ba3"
+    },
+    {
+      "path": "docs/assets/tutor-preview.jpg",
+      "normalization": "raw",
+      "sha256": "ee72be3723a36d4643125762e6fa2fb3196f6b6a7f8184f8bac9bbef4cb0299a"
+    },
+    {
+      "path": "tests/test_website.py",
+      "normalization": "utf8-lf",
+      "sha256": "c9efd7dd01b0beee16b1b196cd05d038e5435df628745a8118a9a755b75ab4be"
+    },
+    {
+      "path": "tests/site.test.cjs",
+      "normalization": "utf8-lf",
+      "sha256": "4f6558cbc2f90558028a8d1d32e90c192356590c8fc1e1c23816dc77cd0723ff"
+    },
+    {
+      "path": "tests/protokolle/2026-10-24-website.md",
+      "normalization": "utf8-lf",
+      "sha256": "642d39f6131a6a18cae92506851373a66c5aa404018031b4e975f0d69a153a8f"
     }
   ],
   "base_git_head": "122a7f960b85328bfd8cba7804c34079c4b8bfa5"
