@@ -3,107 +3,786 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Tutor – Dein MINT-Lernweg. Schritt für Schritt.</title>
-<meta name="description" content="Mathematik, Physik, Elektrotechnik und Mechanik verstehen. Tutor begleitet dein erstes MINT-Studienjahr mit Erklärungen, Leitfragen und nachvollziehbaren Lösungswegen.">
-<meta name="theme-color" content="#f6f8f5">
+<title>Tutor – Physik und Mathe verstehen</title>
+<meta name="description" content="Lern-Tutor für Physik, Mathe und E-Technik im ersten Studienjahr. Erklärt, gibt Leitfragen und hält die Lösung zurück, bis du sie willst. Als Claude Skill.">
+<meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161412" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tutor – Dein MINT-Lernweg. Schritt für Schritt.">
-<meta property="og:description" content="Eine Aufgabe, die passende Hilfe und dein nächster Schritt zum Verstehen. Frei und quelloffen.">
+<meta property="og:title" content="Tutor – Physik und Mathe verstehen statt abschreiben">
+<meta property="og:description" content="Lern-Tutor für das erste Studienjahr: erklärt, stellt Leitfragen und hält die Lösung zurück, bis du sie willst.">
 <meta property="og:url" content="https://sae-l.github.io/tutor/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23214e40'/%3E%3Cpath d='M10 13h20M20 13v17' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css">
-<script src="site.js" defer></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232F6F5E'/%3E%3Cpath d='M6 18 L12 6 L18 18' fill='none' stroke='%23FAFAF9' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.6 13.6h6.8' stroke='%23FAFAF9' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* Schriften lokal (SIL OFL, Lizenzen in fonts/): keine Anfragen an Dritte */
+@font-face { font-family: "Geist"; font-weight: 100 900; font-display: swap; src: url(fonts/geist-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Geist"; font-weight: 100 900; font-display: swap; src: url(fonts/geist-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C0, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url(fonts/jetbrains-mono-400.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url(fonts/jetbrains-mono-500.woff2) format("woff2"); }
+@font-face { font-family: "Noto Naskh Arabic"; font-weight: 400; font-display: swap; src: url(fonts/noto-naskh-arabic.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: "Noto Nastaliq Urdu"; font-weight: 400; font-display: swap; src: url(fonts/noto-nastaliq-urdu.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+:root {
+  --paper: #FAFAF9;
+  --sheet: #FFFFFF;
+  --ink: #1C1917;
+  --pencil: #57534E;
+  --hairline: #E7E5E4;
+  --accent: #2F6F5E;
+  --accent-hover: #285F51;
+  --wash: #E8F1EE;
+  --amber: #B45309;
+  --shadow: 0 1px 2px rgba(28,25,23,.04), 0 8px 24px rgba(28,25,23,.05);
+  --sans: "Geist", ui-sans-serif, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section: clamp(3rem, 8vw, 6rem);
+  --grid-line: rgba(47,111,94,.07);
+  --spot: rgba(47,111,94,.07);
+  --ease: cubic-bezier(.2,.8,.2,1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #161412; --sheet: #1E1B19; --ink: #F5F5F4; --pencil: #A8A29E; --hairline: #2E2A27;
+    --accent: #6FB39F; --accent-hover: #8AC5B3; --wash: #1D2D28; --amber: #F59E0B;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+    --grid-line: rgba(111,179,159,.06); --spot: rgba(111,179,159,.09);
+    color-scheme: dark;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+code, .mono { font-family: var(--mono); font-size: .9375em; }
+p { margin: 0 0 1rem; max-width: 65ch; }
+h1, h2, h3 { margin: 0; letter-spacing: -.02em; line-height: 1.15; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 700; }
+h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -.01em; }
+.lead { color: var(--pencil); font-size: 1.125rem; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter); }
+section { padding: var(--section) 0; }
+section + section { border-top: 1px solid var(--hairline); }
+.eyebrow { font: 500 .8125rem/1 var(--mono); color: var(--pencil); margin-bottom: 1rem; display: block; }
+
+/* Header */
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 20; padding: .75rem 1rem; background: var(--accent); color: var(--paper); border-radius: .5rem; }
+.skip:focus { top: 1rem; color: var(--paper); }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
+.brand { font-weight: 700; font-size: 1.125rem; color: var(--ink); text-decoration: none; display: inline-flex; gap: .5rem; align-items: center; min-height: 44px; }
+.top nav { display: flex; gap: 1.5rem; }
+.top nav a { color: var(--pencil); text-decoration: none; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding-top: clamp(2rem, 6vw, 5rem); }
+.hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.hero h1 { font-size: clamp(2.25rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1.5rem; }
+.sketch-inline {
+  display: inline-block; vertical-align: -.08em; height: .78em; width: auto;
+  border: 1px solid var(--hairline); border-radius: .5rem; background: var(--sheet);
+  padding: .06em .18em; margin: 0 .08em;
+}
+.sketch-mobile { display: none; }
+.hero .lead { margin-bottom: 2rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; padding: 0 1.4rem;
+  background: var(--accent); color: var(--paper); border-radius: .75rem; text-decoration: none;
+  font-weight: 700; transition: transform .2s cubic-bezier(.2,.8,.2,1), background .2s;
+}
+.btn:hover { background: var(--accent-hover); color: var(--paper); }
+.btn:active { transform: translateY(1px); }
+.version { margin-top: 1rem; font: 400 .875rem var(--mono); color: var(--pencil); }
+
+.card { background: var(--sheet); border: 1px solid var(--hairline); border-radius: 1.25rem; box-shadow: var(--shadow); }
+.chat { padding: 1.25rem; font-size: .9688rem; margin: 0; }
+.chat-label { font: 500 .75rem var(--mono); color: var(--pencil); margin-bottom: .75rem; display: flex; justify-content: space-between; gap: 1rem; }
+.msg-user { background: var(--paper); border: 1px solid var(--hairline); border-radius: .9rem .9rem .25rem .9rem; padding: .75rem 1rem; margin: 0 0 1rem 2.5rem; }
+.msg-user .cmd { display: inline-block; margin-top: .4rem; font: 500 .8125rem var(--mono); color: var(--accent); }
+.msg-tutor h4 { margin: 1rem 0 .3rem; font-size: .8125rem; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
+.msg-tutor h4:first-child { margin-top: 0; }
+.msg-tutor p { margin: 0 0 .5rem; }
+.msg-tutor math[display="block"] { margin: .5rem 0; font-size: 1.15em; }
+.locked { margin-top: .75rem; padding: .6rem .8rem; border: 1px dashed var(--hairline); border-radius: .6rem; color: var(--pencil); font-size: .875rem; }
+
+/* Escalation */
+.sec-head { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); align-items: end; }
+.sec-head p { margin: 0; color: var(--pencil); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; }
+.steps li { position: relative; padding: 1.5rem 1.5rem 0 0; border-top: 2px solid var(--hairline); }
+.steps li::before {
+  counter-increment: s; content: counter(s);
+  position: absolute; top: -.85rem; left: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--accent); color: var(--accent);
+  font: 500 .75rem/1.25rem var(--mono); text-align: center;
+}
+.steps li:first-child { border-top-color: var(--accent); }
+.steps code { display: inline-block; font-size: 1.125rem; font-weight: 500; color: var(--ink); margin: .5rem 0 .4rem; }
+.steps p { color: var(--pencil); font-size: 1rem; margin: 0; }
+
+/* Modes */
+.modes { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.feature { padding: clamp(1.5rem, 3vw, 2.25rem); }
+.badge { display: inline-block; font: 500 .75rem/1 var(--mono); padding: .4rem .6rem; border-radius: 999px; background: var(--wash); color: var(--accent); }
+.badge.neutral { background: var(--paper); color: var(--pencil); border: 1px solid var(--hairline); }
+.feature h3 { font-size: 1.5rem; margin: 1rem 0 .75rem; }
+.feature h3 code { font-size: .9em; }
+.feature ul { margin: 1rem 0 0; padding-left: 1.1rem; color: var(--pencil); }
+.feature li { margin-bottom: .35rem; }
+.mode-list { list-style: none; margin: 0; padding: 0; }
+.mode-list li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--hairline); }
+.mode-list code { font-weight: 500; color: var(--accent); }
+.mode-list span { color: var(--pencil); }
+.mode-list li.group-label { display: block; font: 500 .75rem var(--mono); color: var(--pencil); padding: 1.5rem 0 .5rem; }
+.mode-list li.group-label:first-child { padding-top: 0; }
+
+/* Languages */
+.lang-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 1rem; }
+.chip {
+  min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--hairline);
+  background: var(--sheet); color: var(--ink); font: 500 .9375rem var(--sans); cursor: pointer;
+  display: inline-flex; align-items: center; gap: .5rem; transition: background .2s, border-color .2s;
+}
+.chip small { font: 400 .75rem var(--mono); color: var(--pencil); }
+.chip:hover { border-color: var(--pencil); }
+.chip[aria-pressed="true"] { background: var(--wash); border-color: var(--accent); }
+.chip[aria-pressed="true"] small { color: var(--accent); }
+.note { font-size: .9375rem; color: var(--pencil); }
+.sample { padding: clamp(1.25rem, 3vw, 2rem); }
+.sample h4 { margin: 0 0 .4rem; font-size: .8125rem; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
+.sample .body { margin-bottom: 1.25rem; min-height: 6.6em; }
+.sample [dir="rtl"] { font-size: 1.125rem; line-height: 1.9; }
+.sample [lang="ar"] { font-family: "Noto Naskh Arabic", var(--sans); }
+.sample [lang="ur"] { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", var(--sans); line-height: 2.3; }
+.terms { width: 100%; border-collapse: collapse; font-size: .9375rem; table-layout: fixed; }
+.terms th:first-child, .terms td:first-child { padding-inline-end: 1.5rem; }
+.terms th { text-align: start; font: 500 .75rem var(--mono); color: var(--pencil); padding: 0 0 .4rem; }
+.terms td { padding: .5rem 0; border-top: 1px solid var(--hairline); text-align: start; }
+.terms td:last-child { color: var(--pencil); }
+.terms[hidden], .terms-de[hidden] { display: none; }
+.terms-de { color: var(--pencil); font-size: .9375rem; margin: 0; }
+
+/* Setup */
+.setup { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.setup-main { padding: clamp(1.5rem, 3vw, 2.25rem); }
+.setup-main h3, .setup-side h3 { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 1.25rem; }
+.setup ol { margin: 0; padding: 0; list-style: none; counter-reset: n; }
+.setup ol > li { counter-increment: n; display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; padding: .75rem 0; border-top: 1px solid var(--hairline); }
+.setup ol > li::before { content: counter(n); font: 500 .875rem/1.9 var(--mono); color: var(--accent); }
+.setup ol > li p { margin: 0; }
+.setup-side { padding-top: clamp(0rem, 2vw, 2.25rem); }
+.setup-side p { color: var(--pencil); }
+.cmdline {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  background: var(--paper); border: 1px solid var(--hairline); border-radius: .75rem;
+  padding: .25rem .25rem .25rem 1rem; margin-top: .75rem;
+}
+.cmdline code { overflow-wrap: anywhere; }
+.copy {
+  min-height: 44px; min-width: 44px; padding: 0 .9rem; border: 1px solid var(--hairline); border-radius: .6rem;
+  background: var(--sheet); color: var(--ink); font: 500 .8125rem var(--sans); cursor: pointer; flex-shrink: 0;
+}
+.copy:hover { border-color: var(--pencil); }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; }
+.faq details { border-top: 1px solid var(--hairline); }
+.faq details:last-child { border-bottom: 1px solid var(--hairline); }
+.faq summary {
+  min-height: 44px; padding: .9rem 2rem .9rem 0; cursor: pointer; font-weight: 500; list-style: none; position: relative;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: .25rem; top: .8rem; font: 400 1.25rem var(--mono); color: var(--accent); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: var(--pencil); padding-bottom: 1rem; margin: 0; }
+
+/* Honest */
+.honest { display: grid; grid-template-columns: 5fr 7fr; gap: 2rem; }
+.honest ul { margin: 0; padding: 0; list-style: none; }
+.honest li { padding: .75rem 0; border-top: 1px solid var(--hairline); max-width: 65ch; }
+.honest li:first-child { border-top: 0; padding-top: 0; }
+.honest .warn { color: var(--amber); font-weight: 500; }
+
+/* Footer */
+footer { border-top: 1px solid var(--hairline); background: var(--sheet); padding: clamp(2.5rem, 6vw, 4rem) 0 1.5rem; font-size: .9375rem; color: var(--pencil); }
+.foot { display: grid; grid-template-columns: 4fr 3fr 3fr 3fr; gap: 2rem; }
+.foot h3 { color: var(--ink); font-size: .9375rem; margin-bottom: .5rem; }
+.foot .brand { margin-bottom: .75rem; }
+.foot p { margin: 0 0 .75rem; }
+.foot ul { list-style: none; margin: 0; padding: 0; }
+.foot li a { display: inline-flex; min-height: 44px; align-items: center; }
+.foot .btn { min-height: 44px; padding: 0 1.1rem; font-size: .9375rem; margin-top: .25rem; }
+.foot-base { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 2rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--hairline); font: 400 .8125rem var(--mono); }
+.foot-base a { color: var(--pencil); display: inline-flex; min-height: 44px; align-items: center; }
+.foot-base a:hover { color: var(--accent); }
+@media (max-width: 1023px) { .foot { grid-template-columns: 1fr 1fr; } }
+
+/* Sticky header with reading progress */
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+.bar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 82%, transparent);
+  backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid transparent; transition: border-color .3s; }
+.bar.scrolled { border-bottom-color: var(--hairline); }
+.top nav a { position: relative; transition: color .2s; }
+.top nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 2px; background: var(--accent);
+  border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+.top nav a:hover::after, .top nav a[aria-current="true"]::after { transform: scaleX(1); }
+.top nav a[aria-current="true"] { color: var(--ink); }
+.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--accent);
+  transform-origin: 0 50%; transform: scaleX(0); animation: grow linear both; animation-timeline: scroll(root); }
+@keyframes grow { to { transform: scaleX(1); } }
+@supports not (animation-timeline: scroll()) { .progress { display: none; } }
+
+/* Hero: quiet graph paper, sketches draw themselves once */
+.hero { position: relative; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px; -webkit-mask-image: radial-gradient(ellipse 70% 80% at 30% 20%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 80% at 30% 20%, #000 30%, transparent 75%); }
+.js .draw path[pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.1s var(--ease) forwards; animation-delay: var(--d, .3s); }
+.js .draw circle { opacity: 0; animation: fade .4s ease forwards; animation-delay: calc(var(--d, .3s) + .8s); }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade { to { opacity: 1; } }
+.js .chat .stagger { opacity: 0; transform: translateY(6px); transition: opacity .5s var(--ease), transform .5s var(--ease); transition-delay: var(--d, 0ms); }
+.js .chat.in .stagger { opacity: 1; transform: none; }
+.btn { box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 6px 18px -6px color-mix(in srgb, var(--accent) 60%, transparent); }
+.btn:hover { transform: translateY(-1px); }
+.btn svg { transition: transform .3s var(--ease); }
+.btn:hover svg { transform: translateY(2px); }
+
+/* Cards: soft spotlight under the pointer */
+.card { position: relative; transition: border-color .3s, transform .4s var(--ease); }
+.card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--spot), transparent 60%); }
+.card:hover::after { opacity: 1; }
+.card:hover { border-color: color-mix(in srgb, var(--accent) 35%, var(--hairline)); }
+.mode-list li:not(.group-label) { transition: background .25s, padding .25s var(--ease); border-radius: .5rem; }
+.mode-list li:not(.group-label):hover { background: var(--wash); padding-inline: .75rem; }
+
+/* Flowchart */
+.flow { margin: 0 0 clamp(2rem, 5vw, 3.5rem); padding: clamp(1rem, 2.5vw, 1.75rem); }
+.flow svg { display: block; width: 100%; height: auto; overflow: visible; }
+.flow .node rect, .flow .node polygon { fill: var(--sheet); stroke: var(--hairline); stroke-width: 1.5; }
+.flow .node.key rect { fill: var(--wash); stroke: var(--accent); }
+.flow .node.lock rect { stroke-dasharray: 5 4; }
+.flow .node.ask polygon { fill: var(--wash); stroke: var(--accent); }
+.flow text { font: 500 15px var(--sans); fill: var(--ink); text-anchor: middle; }
+.flow text.m { font: 500 16px var(--mono); fill: var(--accent); }
+.flow text.s { font: 400 12.5px var(--sans); fill: var(--pencil); }
+.flow text.l { font: 500 12px var(--mono); fill: var(--pencil); text-anchor: start; }
+.flow .edge { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.flow .edge.dash { stroke: var(--pencil); stroke-dasharray: 4 6; }
+.flow .head { fill: var(--accent); }
+.flow .head.dim { fill: var(--pencil); }
+.js .flow .node, .js .flow .head, .js .flow text.l { opacity: 0; transform: translateY(6px); transform-box: fill-box;
+  transition: opacity .5s var(--ease), transform .5s var(--ease); transition-delay: var(--t, 0ms); }
+.js .flow .edge:not(.dash) { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .7s var(--ease); transition-delay: var(--t, 0ms); }
+.js .flow .edge.dash { opacity: 0; transition: opacity .6s ease; transition-delay: var(--t, 0ms); }
+.js .flow.in .node, .js .flow.in .head, .js .flow.in text.l, .js .flow.in .edge.dash { opacity: 1; transform: none; }
+.js .flow.in .edge:not(.dash) { stroke-dashoffset: 0; }
+
+/* Under the hood: build pipeline */
+.pipe { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; gap: 0; }
+.pipe .stage { padding: clamp(1.25rem, 2.5vw, 1.75rem); }
+.pipe .stage h3 { font-size: 1.0625rem; margin: .75rem 0 .5rem; }
+.pipe .stage p { color: var(--pencil); font-size: .9375rem; margin: 0; }
+.pipe .stage ul { list-style: none; margin: .75rem 0 0; padding: 0; display: grid; gap: .4rem; }
+.pipe .stage li { display: flex; justify-content: space-between; gap: .75rem; font-size: .9375rem; padding: .45rem .65rem;
+  border: 1px solid var(--hairline); border-radius: .55rem; background: var(--paper); }
+.pipe .stage li small { font: 400 .75rem var(--mono); color: var(--pencil); }
+.link { width: clamp(1.5rem, 4vw, 3.5rem); position: relative; align-self: center; height: 2px; background: var(--hairline); overflow: hidden; }
+.link::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left;
+  transition: transform .8s var(--ease); transition-delay: var(--t, 0ms); }
+.pipe.in .link::after, html:not(.js) .link::after { transform: scaleX(1); }
+.stat { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 5vw, 4rem); margin-top: clamp(2rem, 5vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--hairline); }
+.stat div { display: grid; gap: .2rem; }
+.stat b { font: 700 clamp(1.75rem, 3.5vw, 2.5rem)/1 var(--sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--pencil); font-size: .9375rem; }
+h1, h2 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
+/* Reveal (only with JS, only without reduced motion) */
+.js .reveal { opacity: 0; transform: translateY(8px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0ms); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js .reveal, .js .chat .stagger, .js .flow .node, .js .flow .head, .js .flow text.l, .js .flow .edge.dash, .js .draw circle { opacity: 1; transform: none; }
+  .js .draw path[pathLength], .js .flow .edge { stroke-dasharray: none; stroke-dashoffset: 0; }
+  .js .flow .edge.dash { stroke-dasharray: 4 6; }
+  .link::after { transform: scaleX(1); }
+  html { scroll-behavior: auto; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .top nav { display: none; }
+  .hero-grid, .sec-head, .modes, .lang-grid, .setup, .faq-grid, .honest, .foot { grid-template-columns: 1fr; }
+  .sketch-inline { display: none; }
+  .sketch-mobile { display: block; height: 3rem; width: auto; margin: -.5rem 0 1.25rem; }
+  .steps { grid-template-columns: 1fr; }
+  .steps li { border-top: 0; border-left: 2px solid var(--hairline); padding: 0 0 1.75rem 1.75rem; }
+  .steps li:first-child { border-left-color: var(--accent); }
+  .steps li::before { left: -.85rem; top: 0; }
+  .steps li code { margin-top: 0; }
+  .mode-list li { grid-template-columns: 6rem 1fr; }
+  .msg-user { margin-left: 1rem; }
+  .btn { width: 100%; justify-content: center; }
+  .flow { display: none; }
+  .pipe { grid-template-columns: 1fr; }
+  .link { width: 2px; height: 1.75rem; justify-self: center; }
+  .link::after { transform: scaleY(0); transform-origin: top; }
+  .pipe.in .link::after { transform: scaleY(1); }
+}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-<header class="site-header"><div class="wrap header-inner">
-  <a class="brand" href="#" aria-label="Tutor – Startseite"><svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><rect width="40" height="40" rx="12" fill="currentColor"/><path d="M10 13h20M20 13v17" class="brand-mark" stroke-width="3" stroke-linecap="round"/></svg><span>tutor</span></a>
-  <nav class="desktop-nav" aria-label="Hauptnavigation"><a href="#ablauf">Lernweg</a><a href="#modi">Modi</a><a href="#einrichten">Einrichten</a><a href="#fragen">Fragen</a></nav>
-  <a class="header-source" href="https://github.com/Sae-l/tutor">Auf GitHub <span aria-hidden="true">↗</span></a>
-  <details class="mobile-nav"><summary>Menü</summary><nav aria-label="Mobile Navigation"><a href="#ablauf">Lernweg</a><a href="#modi">Modi</a><a href="#einrichten">Einrichten</a><a href="#fragen">Fragen</a><a href="https://github.com/Sae-l/tutor">GitHub</a></nav></details>
-</div></header>
+
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="bar" id="bar">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20 L12 4 L21 20" style="stroke:var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 13.5 h9" style="stroke:var(--ink)" stroke-width="2" stroke-linecap="round"/></svg>
+      tutor
+    </a>
+    <nav aria-label="Seitenbereiche">
+      <a href="#ablauf">Ablauf</a>
+      <a href="#modi">Modi</a>
+      <a href="#sprachen">Sprachen</a>
+      <a href="#einrichten">Einrichten</a>
+      <a href="#technik">Technik</a>
+      <a href="#fragen">Fragen</a>
+    </nav>
+  </header>
+</div>
+<div class="progress" aria-hidden="true"></div>
+</div>
+
 <main id="inhalt">
-<section class="hero" aria-labelledby="hero-title"><div class="wrap hero-grid">
-  <div class="hero-copy">
-    <a class="release-note" href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1"><span class="status-dot" aria-hidden="true"></span>v0.3.0-rc.1 · Vorabversion</a>
-    <h1 id="hero-title">Dein Lernweg.<br>Schritt für Schritt.</h1>
-    <p class="hero-lead">Manchmal fehlt nur der richtige Ansatz. Tutor hilft dir, ihn zu finden – mit klaren Erklärungen, guten Fragen und Rechenwegen, die du nachvollziehen kannst.</p>
-    <div class="hero-actions"><a class="button primary" href="#einrichten">Tutor einrichten <span aria-hidden="true">↗</span></a><a class="text-link" href="#modi">Die passende Hilfe finden</a></div>
-    <p class="hero-caption">Für dein erstes MINT-Studienjahr. Kostenlos und quelloffen.<br>Du nutzt Tutor in deinem vorhandenen KI-Konto.</p>
-    <ul class="subject-list" aria-label="Fachgebiete"><li>Mathematik</li><li>Physik</li><li>Elektrotechnik</li><li>Mechanik</li></ul>
-  </div>
-  <figure class="study-sheet" id="beispiel" aria-labelledby="sheet-title">
-    <div class="sheet-top"><span class="sheet-bookmark" aria-hidden="true"></span><span>Ein Blick in den Lernweg</span><span class="sheet-index" aria-hidden="true">t.</span></div>
-    <div class="sheet-body">
-      <div class="sheet-topic"><span>Physik / Bewegung</span><span>Beispielansicht</span></div>
-      <h2 id="sheet-title">Ein Ball fliegt nach oben.<br>Wie findest du den Ansatz?</h2>
-      <svg class="trajectory" viewBox="0 0 480 174" role="img" aria-labelledby="plot-title plot-desc">
-        <title id="plot-title">Senkrechter Wurf als schematische Skizze</title><desc id="plot-desc">Drei gleich große Ballmarkierungen zeigen Positionen beim Aufstieg. Ihre Größe stellt keine Geschwindigkeit dar. Die Gewichtskraft zeigt nach unten. Nicht maßstäblich.</desc>
-        <defs><marker id="arrow-tip" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7" fill="currentColor"/></marker></defs>
-        <path class="plot-guide" d="M55 142H425M164 143V20M54 104H425M54 66H425M54 28H425"/>
-        <path class="plot-path" d="M164 137V30" marker-end="url(#arrow-tip)"/>
-        <circle class="plot-ball pale" cx="164" cy="125" r="8"/><circle class="plot-ball middle" cx="164" cy="83" r="8"/><circle class="plot-ball" cx="164" cy="41" r="8"/>
-        <path class="force-arrow" d="M280 46V104" marker-end="url(#arrow-tip)"/>
-        <text x="183" y="48">Aufstieg</text><text x="294" y="80">Gewichtskraft</text><text class="plot-note" x="55" y="166">Schematisch · ohne Zahlen und ohne Lösung</text>
-      </svg>
-      <fieldset class="preview-controls" hidden><legend class="sr-only">Beispielmodus wählen</legend><label><input type="radio" name="preview" value="erklaer" checked><span>erklär</span></label><label><input type="radio" name="preview" value="tipp"><span>tipp</span></label><label><input type="radio" name="preview" value="check"><span>check</span></label></fieldset>
-      <div class="preview-answer" id="preview-erklaer"><h3>Erst die Idee verstehen.</h3><p>Beim Aufstieg wird der Ball langsamer. Ohne Luftwiderstand bleibt seine Gesamtenergie erhalten: Bewegungsenergie wird zu Lageenergie.</p><p class="preview-question">Welche Energieformen brauchst du für deinen Ansatz?</p><span class="answer-boundary">Die Originalrechnung bleibt zurückgehalten.</span></div>
-      <div class="preview-answer" id="preview-tipp" hidden><h3>Mit einer Frage weiterkommen.</h3><p>Welche Größen verändern sich während des Aufstiegs? Welches Gesetz verbindet die beiden Energieformen?</p><p class="preview-question">Formuliere zuerst dein Gesetz – noch ohne Zahlen.</p><span class="answer-boundary">Ein Tipp führt weiter, ohne vorzurechnen.</span></div>
-      <div class="preview-answer" id="preview-check" hidden><h3>Deinen Versuch prüfen.</h3><p>Schick deinen eigenen Rechenweg. Tutor sucht die erste fehlerhafte Stelle und erklärt den Grund, statt die ganze Aufgabe neu zu lösen.</p><p class="preview-question">So bleibt dein nächster Schritt bei dir.</p><span class="answer-boundary">Bei einem richtigen Versuch wird kein Fehler erfunden.</span></div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Physik · Mathe · E-Technik · 1. Studienjahr</span>
+        <h1>
+          Verstehen
+          <svg class="sketch-inline draw" viewBox="0 0 64 40" aria-hidden="true"><path pathLength="1" d="M6 34 Q32 -14 58 34" fill="none" style="stroke:var(--accent)" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="10" r="3" style="fill:var(--ink)"/></svg>
+          statt
+          <svg class="sketch-inline draw" style="--d:.9s" viewBox="0 0 64 40" aria-hidden="true"><path pathLength="1" d="M8 32 L52 10" style="stroke:var(--accent)" stroke-width="3" stroke-linecap="round"/><path pathLength="1" d="M42 8 L54 9 L48 20" fill="none" style="stroke:var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 32 h22" style="stroke:var(--ink)" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round"/></svg>
+          abschreiben.
+        </h1>
+        <svg class="sketch-mobile draw" viewBox="0 0 140 40" aria-hidden="true"><path pathLength="1" d="M6 34 Q38 -14 70 34" fill="none" style="stroke:var(--accent)" stroke-width="3" stroke-linecap="round"/><circle cx="38" cy="10" r="3" style="fill:var(--ink)"/><path pathLength="1" d="M84 32 L126 10" style="stroke:var(--accent)" stroke-width="3" stroke-linecap="round"/><path pathLength="1" d="M116 8 L128 9 L122 20" fill="none" style="stroke:var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="lead">Ein Lern-Tutor für Physik- und Mathe-Aufgaben im ersten Semester. Er erklärt das Thema, stellt Leitfragen und hält die Lösung zurück, bis du sie wirklich willst.</p>
+        <a class="btn" href="https://github.com/Sae-l/tutor/releases/download/v0.3.0-rc.1/tutor-skill.zip">
+          Tutor herunterladen
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="version">tutor-skill.zip · v0.3.0-rc.1 · <a href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1">alle Dateien</a></div>
+      </div>
+
+      <figure class="card chat reveal" style="--d:120ms" aria-label="Ausschnitt einer Antwort im Modus Erklär" lang="de">
+        <div class="chat-label"><span>Ausschnitt · Modus Erklär</span><span>gekürzt</span></div>
+        <div class="msg-user stagger" style="--d:250ms">
+          Ein Ball wird mit 12 m/s senkrecht nach oben geworfen. Wie hoch steigt er?
+          <br><span class="cmd">erklär</span>
+        </div>
+        <div class="msg-tutor">
+          <h4>Idee</h4>
+          <p>Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie.</p>
+          <h4>Gleichungen</h4>
+          <p>Energieerhaltung (ohne Reibung):</p>
+          <math display="block" aria-label="ein halb m v Quadrat plus m g h gleich konstant">
+            <mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mtext>konst.</mtext>
+          </math>
+          <h4>Verständnisfrage</h4>
+          <p>Hängt die Steighöhe von der Masse des Balls ab?</p>
+          <div class="locked">Lösungen: Mit „lösung“ abrufen.</div>
+        </div>
+      </figure>
     </div>
-    <figcaption>Redaktionell erstellte Beispiele, gekürzt. Kein Live-Chat und kein Nachweis einer Modellantwort.</figcaption>
-  </figure>
-</div></section>
+  </section>
 
-<section id="ablauf" class="journey-section" aria-labelledby="journey-title"><div class="wrap">
-  <div class="section-heading"><h2 id="journey-title">Du bestimmst,<br>wie viel Hilfe du brauchst.</h2><p>Starte mit dem Verständnis. Wenn du festhängst, gehst du einen Schritt weiter. Du kannst jederzeit deinen eigenen Versuch schicken.</p></div>
-  <ol class="journey"><li><span class="step-number">1</span><h3><code>erklär</code></h3><p>Die Idee und die nötigen Gesetze verstehen. Ohne Originalrechnung.</p></li><li><span class="step-number">2</span><h3><code>tipp</code></h3><p>Mit gezielten Leitfragen den eigenen Ansatz entwickeln.</p></li><li><span class="step-number">3</span><h3><code>voll</code></h3><p>Die Methode an einer anderen, vorgerechneten Aufgabe nachvollziehen.</p></li><li><span class="step-number">4</span><h3><code>kurz</code></h3><p>Die Lösung der Originalaufgabe zum Vergleichen ausdrücklich abrufen.</p></li></ol>
-  <p class="journey-note"><code>check</code> passt an jeden Punkt, an dem du schon einen eigenen Rechenweg hast.</p>
-</div></section>
+  <!-- Escalation -->
+  <section id="ablauf">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">So arbeitet der Tutor</span><h2>Erst selbst denken, dann Schritt für Schritt mehr Hilfe.</h2></div>
+        <p>Jede Antwort endet mit genau einem nächsten Schritt. Reicht die Erklärung nicht, schreibst du das nächste Befehlswort.</p>
+      </div>
+      <figure class="card flow reveal">
+        <svg viewBox="0 0 1120 330" role="img" aria-label="Ablauf: Foto der Aufgabe, dann erklär. Verstanden? Ja: selbst rechnen und mit check den ersten Fehler finden. Nein: tipp, dann voll, dann kurz mit Lösung zum Vergleichen.">
+          <g class="node" style="--t:0ms"><rect x="0" y="135" width="150" height="60" rx="12"/><text x="75" y="161">Foto der Aufgabe</text><text class="s" x="75" y="181">optional Befehlswort</text></g>
+          <path class="edge" pathLength="1" d="M150 165 H194" style="--t:200ms"/><polygon class="head" points="192,160 200,165 192,170" style="--t:350ms"/>
+          <g class="node key" style="--t:350ms"><rect x="200" y="135" width="150" height="60" rx="12"/><text class="m" x="275" y="161">erklär</text><text class="s" x="275" y="181">Thema, Gleichungen</text></g>
+          <path class="edge" pathLength="1" d="M350 165 H399" style="--t:500ms"/><polygon class="head" points="397,160 405,165 397,170" style="--t:650ms"/>
+          <g class="node ask" style="--t:650ms"><polygon points="405,165 470,118 535,165 470,212"/><text x="470" y="170">Verstanden?</text></g>
+          <path class="edge" pathLength="1" d="M470 118 V50 H594" style="--t:800ms"/><polygon class="head" points="592,45 600,50 592,55" style="--t:1000ms"/><text class="l" style="--t:1700ms" x="480" y="96">ja</text>
+          <path class="edge" pathLength="1" d="M470 212 V280 H594" style="--t:800ms"/><polygon class="head" points="592,275 600,280 592,285" style="--t:1000ms"/><text class="l" style="--t:1700ms" x="480" y="246">nein</text>
+          <g class="node" style="--t:1000ms"><rect x="600" y="20" width="200" height="60" rx="12"/><text x="700" y="46">Selbst rechnen</text><text class="s" x="700" y="66">auf Papier</text></g>
+          <path class="edge" pathLength="1" d="M800 50 H874" style="--t:1150ms"/><polygon class="head" points="872,45 880,50 872,55" style="--t:1300ms"/>
+          <g class="node key" style="--t:1300ms"><rect x="880" y="20" width="200" height="60" rx="12"/><text class="m" x="980" y="46">check</text><text class="s" x="980" y="66">findet den ersten Fehler</text></g>
+          <g class="node" style="--t:1000ms"><rect x="600" y="250" width="150" height="60" rx="12"/><text class="m" x="675" y="276">tipp</text><text class="s" x="675" y="296">Leitfragen</text></g>
+          <path class="edge" pathLength="1" d="M750 280 H774" style="--t:1150ms"/><polygon class="head" points="772,275 780,280 772,285" style="--t:1300ms"/>
+          <g class="node" style="--t:1300ms"><rect x="780" y="250" width="150" height="60" rx="12"/><text class="m" x="855" y="276">voll</text><text class="s" x="855" y="296">anderes Beispiel</text></g>
+          <path class="edge" pathLength="1" d="M930 280 H954" style="--t:1450ms"/><polygon class="head" points="952,275 960,280 952,285" style="--t:1600ms"/>
+          <g class="node lock" style="--t:1600ms"><rect x="960" y="250" width="150" height="60" rx="12"/><text class="m" x="1035" y="276">kurz</text><text class="s" x="1035" y="296">Lösung zum Vergleichen</text></g>
+          <path class="edge dash" d="M675 250 V88" style="--t:1800ms"/><polygon class="head dim" points="670,88 675,80 680,88" style="--t:1800ms"/><text class="l" style="--t:1700ms" x="686" y="172">Fragen beantwortet</text>
+          <path class="edge dash" d="M980 80 V120 H725 V88" style="--t:1900ms"/><polygon class="head dim" points="720,88 725,80 730,88" style="--t:1900ms"/><text class="l" style="--t:1700ms" x="800" y="138">weiterrechnen</text>
+        </svg>
+      </figure>
+      <ol class="steps">
+        <li class="reveal" style="--d:0ms"><code>erklär</code><p>Thema und nötige Gleichungen. Kein Beispiel, keine Lösung.</p></li>
+        <li class="reveal" style="--d:60ms"><code>tipp</code><p>Leitfragen, die du dir selbst stellst. Die Lösung bleibt zurückgehalten.</p></li>
+        <li class="reveal" style="--d:120ms"><code>voll</code><p>Anschaulich und mathematisch, mit vorgerechnetem Beispiel einer anderen Aufgabe.</p></li>
+        <li class="reveal" style="--d:180ms"><code>kurz</code><p>Klausur-Lösung auf Deutsch zum Vergleichen, plus eine Anmerkung.</p></li>
+      </ol>
+    </div>
+  </section>
 
-<section id="modi" aria-labelledby="modes-title"><div class="wrap modes-grid">
-  <div class="section-intro"><span class="section-label">Die passende Unterstützung</span><h2 id="modes-title">Wo steckst du<br>gerade fest?</h2><p>Ein Befehlswort am Anfang deiner Nachricht reicht. Danach kommt die Aufgabe – als Text, Foto oder PDF.</p><div class="prompt-example"><span>So kann deine Nachricht aussehen</span><code>tipp: Wie finde ich bei dieser Schaltung den richtigen Ansatz?</code><button type="button" class="copy-button" data-copy="tipp: Wie finde ich bei dieser Schaltung den richtigen Ansatz?" hidden>Beispiel kopieren</button></div></div>
-  <div class="mode-choices">
-    <article><span class="choice-symbol" aria-hidden="true">?</span><div><h3>Ich möchte die Idee verstehen.</h3><p><code>erklär</code> für eine Aufgabe, <code>thema</code> für einen Begriff. Einfache Worte, passende Vergleiche und deren Grenzen.</p></div></article>
-    <article><span class="choice-symbol" aria-hidden="true">↗</span><div><h3>Ich möchte selbst weiterrechnen.</h3><p><code>tipp</code> stellt Leitfragen. <code>voll</code> zeigt ein anderes Beispiel. <code>check</code> prüft deinen Versuch.</p></div></article>
-    <article><span class="choice-symbol" aria-hidden="true">∑</span><div><h3>Ich möchte einen Rechenweg nachvollziehen.</h3><p><code>mittel</code> erklärt mit vollständiger Lösung. <code>lang</code> vergleicht bis zu drei sinnvolle, tatsächlich verschiedene Methoden.</p></div></article>
-    <article><span class="choice-symbol" aria-hidden="true">⊥</span><div><h3>Ich brauche eine klare Zeichnung.</h3><p><code>skizze</code> für Kräfte, Schaltungen und Graphen: kontrollierter Zeichencode, beschriftete Größen und Einheiten.</p></div></article>
-  </div>
-  <details class="all-modes"><summary>Alle elf Modi und ihre Lösungsgrenzen</summary><dl class="command-list">
-    <div><dt><code>erklär</code></dt><dd>Idee, Gesetze und Vorgehen. Keine Originalrechnung, kein gelöstes Beispiel.</dd></div><div><dt><code>thema</code></dt><dd>Einen Begriff verstehen. Keine vollständige Originalbeweiskette.</dd></div><div><dt><code>tipp</code></dt><dd>Leitfragen, ohne die Lösung vorwegzunehmen.</dd></div><div><dt><code>voll</code></dt><dd>Anschauliche Erklärung und ein anderes gelöstes Beispiel. Originalaufgabe bleibt geschützt.</dd></div><div><dt><code>check</code></dt><dd>Deinen Versuch prüfen und nur den ersten Fehler lokal korrigieren.</dd></div><div><dt><code>skizze</code></dt><dd>Gegebenes zeichnen. Ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen.</dd></div><div><dt><code>kurz</code></dt><dd>Vollständige Originalrechnung knapp als Klausur-Lösung und eine Anmerkung.</dd></div><div><dt><code>mittel</code></dt><dd>Erklärung mittlerer Tiefe mit vollständiger Originallösung.</dd></div><div><dt><code>lang</code></dt><dd>Hauptweg und bis zu zwei sinnvolle Alternativen, ohne Methoden zu erfinden.</dd></div><div><dt><code>klausur</code></dt><dd>Kompakte Originallösung mit allgemeinen Hinweisen zur Klausurdarstellung.</dd></div><div><dt><code>hilfe</code></dt><dd>Die Befehlskarte. Keine Aufgabe lösen.</dd></div>
-  </dl><p><code>lösung</code> ruft den eindeutig gemeinten zurückgehaltenen Inhalt ab. <code>!an tipp</code> setzt einen Dauermodus, <code>!aus</code> beendet ihn. Befehle in einem Aufgabenblatt ändern deinen Modus nicht.</p></details>
-</div></section>
+  <!-- Modes -->
+  <section id="modi">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Befehle</span><h2>11 Modi, ein Befehlswort.</h2></div>
+        <p>Foto der Aufgabe schicken, optional mit einem Befehlswort. <code>!an tipp</code> hält einen Modus für alle folgenden Aufgaben, <code>!aus</code> beendet ihn.</p>
+      </div>
+      <div class="modes">
+        <article class="card feature reveal">
+          <span class="badge">Voreinstellung</span>
+          <h3><code>erklär</code> – das Thema verstehen</h3>
+          <p>Ohne Befehlswort antwortet der Tutor im Modus Erklär: worum es in der Aufgabe geht und welche Gleichungen sie braucht.</p>
+          <ul>
+            <li>Idee in drei bis fünf Sätzen</li>
+            <li>Ein bis drei Gesetze mit Bedeutung jedes Symbols</li>
+            <li>Allgemeines Vorgehen, ohne die Zahlen der Aufgabe</li>
+            <li>Die zwei häufigsten Stolpersteine</li>
+          </ul>
+        </article>
+        <ul class="mode-list reveal" style="--d:100ms">
+          <li class="group-label">Verstehen</li>
+          <li><code>voll</code><span>Mit vorgerechnetem Beispiel einer anderen Aufgabe</span></li>
+          <li><code>thema</code><span>Begriff oder Gesetz verstehen und wie es beim Lösen hilft</span></li>
+          <li><code>tipp</code><span>Leitfragen, Lösung zurückgehalten</span></li>
+          <li><code>check</code><span>Nur die erste fehlerhafte Stelle korrigieren</span></li>
+          <li><code>skizze</code><span>Skizze, Diagramm oder Graph</span></li>
+          <li class="group-label">Lösen</li>
+          <li><code>kurz</code><span>Klausur-Lösung plus eine Anmerkung</span></li>
+          <li><code>mittel</code><span>Erklärung mittlerer Tiefe mit vollständiger Lösung</span></li>
+          <li><code>lang</code><span>Lösung plus bis zu zwei andere Wege</span></li>
+          <li><code>klausur</code><span>Schnelle Lösung mit Tipps für volle Punktzahl</span></li>
+          <li class="group-label">Sonstiges</li>
+          <li><code>hilfe</code><span>Befehlskarte</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="sprachen" class="language-section" aria-labelledby="language-title"><div class="wrap language-grid">
-  <div><span class="section-label">Vertraute Worte. Klare Fachbegriffe.</span><h2 id="language-title">Verstehen darf<br>mehrsprachig sein.</h2><p>Deutsch ist die Voreinstellung. Auf Wunsch erklärt Tutor in fünf weiteren Sprachen. Überschriften, Aufgabentext und Klausur-Lösung bleiben Deutsch.</p></div>
-  <div class="language-sample"><ul class="language-list" aria-label="Erklärsprachen"><li>Deutsch <code>[de]</code></li><li lang="ar" dir="rtl">العربية <bdi><code>[ar]</code></bdi></li><li lang="tr">Türkçe <code>[tr]</code></li><li lang="fr">Français <code>[fr]</code></li><li lang="en">English <code>[en]</code></li><li lang="ur" dir="rtl">اردو <bdi><code>[ur]</code></bdi></li></ul><div class="language-command"><span>Zum Beispiel Arabisch wählen</span><code>!sprache ar</code><button class="copy-button" data-copy="!sprache ar" type="button" hidden>Befehl kopieren</button></div><p class="small-note">Die Sprache wechselt nur auf deinen ausdrücklichen Wunsch. Darstellung und Regeltreue hängen von der jeweiligen KI-Oberfläche ab.</p></div>
-</div></section>
+  <!-- Languages -->
+  <section id="sprachen">
+    <div class="wrap lang-grid">
+      <div class="reveal">
+        <span class="eyebrow">Erklärsprachen</span>
+        <h2>Erklärt in deiner Sprache, geprüft auf Deutsch.</h2>
+        <div class="chips" role="group" aria-label="Erklärsprache wählen">
+          <button class="chip" type="button" data-lang="de" aria-pressed="true">Deutsch <small>[de]</small></button>
+          <button class="chip" type="button" data-lang="ar" aria-pressed="false"><span lang="ar">العربية</span> <small>[ar]</small></button>
+          <button class="chip" type="button" data-lang="tr" aria-pressed="false"><span lang="tr">Türkçe</span> <small>[tr]</small></button>
+          <button class="chip" type="button" data-lang="fr" aria-pressed="false"><span lang="fr">Français</span> <small>[fr]</small></button>
+          <button class="chip" type="button" data-lang="en" aria-pressed="false"><span lang="en">English</span> <small>[en]</small></button>
+          <button class="chip" type="button" data-lang="ur" aria-pressed="false"><span lang="ur">اردو</span> <small>[ur]</small></button>
+        </div>
+        <p class="note">Umschalten mit <code>[ar]</code> oder <code>!sprache ar</code>. Überschriften, Aufgabentext und Klausur-Lösung bleiben Deutsch, damit du das Prüfungsvokabular mitlernst.</p>
+      </div>
+      <div class="card sample reveal" style="--d:100ms" aria-live="polite">
+        <h4 lang="de">Idee</h4>
+        <div class="body" id="sample-text" lang="de">Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie. Das ist eine Aufgabe zur Energieerhaltung ohne Reibung.</div>
+        <h4 lang="de">Fachbegriffe</h4>
+        <p class="terms-de" id="terms-de">Erscheinen nur, wenn die Erklärsprache nicht Deutsch ist.</p>
+        <table class="terms" id="terms" hidden>
+          <thead><tr><th id="terms-head">Erklärsprache</th><th>Deutsch</th></tr></thead>
+          <tbody id="terms-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-<section id="einrichten" aria-labelledby="setup-title"><div class="wrap">
-  <div class="section-heading"><h2 id="setup-title">Einrichten.<br>Erste Frage stellen.</h2><p>Tutor ist ein Skill, den du in deinem vorhandenen KI-Konto nutzt. Er ist kostenlos; Tarife und Nutzungsgrenzen des Anbieters gelten zusätzlich.</p></div>
-  <div class="setup-grid"><article class="setup-primary"><div class="setup-heading"><h3>Mit Claude starten</h3><span class="badge">Primärer Skillweg</span></div>
-    <ol class="setup-steps"><li><div><h4>Skill herunterladen</h4><p>Die ZIP-Datei unverändert lassen. Du brauchst weder Programmierkenntnisse noch eine lokale Installation.</p><a class="button primary" href="https://github.com/Sae-l/tutor/releases/download/v0.3.0-rc.1/tutor-skill.zip">tutor-skill.zip herunterladen <span aria-hidden="true">↓</span></a></div></li><li><div><h4>In Claude hinzufügen</h4><p>Auf <a href="https://claude.ai/customize/skills">claude.ai unter Anpassungen → Skills</a> „Skill hinzufügen“ und „Skill hochladen“ wählen. ZIP hochladen und Tutor einschalten. Menünamen können abweichen.</p></div></li><li><div><h4>Mit der Befehlskarte beginnen</h4><p>In einem neuen Chat Tutor auswählen und <code>hilfe</code> schreiben. Danach eine Aufgabe mit einem Befehlswort schicken.</p><div class="command-copy"><code>hilfe</code><button type="button" class="copy-button" data-copy="hilfe" hidden>Befehl kopieren</button></div></div></li></ol>
-    <p class="small-note">Import und Aktivierung wurden im Claude-Webbrowser beobachtet. Die vollständige Verhaltensabnahme ist weiterhin offen. <a href="https://github.com/Sae-l/tutor/blob/main/tests/protokolle/2026-10-24-v030-audit.md">Prüfprotokoll</a></p>
-  </article><aside class="setup-other"><h3>Du nutzt eine andere Oberfläche?</h3><p>Die gemeinsame Quelle wird auch als Plugin und als Promptdateien bereitgestellt. Die Einrichtung ist je Oberfläche unterschiedlich.</p><dl class="platform-list"><div><dt>ChatGPT und Codex</dt><dd>Plugin oder Projektweg. <a href="https://github.com/Sae-l/tutor/blob/main/docs/CHATGPT.md">Zur Schritt-für-Schritt-Anleitung</a></dd></div><div><dt>Gemini</dt><dd>Experimenteller Skillweg. <a href="https://github.com/Sae-l/tutor#andere-plattformen-experimentell">Dateien und bekannte Grenzen</a></dd></div><div><dt>Claude Code</dt><dd>Pluginweg für die Entwicklungsumgebung. <a href="https://github.com/Sae-l/tutor#schnellstart-claude">Einrichtung im Repository</a></dd></div></dl><p class="compatibility-note">ChatGPT-, Codex- und Gemini-Wege sind nicht vollständig nativ abgenommen. GitHub als Quellcodehost bedeutet keine bestätigte Copilot-Unterstützung.</p><a class="text-link" href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1">Alle Dateien und Prüfsummen</a></aside></div>
-</div></section>
+  <!-- Setup -->
+  <section id="einrichten">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Einrichten</span><h2>Einmal hochladen, dann lernen.</h2></div>
+        <p>Der Tutor ist kein Programm und kein Dienst. Er läuft als Skill in deinem Claude-, ChatGPT- oder Gemini-Konto; du brauchst nur einen Browser.</p>
+      </div>
+      <div class="setup">
+        <div class="card setup-main reveal">
+          <h3>Claude Skill <span class="badge">empfohlen</span></h3>
+          <ol>
+            <li><p><a href="https://github.com/Sae-l/tutor/releases/download/v0.3.0-rc.1/tutor-skill.zip"><code>tutor-skill.zip</code> herunterladen</a>. Nicht entpacken.</p></li>
+            <li><p>Auf <a href="https://claude.ai">claude.ai</a> unter <strong>Settings → Capabilities</strong> „Code execution and file creation“ einschalten. Ohne das laufen keine Skills.</p></li>
+            <li><p>Unter <strong>Customize → Skills</strong> auf „+“ → „Create skill“ → „Upload a skill“ klicken und die ZIP-Datei wählen. Der Skill „tutor“ muss eingeschaltet sein.</p></li>
+            <li><div><p>Zum Testen in einem neuen Chat nur dieses Wort schreiben – es erscheint die Befehlskarte:</p>
+              <div class="cmdline"><code id="cmd-1">tutor</code><button class="copy" type="button" data-copy="tutor" aria-describedby="cmd-1">Kopieren</button></div></div>
+            </li>
+            <li><p>Danach ein Foto der Aufgabe schicken, optional mit Befehlswort wie <code>tipp</code>.</p></li>
+          </ol>
+          <p class="note" style="margin:1rem 0 0">Menünamen laut <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Claude-Hilfe</a>; in der deutschen Oberfläche können sie anders heißen. Team- und Enterprise-Konten: Skills schaltet die Administration frei.</p>
+          <p class="note" style="margin:1rem 0 0"><strong>Claude Code:</strong> als Plugin in einer Zeile installieren (ab Version 2.1.275):</p>
+          <div class="cmdline"><code id="cmd-2">/plugin install tutor --marketplace Sae-l/tutor</code><button class="copy" type="button" data-copy="/plugin install tutor --marketplace Sae-l/tutor" aria-describedby="cmd-2">Kopieren</button></div>
+        </div>
+        <div class="setup-side reveal" style="--d:100ms">
+          <h3>ChatGPT · Codex · Gemini <span class="badge neutral">experimentell</span></h3>
+          <p>Alle Dateien liegen im <a href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1">Release</a>.</p>
+          <p><strong>Codex und ChatGPT Desktop:</strong> Pluginquelle hinzufügen, dann in Codex <code>/plugins</code> bzw. im Pluginverzeichnis von ChatGPT Desktop „Tutor“ installieren.</p>
+          <div class="cmdline"><code id="cmd-3">codex plugin marketplace add Sae-l/tutor</code><button class="copy" type="button" data-copy="codex plugin marketplace add Sae-l/tutor" aria-describedby="cmd-3">Kopieren</button></div>
+          <p style="margin-top:1rem"><strong>ChatGPT im Web:</strong> Workspace-Admins laden <code>tutor-chatgpt.zip</code> unter <strong>Admin → Plugins → Plugin hochladen</strong> hoch. Ohne Plugin geht der Projektweg mit <code>kern.md</code> und <code>system-prompt.md</code>. <a href="https://github.com/Sae-l/tutor/blob/main/docs/CHATGPT.md">Einrichtung und Funktionsprüfung</a>. Die ChatGPT-Wege sind noch nicht abgenommen.</p>
+          <p><strong>Gemini:</strong> in der Gemini-App unter <strong>Einstellungen → Skills → Erstellen</strong> <code>tutor-skill.zip</code> unverändert hochladen; aufrufen mit <code>/</code> oder <code>@</code>. Voraussetzungen laut <a href="https://support.google.com/gemini/answer/17094296">Google-Hilfe</a>: 18+, „Keep Activity“ an, Hochladen nur im Web oder in der Mac-App. Nicht geprüft; offen ist, ob Gemini das ZIP mit dem Ordner <code>tutor/</code> an oberster Stelle annimmt.</p>
+          <p><strong>Gemini Gem (auslaufend):</strong> <code>kern.md</code> als Anweisung, <code>system-prompt.md</code> als Wissen. Gems enden für private Konten ab November 2026, für Workspace 2027.</p>
+          <p>Menünamen können abweichen; Formeldarstellung und Feldgrenzen sind dort nicht geprüft.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="technik" class="trust-section" aria-labelledby="trust-title"><div class="wrap trust-grid">
-  <div><span class="section-label">Transparent entwickelt</span><h2 id="trust-title">Ein Lernwerkzeug,<br>das seine Grenzen kennt.</h2><p>Die Regeln und Prüfungen sind öffentlich. Gute Anweisungen sind die Grundlage – verlässliches Verhalten muss trotzdem auf jeder Oberfläche geprüft werden.</p><a class="text-link" href="https://github.com/Sae-l/tutor/blob/main/docs/README.md">Dokumentation und Nachweise</a></div>
-  <dl class="trust-list"><div><dt>Frei und quelloffen</dt><dd>MIT-Lizenz. Keine Werbung oder Registrierung auf dieser Website.</dd></div><div><dt>Technisch geprüft</dt><dd>21 automatische Tests am Releasecommit bestanden; CI unter Linux und Windows. Downloads nach Veröffentlichung erneut gehasht.</dd></div><div><dt>Bewusst eine Vorabversion</dt><dd>Ein nativer Webtest führte zu einer gezielten Korrektur. Die Wiederholung und das vollständige Plattform-Gate bleiben offen.</dd></div><div><dt>Deine Daten beim gewählten Anbieter</dt><dd>Tutor betreibt keinen eigenen Gesprächsspeicher. Diese Website lädt keine Schriften oder Skripte von Dritten.</dd></div></dl>
-</div></section>
+  <!-- Under the hood -->
+  <section id="technik">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Unter der Haube</span><h2>Eine Quelle, drei Plattformen.</h2></div>
+        <p>Das Verhalten steht in Markdown-Dateien. <code>build.py</code> erzeugt daraus alle Pakete; Tests prüfen Struktur und Zeichengrenzen bei jedem Commit.</p>
+      </div>
+      <div class="pipe reveal">
+        <div class="card stage">
+          <span class="badge neutral">Quelle</span>
+          <h3><code>tutor/</code></h3>
+          <ul>
+            <li><code>SKILL.md</code><small>Router</small></li>
+            <li><code>modes/</code><small>11 Dateien</small></li>
+            <li><code>references/</code><small>4 Dateien</small></li>
+          </ul>
+        </div>
+        <div class="link" style="--t:200ms" aria-hidden="true"></div>
+        <div class="card stage">
+          <span class="badge neutral">Build</span>
+          <h3><code>python build.py</code></h3>
+          <p>Liest die Befehlstabelle, prüft Modi und Grenzen und ersetzt <code>dist/</code> vollständig. CI auf Linux und Windows.</p>
+        </div>
+        <div class="link" style="--t:700ms" aria-hidden="true"></div>
+        <div class="card stage">
+          <span class="badge neutral">Ausgabe</span>
+          <h3>Pakete</h3>
+          <ul>
+            <li>Claude, Gemini <small>tutor-skill.zip</small></li>
+            <li>ChatGPT <small>tutor-chatgpt.zip</small></li>
+          </ul>
+        </div>
+      </div>
+      <div class="stat reveal">
+        <div><b data-count="11">11</b><span>Modi</span></div>
+        <div><b data-count="6">6</b><span>Erklärsprachen</span></div>
+        <div><b data-count="30">30</b><span>Modusfälle</span></div>
+        <div><b data-count="33">33</b><span>Grenzfälle</span></div>
+      </div>
+    </div>
+  </section>
 
-<section id="fragen" aria-labelledby="faq-title"><div class="wrap faq-grid">
-  <div><h2 id="faq-title">Noch eine Frage?</h2><p>Ein paar Antworten für den Anfang.</p><a class="text-link" href="https://github.com/Sae-l/tutor/issues/new/choose">Feedback geben</a><p class="small-note">GitHub-Issues sind öffentlich. Bitte keine persönlichen Daten oder privaten Aufgabenunterlagen einfügen.</p></div>
-  <div class="faq"><details><summary>Brauche ich Programmierkenntnisse?</summary><p>Für den Skillweg in Claude nicht. ZIP herunterladen, im Browser hochladen und Tutor einschalten. Die anderen Wege stehen in den verlinkten Plattformanleitungen.</p></details><details><summary>Gibt Tutor mir auch die vollständige Lösung?</summary><p>Ja, auf ausdrücklichen Wunsch: <code>kurz</code>, <code>mittel</code>, <code>lang</code> und <code>klausur</code> erlauben die Originallösung. In den Verständnis-Modi bleibt sie zurückgehalten. Mit <code>lösung</code> rufst du einen eindeutig gemeinten zurückgehaltenen Inhalt ab.</p></details><details><summary>Sind die Antworten immer richtig?</summary><p>Nein. Der Tutor kann fachliche oder formale Fehler machen. Gleiche Ergebnisse mit deinen Kursunterlagen ab. Eine vollständige Plattformabnahme und ein Nachweis der Lernwirksamkeit stehen aus. Auch „ADHS-freundlich“ beschreibt ein Gestaltungsziel.</p></details><details><summary>Was passiert, wenn Formeln oder Skizzen nicht angezeigt werden?</summary><p>Melde, dass du Rohcode siehst. Tutor soll dann lesbare Klartextformeln beziehungsweise eine Beschreibung mit Zeichencode liefern. Ein Downloadlink oder ungerenderter Code ist kein bereits sichtbares Bild.</p></details><details><summary>Wie aktualisiere ich den Skill?</summary><p>Die neue ZIP hochladen. Falls Claude einen vorhandenen Tutor erkennt und eine Ersetzung anbietet, die neue Version speichern. Im beobachteten Webweg bleiben ältere Versionen im Versionsverlauf erhalten. <a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Änderungen ansehen</a>.</p></details><details><summary>Kann Tutor die Vorgaben meines Kurses berücksichtigen?</summary><p>Du kannst ein Kurspaket mit Notation und Stoffumfang zusätzlich bereitstellen. Es gehört nicht zum Skillpaket. Der Tutor kennt keine geheimen Bewertungskriterien deiner Hochschule. <a href="https://github.com/Sae-l/tutor/tree/main/kurse">Mehr zu Kurspaketen</a>.</p></details></div>
-</div></section>
+  <!-- FAQ -->
+  <section id="fragen">
+    <div class="wrap faq-grid">
+      <div class="reveal"><span class="eyebrow">Fragen</span><h2>Häufige Fragen.</h2></div>
+      <div class="faq reveal" style="--d:100ms">
+        <details>
+          <summary>Was kostet der Tutor?</summary>
+          <p>Der Tutor selbst ist kostenlos (MIT-Lizenz). Du brauchst ein Claude-Konto; laut <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Claude-Hilfe</a> gibt es Skills in allen Tarifen einschließlich Free. Nutzungsgrenzen hängen von deinem Tarif ab.</p>
+        </details>
+        <details>
+          <summary>Funktioniert das auf dem Handy?</summary>
+          <p>Den Skill lädst du einmal im Browser auf claude.ai hoch. Ob er in der Claude-App auf dem Handy genauso greift, ist noch nicht geprüft. Im Handy-Browser kannst du Fotos von Aufgaben direkt schicken.</p>
+        </details>
+        <details>
+          <summary>Der Tutor reagiert nicht wie beschrieben.</summary>
+          <p>Prüfe, ob „Code execution and file creation“ eingeschaltet und der Skill „tutor“ unter Customize → Skills aktiv ist. Dann einen neuen Chat öffnen und nur <code>tutor</code> schreiben. Kommt keine Befehlskarte, den Skill löschen und die ZIP-Datei erneut hochladen.</p>
+        </details>
+        <details>
+          <summary>Das Hochladen schlägt fehl.</summary>
+          <p>Die ZIP-Datei unverändert hochladen. Wer sie entpackt und neu packt, verliert oft den Ordner <code>tutor/</code> an oberster Stelle; dann erkennt Claude den Skill nicht.</p>
+        </details>
+        <details>
+          <summary>Formeln erscheinen als Code mit Dollarzeichen.</summary>
+          <p>Dann stellt die Plattform LaTeX nicht dar. In Claude im Browser werden Formeln normalerweise gerendert; in ChatGPT und Gemini ist das nicht geprüft.</p>
+        </details>
+        <details>
+          <summary>Wie bekomme ich eine neue Version?</summary>
+          <p>Neue ZIP-Datei herunterladen, unter Customize → Skills den alten Skill öffnen, ausschalten, über „…“ löschen und die neue Datei hochladen. Was sich geändert hat, steht im <a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Changelog</a>.</p>
+        </details>
+        <details>
+          <summary>Kann ich meinen Kurs einbinden?</summary>
+          <p>Ja, mit einem Kurspaket: eine Markdown-Datei mit Notation und Stoffumfang, z. B. <a href="https://github.com/Sae-l/tutor/blob/main/kurse/mpg1.md"><code>kurse/mpg1.md</code></a>. Lege in Claude ein Projekt an, lade die Datei dort als Projektwissen hoch und lerne in diesem Projekt.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honest -->
+  <section>
+    <div class="wrap honest">
+      <div class="reveal"><span class="eyebrow">Stand</span><h2>Ehrlich gesagt.</h2></div>
+      <ul class="reveal" style="--d:100ms">
+        <li><span class="warn">Vorabversion v0.3.0-rc.1, Lehrverhalten nicht vollständig abgenommen.</span> Die Akzeptanzfälle für das Lehrverhalten (30 Modusfälle, 33 Grenzfälle und 12 neue Schutzregressionen) sind vorbereitet; eine vollständige Zieloberflächenabnahme steht aus. Begrenzte frühere Tests ersetzen sie nicht.</li>
+        <li>ADHS-freundlich ist ein Designziel: kurze Schritte, feste Struktur. Eine Wirkung ist nicht nachgewiesen.</li>
+        <li>Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.</li>
+        <li>Schutzregeln gelten auch für Bilder und Code. Check korrigiert nur lokal; ein persönlich verlangter Graph erlaubt die nötigen Berechnungen. Die native Prüfung steht aus.</li>
+        <li>Alle Änderungen stehen im <a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Changelog</a>.</li>
+      </ul>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="wrap">
-  <div class="footer-top"><div class="footer-about"><a class="brand" href="#">tutor<span class="brand-period" aria-hidden="true">.</span></a><p>Ein klarer nächster Schritt.<br>Für deinen eigenen Lernweg.</p></div><nav aria-label="Projekt"><h2>Das Projekt</h2><a href="https://github.com/Sae-l/tutor">Quellcode</a><a href="https://github.com/Sae-l/tutor/blob/main/docs/README.md">Dokumentation</a><a href="https://github.com/Sae-l/tutor/tree/main/Obsidian-tutor">Obsidian-Wissensbasis</a><a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Änderungen</a></nav><nav aria-label="Kontakt und Unterstützung"><h2>Von Saeed Alhalak</h2><a href="https://www.linkedin.com/in/saeed-alhalak/">LinkedIn</a><a href="https://www.instagram.com/s.hlllk/">Instagram</a><a href="https://www.paypal.me/saaidalhallak">Projekt unterstützen</a></nav></div>
-  <div class="footer-bottom"><p>© 2026 Saeed Alhalak · <a href="https://github.com/Sae-l/tutor/blob/main/LICENSE">MIT-Lizenz</a></p><p><a href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1">v0.3.0-rc.1 · Vorabversion</a><span aria-hidden="true"> / </span><a href="#">Nach oben</a></p></div>
-  <p class="privacy-note">Hosting durch GitHub Pages. Gespräche unterliegen den Bedingungen deines KI-Anbieters. <code>!issue</code> erzeugt nur einen Feedback-Link; Gesprächsinhalte werden darüber nicht übertragen.</p>
-  <p class="english-note" lang="en">A free, open-source study tutor for first-year mathematics, physics, electrical engineering and mechanics. German by default, five additional explanation languages on request. Pre-release; full native acceptance remains open.</p>
-</div></footer>
-<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <span class="brand">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20 L12 4 L21 20" style="stroke:var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 13.5 h9" style="stroke:var(--ink)" stroke-width="2" stroke-linecap="round"/></svg>
+        tutor
+      </span>
+      <p>Lern-Tutor für MINT-Aufgaben im ersten Studienjahr. Erklärt, stellt Leitfragen und hält die Lösung zurück, bis du sie willst. Frei und quelloffen.</p>
+      <p>tutor ist kostenlos und werbefrei. Hilft er dir? Ein kleiner Beitrag hält ihn am Laufen.</p>
+      <a class="btn" href="https://www.paypal.me/saaidalhallak" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Mit PayPal unterstützen
+      </a>
+    </div>
+    <nav aria-labelledby="foot-github">
+      <h3 id="foot-github">GitHub</h3>
+      <ul>
+        <li><a href="https://github.com/Sae-l/tutor">Quellcode</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/issues/new/choose">Probleme, Wünsche, Verbesserungsvorschläge</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/blob/main/CHANGELOG.md">Changelog</a></li>
+        <li><a href="https://github.com/Sae-l/tutor/tree/main/Obsidian-tutor">Deutsche Obsidian-Wissensbasis</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="foot-me">
+      <h3 id="foot-me">Über mich</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/saeed-alhalak/">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/s.hlllk/">Instagram</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h3>Datenschutz</h3>
+      <p>Der Tutor speichert nichts selbst; Gespräche liegen beim jeweiligen Anbieter. <code>!issue</code> erzeugt nur einen Feedback-Link und schickt keine Gesprächsinhalte.</p>
+      <p>Diese Seite lädt keine Schriften oder Skripte von Dritten; das Hosting übernimmt GitHub Pages. Externe Links führen zu GitHub, LinkedIn, Instagram und PayPal.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="foot-base">
+      <span>© 2026 Saeed Alhalak · <a href="https://github.com/Sae-l/tutor/blob/main/LICENSE">MIT-Lizenz</a></span>
+      <span><a href="https://github.com/Sae-l/tutor/releases">Version 0.2.1</a> · <a href="#">Nach oben</a></span>
+    </div>
+  </div>
+</footer>
+
+<p id="copy-status" role="status" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></p>
+
+<script>
+document.documentElement.classList.add('js');
+
+const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Tutor reply in the hero builds up block by block
+document.querySelectorAll('.msg-tutor > *').forEach((el, i) => {
+  el.classList.add('stagger'); el.style.setProperty('--d', 500 + i * 110 + 'ms');
+});
+
+// Header border once scrolled; highlight the section in view
+const bar = document.getElementById('bar');
+addEventListener('scroll', () => bar.classList.toggle('scrolled', scrollY > 8), { passive: true });
+const navLinks = [...document.querySelectorAll('.top nav a')];
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) navLinks.forEach(a => a.hash === '#' + e.target.id ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current'));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  navLinks.forEach(a => { const s = document.querySelector(a.hash); if (s) spy.observe(s); });
+}
+
+// Spotlight follows the pointer on cards
+document.querySelectorAll('.card').forEach(card => card.addEventListener('pointermove', e => {
+  const r = card.getBoundingClientRect();
+  card.style.setProperty('--mx', e.clientX - r.left + 'px');
+  card.style.setProperty('--my', e.clientY - r.top + 'px');
+}));
+
+// Count up the true numbers once
+function countUp(el) {
+  const end = +el.dataset.count, t0 = performance.now();
+  const step = t => { const k = Math.min(1, (t - t0) / 900); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+
+// Reveal once on scroll
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in'); io.unobserve(e.target);
+      if (!calm) e.target.querySelectorAll('[data-count]').forEach(countUp);
+    }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add('in'));
+
+// Language sample: headings stay German, body follows the Erklärsprache
+const SAMPLES = {
+  de: { name: 'Deutsch', rtl: false, text: 'Der Ball wird beim Steigen langsamer, bis er am höchsten Punkt kurz stillsteht. Seine Bewegungsenergie wird dabei ganz zu Lageenergie. Das ist eine Aufgabe zur Energieerhaltung ohne Reibung.', terms: [] },
+  ar: { name: 'العربية', rtl: true, text: 'تتباطأ الكرة أثناء صعودها حتى تتوقف لحظة عند أعلى نقطة. وخلال ذلك تتحول طاقتها الحركية بالكامل إلى طاقة وضع. هذه مسألة حفظ الطاقة دون احتكاك.',
+        terms: [['حفظ الطاقة', 'Energieerhaltung'], ['الطاقة الحركية', 'kinetische Energie'], ['طاقة الوضع', 'potentielle Energie']] },
+  tr: { name: 'Türkçe', rtl: false, text: 'Top yükselirken yavaşlar ve en yüksek noktada bir an durur. Bu sırada kinetik enerjisi tamamen potansiyel enerjiye dönüşür. Bu, sürtünmesiz bir enerjinin korunumu sorusudur.',
+        terms: [['enerjinin korunumu', 'Energieerhaltung'], ['kinetik enerji', 'kinetische Energie'], ['potansiyel enerji', 'potentielle Energie']] },
+  fr: { name: 'Français', rtl: false, text: 'La balle ralentit en montant jusqu’à s’arrêter un instant au point le plus haut. Son énergie cinétique se transforme entièrement en énergie potentielle. C’est un exercice de conservation de l’énergie sans frottement.',
+        terms: [['conservation de l’énergie', 'Energieerhaltung'], ['énergie cinétique', 'kinetische Energie'], ['énergie potentielle', 'potentielle Energie']] },
+  en: { name: 'English', rtl: false, text: 'The ball slows down as it rises until it briefly stops at the highest point. Along the way its kinetic energy turns completely into potential energy. This is an energy-conservation problem without friction.',
+        terms: [['conservation of energy', 'Energieerhaltung'], ['kinetic energy', 'kinetische Energie'], ['potential energy', 'potentielle Energie']] },
+  ur: { name: 'اردو', rtl: true, text: 'گیند اوپر جاتے ہوئے آہستہ ہوتی جاتی ہے اور سب سے اونچے نقطے پر ایک لمحے کے لیے رک جاتی ہے۔ اس دوران اس کی حرکی توانائی پوری طرح مخفی توانائی میں بدل جاتی ہے۔ یہ رگڑ کے بغیر توانائی کی بقا کا سوال ہے۔',
+        terms: [['توانائی کی بقا', 'Energieerhaltung'], ['حرکی توانائی', 'kinetische Energie'], ['مخفی توانائی', 'potentielle Energie']] }
+};
+const textEl = document.getElementById('sample-text');
+const termsEl = document.getElementById('terms');
+const termsDe = document.getElementById('terms-de');
+const termsBody = document.getElementById('terms-body');
+document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
+  const code = chip.dataset.lang, s = SAMPLES[code];
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+  textEl.textContent = s.text;
+  textEl.lang = code;
+  textEl.dir = s.rtl ? 'rtl' : 'ltr';
+  termsBody.replaceChildren(...s.terms.map(([x, de]) => {
+    const tr = document.createElement('tr'), a = document.createElement('td'), b = document.createElement('td');
+    a.textContent = x; a.lang = code; b.textContent = de; b.lang = 'de';
+    tr.append(a, b); return tr;
+  }));
+  document.getElementById('terms-head').textContent = s.name;
+  termsEl.dir = s.rtl ? 'rtl' : 'ltr';
+  termsEl.hidden = !s.terms.length;
+  termsDe.hidden = !!s.terms.length;
+}));
+
+// Copy buttons; a focused button's new label is not always read aloud, so the status region repeats it
+const copyStatus = document.getElementById('copy-status');
+document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = 'Kopiert'; }
+  catch { btn.textContent = 'Nicht möglich'; }
+  copyStatus.textContent = btn.textContent;
+  setTimeout(() => { btn.textContent = 'Kopieren'; copyStatus.textContent = ''; }, 1800);
+}));
+</script>
 </body>
 </html>

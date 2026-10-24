@@ -1,11 +1,14 @@
 # tutor
 
-[![Tutor-Website mit redaktioneller Beispielansicht](docs/assets/tutor-preview.jpg)](https://sae-l.github.io/tutor/)
+<a href="https://sae-l.github.io/tutor/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.png">
+    <img alt="Landingpage des Tutors: Verstehen statt abschreiben – mit Ausschnitt einer Antwort im Modus Erklär" src="docs/assets/hero-light.png">
+  </picture>
+</a>
 
 **MINT-Aufgaben verstehen und selbst lösen, statt Lösungen abzuschreiben.**
-Ein Lern-Tutor für dein erstes Studienjahr in Mathematik, Physik, Elektrotechnik und Mechanik. Kostenlos und quelloffen; du nutzt dein vorhandenes KI-Konto. Tarife und Nutzungsgrenzen des Anbieters gelten zusätzlich.
-
-**[Tutor kennenlernen und einrichten →](https://sae-l.github.io/tutor/)** · [Dokumentationsübersicht](docs/README.md)
+Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste Studienjahr in Physik, Mathematik und E-Technik an deutschsprachigen Hochschulen.
 
 [![CI](https://github.com/Sae-l/tutor/actions/workflows/ci.yml/badge.svg)](https://github.com/Sae-l/tutor/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/Sae-l/tutor?label=Release)](https://github.com/Sae-l/tutor/releases)
@@ -22,7 +25,7 @@ Einfache Erklärungen mit passenden Vergleichen und deren Grenzen, begründete H
 ## Was der Tutor macht
 
 - **Erst verstehen:** erklärt Thema und nötige Gleichungen, stellt Leitfragen und findet den ersten Fehler im eigenen Rechenweg.
-- **Lösung erst auf Abruf:** Die Originalrechnung bleibt in den Verständnis-Modi zurückgehalten. `lösung` oder ein Lösungsmodus rufen sie ausdrücklich ab. Für die Klausurvorbereitung gibt es `kurz` und `klausur`.
+- **Lösung erst auf Abruf:** Die Lösung kommt erst, wenn du `lösung` schreibst. Für die Klausurvorbereitung gibt es `kurz` und `klausur`.
 - **Foto genügt:** Aufgabe fotografieren, optional ein Befehlswort dazu, fertig.
 - **Sprachen:** Deutsch; Erklärungen auf Wunsch auf Arabisch, Türkisch, Französisch, Englisch oder Urdu. Fachbegriffe und Klausur-Lösung bleiben deutsch.
 - **Feste Struktur:** kurze Schritte, immer gleiche Abschnitte. ADHS-freundlich gestaltet; das ist ein Designziel, keine nachgewiesene Wirkung.
@@ -50,13 +53,55 @@ flowchart LR
 
 Die Lösung kommt nie von selbst: Erst `lösung`, `kurz`, `mittel`, `lang` oder `klausur` geben sie heraus.
 
+## So sieht das aus
+
+Eingabe: `tipp` + *„Ein Wagen mit 2,0 kg beschleunigt aus Ruhe mit 3,0 m/s². Wie groß ist die resultierende Kraft?“*
+
+<details>
+<summary><b>Antwort des Tutors</b> (wörtlich aus dem <a href="tests/protokolle/2026-10-15-claude-code-cli.md">Testprotokoll</a>, Fall M04-A)</summary>
+
+> 📋 **Gegeben / Gesucht**
+>
+> | Symbol | Bedeutung | Wert | Einheit |
+> |---|---|---|---|
+> | m | Masse des Wagens | 2,0 | kg |
+> | a | Beschleunigung | 3,0 | m/s² |
+> | v0 | Anfangsgeschwindigkeit („aus Ruhe“) | 0 | m/s |
+> | F_res | resultierende Kraft auf den Wagen | ? | N |
+>
+> ❓ **Leitfragen**
+>
+> 1. Ist mit „resultierende Kraft“ eine einzelne Kraft gemeint oder die Summe aller Kräfte, die auf den Wagen wirken?
+> 2. Brauchst du die Angabe „aus Ruhe“ für die gesuchte Kraft, oder bräuchtest du sie nur für eine Geschwindigkeit oder eine Strecke?
+> 3. Welches Grundgesetz der Mechanik verbindet die resultierende Kraft mit Masse und Beschleunigung?
+> 4. Sind m und a schon in SI-Einheiten angegeben, sodass du ohne Umrechnung einsetzen kannst?
+> 5. Aus welchen Basiseinheiten setzt sich das Newton zusammen, und ergibt dein Produkt der Einheiten genau das?
+> 6. Wie viele signifikante Stellen haben die Angaben, und mit wie vielen gibst du deshalb das Ergebnis an?
+>
+> ➡️ **Nächster Schritt**
+> Beantworte die Fragen der Reihe nach auf Papier und rechne dann das Ergebnis aus. Dafür hast du höchstens 5 Minuten. Wenn du nicht weiterkommst, hast du drei Möglichkeiten:
+> - Schicke mir deine Antwort auf die Frage, an der du hängst.
+> - Schreibe noch einmal „tipp“, dann bekommst du engere Fragen.
+> - Schreibe „voll“, dann bekommst du ein vorgerechnetes Beispiel.
+>
+> 🔒 **Lösungen**
+> Mit ‚lösung‘ abrufen.
+
+</details>
+
+Danach den eigenen Rechenweg schicken → der Tutor sucht den ersten Fehler (`check`). Zum Vergleichen: `kurz`.
+
 ## Schnellstart (Claude)
 
-1. [tutor-skill.zip herunterladen](https://github.com/Sae-l/tutor/releases/download/v0.3.0-rc.1/tutor-skill.zip). Die Datei nicht entpacken.
-2. Auf [claude.ai unter Anpassungen → Skills](https://claude.ai/customize/skills) „Skill hinzufügen“ und „Skill hochladen“ wählen. ZIP hochladen und Tutor einschalten. Verfügbarkeit und Menünamen können abweichen.
-3. In einem neuen Chat Tutor auswählen und **`hilfe`** schreiben. Danach eine Aufgabe mit einem Befehlswort schicken.
+Du brauchst ein Claude-Konto. Skills gibt es laut [Claude-Hilfe](https://support.claude.com/en/articles/12512180-use-skills-in-claude) in allen Tarifen (Free, Pro, Max, Team, Enterprise); sie setzen eingeschaltete Code-Ausführung voraus. Die Menünamen stammen aus der englischen Oberfläche; in der deutschen können sie anders heißen.
 
-Import und Aktivierung wurden im Webbrowser beobachtet. Das belegt keine vollständige Verhaltensabnahme. Bei einem Update die neue ZIP hochladen und eine angebotene Ersetzung bestätigen; im beobachteten Webweg bleiben ältere Versionen im Versionsverlauf erhalten. [Änderungen](CHANGELOG.md).
+1. `tutor-skill.zip` aus dem [neuesten Release](https://github.com/Sae-l/tutor/releases) herunterladen. **Nicht entpacken.**
+2. Auf [claude.ai](https://claude.ai) unter *Settings → Capabilities* „Code execution and file creation“ einschalten. Bei Team und Enterprise schaltet das die Administration unter *Organization settings → Plugins & skills* frei.
+3. Unter *Customize → Skills* auf „+“ → „Create skill“ → „Upload a skill“ klicken und die ZIP hochladen. Der Skill „tutor“ muss eingeschaltet sein.
+4. **Testen:** In einem neuen Chat nur `tutor` schreiben. Erscheint die Befehlskarte, ist der Tutor aktiv.
+5. **Lernen:** Foto der Aufgabe schicken, optional mit einem Befehlswort.
+
+**Aktualisieren:** Neue ZIP herunterladen. Dann unter *Customize → Skills* den Skill „tutor“ öffnen, ausschalten, über „…“ → „Delete“ löschen und die neue Datei hochladen. Was sich geändert hat, steht im [CHANGELOG](CHANGELOG.md).
 
 <details>
 <summary>Fehlerbehebung</summary>
@@ -64,7 +109,7 @@ Import und Aktivierung wurden im Webbrowser beobachtet. Das belegt keine vollst�
 | Problem | Lösung |
 |---|---|
 | Hochladen schlägt fehl | ZIP unverändert hochladen. Neu gepackte Archive haben oft nicht den Ordner `tutor/` an oberster Stelle; dann erkennt Claude den Skill nicht. |
-| `hilfe` zeigt keine Befehlskarte | Skill „tutor“ eingeschaltet und im Chat ausgewählt? Neuen Chat öffnen und `hilfe` schreiben. |
+| `tutor` zeigt keine Befehlskarte | Code-Ausführung und Skill „tutor“ eingeschaltet? Neuen Chat öffnen. Sonst Skill löschen und neu hochladen. |
 | Formeln erscheinen als `$$…$$` | Die Plattform rendert kein LaTeX. In Claude im Browser normalerweise kein Problem; ChatGPT und Gemini sind nicht geprüft. |
 | Antwort verrät die Lösung zu früh | Fehler im Lösungsschutz: bitte als [Issue](https://github.com/Sae-l/tutor/issues/new) melden, ohne Aufgabentext oder persönliche Daten. |
 | Handy-App | Den Skill einmal im Browser hochladen. Ob er in der Claude-App genauso greift, ist nicht geprüft. |
@@ -119,7 +164,7 @@ Ein Befehlswort steht am Anfang der Nachricht (z. B. Foto + „tipp“). Mit `!`
 | `kurz` | Klausur-Lösung auf Deutsch plus eine Anmerkung |
 | `mittel` | Erklärung mittlerer Tiefe mit vollständiger Lösung |
 | `lang` | vollständige Lösung plus bis zu zwei andere Lösungswege |
-| `klausur` | kompakte Originallösung mit allgemeinen Hinweisen zur Klausurdarstellung |
+| `klausur` | schnelle Lösung mit Tipps für volle Punktzahl |
 | `hilfe` | Befehlskarte |
 | `!issue` | Link für Feedback |
 
@@ -130,14 +175,22 @@ Ein Befehlswort steht am Anfang der Nachricht (z. B. Foto + „tipp“). Mit `!`
 
 ## Andere Plattformen (experimentell)
 
-| Oberfläche | Dateien und Anleitung | Prüfstatus |
+| Plattform | Dateien | Stand |
 |---|---|---|
-| Claude Web | `tutor-skill.zip`, siehe Schnellstart | Primärer Weg; Import beobachtet, vollständige Verhaltensabnahme offen |
-| ChatGPT / Codex | `tutor-chatgpt.zip` oder Marketplace; [Anleitung](docs/CHATGPT.md) | Experimentell; keine vollständige native Abnahme |
-| ChatGPT Projekt | `kern.md` als Anweisung, `system-prompt.md` als Projektdatei | Experimentell; keine vollständige native Abnahme |
-| Gemini | `tutor-skill.zip`; [offizielle Hilfe](https://support.google.com/gemini/answer/17094296) | Experimentell; Annahme der ZIP-Ordnerstruktur und Verhalten unbestätigt |
+| **Claude Skill** (empfohlen) | `tutor-skill.zip` | primär; Release-Gate mit allen Akzeptanzfällen |
+| [ChatGPT Plugin](docs/CHATGPT.md#native-variante-plugin-archiv) | `tutor-chatgpt.zip`; alternativ lokaler Marketplace `dist/chatgpt/` | experimentell; noch nicht auf ChatGPT abgenommen |
+| ChatGPT Projekt | `kern.md` als Anweisung, `system-prompt.md` als Datei | experimentell; Teilabnahme vorgesehen |
+| Gemini Skill | `tutor-skill.zip` | experimentell, nicht geprüft; offen, ob Gemini das ZIP mit dem Ordner `tutor/` an oberster Stelle annimmt |
+| Gemini Gem (auslaufend) | wie ChatGPT Projekt | endet für private Konten ab November 2026, für Workspace 2027; nicht geprüft |
 
-Alle Dateien samt Prüfsummen stehen im [Release v0.3.0-rc.1](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1). GitHub ist der Quellcodehost; native Copilot-Unterstützung ist nicht bestätigt. `kern.md` hat ein internes Buildbudget von 4000 Zeichen, keine offizielle Plattformgrenze. Menünamen, Formeldarstellung und Regeltreue sind je Oberfläche gesondert zu prüfen.
+Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatGPT-ZIP und Promptdateien entsprechen `dist/`; das Skill-ZIP (Claude, Gemini) enthält die versionierte Quelle `tutor/`.
+
+- **ChatGPT:** Plugin, Projektweg und Funktionsprüfung beschreibt die [Schritt-für-Schritt-Anleitung](docs/CHATGPT.md). Vorgesehen sind Plugin und Projekt, kein neuer Custom GPT ([OpenAI zu Skills und Plugins](https://learn.chatgpt.com/docs/build-skills)).
+- **ChatGPT Projekt:** neues Projekt anlegen, den Inhalt von `kern.md` in die Projektanweisungen kopieren und `system-prompt.md` als Projektdatei hinzufügen.
+- **Gemini Skill:** in der [Gemini-App](https://gemini.google.com) unter *Einstellungen → Skills → Erstellen* `tutor-skill.zip` unverändert hochladen; aufrufen mit `/` oder `@`. Voraussetzungen laut [Google-Hilfe](https://support.google.com/gemini/answer/17094296): 18+, „Keep Activity“ eingeschaltet, Hochladen nur im Web oder in der Mac-App. Ungetestet; ob der Import mit dem Ordner `tutor/` an oberster Stelle klappt, ist offen.
+- **Gemini Gem (auslaufend):** neuen Gem anlegen, `kern.md` in die Anweisungen kopieren und `system-prompt.md` als Wissen hochladen. Gems werden laut [Google](https://support.google.com/gemini/answer/18560919) für private Konten ab November 2026 und für Workspace 2027 in Skills umgewandelt.
+
+`kern.md` hat höchstens 4000 Zeichen (internes Buildbudget, keine offizielle Plattformgrenze). Menünamen können abweichen; Formeldarstellung, RTL und Aufklappblöcke sind dort nicht abgenommen.
 
 ## Stand und Grenzen
 
@@ -165,7 +218,28 @@ Der Tutor ist frei und quelloffen. Wenn er dir hilft, kannst du das Projekt übe
 
 Die [deutsche Wissensbasis](Obsidian-tutor/00%20Startseite.md) erklärt Funktionsweise, alle elf Modi, wissenschaftliche Grundlagen, Plattformgrenzen, Bau, Fehlerdiagnose, Sicherheit und Website. Für Wikilinks, Graph und die [Canvas-Landkarte](Obsidian-tutor/Tutor-Landkarte.canvas) das Repository klonen und den Unterordner `Obsidian-tutor` in Obsidian als Vault öffnen. Community-Plugins, Sync und Publish sind nicht erforderlich.
 
-Die [Dokumentationsübersicht](docs/README.md) erklärt die Repositorystruktur und trennt Lernhilfe, Plattformwege, Nachweise und Entwicklung.
+<details>
+<summary>Aufbau des Repos</summary>
+
+| Pfad | Zweck |
+|---|---|
+| `tutor/` | Gemeinsame Skillquelle (`SKILL.md` als Router + `modes/` + `references/`) |
+| `kurse/` | optionale Kurspakete, nicht Teil des Skills |
+| `dist/system-prompt.md` | Erzeugt: alles in einer Datei, für andere Plattformen |
+| `dist/kern.md` | Erzeugt: Kern aus den `<!-- kern -->`-Abschnitten von `SKILL.md`, höchstens 4000 Zeichen |
+| `dist/chatgpt/` | Erzeugter lokaler Marketplace mit einem Tutor-Plugin, Skilldateien und MIT-Lizenz |
+| `dist/tutor-chatgpt.zip` | Erzeugtes Pluginarchiv für den ChatGPT-Importer |
+| `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Pluginssowie Angaben für die Verzeichnisse von Claude und OpenAI |
+| `packaging/plugin-README.md`, `packaging/logo.svg` | README und Logo im Pluginpaket |
+| `build.py` | Erzeugt `dist/` aus der Quelle |
+| `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
+| `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
+| `Obsidian-tutor/` | Deutsche Wissensbasis mit 20 Notizen, Canvas, Quellnachweisen und lesender Prüfung |
+| `docs/planung/` | Planungsnotizen und Recherchen (Stand jeweils im Dateinamen), keine Anleitung |
+| `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build); Schriften lokal in `docs/fonts/` (SIL OFL) |
+| `GLOSSARY.md` | Festgelegte Begriffe |
+
+</details>
 
 <details>
 <summary>Entwicklung und Tests</summary>
