@@ -276,7 +276,7 @@
     {
       "path": "tests/protokolle/2026-10-24-website.md",
       "normalization": "utf8-lf",
-      "sha256": "6618eee8466c48f952c89d3ed8d40959c9f62a072fc55e31c7dd05e74e2e1412"
+      "sha256": "642d39f6131a6a18cae92506851373a66c5aa404018031b4e975f0d69a153a8f"
     }
   ],
   "base_git_head": "122a7f960b85328bfd8cba7804c34079c4b8bfa5"

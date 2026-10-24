@@ -10,6 +10,10 @@ updated: 2026-10-24
 
 [[Veröffentlichung-v0.3.0-rc.1.json|Readback vom 24.10.2026]] enthält Releasecommit, fünf Assetgrößen und -hashes, CI-/Pages-Verweise sowie die offenen nativen Prüfgrenzen. Der Nachweis stammt aus erneut heruntergeladenen Dateien und wird nicht aus einem erfolgreichen Upload abgeleitet.
 
+## Ergänzung zur Besucherüberarbeitung
+
+Das aktuelle Hashmanifest umfasst zusätzlich `docs/styles.css`, `docs/site.js`, den Dokumentationseinstieg, das neue Vorschaubild sowie Websiteprüfungen und deren Protokoll. Die betroffenen Besuchernotizen wurden inhaltlich aktualisiert. Release- und ältere Live-Nachweise bleiben an ihren damaligen Stand gebunden; die Website wurde seither neu gestaltet.
+
 ## Quellenstand v0.3.0-rc.1
 
 Nach Bewertung der betroffenen Artikel wird das Hashmanifest auf den gebauten Quellenstand aktualisiert. SI-Schreibregeln: BIPM-SI-Broschüre, Kapitel 5; elektrotechnische Symbolquelle: IEC 60617 DB. DIN EN ISO 128-1 beschreibt allgemeine Zeichnungsgrundlagen; öffentlich gelesene Katalogangaben ersetzen keine Normvolltexte. Fachliche Methodenbelege und selbst erstellte Prüffälle stehen in `tests/modi-v030.md`. Historische Live-Dateien bleiben datiert und werden nicht als neue Releaseprüfung ausgegeben.
@@ -38,7 +42,7 @@ Produktbasis der datierten Recherche: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`
 | `tests/protokolle/2026-10-15-chatgpt-plugin-vorbereitung.md` | Vorbereitung und Build, Import nicht abgeschlossen; kein Modellergebnis. |
 | Nicht veröffentlichter freier ChatGPT-Testbericht | Nur historische Zusammenfassung: Abweichungen bei Eskalation, Kurz und Hilfe; fehlende Versionsdaten. Kein öffentlicher Abnahmebeleg. |
 | `SECURITY.md`, `.gitignore`, `.github/workflows/ci.yml`, `.github/dependabot.yml` | Lokale Richtlinien und Einstellungen; kein Nachweis des Serverzustands. |
-| `docs/index.html`, `docs/fonts/` | Website, Versionslinks, feste Beispiele und lokale Schriften. |
+| `docs/index.html`, `docs/styles.css`, `docs/site.js`, `docs/fonts/` | Website, Versionslinks, feste Beispiele und lokale Schriften. |
 | `packaging/chatgpt-plugin.json`, `LICENSE` | Version `0.2.1`, MIT und Angaben für die Verzeichnisse von Claude und OpenAI; ältere Releasebelege unten sind historisch. |
 | `docs/planung/2026-10-15-plattformen/00-features.md`, `03-unified-proposal.md`, `04-handoff-prompts.md` | Gemeinsame Drei-Plattform-Architektur, Regelkonflikte und noch nicht implementierte Umsetzungsaufträge. |
 
