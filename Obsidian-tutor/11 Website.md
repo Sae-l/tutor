@@ -1,63 +1,48 @@
 ---
 title: Die Website erklärt
 tags: [tutor, website]
-updated: 2026-10-19
+updated: 2026-10-24
 ---
 
 # Die Website
 
 ← [[00 Startseite]] · [[09 Besucher und Inhalte]]
 
-Die README verweist auf die [Tutor-Website](https://sae-l.github.io/tutor/). Maßgebliche lokale Quelle ist `tutor/docs/index.html`, nicht die separate Kopie `landing/index.html`. `CLAUDE.md` beschreibt GitHub Pages aus `main` und `/docs`. Beim erneuten HTTPS-Abruf am 2026-10-16 antwortete die Website mit **HTTP 200**; der HTML-Text entspricht nach Vereinheitlichung von CRLF/LF der lokalen Quelle. Das bestätigt den ausgelieferten Text, nicht Darstellung oder Interaktion im Browser. Die Pages-Konfigurations-API antwortete ohne Anmeldung mit 404; daraus wird kein fehlendes Deployment abgeleitet.
+Die [Tutor-Website](https://sae-l.github.io/tutor/) ist eine statische Besucherseite. Sie führt keinen Chat aus. Die maßgeblichen Quellen sind `docs/index.html`, `docs/styles.css` und `docs/site.js` im Repository. GitHub Pages veröffentlicht aus `main`, Ordner `/docs`; es ist kein Website-Build nötig.
 
-## Zweck und Inhalte
+## Besucherführung
 
-Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen Chat und führt Tutor nicht im Browser aus. Das Lernen findet nach der Einrichtung auf einer KI-Plattform statt.
-
-| Abschnitt der Quelle | Nutzen für Besucher |
+| Abschnitt | Nutzen |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.1` festgelegt; Veröffentlichung separat prüfen. |
-| Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste. |
-| 11 Modi | Befehle vergleichen und auswählen. |
-| Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
-| Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege; seit 2026-10-20 Gemini-Skill mit `tutor-skill.zip`, Gem als auslaufend gekennzeichnet. |
-| Unter der Haube | Build-Weg von `tutor/` über `build.py` zu den Paketen; Kennzahlen 11 Modi, 6 Erklärsprachen, 30 Modus- und 33 Grenzfälle. |
-| Häufige Fragen | Aktivierung, Sprache und Art des Produkts. |
-| Ehrlich gesagt | Erste stabile Version ohne Abnahme, Prüfgrenzen und ADHS als Gestaltungsziel. |
-| Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis), Über mich (LinkedIn, Instagram), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
+| Einstieg | Zielgruppe, Vorabversion und direkter Weg zur Einrichtung |
+| Beispielansicht | Redaktionelles Physikbeispiel mit technischer SVG-Skizze; erklär, tipp und check per Radioknopf vergleichen |
+| Lernweg | Vier abgestufte Hilfen; check für einen eigenen Versuch |
+| Moduswahl | Vom Anliegen zum Befehl; alle elf Modi samt Lösungsgrenzen aufklappbar |
+| Sprachen | Sechs Erklärsprachen, deutsche Voreinstellung und ausdrücklicher Wechsel |
+| Einrichtung | Claude-Webweg mit direktem Release-Download; andere Plattformen mit Anleitungen und Prüfgrenzen |
+| Transparenz und Fragen | Technische Nachweise, offene native Abnahme, Datenschutz und Feedback |
+| Fußbereich | Dokumentation, Wissensbasis, Quellcode, Lizenz und Kontakt |
 
-## Gestaltung seit 2026-10-19
+Die README ist der kurze Repositoryeinstieg; `docs/README.md` führt zu Plattformanleitungen, Konzept, Nachweisen und Entwicklung. Quellordner wurden nicht verschoben. Bestehende Abschnittsanker bleiben erhalten.
 
-```mermaid
-flowchart TD
-    N["Fester Kopf mit Lesefortschritt und aktivem Abschnitt"] --> H["Einstieg: Karopapier, Skizzen zeichnen sich einmal"]
-    H --> A["Ablauf: Flowchart baut sich beim ersten Sichtkontakt auf"]
-    A --> M["11 Modi"] --> S["Sprachbeispiel"] --> E["Einrichten"]
-    E --> T["Unter der Haube: Build-Weg und Kennzahlen"] --> F["Fragen und Stand"]
-```
+## Gestaltung und Bedienung
 
-- Hell- und Dunkelmodus folgen der Systemeinstellung; Farben stehen als CSS-Variablen in `:root`, Inline-SVGs nutzen dieselben Variablen.
-- Bewegung nur einmalig und nur mit `transform`, `opacity` und Strichlänge; keine Endlosschleifen. `prefers-reduced-motion` zeigt alles sofort und vollständig.
-- Neu: Sprunglink zum Inhalt, Favicon als Daten-URI, Open-Graph-Angaben. Weiterhin keine externen Schriften oder Skripte.
-- Die README zeigt einen Ausschnitt der Seite (`docs/assets/hero-light.png`, `hero-dark.png`) und zwei Mermaid-Flowcharts.
-- Geprüft: lokale Darstellung in Chrome (hell, dunkel, reduzierte Bewegung, schmale Ansicht) und Strukturtests. Nicht geprüft: das veröffentlichte GitHub-Pages-Deployment.
+- Lokale Geist- und Monospace-Schriften, Arabisch und Urdu mit eigenen lokalen Schriftdateien samt OFL-Lizenzen. Keine externen Skripte oder Schriften.
+- Ruhige Typografie, klare Abstände, Grün auf heller oder dunkler Fläche. Das Farbschema folgt dem System.
+- Native Radioknöpfe und Details-Blöcke, Sprunglink, sichtbarer Tastaturfokus und mobile Navigation mit Escape-Rückkehr.
+- Keine automatisch laufende Animation. Der kurze Antwortwechsel wird nur ohne Wunsch nach reduzierter Bewegung animiert.
+- Ohne JavaScript bleiben Einstieg, Standardbeispiel, Modusliste, Einrichtung, FAQ und Links nutzbar; Kopier- und Wechselknöpfe erscheinen erst mit JavaScript.
+- Kopieren meldet Erfolg oder eine manuelle Alternative. Die Beispieltexte sind ausdrücklich redaktionell, kein Live-Chat und kein Beleg für eine Modellantwort.
 
-## Technische Funktionsweise
+## Nachweise und Grenzen
 
-- HTML, CSS und JavaScript in einer Seite; lokale WOFF2-Schriften und OFL-Lizenzen unter `docs/fonts/`.
-- JavaScript wechselt vordefinierte Sprachbeispiele, setzt `lang` und für Arabisch/Urdu `dir` und erzeugt Fachbegriffstabellen mit DOM-Funktionen und `textContent`.
-- Kopierknöpfe verwenden `navigator.clipboard` und zeigen einen Fehlerzustand an. Elemente werden mit `IntersectionObserver` eingeblendet; dafür gibt es einen Ersatzpfad bei fehlender Unterstützung.
-- Im geprüften Quelltext wurden keine `fetch`-Aufrufe, externen Trackingskripte oder Uploadformulare gefunden. Das ist eine Quelltextbeobachtung, kein Mitschnitt des tatsächlichen Netzwerkverkehrs. GitHub-Hosting und externe Links haben einen eigenen Datenschutzkontext.
+Die datierten Release-Nachweise in [[Veröffentlichung-v0.3.0-rc.1.json|Veröffentlichung-v0.3.0-rc.1.json]] gehören zum veröffentlichten Paketstand. Die neue Besucherseite ändert keine Tutor-Pakete und ist separat zu prüfen. Historische Abrufvergleiche bleiben datiert.
 
-## Dokumentierter Synchronisationsbedarf
+Die aktuelle Websiteprüfung steht in `tests/protokolle/2026-10-24-website.md`. Sie unterscheidet lokale Browserprüfung und späteren Pages-Abruf. Keine formale Barrierefreiheitszertifizierung und keine Tutor-Modellabnahme daraus ableiten.
 
-In rc.3 nennt die Website **30 Modusfälle, 33 Grenzfälle und 12 Schutzregressionen**, verlinkt den öffentlichen Vault und bewahrt den Status „nicht abgenommen“. Die frühere Abweichung 32/33 ist damit in der Quelle korrigiert. Deployment und tatsächlich gelieferte Dateien separat prüfen; historische Live-Nachweise bleiben datiert.
+## Bei späteren Änderungen
 
-## Website später ändern
-
-1. `docs/index.html` als Quelle ändern; Deutsch als Besuchersprache und die vorhandenen Sprachbeispiele erhalten.
-2. Version, Paketlinks, Moduszahl und Prüfstatus mit README und Protokollen abgleichen.
-3. Mobilansicht, Tastaturbedienung, Kontrast, Kopieren, Links und RTL prüfen. Beim Sprachwechsel müssen deutsche Überschriften erhalten bleiben.
-4. Nach dem Deployment die tatsächliche Website prüfen. Eine lokale Vorschau belegt kein erfolgreiches GitHub-Pages-Deployment.
-
-Diese Notiz erklärt und bewertet die Quelle. Website und Deployment wurden durch die Vault-Aktualisierung nicht geändert. HTTP-Ergebnis und Vergleichshashes stehen in [[Live-Nachweise.json|Live-Nachweise.json]]; eine neue Browser-, Mobil- oder Barrierefreiheitsprüfung fand nicht statt.
+1. HTML, CSS und JavaScript gemeinsam betrachten; Beispiele und Downloadversion mit README und Release abgleichen.
+2. Mobile Breiten, Tastatur, Fokus, RTL, Kopierfehler und Verhalten ohne JavaScript prüfen.
+3. Quellhashes nach Bewertung der betroffenen Notizen erneuern.
+4. Nach Veröffentlichung HTML und Ressourcen von GitHub Pages erneut abrufen. Lokale Vorschau ist kein Deploymentnachweis.
