@@ -12,11 +12,9 @@ updated: 2026-10-24
 
 ← [[00 Startseite]] · [[03 Umsetzung]] · [[09 Besucher und Inhalte]]
 
-Das lokale Remote verweist auf [Sae-l/tutor](https://github.com/Sae-l/tutor). Der GitHub-Connector bestätigt in der historischen Abfrage vom 2026-10-16 **öffentlich**, Default-Branch `main` und nicht archiviert. Die öffentliche Commit-API lieferte damals für `main` denselben Commit wie lokal: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`. `LICENSE` enthält lokal MIT. Die frühere Angabe „privat“ aus dem Audit vom 2026-10-14 ist überholt.
+Das lokale Remote verweist auf [Sae-l/tutor](https://github.com/Sae-l/tutor). Der GitHub-Connector bestätigt bei dieser Aktualisierung **öffentlich**, Default-Branch `main` und nicht archiviert. Die öffentliche Commit-API liefert für `main` denselben Commit wie lokal: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`. `LICENSE` enthält lokal MIT. Die frühere Angabe „privat“ aus dem Audit vom 2026-10-14 ist überholt.
 
 Die Branch-API meldet `protected: true`; Die Antwort nennt als Pflichtprüfungen `build-und-tests (ubuntu-latest)` und `build-und-tests (windows-latest)` mit `enforcement_level: non_admins`. Vollständige Schutzregeln und Umgehungsrechte wurden nicht geprüft. Die [CI für diesen Commit](https://github.com/Sae-l/tutor/actions/runs/38799637520) ist abgeschlossen und erfolgreich. Das belegt den Workflowlauf, keine Plattformabnahme. Die [Vorabversion v0.2.0-rc.2](https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2) enthält fünf Assets. Rohwerte und Abfragewege: [[Live-Nachweise.json|Live-Nachweise.json]].
-
-Der folgende API-Abschnitt und die alte Releaseangabe sind historische Nachweise. Die aktuelle Paketveröffentlichung ist im Readback v0.3.0-rc.1 dokumentiert; die Besucherüberarbeitung ändert nur Website, Repositoryeinstieg und Dokumentation.
 
 ## Tatsächliche Git-Wurzel
 
@@ -44,10 +42,7 @@ tutor/                         ← Git-Wurzel im übergeordneten Arbeitsordner
 │   └── chatgpt/                Marketplace, Plugin und Skill
 ├── tests/                     Struktur, Abnahme und bereinigte Protokolle
 ├── docs/
-│   ├── README.md               Dokumentationseinstieg
-│   ├── index.html              GitHub-Pages-Website
-│   ├── styles.css              Gestaltung mit lokalen Schriften
-│   ├── site.js                 Optionale Interaktion und Kopieren
+│   ├── index.html              Vorgesehene GitHub-Pages-Website
 │   ├── fonts/                  Lokale Schriften und Lizenzen
 │   ├── .nojekyll
 │   ├── KONZEPT.md

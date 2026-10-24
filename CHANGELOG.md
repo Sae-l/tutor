@@ -13,10 +13,6 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
-- Besucherführung und Website überarbeitet: ruhiges Lernheft-Layout, technische Beispielskizze, per Tastatur bedienbare Hilfestufen, mobile Navigation und kompakte Einrichtung.
-- README gestrafft und Dokumentationsübersicht ergänzt; veraltete Updateanweisung und Punktzahlversprechen korrigiert.
-- Lokale Schriftdateien, statischer Betrieb und deutsche Obsidian-Dokumentation bleiben erhalten. Tutor-Pakete und Releaseversion unverändert.
-
 ## [0.2.1] – 2026-10-20
 
 Paketversion für die offiziellen Verzeichnisse; Tutor-Verhalten unverändert gegenüber 0.2.0.
