@@ -45,7 +45,7 @@
     },
     {
       "path": "tutor/modes/thema.md",
-      "sha256": "be796a3c10a709213ceadb210e1cdc66a1480652ed5ac0dafd6307d6422a30cc",
+      "sha256": "a859c31e619646c6dd3c1006e60e9e5b0dd09c94c95ef015a5ee699aa4bf55df",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "dc525ff842b418c1070f4fc97761700e0bd4a4397c393fd4e0e1bd837e8477c0",
+      "sha256": "ce73493f18517df0d90689f9060a3394b40c293b5c49a3e2d2b989fd1b5b4b5c",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "cfbadc50a7ebd8ee949e2c9f60112347c6b422a01d23121d90a9ab5c8c3bae3c",
+      "sha256": "83962fd097396befbe77819ab8ac29b0e4cf3a610ba803c79afb086edfa123fb",
       "normalization": "raw"
     },
     {
@@ -221,7 +221,7 @@
     {
       "path": "tests/modi-v030.md",
       "normalization": "utf8-lf",
-      "sha256": "b31f063df1dd364cc78f3e4de38d63356745dabb6507efa21b91f35d7e430d28"
+      "sha256": "cbe8b762149ff3047e9a27b179e5c753eb1aedc3fb0b01f85c25873509de12d1"
     },
     {
       "path": "tests/test_fachreferenzen.py",
@@ -231,12 +231,12 @@
     {
       "path": "tests/protokolle/2026-10-24-v030-audit.md",
       "normalization": "utf8-lf",
-      "sha256": "b050f358ba4ad790bba4560e318295ce24ef12e9031e0aacd6c776ff6b4d1f80"
+      "sha256": "3049ad1c1b2ee9b6c1df0521d664aab1357b8e341025d4ebd00f4642f4c12708"
     },
     {
       "path": "docs/releases/v0.3.0-rc.1.md",
       "normalization": "utf8-lf",
-      "sha256": "e63858f7607d73d78127cae95cd472d46816ef6c60bb80b9fafc585aad8b7608"
+      "sha256": "5d3cfc279a5f5bfee16a711049173bbc2e1e35303a39345bc0d3ea8cec5f8e1b"
     },
     {
       "path": "tests/test_skizzenvorlagen.py",
