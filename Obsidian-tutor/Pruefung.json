@@ -1,23 +1,20 @@
 {
   "status": "PASS",
   "notes": 20,
-  "wikilinks": 119,
+  "wikilinks": 129,
   "canvas_nodes": 25,
   "canvas_edges": 23,
   "canvas_file_cards": 20,
   "all_notes_on_canvas": true,
-  "source_hashes": 43,
+  "source_hashes": 48,
   "modes": 11,
   "negative_self_checks": 2,
   "limits": [
     "Keine native Obsidian-Darstellungsprüfung",
     "Keine Modell- oder Plattformabnahme"
   ],
-  "checked_date": "2026-10-16",
+  "date": "2026-10-24",
   "timezone": "Europe/Berlin",
-  "documentation_language": "de",
-  "scope": "Oeffentliche Fassung; keine persoenlichen Obsidian-Einstellungen oder Gespraechskennungen",
-  "source_hash_normalization": "utf8-lf for text; raw for ZIP",
-  "native_ui_checked": false,
-  "platform_acceptance_performed": false
+  "release_commit": "ad7b056e3bc56c981377a96db74e427d0c34bebc",
+  "release_readback": "Veröffentlichung-v0.3.0-rc.1.json"
 }
