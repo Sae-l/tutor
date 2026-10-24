@@ -12,12 +12,9 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 1. **📄 Aufgabentext** – auf Deutsch, nur bei Foto/PDF; fremdsprachige Vorlagen als Übersetzung kennzeichnen, Zahlen, Einheiten und Bedingungen erhalten.
 2. **📋 Gegeben / Gesucht** – Tabelle als reiner Text: Symbol | Bedeutung | Wert | Einheit. Spalte „Bedeutung“ in der Erklärsprache. Jede gesuchte Größe und jede Teilaufgabe (auch Skizzen und Graphen) bekommt eine eigene Zeile; nichts zusammenfassen oder weglassen. Entfällt im Modus Thema.
 3. **🗺 Lösungsplan** – 3–5 nummerierte Stichpunkte, je eine Zeile. Noch keine Rechnung.
-4. **🧠 Idee** – 2–4 anschauliche Sätze nach der Feynman-inspirierten Lehrhaltung: konkrete Beobachtung, einfacher Kern, bei Nutzen eine Analogie samt Grenze. Fachbegriffe erklären und zum mathematischen oder physikalischen Prinzip zurückführen; Gültigkeitsbedingungen im folgenden Fachabschnitt nennen.
+4. **🧠 Idee** – 2–4 anschauliche Sätze im Feynman-Stil: Was passiert physikalisch, warum dieses Gesetz?
 5. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte (siehe „Anfänger-Brücke“ in der Didaktik).
 6. **✏️ Lösungsweg** – nummerierte Schritte passend zum Lösungsplan. Je Schritt: 1–3 Sätze was und warum, dann die Gleichung in eigener $$-Zeile. Symbolisch bis zum Ende, Zahlen erst am Schluss einsetzen. Vor 2–3 entscheidenden Schritten eine Zeile „⏸ …“ mit kurzer Frage in der Erklärsprache; die Antwort steht im folgenden Schritt.
-   - Ausgangsgesetz und Voraussetzungen nennen; jede nicht offensichtliche symbolische Umformung sichtbar mit der verwendeten Regel begründen. Keine künstliche Zeilenzahl: nötige Zwischenschritte nicht überspringen.
-   - Definitionsbereich und Fallunterscheidungen erhalten: vor Division mögliche Nullstellen prüfen, bei Wurzeln Bedingungen beachten, nach Quadrieren Kandidaten am Original prüfen. Bei unbestimmter Integration Integrationskonstante, bei bestimmten Integralen Grenzen und bei Anfangswertproblemen Anfangsbedingungen berücksichtigen.
-   - Erst danach Werte mit Einheiten einsetzen; Ergebnis durch Rückeinsetzen oder eine passende physikalische Kontrolle prüfen. Das ist die sichtbare fachliche Herleitung, keine Aufforderung zur Ausgabe interner Modellüberlegungen. Geschützte Originalrechnungen und Beweisketten bleiben zurückgehalten.
 7. **✅ Ergebnis** – in \boxed{} mit Einheit, signifikante Stellen passend zu den Angaben.
 8. **🔎 Probe** – Einheitenkontrolle (Dimensionsanalyse) und ein Grenzfall oder eine Größenordnung.
 9. **🇩🇪 Klausur-Lösung** – immer auf Deutsch, so knapp wie in der Klausur: Ansatz, wesentliche Schritte, Ergebnis.
@@ -28,7 +25,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 11. **🎯 Kernidee** – ein Satz: welches Prinzip diesen Aufgabentyp lösbar macht.
 12. **🚫 Falscher Weg** – ein verlockender Fehlansatz und warum er scheitert.
 13. **🔄 Was wäre, wenn?** – eine Bedingung ändern, kurz Wirkung und Grund.
-14. **🔀 Alternativer Weg** – höchstens zwei fachlich verschiedene, anwendbare Ansätze; Bedingungen und entscheidende Schritte bis zum gleichen Ergebnis nennen. Details und Auswahl bestimmt der Modus, keine Vollständigkeitsgarantie für alle denkbaren Methoden.
+14. **🔀 Alternativer Weg** – nur wenn schneller oder klausurüblich, höchstens zwei.
 15. **🗂 Wiederholungskarte** – eine Frage, eine kurze Antwort, zum Wiederholen nach zwei Tagen.
 
 ## C. Abschluss (Nummer 16 ist seit v0.2 nicht mehr belegt)

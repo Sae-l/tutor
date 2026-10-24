@@ -1,20 +1,10 @@
 ---
 title: Lokales Prüfergebnis und Grenzen
 tags: [tutor, pruefung]
-updated: 2026-10-24
+updated: 2026-10-17
 ---
 
 # Prüfergebnis
-
-## Veröffentlichter und zurückgelesener Stand
-
-[v0.3.0-rc.1](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.1) ist als **Pre-release** veröffentlicht. Tag und Pakete beziehen sich auf `ad7b056e3bc56c981377a96db74e427d0c34bebc`. Die fünf veröffentlichten Assets wurden erneut heruntergeladen: alle Bytes und SHA-256-Werte stimmen mit dem lokalen Releasebau überein; die Prüfsummendatei ist erfolgreich geprüft. GitHub CI und Pages für denselben Commit sind erfolgreich; die öffentliche Website liefert HTTP 200 und entspricht nach UTF-8/LF-Normalisierung der Releasequelle.
-
-Maschinenlesbarer Beleg: [[Veröffentlichung-v0.3.0-rc.1.json|Veröffentlichungsnachweis]]. Dieser spätere Dokumentationsnachweis verändert den Release-Tag nicht. Die technisch bestandenen 21 Tests und die begrenzten nativen Beobachtungen sind getrennt ausgewiesen. Der gescheiterte erste D01-Lauf bleibt ein Fehlernachweis; die korrigierte Wiederholung bleibt offen.
-
-## Stand der neuen Vorabversion (24.10.2026)
-
-Die aktuelle Suite umfasst 21 Tests: 16 Struktur-/Buildtests, vier fachliche Referenztests und einen SVG-Sicherheits-/Zugänglichkeitstest. Maßgeblich ist das Abschlussprotokoll `tests/protokolle/2026-10-24-v030-audit.md`. Der Claude-Code-Modellversuch scheiterte vor der ersten Antwort mit abgelaufenem OAuth-Token (HTTP 401); damit keine bestandenen CLI-Modellfälle. Ein anschließender nativer Webtest importierte und aktivierte den Skill; D01 bestand wegen zu vieler Nebenthemen und einer unzuverlässigen Analogiegrenze zunächst nicht. Der Thema-Modus wurde gezielt korrigiert; die korrigierte Skillversion wurde installiert, die Wiederholung ist wegen erschöpften Kontingents offen. Das Auditprotokoll hält beide Quellstände fest. Strenge Pluginvalidierung besteht. Vaultprüfung kontrolliert Links, Canvas und Quellhashes; native Obsidian-Darstellung bleibt offen. Die nachfolgenden datierten Ergebnisse sind historisch und nicht auf die neue Version übertragbar.
 
 ← [[00 Startseite]] · [[12 Abnahmeplan]] · [[13 Quellen und Nachweise]]
 

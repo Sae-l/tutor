@@ -1,10 +1,6 @@
 # Tutor
 
-Lern-Tutor für MINT-Aufgaben im ersten Studienjahr an deutschsprachigen Hochschulen: Physik, Mathematik, Elektrotechnik und Mechanik. Der Tutor erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich verlangst. So übst du selbst, statt abzuschreiben.
-
-## Verbesserte Modi
-
-Feynman-inspirierte Erklärungen, begründete Herleitungen und bis zu drei sinnvolle Lösungswege. Technische Skizzen nutzen kontrollierten Zeichencode und vorhandene Werkzeuge. Lösungsschutz gilt auch in Code und Bildbeschreibungen. Die vollständige native Abnahme dieser Vorabversion steht aus.
+Lern-Tutor für MINT-Aufgaben im ersten Studienjahr an deutschsprachigen Hochschulen: Physik, Mathematik und Elektrotechnik. Der Tutor erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich verlangst. So übst du selbst, statt abzuschreiben.
 
 ## Installation
 

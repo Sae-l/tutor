@@ -19,10 +19,6 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
-## Stand v0.3.0-rc.1 (2026-10-24)
-- Verbesserte Didaktik, Herleitungen, Methodenvergleich und technische Skizzen in der gemeinsamen Quelle. Elf Modi und Lösungsschutz bleiben erhalten.
-- Neue Fälle in `tests/modi-v030.md`; `test_fachreferenzen.py` prüft Sollwerte, keine Modellantworten. Native Plattformabnahme bleibt offen; Veröffentlichung als Vorabversion.
-
 ## Stand v0.2.1 (2026-10-20)
 - Pluginpaket für die offiziellen Verzeichnisse von Claude und ChatGPT/Codex (Manifest, README, Logo); Verhalten wie v0.2.0. Einreichung in den Verzeichnissen steht aus.
 

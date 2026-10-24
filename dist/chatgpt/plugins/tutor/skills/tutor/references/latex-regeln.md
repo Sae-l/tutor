@@ -14,10 +14,10 @@ Diese Regeln stammen aus echten Darstellungsfehlern in der Claude-App und in Cha
 4. In LaTeX nur ASCII: keine arabischen Buchstaben (auch nicht aus Urdu), kein ß ä ö ü, kein ç ğ ı ş, kein é è à, keine ganzen Wörter in irgendeiner Sprache. Text-Indizes als kurzer lateinischer Buchstabe: A_\mathrm{w}; die Bedeutung im Text erklären („A_w: Fläche der weißen Dreiecke“).
 5. Brüche immer mit vollen Klammern: \frac{1}{2}, nie \frac12. Klammern immer ausgeglichen.
 6. Endergebnis: \boxed{...} innerhalb von $$ ... $$.
-7. SI-Schreibweise: Einheit aufrecht mit \mathrm{}, kleines Leerzeichen \, zwischen Zahlenwert und Einheit, Dezimalkomma als {,}. Ausnahme: Winkelgrad, Winkelminute und Winkelsekunde direkt an den Zahlenwert (z. B. 30^{\circ}); Grad Celsius dagegen mit Abstand (z. B. 20\,{}^{\circ}\mathrm{C}). Grundlage: BIPM-SI-Broschüre, Kapitel 5; daraus keine vollständige DIN-/ISO-Konformität ableiten.
+7. DIN 1338 / ISO 80000: Einheit aufrecht mit \mathrm{}, kleines Leerzeichen \, vor der Einheit, Dezimalkomma als {,}.
 8. Tabellen enthalten kein LaTeX, nur reinen Text: U0 | 3,5 | V.
 9. Meldet der Lernende sichtbares `$$`, Backslashes oder Rohcode, rendert die Oberfläche kein LaTeX: ab dann jede Formel als lesbarer Unicode-Klartext in eigener Zeile (E_kin = ½ · m · v², F_R = μ · F_N, Δx = 15 m), ohne `$$`. Nicht behaupten, Formeln würden gesetzt, ohne es zu sehen.
-10. Formelzeichen beim ersten Auftreten mit Bedeutung und Einheit nennen (F_R: Reibungskraft in N, μ: Gleitreibungszahl, dimensionslos). Größenzeichen einschließlich physikalischer Konstanten (z. B. c, g, h) kursiv, Einheiten und beschreibende Indizes aufrecht. Mathematische Konstanten und Operatoren von Größen unterscheiden: e als Basis der Exponentialfunktion nicht mit einer physikalischen Größe e verwechseln. Für pi den üblichen Befehl \pi verwenden; keine nicht unterstützten Aufrecht-Befehle erzwingen. Ein Kurspaket geht bei der Notation vor; keine ungeprüfte Schreibweise als einzig normgerecht bezeichnen.
+10. Formelzeichen beim ersten Auftreten mit Bedeutung und Einheit nennen (F_R: Reibungskraft in N, μ: Gleitreibungszahl, ohne Einheit). Größen kursiv (LaTeX macht das selbst), beschreibende Indizes, Einheiten und Konstanten wie e, π aufrecht; ein Kurspaket geht bei der Notation vor. Keine Schreibweise als einzig normgerecht ausgeben, die nicht in DIN 1338 / ISO 80000 steht.
 
 ## Richtig
 

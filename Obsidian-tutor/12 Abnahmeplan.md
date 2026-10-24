@@ -1,15 +1,11 @@
 ---
 title: Abnahme von Verhalten und Darstellung
 tags: [tutor, abnahme]
-updated: 2026-10-24
+updated: 2026-10-17
 status: zieloberflaechen-offen
 ---
 
 # Abnahmeplan
-
-## Zusätzliche Fälle für v0.3.0-rc.1
-
-`tests/modi-v030.md`: D01–D04 für Erklärung und Sprache, M01–M06 für verschiedene Methoden und Definitionsbereiche, S01–S05 für technische Skizzen und Schutz aller Medien, R01–R03 für Check/Kurz/Hilfe. D01 soll in drei frischen Gesprächen je abgenommener Oberfläche geprüft werden. Fachliche Kriterien statt identischen Wortlauts; ein Fehler in Richtigkeit oder Schutz lässt einen Fall scheitern. Die vollständige bestehende Regression bleibt wegen geänderter gemeinsamer Referenzen erforderlich. Die Tests sind vorbereitet, keine behauptete native Abnahme.
 
 ← [[00 Startseite]] · [[07 Plattformen]] · [[16 Prüfergebnis]]
 
