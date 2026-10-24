@@ -1,14 +1,10 @@
 ---
 title: Umsetzung und Pflege
 tags: [tutor, umsetzung]
-updated: 2026-10-24
+updated: 2026-10-16
 ---
 
 # Umsetzung
-
-## Änderung v0.3.0-rc.1
-
-Gemeinsame Didaktik und Antwortvorlage definieren einfache Erklärungen und begründete Herleitungen. Die Modi wählen Tiefe und Schutzgrenzen. Lang ergänzt echte Methodenvergleiche; Skizze ergänzt Körper-/Systemgrenzen und Schaltungstopologie. Weiterhin 16 Markdown-Quelldateien, elf Modi und vier Referenzen; keine neue Pflichtabhängigkeit. Tests ergänzen vier Referenzrechnungen, getrennt von tatsächlichen Modellantworten. Details: [[06 Modi]] und [[12 Abnahmeplan]].
 
 ← [[00 Startseite]] · [[08 Repository-Aufbau]] · [[18 Bauanleitung]] · [[17 Fehlerdiagnose und Reparatur]]
 

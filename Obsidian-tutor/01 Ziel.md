@@ -1,14 +1,10 @@
 ---
 title: Ziel des Skills
 tags: [tutor, ziel]
-updated: 2026-10-24
+updated: 2026-10-16
 ---
 
 # Ziel des Skills
-
-## Ausbau des Lernbegleiters (24.10.2026)
-
-Der Tutor soll ein leicht zugänglicher erster Helfer im Lernweg sein. Der belegte Anwendungsumfang bleibt das erste MINT-Studienjahr einschließlich Mechanik; eine Eignung für jeden Studierenden oder jede Fachfrage wird nicht garantiert. Einfacher Einstieg, nachvollziehbare Schritte und bewusst abrufbare Lösungen haben Vorrang vor zusätzlichen Befehlen.
 
 ← [[00 Startseite]]
 
@@ -24,7 +20,7 @@ Praktisch: einmal einrichten, danach **Aufgabenfoto und ein Befehlswort** schick
 | Merkmal | Beschreibung |
 |---|---|
 | Lernende | Erstes Studienjahr eines MINT-Studiengangs an einer deutschsprachigen Hochschule |
-| Fächer | Physik, Mathematik, Elektrotechnik und Mechanik |
+| Fächer | Physik, Mathematik und Elektrotechnik |
 | Klausursprache | Deutsch |
 | Erklärsprachen | Deutsch als Voreinstellung; Arabisch, Türkisch, Französisch, Englisch und Urdu auf Wunsch |
 | Gestaltung | ADHS-freundlich: kurze Schritte, feste Struktur und eine nächste Handlung mit Zeitangabe |

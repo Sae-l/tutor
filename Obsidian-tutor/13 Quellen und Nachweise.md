@@ -1,18 +1,10 @@
 ---
 title: Quellen- und Nachweisverzeichnis
 tags: [tutor, herkunft]
-updated: 2026-10-24
+updated: 2026-10-16
 ---
 
 # Quellen und Nachweise
-
-## Veröffentlichungsnachweis
-
-[[Veröffentlichung-v0.3.0-rc.1.json|Readback vom 24.10.2026]] enthält Releasecommit, fünf Assetgrößen und -hashes, CI-/Pages-Verweise sowie die offenen nativen Prüfgrenzen. Der Nachweis stammt aus erneut heruntergeladenen Dateien und wird nicht aus einem erfolgreichen Upload abgeleitet.
-
-## Quellenstand v0.3.0-rc.1
-
-Nach Bewertung der betroffenen Artikel wird das Hashmanifest auf den gebauten Quellenstand aktualisiert. SI-Schreibregeln: BIPM-SI-Broschüre, Kapitel 5; elektrotechnische Symbolquelle: IEC 60617 DB. DIN EN ISO 128-1 beschreibt allgemeine Zeichnungsgrundlagen; öffentlich gelesene Katalogangaben ersetzen keine Normvolltexte. Fachliche Methodenbelege und selbst erstellte Prüffälle stehen in `tests/modi-v030.md`. Historische Live-Dateien bleiben datiert und werden nicht als neue Releaseprüfung ausgegeben.
 
 ← [[00 Startseite]] · [[16 Prüfergebnis]] · [[19 Entscheidungen und Gesprächskontext]]
 

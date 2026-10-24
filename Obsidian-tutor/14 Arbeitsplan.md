@@ -1,14 +1,10 @@
 ---
 title: Vault-Arbeitsplan und offene Produktarbeiten
 tags: [tutor, plan]
-updated: 2026-10-24
+updated: 2026-10-17
 ---
 
 # Arbeitsplan
-
-## Umsetzung v0.3.0-rc.1
-
-Die aktuelle Arbeit umfasst Didaktik, Herleitungen, Methodenvergleich, technische Skizzen, Paketbau, unabhängige Reviews und deutsche Vaultpflege. Technischer Nachweis: [[16 Prüfergebnis]]. Ein begrenzter nativer Weblauf führte zu einer gezielten Thema-Korrektur; die erneute Modellprüfung ist durch ausgeschöpftes Kontingent offen. Offen bleiben die vollständige native Verhaltens-/Darstellungsabnahme und Lernwirksamkeit; dafür gilt [[12 Abnahmeplan]]. Die folgenden älteren Schritte beschreiben die damalige Vaultarbeit, nicht den aktuellen Produktstatus.
 
 ← [[00 Startseite]] · [[15 ECC-Zuordnung]]
 
