@@ -145,12 +145,12 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "dfa0e884749f768987ce2f9f4c193cfbd0550ab202a84b1b75c0a76895403f18",
+      "sha256": "bd2cd4e2b00a591d6593313c899564dd12ad322bbe422c00a02bc88ff76659a7",
       "normalization": "utf8-lf"
     },
     {
       "path": ".gitignore",
-      "sha256": "d560df00d4261db5539440ec1d06b5ac3998e10b9a627304f569872646b631ca",
+      "sha256": "66458c336789af9ea09cf2955eafe39046543d747d951406055edd9643ed5ab8",
       "normalization": "utf8-lf"
     },
     {
