@@ -32,7 +32,7 @@ flowchart LR
 | Abnahmeprotokolle | Ergebnisübersicht | Bereinigte Fassung mit selbst erstellten Aufgaben | Unbearbeitetes Original privat |
 | Gespräche, Namen, E-Mail und Noten | Nicht veröffentlichen | Nicht veröffentlichen | Nur bei Bedarf und mit Zustimmung begrenzt speichern |
 | Vorlesungs-/Prüfungsbilder und Dozentenmaterial | Nur mit geklärten Rechten | Standardmäßig ausschließen | `referenzen/` lokal |
-| Agentenzustand, Speicher und Gerätepfade | Kein Nutzen für den Einstieg | Ausschließen | `.claude/`, `.agents/`, `.claude-flow/` |
+| Agentenzustand, Speicher und Gerätepfade | Kein Nutzen für den Einstieg | Ausschließen | `.claude/`, `.agents/`, `.claude-flow/`, `.agentic-qe/` |
 | Obsidian-Arbeitszustand | Nicht veröffentlichen | Nicht für den Einstieg nötig | `.obsidian/workspace*.json`; Sync- und Kontoeinstellungen privat prüfen |
 | Planungsverlauf | Einstieg nicht überladen | Bereinigte Auszüge bei Nutzen | Private Details lokal |
 

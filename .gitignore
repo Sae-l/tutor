@@ -1,5 +1,6 @@
 # Lokale Werkzeugzustände (Agenten, Flow-Tools), auch innerhalb von tutor/
 .claude-flow/
+.agentic-qe/
 .agents/
 skills-lock.json
 # Python und Testläufe
