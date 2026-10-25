@@ -7,6 +7,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 ### Geändert
 - Stand von v0.2.1 wiederhergestellt (#66, #68): Tutor-Quelle, Pakete und Website entsprechen wieder dem Tag v0.2.1. Das Release der Vorabversion v0.3.0-rc.1 ist gelöscht; der Tag `v0.3.0-rc.1` bleibt als Verlaufsnachweis erhalten.
 - `.gitignore` schließt lokale Zustände des QE-Werkzeugs (`.agentic-qe/`) aus.
+- Landingpage-SEO: Titel nennt Physik und Mathe zuerst; Canonical-Link, Vorschaubild (`og:image`, `twitter:card`), `og:locale` und strukturierte Daten (`SoftwareApplication`, JSON-LD).
 
 ## [0.2.1] – 2026-10-20
 
