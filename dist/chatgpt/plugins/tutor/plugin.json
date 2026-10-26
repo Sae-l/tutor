@@ -25,7 +25,7 @@
       "interface": {
         "displayName": "Tutor",
         "shortDescription": "MINT-Aufgaben selbst lösen",
-        "longDescription": "Lern-Tutor für Physik, Mathematik und Elektrotechnik im ersten Studienjahr an deutschsprachigen Hochschulen. Er erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich willst. Elf Ein-Wort-Befehle wie erklär, tipp, check und klausur steuern die Antwort. Erklärsprache Deutsch, auf Wunsch Arabisch, Türkisch, Französisch, Englisch oder Urdu; Fachbegriffe und Überschriften bleiben Deutsch. ADHS-freundlich: kurze Abschnitte und klare nächste Schritte.",
+        "longDescription": "Lern-Tutor für Physik, Mathematik, Elektrotechnik und Technische Mechanik im Studium an deutschsprachigen Hochschulen. Er erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich willst. Elf Ein-Wort-Befehle wie erklär, tipp, check und klausur steuern die Antwort. Erklärsprache Deutsch, auf Wunsch Arabisch, Türkisch, Französisch, Englisch oder Urdu; Fachbegriffe und Überschriften bleiben Deutsch. ADHS-freundlich: kurze Abschnitte und klare nächste Schritte.",
         "developerName": "Saeed Alhalak",
         "category": "Education & Research",
         "capabilities": [],

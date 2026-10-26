@@ -1,13 +1,13 @@
 # Tutor
 
-Lern-Agent für MINT-Fächer im ersten Studienjahr, öffentlich nutzbar; ADHS-Freundlichkeit ist Gestaltungsprinzip. Dieses Glossar legt die Wörter fest, mit denen Skill, Prompt, Tests und Planung über ihn sprechen.
+Lern-Agent für MINT-Fächer im Studium (Schwerpunkt Studienbeginn), öffentlich nutzbar; ADHS-Freundlichkeit ist Gestaltungsprinzip. Dieses Glossar legt die Wörter fest, mit denen Skill, Prompt, Tests und Planung über ihn sprechen.
 
 ## Language
 
 ### Beteiligte und Artefakte
 
 **Lernender**:
-Die Person, die den Tutor benutzt: Studierende im ersten Studienjahr eines deutschsprachigen MINT-Studiengangs.
+Die Person, die den Tutor benutzt: Studierende eines deutschsprachigen MINT-Studiengangs, vom ersten bis zu höheren Semestern (#64).
 _Avoid_: Nutzer, Student, User
 
 **Tutor**:

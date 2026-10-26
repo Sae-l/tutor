@@ -8,7 +8,7 @@
 </a>
 
 **MINT-Aufgaben verstehen und selbst lösen, statt Lösungen abzuschreiben.**
-Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste Studienjahr in Physik, Mathematik und E-Technik an deutschsprachigen Hochschulen.
+Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das Studium in Physik, Mathematik, E-Technik und Technischer Mechanik an deutschsprachigen Hochschulen.
 
 [![CI](https://github.com/Sae-l/tutor/actions/workflows/ci.yml/badge.svg)](https://github.com/Sae-l/tutor/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/Sae-l/tutor?label=Release)](https://github.com/Sae-l/tutor/releases)
