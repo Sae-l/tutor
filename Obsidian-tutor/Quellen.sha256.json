@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-26",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh.",
+  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -15,7 +15,7 @@
     },
     {
       "path": "tutor/modes/hilfe.md",
-      "sha256": "f815fa3a884f02c35a7f4adc12cbadc16f92c4ccdcf5406d58ca851c5a121034",
+      "sha256": "d213f2c0c003a4715372374fccb1dab003e592e6d76f2a6fae45b8207f54f17e",
       "normalization": "utf8-lf"
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "path": "tutor/references/didaktik.md",
-      "sha256": "d8334474ef339c82289aebac1b15df1ae8777985624e0e23a56df39db57775e4",
+      "sha256": "39e1ebe71484d0ce9f21ba476469af9de82e892cc8f50480fea183640cd4cb3a",
       "normalization": "utf8-lf"
     },
     {
@@ -80,12 +80,12 @@
     },
     {
       "path": "tutor/SKILL.md",
-      "sha256": "ab6765b1478ac5af01e1f6a4d50862e978c3a7e54827d7abb6950e48aa9070e9",
+      "sha256": "a2dce4897e76479b6928da2100f6a9e27b1d4d5747ad7e95120b44d051c6322c",
       "normalization": "utf8-lf"
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "abd9b2ab30e1f84786f2e77f13fe7599570d55128266555bc7695f871baee879",
+      "sha256": "1fa2baabe206b4a4f97816418fd98f3667c874ccee2bbd2111f638c4dee13146",
       "normalization": "utf8-lf"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "bc291441bd3f8e00f8b66a82df9701c0373791bcb49b217ad5de8fabeb9cfec7",
+      "sha256": "d7264896285cf1cdd85c47b18db7e720148b0192f03d095e07221b64ae17de01",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "5c6919a9175ff3f117896a3b6b2cd01e70e58279afa57ee68fe28e817a362932",
+      "sha256": "a1920148d493afdf2fa67b32830df820a6b44b940619ee83dbc57d67e26cf126",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "a11946c5a882d81774e98a5f64426b715dddaf779172a803b4b3e327306d3d46",
+      "sha256": "eed370009183b69a829fadf7e00607f474a4e53fa81d0a9d246cb2c2d16c19e5",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "539db3f759bfb8dcc5f68d87fa3c39685b922833530ec9ea82d9c9e727a43546",
+      "sha256": "5b4d44a44630e8aa85cb73811bccaf03feb7acdb145a3410a56ca9a7fc3ff261",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "4c77617945aefb23a8f50f089aab3b83963bebf1b9d18885cadf796fa6f76da9",
+      "sha256": "a60f077e1e7384a7f9c839e02fee18a91b6d768e4c600b3b541a30beec5802ca",
       "normalization": "raw"
     },
     {

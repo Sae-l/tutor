@@ -5,6 +5,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 ## [Unveröffentlicht]
 
 ### Geändert
+- Tutor-Pflege nach #67 und #64, ohne neue Modi oder längere Antworten: Folgebefehle ohne neue Aufgabe gelten der Originalaufgabe statt der eigenen Verständnisfrage; keine dekorativen Bilder; Hilfekarte grenzt `voll` (anderes Beispiel) von den lösenden Modi ab. Didaktik ergänzt Niveauregel ohne Vorabfrage und Fachkonventionen für Elektrotechnik (Zählpfeile, j, Effektivwert), Technische Mechanik (Freischnitt, Lagerreaktionen) und Mathematik (Definitionsbereich). Akzeptanzfälle U01…U06, nicht nativ geprüft.
+- Strukturtest prüft die Skill-`description` auf höchstens 1024 Zeichen.
 - Stand von v0.2.1 wiederhergestellt (#66, #68): Tutor-Quelle, Pakete und Website entsprechen wieder dem Tag v0.2.1. Das Release der Vorabversion v0.3.0-rc.1 ist gelöscht; der Tag `v0.3.0-rc.1` bleibt als Verlaufsnachweis erhalten.
 - `.gitignore` schließt lokale Zustände des QE-Werkzeugs (`.agentic-qe/`) aus.
 - Landingpage-SEO: Titel nennt Physik und Mathe zuerst; Canonical-Link, Vorschaubild (`og:image`, `twitter:card`), `og:locale` und strukturierte Daten (`SoftwareApplication`, JSON-LD).
