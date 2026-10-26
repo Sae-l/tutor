@@ -124,6 +124,19 @@ Selbst erstellte Aufgaben; Zahlenreferenzen unabhängig nachrechnen. Bei Bildern
 | R-LS13 | Rechenaufgabe → `skizze` (#45), auf ChatGPT Web und Android | Zeichnung erscheint sichtbar in derselben Nachricht (z. B. Inline-SVG), kein bloßer Link oder Rohcode, ohne Rückfrage „Wo ist die Skizze?“; Inhalt wie R-LS02. Nicht einbettbar: Einschränkung genannt, Beschreibung statt Behauptung. |
 | R-LS14 | Mechanikaufgabe mit Reibung im Modus `erklär` (#44); danach „ich sehe nur $$ und Backslashes“ | (a) Rendering: Formeln gesetzt, kein sichtbarer Rohcode; nach der Meldung Unicode-Klartextformeln. (b) Notation getrennt prüfen: Formelzeichen mit Bedeutung und Einheit erklärt, Einheiten aufrecht, Dezimalkomma. Keine Zahlenlösung der Originalaufgabe. |
 
+## Lernfluss und Fachkonventionen (U01 … U06)
+
+Nach #67 und #64 ergänzt. **Alle noch nicht geprüft.** Selbst erstellte Aufgaben; Zahlen unabhängig nachrechnen. Zusätzlich die Antwortlänge, Wiederholungen und Bildrelevanz beurteilen; der Lernende vergleicht mit der bevorzugten Vorfassung (#67).
+
+| ID | Eingabe / Folge | Erwartung |
+|---|---|---|
+| U01 | `lang` + Aufgabe → `tipp` ohne weitere Angabe | Leitfragen zur Originalaufgabe, nicht zur Verständnisfrage aus `lang`; weiterhin nur Fragen. „tipp zur Frage“ bezieht sich auf die Verständnisfrage. |
+| U02 | Foto: Gewichtskraft eines Astronauten auf der Erde 784 N, Masse auf dem Mond gesucht (Auswahl) → `voll` | Keine dekorativen Astronauten- oder Stimmungsbilder; anderes Beispiel, Originaloption nicht beurteilt. Referenz für `lösung`: m ≈ 79,9 kg, ortsunabhängig. |
+| U03 | `erklär`: Reihenschaltung R = 30 Ohm, X_L = 40 Ohm an U = 230 V (Effektivwert), Strom gesucht | Zählpfeile festgelegt, imaginäre Einheit j, komplexe Größen unterstrichen, Effektivwert benannt; kein Zahlenergebnis. Referenz für `kurz`: \|Z\| = 50 Ohm, I = 4,60 A. |
+| U04 | `kurz`: Balken auf Fest- und Loslager, Länge 4 m, Einzelkraft 10 kN senkrecht in 1 m Abstand vom Festlager A | Freischnitt mit Lagerreaktionen vor dem Gleichgewicht, Momentenbezugspunkt genannt. Referenz: A_v = 7,5 kN, B_v = 2,5 kN. |
+| U05 | `erklär`: lineare DGL zweiter Ordnung mit Laplace-Transformation lösen (höheres Semester) | Keine vorgeschaltete Niveaufrage; Grundlagen wie Ableitungsregeln nicht neu erklärt, sondern als Voraussetzung genannt; keine Lösung. |
+| U06 | `hilfe` | `voll`-Zeile nennt das andere vorgerechnete Beispiel und verweist für die eigene Aufgabe auf `kurz`, `mittel` oder `lang`. |
+
 ## Kursaufgaben (K01 … K06)
 
 Mit Foto oder Text der Aufgabe aus dem Übungsblatt testen, mindestens in `erklär`, `tipp` und `kurz`. Das Prüfergebnis nicht mitsenden. Die Blätter selbst liegen nur lokal (`referenzen/`, nicht versioniert); Protokolle nennen Blatt und Nummer, kopieren den Aufgabentext aber nicht (Rechte). Nicht Teil des v0.2-Gates; das passende Kurspaket ist `kurse/mpg1.md`.

@@ -75,6 +75,11 @@ class BuildTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             self.assertNotRegex(text, r"TH Köln|MPG1|kurs-mpg1|\[uk\]", path.name)
 
+    def test_skill_description_fits_platform_limit(self):
+        # Agent Skills limit the frontmatter description to 1024 characters.
+        description = re.search(r"^description: (.*)$", self.read("tutor/SKILL.md"), re.M).group(1)
+        self.assertLessEqual(len(description), 1024)
+
     def test_missing_mode_does_not_overwrite_existing_output(self):
         self.assertEqual(self.build().returncode, 0)
         target = self.root / "dist/system-prompt.md"
