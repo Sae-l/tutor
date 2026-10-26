@@ -10,7 +10,7 @@ Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben u
 | Befehl | Was er tut |
 |---|---|
 | `erklär` (auch ohne Befehl) | erklärt das Thema und die Gleichungen, ohne Lösung und ohne Beispiel |
-| `voll` | erklärt anschaulich und mathematisch, mit einem anderen vorgerechneten Beispiel (deine Aufgabe löst `kurz`, `mittel` oder `lang`) |
+| `voll` | erklärt mit einem anderen vorgerechneten Beispiel (deine Aufgabe: `kurz`, `mittel`, `lang`) |
 | `thema` | Begriff oder Gesetz verstehen und wie es beim Lösen hilft |
 | `tipp` | Leitfragen, die du dir selbst stellst, um zur Lösung zu kommen |
 | `check` | prüft deinen Versuch und korrigiert nur die erste fehlerhafte Stelle (automatisch bei eigenem Versuch) |
