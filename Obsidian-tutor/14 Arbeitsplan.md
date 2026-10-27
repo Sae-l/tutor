@@ -53,15 +53,15 @@ Dies sind spätere Produktarbeiten mit vorbereiteten Kriterien. Ihre Erledigung 
 
 ## Ergänzung nach den Recherchen vom 27.10.2026
 
-Abgeleitet aus [[04 Wissenschaftliche Grundlagen]] und [[05 Skills und Werkzeuge]]. Keine dieser Arbeiten ist umgesetzt. Die übernommenen Punkte sind in einem ausführbaren Plan mit exakten Texten, Tests und Commits geordnet: `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md`. Entscheidungen dazu in [[19 Entscheidungen und Gesprächskontext]].
+Abgeleitet aus [[04 Wissenschaftliche Grundlagen]] und [[05 Skills und Werkzeuge]]. Aufgaben 1–4 sind seit 27.10.2026 in der Quelle umgesetzt (Strukturtests grün); die native Abnahme U07–U12 steht aus. Die übernommenen Punkte sind in einem ausführbaren Plan mit exakten Texten, Tests und Commits geordnet: `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md`. Entscheidungen dazu in [[19 Entscheidungen und Gesprächskontext]].
 
 | Planaufgabe | Arbeit | Abschlusskriterium | Status |
 |---|---|---|---|
-| 1 | Drei zu breite Aussagen korrigieren (`didaktik.md`, `KONZEPT.md`) | Neue Formulierung ohne Wirksamkeitsbehauptung; Build, `dist/`, CHANGELOG, Hashes. | vorgeschlagen |
-| 2 | **Erklärbogen** als gemeinsamer Erklärstil in `erklär`, `voll`, `thema` (Einstieg, ein Bild, Grenze des Bildes, Kernsatz, Brückensatz zur Gleichung) | Strukturtest, Akzeptanzfälle U07–U09; Antworten nicht länger; Kern unverändert. | vorgeschlagen |
-| 3 | „weiß nicht“, „?“ oder sehr kurze Antwort in `tipp`; mindestens eine Warum-Leitfrage | Strukturtest, Akzeptanzfälle U10–U11. | vorgeschlagen |
-| 4 | Wiederholungskarte zweistufig („in 2–3 Tagen, dann nach etwa einer Woche“); Verständnisfrage prüft ein Prinzip | Strukturtest, Akzeptanzfall U12. | vorgeschlagen |
-| 5 | Dokumentation und native Abnahme U07–U12 | Protokoll in `tests/protokolle/`. | vorgeschlagen |
+| 1 | Drei zu breite Aussagen korrigieren (`didaktik.md`, `KONZEPT.md`) | Neue Formulierung ohne Wirksamkeitsbehauptung; Build, `dist/`, CHANGELOG, Hashes. | implementiert |
+| 2 | **Erklärbogen** als gemeinsamer Erklärstil in `erklär`, `voll`, `thema` (Einstieg, ein Bild, Grenze des Bildes, Kernsatz, Brückensatz zur Gleichung) | Strukturtest, Akzeptanzfälle U07–U09; Antworten nicht länger; Kern unverändert. | implementiert, nicht nativ geprüft |
+| 3 | „weiß nicht“, „?“ oder sehr kurze Antwort in `tipp`; mindestens eine Warum-Leitfrage | Strukturtest, Akzeptanzfälle U10–U11. | implementiert, nicht nativ geprüft |
+| 4 | Wiederholungskarte zweistufig („in 2–3 Tagen, dann nach etwa einer Woche“); Verständnisfrage prüft ein Prinzip | Strukturtest, Akzeptanzfall U12. | implementiert, nicht nativ geprüft |
+| 5 | Dokumentation und native Abnahme U07–U12 | Protokoll in `tests/protokolle/`. | dokumentiert; native Abnahme offen |
 | – | Wählbare Persönlichkeiten oder Stile; Interleaving; Lernstand-Block; Anki-Export; Vergleich „erst Ansatz, dann `erklär`“; Recherche zur Erstsprache | Eigene Entscheidung je Punkt. | geparkt |
 
 ## Änderung für rc.3 (17.10.2026)

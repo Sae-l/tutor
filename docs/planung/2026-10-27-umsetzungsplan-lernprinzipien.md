@@ -10,7 +10,7 @@
 
 **Grundlagen:** [`2026-10-27-evidenz-update.md`](2026-10-27-evidenz-update.md), [`2026-10-27-ki-lern-plugins/Bewertung.md`](2026-10-27-ki-lern-plugins/Bewertung.md), [`2026-10-16-wayfinder/Recherche-Lernforschung.md`](2026-10-16-wayfinder/Recherche-Lernforschung.md).
 
-**Status:** vorgeschlagen, nicht implementiert. Voraussetzung: PR #73 gemergt.
+**Status:** Aufgaben 1–5 am 27.10.2026 implementiert (je ein Commit); native Abnahme U07–U12 (Aufgabe 5, Schritt 4) offen. Voraussetzung: PR #73 gemergt.
 
 ## Entscheidungen, die dieser Plan festschreibt
 

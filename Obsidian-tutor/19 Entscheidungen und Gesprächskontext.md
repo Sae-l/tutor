@@ -37,7 +37,7 @@ Neue Entscheidungen nennen Problem, gewählte Änderung, Begründung, betroffene
 
 Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix und Protokolle belegen den Produktstand. [[17 Fehlerdiagnose und Reparatur]] und [[18 Bauanleitung]] beschreiben den Arbeitsweg.
 
-## Entscheidungen vom 27.10.2026 (vorgeschlagen)
+## Entscheidungen vom 27.10.2026 (implementiert)
 
 Ausgangspunkt: Bewertung eines Vergleichs von 30 Lern-Skills, Evidenz-Update der Lernprinzipien und die Frage, wo Tutors eigener Erklärstil steht. Bisher nannte nur die Antwortvorlage einen „Feynman-Stil“ als Etikett ohne festgelegten Ablauf; ein unterscheidbarer Erklärstil fehlte.
 
@@ -51,7 +51,7 @@ Ausgangspunkt: Bewertung eines Vergleichs von 30 Lern-Skills, Evidenz-Update der
 | Zu breite Wirksamkeitsaussagen | Neu formuliert | Offener Punkt aus der Prüfung vom 16.10.2026 | `didaktik.md`, `KONZEPT.md` | Strukturtest |
 | Wählbare Persönlichkeiten | Nicht in dieser Runde | Neue Befehle und Fälle nötig; erst Erklärbogen abnehmen | – | – |
 
-Ausführbarer Plan mit exakten Texten, Tests und Rücknahme: `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md`. Status aller Zeilen: **vorgeschlagen**; erst die Quelländerungen mit grünen Tests machen sie „implementiert“, erst die native Abnahme „geprüft“.
+Ausführbarer Plan mit exakten Texten, Tests und Rücknahme: `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md`. Status aller umgesetzten Zeilen: **implementiert** (Quelländerungen mit grünen Strukturtests am 27.10.2026); „geprüft“ erst nach nativer Abnahme U07–U12. Wählbare Persönlichkeiten bleiben geparkt.
 
 ## Änderung für rc.3 (17.10.2026)
 
