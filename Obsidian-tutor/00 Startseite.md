@@ -2,7 +2,7 @@
 title: Tutor – Wissenslandkarte
 aliases: [Tutor, Skill-Dokumentation]
 tags: [tutor, index]
-updated: 2026-10-17
+updated: 2026-10-27
 status: repository-dokumentation
 ---
 
@@ -53,17 +53,17 @@ flowchart TD
 Ein Doppelklick auf eine Karte öffnet die zugehörige Notiz. Die Graph-Ansicht zeigt die Verbindungen zwischen den internen Links.
 
 > [!warning] Projektstatus
-> Dokumentiert ist der lokale Stand bei Commit `921409f2f7e0ccbe54e962ec8218024f74bc3fab` als Produktbasis; Dokumentationsänderungen dieser Fassung kommen hinzu. Vollständige Kompatibilität und Lernwirksamkeit sind nicht nachgewiesen. Eine Plattformanleitung oder ein erfolgreicher Paketbau ersetzt keine Abnahme. Siehe [[07 Plattformen]] und [[12 Abnahmeplan]].
+> Dokumentiert ist der Stand bei Commit `b2fdc739823c838de8a1f3a6d0b3c8a8ddb3db62` (`main`, Vorabversion `v0.3.0-rc.3`) als Produktbasis; Dokumentationsänderungen dieser Fassung kommen hinzu. Die Recherche vom 2026-10-16 bezog sich auf `921409f2f7e0ccbe54e962ec8218024f74bc3fab`. Vollständige Kompatibilität und Lernwirksamkeit sind nicht nachgewiesen. Eine Plattformanleitung oder ein erfolgreicher Paketbau ersetzt keine Abnahme. Siehe [[07 Plattformen]] und [[12 Abnahmeplan]].
 
 ## Aktueller Nachweisstand
 
-| Gegenstand | Ergebnis der Aktualisierung vom 2026-10-16 |
+| Gegenstand | Ergebnis der Aktualisierung vom 2026-10-27 |
 |---|---|
 | Dokumentation | 20 Fachnotizen mit deutschen Erläuterungen; Fehlerdiagnose, Bauanleitung und Entscheidungsverlauf ergänzt. |
 | Wissenslandkarte | Canvas mit 20 Dateikarten und fünf Themengruppen; zusätzlich Mermaid-Abläufe und Graph-Verbindungen. |
-| Lokale Prüfung | 13 Repository-Strukturtests bestanden; Links, Canvas, elf Modi und 43 Quellhashes erneut geprüft. |
-| GitHub-Recherche zur Produktbasis | Öffentlich; damaliger `main` und lokaler Basiscommit gleich; Schutzkennzeichen gesetzt; CI für diesen Basiscommit erfolgreich. |
-| Verteilung und Website | Vorabversion `v0.2.0-rc.2` mit fünf Assets vorhanden; Website liefert HTTP 200 und entspricht nach vereinheitlichten Zeilenenden der lokalen HTML-Quelle. |
+| Lokale Prüfung | 22 Repository-Strukturtests bestanden; elf Modi; alle 43 Quellhashes stimmen mit dem eingecheckten Stand überein. |
+| GitHub-Recherche zur Produktbasis | Öffentlich; `main` und lokaler Basiscommit gleich; Schutzkennzeichen gesetzt; CI für diesen Basiscommit erfolgreich. |
+| Verteilung und Website | Stabil `v0.2.1`; Vorabversion `v0.3.0-rc.3` mit fünf Assets vorhanden; Website liefert HTTP 200. |
 | Plattformverhalten | Teilversuche vorhanden; vollständige Abnahme von Claude, ChatGPT und Gemini weiterhin offen. |
 
 Nachweise und genaue Grenzen: [[13 Quellen und Nachweise]] und [[16 Prüfergebnis]].
