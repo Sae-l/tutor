@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- Protokoll `tests/protokolle/2026-10-27-claude-ai-u07-u13.md`: native Abnahme von U07…U13 auf claude.ai mit v0.3.0-rc.2; U07 und U09…U13 bestanden, U08 mit Anmerkung. Abgeleitete Verbesserungen (Formelzeichen im Fließtext, Auswahlaufgaben, doppelte Kernaussage in `voll`) als Vorschläge, nicht umgesetzt.
+
 ## [0.3.0-rc.2] – 2026-10-27
 
 Vorabversion mit Erklärbogen und überarbeiteten Lernprinzipien sowie den Änderungen aus #67/#64. Lehrverhalten nicht nativ abgenommen (U01…U13 offen). Der Tag `v0.3.0-rc.1` ist bereits vergeben und bleibt unverändert.
