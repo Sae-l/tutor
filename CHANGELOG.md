@@ -4,7 +4,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.3.0-rc.3] – 2026-10-27
+
+Vorabversion mit plattformgerechten Formelzeichen im Fließtext und den Befunden aus der Abnahme U07…U13. U14 nicht nativ geprüft; stabil bleibt 0.2.1.
+
 ### Geändert
+- Pluginversion und erzeugte Ausgaben auf `0.3.0-rc.3`.
 - Formelzeichen im Fließtext je Plattform: Das Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen ohne Operator als `$…$`; `dist/` (ChatGPT-Plugin, System-Prompt) schreibt sie kursiv mit Unicode-Index (*U*₀, *u*_C). `build.py` ersetzt dafür den markierten Block in `latex-regeln.md` durch `packaging/latex-fliesstext-universal.md`. Grundlage: Darstellungstest vom 2026-10-27 auf Claude, Gemini und ChatGPT. Strukturtest und Akzeptanzfall U14, nicht nativ geprüft.
 - Befunde der Abnahme U07…U13: `erklär` nennt in 🎓 Achtung bei Auswahlaufgaben keine Optionsbuchstaben; in `voll` wiederholt der Kernsatz nicht die 🎯 Kernidee. U08 und U12 entsprechend geschärft.
 
