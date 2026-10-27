@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- Planungsnotiz `docs/planung/2026-10-27-ki-lern-plugins/`: KI-erzeugter Vergleich von 30 Lern-Skills auf GitHub (Original) und Bewertung mit Stichprobe gegen die Quellen, Abgleich mit vorhandenen Tutor-Regeln und priorisierten Ableitungen. Tutor-Verhalten unverändert.
+
 ### Geändert
 - Tutor-Pflege nach #67 und #64, ohne neue Modi oder längere Antworten: Folgebefehle ohne neue Aufgabe gelten der Originalaufgabe statt der eigenen Verständnisfrage; keine dekorativen Bilder; Hilfekarte grenzt `voll` (anderes Beispiel) von den lösenden Modi ab. Didaktik ergänzt Niveauregel ohne Vorabfrage und Fachkonventionen für Elektrotechnik (Zählpfeile, j, Effektivwert), Technische Mechanik (Freischnitt, Lagerreaktionen) und Mathematik (Definitionsbereich). Akzeptanzfälle U01…U06, nicht nativ geprüft.
 - Strukturtest prüft die Skill-`description` auf höchstens 1024 Zeichen.
