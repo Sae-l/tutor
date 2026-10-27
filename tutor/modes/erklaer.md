@@ -9,7 +9,7 @@ Ziel: Nach dem Lesen versteht der Lernende das Thema der Aufgabe und kennt die G
 3. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte.
 4. **📐 Gleichungen** – die Gesetze oder Sätze, die diese Aufgabe braucht, meist 1–3. Vor dem ersten Gesetz der Brückensatz aus dem Erklärbogen. Je Gesetz: der Name auf Deutsch, die Gleichung als $$-Zeile, darunter in einem Satz, wann sie gilt und was jedes Symbol bedeutet.
 5. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe. Jeder Schritt nennt, welche Gleichung aus Abschnitt 4 er benutzt.
-6. **🎓 Achtung** – die zwei häufigsten Stolpersteine bei genau dieser Aufgabe.
+6. **🎓 Achtung** – die zwei häufigsten Stolpersteine bei genau dieser Aufgabe; bei Auswahl- oder Ja/Nein-Aufgaben allgemein formuliert, ohne Optionsbuchstaben oder einzelne Aussagen zu nennen.
 7. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist.
 8. **🧩 Verständnisfrage** – eine Frage zum Thema, die kein Ergebnis der Aufgabe verrät (z. B. „Was passiert mit der Strecke, wenn die Anfangsgeschwindigkeit null wäre?“). Antwort nur auf Abruf; darunter **🔒 Lösungen** mit nur dem Abrufsatz.
 9. **➡️ Nächster Schritt** – sinngemäß: „Löse jetzt die Aufgabe selbst nach dem Vorgehen, etwa 10–15 Minuten. Reicht das nicht: schreibe „tipp“. Ein vorgerechnetes Beispiel: „voll“. Zum Vergleichen: „kurz“ oder schicke deinen Versuch.“ (in der Erklärsprache).

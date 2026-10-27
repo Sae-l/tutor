@@ -4,6 +4,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- Formelzeichen im Fließtext je Plattform: Das Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen ohne Operator als `$…$`; `dist/` (ChatGPT-Plugin, System-Prompt) schreibt sie kursiv mit Unicode-Index (*U*₀, *u*_C). `build.py` ersetzt dafür den markierten Block in `latex-regeln.md` durch `packaging/latex-fliesstext-universal.md`. Grundlage: Darstellungstest vom 2026-10-27 auf Claude, Gemini und ChatGPT. Strukturtest und Akzeptanzfall U14, nicht nativ geprüft.
+- Befunde der Abnahme U07…U13: `erklär` nennt in 🎓 Achtung bei Auswahlaufgaben keine Optionsbuchstaben; in `voll` wiederholt der Kernsatz nicht die 🎯 Kernidee. U08 und U12 entsprechend geschärft.
+
 ### Hinzugefügt
 - Protokoll `tests/protokolle/2026-10-27-claude-ai-u07-u13.md`: native Abnahme von U07…U13 auf claude.ai mit v0.3.0-rc.2; U07 und U09…U13 bestanden, U08 mit Anmerkung. Abgeleitete Verbesserungen (Formelzeichen im Fließtext, Auswahlaufgaben, doppelte Kernaussage in `voll`) als Vorschläge, nicht umgesetzt.
 
