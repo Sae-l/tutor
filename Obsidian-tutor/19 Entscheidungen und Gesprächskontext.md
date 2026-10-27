@@ -1,7 +1,7 @@
 ---
 title: Projektentscheidungen und Herkunft
 tags: [tutor, entscheidungen, herkunft]
-updated: 2026-10-17
+updated: 2026-10-27
 status: oeffentliche-zusammenfassung
 ---
 
@@ -36,6 +36,22 @@ Der veröffentlichte Claude-CLI-Teillauf prüfte 16 Fälle, davon drei nicht bes
 Neue Entscheidungen nennen Problem, gewählte Änderung, Begründung, betroffene Quelle und messbare Abnahme. Den Status ausdrücklich als „vorgeschlagen“, „implementiert“ oder „geprüft“ führen. Der Merge eines Plans beweist nur dessen Aufnahme; erst Quelländerungen und passende Tests belegen die Umsetzung.
 
 Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix und Protokolle belegen den Produktstand. [[17 Fehlerdiagnose und Reparatur]] und [[18 Bauanleitung]] beschreiben den Arbeitsweg.
+
+## Entscheidungen vom 27.10.2026 (vorgeschlagen)
+
+Ausgangspunkt: Bewertung eines Vergleichs von 30 Lern-Skills, Evidenz-Update der Lernprinzipien und die Frage, wo Tutors eigener Erklärstil steht. Bisher nannte nur die Antwortvorlage einen „Feynman-Stil“ als Etikett ohne festgelegten Ablauf; ein unterscheidbarer Erklärstil fehlte.
+
+| Problem | Gewählte Änderung | Begründung | Betroffene Quelle | Abnahme |
+|---|---|---|---|---|
+| Erklärstil nur als Etikett | **Erklärbogen:** Einstieg aus dem Thema, genau ein Bild, Grenze des Bildes, Kernsatz, Brückensatz zur Gleichung | Mechanismen von Feynman (einfach, Kernsatz) und erzählenden Erklärformaten (Einstiegsfrage, ein starkes Bild) übernehmen, ohne Personen nachzuahmen; Personenstil ist in sechs Sprachen nicht prüfbar | `antwortvorlage.md`, `erklaer.md`, `voll.md`, `thema.md` | U07–U09 |
+| Unterhaltsame Abschweifungen könnten Anfänger ablenken | Einstieg und Bild nur aus dem Thema der Aufgabe, keine Anekdoten | Irrelevante interessante Details schaden vor allem Lernenden ohne Vorwissen (Sundararajan & Adesope 2020) | `antwortvorlage.md` | U07–U09 |
+| „weiß nicht“ in `tipp` nicht geregelt | Entlastung, anderer Zugang, beim zweiten Mal `voll` | Frustrationsbehandlung nach claude-learn-skill; passt zum ADHS-Ziel | `tipp.md` | U10 |
+| Leitfragen überwiegend Vorgehensfragen | Mindestens eine Warum-Frage | Konzepterklärende Aufforderungen wirken besser als metakognitive (Bisra u. a. 2018) | `tipp.md` | U11 |
+| Feste Wiederholung „nach zwei Tagen“ | Zwei Stufen: 2–3 Tage, dann etwa eine Woche | Günstiger Abstand hängt von der Frist ab (Cepeda u. a. 2008) | `antwortvorlage.md` | U12 |
+| Zu breite Wirksamkeitsaussagen | Neu formuliert | Offener Punkt aus der Prüfung vom 16.10.2026 | `didaktik.md`, `KONZEPT.md` | Strukturtest |
+| Wählbare Persönlichkeiten | Nicht in dieser Runde | Neue Befehle und Fälle nötig; erst Erklärbogen abnehmen | – | – |
+
+Ausführbarer Plan mit exakten Texten, Tests und Rücknahme: `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md`. Status aller Zeilen: **vorgeschlagen**; erst die Quelländerungen mit grünen Tests machen sie „implementiert“, erst die native Abnahme „geprüft“.
 
 ## Änderung für rc.3 (17.10.2026)
 

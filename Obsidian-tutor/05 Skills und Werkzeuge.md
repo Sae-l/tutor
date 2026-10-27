@@ -1,7 +1,7 @@
 ---
 title: Verwendete Skills und Werkzeuge
 tags: [tutor, werkzeuge]
-updated: 2026-10-16
+updated: 2026-10-27
 ---
 
 # Skills und Werkzeuge
@@ -28,6 +28,12 @@ updated: 2026-10-16
 - Obsidian: vorgesehener Leser mit Canvas, Graph und Mermaid. Dataview, Sync und Publish sind nicht erforderlich.
 
 Für die aktuelle Ergänzung wurden `ecc:plan-orchestrate` und die vier zugeordneten Befehlsbeschreibungen erneut gelesen. Die bestehenden Obsidian-Notizen wurden mit Markdown, Python und PowerShell erweitert; GitHub-Connector und Chat-Lesewerkzeug lieferten die überprüfbaren Zustände. Es wurden keine zusätzlichen Skills installiert und keine Unteragenten eingesetzt. Der Vergleich „Skill oder Agent“ und die Pathfinder-Planung sind in [[19 Entscheidungen und Gesprächskontext]] eingeordnet.
+
+## Vergleich mit anderen Lern-Skills (2026-10-27)
+
+Ein KI-erzeugter Bericht über 30 Lern-Skills und -Plugins auf GitHub wurde geprüft: Original und Bewertung in `docs/planung/2026-10-27-ki-lern-plugins/`. Ergebnis: brauchbar als Übersicht, nicht als Rangliste; die Platzierung hat kein genanntes Kriterium und beschreibt Tutor teils falsch. Eine Stichprobe von fünf Repositories (kirilxd/claude-tutor, Bhala-Srinivash/agent-tutor-skill, WSE-research/guided-learning-skill der HTWK Leipzig, mordor-forge/study-skill, deniz-miro/claude-learn-skill) bestätigte die Kernbeschreibungen mit kleinen Abweichungen.
+
+Die meisten übertragbaren Prinzipien hat Tutor bereits (Verständnisfrage, „Was wäre, wenn?“, Fehlerart in `check`, Lösungsschutz, Wiederholungskarte). Neu ableitbar: Umgang mit „weiß nicht“ in `tipp` (nach claude-learn-skill) und Wiederholungsstufen mit vom Lernenden getragenem Lernstand (nach guided-learning-skill). Speicher, FSRS, Dashboards und MCP passen nicht in den zustandslosen Drei-Plattform-Skill. Es wurde kein fremder Skill installiert.
 
 ## Ergebnis der Skill-Suche
 
