@@ -4,6 +4,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.3.0-rc.2] – 2026-10-27
+
+Vorabversion mit Erklärbogen und überarbeiteten Lernprinzipien sowie den Änderungen aus #67/#64. Lehrverhalten nicht nativ abgenommen (U01…U13 offen). Der Tag `v0.3.0-rc.1` ist bereits vergeben und bleibt unverändert.
+
 ### Hinzugefügt
 - Planungsnotiz `docs/planung/2026-10-27-ki-lern-plugins/`: KI-erzeugter Vergleich von 30 Lern-Skills auf GitHub (Original) und Bewertung mit Stichprobe gegen die Quellen, Abgleich mit vorhandenen Tutor-Regeln und priorisierten Ableitungen. Tutor-Verhalten unverändert.
 - Forschungsnotiz `docs/planung/2026-10-27-evidenz-update.md`: zwölf neuere Metaanalysen, Gegenbefunde und KI-Studien (u. a. Testeffekt bei komplexem Material, Selbsterklärung, ausgearbeitete Beispiele, Productive Failure, Lernabstand, Interleaving, Feedback, LLM als Ersatz oder Ergänzung, ADHS an Hochschulen) gegen die Tutor-Regeln abgeglichen; offene Korrekturen aus der Prüfung vom 2026-10-16 und Prioritäten benannt. Tutor-Verhalten unverändert.

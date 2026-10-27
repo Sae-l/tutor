@@ -19,11 +19,11 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
-## Stand unveröffentlicht (2026-10-27)
+## Stand v0.3.0-rc.2 (2026-10-27, Vorabversion)
 - Umsetzungsplan `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md` implementiert: Erklärbogen (Einstieg, ein Bild, Grenze, Kernsatz, Brückensatz) in `erklär`, `voll`, `thema`; `tipp` mit „weiß nicht“-Behandlung und Warum-Leitfrage; Wiederholungskarte zweistufig; zu breite Wirksamkeitsaussagen korrigiert. Kern unverändert. `mittel`/`lang` behalten eine kurze Idee ohne Erklärbogen. Akzeptanzfälle U07…U13 **nicht nativ geprüft**.
 
-## Unveröffentlicht auf main (2026-10-26, #71)
-- Folgebefehl gilt der Originalaufgabe, keine dekorativen Bilder, Hilfekarte grenzt `voll` ab (#67); Niveauregel ohne Vorabfrage (#64, empfohlene Variante); Fachkonventionen E-Technik, Technische Mechanik, Mathematik. U01…U06 nicht nativ geprüft; Release erst nach A/B-Vergleich durch den Lernenden (#67). Website und Release-Assets beschreiben weiterhin v0.2.1.
+## Ebenfalls in v0.3.0-rc.2 (2026-10-26, #71)
+- Folgebefehl gilt der Originalaufgabe, keine dekorativen Bilder, Hilfekarte grenzt `voll` ab (#67); Niveauregel ohne Vorabfrage (#64, empfohlene Variante); Fachkonventionen E-Technik, Technische Mechanik, Mathematik. U01…U06 nicht nativ geprüft; Stabiles Release erst nach A/B-Vergleich durch den Lernenden (#67); die Vorabversion dient diesem Vergleich. Website und README beschreiben weiterhin die stabile v0.2.1.
 
 ## Stand v0.2.1 (2026-10-20)
 - Pluginpaket für die offiziellen Verzeichnisse von Claude und ChatGPT/Codex (Manifest, README, Logo); Verhalten wie v0.2.0. Einreichung in den Verzeichnissen steht aus.
