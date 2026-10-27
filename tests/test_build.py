@@ -91,6 +91,11 @@ class BuildTests(unittest.TestCase):
         self.assertIn("weiß nicht", text)
         self.assertIn("Warum gilt", text)
 
+    def test_review_card_has_two_stages(self):
+        template = self.read("tutor/references/antwortvorlage.md")
+        self.assertNotIn("nach zwei Tagen", template)
+        self.assertIn("etwa einer Woche", template)
+
     def test_skill_description_fits_platform_limit(self):
         # Agent Skills limit the frontmatter description to 1024 characters.
         description = re.search(r"^description: (.*)$", self.read("tutor/SKILL.md"), re.M).group(1)

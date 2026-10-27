@@ -60,12 +60,12 @@
     },
     {
       "path": "tutor/references/antwortvorlage.md",
-      "sha256": "9accee668446cbbfadb739f0e23eb5600e87f263576e9873c8463160fdcbfb64",
+      "sha256": "24ff28248a3187277e81c90ae07139438b8c0585d0ec35d7ece051766d1a5481",
       "normalization": "utf8-lf"
     },
     {
       "path": "tutor/references/didaktik.md",
-      "sha256": "ad60f6e1293ddb4f555fd18bc0db8b5f7d41a51abb39b9b385f8ae507f095926",
+      "sha256": "ca8266fcfe72e22d710ea36b0b6f89d063b80bd2126709f3e395ca10c0db3a6b",
       "normalization": "utf8-lf"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "1c0a4466062ea52c68d127d0bcc7ca82155582d703d5c0eafb6ddc13c9e7f524",
+      "sha256": "d7d0f6d97ce3035b4a6f025ae77282d5d86b7e9c1e7a88d0ad9fb0764cb903f1",
       "normalization": "utf8-lf"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "0944a0332e53f39eefcf9886f21bf3ad3e2764f55f8bbf2bb06165cbf28d753d",
+      "sha256": "7bf71523ff2b131b38864a6cd60412e7f4eba2d3f5c7907122437ba9c1b9ed1c",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "ef03bb562f04ca131d270ca60b9f12805767f45a10f9a295554071c0aa0a3b67",
+      "sha256": "a4cf52258b791d798265403aca35c2c6f7d89ecbf68594c7780f89a45a7f8929",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "63ab22badc216aaeb12efacdd73190fdd98c3d53566fa5aaf07c409ab641508c",
+      "sha256": "028097b2b0bcf1fd58504650a5fc28f2c275e20e1a26a8cd455defcc4e79b2f1",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "26c4dd02b0870da2191fa448521b86ccf569890c1836138b9987f3b8b0eec534",
+      "sha256": "0c6f15f7c8ae409ef0af3ccda3c4ddbd94d4a972e1a6275935a3a3b39fd2bca7",
       "normalization": "raw"
     },
     {
