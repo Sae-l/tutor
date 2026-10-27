@@ -26,6 +26,8 @@ Das freie ChatGPT-Protokoll war bei der Vault-Erstellung lokal unversioniert; ei
 
 Die erneute GitHub-Abfrage bestätigt die vorhandenen Pakete der [Vorabversion v0.2.0-rc.2](https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2). Sie bestätigt weder die Installation im jeweiligen Konto noch das Verhalten eines Modells. Die Release-Assets wurden für diese Aktualisierung nicht heruntergeladen oder neu ausgeführt.
 
+Stand 2026-10-27: Stabil ist [v0.2.1](https://github.com/Sae-l/tutor/releases/tag/v0.2.1), zum Testen gibt es die [Vorabversion v0.3.0-rc.3](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3). Ab rc.3 unterscheiden sich die Pakete bei Formelzeichen im Fließtext: `tutor-skill.zip` (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `tutor-chatgpt.zip` und die Promptdateien schreiben sie kursiv mit Unicode-Index (*U*₀), weil einfaches `$` in ChatGPT nicht rendert. Grundlage ist ein Darstellungstest vom 2026-10-27; der Akzeptanzfall U14 ist nicht nativ geprüft.
+
 ## Claude: Skill einrichten
 
 1. `tutor-skill.zip` aus der vorgesehenen Projektversion beziehen und Inhalt sowie Hash prüfen.

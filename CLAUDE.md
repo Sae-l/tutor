@@ -21,7 +21,7 @@
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
 ## Stand v0.3.0-rc.3 (2026-10-27, Vorabversion)
-- Formelzeichen im Fließtext je Plattform (#77): Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `dist/` (ChatGPT-Plugin, System-Prompt) kursiv mit Unicode-Index über `packaging/latex-fliesstext-universal.md`. Befunde aus U07…U13 umgesetzt (keine Optionsbuchstaben in 🎓 Achtung, kein doppelter Kernsatz in `voll`). U07…U13 mit rc.2 auf claude.ai protokolliert, U14 und die Schärfungen von U08/U12 **nicht nativ geprüft**. Website und README beschreiben weiterhin die stabile v0.2.1.
+- Formelzeichen im Fließtext je Plattform (#77): Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `dist/` (ChatGPT-Plugin, System-Prompt) kursiv mit Unicode-Index über `packaging/latex-fliesstext-universal.md`. Befunde aus U07…U13 umgesetzt (keine Optionsbuchstaben in 🎓 Achtung, kein doppelter Kernsatz in `voll`). U07…U13 mit rc.2 auf claude.ai protokolliert, U14 und die Schärfungen von U08/U12 **nicht nativ geprüft**. Website, README, `docs/CHATGPT.md` und Vault-Notizen 07/11/13 nennen rc.3 als Vorabversion; Download und Empfehlung bleiben die stabile v0.2.1.
 
 ## Stand v0.3.0-rc.2 (2026-10-27, Vorabversion)
 - Umsetzungsplan `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md` implementiert: Erklärbogen (Einstieg, ein Bild, Grenze, Kernsatz, Brückensatz) in `erklär`, `voll`, `thema`; `tipp` mit „weiß nicht“-Behandlung und Warum-Leitfrage; Wiederholungskarte zweistufig; zu breite Wirksamkeitsaussagen korrigiert. Kern unverändert. `mittel`/`lang` behalten eine kurze Idee ohne Erklärbogen. Akzeptanzfälle U07…U13 **nicht nativ geprüft**.

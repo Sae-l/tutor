@@ -411,7 +411,7 @@ p, li { text-wrap: pretty; }
           Tutor herunterladen
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <div class="version">tutor-skill.zip · v0.2.1 · <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.1">alle Dateien</a></div>
+        <div class="version">tutor-skill.zip · v0.2.1 · <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.1">alle Dateien</a> · <a href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3">Vorabversion v0.3.0-rc.3</a></div>
       </div>
 
       <figure class="card chat reveal" style="--d:120ms" aria-label="Ausschnitt einer Antwort im Modus Erklär" lang="de">
@@ -565,7 +565,7 @@ p, li { text-wrap: pretty; }
         </div>
         <div class="setup-side reveal" style="--d:100ms">
           <h3>ChatGPT · Codex · Gemini <span class="badge neutral">experimentell</span></h3>
-          <p>Alle Dateien liegen im <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.1">Release</a>.</p>
+          <p>Alle Dateien liegen im <a href="https://github.com/Sae-l/tutor/releases/tag/v0.2.1">Release</a>; zum Testen des neuen Erklärstils in der <a href="https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3">Vorabversion v0.3.0-rc.3</a>.</p>
           <p><strong>Codex und ChatGPT Desktop:</strong> Pluginquelle hinzufügen, dann in Codex <code>/plugins</code> bzw. im Pluginverzeichnis von ChatGPT Desktop „Tutor“ installieren.</p>
           <div class="cmdline"><code id="cmd-3">codex plugin marketplace add Sae-l/tutor</code><button class="copy" type="button" data-copy="codex plugin marketplace add Sae-l/tutor" aria-describedby="cmd-3">Kopieren</button></div>
           <p style="margin-top:1rem"><strong>ChatGPT im Web:</strong> Workspace-Admins laden <code>tutor-chatgpt.zip</code> unter <strong>Admin → Plugins → Plugin hochladen</strong> hoch. Ohne Plugin geht der Projektweg mit <code>kern.md</code> und <code>system-prompt.md</code>. <a href="https://github.com/Sae-l/tutor/blob/main/docs/CHATGPT.md">Einrichtung und Funktionsprüfung</a>. Die ChatGPT-Wege sind noch nicht abgenommen.</p>
@@ -642,7 +642,7 @@ p, li { text-wrap: pretty; }
         </details>
         <details>
           <summary>Formeln erscheinen als Code mit Dollarzeichen.</summary>
-          <p>Dann stellt die Plattform LaTeX nicht dar. In Claude im Browser werden Formeln normalerweise gerendert; in ChatGPT und Gemini ist das nicht geprüft.</p>
+          <p>Dann stellt die Plattform LaTeX nicht dar. In Claude im Browser werden Formeln normalerweise gerendert; in ChatGPT und Gemini ist das nicht geprüft. Ab der Vorabversion v0.3.0-rc.3 schreibt das ChatGPT-Paket einzelne Formelzeichen im Fließtext kursiv mit Unicode-Index (<em>U</em>₀), weil ChatGPT einfaches <code>$</code> nicht darstellt; das Skill-ZIP für Claude und Gemini setzt sie als <code>$…$</code>. Nativ geprüft ist das noch nicht.</p>
         </details>
         <details>
           <summary>Wie bekomme ich eine neue Version?</summary>
@@ -661,7 +661,8 @@ p, li { text-wrap: pretty; }
     <div class="wrap honest">
       <div class="reveal"><span class="eyebrow">Stand</span><h2>Ehrlich gesagt.</h2></div>
       <ul class="reveal" style="--d:100ms">
-        <li><span class="warn">Erste stabile Version, Lehrverhalten nicht abgenommen.</span> Die Akzeptanzfälle für das Lehrverhalten (30 Modusfälle, 33 Grenzfälle und 12 neue Schutzregressionen) sind vorbereitet; eine vollständige Zieloberflächenabnahme steht aus. Begrenzte frühere Tests ersetzen sie nicht.</li>
+        <li><span class="warn">Vorabversion v0.3.0-rc.3 zum Testen.</span> Neu: ein gemeinsamer Erklärbogen in <code>erklär</code>, <code>voll</code> und <code>thema</code> (Einstieg, ein Bild, seine Grenze, Kernsatz, Brücke zur Gleichung); <code>tipp</code> fängt „weiß nicht“ mit einem anderen Zugang auf und fragt nach dem Warum; Formelzeichen passend zur Plattform; Fachregeln für E-Technik, Mechanik und Mathe. Die Fälle U07…U13 sind auf claude.ai mit rc.2 protokolliert, U01…U06 und U14 sowie der Vergleich mit v0.2.1 stehen aus. Stabil und empfohlen bleibt v0.2.1.</li>
+        <li><span class="warn">Stabile Version v0.2.1, Lehrverhalten nicht abgenommen.</span> Die Akzeptanzfälle für das Lehrverhalten (30 Modusfälle, 33 Grenzfälle und 12 neue Schutzregressionen) sind vorbereitet; eine vollständige Zieloberflächenabnahme steht aus. Begrenzte frühere Tests ersetzen sie nicht.</li>
         <li>ADHS-freundlich ist ein Designziel: kurze Schritte, feste Struktur. Eine Wirkung ist nicht nachgewiesen.</li>
         <li>Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.</li>
         <li>Schutzregeln gelten auch für Bilder und Code. Check korrigiert nur lokal; ein persönlich verlangter Graph erlaubt die nötigen Berechnungen. Die native Prüfung steht aus.</li>
