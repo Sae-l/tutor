@@ -20,8 +20,8 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
-## Stand v0.3.0-rc.3 (2026-10-27, Vorabversion)
-- Formelzeichen im Fließtext je Plattform (#77): Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `dist/` (ChatGPT-Plugin, System-Prompt) kursiv mit Unicode-Index über `packaging/latex-fliesstext-universal.md`. Befunde aus U07…U13 umgesetzt (keine Optionsbuchstaben in 🎓 Achtung, kein doppelter Kernsatz in `voll`). U07…U13 mit rc.2 auf claude.ai protokolliert, U14 und die Schärfungen von U08/U12 **nicht nativ geprüft**. Website, README, `docs/CHATGPT.md` und Vault-Notizen 07/11/13 nennen rc.3 als Vorabversion; Download und Empfehlung bleiben die stabile v0.2.1.
+## Stand v0.3.0-rc.3 (2026-10-27, seit 2026-10-28 aktuelle Version „Latest“)
+- Formelzeichen im Fließtext je Plattform (#77): Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `dist/` (ChatGPT-Plugin, System-Prompt) kursiv mit Unicode-Index über `packaging/latex-fliesstext-universal.md`. Befunde aus U07…U13 umgesetzt (keine Optionsbuchstaben in 🎓 Achtung, kein doppelter Kernsatz in `voll`). U07…U13 mit rc.2 auf claude.ai protokolliert, U14 und die Schärfungen von U08/U12 **nicht nativ geprüft**. Seit 2026-10-28 auf GitHub als „Latest“ veröffentlicht; Website (Download, strukturierte Daten), README, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13 nennen rc.3 als aktuelle Version. Offene Abnahmen (U01…U06, U14, A/B-Vergleich #67) bleiben bestehen.
 
 ## Stand v0.3.0-rc.2 (2026-10-27, Vorabversion)
 - Umsetzungsplan `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md` implementiert: Erklärbogen (Einstieg, ein Bild, Grenze, Kernsatz, Brückensatz) in `erklär`, `voll`, `thema`; `tipp` mit „weiß nicht“-Behandlung und Warum-Leitfrage; Wiederholungskarte zweistufig; zu breite Wirksamkeitsaussagen korrigiert. Kern unverändert. `mittel`/`lang` behalten eine kurze Idee ohne Erklärbogen. Akzeptanzfälle U07…U13 **nicht nativ geprüft**.
@@ -60,4 +60,4 @@
 ## Offene Punkte
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
 2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen.
-3. v0.2.1 veröffentlicht; neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
+3. v0.3.0-rc.3 ist die aktuelle Version („Latest“, vorher v0.2.1); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
