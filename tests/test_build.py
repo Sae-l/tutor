@@ -86,6 +86,11 @@ class BuildTests(unittest.TestCase):
         for mode in ("erklaer", "voll", "thema"):
             self.assertIn("Erklärbogen", self.read(f"tutor/modes/{mode}.md"), mode)
 
+    def test_tipp_handles_dont_know_and_asks_why(self):
+        text = self.read("tutor/modes/tipp.md")
+        self.assertIn("weiß nicht", text)
+        self.assertIn("Warum gilt", text)
+
     def test_skill_description_fits_platform_limit(self):
         # Agent Skills limit the frontmatter description to 1024 characters.
         description = re.search(r"^description: (.*)$", self.read("tutor/SKILL.md"), re.M).group(1)
