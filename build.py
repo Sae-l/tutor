@@ -34,6 +34,15 @@ for f in files:
     check(f.is_file(), f"fehlt: {f.relative_to(ROOT)}")
 headings = {f: f.read_text(encoding="utf-8").split("\n", 1)[0].lstrip("# ") for f in files}
 
+# Einfaches $ rendert in Claude und Gemini (Skill-ZIP aus tutor/), nicht in ChatGPT:
+# alle Ausgaben in dist/ bekommen deshalb die Klartextregel für Formelzeichen im Fließtext.
+LATEX = SKILL / "references" / "latex-regeln.md"
+INLINE = re.compile(r"<!-- fliesstext -->\n.*?<!-- /fliesstext -->\n", re.S)
+sources = {f: f.read_text(encoding="utf-8") for f in files}
+check(len(INLINE.findall(sources[LATEX])) == 1, "latex-regeln.md braucht genau einen <!-- fliesstext -->-Block")
+universal = (ROOT / "packaging/latex-fliesstext-universal.md").read_text(encoding="utf-8")
+sources[LATEX] = INLINE.sub(lambda _: universal, sources[LATEX])
+
 
 def resolve(text):
     # The single-file project prompt uses sections instead of a skill filesystem.
@@ -43,7 +52,7 @@ def resolve(text):
     return text
 
 
-out = resolve("\n\n---\n\n".join([router] + [f.read_text(encoding="utf-8").strip() for f in files])) + "\n"
+out = resolve("\n\n---\n\n".join([router] + [sources[f].strip() for f in files])) + "\n"
 check(not re.search(r"(?:references|modes)/", out), "offener Dateiverweis im System-Prompt")
 
 blocks = re.findall(r"<!-- kern -->\n(.*?)<!-- /kern -->", router, re.S)
@@ -113,7 +122,8 @@ outputs = {
     "chatgpt/plugins/tutor/assets/logo.svg": (ROOT / "packaging/logo.svg").read_bytes(),
 }
 for source in [SKILL / "SKILL.md"] + files:
-    outputs["chatgpt/plugins/tutor/skills/tutor/" + source.relative_to(SKILL).as_posix()] = source.read_bytes()
+    data = sources[LATEX].encode("utf-8") if source == LATEX else source.read_bytes()
+    outputs["chatgpt/plugins/tutor/skills/tutor/" + source.relative_to(SKILL).as_posix()] = data
 
 archive = BytesIO()
 with ZipFile(archive, "w") as bundle:

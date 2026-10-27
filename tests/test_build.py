@@ -88,6 +88,25 @@ class BuildTests(unittest.TestCase):
         # Lösende Modi nutzen Abschnitt 4 ebenfalls, sollen aber nicht länger werden.
         for mode in ("mittel", "lang"):
             self.assertIn("Kein vollständiger Erklärbogen", self.read(f"tutor/modes/{mode}.md"), mode)
+        # Befunde der nativen Abnahme vom 2026-10-27 (U08, U09/U12).
+        self.assertIn("ohne Optionsbuchstaben", self.read("tutor/modes/erklaer.md"))
+        self.assertIn("wiederholt nicht die 🎯 Kernidee", self.read("tutor/modes/voll.md"))
+
+    def test_inline_symbols_use_dollar_only_in_skill_source(self):
+        # Einfaches $ rendert in Claude und Gemini (Skill-ZIP), nicht in ChatGPT: dist/ bekommt Klartext.
+        source = self.read("tutor/references/latex-regeln.md")
+        self.assertIn("`$U_0$`", source)
+        self.assertEqual(self.build().returncode, 0)
+        plugin = self.read("dist/chatgpt/plugins/tutor/skills/tutor/references/latex-regeln.md")
+        for built in (plugin, self.read("dist/system-prompt.md")):
+            self.assertNotIn("fliesstext -->", built)
+            self.assertNotIn("`$U_0$`", built)
+            self.assertIn("*U*₀", built)
+        before = self.read("dist/system-prompt.md")
+        latex = self.root / "tutor/references/latex-regeln.md"
+        latex.write_text(source.replace("<!-- /fliesstext -->\n", ""), encoding="utf-8")
+        self.assertNotEqual(self.build().returncode, 0)
+        self.assertEqual(before, self.read("dist/system-prompt.md"))
 
     def test_tipp_handles_dont_know_and_asks_why(self):
         text = self.read("tutor/modes/tipp.md")
@@ -172,7 +191,8 @@ class BuildTests(unittest.TestCase):
         for source in sources:
             relative = "skills/tutor/" + source.relative_to(self.root / "tutor").as_posix()
             expected.add(relative)
-            self.assertEqual((plugin / relative).read_bytes(), source.read_bytes(), relative)
+            if source.name != "latex-regeln.md":  # bekommt die Klartextregel, siehe test_inline_symbols_…
+                self.assertEqual((plugin / relative).read_bytes(), source.read_bytes(), relative)
         claude = json.loads((plugin / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
         self.assertNotIn("extensions", claude)
         self.assertEqual({k: claude[k] for k in ("name", "version", "description", "author", "license")},
