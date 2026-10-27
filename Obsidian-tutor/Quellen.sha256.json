@@ -65,7 +65,7 @@
     },
     {
       "path": "tutor/references/didaktik.md",
-      "sha256": "01230359e516d88bbec43566b8fae8b8307f921ca58f8cc7dc62ffd2deb5400f",
+      "sha256": "ad60f6e1293ddb4f555fd18bc0db8b5f7d41a51abb39b9b385f8ae507f095926",
       "normalization": "utf8-lf"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "d7264896285cf1cdd85c47b18db7e720148b0192f03d095e07221b64ae17de01",
+      "sha256": "873f5b86dd45cecd7c8acf161fe0b4a06b8be01e088886ae376c90b2e2a78752",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "f307cb28ae531da0daad462d3b7ece1fba57c0d51286f10da32c4e5ea3c7b4dc",
+      "sha256": "34be7900679161e35fea81ae8f24ee216608f216288fab7e1c5d7a0b4c69d464",
       "normalization": "utf8-lf"
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "path": "docs/KONZEPT.md",
-      "sha256": "bd015e0f6cf3c66d8b7b40bb3edd4bb50909fba3329f3df2cd25af5af5e1dbcf",
+      "sha256": "cdf112b00678de52b1c27bbe34a4b67e6577559d2554bfd80b3ffaf88e907552",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "82fc2adc06abbbd97e9879a2f98d51429c45c633e5fed199c53533566244af82",
+      "sha256": "e076805dd12b668d4720a4441492d46520bd105a8f9c0add0b26c6429a8e2e52",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "cc079774acc38574a8bc4ff579d73afc928bfcfba1ac76c6b802a8eff80fff93",
+      "sha256": "59ca96143a5eec7a0af4868335d327e7733a6827d52e7e0f1b9bfbbf6aec0ebf",
       "normalization": "raw"
     },
     {

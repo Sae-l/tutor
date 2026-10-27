@@ -75,6 +75,9 @@ class BuildTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             self.assertNotRegex(text, r"TH Köln|MPG1|kurs-mpg1|\[uk\]", path.name)
 
+    def test_didaktik_makes_no_proven_effect_claim(self):
+        self.assertNotIn("nachweislich", self.read("tutor/references/didaktik.md"))
+
     def test_skill_description_fits_platform_limit(self):
         # Agent Skills limit the frontmatter description to 1024 characters.
         description = re.search(r"^description: (.*)$", self.read("tutor/SKILL.md"), re.M).group(1)
