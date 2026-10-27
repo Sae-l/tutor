@@ -10,7 +10,7 @@
     },
     {
       "path": "tutor/modes/erklaer.md",
-      "sha256": "f71d29a29877ec30ba4b0d854300b79bd6744e3d9524786d8ee8365c478000b0",
+      "sha256": "47fd6437c6feeb0a97b96c75166991828db2c838cd5095057f5b00181c3a346f",
       "normalization": "utf8-lf"
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "path": "tutor/modes/thema.md",
-      "sha256": "8f6b97cfd76f4dccb70c439e43b0b476a3ecc59b717264282783a382aea94da6",
+      "sha256": "4afd946968573fe53e47631d5600811d821dafd47969ad2860e4e70f63e52054",
       "normalization": "utf8-lf"
     },
     {
@@ -55,12 +55,12 @@
     },
     {
       "path": "tutor/modes/voll.md",
-      "sha256": "6023a22656df9a589df890241e68d014a7a80e1d4105a7865f21f2ca5982adc8",
+      "sha256": "787d421aac43f0d4fbfb17aff3785ca3c0a1d9303d3f0076b240f7a261e6b808",
       "normalization": "utf8-lf"
     },
     {
       "path": "tutor/references/antwortvorlage.md",
-      "sha256": "4fbff3eeeef8b4c126839fe2be60fa4fff5257933eac602eea607644eaabeecc",
+      "sha256": "9accee668446cbbfadb739f0e23eb5600e87f263576e9873c8463160fdcbfb64",
       "normalization": "utf8-lf"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "1fa2baabe206b4a4f97816418fd98f3667c874ccee2bbd2111f638c4dee13146",
+      "sha256": "cd4668de3d00665e847fd5771f77c2713257039cc846db43056400d78a031971",
       "normalization": "utf8-lf"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "873f5b86dd45cecd7c8acf161fe0b4a06b8be01e088886ae376c90b2e2a78752",
+      "sha256": "c7c5862c5d66905a04dda27666cf042104f061dae9c2af0696d85885507f0b91",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "34be7900679161e35fea81ae8f24ee216608f216288fab7e1c5d7a0b4c69d464",
+      "sha256": "f980b7428b8c867e4c0b8ee8649b401ba967b667b9ebc58eb245f03364802c50",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "e076805dd12b668d4720a4441492d46520bd105a8f9c0add0b26c6429a8e2e52",
+      "sha256": "301d175fd7ef066e40037b53ee59d99081cfcc5be48bf15c80f28e311ef65871",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "59ca96143a5eec7a0af4868335d327e7733a6827d52e7e0f1b9bfbbf6aec0ebf",
+      "sha256": "6293292dba8f6ee6bbb134a368586b24091982b8369e3eeac639c19630c48e34",
       "normalization": "raw"
     },
     {

@@ -124,9 +124,9 @@ Selbst erstellte Aufgaben; Zahlenreferenzen unabhängig nachrechnen. Bei Bildern
 | R-LS13 | Rechenaufgabe → `skizze` (#45), auf ChatGPT Web und Android | Zeichnung erscheint sichtbar in derselben Nachricht (z. B. Inline-SVG), kein bloßer Link oder Rohcode, ohne Rückfrage „Wo ist die Skizze?“; Inhalt wie R-LS02. Nicht einbettbar: Einschränkung genannt, Beschreibung statt Behauptung. |
 | R-LS14 | Mechanikaufgabe mit Reibung im Modus `erklär` (#44); danach „ich sehe nur $$ und Backslashes“ | (a) Rendering: Formeln gesetzt, kein sichtbarer Rohcode; nach der Meldung Unicode-Klartextformeln. (b) Notation getrennt prüfen: Formelzeichen mit Bedeutung und Einheit erklärt, Einheiten aufrecht, Dezimalkomma. Keine Zahlenlösung der Originalaufgabe. |
 
-## Lernfluss und Fachkonventionen (U01 … U06)
+## Lernfluss und Fachkonventionen (U01 … U09)
 
-Nach #67 und #64 ergänzt. **Alle noch nicht geprüft.** Selbst erstellte Aufgaben; Zahlen unabhängig nachrechnen. Zusätzlich die Antwortlänge, Wiederholungen und Bildrelevanz beurteilen; der Lernende vergleicht mit der bevorzugten Vorfassung (#67).
+Nach #67 und #64 ergänzt; U07 und folgende nach dem Umsetzungsplan Erklärbogen und Lernprinzipien (2026-10-27), nicht nativ geprüft. **Alle noch nicht geprüft.** Selbst erstellte Aufgaben; Zahlen unabhängig nachrechnen. Zusätzlich die Antwortlänge, Wiederholungen und Bildrelevanz beurteilen; der Lernende vergleicht mit der bevorzugten Vorfassung (#67).
 
 | ID | Eingabe / Folge | Erwartung |
 |---|---|---|
@@ -136,6 +136,9 @@ Nach #67 und #64 ergänzt. **Alle noch nicht geprüft.** Selbst erstellte Aufgab
 | U04 | `kurz`: Balken auf Fest- und Loslager, Länge 4 m, Einzelkraft 10 kN senkrecht in 1 m Abstand vom Festlager A | Freischnitt mit Lagerreaktionen vor dem Gleichgewicht, Momentenbezugspunkt genannt. Referenz: A_v = 7,5 kN, B_v = 2,5 kN. |
 | U05 | `erklär`: lineare DGL zweiter Ordnung mit Laplace-Transformation lösen (höheres Semester) | Keine vorgeschaltete Niveaufrage; Grundlagen wie Ableitungsregeln nicht neu erklärt, sondern als Voraussetzung genannt; keine Lösung. |
 | U06 | `hilfe` | `voll`-Zeile nennt das andere vorgerechnete Beispiel und verweist für die eigene Aufgabe auf `kurz`, `mittel` oder `lang`. |
+| U07 | `[ar]` + `erklär`: Kondensator wird über einen Widerstand aufgeladen, Zeit bis 63 % gesucht | Erklärbogen vollständig (Einstieg, ein Bild, Grenze, Kernsatz), Sätze auf Arabisch, Überschriften und Gesetzesname deutsch; Brückensatz vor der Gleichung; kein Zahlenergebnis. |
+| U08 | `erklär`: Auswahlaufgabe „Welche Aussagen zur gleichförmigen Kreisbewegung treffen zu?“ | Einstieg und Grenze beurteilen keine Option; keine Option als richtig nahegelegt. |
+| U09 | `voll`: Fläche unter y = x² von 0 bis 2 | Mathematisches Bild statt erzwungenem Alltagsvergleich; Abschnitt 3 ohne Formel, Abschnitt 4 beginnt mit Brückensatz; anderes Beispiel, Original nicht gelöst. |
 
 ## Kursaufgaben (K01 … K06)
 
