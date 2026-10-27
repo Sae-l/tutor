@@ -65,7 +65,7 @@
     },
     {
       "path": "tutor/references/didaktik.md",
-      "sha256": "7e76642caf933afaf10651dee44c9bc29ead52dbfba8a60cd704109619a9be2e",
+      "sha256": "01230359e516d88bbec43566b8fae8b8307f921ca58f8cc7dc62ffd2deb5400f",
       "normalization": "utf8-lf"
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "path": "tutor/SKILL.md",
-      "sha256": "a2dce4897e76479b6928da2100f6a9e27b1d4d5747ad7e95120b44d051c6322c",
+      "sha256": "6dbfbcc389d86dc191398059a0f17dd62d3e3a540a09834c916b1a11d3fbd96b",
       "normalization": "utf8-lf"
     },
     {
@@ -115,17 +115,17 @@
     },
     {
       "path": "README.md",
-      "sha256": "7a7d1731fb80d41e08d100388e6d77079aefecea66575d995edfe68349db35d5",
+      "sha256": "2de5ba6ef369c2929fe6f814f4e695c09b9df3eb276535daebebb2f2da615954",
       "normalization": "utf8-lf"
     },
     {
       "path": "GLOSSARY.md",
-      "sha256": "5fe787bf841746018b812c8702fd552a7c5d69b2b478769cd5c5278d36febe9b",
+      "sha256": "7c57e6a0bb606b98430cb774bcc0d8828642f3699b56f0cad7d6217bebfdb0ba",
       "normalization": "utf8-lf"
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "913cafb16e3a029acc853f88da016da66c1332a093b54e4134e6c2055e13d69d",
+      "sha256": "58e29df165a329a81824dee6ca928f30c2af9e3610cfbd31ed6f5f6e93db9d96",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "5185da58c2a9ecefd96258aff0ee9bb23685deb7f040d6d5afc246a7b67fd25e",
+      "sha256": "f307cb28ae531da0daad462d3b7ece1fba57c0d51286f10da32c4e5ea3c7b4dc",
       "normalization": "utf8-lf"
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "path": "docs/KONZEPT.md",
-      "sha256": "05b3b687d43cc3fd9802b434ee9a407911d53431112d1e5a27ee8d70f9d311d5",
+      "sha256": "bd015e0f6cf3c66d8b7b40bb3edd4bb50909fba3329f3df2cd25af5af5e1dbcf",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "eed370009183b69a829fadf7e00607f474a4e53fa81d0a9d246cb2c2d16c19e5",
+      "sha256": "5c1766f8db40fb6d29503702be64e260cf92aa4a613c4c692952e299b6a1f364",
       "normalization": "utf8-lf"
     },
     {
@@ -185,22 +185,22 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "342c7e2a6ee1be361ef7d5022fe553f3f7e0aff62758a3bc7676ec0c4eea5d93",
+      "sha256": "14c5170a950b0baaf9f04d1ea148c1fca7490b830ab0356fcba886c7d63bcffb",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/kern.md",
-      "sha256": "05529d267fd73295bb44e7b02837bb3d76a3c9d2a4428a60516bad0f6a23061b",
+      "sha256": "475956b588e2e0c40c948c55c6666d6972f90a2a87f879fd1a42fc2f29fa1a3d",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "9effa81cfb0625000707b25975052e2a76e8a825fbf91860f414092969ead545",
+      "sha256": "82fc2adc06abbbd97e9879a2f98d51429c45c633e5fed199c53533566244af82",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "0346b9e8ebf30b82c9f542e6dd815f3617b3a2085a1e33767af2eb04f311f5cb",
+      "sha256": "cc079774acc38574a8bc4ff579d73afc928bfcfba1ac76c6b802a8eff80fff93",
       "normalization": "raw"
     },
     {

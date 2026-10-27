@@ -1,6 +1,6 @@
 # Tutor
 
-Lern-Tutor für MINT-Aufgaben im ersten Studienjahr an deutschsprachigen Hochschulen: Physik, Mathematik und Elektrotechnik. Der Tutor erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich verlangst. So übst du selbst, statt abzuschreiben.
+Lern-Tutor für MINT-Aufgaben im Studium an deutschsprachigen Hochschulen: Physik, Mathematik, Elektrotechnik und Technische Mechanik. Der Tutor erklärt das Thema, stellt Leitfragen, prüft eigene Rechenwege und hält die vollständige Lösung zurück, bis du sie ausdrücklich verlangst. So übst du selbst, statt abzuschreiben.
 
 ## Installation
 

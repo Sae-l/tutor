@@ -8,7 +8,7 @@
 </a>
 
 **MINT-Aufgaben verstehen und selbst lösen, statt Lösungen abzuschreiben.**
-Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das erste Studienjahr in Physik, Mathematik und E-Technik an deutschsprachigen Hochschulen.
+Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das Studium in Physik, Mathematik, E-Technik und Technischer Mechanik an deutschsprachigen Hochschulen.
 
 [![CI](https://github.com/Sae-l/tutor/actions/workflows/ci.yml/badge.svg)](https://github.com/Sae-l/tutor/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/Sae-l/tutor?label=Release)](https://github.com/Sae-l/tutor/releases)
@@ -263,7 +263,7 @@ python -B -m unittest discover -s tests -v
 
 Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und die erzeugte Ausgabe mitcommitten. `dist/` wird vollständig ersetzt; dort nichts von Hand ablegen. Die Tests prüfen reproduzierbare Ausgaben, Pluginmanifest und Paketinhalt, Bytegleichheit zur Skillquelle, elf Modi, Kursneutralität, Kernbudget, Formelbeispiele und den Erhalt vorhandener Ausgaben bei ungültigen Quellen/Metadaten sowie fehlgeschlagenem Verzeichnistausch. Die CI führt denselben Build und dieselben Tests auf Linux und Windows aus.
 
-[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle, 33 Zustands- und Grenzfälle und fünf native ChatGPT-Installations-/Aktivierungsfälle, je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
+[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle, 33 Zustands- und Grenzfälle, fünf native ChatGPT-Installations-/Aktivierungsfälle, 14 Schutzregressionen (R-LS) und sechs Fälle zu Lernfluss und Fachkonventionen (U), je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
 
 </details>
 

@@ -1,7 +1,7 @@
 ---
 title: Ziel des Skills
 tags: [tutor, ziel]
-updated: 2026-10-16
+updated: 2026-10-26
 ---
 
 # Ziel des Skills
@@ -19,8 +19,8 @@ Praktisch: einmal einrichten, danach **Aufgabenfoto und ein Befehlswort** schick
 
 | Merkmal | Beschreibung |
 |---|---|
-| Lernende | Erstes Studienjahr eines MINT-Studiengangs an einer deutschsprachigen Hochschule |
-| Fächer | Physik, Mathematik und Elektrotechnik |
+| Lernende | MINT-Studium an einer deutschsprachigen Hochschule, vom ersten bis zu höheren Semestern (#64; fachliche Abdeckung nicht nachgewiesen) |
+| Fächer | Physik, Mathematik, Elektrotechnik und Technische Mechanik |
 | Klausursprache | Deutsch |
 | Erklärsprachen | Deutsch als Voreinstellung; Arabisch, Türkisch, Französisch, Englisch und Urdu auf Wunsch |
 | Gestaltung | ADHS-freundlich: kurze Schritte, feste Struktur und eine nächste Handlung mit Zeitangabe |

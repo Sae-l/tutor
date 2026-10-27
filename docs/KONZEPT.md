@@ -2,7 +2,7 @@
 
 ## 1. Kontext und Ziel
 
-**Zielgruppe:** Studierende im ersten Studienjahr eines MINT-Fachs an einer deutschsprachigen Hochschule, Klausuren auf Deutsch; ADHS-freundlich gestaltet. Entstanden ist der Tutor für einen einzelnen Erstsemester in E-Technik mit ADHS. Lange Gedankenketten im Arbeitsgedächtnis zu halten fällt schwer; der Einstieg ins Lernen muss leicht sein.
+**Zielgruppe:** Studierende eines MINT-Fachs an einer deutschsprachigen Hochschule, Schwerpunkt Studienbeginn, auch höhere Semester (#64), Klausuren auf Deutsch; ADHS-freundlich gestaltet. Entstanden ist der Tutor für einen einzelnen Erstsemester in E-Technik mit ADHS. Lange Gedankenketten im Arbeitsgedächtnis zu halten fällt schwer; der Einstieg ins Lernen muss leicht sein.
 
 **Ziel des Agenten:** nicht Aufgaben für den Lernenden lösen, sondern ihn so führen, dass er **die nächste Aufgabe dieses Typs allein lösen kann**. Praktisch: einmal einrichten, danach nur noch Foto plus ein Befehlswort schicken.
 
