@@ -1,7 +1,7 @@
 ---
 title: Wissenschaftliche Grundlagen und Aussagegrenzen
 tags: [tutor, forschung, evidenz]
-updated: 2026-10-16
+updated: 2026-10-27
 ---
 
 # Wissenschaftliche Grundlagen
@@ -43,6 +43,25 @@ Vorgesehene Anwendung: ein anderes Beispiel in `voll`, danach bedarfsgerecht wen
 - Pólyas Schritte, sokratische Fragen und Anschauung vor Symbolen: didaktische Ordnungs- und Erklärungsmittel, keine Versuchsergebnisse an Tutor.
 - „Feynman-Technik“: gebräuchliche Bezeichnung für vereinfachendes Erklären; hier wurde keine konkrete Wirksamkeitsstudie dazu dokumentiert.
 - ADHS-freundliche Gestaltung: aus den Bedürfnissen des Lernenden und der vorgeschlagenen Struktur abgeleitet, nicht aus einer klinischen Interventionsstudie. Die Erwähnung von `i-have-adhd` im Konzept belegt weder dessen Prüfung noch medizinische Anerkennung.
+
+## Ergänzung 2026-10-27: Metaanalysen, Gegenbefunde und KI-Studien
+
+Zwölf neuere Quellen gegen die Tutor-Regeln abgeglichen. Volltext, Prüftiefe je Quelle und Begründungen: `docs/planung/2026-10-27-evidenz-update.md`. Wie oben gilt: Die Quellen begründen Prinzipien, nicht die Wirksamkeit von Tutor.
+
+| Regel in Tutor | Neue Evidenz | Urteil |
+|---|---|---|
+| 🧩 Verständnisfrage, Antwort nur auf Abruf | Adesope u. a. 2017 ([DOI](https://doi.org/10.3102/0034654316689306)) stützt Abruf; van Gog & Sweller 2015 ([DOI](https://doi.org/10.1007/s10648-015-9310-x)): Testeffekt kann bei komplexem Material schrumpfen. | Gestützt, mit Grenze: Die Frage sollte ein Prinzip prüfen, keine ganze Rechnung. |
+| Leitfragen in `tipp` | Bisra u. a. 2018 ([DOI](https://doi.org/10.1007/s10648-018-9434-x)): 64 Studien, g = 0,55; Konzepterklärung wirkt besser als metakognitive Aufforderung. | Teilweise: mindestens eine „Warum gilt hier …?“-Frage. |
+| Anderes vorgerechnetes Beispiel in `voll` | Barbieri u. a. 2023: 49 Studien, g = 0,43 in Mathematik (Zahlen aus dem Konferenzposter). | Gestützt. |
+| Voreinstellung `erklär` vor eigenem Versuch | Sinha & Kapur 2021 ([DOI](https://doi.org/10.3102/00346543211019105)): Probieren vor Anleitung kann Verständnis fördern. | Offen; Befund nur aus Sekundärberichten, keine Änderung. |
+| 🗂 Wiederholungskarte „nach zwei Tagen“ | Cepeda u. a. 2008 ([DOI](https://doi.org/10.1111/j.1467-9280.2008.02209.x)): günstiger Abstand ≈ 20–40 % der Frist bei einer Woche, relativ weniger bei längerer Frist. | Teilweise: zwei Stufen statt fester zwei Tage. |
+| Kein verschachteltes Üben | Brunmair & Richter 2019 ([DOI](https://doi.org/10.1037/bul0000209)): Mathematik g = 0,34. | Lücke. |
+| `check`: erster Fehler mit Art und Grund, kein Lob | Wisniewski u. a. 2020 ([DOI](https://doi.org/10.3389/fpsyg.2019.03087)): informationsreiches Feedback d = 0,99, Belohnung d = 0,24; hohe Heterogenität. | Gestützt. |
+| Lösungsschutz und Hilfe auf Abruf | Lehmann u. a. 2024/25 ([arXiv](https://arxiv.org/abs/2409.09047v2), Preprint): LLM als Lösungsersatz senkt Verständnis, als Erklärhilfe hebt es; Aleven u. a. 2016 ([DOI](https://doi.org/10.1007/s40593-015-0089-1)): Hilfe auf Abruf nützt begrenzt; De Simone u. a. 2025 (Weltbank, Nigeria): +0,31 SD. | Gestützt als Gestaltungsprinzip, kein Wirksamkeitsbeleg. |
+| ADHS-freundliche Struktur | Álvarez-Godos u. a. 2023 ([DOI](https://doi.org/10.3389/fpsyg.2023.1216692)): 24 Studien zu Hochschulstudierenden mit ADHS, keine zur Materialgestaltung. | Unbelegt, plausibel. |
+| Erklärung in der Erstsprache | Nicht recherchiert. | Lücke. |
+
+Noch nicht umgesetzt sind die am 2026-10-16 als zu breit markierten Aussagen in `tutor/references/didaktik.md` („nachweislich“) und `docs/KONZEPT.md` („stark“, „sehr stark“, „schwächste Lernform“). Prioritäten stehen in [[14 Arbeitsplan]].
 
 ## Wie ließe sich die Wirksamkeit prüfen?
 
