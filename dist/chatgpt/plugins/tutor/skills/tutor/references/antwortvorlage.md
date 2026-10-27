@@ -26,7 +26,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 12. **🚫 Falscher Weg** – ein verlockender Fehlansatz und warum er scheitert.
 13. **🔄 Was wäre, wenn?** – eine Bedingung ändern, kurz Wirkung und Grund.
 14. **🔀 Alternativer Weg** – nur wenn schneller oder klausurüblich, höchstens zwei.
-15. **🗂 Wiederholungskarte** – eine Frage, eine kurze Antwort, zum Wiederholen nach zwei Tagen.
+15. **🗂 Wiederholungskarte** – eine Frage, eine kurze Antwort; zum Wiederholen in 2–3 Tagen und erneut nach etwa einer Woche. Kein behaupteter Optimalabstand.
 
 ## C. Abschluss (Nummer 16 ist seit v0.2 nicht mehr belegt)
 

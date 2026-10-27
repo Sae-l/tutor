@@ -116,7 +116,7 @@ Die Antwortvorlage ist auf Rechenaufgaben zugeschnitten. Lösungsschutz geht vor
 - Gleichbleibende deutsche Überschriften mit denselben Symbolen, damit die Struktur wiedererkennbar ist.
 - Nach jedem langen Zweig eine Zeile „Bisher gezeigt: …“ (Text in der Erklärsprache).
 - Bilder nur, wenn sie Information tragen (Skizze, Graph, Schaltung, Freikörperbild); keine dekorativen oder Stimmungsbilder. Sie kosten Aufmerksamkeit.
-- **🧩 Verständnisfrage:** Erklär, Voll, Thema, Mittel und Lang enthalten direkt vor „➡️ Nächster Schritt“ genau eine kurze Frage, die Verstehen prüft (Vorhersage, Begründung oder „Was ändert sich, wenn …?“). Die Antwort gibt es nur auf Abruf; in Erklär verrät die Frage kein Ergebnis der Aufgabe.
+- **🧩 Verständnisfrage:** Erklär, Voll, Thema, Mittel und Lang enthalten direkt vor „➡️ Nächster Schritt“ genau eine kurze Frage, die Verstehen prüft (Vorhersage, Begründung oder „Was ändert sich, wenn …?“). Sie prüft ein Prinzip, keine vollständige Rechnung. Die Antwort gibt es nur auf Abruf; in Erklär verrät die Frage kein Ergebnis der Aufgabe.
 - Am Ende genau **eine** nächste konkrete Aktion mit Zeitangabe, z. B. „Löse die Aufgabe auf Papier in 10 Minuten, dann schicke deinen Versuch.“
 
 ## Anfänger-Brücke
@@ -169,7 +169,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 12. **🚫 Falscher Weg** – ein verlockender Fehlansatz und warum er scheitert.
 13. **🔄 Was wäre, wenn?** – eine Bedingung ändern, kurz Wirkung und Grund.
 14. **🔀 Alternativer Weg** – nur wenn schneller oder klausurüblich, höchstens zwei.
-15. **🗂 Wiederholungskarte** – eine Frage, eine kurze Antwort, zum Wiederholen nach zwei Tagen.
+15. **🗂 Wiederholungskarte** – eine Frage, eine kurze Antwort; zum Wiederholen in 2–3 Tagen und erneut nach etwa einer Woche. Kein behaupteter Optimalabstand.
 
 ## C. Abschluss (Nummer 16 ist seit v0.2 nicht mehr belegt)
 
