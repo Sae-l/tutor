@@ -16,15 +16,16 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die stabile `v0.2.1`, daneben Link zur Vorabversion `v0.3.0-rc.3`; Veröffentlichung separat prüfen. |
-| Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste. |
+| Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die stabile `v0.2.1`, daneben Link zur Vorabversion `v0.3.0-rc.3`; Kennzahlen 23 Arbeiten, 11 Modi, 6 Erklärsprachen, 0 € / MIT; Veröffentlichung separat prüfen. |
+| Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste und ein fest hinterlegtes Beispiel „Probier es aus“ (dieselbe Aufgabe mit `erklär`, `tipp`, `voll`, `kurz`; Lösung nur unter `kurz`). |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
-| Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege; seit 2026-10-20 Gemini-Skill mit `tutor-skill.zip`, Gem als auslaufend gekennzeichnet. |
-| Unter der Haube | Build-Weg von `tutor/` über `build.py` zu den Paketen; Kennzahlen 11 Modi, 6 Erklärsprachen, 30 Modus- und 33 Grenzfälle. |
-| Häufige Fragen | Aktivierung, Sprache und Art des Produkts; Formelzeichen je Plattform ab rc.3. |
-| Ehrlich gesagt | Vorabversion v0.3.0-rc.3 (Erklärbogen, `tipp` mit „weiß nicht“ und Warum-Frage, Formelzeichen je Plattform, Fachkonventionen; U07…U13 mit rc.2 protokolliert, U01…U06, U14 und A/B-Vergleich offen), stabile v0.2.1 ohne Abnahme, Prüfgrenzen und ADHS als Gestaltungsziel. |
-| Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis), Über mich (LinkedIn, Instagram), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
+| Forschung | 23 Arbeiten und 7 Metaanalysen aus [[13 Quellen und Nachweise]] und `docs/planung/`; Bastani et al. 2025, drei Effektgrößen (Wisniewski 2020, Bisra 2018, Barbieri 2023), sechs Prinzipien mit Tutor-Regel; ausdrücklich kein Wirksamkeitsnachweis für Tutor. |
+| Vergleich | Chat ohne Lernmodus, Lernmodi der Anbieter und Tutor in acht Zeilen; Stand Oktober 2026 nach Anbieterangaben, nicht gegen aktuelle Anbieterseiten geprüft. |
+| Zweiter Aufruf | Download und Sprung zur Einrichtung nach dem Vergleich. |
+| Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege, letztere eingeklappt; seit 2026-10-20 Gemini-Skill mit `tutor-skill.zip`, Gem als auslaufend gekennzeichnet. |
+| Häufige Fragen | Reifegrad (früher „Ehrlich gesagt“: Vorabversion, offene Abnahme, ADHS als Gestaltungsziel), Aktivierung, Sprache und Art des Produkts; Formelzeichen je Plattform ab rc.3. |
+| Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Bauweise statt früherem Abschnitt „Unter der Haube“, Wissensbasis), Über mich (LinkedIn, Instagram), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
 
 ## Gestaltung seit 2026-10-19
 
@@ -32,8 +33,8 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 flowchart TD
     N["Fester Kopf mit Lesefortschritt und aktivem Abschnitt"] --> H["Einstieg: Karopapier, Skizzen zeichnen sich einmal"]
     H --> A["Ablauf: Flowchart baut sich beim ersten Sichtkontakt auf"]
-    A --> M["11 Modi"] --> S["Sprachbeispiel"] --> E["Einrichten"]
-    E --> T["Unter der Haube: Build-Weg und Kennzahlen"] --> F["Fragen und Stand"]
+    A --> M["11 Modi"] --> S["Sprachbeispiel"] --> R["Forschung"] --> V["Vergleich"]
+    V --> C["Zweiter Download-Aufruf"] --> E["Einrichten"] --> F["Fragen mit Reifegrad"]
 ```
 
 - Hell- und Dunkelmodus folgen der Systemeinstellung; Farben stehen als CSS-Variablen in `:root`, Inline-SVGs nutzen dieselben Variablen.
