@@ -12,8 +12,8 @@ Die Befehlsnamen gehören zur Bedienoberfläche und werden unverändert verwende
 
 | Befehl und Datei | Verhalten | Lösung der Originalaufgabe | Geeigneter Einsatz |
 |---|---|---|---|
-| `erklär` — `erklaer.md` | Idee, deutsch benannte Gesetze, allgemeines Vorgehen, Verständnisfrage und nächste Handlung. Kein gelöstes Beispiel. | Zurückgehalten; keine eingesetzten Werte oder entscheidende Umstellung. | Erster Zugang zur Aufgabe; Voreinstellung. |
-| `voll` — `voll.md` | Anschauliche und mathematische Erklärung; anderes Beispiel mit anderen Zahlen und anderem Kontext; falscher Weg und Wiederholungskarte. | Original zurückgehalten; anderes Beispiel sichtbar gelöst. | Die Methode vor dem eigenen Versuch sehen. |
+| `erklär` — `erklaer.md` | Idee als Erklärbogen, deutsch benannte Gesetze, allgemeines Vorgehen, Verständnisfrage und nächste Handlung. Kein gelöstes Beispiel. | Zurückgehalten; keine eingesetzten Werte oder entscheidende Umstellung. | Erster Zugang zur Aufgabe; Voreinstellung. |
+| `voll` — `voll.md` | Anschauliche Erklärung als Erklärbogen, dann mathematische mit Brückensatz; anderes Beispiel mit anderen Zahlen und anderem Kontext; falscher Weg und Wiederholungskarte. | Original zurückgehalten; anderes Beispiel sichtbar gelöst. | Die Methode vor dem eigenen Versuch sehen. |
 | `thema` — `thema.md` | Begriff, Gesetz oder Beweis; Bedingungen, Nutzen beim Lösen und Verständnisfrage. | Antwort der eigentlichen Aufgabe zurückgehalten; Auswahlaufgaben erst auf Abruf entscheiden. | Konzeptfrage oder Beweis ohne anderen Befehl. |
 | `tipp` — `tipp.md` | Vier bis sechs passende Leitfragen; weder Gesetz noch Ergebnis in einer Frage verstecken. | Bis `lösung` zurückgehalten. | Selbst lösen, mit Anleitung. |
 | `check` — `check.md` | Zuerst Richtiges nennen, dann nur die erste fehlerhafte Stelle mit Art und Grund lokal korrigieren; danach stoppen. Bei korrektem Versuch keinen Fehler erfinden. | Nur lokale Fehlerkorrektur sichtbar, keine restliche Neulösung. | Eigenen Versuch schicken; automatische Wahl ohne höherrangigen Befehl. |

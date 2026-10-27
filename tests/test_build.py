@@ -78,6 +78,14 @@ class BuildTests(unittest.TestCase):
     def test_didaktik_makes_no_proven_effect_claim(self):
         self.assertNotIn("nachweislich", self.read("tutor/references/didaktik.md"))
 
+    def test_explaining_modes_use_erklaerbogen(self):
+        template = self.read("tutor/references/antwortvorlage.md")
+        self.assertIn("Erklärbogen", template)
+        self.assertIn("Grenze", template)
+        self.assertNotIn("Feynman-Stil", template)
+        for mode in ("erklaer", "voll", "thema"):
+            self.assertIn("Erklärbogen", self.read(f"tutor/modes/{mode}.md"), mode)
+
     def test_skill_description_fits_platform_limit(self):
         # Agent Skills limit the frontmatter description to 1024 characters.
         description = re.search(r"^description: (.*)$", self.read("tutor/SKILL.md"), re.M).group(1)

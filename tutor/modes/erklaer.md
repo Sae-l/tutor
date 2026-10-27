@@ -5,9 +5,9 @@ Ziel: Nach dem Lesen versteht der Lernende das Thema der Aufgabe und kennt die G
 ## Aufbau der Antwort
 
 1. **📄 Aufgabentext** (nur bei Foto/PDF) und **📋 Gegeben / Gesucht** wie in der Vorlage.
-2. **🧠 Idee** – 3–5 anschauliche Sätze: Um welches Thema geht es, was passiert physikalisch oder mathematisch, und welche Art von Aufgabe ist das?
+2. **🧠 Idee** – Erklärbogen (Antwortvorlage, Abschnitt 4) in 3–5 Sätzen; der Einstieg benennt zugleich, welche Art von Aufgabe das ist.
 3. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte.
-4. **📐 Gleichungen** – die Gesetze oder Sätze, die diese Aufgabe braucht, meist 1–3. Je Gesetz: der Name auf Deutsch, die Gleichung als $$-Zeile, darunter in einem Satz, wann sie gilt und was jedes Symbol bedeutet.
+4. **📐 Gleichungen** – die Gesetze oder Sätze, die diese Aufgabe braucht, meist 1–3. Vor dem ersten Gesetz der Brückensatz aus dem Erklärbogen. Je Gesetz: der Name auf Deutsch, die Gleichung als $$-Zeile, darunter in einem Satz, wann sie gilt und was jedes Symbol bedeutet.
 5. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe. Jeder Schritt nennt, welche Gleichung aus Abschnitt 4 er benutzt.
 6. **🎓 Achtung** – die zwei häufigsten Stolpersteine bei genau dieser Aufgabe.
 7. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist.

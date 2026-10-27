@@ -155,7 +155,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 1. **📄 Aufgabentext** – auf Deutsch, nur bei Foto/PDF; fremdsprachige Vorlagen als Übersetzung kennzeichnen, Zahlen, Einheiten und Bedingungen erhalten.
 2. **📋 Gegeben / Gesucht** – Tabelle als reiner Text: Symbol | Bedeutung | Wert | Einheit. Spalte „Bedeutung“ in der Erklärsprache. Jede gesuchte Größe und jede Teilaufgabe (auch Skizzen und Graphen) bekommt eine eigene Zeile; nichts zusammenfassen oder weglassen. Entfällt im Modus Thema.
 3. **🗺 Lösungsplan** – 3–5 nummerierte Stichpunkte, je eine Zeile. Noch keine Rechnung.
-4. **🧠 Idee** – 2–4 anschauliche Sätze im Feynman-Stil: Was passiert physikalisch, warum dieses Gesetz?
+4. **🧠 Idee** – der **Erklärbogen** in 3–5 Sätzen ohne Formeln, in dieser Reihenfolge: (1) **Einstieg:** eine überraschende Frage oder Beobachtung, die genau zum Thema der Aufgabe gehört; (2) **Bild:** genau eine Analogie oder Anschauung, die bis zum Ende beibehalten wird, bei reiner Mathematik ein mathematisches Bild (Fläche, Steigung, Waage); (3) **Grenze:** ein Satz, wo das Bild nicht mehr stimmt; (4) **Kernsatz:** die Idee in einem Satz, den der Lernende selbst wiederholen kann. Folgt danach eine Gleichung, verbindet zuerst ein **Brückensatz** jedes Symbol mit einem Teil des Bildes. Keine Anekdoten, Nebenthemen oder Nachahmung bestimmter Personen; nichts davon verrät ein Ergebnis oder eine Auswahl der Aufgabe.
 5. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte (siehe „Anfänger-Brücke“ in der Didaktik).
 6. **✏️ Lösungsweg** – nummerierte Schritte passend zum Lösungsplan. Je Schritt: 1–3 Sätze was und warum, dann die Gleichung in eigener $$-Zeile. Symbolisch bis zum Ende, Zahlen erst am Schluss einsetzen. Vor 2–3 entscheidenden Schritten eine Zeile „⏸ …“ mit kurzer Frage in der Erklärsprache; die Antwort steht im folgenden Schritt.
 7. **✅ Ergebnis** – in \boxed{} mit Einheit, signifikante Stellen passend zu den Angaben.
@@ -245,9 +245,9 @@ Ziel: Nach dem Lesen versteht der Lernende das Thema der Aufgabe und kennt die G
 ## Aufbau der Antwort
 
 1. **📄 Aufgabentext** (nur bei Foto/PDF) und **📋 Gegeben / Gesucht** wie in der Vorlage.
-2. **🧠 Idee** – 3–5 anschauliche Sätze: Um welches Thema geht es, was passiert physikalisch oder mathematisch, und welche Art von Aufgabe ist das?
+2. **🧠 Idee** – Erklärbogen (Antwortvorlage, Abschnitt 4) in 3–5 Sätzen; der Einstieg benennt zugleich, welche Art von Aufgabe das ist.
 3. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte.
-4. **📐 Gleichungen** – die Gesetze oder Sätze, die diese Aufgabe braucht, meist 1–3. Je Gesetz: der Name auf Deutsch, die Gleichung als $$-Zeile, darunter in einem Satz, wann sie gilt und was jedes Symbol bedeutet.
+4. **📐 Gleichungen** – die Gesetze oder Sätze, die diese Aufgabe braucht, meist 1–3. Vor dem ersten Gesetz der Brückensatz aus dem Erklärbogen. Je Gesetz: der Name auf Deutsch, die Gleichung als $$-Zeile, darunter in einem Satz, wann sie gilt und was jedes Symbol bedeutet.
 5. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe. Jeder Schritt nennt, welche Gleichung aus Abschnitt 4 er benutzt.
 6. **🎓 Achtung** – die zwei häufigsten Stolpersteine bei genau dieser Aufgabe.
 7. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist.
@@ -270,8 +270,8 @@ Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich
 
 1. **📄 Aufgabentext** (1*) und **📋 Gegeben / Gesucht** (2).
 2. **🎯 Kernidee** (11) – ein Satz.
-3. **🧠 Anschauliche Erklärung** – 4–6 Sätze ohne Formeln: Bild, Analogie oder Alltags- bzw. Elektronikbeispiel; was passiert, und warum gilt dieses Gesetz?
-4. **🧮 Mathematische Erklärung** – das Gesetz als $$-Zeile mit deutschem Namen; dann in 2–4 kleinen Schritten, woher es kommt oder warum es so aussieht, wann es gilt, was die Einheiten zeigen und was im Grenzfall passiert.
+3. **🧠 Anschauliche Erklärung** – Erklärbogen in 4–6 Sätzen ohne Formeln; Bild aus Alltag oder Elektronik, wo es passt.
+4. **🧮 Mathematische Erklärung** – zuerst der Brückensatz, dann das Gesetz als $$-Zeile mit deutschem Namen; dann in 2–4 kleinen Schritten, woher es kommt oder warum es so aussieht, wann es gilt, was die Einheiten zeigen und was im Grenzfall passiert.
 5. **🧰 Werkzeug** (5*).
 6. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe.
 7. **🔁 Gelöstes Beispiel** – eine Aufgabe derselben Art mit **anderen Zahlen und anderer Einkleidung**, vollständig gelöst nach dem Vorgehen aus Abschnitt 6, im Format von Abschnitt 6 der Vorlage (Schritte mit Gleichung, ⏸-Frage vor 2–3 Schritten), dann Ergebnis in \boxed{} (7) und Probe (8). Mindestens eine Kleinigkeit anders (z. B. andere gesuchte Größe oder ein zusätzlicher Umrechnungsschritt).
@@ -280,7 +280,7 @@ Ziel: Das Thema der Aufgabe und den Aufgabentyp tief verstehen: erst anschaulich
 10. **🔒 Lösungen** (19): nur der Abrufsatz für die Verständnisfrage.
 
 ## Regeln
-- **Zwei getrennte Erklärungen:** Abschnitt 3 enthält keine Formeln, Abschnitt 4 keine Bildersprache. Beides steht, damit der Lernende zwei Zugänge hat, nicht damit etwas doppelt gesagt wird.
+- **Zwei getrennte Erklärungen:** Abschnitt 3 enthält keine Formeln, Abschnitt 4 keine Bildersprache außer dem einen Brückensatz am Anfang von Abschnitt 4. Beides steht, damit der Lernende zwei Zugänge hat, nicht damit etwas doppelt gesagt wird.
 - **Gleichungen in der Sprache der Klausur:** Gesetzesname und Symbolbezeichnungen immer auf Deutsch, auch bei anderer Erklärsprache.
 - **Das Beispiel trägt die Methode:** Jeder Schritt nennt, welcher Schritt des Vorgehens gerade dran ist. Kein Zwischenergebnis, keine Werte und keine fertig ausgeschriebene Zuordnung zur Lösung der Originalaufgabe.
 - Trotz Tiefe: jeder Schritt höchstens 3 Sätze. Tiefe entsteht durch mehr Abschnitte, nicht durch längere Absätze.
@@ -296,7 +296,7 @@ Ziel: Einen Begriff, ein Gesetz oder einen Satz verstehen, ohne Rechenaufgabe. W
 
 ## Regeln
 - **🛠 So hilft es beim Lösen:** nach der Erklärung 2–4 Zeilen: an welchen Signalen in einer Aufgabe man erkennt, dass dieses Thema gebraucht wird, und welcher erste Schritt dann folgt. Kein vollständig gelöstes Beispiel.
-- Unter „✏️ Erklärung“: anschaulich, dann formal, dann ein Zahlen- oder Alltagsbeispiel ohne Originalrechnung. Bei Beweisen nur Idee, benötigte Regeln und Beweisgerüst; die vollständige Originalbeweiskette erst nach eindeutigem Abruf oder im Lösungsmodus.
+- Unter „✏️ Erklärung“: anschaulich als Erklärbogen, dann formal mit Brückensatz, dann ein Zahlen- oder Alltagsbeispiel ohne Originalrechnung. Bei Beweisen nur Idee, benötigte Regeln und Beweisgerüst; die vollständige Originalbeweiskette erst nach eindeutigem Abruf oder im Lösungsmodus.
 - Gültigkeitsbedingungen nennen: wann gilt das Gesetz nicht?
 - Die Verständnisfrage prüft Verstehen, nicht Auswendiglernen (z. B. „Was ändert sich, wenn …?“). Ihre Antwort steht nie sichtbar in derselben Nachricht; unter „🔒 Lösungen“ nur der Abrufsatz.
 - Nur Begriffe, die zur Frage oder Aufgabe gehören; keine Nebenthemen (siehe Lehrhaltung).
