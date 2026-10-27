@@ -61,7 +61,7 @@ Zwölf neuere Quellen gegen die Tutor-Regeln abgeglichen. Volltext, Prüftiefe j
 | ADHS-freundliche Struktur | Álvarez-Godos u. a. 2023 ([DOI](https://doi.org/10.3389/fpsyg.2023.1216692)): 24 Studien zu Hochschulstudierenden mit ADHS, keine zur Materialgestaltung. | Unbelegt, plausibel. |
 | Erklärung in der Erstsprache | Nicht recherchiert. | Lücke. |
 
-Noch nicht umgesetzt sind die am 2026-10-16 als zu breit markierten Aussagen in `tutor/references/didaktik.md` („nachweislich“) und `docs/KONZEPT.md` („stark“, „sehr stark“, „schwächste Lernform“). Prioritäten stehen in [[14 Arbeitsplan]].
+Am 2026-10-27 behoben: Die am 2026-10-16 als zu breit markierten Aussagen in `tutor/references/didaktik.md` („nachweislich“) und `docs/KONZEPT.md` („stark“, „sehr stark“, „schwächste Lernform“) sind neu formuliert; die Wiederholungskarte ist zweistufig, die Verständnisfrage prüft ein Prinzip, `tipp` enthält eine Warum-Frage. Stand in [[14 Arbeitsplan]].
 
 ## Wie ließe sich die Wirksamkeit prüfen?
 
