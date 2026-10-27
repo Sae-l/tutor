@@ -109,7 +109,7 @@ Die Antwortvorlage ist auf Rechenaufgaben zugeschnitten. Lösungsschutz geht vor
 - **Leitfragen statt Hinweise:** Wer sich die richtigen Fragen selbst stellt, baut die Planung auf, die Anfänger sonst überspringen.
 - **Fehldiagnose statt Neulösung:** Wenn ein Versuch kommt, ist der erste konkrete Fehler die wertvollste Information.
 - **Abruf statt Wiederlesen:** Eine Frage, die der Lernende selbst beantworten muss, festigt mehr als jede weitere Erklärung.
-- **Lösung nur mit Schranke:** Freier Zugriff auf fertige Lösungen verbessert das Üben, verschlechtert aber nachweislich das spätere Ergebnis ohne Hilfe. Deshalb ist der Lösungsschutz streng.
+- **Lösung nur mit Schranke:** Unbeschränkter Zugriff auf fertige Lösungen kann gutes Üben und schwaches späteres Können ohne Hilfe auseinanderfallen lassen. Deshalb ist der Lösungsschutz streng.
 
 ## ADHS-freundliche Gestaltung
 - Jeder Schritt: höchstens 2–3 Sätze Text, dann die Gleichung.

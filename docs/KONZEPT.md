@@ -17,12 +17,12 @@ Einschränkung vorweg: Es wurde **keine eigene systematische Literaturrecherche*
 
 | Prinzip | Kernaussage | Quelle (bekannte Arbeit) | Umsetzung im Agenten | Evidenz |
 |---|---|---|---|---|
-| Worked-Example-Effekt | Anfänger lernen aus vollständig gelösten Beispielen mehr als aus eigenem Probieren ohne Anleitung | Sweller & Cooper 1985; Cognitive Load Theory (Sweller) | vorgerechnetes Beispiel einer anderen Aufgabe in `voll` | stark |
-| Expertise-Reversal / Fading | Mit wachsendem Können schaden vollständige Lösungen eher; Hilfe schrittweise ausblenden | Kalyuga u. a. 2003; Renkl & Atkinson 2003 | Eskalation erklär → tipp → voll → kurz; Lösung nur auf Abruf | stark |
-| Abruf-/Testeffekt | Aktives Abrufen festigt stärker als Wiederlesen | Roediger & Karpicke 2006; Übersicht Dunlosky u. a. 2013 | ⏸-Denkpunkte, Verständnisfrage, Lösungen nur auf Abruf | sehr stark |
-| Generierungseffekt | Selbst Erzeugtes bleibt besser haften | Slamecka & Graf 1978 | erst vorhersagen, dann weiterlesen (⏸) | stark |
-| Selbsterklärung | Wer Schritte selbst begründet, versteht tiefer | Chi u. a. 1989/1994 | „warum“ zu jedem Schritt; `check` diagnostiziert den eigenen Versuch | stark |
-| Verteiltes Lernen | Wiederholen über Tage schlägt Massenlernen | Cepeda u. a. 2006 | Wiederholungskarte „nach zwei Tagen“ | sehr stark |
+| Worked-Example-Effekt | Anfänger lernen aus vollständig gelösten Beispielen mehr als aus eigenem Probieren ohne Anleitung | Sweller & Cooper 1985; Cognitive Load Theory (Sweller) | vorgerechnetes Beispiel einer anderen Aufgabe in `voll` | siehe `docs/planung/2026-10-27-evidenz-update.md` |
+| Expertise-Reversal / Fading | Mit wachsendem Können schaden vollständige Lösungen eher; Hilfe schrittweise ausblenden | Kalyuga u. a. 2003; Renkl & Atkinson 2003 | Eskalation erklär → tipp → voll → kurz; Lösung nur auf Abruf | siehe `docs/planung/2026-10-27-evidenz-update.md` |
+| Abruf-/Testeffekt | Aktives Abrufen festigt stärker als Wiederlesen | Roediger & Karpicke 2006; Übersicht Dunlosky u. a. 2013 | ⏸-Denkpunkte, Verständnisfrage, Lösungen nur auf Abruf | siehe `docs/planung/2026-10-27-evidenz-update.md` |
+| Generierungseffekt | Selbst Erzeugtes bleibt besser haften | Slamecka & Graf 1978 | erst vorhersagen, dann weiterlesen (⏸) | siehe `docs/planung/2026-10-27-evidenz-update.md` |
+| Selbsterklärung | Wer Schritte selbst begründet, versteht tiefer | Chi u. a. 1989/1994 | „warum“ zu jedem Schritt; `check` diagnostiziert den eigenen Versuch | siehe `docs/planung/2026-10-27-evidenz-update.md` |
+| Verteiltes Lernen | Wiederholen über Tage schlägt Massenlernen | Cepeda u. a. 2006 | Wiederholungskarte in zwei Stufen | siehe `docs/planung/2026-10-27-evidenz-update.md` |
 | Problemlöse-Heuristik | Verstehen → planen → ausführen → prüfen | Pólya, *How to Solve It*, 1945 | Gegeben/Gesucht → Lösungsplan → Lösungsweg → Probe | etablierte Didaktik, wenig experimentell |
 | Sokratische Methode | Gezielte Fragen statt fertiger Antworten | Didaktik-Tradition; Fragetypen nach Paul & Elder | 4–6 Leitfragen in `tipp`, die sich der Lernende selbst stellt | Praxiswissen, gemischte Evidenz |
 | Fehlkonzepte konfrontieren | Falsche Vorstellungen müssen ausdrücklich widerlegt werden | Physikdidaktik (z. B. Hestenes, Force Concept Inventory) | Abschnitt „Falscher Weg“ | gut belegt in Physik |
@@ -110,4 +110,4 @@ tests/                       Strukturtests, Akzeptanzfälle, Protokolle
   - Lehrverhalten mit einem Modell (Akzeptanzfälle in `tests/akzeptanz.md` sind vorbereitet, nicht ausgeführt);
   - Formeldarstellung in Gemini und Copilot;
   - Wirksamkeit für das Lernen, auch nicht für ADHS.
-- **Grundsätzliche Grenze:** Der Lerneffekt entsteht nur, wenn Denkpunkte und Leitfragen wirklich selbst bearbeitet werden. Wer immer sofort `lösung` nutzt, landet beim reinen Lesen von Lösungen, laut Forschung der schwächsten Lernform.
+- **Grundsätzliche Grenze:** Der Lerneffekt entsteht nur, wenn Denkpunkte und Leitfragen wirklich selbst bearbeitet werden. Wer immer sofort `lösung` nutzt, landet beim reinen Lesen von Lösungen, das ersetzt keinen eigenen Versuch.
