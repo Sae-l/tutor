@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "2de5ba6ef369c2929fe6f814f4e695c09b9df3eb276535daebebb2f2da615954",
+      "sha256": "bf60d302626ffc66dae5509bc7da4439c91e796a216fdd5d60b9cbaa8e807f93",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "a0e2713feba448a78d6f3794bed86b3e4c97fb6fba6e5f9ae3ec61805be95ae0",
+      "sha256": "e28408836d13e5778532814c89d91ae6948812305bc2ee3a0ce695bf0e14fb19",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "352cb89ce74c9c4ffd7b6c3ca52fc4145f356505da19317d4732df27840a3d87",
+      "sha256": "f9fe24e1b8643a01c7769fb5f3cf3cf0d1d6e3a51d8f8fc74c2e997179be9ef9",
       "normalization": "utf8-lf"
     },
     {
@@ -165,12 +165,12 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "1b2f2837962ec2fca78e0162e928b85285874d797e474dd4c78f588b3e8de6e7",
+      "sha256": "dcd5df765e375eb8b668185e311fef7893bb785cfa763a036bac32a9ec7577f9",
       "normalization": "utf8-lf"
     },
     {
       "path": "docs/index.html",
-      "sha256": "5c1766f8db40fb6d29503702be64e260cf92aa4a613c4c692952e299b6a1f364",
+      "sha256": "0d4485a6e5d925033ccce03a272b85e61bdc989bae939ba6eec608315229d344",
       "normalization": "utf8-lf"
     },
     {

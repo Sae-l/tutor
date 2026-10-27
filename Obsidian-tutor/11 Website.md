@@ -1,7 +1,7 @@
 ---
 title: Die Website erklärt
 tags: [tutor, website]
-updated: 2026-10-19
+updated: 2026-10-27
 ---
 
 # Die Website
@@ -16,14 +16,14 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe und Version; Downloadlink auf `v0.2.1` festgelegt; Veröffentlichung separat prüfen. |
+| Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die stabile `v0.2.1`, daneben Link zur Vorabversion `v0.3.0-rc.3`; Veröffentlichung separat prüfen. |
 | Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
 | Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege; seit 2026-10-20 Gemini-Skill mit `tutor-skill.zip`, Gem als auslaufend gekennzeichnet. |
 | Unter der Haube | Build-Weg von `tutor/` über `build.py` zu den Paketen; Kennzahlen 11 Modi, 6 Erklärsprachen, 30 Modus- und 33 Grenzfälle. |
-| Häufige Fragen | Aktivierung, Sprache und Art des Produkts. |
-| Ehrlich gesagt | Erste stabile Version ohne Abnahme, Prüfgrenzen und ADHS als Gestaltungsziel. |
+| Häufige Fragen | Aktivierung, Sprache und Art des Produkts; Formelzeichen je Plattform ab rc.3. |
+| Ehrlich gesagt | Vorabversion v0.3.0-rc.3 (Erklärbogen, `tipp` mit „weiß nicht“ und Warum-Frage, Formelzeichen je Plattform, Fachkonventionen; U07…U13 mit rc.2 protokolliert, U01…U06, U14 und A/B-Vergleich offen), stabile v0.2.1 ohne Abnahme, Prüfgrenzen und ADHS als Gestaltungsziel. |
 | Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Wissensbasis), Über mich (LinkedIn, Instagram), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
 
 ## Gestaltung seit 2026-10-19

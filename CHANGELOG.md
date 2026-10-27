@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- Website, README, `docs/CHATGPT.md`, `CLAUDE.md` und Vault-Notizen 07, 11 und 13 nennen v0.3.0-rc.3 als Vorabversion zum Testen (Erklärbogen, `tipp` mit „weiß nicht“ und Warum-Frage, Formelzeichen im Fließtext je Plattform, Fachkonventionen) mit offenem Prüfstand (U01…U06, U14, A/B-Vergleich #67). Download, Empfehlung und strukturierte Daten bleiben bei der stabilen v0.2.1. Nur Text, Gestaltung der Website unverändert. Quellhashes der geänderten Dateien erneuert.
+
 ## [0.3.0-rc.3] – 2026-10-27
 
 Vorabversion mit plattformgerechten Formelzeichen im Fließtext und den Befunden aus der Abnahme U07…U13. U14 nicht nativ geprüft; stabil bleibt 0.2.1.
