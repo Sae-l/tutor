@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "7e5349bcb2c870977e55116748ccc7b519d7585ec8b4eb5434308369b9e151cb",
+      "sha256": "a0e2713feba448a78d6f3794bed86b3e4c97fb6fba6e5f9ae3ec61805be95ae0",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "a738c461e0b94a404f9f0647ed9d8c7ca354e65f27ea818265cc6c04ebb03c30",
+      "sha256": "352cb89ce74c9c4ffd7b6c3ca52fc4145f356505da19317d4732df27840a3d87",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "ed24aed455f9ec54686fc2b49e4e7cb13dbeddf6ae78bf1bdc279c505d6a472d",
+      "sha256": "3df92a86aa5a7c4875907cbdeb8315c7baeec307b63d52c8fe85cce4e2cd6127",
       "normalization": "utf8-lf"
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "bae2ecf00170057836a94aea8dd59222c97c4a2eda2bc35d83ed4deb36a9e68c",
+      "sha256": "1055e9ad906ee6506b197c7e86bf077950bb8c45bd3cc53213a8281345391344",
       "normalization": "raw"
     },
     {
