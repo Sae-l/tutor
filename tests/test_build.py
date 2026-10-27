@@ -85,6 +85,9 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn("Feynman-Stil", template)
         for mode in ("erklaer", "voll", "thema"):
             self.assertIn("Erklärbogen", self.read(f"tutor/modes/{mode}.md"), mode)
+        # Lösende Modi nutzen Abschnitt 4 ebenfalls, sollen aber nicht länger werden.
+        for mode in ("mittel", "lang"):
+            self.assertIn("Kein vollständiger Erklärbogen", self.read(f"tutor/modes/{mode}.md"), mode)
 
     def test_tipp_handles_dont_know_and_asks_why(self):
         text = self.read("tutor/modes/tipp.md")

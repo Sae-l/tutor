@@ -9,7 +9,7 @@
 - `kurse/` – optionale Kurspakete (z. B. `mpg1.md`), nicht Teil des Skills.
 - `build.py` → `dist/system-prompt.md`, `dist/kern.md` (intern ≤ 4000 Zeichen), `dist/chatgpt/` (lokaler Marketplace, ein Plugin/Skill) und `dist/tutor-chatgpt.zip` (Pluginarchiv). Modi aus der Befehlstabelle; Paketmetadaten in `packaging/chatgpt-plugin.json`, Installation in `docs/CHATGPT.md`.
 - `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
-- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS14, U01…U12), `protokolle/`.
+- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS14, U01…U13), `protokolle/`.
 - `Obsidian-tutor/` – öffentliche deutsche Wissensbasis mit 20 Notizen und Canvas. `python -B Obsidian-tutor/verify_vault.py` prüft Navigation, Canvas, Modusabdeckung und normalisierte Quellhashes. Bei Quelländerungen betroffene Artikel bewerten und Hashmanifest bewusst aktualisieren; persönliche `.obsidian/`-Dateien bleiben lokal.
 
 ## Arbeitsregeln
@@ -20,7 +20,7 @@
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 
 ## Stand unveröffentlicht (2026-10-27)
-- Umsetzungsplan `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md` implementiert: Erklärbogen (Einstieg, ein Bild, Grenze, Kernsatz, Brückensatz) in `erklär`, `voll`, `thema`; `tipp` mit „weiß nicht“-Behandlung und Warum-Leitfrage; Wiederholungskarte zweistufig; zu breite Wirksamkeitsaussagen korrigiert. Kern unverändert. Akzeptanzfälle U07…U12 **nicht nativ geprüft**.
+- Umsetzungsplan `docs/planung/2026-10-27-umsetzungsplan-lernprinzipien.md` implementiert: Erklärbogen (Einstieg, ein Bild, Grenze, Kernsatz, Brückensatz) in `erklär`, `voll`, `thema`; `tipp` mit „weiß nicht“-Behandlung und Warum-Leitfrage; Wiederholungskarte zweistufig; zu breite Wirksamkeitsaussagen korrigiert. Kern unverändert. `mittel`/`lang` behalten eine kurze Idee ohne Erklärbogen. Akzeptanzfälle U07…U13 **nicht nativ geprüft**.
 
 ## Unveröffentlicht auf main (2026-10-26, #71)
 - Folgebefehl gilt der Originalaufgabe, keine dekorativen Bilder, Hilfekarte grenzt `voll` ab (#67); Niveauregel ohne Vorabfrage (#64, empfohlene Variante); Fachkonventionen E-Technik, Technische Mechanik, Mathematik. U01…U06 nicht nativ geprüft; Release erst nach A/B-Vergleich durch den Lernenden (#67). Website und Release-Assets beschreiben weiterhin v0.2.1.
