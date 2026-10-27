@@ -30,12 +30,12 @@
     },
     {
       "path": "tutor/modes/lang.md",
-      "sha256": "59d60450d60bcdf61456ddd444f386c8f61772c0d7e602499aa06c0f59450ab5",
+      "sha256": "1b8ae8ad8ee1499c3cffcde295dfc346fbd54e5231797883c543bf0466e22d42",
       "normalization": "utf8-lf"
     },
     {
       "path": "tutor/modes/mittel.md",
-      "sha256": "0cc80c6e4e7d7fde0c94b516adeffe439bafc92d8073f9d042d27fc18ca74e48",
+      "sha256": "4f32702092d26656eda05bd11ccd5ad5c12dc82f9f5ca89c4d5c6f40f3662821",
       "normalization": "utf8-lf"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "d7d0f6d97ce3035b4a6f025ae77282d5d86b7e9c1e7a88d0ad9fb0764cb903f1",
+      "sha256": "8e36eefab72345b45b818482a64a1aecd0db4876fb14fbfb7bf3b3c74deb77f2",
       "normalization": "utf8-lf"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "7bf71523ff2b131b38864a6cd60412e7f4eba2d3f5c7907122437ba9c1b9ed1c",
+      "sha256": "8e6e56a20eddb31a2565eaa6e211333d8df89e177876158c72128bcee748589d",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "1cd2bae1441cf5ff7dfa9d6e03b1a8ae3e34c39a330e487b1159d1e3a3d9c0c5",
+      "sha256": "b05316ccb8cdc359a7e7038c23163dc4f1e52d09e12a29fde927bc42848ddeea",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "ae2e88c580143fc9038887287bc40c87245e4f3489b84811488afccdabd1a252",
+      "sha256": "03f0a041b01a377044294ba47841e2da4671bc889ec6757ae10311a7d13f764c",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "028097b2b0bcf1fd58504650a5fc28f2c275e20e1a26a8cd455defcc4e79b2f1",
+      "sha256": "baa849ed1896d86056720034bc1c22deb415a6184d604a7228c6095e9cb1ead4",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "0c6f15f7c8ae409ef0af3ccda3c4ddbd94d4a972e1a6275935a3a3b39fd2bca7",
+      "sha256": "023162df76ddf79cb4064abfa2d6a6ed41eae1d093812646a8e617c622e18118",
       "normalization": "raw"
     },
     {
