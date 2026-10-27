@@ -17,14 +17,14 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
 | Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die stabile `v0.2.1`, daneben Link zur Vorabversion `v0.3.0-rc.3`; Kennzahlen 23 Arbeiten, 11 Modi, 6 Erklärsprachen, 0 € / MIT; Veröffentlichung separat prüfen. |
-| Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste und ein fest hinterlegtes Beispiel „Probier es aus“ (dieselbe Aufgabe mit `erklär`, `tipp`, `voll`, `kurz`; Lösung nur unter `kurz`). |
+| Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste und ein fest hinterlegtes Beispiel „Probier es aus“: die Autoaufgabe aus U12/U13 (aus der Ruhe in 8,0 s auf 24 m/s) mit `erklär`, `tipp`, `voll` (Bremsweg-Beispiel 160 m) und `kurz` (96 m), Formeln als MathML, Lösung nur unter `kurz`. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
-| Forschung | 23 Arbeiten und 7 Metaanalysen aus [[13 Quellen und Nachweise]] und `docs/planung/`; Bastani et al. 2025, drei Effektgrößen (Wisniewski 2020, Bisra 2018, Barbieri 2023), sechs Prinzipien mit Tutor-Regel; ausdrücklich kein Wirksamkeitsnachweis für Tutor. |
+| Forschung | 23 Arbeiten und 7 Metaanalysen aus [[13 Quellen und Nachweise]] und `docs/planung/`; Kestin et al. 2025 als Leitbefund (mehr als doppelter Lernzuwachs, 49 statt 60 Minuten; Volltext auf PMC am 2026-10-28 gelesen), Bastani et al. 2025 als Begründung des Lösungsschutzes, drei Effektgrößen (Wisniewski 2020, Bisra 2018, Barbieri 2023), sechs Prinzipien mit Tutor-Regel; die Seite spricht von belegten Prinzipien, nicht von einer nachgewiesenen Wirkung des Tutors. |
 | Vergleich | Chat ohne Lernmodus, Lernmodi der Anbieter und Tutor in acht Zeilen; Stand Oktober 2026 nach Anbieterangaben, nicht gegen aktuelle Anbieterseiten geprüft. |
 | Zweiter Aufruf | Download und Sprung zur Einrichtung nach dem Vergleich. |
 | Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege, letztere eingeklappt; seit 2026-10-20 Gemini-Skill mit `tutor-skill.zip`, Gem als auslaufend gekennzeichnet. |
-| Häufige Fragen | Reifegrad (früher „Ehrlich gesagt“: Vorabversion, offene Abnahme, ADHS als Gestaltungsziel), Aktivierung, Sprache und Art des Produkts; Formelzeichen je Plattform ab rc.3. |
+| Häufige Fragen | Zehn Fragen, zuerst aus Besuchersicht: Aufgaben und Fächer, Kosten, Handy, Kurspaket, ADHS-Gestaltung, Versionswahl; danach Fehlerhilfe, Formeldarstellung je Plattform und Aktualisierung. |
 | Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Bauweise statt früherem Abschnitt „Unter der Haube“, Wissensbasis), Über mich (LinkedIn, Instagram), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
 
 ## Gestaltung seit 2026-10-19
