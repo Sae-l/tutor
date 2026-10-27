@@ -1,7 +1,7 @@
 ---
 title: Claude, ChatGPT und Gemini
 tags: [tutor, kompatibilitaet]
-updated: 2026-10-20
+updated: 2026-10-27
 status: abnahme-offen
 ---
 
@@ -16,7 +16,7 @@ status: abnahme-offen
 
 | Weg | Vorhanden | Lokaler Nachweis | Bewertung |
 |---|---|---|---|
-| Claude Skill | Skillquelle und ZIP-Verpackungsweg | Claude-Code-CLI-Protokoll vom 2026-10-15: 16 Fälle, 13 bestanden und drei fehlgeschlagen, älterer Commit | Erfüllt nicht das Gate für einen auf claude.ai hochgeladenen Skill. |
+| Claude Skill | Skillquelle und ZIP-Verpackungsweg | claude.ai-Protokoll vom 2026-10-27: U07…U13 mit `v0.3.0-rc.2` bestanden (U08 mit Anmerkung). Älter: Claude-Code-CLI vom 2026-10-15, 16 Fälle, drei fehlgeschlagen | Teilabnahme; U01…U06, U14 und der A/B-Vergleich (#67) stehen aus, Gate nicht erfüllt. |
 | ChatGPT Plugin | `dist/tutor-chatgpt.zip` und lokaler Marketplace | Vorbereitungsprotokoll: automatischer Import nicht abgeschlossen. Separater freier Test: Skill und Plugin verwendet, jedoch Modell, Hash und Installationsversion nicht erfasst | Teilversuch mit Abweichungen; keine Abnahme. |
 | ChatGPT Projekt | `dist/kern.md` und `dist/system-prompt.md` | Anleitung und geplante Fälle; kein eigener vollständiger Abnahmelauf gefunden | Experimentell. |
 | Gemini Skill (Hauptweg) | Vorhandenes `tutor-skill.zip`; kein eigenes Gemini-Paket | Kein Tutor-Import oder Modellergebnis gefunden | Dokumentiert, experimentell, nicht geprüft. |
@@ -24,7 +24,7 @@ status: abnahme-offen
 
 Das freie ChatGPT-Protokoll war bei der Vault-Erstellung lokal unversioniert; eine Veröffentlichung auf GitHub wird nicht vorausgesetzt. Modellnamen im Claude-Protokoll sind Angaben des damaligen Laufs; ihre heutige Verfügbarkeit wurde nicht geprüft.
 
-Die erneute GitHub-Abfrage bestätigt die vorhandenen Pakete der [Vorabversion v0.2.0-rc.2](https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2). Sie bestätigt weder die Installation im jeweiligen Konto noch das Verhalten eines Modells. Die Release-Assets wurden für diese Aktualisierung nicht heruntergeladen oder neu ausgeführt.
+Die GitHub-Abfrage vom 2026-10-27 bestätigt die fünf Pakete der [Vorabversion v0.3.0-rc.3](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3). Sie bestätigt weder die Installation im jeweiligen Konto noch das Verhalten eines Modells. Die Release-Assets wurden für diese Aktualisierung nicht heruntergeladen oder neu ausgeführt.
 
 Stand 2026-10-27: Stabil ist [v0.2.1](https://github.com/Sae-l/tutor/releases/tag/v0.2.1), zum Testen gibt es die [Vorabversion v0.3.0-rc.3](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3). Ab rc.3 unterscheiden sich die Pakete bei Formelzeichen im Fließtext: `tutor-skill.zip` (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `tutor-chatgpt.zip` und die Promptdateien schreiben sie kursiv mit Unicode-Index (*U*₀), weil einfaches `$` in ChatGPT nicht rendert. Grundlage ist ein Darstellungstest vom 2026-10-27; der Akzeptanzfall U14 ist nicht nativ geprüft.
 

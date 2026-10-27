@@ -1,7 +1,7 @@
 ---
 title: Lokales Prüfergebnis und Grenzen
 tags: [tutor, pruefung]
-updated: 2026-10-17
+updated: 2026-10-27
 ---
 
 # Prüfergebnis
@@ -10,14 +10,14 @@ updated: 2026-10-17
 
 ## Vorhandenes Produkt
 
-Bei dieser Aktualisierung am 2026-10-16 liefen die Repository-Tests mit dem lokalen gebündelten Python erneut: **13 Tests bestanden, keine fehlgeschlagen**. Sie prüfen Buildgleichheit und Wiederholbarkeit, Modi, Sprachen, Kern, Paketinhalt, ungültige Eingaben und Wiederherstellung vorhandener Ausgaben. Sie führen kein Modell oder Browserprogramm aus.
+Bei dieser Aktualisierung am 2026-10-27 liefen die Repository-Tests auf Commit `b2fdc73` (`v0.3.0-rc.3`) erneut: **22 Tests bestanden, keine fehlgeschlagen** (am 2026-10-16 waren es 13). Sie prüfen Buildgleichheit und Wiederholbarkeit, Modi, Sprachen, Kern, Paketinhalt, ungültige Eingaben und Wiederherstellung vorhandener Ausgaben. Sie führen kein Modell oder Browserprogramm aus.
 
 ```powershell
 # Aus der Repositorywurzel ausführen
 python -B -m unittest discover -s tests -v
 ```
 
-Das ist ein lokales Ergebnis. Zusätzlich bestätigt die GitHub-API den erfolgreichen [CI-Lauf für denselben Commit](https://github.com/Sae-l/tutor/actions/runs/38799637520); beide Nachweise bleiben von einer Plattformabnahme getrennt. Die lokalen Tests bauen in temporären Projektordnern. Für die Dokumentation wurde kein Build ausgeführt, der die tatsächlichen Produktausgaben ersetzt.
+Das ist ein lokales Ergebnis. Zusätzlich bestätigt die GitHub-API den erfolgreichen [CI-Lauf für denselben Commit](https://github.com/Sae-l/tutor/actions/runs/40592846375); beide Nachweise bleiben von einer Plattformabnahme getrennt. Die lokalen Tests bauen in temporären Projektordnern. Für die Dokumentation wurde kein Build ausgeführt, der die tatsächlichen Produktausgaben ersetzt.
 
 ## Vault und deutsche Fassung
 
@@ -37,12 +37,12 @@ Die vorhandenen 17 Fachnotizen bleiben erhalten und werden um Fehlerdiagnose, Ba
 | Prüfung | Ergebnis | Grenze |
 |---|---|---|
 | GitHub-Metadaten und `main` | Öffentlich, nicht archiviert, lokaler und Remote-Commit gleich; `protected: true`. | Keine Detailprüfung von Schutzregeln oder Kontorechten. |
-| CI und Vorabversion | CI erfolgreich; `v0.2.0-rc.2` mit fünf Assets vorhanden. | Release-Downloads nicht erneut gehasht; kein Gate-Erfolg abgeleitet. |
-| Website | HTTP 200; normalisierter HTML-Text stimmt mit `docs/index.html` überein. | Keine Prüfung der Darstellung oder des Netzwerkverkehrs im Browser. |
+| CI und Vorabversion | CI erfolgreich (2026-10-27); stabil `v0.2.1`, Vorabversion `v0.3.0-rc.3` mit fünf Assets vorhanden. | Release-Downloads nicht erneut gehasht; kein Gate-Erfolg abgeleitet. |
+| Website | HTTP 200 (2026-10-27). | Kein erneuter HTML-Abgleich mit `docs/index.html`; keine Prüfung der Darstellung im Browser. |
 | Forschung | Zehn DOI-Datensätze abgeglichen; vier zuvor unvollständige Literaturangaben ergänzt. | Mehrere Volltexte nicht zugänglich; keine systematische Literaturübersicht. |
 | ECC-Zuordnung | Skill und vier aktuelle Befehlsdateien erneut gelesen. | Nur Befehlsvorschläge; keine Ausführung dieser Befehle. |
 
-Datierter früherer Live-Nachweis: [[Live-Nachweise.json|Live-Nachweise.json]]. Die öffentliche Fassung enthält 43 Quellhashes. Privater Installationszustand und nicht veröffentlichter Testbericht sind ausgeschlossen; Hashes beziehen sich auf die Repositoryquellen und nennen ihre Normalisierung. [[Aktualisierung-2026-10-16.json|Ergänzungsnachweis]] dokumentiert die neue lesende GitHub- und Gesprächsprüfung. Die Produkttests wurden erneut ausgeführt: 13 bestanden.
+Datierter früherer Live-Nachweis: [[Live-Nachweise.json|Live-Nachweise.json]]. Die öffentliche Fassung enthält 43 Quellhashes. Privater Installationszustand und nicht veröffentlichter Testbericht sind ausgeschlossen; Hashes beziehen sich auf die Repositoryquellen und nennen ihre Normalisierung. [[Aktualisierung-2026-10-16.json|Ergänzungsnachweis]] dokumentiert die neue lesende GitHub- und Gesprächsprüfung. Die Produkttests wurden am 2026-10-27 erneut ausgeführt: 22 bestanden.
 
 ## Offene Prüfungen
 

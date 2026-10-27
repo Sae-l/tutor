@@ -1,7 +1,7 @@
 ---
 title: Quellen- und Nachweisverzeichnis
 tags: [tutor, herkunft]
-updated: 2026-10-16
+updated: 2026-10-27
 ---
 
 # Quellen und Nachweise
@@ -27,6 +27,7 @@ Produktbasis der datierten Recherche: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`
 | `docs/CHATGPT.md` | Plugin, Projekt und Grenzen des früheren Importversuchs. |
 | `tests/akzeptanz.md`, `tests/protokolle/VORLAGE.md` | Fallgruppen, Bewertung und Protokollierung. |
 | `tests/protokolle/2026-10-15-claude-code-cli.md` | 16 Fälle auf Commit `eddf11c…`; M06-A, M08-A und M09-A fehlgeschlagen. Kein Ersatz für die Skill-Oberfläche. |
+| `tests/protokolle/2026-10-27-claude-ai-u07-u13.md` | Native Abnahme U07…U13 auf claude.ai mit `v0.3.0-rc.2`; alle bestanden, U08 mit Anmerkung. Kein vollständiger Release-Gate-Lauf. |
 | `tests/protokolle/2026-10-15-chatgpt-plugin-vorbereitung.md` | Vorbereitung und Build, Import nicht abgeschlossen; kein Modellergebnis. |
 | Nicht veröffentlichter freier ChatGPT-Testbericht | Nur historische Zusammenfassung: Abweichungen bei Eskalation, Kurz und Hilfe; fehlende Versionsdaten. Kein öffentlicher Abnahmebeleg. |
 | `SECURITY.md`, `.gitignore`, `.github/workflows/ci.yml`, `.github/dependabot.yml` | Lokale Richtlinien und Einstellungen; kein Nachweis des Serverzustands. |
@@ -51,22 +52,24 @@ Die [[Quellen.sha256.json|Quelldatei-Hashes]] identifizieren die verwendeten Que
 
 ## Aktuelle GitHub- und Website-Nachweise
 
-Bei der ursprünglichen Recherche scheiterten CLI- und Webzugriffe. Diese historische Zugriffslücke ist für die folgenden Gegenstände durch neue lesende Abfragen vom 2026-10-16 geschlossen. Die Abfragen änderten keine Kontoeinstellungen.
+Bei der ursprünglichen Recherche scheiterten CLI- und Webzugriffe. Diese historische Zugriffslücke ist für die folgenden Gegenstände durch lesende Abfragen vom 2026-10-16 geschlossen; Commit, CI und Release wurden am 2026-10-27 erneut abgefragt. Die Abfragen änderten keine Kontoeinstellungen.
 
 | Aussage | Primärquelle | Genau geprüfter Umfang |
 |---|---|---|
 | Repository öffentlich, nicht archiviert, Default-Branch `main` | GitHub-Connector `get_repo`, [Repository-API](https://api.github.com/repos/Sae-l/tutor) | Metadaten; keine Aussage über alle Zugriffsrechte. |
-| Remote- und lokaler Commit gleich | [Commit-API](https://api.github.com/repos/Sae-l/tutor/commits/main) | `921409f2f7e0ccbe54e962ec8218024f74bc3fab`; lokale uncommittete Dateien bleiben davon getrennt. |
+| Remote- und lokaler Commit gleich | [Commit-API](https://api.github.com/repos/Sae-l/tutor/commits/main) | 2026-10-27: `b2fdc739823c838de8a1f3a6d0b3c8a8ddb3db62` (2026-10-16: `921409f…`); lokale uncommittete Dateien bleiben davon getrennt. |
 | Schutzkennzeichen gesetzt | [Branch-API](https://api.github.com/repos/Sae-l/tutor/branches/main) | `protected: true`; zwei CI-Pflichtprüfungen, `enforcement_level: non_admins`; vollständige Regeln und Ausnahmen nicht geprüft. |
-| CI für diesen Commit erfolgreich | [Workflowlauf](https://github.com/Sae-l/tutor/actions/runs/38799637520) | `push`, `completed`, `success`; keine Modellprüfung. |
-| Vorabversion mit fünf Assets vorhanden | [Release v0.2.0-rc.2](https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2) | `kern.md`, `system-prompt.md`, zwei ZIPs und `SHA256SUMS.txt`; Downloadbytes nicht neu geprüft. |
-| Website erreichbar und HTML entspricht der lokalen Quelle | [Öffentliche Website](https://sae-l.github.io/tutor/) | HTTP 200 und Textgleichheit nach CRLF/LF-Normalisierung; keine Browserprüfung. |
+| CI für diesen Commit erfolgreich | [Workflowlauf](https://github.com/Sae-l/tutor/actions/runs/40592846375) | `push`, `success`; keine Modellprüfung. |
+| Vorabversion mit fünf Assets vorhanden | [Release v0.3.0-rc.3](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3); stabil [v0.2.1](https://github.com/Sae-l/tutor/releases/tag/v0.2.1) | `kern.md`, `system-prompt.md`, zwei ZIPs und `SHA256SUMS.txt`; Downloadbytes nicht neu geprüft. Früherer Beleg: [v0.2.0-rc.2](https://github.com/Sae-l/tutor/releases/tag/v0.2.0-rc.2). |
+| Website erreichbar | [Öffentliche Website](https://sae-l.github.io/tutor/) | HTTP 200 am 2026-10-27; Textgleichheit mit der lokalen Quelle zuletzt am 2026-10-16 geprüft; keine Browserprüfung. |
 
 Die bereinigten Metadaten, API-Adressen, Abrufzeit und HTML-Hashes stehen in [[Live-Nachweise.json|Live-Nachweise.json]]. Es werden keine Zugangsdaten, E-Mail-Adressen oder geteilten Gesprächskennungen gespeichert. Die anonyme Pages-Konfigurationsabfrage lieferte 404; das widerlegt die erreichbare Website nicht. Secret Scanning und private Schwachstellenmeldung wurden weiterhin nicht live geprüft.
 
 ## Ergänzung dieses Vaults
 
 Die neue lesende GitHub-Abfrage bestätigte Repository, `main`, vollständigen Baum ohne Trunkierung, erfolgreiche CI, drei Vorabversionen und den offenen Planungspunkt #9. Für `rc.2` wurden fünf Asset-Metadaten mit serverseitigen Digests gelesen; Downloadbytes wurden nicht geprüft. Bereinigte Projektentscheidungen: [[19 Entscheidungen und Gesprächskontext]]. Bereinigte Werte und genaue Grenzen: [[Aktualisierung-2026-10-16.json|Ergänzungsnachweis]]. Der ältere Live-Nachweis bleibt als datierter Recherchebeleg erhalten.
+
+Abfrage vom 2026-10-27: Neben #9 sind elf weitere Issues offen, darunter #67 (A/B-Vergleich vor dem nächsten stabilen Release), #64, #65, #44, #45 und #32. Die Schutzentscheidung #34 ist geschlossen.
 
 ## Bekannte Unterschiede
 
