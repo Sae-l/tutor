@@ -107,6 +107,7 @@ section + section { border-top: 1px solid var(--hairline); }
 /* Header */
 .skip { position: absolute; left: 1rem; top: -4rem; z-index: 20; padding: .75rem 1rem; background: var(--accent); color: var(--paper); border-radius: .5rem; }
 .skip:focus { top: 1rem; color: var(--paper); }
+.skip:hover { color: var(--paper); }
 .top { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
 .brand { font-family: var(--sans); font-weight: 700; font-size: 1.125rem; color: var(--ink); text-decoration: none; display: inline-flex; gap: .5rem; align-items: center; min-height: 44px; }
 .top nav { display: flex; gap: 1.5rem; }
@@ -412,7 +413,12 @@ p, li { text-wrap: pretty; }
 
 /* Mobile */
 @media (max-width: 767px) {
-  .top nav { display: none; }
+  html { scroll-padding-top: 7.5rem; }
+  .top { flex-wrap: wrap; padding: .5rem 0 0; }
+  /* swipeable row instead of hiding the section links */
+  .top nav { width: 100%; gap: 1.25rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .top nav::-webkit-scrollbar { display: none; }
+  .top nav a { flex-shrink: 0; font-size: .9375rem; }
   .hero-grid, .sec-head, .modes, .lang-grid, .setup, .faq-grid, .foot { grid-template-columns: 1fr; }
   .sketch-inline { display: none; }
   .sketch-mobile { display: block; height: 3rem; width: auto; margin: -.5rem 0 1.25rem; }
@@ -427,9 +433,10 @@ p, li { text-wrap: pretty; }
   .demo-out { padding-inline: 1rem; }
   .demo-out math[display="block"] { font-size: .9em; }
   .compare thead { display: none; }
-  .compare tbody tr { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--hairline); }
+  .compare table, .compare tbody { display: block; width: 100%; }
+  .compare tbody tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--hairline); }
   .compare tbody th { grid-column: 1 / -1; width: auto; border-top: 0; padding-bottom: .25rem; }
-  .compare td { width: auto; border-top: 0; padding: .5rem .75rem 1rem; font-size: .875rem; }
+  .compare td { width: auto; border-top: 0; padding: .5rem .75rem 1rem; font-size: .875rem; hyphens: auto; overflow-wrap: anywhere; }
   .compare td::before { content: attr(data-label); display: block; font: 500 .6875rem var(--mono); color: var(--pencil); margin-bottom: .25rem; }
   .msg-user { margin-left: 1rem; }
   .btn { width: 100%; justify-content: center; }
