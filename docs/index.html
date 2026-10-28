@@ -50,8 +50,6 @@
 @font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url(fonts/jetbrains-mono-500.woff2) format("woff2"); }
 @font-face { font-family: "Noto Naskh Arabic"; font-weight: 400; font-display: swap; src: url(fonts/noto-naskh-arabic.woff2) format("woff2");
   unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
-@font-face { font-family: "Noto Nastaliq Urdu"; font-weight: 400; font-display: swap; src: url(fonts/noto-nastaliq-urdu.woff2) format("woff2");
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
 :root {
   --paper: #FAFAF9;
   --sheet: #FFFFFF;
@@ -194,7 +192,7 @@ section + section { border-top: 1px solid var(--hairline); }
 .sample .body { margin-bottom: 1.25rem; min-height: 6.6em; }
 .sample [dir="rtl"] { font-size: 1.125rem; line-height: 1.9; }
 .sample [lang="ar"] { font-family: "Noto Naskh Arabic", var(--sans); }
-.sample [lang="ur"] { font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", var(--sans); line-height: 2.3; }
+.sample [lang="fa"] { font-family: "Noto Naskh Arabic", var(--sans); }
 .terms { font-family: var(--sans); width: 100%; border-collapse: collapse; font-size: .9375rem; table-layout: fixed; }
 .terms th:first-child, .terms td:first-child { padding-inline-end: 1.5rem; }
 .terms th { text-align: start; font: 500 .75rem var(--mono); color: var(--pencil); padding: 0 0 .4rem; }
@@ -661,7 +659,7 @@ p, li { text-wrap: pretty; }
           <button class="chip" type="button" data-lang="tr" aria-pressed="false"><span lang="tr">Türkçe</span> <small>[tr]</small></button>
           <button class="chip" type="button" data-lang="fr" aria-pressed="false"><span lang="fr">Français</span> <small>[fr]</small></button>
           <button class="chip" type="button" data-lang="en" aria-pressed="false"><span lang="en">English</span> <small>[en]</small></button>
-          <button class="chip" type="button" data-lang="ur" aria-pressed="false"><span lang="ur">اردو</span> <small>[ur]</small></button>
+          <button class="chip" type="button" data-lang="fa" aria-pressed="false"><span lang="fa">فارسی</span> <small>[fa]</small></button>
         </div>
         <p class="note">Umschalten mit <code>[ar]</code> oder <code>!sprache ar</code>. Überschriften, Aufgabentext und Klausur-Lösung bleiben Deutsch, damit du das Prüfungsvokabular mitlernst.</p>
       </div>
@@ -952,8 +950,8 @@ const SAMPLES = {
         terms: [['conservation de l’énergie', 'Energieerhaltung'], ['énergie cinétique', 'kinetische Energie'], ['énergie potentielle', 'potentielle Energie']] },
   en: { name: 'English', rtl: false, text: 'The ball slows down as it rises until it briefly stops at the highest point. Along the way its kinetic energy turns completely into potential energy. This is an energy-conservation problem without friction.',
         terms: [['conservation of energy', 'Energieerhaltung'], ['kinetic energy', 'kinetische Energie'], ['potential energy', 'potentielle Energie']] },
-  ur: { name: 'اردو', rtl: true, text: 'گیند اوپر جاتے ہوئے آہستہ ہوتی جاتی ہے اور سب سے اونچے نقطے پر ایک لمحے کے لیے رک جاتی ہے۔ اس دوران اس کی حرکی توانائی پوری طرح مخفی توانائی میں بدل جاتی ہے۔ یہ رگڑ کے بغیر توانائی کی بقا کا سوال ہے۔',
-        terms: [['توانائی کی بقا', 'Energieerhaltung'], ['حرکی توانائی', 'kinetische Energie'], ['مخفی توانائی', 'potentielle Energie']] }
+  fa: { name: 'فارسی', rtl: true, text: 'توپ هنگام بالا رفتن کُند می‌شود تا در بالاترین نقطه برای لحظه‌ای بایستد. در این مدت، انرژی جنبشی آن به‌طور کامل به انرژی پتانسیل تبدیل می‌شود. این یک مسئلهٔ پایستگی انرژی بدون اصطکاک است.',
+        terms: [['پایستگی انرژی', 'Energieerhaltung'], ['انرژی جنبشی', 'kinetische Energie'], ['انرژی پتانسیل', 'potentielle Energie']] }
 };
 const textEl = document.getElementById('sample-text');
 const termsEl = document.getElementById('terms');

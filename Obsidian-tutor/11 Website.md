@@ -19,7 +19,7 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 | Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die aktuelle Version `v0.3.0-rc.3` (seit 2026-10-28, vorher `v0.2.1`); Kennzahlen 23 Arbeiten, 11 Modi, 6 Erklärsprachen, 0 € / MIT; Veröffentlichung separat prüfen. |
 | Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste und ein fest hinterlegtes Beispiel „Probier es aus“: die Autoaufgabe aus U12/U13 (aus der Ruhe in 8,0 s auf 24 m/s) mit `erklär`, `tipp`, `voll` (Bremsweg-Beispiel 160 m) und `kurz` (96 m), Formeln als MathML, Lösung nur unter `kurz`. |
 | 11 Modi | Befehle vergleichen und auswählen. |
-| Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/ur mit deutschen Fachbegriffen. |
+| Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/fa mit deutschen Fachbegriffen. |
 | Forschung | 23 Arbeiten und 7 Metaanalysen aus [[13 Quellen und Nachweise]] und `docs/planung/`; Kestin et al. 2025 als Leitbefund (mehr als doppelter Lernzuwachs, 49 statt 60 Minuten; Volltext auf PMC am 2026-10-28 gelesen), Bastani et al. 2025 als Begründung des Lösungsschutzes, drei Effektgrößen (Wisniewski 2020, Bisra 2018, Barbieri 2023), sechs Prinzipien mit Tutor-Regel; die Seite spricht von belegten Prinzipien, nicht von einer nachgewiesenen Wirkung des Tutors. |
 | Vergleich | Chat ohne Lernmodus, Lernmodi der Anbieter und Tutor in acht Zeilen; Stand Oktober 2026 nach Anbieterangaben, nicht gegen aktuelle Anbieterseiten geprüft. |
 | Zweiter Aufruf | Download und Sprung zur Einrichtung nach dem Vergleich. |
@@ -46,7 +46,7 @@ flowchart TD
 ## Technische Funktionsweise
 
 - HTML, CSS und JavaScript in einer Seite; lokale WOFF2-Schriften und OFL-Lizenzen unter `docs/fonts/`.
-- JavaScript wechselt vordefinierte Sprachbeispiele, setzt `lang` und für Arabisch/Urdu `dir` und erzeugt Fachbegriffstabellen mit DOM-Funktionen und `textContent`.
+- JavaScript wechselt vordefinierte Sprachbeispiele, setzt `lang` und für Arabisch/Persisch `dir` und erzeugt Fachbegriffstabellen mit DOM-Funktionen und `textContent`.
 - Unter 768 px bleibt das Abschnittsmenü als wischbare Zeile sichtbar; die Vergleichstabelle bricht dort in drei schrumpfbare Spalten um. Lokal bei 320, 375, 820 und 1280 px ohne seitlichen Überlauf geprüft (2026-10-28), nicht auf echten Geräten.
 - Kopierknöpfe verwenden `navigator.clipboard` und zeigen einen Fehlerzustand an. Elemente werden mit `IntersectionObserver` eingeblendet; dafür gibt es einen Ersatzpfad bei fehlender Unterstützung.
 - Im geprüften Quelltext wurden keine `fetch`-Aufrufe, externen Trackingskripte oder Uploadformulare gefunden. Das ist eine Quelltextbeobachtung, kein Mitschnitt des tatsächlichen Netzwerkverkehrs. GitHub-Hosting und externe Links haben einen eigenen Datenschutzkontext.

@@ -31,7 +31,7 @@ Ein Akzent, keine farbigen Verlaufsflächen. Hintergrund mit feinem Raster (`--g
 | `--sans` | Atkinson Hyperlegible Next | Menü, Knöpfe, Chips, Tabellen, Kennzahlen | klar unterscheidbare Zeichen bei kleinen Größen |
 | `--mono` | JetBrains Mono | Befehle (`erklär`, `tipp`), Dateinamen, Kicker | Befehle sind Eingaben und sollen so aussehen |
 
-Alle Schriften lokal als WOFF2 mit OFL-Lizenz in `docs/fonts/`; keine externen Schriften oder Skripte. Arabisch und Urdu: Noto Naskh Arabic, Noto Nastaliq Urdu. Fließtext höchstens 65 Zeichen breit, Zeilenhöhe 1,65.
+Alle Schriften lokal als WOFF2 mit OFL-Lizenz in `docs/fonts/`; keine externen Schriften oder Skripte. Arabisch und Persisch: Noto Naskh Arabic. Fließtext höchstens 65 Zeichen breit, Zeilenhöhe 1,65.
 
 ## Formeln
 

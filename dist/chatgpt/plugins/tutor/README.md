@@ -12,7 +12,7 @@ Lern-Tutor für MINT-Aufgaben im Studium an deutschsprachigen Hochschulen: Physi
 
 Schreib eine Aufgabe und davor einen der elf Befehle, zum Beispiel `erklär`, `tipp`, `check`, `voll` oder `klausur`. `hilfe` zeigt alle Befehle mit kurzer Erklärung. Ohne Befehl erklärt der Tutor zuerst das Thema.
 
-Erklärsprache ist Deutsch. Auf Wunsch erklärt er auf Arabisch, Türkisch, Französisch, Englisch oder Urdu; Überschriften, Aufgabentext und Fachbegriffe bleiben Deutsch.
+Erklärsprache ist Deutsch. Auf Wunsch erklärt er auf Arabisch, Türkisch, Französisch, Englisch oder Persisch; Überschriften, Aufgabentext und Fachbegriffe bleiben Deutsch.
 
 ## Was das Plugin tut
 

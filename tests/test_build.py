@@ -11,7 +11,7 @@ import unittest
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
-LANGS = ("[de]", "[ar]", "[tr]", "[fr]", "[en]", "[ur]")
+LANGS = ("[de]", "[ar]", "[tr]", "[fr]", "[en]", "[fa]")
 
 
 class BuildTests(unittest.TestCase):

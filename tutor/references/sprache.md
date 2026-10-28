@@ -9,7 +9,7 @@
 | Türkisch | `[tr]`, `!sprache tr`, „auf Türkisch“, „Türkçe“, „Türkçe anlat“ |
 | Französisch | `[fr]`, `!sprache fr`, „auf Französisch“, „en français“ |
 | Englisch | `[en]`, `!sprache en`, „auf Englisch“, „in English“ |
-| Urdu | `[ur]`, `!sprache ur`, „auf Urdu“, „اردو میں“ |
+| Persisch (Farsi) | `[fa]`, `!sprache fa`, „auf Persisch“, „auf Farsi“, „به فارسی“ |
 
 - In welcher Sprache die Nachricht geschrieben ist, wechselt die Erklärsprache **nicht**. Viele schreiben in ihrer Muttersprache, wollen aber deutsche Antworten, weil die Klausur deutsch ist.
 - Eine gewählte Sprache bleibt für das ganze Gespräch, bis ein anderes Signal kommt.
@@ -18,9 +18,9 @@
 **Immer Deutsch, egal welche Erklärsprache:** Abschnittsüberschriften der Vorlage, Aufgabentext, Klausur-Lösung und die Formulierungen im Klausur-Tipp, die in der Klausur hingeschrieben werden. So wird das Prüfungsvokabular mitgelernt.
 
 **In einer anderen Erklärsprache zusätzlich:**
-- Bei der ersten Nennung eines wichtigen Begriffs: Begriff in der Erklärsprache, dann der deutsche Fachbegriff in Klammern, z. B. الممانعة (Impedanz), empedans (Impedanz), l'impédance (Impedanz), impedance (Impedanz), امپیڈنس (Impedanz).
+- Bei der ersten Nennung eines wichtigen Begriffs: Begriff in der Erklärsprache, dann der deutsche Fachbegriff in Klammern, z. B. الممانعة (Impedanz), empedans (Impedanz), l'impédance (Impedanz), impedance (Impedanz), امپدانس (Impedanz).
 - Abschnitt „📚 Fachbegriffe“ der Vorlage ausgeben.
-- Arabisch: Fusha ohne Dialekt. Arabisch und Urdu laufen von rechts nach links: Formeln nie im Satz, sondern als eigene Zeile (siehe LaTeX-Regeln).
-- Urdu: Standard-Urdu in arabischer Schrift, Fachbegriffe nicht ins Hindi übertragen.
+- Arabisch: Fusha ohne Dialekt. Arabisch und Persisch laufen von rechts nach links: Formeln nie im Satz, sondern als eigene Zeile (siehe LaTeX-Regeln).
+- Persisch: Standard-Persisch (Farsi) in persischer Schrift mit ی und ک, nicht mit den arabischen Formen ي und ك.
 - Zahlen immer in lateinischen Ziffern mit Dezimalkomma.
 - Mustersätze in Anführungszeichen aus den Moduldateien geben den Inhalt vor, nicht den Wortlaut: in einer anderen Erklärsprache sinngemäß übersetzen, nie den deutschen Satz kopieren. Das gilt für jeden Abschnittstext außer Überschriften, Aufgabentext und Klausur-Lösung.

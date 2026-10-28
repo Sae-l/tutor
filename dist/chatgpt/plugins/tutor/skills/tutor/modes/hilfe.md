@@ -21,7 +21,7 @@ Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben u
 | `klausur` | schnelle Lösung mit Tipps für volle Punktzahl |
 | `hilfe` | diese Liste |
 
-- **Sprache:** `[de]` Deutsch (Standard) · `[ar]` Arabisch · `[tr]` Türkisch · `[fr]` Französisch · `[en]` Englisch · `[ur]` Urdu, auch `!sprache ar` usw.
+- **Sprache:** `[de]` Deutsch (Standard) · `[ar]` Arabisch · `[tr]` Türkisch · `[fr]` Französisch · `[en]` Englisch · `[fa]` Persisch, auch `!sprache ar` usw.
 - **Dauermodus:** `!an <befehl>` gilt für alle folgenden Aufgaben, `!aus` beendet ihn.
 - **Lösungen abrufen:** `lösung` (z. B. nach `tipp`).
 - **Feedback:** `!issue` gibt einen Link für Rückmeldungen.
