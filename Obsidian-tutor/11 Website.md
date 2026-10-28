@@ -47,6 +47,7 @@ flowchart TD
 
 - HTML, CSS und JavaScript in einer Seite; lokale WOFF2-Schriften und OFL-Lizenzen unter `docs/fonts/`.
 - JavaScript wechselt vordefinierte Sprachbeispiele, setzt `lang` und für Arabisch/Urdu `dir` und erzeugt Fachbegriffstabellen mit DOM-Funktionen und `textContent`.
+- Unter 768 px bleibt das Abschnittsmenü als wischbare Zeile sichtbar; die Vergleichstabelle bricht dort in drei schrumpfbare Spalten um. Lokal bei 320, 375, 820 und 1280 px ohne seitlichen Überlauf geprüft (2026-10-28), nicht auf echten Geräten.
 - Kopierknöpfe verwenden `navigator.clipboard` und zeigen einen Fehlerzustand an. Elemente werden mit `IntersectionObserver` eingeblendet; dafür gibt es einen Ersatzpfad bei fehlender Unterstützung.
 - Im geprüften Quelltext wurden keine `fetch`-Aufrufe, externen Trackingskripte oder Uploadformulare gefunden. Das ist eine Quelltextbeobachtung, kein Mitschnitt des tatsächlichen Netzwerkverkehrs. GitHub-Hosting und externe Links haben einen eigenen Datenschutzkontext.
 
