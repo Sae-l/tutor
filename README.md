@@ -16,11 +16,11 @@ Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das Studi
 
 [Landingpage](https://sae-l.github.io/tutor/) · [So lernst du damit](#so-lernst-du-damit) · [Schnellstart](#schnellstart-claude) · [Befehle](#befehle) · [Andere Plattformen](#andere-plattformen-experimentell) · [Grenzen](#stand-und-grenzen)
 
-> **In English:** A study tutor for first-year STEM exercises (physics, maths, electrical engineering) at German-speaking universities, packaged as a Claude Skill plus a generated system prompt for other chatbots. It explains and asks guiding questions before revealing solutions. Answers are in German by default; Arabic, Turkish, French, English or Urdu on request. The docs are in German because the target audience studies in German.
+> **In English:** A study tutor for university STEM exercises (physics, maths, electrical engineering, engineering mechanics) at German-speaking universities, packaged as a Claude Skill plus a generated plugin and system prompt for other chatbots. It explains the idea and asks guiding questions before revealing solutions, and it finds the first error in your own attempt. Answers are in German by default; Arabic, Turkish, French, English or Urdu on request. The docs are in German because the target audience studies in German.
 
 ## Was der Tutor macht
 
-- **Erst verstehen:** erklärt Thema und nötige Gleichungen, stellt Leitfragen und findet den ersten Fehler im eigenen Rechenweg.
+- **Erst verstehen:** erklärt Thema und nötige Gleichungen mit einem anschaulichen Bild und einem Kernsatz, stellt Leitfragen und findet den ersten Fehler im eigenen Rechenweg.
 - **Lösung erst auf Abruf:** Die Lösung kommt erst, wenn du `lösung` schreibst. Für die Klausurvorbereitung gibt es `kurz` und `klausur`.
 - **Foto genügt:** Aufgabe fotografieren, optional ein Befehlswort dazu, fertig.
 - **Sprachen:** Deutsch; Erklärungen auf Wunsch auf Arabisch, Türkisch, Französisch, Englisch oder Urdu. Fachbegriffe und Klausur-Lösung bleiben deutsch.
@@ -191,7 +191,7 @@ Alle Dateien liegen im [Release](https://github.com/Sae-l/tutor/releases). ChatG
 ## Stand und Grenzen
 
 - **Aktuelle Version [v0.3.0-rc.3](https://github.com/Sae-l/tutor/releases/tag/v0.3.0-rc.3)**, auf GitHub als „Latest“ veröffentlicht (Stand 2026-10-28). Neu: Erklärbogen in `erklär`, `voll` und `thema` (Einstieg, ein Bild, Grenze des Bildes, Kernsatz, Brückensatz zur Gleichung); `tipp` reagiert auf „weiß nicht“ mit einem anderen Zugang und fragt nach dem Warum; zweistufige Wiederholungskarte; Formelzeichen im Fließtext je Plattform; Fachkonventionen für E-Technik, Technische Mechanik und Mathematik ([Notizen](docs/releases/v0.3.0-rc.3.md)). U07…U13 mit rc.2 auf claude.ai [protokolliert](tests/protokolle/2026-10-27-claude-ai-u07-u13.md); U01…U06, U14 und der A/B-Vergleich mit v0.2.1 (#67) stehen aus.
-- **Stabile Version v0.2.1, Lehrverhalten nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
+- **Vorherige Version v0.2.1** bleibt im [Release](https://github.com/Sae-l/tutor/releases/tag/v0.2.1) abrufbar. **Lehrverhalten insgesamt nicht abgenommen.** Build und Strukturtests laufen. Ein begrenzter [Claude-CLI-Ersatzlauf](tests/protokolle/2026-10-15-claude-code-cli.md) prüfte 16 Fälle; drei bestanden nicht. Echte Zieloberflächen einschließlich ChatGPT sind noch nicht abgenommen ([Akzeptanzmatrix](tests/akzeptanz.md)).
 - Formeln werden nur sauber dargestellt, wenn die Plattform `$$ ... $$` rendert; das ist nur informell beobachtet, nicht protokolliert. Ab v0.3.0-rc.3 setzt das Skill-ZIP (Claude, Gemini) einzelne Formelzeichen im Fließtext als `$…$`, das ChatGPT-Paket und die Promptdateien kursiv mit Unicode-Index (*U*₀), weil einfaches `$` in ChatGPT nicht rendert; nicht nativ geprüft (U14).
 - Hochgeladene Dateien liest das Modell nicht immer vollständig; deshalb stehen die wichtigsten Regeln im Kern.
 - Der Tutor kennt keine Bewertungskriterien einzelner Hochschulen. Ergebnisse mit offiziellen Musterlösungen abgleichen.
@@ -226,7 +226,7 @@ Die [deutsche Wissensbasis](Obsidian-tutor/00%20Startseite.md) erklärt Funktion
 | `dist/kern.md` | Erzeugt: Kern aus den `<!-- kern -->`-Abschnitten von `SKILL.md`, höchstens 4000 Zeichen |
 | `dist/chatgpt/` | Erzeugter lokaler Marketplace mit einem Tutor-Plugin, Skilldateien und MIT-Lizenz |
 | `dist/tutor-chatgpt.zip` | Erzeugtes Pluginarchiv für den ChatGPT-Importer |
-| `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Pluginssowie Angaben für die Verzeichnisse von Claude und OpenAI |
+| `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Plugins sowie Angaben für die Verzeichnisse von Claude und OpenAI |
 | `packaging/plugin-README.md`, `packaging/logo.svg` | README und Logo im Pluginpaket |
 | `build.py` | Erzeugt `dist/` aus der Quelle |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
@@ -264,7 +264,7 @@ python -B -m unittest discover -s tests -v
 
 Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und die erzeugte Ausgabe mitcommitten. `dist/` wird vollständig ersetzt; dort nichts von Hand ablegen. Die Tests prüfen reproduzierbare Ausgaben, Pluginmanifest und Paketinhalt, Bytegleichheit zur Skillquelle, elf Modi, Kursneutralität, Kernbudget, Formelbeispiele und den Erhalt vorhandener Ausgaben bei ungültigen Quellen/Metadaten sowie fehlgeschlagenem Verzeichnistausch. Die CI führt denselben Build und dieselben Tests auf Linux und Windows aus.
 
-[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle, 33 Zustands- und Grenzfälle, fünf native ChatGPT-Installations-/Aktivierungsfälle, 14 Schutzregressionen (R-LS) und sechs Fälle zu Lernfluss und Fachkonventionen (U), je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
+[tests/akzeptanz.md](tests/akzeptanz.md) enthält das Release-Gate, 30 Modusfälle, 33 Zustands- und Grenzfälle, fünf native ChatGPT-Installations-/Aktivierungsfälle, 14 Schutzregressionen (R-LS) und 14 Fälle zu Lernfluss, Erklärstil, Fachkonventionen und Formelzeichen (U), je mit stabiler ID. Bestandene Strukturtests belegen kein korrektes Tutorverhalten.
 
 </details>
 

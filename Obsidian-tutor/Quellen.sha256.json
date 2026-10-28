@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "610c386dbb7c0c95729d4157e764d9f29455e871e34adf4f01c1f253a79abb9f",
+      "sha256": "6adf86e9e0b3b7b5d1c37abcdc9cedd6ea210c5a05c373ca8cea4fde45dd7dd5",
       "normalization": "utf8-lf"
     },
     {
@@ -130,12 +130,12 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "76c9b8438b2a00dd486baaf67afbe1887c072dd4be0fa8a41825f70b6517a651",
+      "sha256": "edf00683e3bc719425d0b912b1666538b352c22ef3a8599f49999059faefcb09",
       "normalization": "utf8-lf"
     },
     {
       "path": "SECURITY.md",
-      "sha256": "e36c68ec875578a5cdc1d05a24ba10712018a1362ee116b956e83368b3b17f76",
+      "sha256": "8eefcffb8bc7d8e3afcc4dde86feda2138020934397fa4a46b94ca6d2c6e263c",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "4541dd779eab3b26467af9bed11d2c51f7579fc237670cf6301658f5c701ea90",
+      "sha256": "ca8ee77d58fcb3ce23df39d0d7b8d317042f0bf7f11d8dcb92b62c6338edb0b5",
       "normalization": "utf8-lf"
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "4b0af3a4a50f69bd845863bb18a1d0a49048a4d8f94a7dad646f50704e03d401",
+      "sha256": "6124b0e4eb07448cd7b6436636b44cdaa8bf2f88e946cece7afb91cc551a66e1",
       "normalization": "utf8-lf"
     },
     {
