@@ -60,3 +60,5 @@ Native Prüfung der Akzeptanzfälle G29 (`[fa] erklär`) und D3 (Rechts-nach-lin
 2. `sprache.md`: bei Persisch und Arabisch ausdrücklich „lateinische Ziffern 0–9, keine ۰–۹ oder ٠–٩“.
 3. Reihenfolge ➡️ vor 🔒 prüfen: in vier von fünf Antworten mit beiden Abschnitten vertauscht; eventuell in der Schutzprüfung vor dem Senden nennen.
 4. Entscheiden, ob blanke Codes (`fa`, `ar`) als Sprachsignal gelten sollen, und dann in der Signaltabelle festhalten.
+
+**Nachtrag 2026-10-28:** Vorschläge 1–3 in der Quelle umgesetzt (`antwortvorlage.md`, `sprache.md`, `erklaer.md`); Ursache für 3 war ein Widerspruch in `erklaer.md`, das 🔒 vor ➡️ vorgab. Vorschlag 4 offen.

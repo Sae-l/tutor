@@ -22,5 +22,5 @@
 - Abschnitt „📚 Fachbegriffe“ der Vorlage ausgeben.
 - Arabisch: Fusha ohne Dialekt. Arabisch und Persisch laufen von rechts nach links: Formeln nie im Satz, sondern als eigene Zeile (siehe LaTeX-Regeln).
 - Persisch: Standard-Persisch (Farsi) in persischer Schrift mit ی und ک, nicht mit den arabischen Formen ي und ك.
-- Zahlen immer in lateinischen Ziffern mit Dezimalkomma.
+- Zahlen immer in lateinischen Ziffern (0–9) mit Dezimalkomma, auch auf Arabisch und Persisch und auch in Nummerierungen und Zeitangaben; keine arabisch-indischen (٠–٩) oder persischen Ziffern (۰–۹).
 - Mustersätze in Anführungszeichen aus den Moduldateien geben den Inhalt vor, nicht den Wortlaut: in einer anderen Erklärsprache sinngemäß übersetzen, nie den deutschen Satz kopieren. Das gilt für jeden Abschnittstext außer Überschriften, Aufgabentext und Klausur-Lösung.

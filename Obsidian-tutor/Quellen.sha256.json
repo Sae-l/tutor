@@ -10,7 +10,7 @@
     },
     {
       "path": "tutor/modes/erklaer.md",
-      "sha256": "3e3c9d8a2256f0dc7098af3f3c51b6e1321ee017986772cbe1307b2284637598",
+      "sha256": "cb44de1326378f97df59704896651bc57c317d56a4741ab56a53b2a7c0cb3df4",
       "normalization": "utf8-lf"
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "path": "tutor/references/antwortvorlage.md",
-      "sha256": "24ff28248a3187277e81c90ae07139438b8c0585d0ec35d7ece051766d1a5481",
+      "sha256": "94d680431a2dfd4114e5009fbcdb94680cdbbf69d1d434a3a79fdbe3fea75287",
       "normalization": "utf8-lf"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "path": "tutor/references/sprache.md",
-      "sha256": "31f695d4709c65dc134c20877d8952883ea12af0d8768b167dacf5b7a648cce2",
+      "sha256": "a0ea4a09fb33129174e891223195321b6f59b7ee89e73ceab3f25d1af0c506fe",
       "normalization": "utf8-lf"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "b66edd4df5bc41699fe8266ce59579485f18b7bbe940d2af4d688ec96e42ea09",
+      "sha256": "e6af870750793856e93a7e39523b41d96f4256f4ab70473b971e0f7b8dceb121",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "97fdc7b64c8888f26ee27d816a00aa6668a3d9c8351f65f8a97443bee7e402db",
+      "sha256": "95a86ecb5dcabc7f12d93352bb5cf63700bd1c407430f8bf2a7e4b826f94c4ba",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "4c9caee1923e623435da16c5ed11b020b4eadb051bf28c1bb3fe62320bad7f05",
+      "sha256": "22bda39e8bb411202765d6de1e036d3f63d88138f5e013048d74f19b4f185139",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "98479a0a6829628d81ed36325f2073d7863e39cb46a2963c6a57db4fe9421fce",
+      "sha256": "c6ca1e5047dea2bc083999da0a65a62c94209e205f74469b3a5dd3df7524b891",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "7011ab2cfbf024bfbd8c8a85b01cc4225dfa54d7f426ed1e3d0ad939276a0e50",
+      "sha256": "0bd3e3e376122d72d7c8fcc4fa55030a04d45142998589ba20ce86e3f4647c46",
       "normalization": "raw"
     },
     {

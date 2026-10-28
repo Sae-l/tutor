@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- Befunde aus dem Protokoll vom 2026-10-28 umgesetzt: „📋 Gegeben / Gesucht“ ist ausdrücklich eine Markdown-Tabelle mit Kopf- und Trennzeile, nie ein Codeblock (`antwortvorlage.md`); Zahlen auch auf Arabisch und Persisch und in Nummerierungen in lateinischen Ziffern (`sprache.md`); in `erklär` steht „🔒 Lösungen“ jetzt nach „➡️ Nächster Schritt“, wie in der Vorlage (`erklaer.md` widersprach ihr). G29 entsprechend geschärft. Nicht nativ geprüft.
+
 ### Hinzugefügt
 - Protokoll `tests/protokolle/2026-10-28-claude-ai-g29-d3-persisch.md`: G29 (`[fa] erklär`) und D3 (Rechts-nach-links) auf claude.ai mit v0.3.0-rc.4, beide bestanden mit Anmerkungen (persische Ziffern, 🔒 vor ➡️, Zeilen mit deutschem Anfang links ausgerichtet). Zweite Unterhaltung: „📋 Gegeben / Gesucht“ als Codeblock statt Tabelle, vermutlich wegen „Tabelle als reiner Text“ in der Antwortvorlage. Vier Vorschläge, nicht umgesetzt.
 

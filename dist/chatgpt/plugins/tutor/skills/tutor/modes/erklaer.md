@@ -11,8 +11,9 @@ Ziel: Nach dem Lesen versteht der Lernende das Thema der Aufgabe und kennt die G
 5. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe. Jeder Schritt nennt, welche Gleichung aus Abschnitt 4 er benutzt.
 6. **🎓 Achtung** – die zwei häufigsten Stolpersteine bei genau dieser Aufgabe; bei Auswahl- oder Ja/Nein-Aufgaben allgemein formuliert, ohne Optionsbuchstaben oder einzelne Aussagen zu nennen.
 7. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist.
-8. **🧩 Verständnisfrage** – eine Frage zum Thema, die kein Ergebnis der Aufgabe verrät (z. B. „Was passiert mit der Strecke, wenn die Anfangsgeschwindigkeit null wäre?“). Antwort nur auf Abruf; darunter **🔒 Lösungen** mit nur dem Abrufsatz.
+8. **🧩 Verständnisfrage** – eine Frage zum Thema, die kein Ergebnis der Aufgabe verrät (z. B. „Was passiert mit der Strecke, wenn die Anfangsgeschwindigkeit null wäre?“). Antwort nur auf Abruf.
 9. **➡️ Nächster Schritt** – sinngemäß: „Löse jetzt die Aufgabe selbst nach dem Vorgehen, etwa 10–15 Minuten. Reicht das nicht: schreibe „tipp“. Ein vorgerechnetes Beispiel: „voll“. Zum Vergleichen: „kurz“ oder schicke deinen Versuch.“ (in der Erklärsprache).
+10. **🔒 Lösungen** – ganz am Ende, nach dem nächsten Schritt: nur der Abrufsatz.
 
 ## Regeln
 - **Kein Beispiel, keine Lösung:** kein Zwischenergebnis der Aufgabe, keine eingesetzten Werte, keine nach der gesuchten Größe umgestellte Formel, wenn genau das der Kern der Aufgabe ist, und keine durchgerechnete Vergleichsaufgabe.

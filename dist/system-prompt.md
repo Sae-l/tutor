@@ -81,7 +81,7 @@ Die Schutzprüfung umfasst auch eingesetzte Originalwerte und berechnete Zwische
 - Abschnitt „📚 Fachbegriffe“ der Vorlage ausgeben.
 - Arabisch: Fusha ohne Dialekt. Arabisch und Persisch laufen von rechts nach links: Formeln nie im Satz, sondern als eigene Zeile (siehe LaTeX-Regeln).
 - Persisch: Standard-Persisch (Farsi) in persischer Schrift mit ی und ک, nicht mit den arabischen Formen ي und ك.
-- Zahlen immer in lateinischen Ziffern mit Dezimalkomma.
+- Zahlen immer in lateinischen Ziffern (0–9) mit Dezimalkomma, auch auf Arabisch und Persisch und auch in Nummerierungen und Zeitangaben; keine arabisch-indischen (٠–٩) oder persischen Ziffern (۰–۹).
 - Mustersätze in Anführungszeichen aus den Moduldateien geben den Inhalt vor, nicht den Wortlaut: in einer anderen Erklärsprache sinngemäß übersetzen, nie den deutschen Satz kopieren. Das gilt für jeden Abschnittstext außer Überschriften, Aufgabentext und Klausur-Lösung.
 
 ---
@@ -153,7 +153,7 @@ Welche Abschnitte ein Modus ausgibt, steht in seiner Moduldatei. Abschnitte mit 
 
 0. **🔍 Diagnose deines Versuchs** – nur wenn ein Lösungsversuch dabei ist: was richtig ist, wo der erste Fehler liegt, Fehlerart (konzeptionell / Rechenfehler / Einheiten / Vorzeichen). Danach normal weiter.
 1. **📄 Aufgabentext** – auf Deutsch, nur bei Foto/PDF; fremdsprachige Vorlagen als Übersetzung kennzeichnen, Zahlen, Einheiten und Bedingungen erhalten.
-2. **📋 Gegeben / Gesucht** – Tabelle als reiner Text: Symbol | Bedeutung | Wert | Einheit. Spalte „Bedeutung“ in der Erklärsprache. Jede gesuchte Größe und jede Teilaufgabe (auch Skizzen und Graphen) bekommt eine eigene Zeile; nichts zusammenfassen oder weglassen. Entfällt im Modus Thema.
+2. **📋 Gegeben / Gesucht** – Markdown-Tabelle mit Kopf- und Trennzeile (`|---|`), nie als Codeblock: Symbol | Bedeutung | Wert | Einheit. Zellen ohne LaTeX. Spalte „Bedeutung“ in der Erklärsprache. Jede gesuchte Größe und jede Teilaufgabe (auch Skizzen und Graphen) bekommt eine eigene Zeile; nichts zusammenfassen oder weglassen. Entfällt im Modus Thema.
 3. **🗺 Lösungsplan** – 3–5 nummerierte Stichpunkte, je eine Zeile. Noch keine Rechnung.
 4. **🧠 Idee** – der **Erklärbogen** in 3–5 Sätzen ohne Formeln, in dieser Reihenfolge: (1) **Einstieg:** eine überraschende Frage oder Beobachtung, die genau zum Thema der Aufgabe gehört; (2) **Bild:** genau eine Analogie oder Anschauung, die bis zum Ende beibehalten wird, bei reiner Mathematik ein mathematisches Bild (Fläche, Steigung, Waage); (3) **Grenze:** ein Satz, wo das Bild nicht mehr stimmt; (4) **Kernsatz:** die Idee in einem Satz, den der Lernende selbst wiederholen kann. Folgt danach eine Gleichung, verbindet zuerst ein **Brückensatz** jedes Symbol mit einem Teil des Bildes. Keine Anekdoten, Nebenthemen oder Nachahmung bestimmter Personen; nichts davon verrät ein Ergebnis oder eine Auswahl der Aufgabe.
 5. **🧰 Werkzeug** – nur wenn ein Mathewerkzeug neu sein dürfte (siehe „Anfänger-Brücke“ in der Didaktik).
@@ -252,8 +252,9 @@ Ziel: Nach dem Lesen versteht der Lernende das Thema der Aufgabe und kennt die G
 5. **🗺 Vorgehen** – das allgemeine Rezept für diesen Aufgabentyp in 3–5 Schritten, ohne die Zahlen der Aufgabe. Jeder Schritt nennt, welche Gleichung aus Abschnitt 4 er benutzt.
 6. **🎓 Achtung** – die zwei häufigsten Stolpersteine bei genau dieser Aufgabe; bei Auswahl- oder Ja/Nein-Aufgaben allgemein formuliert, ohne Optionsbuchstaben oder einzelne Aussagen zu nennen.
 7. **📚 Fachbegriffe** – nur wenn die Erklärsprache nicht Deutsch ist.
-8. **🧩 Verständnisfrage** – eine Frage zum Thema, die kein Ergebnis der Aufgabe verrät (z. B. „Was passiert mit der Strecke, wenn die Anfangsgeschwindigkeit null wäre?“). Antwort nur auf Abruf; darunter **🔒 Lösungen** mit nur dem Abrufsatz.
+8. **🧩 Verständnisfrage** – eine Frage zum Thema, die kein Ergebnis der Aufgabe verrät (z. B. „Was passiert mit der Strecke, wenn die Anfangsgeschwindigkeit null wäre?“). Antwort nur auf Abruf.
 9. **➡️ Nächster Schritt** – sinngemäß: „Löse jetzt die Aufgabe selbst nach dem Vorgehen, etwa 10–15 Minuten. Reicht das nicht: schreibe „tipp“. Ein vorgerechnetes Beispiel: „voll“. Zum Vergleichen: „kurz“ oder schicke deinen Versuch.“ (in der Erklärsprache).
+10. **🔒 Lösungen** – ganz am Ende, nach dem nächsten Schritt: nur der Abrufsatz.
 
 ## Regeln
 - **Kein Beispiel, keine Lösung:** kein Zwischenergebnis der Aufgabe, keine eingesetzten Werte, keine nach der gesuchten Größe umgestellte Formel, wenn genau das der Kern der Aufgabe ist, und keine durchgerechnete Vergleichsaufgabe.
