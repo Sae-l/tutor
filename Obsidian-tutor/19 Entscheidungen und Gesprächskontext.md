@@ -1,7 +1,7 @@
 ---
 title: Projektentscheidungen und Herkunft
 tags: [tutor, entscheidungen, herkunft]
-updated: 2026-10-27
+updated: 2026-10-28
 status: oeffentliche-zusammenfassung
 ---
 
@@ -36,6 +36,19 @@ Der veröffentlichte Claude-CLI-Teillauf prüfte 16 Fälle, davon drei nicht bes
 Neue Entscheidungen nennen Problem, gewählte Änderung, Begründung, betroffene Quelle und messbare Abnahme. Den Status ausdrücklich als „vorgeschlagen“, „implementiert“ oder „geprüft“ führen. Der Merge eines Plans beweist nur dessen Aufnahme; erst Quelländerungen und passende Tests belegen die Umsetzung.
 
 Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix und Protokolle belegen den Produktstand. [[17 Fehlerdiagnose und Reparatur]] und [[18 Bauanleitung]] beschreiben den Arbeitsweg.
+
+## Entscheidungen vom 28.10.2026 (implementiert, #81…#89)
+
+| Frage | Entscheidung | Begründung |
+|---|---|---|
+| Welche Version gilt als aktuell? | v0.3.0-rc.3 als „Latest“, bleibt Vorabversion ohne bestandenes Gate | Entscheidung des Maintainers; A/B-Vergleich #67 braucht die neue Version im Einsatz |
+| README-Kopfbild | Animation erklär → tipp → check statt Screenshot | Screenshot zeigte nach drei Releases v0.2.0-rc.3 und alte Schrift; die Animation zeigt den Ablauf und veraltet nicht mit der Seite |
+| Format | GIF (hell und dunkel per `<picture>`), PNG als og:image | GitHub zeigt im README nur Bilder zuverlässig; soziale Netzwerke zeigen kein animiertes Vorschaubild |
+| Versionsnummer im Bild | keine | sonst bei jedem Release veraltet |
+| Schrift | Source Serif 4 und Atkinson Hyperlegible Next statt Geist | Serifen passen zu MathML-Formeln; Atkinson unterscheidet Zeichen bei kleinen Größen |
+| Fächer im Titel | MINT mit Physik, Mathe, E-Technik, Mechanik | der Skill deckt seit v0.3.0-rc.2 alle vier ab |
+| Wo wird dokumentiert? | Einzelheiten einmal neben dem Code, `CLAUDE.md` mit kurzem Stand und Verweis, Vault mit Zusammenfassung und Verweis, `CHANGELOG.md` mit einer Zeile | keine widersprüchlichen Kopien; neue Sitzungen finden alles ohne Suche |
+| Beispiel „So sieht das aus“ im README | bleibt wörtlich M04-A vom 2026-10-15 | ersetzen erst mit einem neuen Protokoll von rc.3; ein erfundenes Beispiel wäre kein Nachweis |
 
 ## Entscheidungen vom 27.10.2026 (implementiert)
 

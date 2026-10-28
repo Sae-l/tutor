@@ -1,7 +1,7 @@
 ---
 title: Tutor aus den Quellen bauen und weiterentwickeln
 tags: [tutor, build, entwicklung]
-updated: 2026-10-16
+updated: 2026-10-28
 status: reproduzierbare-anleitung
 ---
 
@@ -29,7 +29,7 @@ git diff --exit-code -- dist/
 git ls-files --others --exclude-standard -- dist/
 ```
 
-Erwartung: Python 3.14, erfolgreicher Build und erfolgreiche Tests. Bei identischem Commit und gültigem eingechecktem Build liefert der Diff keinen Unterschied, die letzte Dateiliste bleibt leer. Die beim Schreiben dieser Notiz vorhandene Suite umfasst 13 Tests; spätere Versionen können die Anzahl ändern. Ist `python` nicht verfügbar, den auf dem eigenen Gerät vorhandenen Interpreterpfad verwenden.
+Erwartung: Python 3.14, erfolgreicher Build und erfolgreiche Tests. Bei identischem Commit und gültigem eingechecktem Build liefert der Diff keinen Unterschied, die letzte Dateiliste bleibt leer. Die Suite umfasst am 2026-10-28 22 Tests; spätere Versionen können die Anzahl ändern. Zusätzlich `python -B Obsidian-tutor/verify_vault.py` ausführen (erwartet `PASS`). Ist `python` nicht verfügbar, den auf dem eigenen Gerät vorhandenen Interpreterpfad verwenden.
 
 Die Suite wurde für diese Dokumentation erneut ausgeführt. Mit Python im eigenen PATH:
 
@@ -80,3 +80,7 @@ Dieser Archivbefehl liest HEAD und behält den Pfadkontext für `.gitattributes`
 5. Paketversion, Changelog, Anleitung und Statusaussagen abgleichen. Einen stabilen Release erst nach dem geltenden Gate freigeben; keine alten Tags wiederverwenden.
 
 Die gemeinsame Drei-Plattform-Architektur ist in `docs/planung/2026-10-15-plattformen/03-unified-proposal.md` beschrieben. Das heutige Repository-Gate verlangt Claude; der Vorschlag fordert zukünftig dieselben Kernfälle auf allen drei nativen Oberflächen. Diese vorgeschlagene Änderung ist noch kein geltendes Gate.
+
+## README-Animation neu erzeugen
+
+Nur nötig, wenn sich `docs/assets/hero/hero.html` oder Farben und Schriften der Landingpage ändern. Kein Teil von `build.py`. Voraussetzungen: `npm i -g playwright-core`, installiertes Chrome, `winget install Gyan.FFmpeg`. Dann aus der Repositorywurzel `node docs/assets/hero/render.mjs`. Einzelheiten: `docs/assets/hero/README.md`.
