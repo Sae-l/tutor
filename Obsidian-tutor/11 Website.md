@@ -1,7 +1,7 @@
 ---
 title: Die Website erklärt
 tags: [tutor, website]
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Die Website
@@ -40,7 +40,7 @@ flowchart TD
 - Hell- und Dunkelmodus folgen der Systemeinstellung; Farben stehen als CSS-Variablen in `:root`, Inline-SVGs nutzen dieselben Variablen.
 - Bewegung nur einmalig und nur mit `transform`, `opacity` und Strichlänge; keine Endlosschleifen. `prefers-reduced-motion` zeigt alles sofort und vollständig.
 - Neu: Sprunglink zum Inhalt, Favicon als Daten-URI, Open-Graph-Angaben. Weiterhin keine externen Schriften oder Skripte.
-- Die README zeigt einen Ausschnitt der Seite (`docs/assets/hero-light.png`, `hero-dark.png`) und zwei Mermaid-Flowcharts.
+- Die README zeigt eine 12-Sekunden-Animation (erklär → tipp → check, `docs/assets/hero-light.gif`, `hero-dark.gif`) und zwei Mermaid-Flowcharts. Quelle `docs/assets/hero/hero.html`, erzeugt mit `docs/assets/hero/render.mjs`; dasselbe Skript schreibt das Vorschaubild `hero-light.png` (og:image).
 - Geprüft: lokale Darstellung in Chrome (hell, dunkel, reduzierte Bewegung, schmale Ansicht) und Strukturtests. Nicht geprüft: das veröffentlichte GitHub-Pages-Deployment.
 
 ## Technische Funktionsweise
