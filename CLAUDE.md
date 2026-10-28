@@ -26,7 +26,7 @@
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
 
 ## Stand v0.3.0-rc.4 (2026-10-28, aktuelle Version „Latest“)
-- Persisch statt Urdu (#90); sonst Lehrverhalten wie rc.3. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13 nennen rc.4. Release ohne bestandenes Gate, wie rc.3 als „Latest“ markiert. G29 und D3 am 2026-10-28 auf claude.ai bestanden mit Anmerkungen (`tests/protokolle/2026-10-28-claude-ai-g29-d3-persisch.md`); offene Vorschläge dort: Tabelle in Abschnitt 2 als Markdown festlegen, lateinische Ziffern bei Persisch/Arabisch ausdrücklich, Reihenfolge ➡️ vor 🔒, blanke Sprachcodes.
+- Persisch statt Urdu (#90); sonst Lehrverhalten wie rc.3. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13 nennen rc.4. Release ohne bestandenes Gate, wie rc.3 als „Latest“ markiert. G29 und D3 am 2026-10-28 auf claude.ai bestanden mit Anmerkungen (`tests/protokolle/2026-10-28-claude-ai-g29-d3-persisch.md`); Vorschläge 1–3 danach umgesetzt (Markdown-Tabelle, lateinische Ziffern, 🔒 nach ➡️ in `erklaer.md`), nicht nativ geprüft und noch nicht veröffentlicht; offen bleibt die Entscheidung zu blanken Sprachcodes (`fa`, `ar`).
 
 ## Persisch statt Urdu (2026-10-28)
 - Sechste Erklärsprache ist Persisch (`[fa]`) statt Urdu (`[ur]`): Skill, `dist/`, Website (Noto Naskh Arabic, Nastaliq-Schrift entfernt), Doku, Tests und Vault. Datierte Planungsnotizen, Protokolle und alte CHANGELOG-Einträge nennen weiterhin Urdu, weil sie frühere Stände beschreiben. G29 und D3 auf Persisch nicht nativ geprüft.
