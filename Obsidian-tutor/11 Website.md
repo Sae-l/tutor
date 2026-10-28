@@ -16,7 +16,7 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 
 | Abschnitt der Quelle | Nutzen für Besucher |
 |---|---|
-| Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die aktuelle Version `v0.3.0-rc.4` (seit 2026-10-28, vorher `v0.3.0-rc.3`); Kennzahlen 23 Arbeiten, 11 Modi, 6 Erklärsprachen, 0 € / MIT; Veröffentlichung separat prüfen. |
+| Einstieg und Download | Zweck, Zielgruppe (Studium allgemein) und Version; Downloadlink auf die aktuelle Version `v0.3.0-rc.5` (seit 2026-10-28, vorher `v0.3.0-rc.4`); Kennzahlen 23 Arbeiten, 11 Modi, 6 Erklärsprachen, 0 € / MIT; Veröffentlichung separat prüfen. |
 | Schrittweise Hilfe | Flowchart „Verstanden?“ mit den Wegen check sowie tipp → voll → kurz, darunter die vier Stufen als Liste und ein fest hinterlegtes Beispiel „Probier es aus“: die Autoaufgabe aus U12/U13 (aus der Ruhe in 8,0 s auf 24 m/s) mit `erklär`, `tipp`, `voll` (Bremsweg-Beispiel 160 m) und `kurz` (96 m), Formeln als MathML, Lösung nur unter `kurz`. |
 | 11 Modi | Befehle vergleichen und auswählen. |
 | Sprachbeispiel | Fest hinterlegtes Beispiel in de/ar/tr/fr/en/fa mit deutschen Fachbegriffen. |
@@ -24,7 +24,7 @@ Die statische Seite erklärt den Tutor und bietet Downloads. Sie betreibt keinen
 | Vergleich | Chat ohne Lernmodus, Lernmodi der Anbieter und Tutor in acht Zeilen; Stand Oktober 2026 nach Anbieterangaben, nicht gegen aktuelle Anbieterseiten geprüft. |
 | Zweiter Aufruf | Download und Sprung zur Einrichtung nach dem Vergleich. |
 | Einrichtung | Claude Skill und experimentelle ChatGPT-/Gemini-Wege, letztere eingeklappt; seit 2026-10-20 Gemini-Skill mit `tutor-skill.zip`, Gem als auslaufend gekennzeichnet. |
-| Häufige Fragen | Zehn Fragen, zuerst aus Besuchersicht: Aufgaben und Fächer, Kosten, Handy, Kurspaket, ADHS-Gestaltung, Neuerungen in v0.3.0-rc.4; danach Fehlerhilfe, Formeldarstellung je Plattform und Aktualisierung. |
+| Häufige Fragen | Zehn Fragen, zuerst aus Besuchersicht: Aufgaben und Fächer, Kosten, Handy, Kurspaket, ADHS-Gestaltung, Neuerungen in v0.3.0-rc.5; danach Fehlerhilfe, Formeldarstellung je Plattform und Aktualisierung. |
 | Fußbereich | Marke mit PayPal-Unterstützung, GitHub (Quellcode, Probleme und Wünsche, Changelog, Bauweise statt früherem Abschnitt „Unter der Haube“, Wissensbasis), Über mich (LinkedIn, Instagram), Datenschutz; Abschlusszeile mit MIT-Lizenz und Version. |
 
 ## Gestaltung seit 2026-10-19
