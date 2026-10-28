@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "3208b97df736a185bdc098f3028277f0649dc3a09f763e21a56f82c541d6c73a",
+      "sha256": "fda8f7c608c9ddf2d16a246880d47f385c2c4e0ec30e75f6def4b12e6a7886a1",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "306022c1e13b98df651985d0c13059b2abe7e2cf636648d2a828fb85f91cce1f",
+      "sha256": "7cd49c6c2da70b544acb1760699db236eaf2d3a1bf7262c8cb65e7017d0ab34b",
       "normalization": "utf8-lf"
     },
     {

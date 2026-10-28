@@ -9,6 +9,7 @@
 - `kurse/` – optionale Kurspakete (z. B. `mpg1.md`), nicht Teil des Skills.
 - `build.py` → `dist/system-prompt.md`, `dist/kern.md` (intern ≤ 4000 Zeichen), `dist/chatgpt/` (lokaler Marketplace, ein Plugin/Skill) und `dist/tutor-chatgpt.zip` (Pluginarchiv). Modi aus der Befehlstabelle; Paketmetadaten in `packaging/chatgpt-plugin.json`, Installation in `docs/CHATGPT.md`.
 - `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
+- `docs/assets/hero/` – Quelle (`hero.html`) und Skript (`render.mjs`) der README-Animation `docs/assets/hero-light.gif`/`hero-dark.gif` und des og:image `hero-light.png`. Regeln, Werkzeuge und Begründung in `docs/assets/hero/README.md`.
 - `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS14, U01…U14), `protokolle/`.
 - `packaging/latex-fliesstext-universal.md` – Klartextregel für Formelzeichen, die `build.py` in alle `dist/`-Ausgaben statt des `<!-- fliesstext -->`-Blocks aus `latex-regeln.md` einsetzt (einfaches `$` rendert in ChatGPT nicht).
 - `Obsidian-tutor/` – öffentliche deutsche Wissensbasis mit 20 Notizen und Canvas. `python -B Obsidian-tutor/verify_vault.py` prüft Navigation, Canvas, Modusabdeckung und normalisierte Quellhashes. Bei Quelländerungen betroffene Artikel bewerten und Hashmanifest bewusst aktualisieren; persönliche `.obsidian/`-Dateien bleiben lokal.
@@ -19,6 +20,14 @@
 - Neuer Modus: Datei in `tutor/modes/` + Zeile in der Befehlstabelle; Anzahl 11 in `build.py` und Tests anpassen.
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
+- Alles dokumentieren, damit eine neue Sitzung ohne Nachsuchen weiterarbeiten kann: Änderung in `CHANGELOG.md`, neuen Stand hier in `CLAUDE.md`, neue Regeln, Abläufe, Begründungen und benutzte Werkzeuge in der passenden Doku (z. B. `docs/assets/hero/README.md`, Vault-Notiz). Danach Quellhashes erneuern und `verify_vault.py` laufen lassen.
+- Neue Version als aktuell: Versionsnummer in `docs/index.html` (Download, `softwareVersion`, `downloadUrl`, Fußzeile, Einrichten, FAQ), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
+- Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
+
+## Website und README (2026-10-28, #81…#88, Tutor-Verhalten unverändert)
+- Landingpage neu gegliedert (Ablauf mit Beispiel, Forschung, Vergleich, FAQ), Beispiel mit MathML, Handy- und Tabletansicht repariert, Schriften Source Serif 4 und Atkinson Hyperlegible Next statt Geist. Seitentitel und og:title nennen MINT.
+- README-Kopfbild ist eine 12-Sekunden-Animation (erklär → tipp → check, Lösung gesperrt) statt eines veralteten Screenshots; erzeugt mit `node docs/assets/hero/render.mjs` (globales `playwright-core`, installiertes Chrome, `ffmpeg` aus winget `Gyan.FFmpeg`).
+- README-Abschnitt „So sieht das aus“ zitiert weiterhin wörtlich Fall M04-A vom 2026-10-15 (Formelzeichen dort noch im alten Klartext). Ersetzen erst, wenn ein neues Protokoll mit rc.3 vorliegt.
 
 ## Stand v0.3.0-rc.3 (2026-10-27, seit 2026-10-28 aktuelle Version „Latest“)
 - Formelzeichen im Fließtext je Plattform (#77): Skill-ZIP (Claude, Gemini) setzt einzelne Formelzeichen als `$…$`, `dist/` (ChatGPT-Plugin, System-Prompt) kursiv mit Unicode-Index über `packaging/latex-fliesstext-universal.md`. Befunde aus U07…U13 umgesetzt (keine Optionsbuchstaben in 🎓 Achtung, kein doppelter Kernsatz in `voll`). U07…U13 mit rc.2 auf claude.ai protokolliert, U14 und die Schärfungen von U08/U12 **nicht nativ geprüft**. Seit 2026-10-28 auf GitHub als „Latest“ veröffentlicht; Website (Download, strukturierte Daten), README, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13 nennen rc.3 als aktuelle Version. Offene Abnahmen (U01…U06, U14, A/B-Vergleich #67) bleiben bestehen.
