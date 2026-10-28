@@ -28,6 +28,7 @@ Produktbasis der datierten Recherche: `921409f2f7e0ccbe54e962ec8218024f74bc3fab`
 | `tests/akzeptanz.md`, `tests/protokolle/VORLAGE.md` | Fallgruppen, Bewertung und Protokollierung. |
 | `tests/protokolle/2026-10-15-claude-code-cli.md` | 16 Fälle auf Commit `eddf11c…`; M06-A, M08-A und M09-A fehlgeschlagen. Kein Ersatz für die Skill-Oberfläche. |
 | `tests/protokolle/2026-10-27-claude-ai-u07-u13.md` | Native Abnahme U07…U13 auf claude.ai mit `v0.3.0-rc.2`; alle bestanden, U08 mit Anmerkung. Kein vollständiger Release-Gate-Lauf. |
+| `tests/protokolle/2026-10-28-claude-ai-g29-d3-persisch.md` | G29 und D3 auf claude.ai mit `v0.3.0-rc.4`, beide bestanden mit Anmerkungen; Befund Tabelle als Codeblock in einer zweiten Unterhaltung. Kein vollständiger Gate-Lauf. |
 | `tests/protokolle/2026-10-15-chatgpt-plugin-vorbereitung.md` | Vorbereitung und Build, Import nicht abgeschlossen; kein Modellergebnis. |
 | Nicht veröffentlichter freier ChatGPT-Testbericht | Nur historische Zusammenfassung: Abweichungen bei Eskalation, Kurz und Hilfe; fehlende Versionsdaten. Kein öffentlicher Abnahmebeleg. |
 | `SECURITY.md`, `.gitignore`, `.github/workflows/ci.yml`, `.github/dependabot.yml` | Lokale Richtlinien und Einstellungen; kein Nachweis des Serverzustands. |
