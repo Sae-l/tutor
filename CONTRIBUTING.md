@@ -35,7 +35,7 @@ Ausnahme: Der erzeugte Katalog `dist/chatgpt/.agents/plugins/marketplace.json` g
 
 ## Release
 
-Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Release-Gate in `tests/akzeptanz.md` bestanden und protokolliert ist. Ausnahme: v0.2.0 wurde am 2026-10-20 auf Entscheidung des Maintainers ohne bestandenes Gate stabil veröffentlicht (#32 offen); für spätere stabile Versionen gilt die Regel wieder. Am 2026-10-28 wurde die Vorabversion v0.3.0-rc.3 auf Entscheidung des Maintainers als „Latest“ markiert; sie bleibt eine Vorabversion ohne bestandenes Gate.
+Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Release-Gate in `tests/akzeptanz.md` bestanden und protokolliert ist. Ausnahme: v0.2.0 wurde am 2026-10-20 auf Entscheidung des Maintainers ohne bestandenes Gate stabil veröffentlicht (#32 offen); für spätere stabile Versionen gilt die Regel wieder. Am 2026-10-28 wurde die Vorabversion v0.3.0-rc.3 auf Entscheidung des Maintainers als „Latest“ markiert; sie bleibt eine Vorabversion ohne bestandenes Gate. Am selben Tag folgte v0.3.0-rc.4 (Persisch statt Urdu) ebenfalls als „Latest“, damit die Website die aktuelle Fassung herunterlädt.
 
 1. Aus einem separaten sauberen Checkout des exakten `main`-Commits arbeiten; CI für diesen Commit ist grün, `CHANGELOG.md` und Pluginmanifest nennen die neue Version. `python build.py`, Strukturtests und Vaultprüfung ausführen; `git diff --exit-code -- dist/` muss danach leer sein. Keine lokalen Änderungen oder privaten Protokolle übernehmen.
 2. Skill-Paket aus dem Commit bauen, nicht aus dem Arbeitsordner (so gelangen nur versionierte Dateien hinein):
