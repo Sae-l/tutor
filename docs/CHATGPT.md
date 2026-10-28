@@ -63,7 +63,7 @@ Optional ein [Kurspaket](../kurse/mpg1.md) zusätzlich als Projektdatei hinzufü
 
 ## Bedienung und Fehlerbehebung
 
-Alle elf [Befehle](../README.md#bedienung) bleiben gleich. Sprachwechsel mit `[ar]`, `[tr]`, `[fr]`, `[en]`, `[ur]`, `[de]`, `!sprache xx` oder ausdrücklichem Sprachwunsch; die Sprache bleibt im Gespräch erhalten. Mit `!an tipp` einen Dauermodus setzen, mit `!aus` beenden.
+Alle elf [Befehle](../README.md#bedienung) bleiben gleich. Sprachwechsel mit `[ar]`, `[tr]`, `[fr]`, `[en]`, `[fa]`, `[de]`, `!sprache xx` oder ausdrücklichem Sprachwunsch; die Sprache bleibt im Gespräch erhalten. Mit `!an tipp` einen Dauermodus setzen, mit `!aus` beenden.
 
 | Beobachtung | Nächster Schritt |
 |---|---|

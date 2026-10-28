@@ -64,7 +64,7 @@ Diese Annahmen sind plausibel, für diesen Agenten aber nicht geprüft.
 - **Ein-Wort-Befehle:** als erstes Wort oder als ganze Nachricht (z. B. Foto + „tipp“); mit `!` auch mitten im Text. Normale Wörter im Aufgabentext lösen so keinen Befehl aus.
 - **Dauermodus:** `!an tipp` gilt für alle folgenden Aufgaben, `!aus` schaltet zurück. Eine Statuszeile zeigt den Zustand, damit er in langen Chats nicht verloren geht.
 - **Hilfe:** „tutor“, „hilfe“ oder „help“ als ganze Nachricht zeigt die Befehlskarte: elf Befehle mit je einer Erklärung.
-- **Sprachen:** Standard Deutsch; `[ar]`, `[tr]`, `[fr]`, `[en]`, `[ur]` oder `!sprache xx` wechseln die Erklärsprache. Überschriften, Aufgabentext und Klausur-Lösung bleiben immer Deutsch (Prüfungsvokabular); in anderen Sprachen kommen deutsche Fachbegriffe in Klammern und eine Begriffstabelle dazu.
+- **Sprachen:** Standard Deutsch; `[ar]`, `[tr]`, `[fr]`, `[en]`, `[fa]` oder `!sprache xx` wechseln die Erklärsprache. Überschriften, Aufgabentext und Klausur-Lösung bleiben immer Deutsch (Prüfungsvokabular); in anderen Sprachen kommen deutsche Fachbegriffe in Klammern und eine Begriffstabelle dazu.
 - **Foto/PDF:** Der Aufgabentext wird zuerst abgeschrieben; Unleserliches wird als [unleserlich] markiert statt geraten.
 - **Genauigkeit:**
   - keine erfundenen Werte;

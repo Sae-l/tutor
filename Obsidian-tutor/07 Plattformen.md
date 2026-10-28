@@ -79,7 +79,7 @@ Anweisungen und Dateiquellen beschreibt die [offizielle Google-Anleitung](https:
 | Fähigkeit | Erforderlicher Nachweis |
 |---|---|
 | `$$`-Formeln, ASCII und Einheiten | Tatsächliche Darstellung statt reiner Textprüfung. |
-| Arabisch und Urdu mit RTL | Textreihenfolge, deutsche Begriffe und getrennte Formeln; bereinigter Screenshot. |
+| Arabisch und Persisch mit RTL | Textreihenfolge, deutsche Begriffe und getrennte Formeln; bereinigter Screenshot. |
 | Zeichnen | Beschriftetes Bild mit Werkzeug oder Beschreibung, Tabelle und Code ohne Werkzeug; keine unbelegte Ausführung behaupten. |
 | Zustand | Sprache und Dauermodus über Nachrichten; Einzelbefehl ändert gespeicherten Zustand nicht. |
 | Kontextgrenzen und Speicher | Getrennte Gespräche und Wiederholung; keine unbegrenzte Persistenz annehmen. |

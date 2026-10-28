@@ -22,7 +22,7 @@ Praktisch: einmal einrichten, danach **Aufgabenfoto und ein Befehlswort** schick
 | Lernende | MINT-Studium an einer deutschsprachigen Hochschule, vom ersten bis zu höheren Semestern (#64; fachliche Abdeckung nicht nachgewiesen) |
 | Fächer | Physik, Mathematik, Elektrotechnik und Technische Mechanik |
 | Klausursprache | Deutsch |
-| Erklärsprachen | Deutsch als Voreinstellung; Arabisch, Türkisch, Französisch, Englisch und Urdu auf Wunsch |
+| Erklärsprachen | Deutsch als Voreinstellung; Arabisch, Türkisch, Französisch, Englisch und Persisch auf Wunsch |
 | Gestaltung | ADHS-freundlich: kurze Schritte, feste Struktur und eine nächste Handlung mit Zeitangabe |
 
 ## Entstehung

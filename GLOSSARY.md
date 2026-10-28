@@ -63,7 +63,7 @@ Die Zeile oben in der Antwort, die tatsächlichen Modus, gespeicherten Dauermodu
 ### Sprache
 
 **Erklärsprache**:
-Die Sprache der Erklärtexte (Deutsch, Arabisch, Türkisch, Französisch, Englisch, Urdu); wechselt nur per Sprachsignal.
+Die Sprache der Erklärtexte (Deutsch, Arabisch, Türkisch, Französisch, Englisch, Persisch); wechselt nur per Sprachsignal.
 _Avoid_: Antwortsprache, Sprache der Nachricht
 
 **Sprachsignal**:

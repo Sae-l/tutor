@@ -20,10 +20,13 @@
 - Keine generierte Datei von Hand ändern. Kein Hochschul- oder Kursbezug im Skill (Test prüft das).
 - Neuer Modus: Datei in `tutor/modes/` + Zeile in der Befehlstabelle; Anzahl 11 in `build.py` und Tests anpassen.
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
-- Standardsprache Deutsch; ar/tr/fr/en/ur nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
+- Standardsprache Deutsch; ar/tr/fr/en/fa nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 - Alles dokumentieren, damit eine neue Sitzung ohne Nachsuchen weiterarbeiten kann: Änderung in `CHANGELOG.md`, neuen Stand hier in `CLAUDE.md`, neue Regeln, Abläufe, Begründungen und benutzte Werkzeuge in der passenden Doku (z. B. `docs/assets/hero/README.md`, Vault-Notiz). Danach Quellhashes erneuern und `verify_vault.py` laufen lassen.
 - Neue Version als aktuell: Versionsnummer in `docs/index.html` (Download, `softwareVersion`, `downloadUrl`, Fußzeile, Einrichten, FAQ), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
+
+## Persisch statt Urdu (2026-10-28)
+- Sechste Erklärsprache ist Persisch (`[fa]`) statt Urdu (`[ur]`): Skill, `dist/`, Website (Noto Naskh Arabic, Nastaliq-Schrift entfernt), Doku, Tests und Vault. Datierte Planungsnotizen, Protokolle und alte CHANGELOG-Einträge nennen weiterhin Urdu, weil sie frühere Stände beschreiben. G29 und D3 auf Persisch nicht nativ geprüft.
 
 ## Website und README (2026-10-28, #81…#89, Tutor-Verhalten unverändert)
 - Landingpage neu gegliedert (Ablauf mit Beispiel, Forschung, Vergleich, FAQ), Beispiel mit MathML, Handy- und Tabletansicht repariert, Schriften Source Serif 4 und Atkinson Hyperlegible Next statt Geist. Seitentitel und og:title nennen MINT.

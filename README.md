@@ -16,14 +16,14 @@ Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das Studi
 
 [Landingpage](https://sae-l.github.io/tutor/) · [So lernst du damit](#so-lernst-du-damit) · [Schnellstart](#schnellstart-claude) · [Befehle](#befehle) · [Andere Plattformen](#andere-plattformen-experimentell) · [Grenzen](#stand-und-grenzen)
 
-> **In English:** A study tutor for university STEM exercises (physics, maths, electrical engineering, engineering mechanics) at German-speaking universities, packaged as a Claude Skill plus a generated plugin and system prompt for other chatbots. It explains the idea and asks guiding questions before revealing solutions, and it finds the first error in your own attempt. Answers are in German by default; Arabic, Turkish, French, English or Urdu on request. The docs are in German because the target audience studies in German.
+> **In English:** A study tutor for university STEM exercises (physics, maths, electrical engineering, engineering mechanics) at German-speaking universities, packaged as a Claude Skill plus a generated plugin and system prompt for other chatbots. It explains the idea and asks guiding questions before revealing solutions, and it finds the first error in your own attempt. Answers are in German by default; Arabic, Turkish, French, English or Persian on request. The docs are in German because the target audience studies in German.
 
 ## Was der Tutor macht
 
 - **Erst verstehen:** erklärt Thema und nötige Gleichungen mit einem anschaulichen Bild und einem Kernsatz, stellt Leitfragen und findet den ersten Fehler im eigenen Rechenweg.
 - **Lösung erst auf Abruf:** Die Lösung kommt erst, wenn du `lösung` schreibst. Für die Klausurvorbereitung gibt es `kurz` und `klausur`.
 - **Foto genügt:** Aufgabe fotografieren, optional ein Befehlswort dazu, fertig.
-- **Sprachen:** Deutsch; Erklärungen auf Wunsch auf Arabisch, Türkisch, Französisch, Englisch oder Urdu. Fachbegriffe und Klausur-Lösung bleiben deutsch.
+- **Sprachen:** Deutsch; Erklärungen auf Wunsch auf Arabisch, Türkisch, Französisch, Englisch oder Persisch. Fachbegriffe und Klausur-Lösung bleiben deutsch.
 - **Feste Struktur:** kurze Schritte, immer gleiche Abschnitte. ADHS-freundlich gestaltet; das ist ein Designziel, keine nachgewiesene Wirkung.
 
 Kein Programm und kein Dienst: Der Tutor ist eine Anweisung, die im Chatbot deiner Wahl läuft. Er speichert nichts selbst.
@@ -166,7 +166,7 @@ Ein Befehlswort steht am Anfang der Nachricht (z. B. Foto + „tipp“). Mit `!`
 
 - **Lösungsschutz:** Erklär, Thema, Tipp und Voll halten die Originalrechnung, vollständige Beweise und Auswahlantworten zurück, auch in Bildern und Code. Skizzen zeigen Gegebenes; ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Check korrigiert nur die erste fehlerhafte Stelle. `lösung` ruft den eindeutig gemeinten Inhalt ab; bei mehreren offenen Aufgaben oder Fragen wird einmal nachgefragt. Kurz, Mittel, Lang und Klausur erlauben die Lösung. 🔒 allein versteckt keinen Text. Native Prüfung dieser Regeln bleibt offen.
 - **Dauermodus:** `!an tipp` (oder ein anderer Befehl) gilt für alle folgenden Aufgaben, bis `!aus` kommt.
-- **Sprache:** `[ar]` Arabisch, `[tr]` Türkisch, `[fr]` Französisch, `[en]` Englisch, `[ur]` Urdu, `[de]` zurück, oder `!sprache ar` usw. Ohne Wunsch antwortet der Tutor auf Deutsch, auch wenn du anders schreibst. Überschriften, Aufgabentext und Klausur-Lösung bleiben deutsch, damit das Prüfungsvokabular mitgelernt wird.
+- **Sprache:** `[ar]` Arabisch, `[tr]` Türkisch, `[fr]` Französisch, `[en]` Englisch, `[fa]` Persisch, `[de]` zurück, oder `!sprache ar` usw. Ohne Wunsch antwortet der Tutor auf Deutsch, auch wenn du anders schreibst. Überschriften, Aufgabentext und Klausur-Lösung bleiben deutsch, damit das Prüfungsvokabular mitgelernt wird.
 - **Kurspaket (optional):** eine Markdown-Datei mit Notation und Stoffumfang eines Kurses, z. B. [kurse/mpg1.md](kurse/mpg1.md). In Claude ein Projekt anlegen und die Datei dort als Projektwissen hochladen. Sie gehört nicht zum Skill; bei Bezeichnungen und Stoffumfang hat sie Vorrang.
 
 ## Andere Plattformen (experimentell)
