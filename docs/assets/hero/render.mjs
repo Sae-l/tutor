@@ -1,17 +1,23 @@
 // Erzeugt docs/assets/hero-light.gif, hero-dark.gif und das Vorschaubild hero-light.png (og:image) aus hero.html.
-// Braucht playwright-core (nicht Teil des Repos), Chromium und ffmpeg:
-//   CHROME=/pfad/chrome FFMPEG=/pfad/ffmpeg node docs/assets/hero/render.mjs
+// Braucht playwright-core (global: npm i -g playwright-core), installiertes Chrome und ffmpeg im PATH:
+//   node docs/assets/hero/render.mjs
+// Optional: CHROME=/pfad/chrome statt des installierten Chrome, FFMPEG=/pfad/ffmpeg.
 // Die ffmpeg-Version aus ms-playwright reicht nicht (kein PNG-Eingang). FRAMES setzt optional den Ordner für Zwischenbilder.
-import { chromium } from "playwright-core";
-import { execFileSync } from "node:child_process";
+import { execFileSync, execSync } from "node:child_process";
+import { createRequire } from "node:module";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
+// ESM-Importe sehen globale Pakete nicht; daher lokal versuchen, sonst aus `npm root -g` laden.
+const { chromium } = await import("playwright-core").catch(() => {
+  const root = execSync("npm root -g", { encoding: "utf8" }).trim();
+  return createRequire(join(root, "_"))("playwright-core");
+});
 const fps = 15, width = 960;
-const browser = await chromium.launch({ executablePath: process.env.CHROME });
+const browser = await chromium.launch(process.env.CHROME ? { executablePath: process.env.CHROME } : { channel: "chrome" });
 const page = await browser.newPage({ viewport: { width: 1200, height: 600 } });
 
 for (const theme of ["light", "dark"]) {
