@@ -48,6 +48,7 @@ Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix u
 | Schrift | Source Serif 4 und Atkinson Hyperlegible Next statt Geist | Serifen passen zu MathML-Formeln; Atkinson unterscheidet Zeichen bei kleinen Größen |
 | Fächer im Titel | MINT mit Physik, Mathe, E-Technik, Mechanik | der Skill deckt seit v0.3.0-rc.2 alle vier ab |
 | Wo wird dokumentiert? | Einzelheiten einmal neben dem Code, `CLAUDE.md` mit kurzem Stand und Verweis, Vault mit Zusammenfassung und Verweis, `CHANGELOG.md` mit einer Zeile | keine widersprüchlichen Kopien; neue Sitzungen finden alles ohne Suche |
+| Version nach dem Protokoll G29/D3 | v0.3.0-rc.5 als „Latest“, Vorabversion ohne bestandenes Gate | Korrekturen an Tabelle, Ziffern und Reihenfolge sollen beim Download ankommen |
 | Welche Version gilt nach dem Sprachwechsel als aktuell? | v0.3.0-rc.4 als „Latest“, Vorabversion ohne bestandenes Gate | Website und Download sollen dieselbe Sprache nennen; rc.3 enthielt noch Urdu |
 | Sechste Erklärsprache | Persisch (`[fa]`) statt Urdu (`[ur]`); datierte Notizen und Protokolle bleiben unverändert | Entscheidung des Maintainers; Persisch nutzt dieselbe Schrift wie Arabisch (Noto Naskh Arabic), die Nastaliq-Schrift entfällt |
 | Beispiel „So sieht das aus“ im README | bleibt wörtlich M04-A vom 2026-10-15 | ersetzen erst mit einem neuen Protokoll von rc.3; ein erfundenes Beispiel wäre kein Nachweis |

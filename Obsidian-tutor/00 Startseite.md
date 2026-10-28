@@ -63,7 +63,7 @@ Ein Doppelklick auf eine Karte öffnet die zugehörige Notiz. Die Graph-Ansicht 
 | Wissenslandkarte | Canvas mit 20 Dateikarten und fünf Themengruppen; zusätzlich Mermaid-Abläufe und Graph-Verbindungen. |
 | Lokale Prüfung | 22 Repository-Strukturtests bestanden; elf Modi; alle 43 Quellhashes stimmen mit dem eingecheckten Stand überein. |
 | GitHub-Recherche zur Produktbasis | Öffentlich; `main` und lokaler Basiscommit gleich; Schutzkennzeichen gesetzt; CI für diesen Basiscommit erfolgreich. |
-| Verteilung und Website | Aktuell `v0.3.0-rc.4` („Latest“, fünf Assets), vorher `v0.3.0-rc.3`; Website lädt `v0.3.0-rc.4` herunter. |
+| Verteilung und Website | Aktuell `v0.3.0-rc.5` („Latest“, fünf Assets), vorher `v0.3.0-rc.4`; Website lädt `v0.3.0-rc.5` herunter. |
 | Plattformverhalten | Teilversuche vorhanden; vollständige Abnahme von Claude, ChatGPT und Gemini weiterhin offen. |
 
 Nachweise und genaue Grenzen: [[13 Quellen und Nachweise]] und [[16 Prüfergebnis]].

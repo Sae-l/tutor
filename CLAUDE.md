@@ -25,8 +25,11 @@
 - Neue Version als aktuell: Versionsnummer in `docs/index.html` (Download, `softwareVersion`, `downloadUrl`, Fußzeile, Einrichten, FAQ), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
 
-## Stand v0.3.0-rc.4 (2026-10-28, aktuelle Version „Latest“)
-- Persisch statt Urdu (#90); sonst Lehrverhalten wie rc.3. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13 nennen rc.4. Release ohne bestandenes Gate, wie rc.3 als „Latest“ markiert. G29 und D3 am 2026-10-28 auf claude.ai bestanden mit Anmerkungen (`tests/protokolle/2026-10-28-claude-ai-g29-d3-persisch.md`); Vorschläge 1–3 danach umgesetzt (Markdown-Tabelle, lateinische Ziffern, 🔒 nach ➡️ in `erklaer.md`), nicht nativ geprüft und noch nicht veröffentlicht; offen bleibt die Entscheidung zu blanken Sprachcodes (`fa`, `ar`).
+## Stand v0.3.0-rc.5 (2026-10-28, aktuelle Version „Latest“)
+- Korrekturen aus dem Protokoll G29/D3 (#93): Markdown-Tabelle in „Gegeben / Gesucht“, lateinische Ziffern auch auf Arabisch/Persisch, in `erklär` 🔒 nach ➡️. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13/19 nennen rc.5. Ohne bestandenes Gate, wie rc.3 und rc.4 als „Latest“. Nicht nativ geprüft; offen: blanke Sprachcodes (`fa`, `ar`).
+
+## Stand v0.3.0-rc.4 (2026-10-28)
+- Persisch statt Urdu (#90); sonst Lehrverhalten wie rc.3. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13 nennen rc.4. Release ohne bestandenes Gate, wie rc.3 als „Latest“ markiert. G29 und D3 am 2026-10-28 auf claude.ai bestanden mit Anmerkungen (`tests/protokolle/2026-10-28-claude-ai-g29-d3-persisch.md`); Vorschläge 1–3 danach umgesetzt (Markdown-Tabelle, lateinische Ziffern, 🔒 nach ➡️ in `erklaer.md`), nicht nativ geprüft, veröffentlicht in rc.5; offen bleibt die Entscheidung zu blanken Sprachcodes (`fa`, `ar`).
 
 ## Persisch statt Urdu (2026-10-28)
 - Sechste Erklärsprache ist Persisch (`[fa]`) statt Urdu (`[ur]`): Skill, `dist/`, Website (Noto Naskh Arabic, Nastaliq-Schrift entfernt), Doku, Tests und Vault. Datierte Planungsnotizen, Protokolle und alte CHANGELOG-Einträge nennen weiterhin Urdu, weil sie frühere Stände beschreiben. G29 und D3 auf Persisch nicht nativ geprüft.
@@ -76,5 +79,5 @@
 
 ## Offene Punkte
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
-2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.4 hochladen.
-3. v0.3.0-rc.4 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.3); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
+2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.5 hochladen.
+3. v0.3.0-rc.5 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.4); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
