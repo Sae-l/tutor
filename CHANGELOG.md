@@ -4,7 +4,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.3.0-rc.4] – 2026-10-28
+
+Vorabversion mit Persisch statt Urdu; sonst Lehrverhalten wie 0.3.0-rc.3. Auf Entscheidung des Maintainers wie rc.3 als „Latest“ veröffentlicht, ohne bestandenes Gate.
+
 ### Geändert
+- Pluginversion und erzeugte Ausgaben auf `0.3.0-rc.4`; Website (Download, strukturierte Daten, Fußzeile, Einrichten, FAQ), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, `CLAUDE.md` und Vault-Notizen 00, 07, 11, 13 und 19 nennen rc.4 als aktuelle Version. Release-Notizen in `docs/releases/v0.3.0-rc.4.md`.
 - Erklärsprache Persisch (Farsi, `[fa]`, `!sprache fa`) ersetzt Urdu (`[ur]`). Sprachreferenz mit Signalen, Beispielbegriff امپدانس und Schreibregel (persische ی und ک statt arabischer ي und ك), LaTeX-Regeln, Router, Hilfekarte, Strukturtest, Akzeptanzfälle G29 und D3, README, `docs/KONZEPT.md`, `docs/CHATGPT.md`, Glossar, Paketbeschreibung, Vault-Notizen 01, 07, 11 und 19 sowie `dist/` nachgeführt. Landingpage: Sprachchip und Beispiel auf Persisch in Noto Naskh Arabic; Noto Nastaliq Urdu und ihre Lizenzdatei entfernt. Datierte Planungsnotizen, Testprotokolle und ältere Einträge hier bleiben unverändert. G29 und D3 auf Persisch nicht nativ geprüft.
 - Projektwissen vom 2026-10-28 dokumentiert: neue `docs/DESIGN.md` mit den geltenden Gestaltungsregeln samt Begründung (ersetzt die lokale, veraltete Fassung vom 2026-10-15). Vault-Notiz 05 nennt die Werkzeuge der README-Animation mit Herkunft, Notiz 18 den Ablauf zum Neuerzeugen und die aktuelle Testzahl (22), Notiz 19 die Entscheidungen vom 28.10. mit Begründung. `CLAUDE.md` verweist darauf und vermerkt die veraltete lokale Skill-Installation.
 - Dokumentation der README-Animation: `docs/assets/hero/README.md` beschreibt Ablauf, Werkzeuge (Herkunft und Zweck), Technik, Inhaltsregeln, Begründung und Grenzen. `CLAUDE.md` nennt den Ordner, den Website-Stand vom 2026-10-28, eine Checkliste für Versionswechsel und die Regel, jede Änderung samt Begründung und Werkzeugen zu dokumentieren. Vault-Notiz 11 verweist auf die Anleitung.
