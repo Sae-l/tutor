@@ -4,7 +4,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.3.0-rc.5] – 2026-10-28
+
+Vorabversion mit den Korrekturen aus dem Protokoll G29/D3; wie rc.3 und rc.4 auf Entscheidung des Maintainers als „Latest“ veröffentlicht, ohne bestandenes Gate.
+
 ### Geändert
+- Pluginversion und erzeugte Ausgaben auf `0.3.0-rc.5`; Website (Download, strukturierte Daten, Fußzeile, Einrichten, FAQ), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, `CLAUDE.md` und Vault-Notizen 00, 07, 11, 13 und 19 nennen rc.5 als aktuelle Version. Release-Notizen in `docs/releases/v0.3.0-rc.5.md`.
 - Befunde aus dem Protokoll vom 2026-10-28 umgesetzt: „📋 Gegeben / Gesucht“ ist ausdrücklich eine Markdown-Tabelle mit Kopf- und Trennzeile, nie ein Codeblock (`antwortvorlage.md`); Zahlen auch auf Arabisch und Persisch und in Nummerierungen in lateinischen Ziffern (`sprache.md`); in `erklär` steht „🔒 Lösungen“ jetzt nach „➡️ Nächster Schritt“, wie in der Vorlage (`erklaer.md` widersprach ihr). G29 entsprechend geschärft. Nicht nativ geprüft.
 
 ### Hinzugefügt
