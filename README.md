@@ -2,8 +2,8 @@
 
 <a href="https://sae-l.github.io/tutor/">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.png">
-    <img alt="Landingpage des Tutors: Verstehen statt abschreiben – mit Ausschnitt einer Antwort im Modus Erklär" src="docs/assets/hero-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.gif">
+    <img alt="Animation: Der Tutor erklärt eine Wurfaufgabe (erklär), stellt Leitfragen (tipp) und findet den ersten Fehler im eigenen Rechenweg (check); die Lösung bleibt bis „lösung“ gesperrt" src="docs/assets/hero-light.gif" width="960">
   </picture>
 </a>
 
