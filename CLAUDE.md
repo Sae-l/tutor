@@ -26,7 +26,7 @@
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
 
 ## Mehrsprachige Landingpage (2026-10-30, Map #96, PR 2)
-- Seiten in de, en, tr, fr, ar, fa; ar und fa gespiegelt. Sprachknopf (Variante C aus #98) öffnet einen Dialog; `hreflang` je Seite. Übersetzt von Claude; Prüfung durch Saeed in #101 steht aus, Veröffentlichung (#102) erst danach. Beispielüberschriften, Aufgabentext und Klausur-Lösung bleiben deutsch wie im Produkt. Tests: Struktur und Zahlen je Sprache gegen Deutsch. Belegbilder mit `node site/screenshots.mjs`. Offen in der Map: README-Verweis auf die Sprachseiten, `sitemap.xml`.
+- Seiten in de, en, tr, fr, ar, fa; ar und fa gespiegelt. Sprachknopf (Variante C aus #98) öffnet einen Dialog; `hreflang` je Seite. Übersetzt und geprüft von Claude (Saeed hat die Prüfung in #101 übergeben, keine Muttersprachprüfung); live seit 2026-10-30 (#105, 1c8ee93), alle sechs URLs geprüft. Map #96 geschlossen. Beispielüberschriften, Aufgabentext und Klausur-Lösung bleiben deutsch wie im Produkt. Tests: Struktur und Zahlen je Sprache gegen Deutsch. Belegbilder mit `node site/screenshots.mjs`. README-Verweis auf die Sprachseiten und `sitemap.xml` bewusst nicht gemacht (Out of scope in #96).
 
 ## Stand v0.3.0-rc.5 (2026-10-28, aktuelle Version „Latest“)
 - Korrekturen aus dem Protokoll G29/D3 (#93): Markdown-Tabelle in „Gegeben / Gesucht“, lateinische Ziffern auch auf Arabisch/Persisch, in `erklär` 🔒 nach ➡️. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13/19 nennen rc.5. Ohne bestandenes Gate, wie rc.3 und rc.4 als „Latest“. Nicht nativ geprüft; offen: blanke Sprachcodes (`fa`, `ar`).
