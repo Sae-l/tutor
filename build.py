@@ -24,7 +24,30 @@ SKILL = ROOT / "tutor"
 # Internal budget, not an official platform limit.
 KERN_LIMIT = 4000
 
-router = (SKILL / "SKILL.md").read_text(encoding="utf-8").split("---", 2)[2].strip()
+# ChatGPT-only adaptations: preserve the Claude/Gemini source and fail closed
+# when source wording changes instead of silently shipping an obsolete override.
+texts = {p: p.read_text(encoding="utf-8") for p in SKILL.rglob("*.md")}
+try:
+    adaptations = json.loads((ROOT / "packaging/chatgpt-overrides.json").read_text(encoding="utf-8"))
+except (OSError, ValueError) as error:
+    sys.exit(f"Build abgebrochen: ChatGPT-Anpassung: {error}")
+check(isinstance(adaptations, dict) and bool(adaptations), "ChatGPT-Anpassung muss ein nichtleeres Objekt sein")
+adapted = set()
+for relative, replacements in adaptations.items():
+    path = SKILL / relative
+    check(relative in {p.relative_to(SKILL).as_posix() for p in texts},
+          f"ChatGPT-Anpassung: unbekannte Quelle {relative}")
+    check(isinstance(replacements, list) and bool(replacements), f"ChatGPT-Anpassung: leere Liste für {relative}")
+    for replacement in replacements:
+        check(isinstance(replacement, dict) and set(replacement) == {"old", "new"}
+              and all(isinstance(v, str) and v for v in replacement.values()),
+              f"ChatGPT-Anpassung: ungültiger Ersatz für {relative}")
+        check(texts[path].count(replacement["old"]) == 1,
+              f"ChatGPT-Anpassung: Quelle muss genau einmal passen: {relative}")
+        texts[path] = texts[path].replace(replacement["old"], replacement["new"], 1)
+    adapted.add(path)
+
+router = texts[SKILL / "SKILL.md"].split("---", 2)[2].strip()
 MODES = re.findall(r"`modes/([a-z]+)\.md`", router)
 check(len(MODES) == len(set(MODES)) == 11, f"Befehlstabelle nennt {len(MODES)} Moduldateien statt 11")
 REFS = ("sprache", "didaktik", "antwortvorlage", "latex-regeln")
@@ -32,13 +55,13 @@ REFS = ("sprache", "didaktik", "antwortvorlage", "latex-regeln")
 files = [SKILL / "references" / f"{r}.md" for r in REFS] + [SKILL / "modes" / f"{m}.md" for m in MODES]
 for f in files:
     check(f.is_file(), f"fehlt: {f.relative_to(ROOT)}")
-headings = {f: f.read_text(encoding="utf-8").split("\n", 1)[0].lstrip("# ") for f in files}
+headings = {f: texts[f].split("\n", 1)[0].lstrip("# ") for f in files}
 
 # Einfaches $ rendert in Claude und Gemini (Skill-ZIP aus tutor/), nicht in ChatGPT:
 # alle Ausgaben in dist/ bekommen deshalb die Klartextregel für Formelzeichen im Fließtext.
 LATEX = SKILL / "references" / "latex-regeln.md"
 INLINE = re.compile(r"<!-- fliesstext -->\n.*?<!-- /fliesstext -->\n", re.S)
-sources = {f: f.read_text(encoding="utf-8") for f in files}
+sources = {f: texts[f] for f in files}
 check(len(INLINE.findall(sources[LATEX])) == 1, "latex-regeln.md braucht genau einen <!-- fliesstext -->-Block")
 universal = (ROOT / "packaging/latex-fliesstext-universal.md").read_text(encoding="utf-8")
 sources[LATEX] = INLINE.sub(lambda _: universal, sources[LATEX])
@@ -122,8 +145,20 @@ outputs = {
     "chatgpt/plugins/tutor/assets/logo.svg": (ROOT / "packaging/logo.svg").read_bytes(),
 }
 for source in [SKILL / "SKILL.md"] + files:
-    data = sources[LATEX].encode("utf-8") if source == LATEX else source.read_bytes()
+    data = sources[LATEX].encode("utf-8") if source == LATEX else (
+        texts[source].encode("utf-8") if source in adapted else source.read_bytes())
     outputs["chatgpt/plugins/tutor/skills/tutor/" + source.relative_to(SKILL).as_posix()] = data
+
+# Claude Code previously shared this folder. Keep its pre-adaptation bytes in
+# a separate package so ChatGPT-specific instructions cannot leak across hosts.
+for relative, data in list(outputs.items()):
+    prefix = "chatgpt/plugins/tutor/"
+    if relative.startswith(prefix):
+        outputs[relative.replace(prefix, "claude/plugins/tutor/", 1)] = data
+for source in [SKILL / "SKILL.md"] + files:
+    data = INLINE.sub(lambda _: universal, source.read_text(encoding="utf-8")).encode("utf-8") \
+        if source == LATEX else source.read_bytes()
+    outputs["claude/plugins/tutor/skills/tutor/" + source.relative_to(SKILL).as_posix()] = data
 
 archive = BytesIO()
 with ZipFile(archive, "w") as bundle:

@@ -1,7 +1,7 @@
 ---
 title: Claude, ChatGPT und Gemini
 tags: [tutor, kompatibilitaet]
-updated: 2026-10-27
+updated: 2026-10-30
 status: abnahme-offen
 ---
 
@@ -85,3 +85,9 @@ Anweisungen und Dateiquellen beschreibt die [offizielle Google-Anleitung](https:
 | Kontextgrenzen und Speicher | Getrennte Gespräche und Wiederholung; keine unbegrenzte Persistenz annehmen. |
 
 Anleitungen erneut geprüft am 2026-10-16; am 2026-10-20 nach `docs/planung/2026-10-20-plattform-anforderungen.md` angeglichen: Gemini-Skill mit `tutor-skill.zip` als Hauptweg, Gem auslaufend. Zur Vault-Erstellung wurde Tutor auf keiner Plattform im Benutzerkonto ausgeführt. Historie und geplante Architektur: [[19 Entscheidungen und Gesprächskontext]].
+
+## ChatGPT-Korrekturstand vom 30.10.2026
+
+Der unveröffentlichte ChatGPT-Export verwendet geprüfte Anpassungen aus `packaging/chatgpt-overrides.json`: neue Aufgaben erben keinen Einzelbefehl (#95), Gleichungsnummern stehen außerhalb von LaTeX (#107), kontrollierte Skizzen werden als PNG eingebettet. `tutor/` bleibt für Claude/Gemini unverändert. Strukturprüfung und zwei begrenzte agentische Dialoge ersetzen keine native ChatGPT-/Android-Abnahme. Der bisherige Release-Download rc.5 enthält den Patch nicht. Vollständiger Nachweis und Restprüfungen: `tests/protokolle/2026-10-30-chatgpt-reparatur.md`.
+
+Claude Code verwendet nun `dist/claude/plugins/tutor/` mit unverändertem bisherigen Verhalten; sein Marketplace wurde entsprechend umgestellt, damit ChatGPT-Anpassungen nicht übernommen werden.

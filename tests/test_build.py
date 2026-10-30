@@ -15,6 +15,58 @@ LANGS = ("[de]", "[ar]", "[tr]", "[fr]", "[en]", "[fa]")
 
 
 class BuildTests(unittest.TestCase):
+    def test_claude_code_package_keeps_pre_adaptation_behavior(self):
+        self.assertEqual(self.build().returncode, 0)
+        plugin = self.root / "dist/claude/plugins/tutor/skills/tutor"
+        for relative in ("SKILL.md", "modes/skizze.md"):
+            self.assertTrue((plugin / relative).is_file(), "Claude Code needs a separate package")
+            self.assertEqual((plugin / relative).read_bytes(),
+                             (self.root / "tutor" / relative).read_bytes())
+        # Preserve the old shared package's existing inline-symbol compatibility rule.
+        latex = self.read("tutor/references/latex-regeln.md")
+        expected = re.sub(r"<!-- fliesstext -->\n.*?<!-- /fliesstext -->\n",
+                          lambda _: self.read("packaging/latex-fliesstext-universal.md"), latex, flags=re.S)
+        self.assertEqual((plugin / "references/latex-regeln.md").read_text(encoding="utf-8"), expected)
+
+    def test_chatgpt_adaptations_reach_plugin_and_project_but_not_source(self):
+        # Missing application of platform adaptations used to silently ship the old rules.
+        source = self.read("tutor/SKILL.md")
+        (self.root / "packaging/chatgpt-overrides.json").write_text(json.dumps({
+            "SKILL.md": [{"old": "Sonst gilt der letzte Befehl; Sprache separat.",
+                          "new": "Neue Aufgabe: Erklär; Sprache separat."}],
+            "modes/skizze.md": [{"old": "# Modus Skizze", "new": "# Modus Skizze für ChatGPT"}],
+        }), encoding="utf-8")
+        self.assertEqual(self.build().returncode, 0)
+        self.assertEqual(self.read("tutor/SKILL.md"), source)
+        for rel in ("dist/system-prompt.md", "dist/kern.md",
+                    "dist/chatgpt/plugins/tutor/skills/tutor/SKILL.md"):
+            text = self.read(rel)
+            self.assertIn("Neue Aufgabe: Erklär; Sprache separat.", text)
+            self.assertNotIn("Sonst gilt der letzte Befehl", text)
+        self.assertIn("# Modus Skizze für ChatGPT", self.read("dist/system-prompt.md"))
+        self.assertIn("# Modus Skizze für ChatGPT",
+                      self.read("dist/chatgpt/plugins/tutor/skills/tutor/modes/skizze.md"))
+
+    def test_invalid_chatgpt_adaptations_preserve_previous_outputs(self):
+        self.assertEqual(self.build().returncode, 0)
+        before = {p.relative_to(self.root): p.read_bytes()
+                  for directory in ("dist", "docs") for p in (self.root / directory).rglob("*") if p.is_file()}
+        invalid = ["{", "[]", '{}', '{"../outside.md": []}', '{"modes/missing.md": []}',
+                   '{"SKILL.md": [{"old": "missing phrase", "new": "x"}]}',
+                   '{"SKILL.md": [{"old": "Modus", "new": "x"}]}',
+                   '{"SKILL.md": [{"old": "", "new": "x"}]}',
+                   '{"SKILL.md": [{"old": 1, "new": "x"}]}',
+                   '{"SKILL.md": [{"old": "Tutor", "new": null}]}']
+        target = self.root / "packaging/chatgpt-overrides.json"
+        for value in invalid:
+            target.write_text(value, encoding="utf-8")
+            for flags in ((), ("-O",)):
+                result = self.build(*flags)
+                self.assertNotEqual(result.returncode, 0, (value, flags))
+                self.assertIn("ChatGPT-Anpassung", result.stderr)
+                self.assertEqual(before, {p.relative_to(self.root): p.read_bytes()
+                    for directory in ("dist", "docs") for p in (self.root / directory).rglob("*") if p.is_file()})
+
     def test_claude_archive_keeps_source_bytes_with_windows_line_endings(self):
         data = subprocess.check_output(
             ["git", "-c", "core.autocrlf=true", "archive", "--format=zip", "HEAD", "tutor/"], cwd=ROOT)
@@ -246,7 +298,8 @@ class BuildTests(unittest.TestCase):
         for source in sources:
             relative = "skills/tutor/" + source.relative_to(self.root / "tutor").as_posix()
             expected.add(relative)
-            if source.name != "latex-regeln.md":  # bekommt die Klartextregel, siehe test_inline_symbols_…
+            if source.relative_to(self.root / "tutor").as_posix() not in {
+                    "SKILL.md", "modes/skizze.md", "references/latex-regeln.md"}:
                 self.assertEqual((plugin / relative).read_bytes(), source.read_bytes(), relative)
         claude = json.loads((plugin / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
         self.assertNotIn("extensions", claude)
@@ -342,7 +395,7 @@ with patch.object(Path, "rename", fail_publish):
             self.assertEqual(depth, 0, formula)
 
     def test_repo_marketplaces_ship_built_plugin(self):
-        # Claude Code and Codex install the same generated folder, never the whole repository.
+        # Host-specific packages prevent ChatGPT adaptations from reaching Claude Code.
         plugin = ROOT / "dist/chatgpt/plugins/tutor"
         chatgpt = json.loads((ROOT / "packaging/chatgpt-plugin.json").read_text(encoding="utf-8"))
         claude = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
@@ -351,7 +404,9 @@ with patch.object(Path, "rename", fail_publish):
         codex_entry, = codex["plugins"]
         self.assertEqual((claude["name"], claude_entry["name"]), ("tutor", "tutor"), "README-Befehl tutor@tutor")
         self.assertEqual((codex["name"], codex_entry["name"]), ("tutor", "tutor"))
-        self.assertEqual((ROOT / claude_entry["source"]).resolve(), plugin.resolve())
+        claude_plugin = ROOT / "dist/claude/plugins/tutor"
+        self.assertEqual((ROOT / claude_entry["source"]).resolve(), claude_plugin.resolve())
+        self.assertNotEqual(claude_plugin.resolve(), plugin.resolve())
         self.assertEqual((ROOT / codex_entry["source"]["path"]).resolve(), plugin.resolve())
         self.assertEqual(claude_entry["version"], chatgpt["version"])
         self.assertFalse((ROOT / ".claude-plugin/plugin.json").exists(), "Manifest kommt aus dist/")

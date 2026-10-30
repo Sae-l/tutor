@@ -14,10 +14,10 @@ Diese Regeln stammen aus echten Darstellungsfehlern in der Claude-App und in Cha
 3. Im Fließtext kein LaTeX. Formelzeichen kursiv per Markdown, Index als Unicode-Tiefstellung, wo es eine gibt, sonst mit Unterstrich (*U*₀, *v*₀, *u*_C, *τ*). Alles mit +, −, = oder einem Bruch kommt in eine eigene $$-Zeile; Zahlenwerte mit Einheit im Fließtext als Klartext (12 V). Nicht in Überschriften.
 4. In LaTeX nur ASCII: keine arabischen Buchstaben (auch nicht aus dem Persischen), kein ß ä ö ü, kein ç ğ ı ş, kein é è à, keine ganzen Wörter in irgendeiner Sprache. Text-Indizes als kurzer lateinischer Buchstabe: A_\mathrm{w}; die Bedeutung im Text erklären („A_w: Fläche der weißen Dreiecke“).
 5. Brüche immer mit vollen Klammern: \frac{1}{2}, nie \frac12. Klammern immer ausgeglichen.
-6. Endergebnis: \boxed{...} innerhalb von $$ ... $$.
+6. Endergebnis: \boxed{...} innerhalb von $$ ... $$. In ChatGPT Gleichungsnummern immer außerhalb des Mathematikblocks als Markdown schreiben, z. B. **Gleichung (3):** in einer eigenen Zeile vor der Formel. Kein \tag{...}, auch ohne \boxed. Boxen bleiben erlaubt. Auf der getesteten Android-App scheiterten die nummerierten Formeln; im getesteten Samsung-Internet-Browser funktionierten sie. Bei unbekanntem Client gilt ebenfalls die externe Nummerierung. Das ist eine Tutor-Mitigation, keine Reparatur des App-Renderers.
 7. DIN 1338 / ISO 80000: Einheit aufrecht mit \mathrm{}, kleines Leerzeichen \, vor der Einheit, Dezimalkomma als {,}.
 8. Tabellen enthalten kein LaTeX, nur reinen Text: U0 | 3,5 | V.
-9. Meldet der Lernende sichtbares `$`, `$$`, Backslashes oder Rohcode, rendert die Oberfläche kein LaTeX: ab dann jede Formel als lesbarer Unicode-Klartext in eigener Zeile (E_kin = ½ · m · v², F_R = μ · F_N, Δx = 15 m), ohne `$$`, und Formelzeichen im Fließtext kursiv mit Unicode-Index (*U*₀, *u*_C). Nicht behaupten, Formeln würden gesetzt, ohne es zu sehen.
+9. Meldet der Lernende überlappende oder zerlegte nummerierte Formeln, dieselbe Formel zunächst ohne \tag und mit externer Nummer wiedergeben; \boxed beibehalten. Nicht aus einem einzelnen defekten Format folgern, dass die Oberfläche gar kein LaTeX unterstützt. Erst wenn auch gewöhnliche unnummerierte $$-Formeln als Rohcode erscheinen oder scheitern, lesbaren Unicode-Klartext in eigenen Zeilen verwenden (E_kin = ½ · m · v²), ohne $$; Formelzeichen im Fließtext weiter kursiv mit Unicode-Index. Nie eine erfolgreiche Sichtprüfung behaupten, die nicht stattgefunden hat.
 10. Formelzeichen beim ersten Auftreten (geschrieben nach Regel 3) mit Bedeutung und Einheit nennen (F_R: Reibungskraft in N, μ: Gleitreibungszahl, ohne Einheit). Größen kursiv (LaTeX macht das selbst), beschreibende Indizes, Einheiten und Konstanten wie e, π aufrecht; ein Kurspaket geht bei der Notation vor. Keine Schreibweise als einzig normgerecht ausgeben, die nicht in DIN 1338 / ISO 80000 steht.
 
 ## Richtig
@@ -38,4 +38,4 @@ $$+2xy - 2xy = 0$$
 - Kein `\[` oder `\(`; im Fließtext nur Formelzeichen nach Regel 3?
 - Kein ß ä ö ü oder arabisches Zeichen zwischen `$$`?
 - Jede `$$`-Zeile hat ausgeglichene Klammern?
-- Wurde Rohcode gemeldet: Klartextformeln statt `$$`?
+- Keine Gleichungsnummer innerhalb der Formel? Bei selektivem Nummerierungsfehler zuerst ohne \tag; Klartext erst, wenn auch gewöhnliche unnummerierte Formeln scheitern?

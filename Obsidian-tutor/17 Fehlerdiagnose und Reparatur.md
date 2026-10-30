@@ -69,3 +69,9 @@ flowchart TD
 6. Fehler erst schließen, wenn sein Abschlusskriterium erfüllt ist; ein grüner Strukturtest schließt keinen offenen Verhaltensfehler.
 
 Eine tatsächlich offengelegte vertrauliche Datei wird nach [[10 Sicherheit und Datenschutz]] behandelt. Ein pauschaler Rechtewechsel oder eine abgeschaltete Schutzfunktion ist kein Reparaturschritt.
+
+## ChatGPT-Korrekturstand vom 30.10.2026
+
+Der unveröffentlichte ChatGPT-Export verwendet geprüfte Anpassungen aus `packaging/chatgpt-overrides.json`: neue Aufgaben erben keinen Einzelbefehl (#95), Gleichungsnummern stehen außerhalb von LaTeX (#107), kontrollierte Skizzen werden als PNG eingebettet. `tutor/` bleibt für Claude/Gemini unverändert. Strukturprüfung und zwei begrenzte agentische Dialoge ersetzen keine native ChatGPT-/Android-Abnahme. Der bisherige Release-Download rc.5 enthält den Patch nicht. Vollständiger Nachweis und Restprüfungen: `tests/protokolle/2026-10-30-chatgpt-reparatur.md`.
+
+Claude Code verwendet nun `dist/claude/plugins/tutor/` mit unverändertem bisherigen Verhalten; sein Marketplace wurde entsprechend umgestellt, damit ChatGPT-Anpassungen nicht übernommen werden.

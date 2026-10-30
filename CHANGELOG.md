@@ -4,6 +4,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Behoben — ChatGPT
+- ChatGPT-Adapter in `packaging/chatgpt-overrides.json`: widersprüchlichen Rückgriff auf den letzten Einzelbefehl entfernt (#95), externe Gleichungsnummerierung statt `\tag` und selektiven Klartext-Fallback eingeführt (#107), sichtbare PNG-Einbettung für kontrollierte Skizzen präzisiert. Gemeinsame Claude-/Gemini-Skillquelle bleibt unverändert. Native ChatGPT-/Android-Abnahme steht aus.
+- Build prüft Adapterformat, vorhandene Quelldatei und eindeutige Treffer vor der Ausgabe; ungültige Anpassungen lassen vorherige Pakete und Seiten unverändert, auch mit `python -O`. Drei neue Integrationstests; Pakettest berücksichtigt die drei angepassten Dateien. Claude Code erhält über seinen Marketplace ein separates Paket unter `dist/claude/plugins/tutor/` mit dem bisherigen Verhalten; so erreichen ihn die ChatGPT-Anpassungen nicht. Keine neue stabile Veröffentlichung.
+
 ### Hinzugefügt
 - Landingpage in allen sechs Erklärsprachen (Map #96): neben Deutsch unter `/tutor/` jetzt Englisch, Türkisch, Französisch, Arabisch und Persisch unter `/tutor/<lang>/`, erzeugt aus `site/i18n/<lang>.json`. Arabisch und Persisch gespiegelt (`dir="rtl"`, logische CSS-Eigenschaften, MathML und Code LTR). Sprachknopf in der Kopfzeile öffnet einen Dialog mit allen Seitensprachen (Variante C aus #98) und nimmt den Abschnitt mit. `build.py` setzt je Sprache Schriftpfade, `canonical`, `og:url`, JSON-LD-`url` und `hreflang` (mit `x-default`). Überschriften der Tutor-Antwort, Aufgabentext und Klausur-Lösung im Beispiel bleiben wie im Produkt deutsch. Bis 1023 px steht die Kopfzeile in zwei Reihen. Neuer Test vergleicht je Sprache HTML-Struktur und Zahlen mit Deutsch und prüft Adressen, lateinische Ziffern und persische Buchstaben; `site/screenshots.mjs` macht die Belegbilder und meldet Überlauf. Übersetzungen von Claude, ebenfalls von Claude geprüft (#101, keine Muttersprachprüfung); französische Zeichensetzung mit schmalem geschütztem Leerzeichen. Live seit 2026-10-30.
 
