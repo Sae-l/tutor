@@ -47,7 +47,7 @@ Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix u
 | Wie wird veröffentlicht? | zwei PRs: erst Umbau mit unveränderter Ausgabe, dann Sprachknopf, Übersetzungen und RTL | der Umbau ist ohne Sichtprüfung sicher, weil die Ausgabe gleich bleibt |
 | Wo wird dokumentiert? | im selben PR: `CHANGELOG.md`, `CLAUDE.md`, Vault-Notizen 05, 11 und 19, danach Quellhashes und `verify_vault.py` | Vorgabe des Maintainers |
 
-### PR 2 (implementiert, Prüfung der Übersetzungen offen in #101)
+### PR 2 (implementiert und veröffentlicht in #105; Übersetzungen von Claude geprüft, #101)
 
 | Frage | Entscheidung | Begründung |
 |---|---|---|

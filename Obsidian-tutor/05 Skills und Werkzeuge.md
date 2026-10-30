@@ -40,7 +40,7 @@ updated: 2026-10-30
 | `build.py` mit `re` und `json` | erzeugt `docs/index.html` aus `site/index.template.html` und den Sprachdateien | keine pip-Pakete; prüft Schlüssel, Anführungszeichen und gleiche HTML-Struktur je Sprache |
 | `mattpocock-skills:prototype` | Sprachknopf in drei Varianten auf einer Kopie der echten Seite (#98) | Wegwerf-Branch `prototype/sprachknopf`, nie gemergt; gewählt wurde Variante C |
 | `anthropic-skills:find-skills` (`npx skills find i18n`, `rtl`) | nach fertigen Übersetzungs- oder RTL-Skills suchen | Treffer `ecc:i18n-sync` war schon installiert und deckt Code-Lokalisierung ab, nicht Übersetzung von Seitentexten; daher nichts installiert |
-| Claude (Übersetzung) | `en`, `tr`, `fr`, `ar`, `fa` aus `de.json`; Fachbegriffe wie im Tutor (`tutor/references/sprache.md`) | keine Muttersprachprüfung; Prüfung durch den Maintainer in #101 |
+| Claude (Übersetzung) | `en`, `tr`, `fr`, `ar`, `fa` aus `de.json`; Fachbegriffe wie im Tutor (`tutor/references/sprache.md`) | keine Muttersprachprüfung; die Prüfung (#101) hat Saeed an Claude übergeben: Tests, Zeichensetzung, Screenshots |
 | `site/screenshots.mjs` (`playwright-core` global, installiertes Chrome) | Ganzseiten-Bilder je Sprache bei 1280/375 px hell/dunkel, Dialog am Handy, Überlaufmeldung auch bei 1024 px | lokale Vorschau über `python -m http.server`, kein Beleg für das Deployment |
 
 Ablauf und Begründung der Animation: `docs/assets/hero/README.md`; Gestaltungsregeln: `docs/DESIGN.md`.
