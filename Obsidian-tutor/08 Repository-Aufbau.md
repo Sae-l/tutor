@@ -1,7 +1,7 @@
 ---
 title: Repository und Buildpfad
 tags: [tutor, repository, architektur]
-updated: 2026-10-20
+updated: 2026-10-30
 ---
 
 # Aufbau des GitHub-Repositorys
@@ -36,9 +36,10 @@ tutor/                         ← Git-Wurzel im übergeordneten Arbeitsordner
 │   ├── system-prompt.md
 │   ├── tutor-chatgpt.zip
 │   └── chatgpt/                Marketplace, Plugin und Skill
+├── site/                      Vorlage und Texte der Website je Seitensprache
 ├── tests/                     Struktur, Abnahme und bereinigte Protokolle
 ├── docs/
-│   ├── index.html              Vorgesehene GitHub-Pages-Website
+│   ├── index.html              GitHub-Pages-Website, erzeugt aus site/
 │   ├── fonts/                  Lokale Schriften und Lizenzen
 │   ├── .nojekyll
 │   ├── KONZEPT.md

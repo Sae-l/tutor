@@ -1,4 +1,4 @@
-"""Builds the full prompt, instruction core and local ChatGPT plugin marketplace.
+"""Builds the full prompt, instruction core, local ChatGPT plugin marketplace and landing page.
 
 Source of truth is tutor/. Run: python build.py
 """
@@ -137,6 +137,35 @@ with ZipFile(archive, "w") as bundle:
             bundle.writestr(entry, data)
 outputs["tutor-chatgpt.zip"] = archive.getvalue()
 
+# Landing page: one page per language file in site/i18n/, German at docs/index.html.
+# The version is written once, as softwareVersion in the template.
+SITE = ROOT / "site"
+template = (SITE / "index.template.html").read_text(encoding="utf-8")
+version = re.search(r'"softwareVersion": "([^"]+)"', template)
+check(version, "softwareVersion fehlt in site/index.template.html")
+PLACEHOLDER = re.compile(r"\{\{([\w.]+)\}\}")
+keys = set(PLACEHOLDER.findall(template)) - {"lang", "version"}
+# Texts inside attributes and scripts must not close their quotes.
+quoted = set(re.findall(r"<[^<>]*?\{\{([\w.]+)\}\}", template))
+quoted |= {k for script in re.findall(r"<script.*?</script>", template, re.S) for k in PLACEHOLDER.findall(script)}
+quoted &= keys
+pages = {}
+for path in sorted((SITE / "i18n").glob("*.json")):
+    try:
+        strings = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError as error:
+        sys.exit(f"Build abgebrochen: {path.name}: {error}")
+    check(isinstance(strings, dict) and set(strings) == keys,
+          f"{path.name}: Schlüssel weichen von site/index.template.html ab")
+    check(all(isinstance(v, str) and v.strip() for v in strings.values()), f"{path.name}: leerer Text")
+    bad = sorted(k for k in quoted if set("\"'\\\n") & set(strings[k]))
+    check(not bad, f"{path.name}: gerade Anführungszeichen, Backslash oder Zeilenumbruch in {', '.join(bad)}")
+    page = PLACEHOLDER.sub(lambda m: strings.get(m.group(1), m.group(0)), template)
+    page = page.replace("{{lang}}", path.stem).replace("{{version}}", version.group(1))
+    check("{{" not in page, f"{path.name}: offener Platzhalter")
+    pages[Path("docs") / ("" if path.stem == "de" else path.stem) / "index.html"] = page.encode("utf-8")
+check(Path("docs/index.html") in pages, "site/i18n/de.json fehlt")
+
 dist = ROOT / "dist"
 check(not dist.is_symlink() and dist.resolve() == ROOT.resolve() / "dist",
       "dist muss ein echtes Verzeichnis innerhalb des Repositorys sein")
@@ -167,7 +196,11 @@ finally:
         check(staging.resolve().parent == ROOT.resolve() and staging.name.startswith(".build-"),
               "unsicherer temporärer Pfad")
         shutil.rmtree(staging)
+for relative, data in pages.items():
+    (ROOT / relative).parent.mkdir(parents=True, exist_ok=True)
+    (ROOT / relative).write_bytes(data)
 print(f"dist/system-prompt.md: {len(out)} Zeichen")
 print(f"dist/kern.md: {len(kern)} Zeichen (Limit {KERN_LIMIT})")
 print("dist/chatgpt/: lokaler Marketplace mit Tutor-Plugin")
 print("dist/tutor-chatgpt.zip: Plugin-Archiv für ChatGPT")
+print(f"Landingpage {version.group(1)}: " + ", ".join(p.as_posix() for p in pages))

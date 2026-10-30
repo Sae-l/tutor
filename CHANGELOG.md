@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert
+- Landingpage wird erzeugt: `build.py` baut `docs/index.html` aus `site/index.template.html` und den Texten in `site/i18n/de.json`; die Ausgabe ist byteweise gleich der bisherigen Datei. Die Versionsnummer steht nur noch in `softwareVersion` der Vorlage. Tests prüfen, dass die Seite aktuell ist, alle Sprachdateien dieselben Schlüssel haben und Texte in Attributen und Skripten keine geraden Anführungszeichen enthalten. Vorbereitung für die mehrsprachige Landingpage (Map #96).
+
 ## [0.3.0-rc.5] – 2026-10-28
 
 Vorabversion mit den Korrekturen aus dem Protokoll G29/D3; wie rc.3 und rc.4 auf Entscheidung des Maintainers als „Latest“ veröffentlicht, ohne bestandenes Gate.

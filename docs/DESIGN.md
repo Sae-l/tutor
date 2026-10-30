@@ -1,6 +1,6 @@
 # Gestaltungsregeln: Landingpage und README
 
-Stand 2026-10-28, abgeleitet aus `docs/index.html` (#81…#86) und `docs/assets/hero/hero.html` (#87). Bei Abweichung gilt der Code; diese Datei dann nachziehen. Ersetzt die lokale `DESIGN.md` vom 2026-10-15 (v0.2, KaTeX, „keine Serifenschrift“), die nicht mehr gilt.
+Stand 2026-10-28, abgeleitet aus `docs/index.html` (#81…#86; seit 2026-10-30 erzeugt aus `site/index.template.html` und `site/i18n/`) und `docs/assets/hero/hero.html` (#87). Bei Abweichung gilt der Code; diese Datei dann nachziehen. Ersetzt die lokale `DESIGN.md` vom 2026-10-15 (v0.2, KaTeX, „keine Serifenschrift“), die nicht mehr gilt.
 
 ## Grundhaltung
 

@@ -1,14 +1,14 @@
 ---
 title: Die Website erklärt
 tags: [tutor, website]
-updated: 2026-10-28
+updated: 2026-10-30
 ---
 
 # Die Website
 
 ← [[00 Startseite]] · [[09 Besucher und Inhalte]]
 
-Die README verweist auf die [Tutor-Website](https://sae-l.github.io/tutor/). Maßgebliche lokale Quelle ist `tutor/docs/index.html`, nicht die separate Kopie `landing/index.html`. `CLAUDE.md` beschreibt GitHub Pages aus `main` und `/docs`. Beim erneuten HTTPS-Abruf am 2026-10-16 antwortete die Website mit **HTTP 200**; der HTML-Text entspricht nach Vereinheitlichung von CRLF/LF der lokalen Quelle. Das bestätigt den ausgelieferten Text, nicht Darstellung oder Interaktion im Browser. Die Pages-Konfigurations-API antwortete ohne Anmeldung mit 404; daraus wird kein fehlendes Deployment abgeleitet.
+Die README verweist auf die [Tutor-Website](https://sae-l.github.io/tutor/). Maßgebliche lokale Quelle ist seit 2026-10-30 `tutor/site/` (Vorlage und Texte je Seitensprache), aus der `build.py` die Datei `tutor/docs/index.html` erzeugt; nicht die separate Kopie `landing/index.html`. `CLAUDE.md` beschreibt GitHub Pages aus `main` und `/docs`. Beim erneuten HTTPS-Abruf am 2026-10-16 antwortete die Website mit **HTTP 200**; der HTML-Text entspricht nach Vereinheitlichung von CRLF/LF der lokalen Quelle. Das bestätigt den ausgelieferten Text, nicht Darstellung oder Interaktion im Browser. Die Pages-Konfigurations-API antwortete ohne Anmeldung mit 404; daraus wird kein fehlendes Deployment abgeleitet.
 
 ## Zweck und Inhalte
 
@@ -57,7 +57,7 @@ In rc.3 nennt die Website **30 Modusfälle, 33 Grenzfälle und 12 Schutzregressi
 
 ## Website später ändern
 
-1. `docs/index.html` als Quelle ändern; Deutsch als Besuchersprache und die vorhandenen Sprachbeispiele erhalten.
+1. Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html` ändern, dann `python build.py`; Deutsch als Besuchersprache und die vorhandenen Sprachbeispiele erhalten.
 2. Version, Paketlinks, Moduszahl und Prüfstatus mit README und Protokollen abgleichen.
 3. Mobilansicht, Tastaturbedienung, Kontrast, Kopieren, Links und RTL prüfen. Beim Sprachwechsel müssen deutsche Überschriften erhalten bleiben.
 4. Nach dem Deployment die tatsächliche Website prüfen. Eine lokale Vorschau belegt kein erfolgreiches GitHub-Pages-Deployment.

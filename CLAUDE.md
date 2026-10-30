@@ -8,7 +8,7 @@
 - `tutor/references/` – sprache, didaktik (Aufgabentypen, Lehrhaltung, Lernprinzipien, ADHS, Genauigkeit), antwortvorlage (Abschnitte 0–19, 16 frei), latex-regeln.
 - `kurse/` – optionale Kurspakete (z. B. `mpg1.md`), nicht Teil des Skills.
 - `build.py` → `dist/system-prompt.md`, `dist/kern.md` (intern ≤ 4000 Zeichen), `dist/chatgpt/` (lokaler Marketplace, ein Plugin/Skill) und `dist/tutor-chatgpt.zip` (Pluginarchiv). Modi aus der Befehlstabelle; Paketmetadaten in `packaging/chatgpt-plugin.json`, Installation in `docs/CHATGPT.md`.
-- `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
+- `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage, erzeugt von `build.py` aus `site/index.template.html` und `site/i18n/<sprache>.json` (Texte je Seitensprache, Schlüssel `<abschnitt>.<nr>`; Deutsch nach `docs/index.html`, weitere Sprachen nach `docs/<sprache>/` ab Map #96) (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
 - `docs/assets/hero/` – Quelle (`hero.html`) und Skript (`render.mjs`) der README-Animation `docs/assets/hero-light.gif`/`hero-dark.gif` und des og:image `hero-light.png`. Regeln, Werkzeuge und Begründung in `docs/assets/hero/README.md`.
 - `docs/DESIGN.md` – Gestaltungsregeln für Landingpage und README (Farben, Schriften, Formeln, Bausteine, Bewegung, Texte, Verbote) mit Begründung.
 - `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS14, U01…U14), `protokolle/`.
@@ -17,12 +17,12 @@
 
 ## Arbeitsregeln
 - Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten. `dist/` wird vollständig ersetzt. Änderungen in `CHANGELOG.md` eintragen.
-- Keine generierte Datei von Hand ändern. Kein Hochschul- oder Kursbezug im Skill (Test prüft das).
+- Keine generierte Datei von Hand ändern, auch nicht `docs/index.html`: Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html`, danach `python build.py`. Alle Sprachdateien brauchen dieselben Schlüssel; Texte in Attributen und Skripten ohne gerade Anführungszeichen (sonst bricht der Build ab). Kein Hochschul- oder Kursbezug im Skill (Test prüft das).
 - Neuer Modus: Datei in `tutor/modes/` + Zeile in der Befehlstabelle; Anzahl 11 in `build.py` und Tests anpassen.
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/fa nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 - Alles dokumentieren, damit eine neue Sitzung ohne Nachsuchen weiterarbeiten kann: Änderung in `CHANGELOG.md`, neuen Stand hier in `CLAUDE.md`, neue Regeln, Abläufe, Begründungen und benutzte Werkzeuge in der passenden Doku (z. B. `docs/assets/hero/README.md`, Vault-Notiz). Danach Quellhashes erneuern und `verify_vault.py` laufen lassen.
-- Neue Version als aktuell: Versionsnummer in `docs/index.html` (Download, `softwareVersion`, `downloadUrl`, Fußzeile, Einrichten, FAQ), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
+- Neue Version als aktuell: Versionsnummer für die Website nur in `softwareVersion` in `site/index.template.html` ändern (überall sonst steht `{{version}}`), dann `python build.py`; außerdem README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
 
 ## Stand v0.3.0-rc.5 (2026-10-28, aktuelle Version „Latest“)
