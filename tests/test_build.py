@@ -134,7 +134,7 @@ class BuildTests(unittest.TestCase):
         self.assertNotEqual(self.build().returncode, 0)
         self.assertEqual(before, target.read_bytes())
 
-    def test_landing_page_languages_need_all_keys_and_safe_quotes(self):
+    def test_landing_page_translations_change_only_text(self):
         self.assertEqual(self.build().returncode, 0)
         page = self.root / "docs/index.html"
         before = page.read_bytes()
@@ -144,7 +144,9 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(template.count(version), 1, "Versionsnummer nur in softwareVersion")
         self.assertNotIn(version, self.read("site/i18n/de.json"))
         for broken in ({k: v for k, v in de.items() if k != "head.01"},
-                       {**de, "head.02": 'mit "geraden" Anführungszeichen'}):
+                       {**de, "head.02": 'mit "geraden" Anführungszeichen'},
+                       {**de, "fragen.05": de["fragen.05"].replace("support.claude.com", "example.com")},
+                       {**de, "hero.07": de["hero.07"].replace("{{version}}", "0.0.1")}):
             (self.root / "site/i18n/en.json").write_text(json.dumps(broken), encoding="utf-8")
             result = self.build()
             self.assertNotEqual(result.returncode, 0)

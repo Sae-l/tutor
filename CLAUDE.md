@@ -17,7 +17,7 @@
 
 ## Arbeitsregeln
 - Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten. `dist/` wird vollständig ersetzt. Änderungen in `CHANGELOG.md` eintragen.
-- Keine generierte Datei von Hand ändern, auch nicht `docs/index.html`: Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html`, danach `python build.py`. Alle Sprachdateien brauchen dieselben Schlüssel; Texte in Attributen und Skripten ohne gerade Anführungszeichen (sonst bricht der Build ab). Kein Hochschul- oder Kursbezug im Skill (Test prüft das).
+- Keine generierte Datei von Hand ändern, auch nicht `docs/index.html`: Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html`, danach `python build.py`. Alle Sprachdateien brauchen dieselben Schlüssel; Texte in Attributen und Skripten ohne gerade Anführungszeichen; eine Übersetzung ändert nur Text, nicht HTML-Tags, Links oder `{{version}}` (sonst bricht der Build ab). Kein Hochschul- oder Kursbezug im Skill (Test prüft das).
 - Neuer Modus: Datei in `tutor/modes/` + Zeile in der Befehlstabelle; Anzahl 11 in `build.py` und Tests anpassen.
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/fa nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.

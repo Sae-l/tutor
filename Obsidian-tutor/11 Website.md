@@ -57,7 +57,7 @@ In rc.3 nennt die Website **30 Modusfälle, 33 Grenzfälle und 12 Schutzregressi
 
 ## Website später ändern
 
-1. Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html` ändern, dann `python build.py`; Deutsch als Besuchersprache und die vorhandenen Sprachbeispiele erhalten.
+1. Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html` ändern, dann `python build.py`. Eine Übersetzung ändert nur Text: `build.py` bricht ab, wenn Schlüssel, HTML-Tags, Links oder `{{version}}` von `de.json` abweichen; Deutsch als Besuchersprache und die vorhandenen Sprachbeispiele erhalten.
 2. Version, Paketlinks, Moduszahl und Prüfstatus mit README und Protokollen abgleichen.
 3. Mobilansicht, Tastaturbedienung, Kontrast, Kopieren, Links und RTL prüfen. Beim Sprachwechsel müssen deutsche Überschriften erhalten bleiben.
 4. Nach dem Deployment die tatsächliche Website prüfen. Eine lokale Vorschau belegt kein erfolgreiches GitHub-Pages-Deployment.

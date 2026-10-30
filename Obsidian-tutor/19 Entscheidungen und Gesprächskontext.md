@@ -1,7 +1,7 @@
 ---
 title: Projektentscheidungen und Herkunft
 tags: [tutor, entscheidungen, herkunft]
-updated: 2026-10-28
+updated: 2026-10-30
 status: oeffentliche-zusammenfassung
 ---
 
@@ -36,6 +36,16 @@ Der veröffentlichte Claude-CLI-Teillauf prüfte 16 Fälle, davon drei nicht bes
 Neue Entscheidungen nennen Problem, gewählte Änderung, Begründung, betroffene Quelle und messbare Abnahme. Den Status ausdrücklich als „vorgeschlagen“, „implementiert“ oder „geprüft“ führen. Der Merge eines Plans beweist nur dessen Aufnahme; erst Quelländerungen und passende Tests belegen die Umsetzung.
 
 Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix und Protokolle belegen den Produktstand. [[17 Fehlerdiagnose und Reparatur]] und [[18 Bauanleitung]] beschreiben den Arbeitsweg.
+
+## Entscheidungen vom 30.10.2026 (Map #96, PR 1 implementiert in #103)
+
+| Frage | Entscheidung | Begründung |
+|---|---|---|
+| Wie entstehen Seiten in sechs Seitensprachen? | Eine Vorlage `site/index.template.html`, Texte je Sprache in `site/i18n/<lang>.json`, `build.py` erzeugt `docs/index.html` und `docs/<lang>/index.html`; erzeugte Dateien eingecheckt | statische Seiten ohne JS-Umschaltung werden gefunden und funktionieren ohne Skript; eine Vorlage verhindert auseinanderlaufende Kopien |
+| Was darf eine Übersetzung ändern? | nur Text; Struktur, Zahlen, Links, Download-URL, Version und MathML bleiben wie auf Deutsch, die deutsche Seite byteweise gleich | Vorgabe des Maintainers; der Build prüft Tags, Links und `{{version}}` je Schlüssel gegen `de.json`, Screenshots je Sprache belegen das Layout |
+| Wo steht die Versionsnummer der Website? | nur in `softwareVersion` der Vorlage, sonst `{{version}}` | vorher an sechs Stellen von Hand nachgezogen |
+| Wie wird veröffentlicht? | zwei PRs: erst Umbau mit unveränderter Ausgabe, dann Sprachknopf, Übersetzungen und RTL | der Umbau ist ohne Sichtprüfung sicher, weil die Ausgabe gleich bleibt |
+| Wo wird dokumentiert? | im selben PR: `CHANGELOG.md`, `CLAUDE.md`, Vault-Notizen 05, 11 und 19, danach Quellhashes und `verify_vault.py` | Vorgabe des Maintainers |
 
 ## Entscheidungen vom 28.10.2026 (implementiert, #81…#89)
 

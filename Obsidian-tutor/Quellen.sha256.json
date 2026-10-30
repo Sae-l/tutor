@@ -1,7 +1,7 @@
 {
   "date": "2026-10-26",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt. Am 2026-10-30 Landingpage-Quelle nach site/ verlegt (Map #96, Ausgabe byteweise gleich); Notizen 08 und 11 angepasst.",
+  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt. Am 2026-10-30 Landingpage-Quelle nach site/ verlegt (Map #96, Ausgabe byteweise gleich); Notizen 05, 08, 11 und 19 angepasst.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -105,12 +105,12 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "5e41f1bf43af790978478d42e76cdb7948399823be4c2eecd9036d457fa874be",
+      "sha256": "cb80d1f5fef8d7e2293527d9463246654914e2a9597c6a1d4932c2aba4fca1ef",
       "normalization": "utf8-lf"
     },
     {
       "path": "build.py",
-      "sha256": "7dce8378b4936ea1b0d1f4379d9995a8879414e620508b5bfc3ef582a52e5990",
+      "sha256": "fe98b0945e0f24793f152b4a548f7ffc053f9d2557f4572f0e8621e20dd76d21",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "dacfdc4093e24ddb58cb329c1a1bb21e052cd05a62ca7081966267b57ccfe6fe",
+      "sha256": "b34df0a18f6ca0555b78497eda2d6e49dcdd47db17552ed9ad8bc3fa6514406d",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "6eee07d75b53dd0d8c5052921320ed8557ae0d16c77ec0a410d83a6c7e142147",
+      "sha256": "02e6ff653a42a0890d6f5912680223c279db265ed17d0cb4cc03a3170df3e1d2",
       "normalization": "utf8-lf"
     },
     {

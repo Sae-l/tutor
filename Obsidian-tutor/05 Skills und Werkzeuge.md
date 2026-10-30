@@ -1,7 +1,7 @@
 ---
 title: Verwendete Skills und Werkzeuge
 tags: [tutor, werkzeuge]
-updated: 2026-10-28
+updated: 2026-10-30
 ---
 
 # Skills und Werkzeuge
@@ -30,6 +30,14 @@ updated: 2026-10-28
 | Eingebauter Browser der Claude-App | Live-Seite und README auf github.com ansehen | Sichtprüfung, kein automatischer Test |
 | `impeccable` (Design-Hook) | prüft geschriebene HTML-Dateien auf bekannte Gestaltungsfehler | meldete für `hero.html` keine Befunde; ersetzt keine Sichtprüfung |
 | `find-skills`, `coding-skills:find-skill` | Suche nach passenden Skills | für Animation und Doku-Ablage kein besserer Skill gefunden; nichts Fremdes installiert |
+
+## Mehrsprachige Landingpage (2026-10-30, Map #96)
+
+| Werkzeug oder Skill | Aufgabe | Herkunft und Grenze |
+|---|---|---|
+| `mattpocock-skills:wayfinder` | Map #96 mit Tickets als GitHub-Sub-Issues abarbeiten | ein Ticket je Sitzung; Ablauf in `docs/agents/issue-tracker.md` |
+| Python `html.parser` (Standardbibliothek) | einmalig alle sichtbaren Texte aus `docs/index.html` nach `site/i18n/de.json` ziehen | Hilfsskript nicht im Repository; Beleg ist die byteweise gleiche Ausgabe von `build.py` (`cmp`) |
+| `build.py` mit `re` und `json` | erzeugt `docs/index.html` aus `site/index.template.html` und den Sprachdateien | keine pip-Pakete; prüft Schlüssel, Anführungszeichen und gleiche HTML-Struktur je Sprache |
 
 Ablauf und Begründung der Animation: `docs/assets/hero/README.md`; Gestaltungsregeln: `docs/DESIGN.md`.
 

@@ -150,7 +150,9 @@ quoted = set(re.findall(r"<[^<>]*?\{\{([\w.]+)\}\}", template))
 quoted |= {k for script in re.findall(r"<script.*?</script>", template, re.S) for k in PLACEHOLDER.findall(script)}
 quoted &= keys
 pages = {}
-for path in sorted((SITE / "i18n").glob("*.json")):
+MARKUP = re.compile(r"<[^>]+>|\{\{\w+\}\}")
+markup = None  # German tags, links and {{version}} per key; translations may change only text
+for path in sorted((SITE / "i18n").glob("*.json"), key=lambda p: p.stem != "de"):
     try:
         strings = json.loads(path.read_text(encoding="utf-8"))
     except ValueError as error:
@@ -160,6 +162,10 @@ for path in sorted((SITE / "i18n").glob("*.json")):
     check(all(isinstance(v, str) and v.strip() for v in strings.values()), f"{path.name}: leerer Text")
     bad = sorted(k for k in quoted if set("\"'\\\n") & set(strings[k]))
     check(not bad, f"{path.name}: gerade Anführungszeichen, Backslash oder Zeilenumbruch in {', '.join(bad)}")
+    check(path.stem == "de" or markup is not None, "site/i18n/de.json fehlt")
+    markup = markup or {k: MARKUP.findall(v) for k, v in strings.items()}
+    bad = sorted(k for k, v in strings.items() if MARKUP.findall(v) != markup[k])
+    check(not bad, f"{path.name}: HTML, Links oder Version anders als Deutsch in {', '.join(bad)}")
     page = PLACEHOLDER.sub(lambda m: strings.get(m.group(1), m.group(0)), template)
     page = page.replace("{{lang}}", path.stem).replace("{{version}}", version.group(1))
     check("{{" not in page, f"{path.name}: offener Platzhalter")
