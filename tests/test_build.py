@@ -31,6 +31,7 @@ class BuildTests(unittest.TestCase):
         shutil.copy2(ROOT / "build.py", self.root)
         shutil.copytree(ROOT / "tutor", self.root / "tutor")
         shutil.copytree(ROOT / "packaging", self.root / "packaging")
+        shutil.copytree(ROOT / "site", self.root / "site")
         shutil.copy2(ROOT / "LICENSE", self.root)
 
     def build(self, *flags):
@@ -50,6 +51,8 @@ class BuildTests(unittest.TestCase):
         committed = {p.relative_to(ROOT / "dist"): p.read_bytes()
                      for p in (ROOT / "dist").rglob("*") if p.is_file()}
         self.assertEqual(first, committed)
+        self.assertEqual((self.root / "docs/index.html").read_bytes(), (ROOT / "docs/index.html").read_bytes(),
+                         "docs/index.html veraltet: python build.py ausführen")
         self.assertEqual(self.build().returncode, 0)
         self.assertEqual(first, {p.relative_to(self.root / "dist"): p.read_bytes()
                                 for p in (self.root / "dist").rglob("*") if p.is_file()})
@@ -130,6 +133,26 @@ class BuildTests(unittest.TestCase):
         (self.root / "tutor/modes/tipp.md").unlink()
         self.assertNotEqual(self.build().returncode, 0)
         self.assertEqual(before, target.read_bytes())
+
+    def test_landing_page_translations_change_only_text(self):
+        self.assertEqual(self.build().returncode, 0)
+        page = self.root / "docs/index.html"
+        before = page.read_bytes()
+        de = json.loads(self.read("site/i18n/de.json"))
+        template = self.read("site/index.template.html")
+        version = re.search(r'"softwareVersion": "([^"]+)"', template).group(1)
+        self.assertEqual(template.count(version), 1, "Versionsnummer nur in softwareVersion")
+        self.assertNotIn(version, self.read("site/i18n/de.json"))
+        for broken in ({k: v for k, v in de.items() if k != "head.01"},
+                       {**de, "head.02": 'mit "geraden" Anführungszeichen'},
+                       {**de, "fragen.05": de["fragen.05"].replace("support.claude.com", "example.com")},
+                       {**de, "hero.07": de["hero.07"].replace("{{version}}", "0.0.1")}):
+            (self.root / "site/i18n/en.json").write_text(json.dumps(broken), encoding="utf-8")
+            result = self.build()
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("en.json", result.stderr)
+        self.assertFalse((self.root / "docs/en").exists())
+        self.assertEqual(before, page.read_bytes())
 
     def test_unknown_file_reference_does_not_overwrite_output(self):
         self.assertEqual(self.build().returncode, 0)

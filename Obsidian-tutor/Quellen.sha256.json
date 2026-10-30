@@ -1,7 +1,7 @@
 {
   "date": "2026-10-26",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt.",
+  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt. Am 2026-10-30 Landingpage-Quelle nach site/ verlegt (Map #96, Ausgabe byteweise gleich); Notizen 05, 08, 11 und 19 angepasst.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -105,17 +105,17 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "a35a3d3b514a59bf43af86933c3c955731f2ce149828f0c026072e04686ba1fa",
+      "sha256": "cb80d1f5fef8d7e2293527d9463246654914e2a9597c6a1d4932c2aba4fca1ef",
       "normalization": "utf8-lf"
     },
     {
       "path": "build.py",
-      "sha256": "123abff1d5bfe55800e673c262ba6894eb01c157acd686da02c5a23a4e6e6d2b",
+      "sha256": "fe98b0945e0f24793f152b4a548f7ffc053f9d2557f4572f0e8621e20dd76d21",
       "normalization": "utf8-lf"
     },
     {
       "path": "README.md",
-      "sha256": "35a68d1847b4bbec694c516cff1bb6d21432fd0af09c3709afd18564725a5e84",
+      "sha256": "8be2434085ed10176a7bac33579c26261dd35afa68bda44fa5d76bbc9325ea62",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "ce92af97075770aa86964498e52a343b451e3913339721d07384180c4ec2b31f",
+      "sha256": "b34df0a18f6ca0555b78497eda2d6e49dcdd47db17552ed9ad8bc3fa6514406d",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "ce875454b371e42b2762f330abe699b1f6971b69fe84791c7ff76f51083add89",
+      "sha256": "02e6ff653a42a0890d6f5912680223c279db265ed17d0cb4cc03a3170df3e1d2",
       "normalization": "utf8-lf"
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "path": ".gitattributes",
-      "sha256": "b1ceec00ad121fd078f40ec5249c0856841c9d59280283d168baf4b1e1b1ffd3",
+      "sha256": "c249243b3dad57c8402b366c894fc8563b7bc97be8d2a9f7eceef21dae335dd1",
       "normalization": "utf8-lf"
     },
     {
@@ -217,6 +217,16 @@
       "path": "docs/planung/2026-10-15-plattformen/04-handoff-prompts.md",
       "sha256": "ae2df150a5ff4ae7260d4044d8d45606332bf408dfda8b0bd0faf3e23377d880",
       "normalization": "utf8-lf"
+    },
+    {
+      "path": "site/index.template.html",
+      "normalization": "utf8-lf",
+      "sha256": "9f9b603797b8a9aeac6ab314403086c1bff3efe000b122094a262dbcac5518f2"
+    },
+    {
+      "path": "site/i18n/de.json",
+      "normalization": "utf8-lf",
+      "sha256": "8ef17b93294718c6946059f140e9dbfffc7dd83a40fc709aed2d2dcbba4a0f68"
     }
   ],
   "base_git_head": "122a7f960b85328bfd8cba7804c34079c4b8bfa5"

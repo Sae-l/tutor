@@ -228,12 +228,13 @@ Die [deutsche Wissensbasis](Obsidian-tutor/00%20Startseite.md) erklärt Funktion
 | `dist/tutor-chatgpt.zip` | Erzeugtes Pluginarchiv für den ChatGPT-Importer |
 | `packaging/chatgpt-plugin.json` | Paketidentität und Version des nativen Plugins sowie Angaben für die Verzeichnisse von Claude und OpenAI |
 | `packaging/plugin-README.md`, `packaging/logo.svg` | README und Logo im Pluginpaket |
-| `build.py` | Erzeugt `dist/` aus der Quelle |
+| `build.py` | Erzeugt `dist/` aus der Quelle und `docs/index.html` aus `site/` |
 | `tests/` | Strukturtests, Akzeptanzfälle, Protokolle der Abnahme |
 | `docs/KONZEPT.md` | Hintergrund: Ziel, Lernprinzipien, Architekturentscheidungen |
 | `Obsidian-tutor/` | Deutsche Wissensbasis mit 20 Notizen, Canvas, Quellnachweisen und lesender Prüfung |
 | `docs/planung/` | Planungsnotizen und Recherchen (Stand jeweils im Dateinamen), keine Anleitung |
-| `docs/index.html` | Landingpage für GitHub Pages (eine Datei, ohne Build); Schriften lokal in `docs/fonts/` (SIL OFL) |
+| `site/` | Quelle der Landingpage: Vorlage `index.template.html` und Texte je Seitensprache in `i18n/` |
+| `docs/index.html` | Erzeugte Landingpage für GitHub Pages; Schriften lokal in `docs/fonts/` (SIL OFL) |
 | `GLOSSARY.md` | Festgelegte Begriffe |
 
 </details>
