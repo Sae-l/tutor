@@ -115,7 +115,7 @@ Du brauchst ein Claude-Konto. Skills gibt es laut [Claude-Hilfe](https://support
 <details>
 <summary>Als Plugin in Claude Code oder Codex</summary>
 
-Das Repository ist zugleich ein Marketplace für Claude Code und Codex; beide installieren dasselbe erzeugte Plugin aus `dist/chatgpt/plugins/tutor/`. In Claude Code:
+Das Repository ist zugleich ein Marketplace für Claude Code und Codex; Claude Code installiert `dist/claude/plugins/tutor/`, Codex/ChatGPT installiert `dist/chatgpt/plugins/tutor/`. Die getrennten Pakete bewahren die jeweiligen Plattformregeln. In Claude Code:
 
 ```text
 /plugin marketplace add Sae-l/tutor

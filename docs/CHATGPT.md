@@ -2,13 +2,25 @@
 
 Zwei Wege: das native Tutor-Plugin oder ein ChatGPT-Projekt mit Anweisung und Projektdatei. Beide werden aus denselben Dateien unter `tutor/` erzeugt. **Experimentell:** Paket und Build werden automatisch geprüft; eine echte ChatGPT-Abnahme ist noch offen. Es gibt keinen eigenen Server und keinen API-Schlüssel.
 
+## ChatGPT-Korrekturen vom 30.10.2026
+
+Der Arbeitsstand nach rc.5 enthält gezielte Anpassungen für ChatGPT in `packaging/chatgpt-overrides.json`. Der Build wendet sie auf Plugin und Projektdateien an, ohne die Claude-/Gemini-Skillquelle in `tutor/` zu verändern. Jede Ausgangsformulierung muss genau einmal vorkommen; veraltete oder ungültige Anpassungen brechen den Build vor dem Ersetzen der Ausgabe ab. Nur im unveröffentlichten Arbeitsstand vorhanden: Der Download des bisherigen Releases rc.5 enthält diese Korrekturen nicht.
+
+Der Claude-Code-Marketplace verweist jetzt auf `dist/claude/plugins/tutor/`. Dort bleiben die bisherigen Skillbytes und die bisherige Fließtextanpassung erhalten; der ChatGPT-Export verwendet weiterhin `dist/chatgpt/plugins/tutor/`. Die nachfolgende Beschreibung des gemeinsamen Pakets in rc.5 ist historisch.
+
+- **#95:** Eine neue Aufgabe erbt keinen früheren Einzelbefehl. `!an` speichert den Dauermodus; ein Einzelbefehl überschreibt ihn nur für die aktuelle Nachricht. `!aus` beendet ihn. Eigene Versuche und Konzeptfragen behalten ihre automatische Wahl.
+- **#107:** Gleichungsnummern stehen als Markdown außerhalb der Formel; kein `\tag`, auch ohne Box. `\boxed` bleibt erlaubt. Bei selektivem Nummerierungsfehler zuerst dieselbe Formel ohne Tag wiedergeben; Klartext erst, wenn auch normale unnummerierte Formeln scheitern. Der Fehler ist in den dokumentierten Android-App-Fällen beobachtet; der getestete Samsung-Internet-Browser zeigt ihn nicht. Tutor kann den proprietären App-Renderer nicht reparieren.
+- **Skizze:** Kontrollierte Zeichnungen als PNG rendern, Endbild prüfen und sichtbar einbetten; weder roher SVG-Code noch ein Downloadlink allein gelten als sichtbare Skizze. Ohne passendes Werkzeug bleibt der beschriebene Fallback ehrlich als solcher gekennzeichnet.
+
+Nachweise und ausstehende native Prüfungen: [`tests/protokolle/2026-10-30-chatgpt-reparatur.md`](../tests/protokolle/2026-10-30-chatgpt-reparatur.md). Lokale Strukturtests und agentische Dialogprüfungen sind keine Import- oder Android-Darstellungsabnahme. Erst nach Update der tatsächlich installierten Version und Prüfung in einem neuen Chat kann die Plugin-Bereitschaft beurteilt werden.
+
 ## Native Variante: Plugin-Archiv
 
 Stand v0.3.0-rc.5 (auf GitHub als „Latest“ veröffentlicht, 2026-10-28): Claude Code und Codex nutzen dasselbe Pluginpaket. Ab v0.3.0-rc.3 schreibt das ChatGPT-Paket einzelne Formelzeichen im Fließtext kursiv mit Unicode-Index (*U*₀, *u*_C) statt mit einfachem `$`, das ChatGPT nicht rendert; nicht nativ geprüft (U14). Seit v0.2.0-rc.3 gelten Schutzregeln auch für Bilder und Code; Check korrigiert nur die erste fehlerhafte Stelle. Ein persönlich verlangter Graph erlaubt seine nötigen Berechnungen. Die 14 Schutzregressionen in `tests/akzeptanz.md` müssen auf der tatsächlichen Oberfläche samt Endbildern geprüft werden. #32 bleibt bis dahin offen; Pakettests sind kein Nachweis der Modellregeltreue.
 
 Im Repository `python build.py` ausführen. Das erzeugte [`dist/tutor-chatgpt.zip`](../dist/tutor-chatgpt.zip) enthält das Plugin mit allen Skilldateien und Lizenz.
 
-1. Als **Workspace-Admin** in ChatGPT **Admin → Plugins → Hinzufügen → „Plugin hochladen“** auswählen. Laut ChatGPT-Hilfe ist das eine Admin-Funktion; bei Enterprise ist die Berechtigung standardmäßig aus. Die Hilfeseite war nur über Suchausschnitte lesbar. Für Plus/Pro-Einzelkonten ist kein Upload-Weg belegt; dort den [lokalen Marketplace](#zusätzlicher-desktop-weg-lokaler-marketplace) in ChatGPT Desktop nutzen.
+1. In ChatGPT **Plugins** öffnen und den im eigenen Konto angebotenen Upload-/Aktualisierungsweg verwenden. Die aktuelle [offizielle Anleitung](https://learn.chatgpt.com/docs/plugins) unterscheidet persönliche Plugins, installierte Plugins und von Workspace-Admins synchronisierte GitHub-Quellen. Welche Upload-/Update-Funktion das konkrete Konto anbietet, muss dort geprüft werden; die frühere pauschale Admin-only-Aussage ist kein belastbarer Kontonachweis. Ein [lokaler Marketplace](#zusätzlicher-desktop-weg-lokaler-marketplace) ist ein zusätzlicher Desktop-Weg.
 2. `tutor-chatgpt.zip` unverändert auswählen, Importergebnis prüfen und das Plugin aktivieren.
 3. Einen neuen Chat beginnen, über `@` den Tutor auswählen und `hilfe` senden. Erwartet: Befehlskarte mit elf Modi.
 4. Eine Aufgabe mit `tipp` senden, dann `lösung`. Vor Abruf darf kein Ergebnis erscheinen. Anschließend automatische Aktivierung und weitere Fälle nach der Akzeptanzmatrix prüfen.

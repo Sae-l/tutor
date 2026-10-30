@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "tutor",
-      "source": "./dist/chatgpt/plugins/tutor",
+      "source": "./dist/claude/plugins/tutor",
       "version": "0.3.0-rc.5",
       "description": "MINT-Aufgaben verstehen und selbst lösen: Erklärungen, Leitfragen und Fehlerdiagnose; Deutsch mit fünf weiteren Erklärsprachen.",
       "category": "education",
