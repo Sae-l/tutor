@@ -47,6 +47,16 @@ Planungsdateien liefern die Begründung; `tutor/`, `build.py`, Akzeptanzmatrix u
 | Wie wird veröffentlicht? | zwei PRs: erst Umbau mit unveränderter Ausgabe, dann Sprachknopf, Übersetzungen und RTL | der Umbau ist ohne Sichtprüfung sicher, weil die Ausgabe gleich bleibt |
 | Wo wird dokumentiert? | im selben PR: `CHANGELOG.md`, `CLAUDE.md`, Vault-Notizen 05, 11 und 19, danach Quellhashes und `verify_vault.py` | Vorgabe des Maintainers |
 
+### PR 2 (implementiert, Prüfung der Übersetzungen offen in #101)
+
+| Frage | Entscheidung | Begründung |
+|---|---|---|
+| Wie sieht der Sprachknopf aus? | Variante C aus dem Prototyp #98: Pille mit SVG-Globus und Sprachcode, Dialog mit 2×3-Raster, am Handy Blatt von unten | Wahl des Maintainers; SVG statt Emoji, weil Emoji je System anders aussieht |
+| Was bleibt im Beispiel deutsch? | Überschriften der Tutor-Antwort, Aufgabentext, 🔒-Zeile und Klausur-Lösung, mit `lang="de"`; der Schlüssel „Leitfragen“ ist dafür geteilt (`ablauf.14` übersetzt im Ablaufbild, `ablauf.59` deutsch im Beispiel) | „Überschriften der Tutor-Antwort bleiben wie im Produkt“ (Map #96) |
+| Gilt „deutsche Seite byteweise gleich“ noch? | nein für PR 2: Deutsch erhält Sprachknopf, `hreflang`, `dir` und logische CSS-Eigenschaften; Texte bleiben gleich | die Regel sichert, dass Übersetzungen Deutsch nicht verändern; der Knopf gehört zum Ziel der Map |
+| Dürfen Zahlen anders geschrieben werden? | Ziffern gleich wie auf Deutsch, Dezimal- und Tausendertrennzeichen nach Sprache (0.99 auf Englisch); Reihenfolge darf wechseln | Fakten bleiben, Lesbarkeit je Sprache; der Test vergleicht die Ziffern |
+| Wie wird RTL gebaut? | logische CSS-Eigenschaften statt left/right, Ausnahmen mit `[dir="rtl"]`; Kopfzeile bis 1023 px zweireihig | eine Vorlage für beide Richtungen; bei 800 px war der Knopf sonst abgeschnitten |
+
 ## Entscheidungen vom 28.10.2026 (implementiert, #81…#89)
 
 | Frage | Entscheidung | Begründung |

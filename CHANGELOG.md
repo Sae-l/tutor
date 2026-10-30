@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+- Landingpage in allen sechs Erklärsprachen (Map #96): neben Deutsch unter `/tutor/` jetzt Englisch, Türkisch, Französisch, Arabisch und Persisch unter `/tutor/<lang>/`, erzeugt aus `site/i18n/<lang>.json`. Arabisch und Persisch gespiegelt (`dir="rtl"`, logische CSS-Eigenschaften, MathML und Code LTR). Sprachknopf in der Kopfzeile öffnet einen Dialog mit allen Seitensprachen (Variante C aus #98) und nimmt den Abschnitt mit. `build.py` setzt je Sprache Schriftpfade, `canonical`, `og:url`, JSON-LD-`url` und `hreflang` (mit `x-default`). Überschriften der Tutor-Antwort, Aufgabentext und Klausur-Lösung im Beispiel bleiben wie im Produkt deutsch. Bis 1023 px steht die Kopfzeile in zwei Reihen. Neuer Test vergleicht je Sprache HTML-Struktur und Zahlen mit Deutsch und prüft Adressen, lateinische Ziffern und persische Buchstaben; `site/screenshots.mjs` macht die Belegbilder und meldet Überlauf. Übersetzungen von Claude, Prüfung durch den Maintainer in #101.
+
 ### Geändert
 - Landingpage wird erzeugt: `build.py` baut `docs/index.html` aus `site/index.template.html` und den Texten in `site/i18n/de.json`; die Ausgabe ist byteweise gleich der bisherigen Datei. Die Versionsnummer steht nur noch in `softwareVersion` der Vorlage. Der Build bricht ab, wenn eine Sprachdatei andere Schlüssel, andere HTML-Tags, Links oder Versionsplatzhalter als Deutsch hat oder Texte in Attributen und Skripten gerade Anführungszeichen enthalten; Tests prüfen das und dass die Seite aktuell ist. Vorbereitung für die mehrsprachige Landingpage (Map #96).
 

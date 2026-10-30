@@ -15,6 +15,9 @@
   "nav.06": "Vergleich",
   "nav.07": "Einrichten",
   "nav.08": "Fragen",
+  "langbtn.01": "Sprache der Seite",
+  "langbtn.02": "Seitensprache",
+  "langbtn.03": "Schließen",
   "hero.01": "Physik · Mathe · E-Technik · Mechanik",
   "hero.02": "Verstehen",
   "hero.03": "statt",
@@ -122,7 +125,7 @@
   "sprachen.01": "Erklärsprachen",
   "sprachen.02": "Erklärt in deiner Sprache, geprüft auf Deutsch.",
   "sprachen.03": "Erklärsprache wählen",
-  "sprachen.04": "Deutsch <small>[de]</small>",
+  "sprachen.04": "<span lang=\"de\">Deutsch</span> <small>[de]</small>",
   "sprachen.05": "<span lang=\"ar\">العربية</span> <small>[ar]</small>",
   "sprachen.06": "<span lang=\"tr\">Türkçe</span> <small>[tr]</small>",
   "sprachen.07": "<span lang=\"fr\">Français</span> <small>[fr]</small>",
@@ -273,5 +276,6 @@
   "footer.16": "© 2026 Saeed Alhalak · <a href=\"https://github.com/Sae-l/tutor/blob/main/LICENSE\">MIT-Lizenz</a>",
   "footer.17": "<a href=\"https://github.com/Sae-l/tutor/releases\">Version {{version}}</a> · <a href=\"#\">Nach oben</a>",
   "footer.18": "Kopiert",
-  "footer.19": "Nicht möglich"
+  "footer.19": "Nicht möglich",
+  "ablauf.59": "Leitfragen"
 }

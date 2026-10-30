@@ -51,8 +51,9 @@ class BuildTests(unittest.TestCase):
         committed = {p.relative_to(ROOT / "dist"): p.read_bytes()
                      for p in (ROOT / "dist").rglob("*") if p.is_file()}
         self.assertEqual(first, committed)
-        self.assertEqual((self.root / "docs/index.html").read_bytes(), (ROOT / "docs/index.html").read_bytes(),
-                         "docs/index.html veraltet: python build.py ausführen")
+        for page in [p.relative_to(self.root) for p in (self.root / "docs").rglob("index.html")]:
+            self.assertEqual((self.root / page).read_bytes(), (ROOT / page).read_bytes(),
+                             f"{page.as_posix()} veraltet: python build.py ausführen")
         self.assertEqual(self.build().returncode, 0)
         self.assertEqual(first, {p.relative_to(self.root / "dist"): p.read_bytes()
                                 for p in (self.root / "dist").rglob("*") if p.is_file()})
@@ -136,8 +137,8 @@ class BuildTests(unittest.TestCase):
 
     def test_landing_page_translations_change_only_text(self):
         self.assertEqual(self.build().returncode, 0)
-        page = self.root / "docs/index.html"
-        before = page.read_bytes()
+        page, english = self.root / "docs/index.html", self.root / "docs/en/index.html"
+        before, before_en = page.read_bytes(), english.read_bytes()
         de = json.loads(self.read("site/i18n/de.json"))
         template = self.read("site/index.template.html")
         version = re.search(r'"softwareVersion": "([^"]+)"', template).group(1)
@@ -151,8 +152,39 @@ class BuildTests(unittest.TestCase):
             result = self.build()
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("en.json", result.stderr)
-        self.assertFalse((self.root / "docs/en").exists())
+        self.assertEqual(before_en, english.read_bytes())
         self.assertEqual(before, page.read_bytes())
+
+    def test_landing_pages_per_language_keep_structure_numbers_and_addresses(self):
+        self.assertEqual(self.build().returncode, 0)
+        site = "https://sae-l.github.io/tutor/"
+        codes = [lang.strip("[]") for lang in LANGS]
+        pages = {c: self.read(f"docs/{'' if c == 'de' else c + '/'}index.html") for c in codes}
+        strings = {c: json.loads(self.read(f"site/i18n/{c}.json")) for c in codes}
+        tags = lambda html: re.findall(r"<\s*(/?[a-zA-Z][\w-]*)", html)
+        # German thousands and decimal separators may differ per language, the digits may not
+        digits = lambda text: sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[.,  ](?=\d)", "", re.sub(r"<[^>]+>", "", text))))
+        for c in codes:
+            url = site + ("" if c == "de" else c + "/")
+            page = pages[c]
+            self.assertEqual(tags(page), tags(pages["de"]), f"{c}: anderes HTML als Deutsch")
+            self.assertIn(f'<html lang="{c}" dir="{"rtl" if c in ("ar", "fa") else "ltr"}">', page)
+            self.assertIn(f'<link rel="canonical" href="{url}">', page)
+            self.assertIn(f'<meta property="og:url" content="{url}">', page)
+            self.assertIn(f'"url": "{url}"', page)
+            for other in codes:
+                self.assertIn(f'<link rel="alternate" hreflang="{other}" href="{site}{"" if other == "de" else other + "/"}">', page)
+            self.assertIn(f'<link rel="alternate" hreflang="x-default" href="{site}">', page)
+            self.assertEqual(len(re.findall(r'<a [^>]*aria-current="page"', page)), 1)
+            self.assertIn(f'hreflang="{c}" lang="{c}" aria-current="page"', page)
+            self.assertEqual(set(re.findall(r"url\(([^)]*)fonts/", page)), {"" if c == "de" else "../"})
+            for key, text in strings[c].items():
+                self.assertEqual(digits(text), digits(strings["de"][key]), f"{c}.json {key}: Zahlen anders als Deutsch")
+        for c in ("ar", "fa"):  # sprache.md: Latin digits; Persian with ی and ک
+            text = "".join(strings[c].values())
+            self.assertFalse(set(text) & set("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹"), c)
+        persian = "".join(v for k, v in strings["fa"].items() if k != "sprachen.05")
+        self.assertFalse(set(persian) & set("يك"), "fa.json: arabisches ي oder ك")
 
     def test_unknown_file_reference_does_not_overwrite_output(self):
         self.assertEqual(self.build().returncode, 0)

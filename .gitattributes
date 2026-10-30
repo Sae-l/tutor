@@ -6,4 +6,5 @@ packaging/** text eol=lf
 LICENSE text eol=lf
 Obsidian-tutor/** text eol=lf
 docs/index.html text eol=lf
+docs/*/index.html text eol=lf
 site/** text eol=lf
