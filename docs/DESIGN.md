@@ -43,10 +43,19 @@ MathML mit echten Brüchen, Indizes und aufrechten Einheiten, Ergebnis eingerahm
 - Chat-Ausschnitte: Nutzerblase rechts eingerückt auf `--paper`, Antwortabschnitte mit Emoji und Akzentüberschrift wie im echten Antwortaufbau; Lösungen immer als gestrichelter, gesperrter Abruf („🔒 Lösungen: mit „lösung“ abrufen“).
 - Knöpfe: mindestens 48 px hoch, Menüpunkte mindestens 44 px (Touch-Ziele).
 - Sichtbarer Fokusrahmen (`:focus-visible`, 2 px Akzent), Sprunglink zum Inhalt.
+- Sprachknopf (Seitensprache): Pille wie die Chips rechts in der Kopfzeile, Globus als SVG-Strichsymbol (kein Emoji, sieht auf jedem System gleich aus), Sprachcode in `--mono`, Pfeil nach unten. Öffnet einen `<dialog>` „Seitensprache“ mit 2×3-Raster aus Sprach-Chips (Eigenname, `[code]`, aktuelle Sprache wie ein gedrückter Chip); unter 768 px als Blatt von unten. Links sind echte Seiten (`/tutor/<lang>/`) und nehmen den Abschnitt (`#…`) mit; keine Umleitung nach Browsersprache, keine gespeicherte Wahl. Entschieden in #98 (Variante C).
 
 ## Raster und Breiten
 
-Inhalt höchstens 1200 px, seitlicher Abstand `clamp(1rem, 4vw, 3rem)`. Hero 7 : 5. Umbrüche bei 1023 px und 767 px. Unter 768 px bleibt das Abschnittsmenü als wischbare Zeile sichtbar; Tabellen nutzen `minmax(0, 1fr)` und Silbentrennung statt Querscrollen. Geprüft bei 320, 375, 820 und 1280 px.
+Inhalt höchstens 1200 px, seitlicher Abstand `clamp(1rem, 4vw, 3rem)`. Hero 7 : 5. Umbrüche bei 1023 px und 767 px. Bis 1023 px steht die Kopfzeile in zwei Reihen (Marke und Sprachknopf oben, Abschnittsmenü darunter), weil Menü und Sprachknopf in längeren Sprachen nicht in eine Reihe passen. Unter 768 px bleibt das Abschnittsmenü als wischbare Zeile sichtbar; Tabellen nutzen `minmax(0, 1fr)` und Silbentrennung statt Querscrollen. Geprüft bei 320, 375, 820 und 1280 px.
+
+## Seitensprachen und Leserichtung
+
+Die Landingpage gibt es in den sechs Erklärsprachen (de, ar, tr, fr, en, fa); Deutsch unter `/tutor/`, die anderen unter `/tutor/<lang>/`. Eine Übersetzung ändert nur Text: gleiche Abschnitte, Karten, Zahlen (Trennzeichen je Sprache erlaubt), Links, Version und MathML wie auf Deutsch. Was im Produkt deutsch bleibt, bleibt es auch hier: Überschriften der Tutor-Antwort, Aufgabentext und Klausur-Lösung im Beispiel, mit `lang="de"`. Modusnamen (`erklär`, `tipp` …) werden nicht übersetzt. Der Abschnitt „Sprachen“ beginnt mit der Seitensprache.
+
+Arabisch und Persisch: ganze Seite `dir="rtl"`. Abstände und Positionen nur mit logischen Eigenschaften (`inset-inline-*`, `margin-inline-*`, `padding-inline-*`, `border-inline-*`); was sich nicht logisch schreiben lässt (`transform-origin`, Ecke der Chatblase, Pfeilskizze im Titel), bekommt eine `[dir="rtl"]`-Regel. MathML, Code und `pre` bleiben LTR. Arabische Schrift kommt per Ausweichschrift aus Noto Naskh Arabic, lateinische Zeichen behalten ihre Schriften; Ziffern immer lateinisch, Persisch mit ی und ک.
+
+Prüfen mit `node site/screenshots.mjs`: jede Sprache bei 1280 und 375 px hell und dunkel (Ganzseite), bei 1024 px ohne Bild, dazu der offene Sprachdialog am Handy; das Skript meldet seitlichen Überlauf.
 
 ## Bewegung
 
@@ -55,7 +64,7 @@ Inhalt höchstens 1200 px, seitlicher Abstand `clamp(1rem, 4vw, 3rem)`. Hero 7 :
 
 ## Texte
 
-Deutsch, kurz, aus Sicht der Besucher und positiv formuliert. Version nur dort, wo sie gebraucht wird (Download, Einrichten, FAQ, strukturierte Daten), nicht in Bildern. Fächer immer vollständig: Physik, Mathe, E-Technik, Technische Mechanik. Studienbezug „Studium“, nicht „erstes Studienjahr“.
+Deutsch als Ausgangssprache, kurz, aus Sicht der Besucher und positiv formuliert. Version nur dort, wo sie gebraucht wird (Download, Einrichten, FAQ, strukturierte Daten), nicht in Bildern. Fächer immer vollständig: Physik, Mathe, E-Technik, Technische Mechanik. Studienbezug „Studium“, nicht „erstes Studienjahr“.
 
 ## Nicht verwenden
 

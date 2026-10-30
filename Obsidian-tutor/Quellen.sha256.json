@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-30",
   "timezone": "Europe/Berlin",
   "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt. Am 2026-10-30 Landingpage-Quelle nach site/ verlegt (Map #96, Ausgabe byteweise gleich); Notizen 05, 08, 11 und 19 angepasst.",
   "files": [
@@ -105,12 +105,12 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "cb80d1f5fef8d7e2293527d9463246654914e2a9597c6a1d4932c2aba4fca1ef",
+      "sha256": "c2a9eff64a70f286cc8ddcfcb0070547d033282ba6b225fe9673bae7cfad80d2",
       "normalization": "utf8-lf"
     },
     {
       "path": "build.py",
-      "sha256": "fe98b0945e0f24793f152b4a548f7ffc053f9d2557f4572f0e8621e20dd76d21",
+      "sha256": "686e1d57b15262be96c7947d53a67ec908cca6b528ab36a56bd6bea5c6efb5c3",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "b34df0a18f6ca0555b78497eda2d6e49dcdd47db17552ed9ad8bc3fa6514406d",
+      "sha256": "5664e2f28cdb39345a1feb1d8b22f8371ca58217525a09826140cba30c5bfbd4",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "02e6ff653a42a0890d6f5912680223c279db265ed17d0cb4cc03a3170df3e1d2",
+      "sha256": "7fd72bb3b2bf482ac16f05362a7c32fe46bca417278513a9abee138b1a7fd0f7",
       "normalization": "utf8-lf"
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "e12b40991200095596ae22e7acfad1d6a89d45ce02ebd223b23554ea67d26e76",
+      "sha256": "cfb88b2cebac03a73d96760f6b4e3115e0d23b68e78424b4de8bb7b53e610330",
       "normalization": "utf8-lf"
     },
     {
@@ -221,12 +221,42 @@
     {
       "path": "site/index.template.html",
       "normalization": "utf8-lf",
-      "sha256": "9f9b603797b8a9aeac6ab314403086c1bff3efe000b122094a262dbcac5518f2"
+      "sha256": "e05fcdaf7a9246957a729eeb9505975fa8fac8ba475f783c979e0792fbb2756e"
     },
     {
       "path": "site/i18n/de.json",
       "normalization": "utf8-lf",
-      "sha256": "8ef17b93294718c6946059f140e9dbfffc7dd83a40fc709aed2d2dcbba4a0f68"
+      "sha256": "3c341beb76f013497e7b3293345a952e9172183eefb20e5f285277a1d73d2011"
+    },
+    {
+      "path": "site/i18n/en.json",
+      "sha256": "27f0d5a44878fa728cbdcedae6e997cf3204a3b2a62a20db8e9cc8b761c5a15b",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "site/i18n/tr.json",
+      "sha256": "70cef8cbd2efd9904aaa2d9239284d7c1f7dcbf27a32afcab12729c3f05fc284",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "site/i18n/fr.json",
+      "sha256": "b0807be49b177d37ec0673f65f178f2befe731d15e16e4c676e65928c0fc16da",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "site/i18n/ar.json",
+      "sha256": "b90c242d05d0a9950eef01eec5feef097d4d101bf7060980ae959bc17b30884c",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "site/i18n/fa.json",
+      "sha256": "8ac7fdd0bb0d2a767a70e4f099b5d868f31a8058c8de6bf8d364ee311b928663",
+      "normalization": "utf8-lf"
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "sha256": "c6d113d758bcf1d31acf842bf940b67668ceacef9c8ad407c7a4d9c00cf1ac21",
+      "normalization": "utf8-lf"
     }
   ],
   "base_git_head": "122a7f960b85328bfd8cba7804c34079c4b8bfa5"

@@ -144,7 +144,11 @@ template = (SITE / "index.template.html").read_text(encoding="utf-8")
 version = re.search(r'"softwareVersion": "([^"]+)"', template)
 check(version, "softwareVersion fehlt in site/index.template.html")
 PLACEHOLDER = re.compile(r"\{\{([\w.]+)\}\}")
-keys = set(PLACEHOLDER.findall(template)) - {"lang", "version"}
+# Per page, not per text: German at /tutor/, the others at /tutor/<lang>/; ar and fa right to left
+SITE_URL = "https://sae-l.github.io/tutor/"
+LANGS = {"de": "Deutsch", "ar": "العربية", "tr": "Türkçe", "fr": "Français", "en": "English", "fa": "فارسی"}
+PAGE = {"lang", "version", "dir", "url", "root", "alternates", "langname", "langcode", "langlist"}
+keys = set(PLACEHOLDER.findall(template)) - PAGE
 # Texts inside attributes and scripts must not close their quotes.
 quoted = set(re.findall(r"<[^<>]*?\{\{([\w.]+)\}\}", template))
 quoted |= {k for script in re.findall(r"<script.*?</script>", template, re.S) for k in PLACEHOLDER.findall(script)}
@@ -166,8 +170,22 @@ for path in sorted((SITE / "i18n").glob("*.json"), key=lambda p: p.stem != "de")
     markup = markup or {k: MARKUP.findall(v) for k, v in strings.items()}
     bad = sorted(k for k, v in strings.items() if MARKUP.findall(v) != markup[k])
     check(not bad, f"{path.name}: HTML, Links oder Version anders als Deutsch in {', '.join(bad)}")
+    lang = path.stem
+    check(lang in LANGS, f"{path.name}: unbekannte Seitensprache")
+    url = lambda code: SITE_URL + ("" if code == "de" else code + "/")
+    root = "" if lang == "de" else "../"
+    links = "\n".join(
+        f'    <li><a href="{root + ("" if code == "de" else code + "/") or "./"}" hreflang="{code}" lang="{code}"'
+        f'{" aria-current=\"page\"" if code == lang else ""}>{name} <small>[{code}]</small></a></li>'
+        for code, name in LANGS.items())
+    page_values = {
+        "lang": lang, "version": version.group(1), "dir": "rtl" if lang in ("ar", "fa") else "ltr",
+        "url": url(lang), "root": root, "langname": LANGS[lang], "langcode": lang.upper(), "langlist": links,
+        "alternates": "\n".join([f'<link rel="alternate" hreflang="{c}" href="{url(c)}">' for c in LANGS]
+                                + [f'<link rel="alternate" hreflang="x-default" href="{url("de")}">']),
+    }
     page = PLACEHOLDER.sub(lambda m: strings.get(m.group(1), m.group(0)), template)
-    page = page.replace("{{lang}}", path.stem).replace("{{version}}", version.group(1))
+    page = PLACEHOLDER.sub(lambda m: page_values.get(m.group(1), m.group(0)), page)
     check("{{" not in page, f"{path.name}: offener Platzhalter")
     pages[Path("docs") / ("" if path.stem == "de" else path.stem) / "index.html"] = page.encode("utf-8")
 check(Path("docs/index.html") in pages, "site/i18n/de.json fehlt")

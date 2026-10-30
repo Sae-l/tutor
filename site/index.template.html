@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="{{lang}}">
+<html lang="{{lang}}" dir="{{dir}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{head.01}}</title>
-<link rel="canonical" href="https://sae-l.github.io/tutor/">
+<link rel="canonical" href="{{url}}">
+{{alternates}}
 <meta name="description" content="{{head.02}}">
 <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#161412" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{head.03}}">
 <meta property="og:description" content="{{head.04}}">
-<meta property="og:url" content="https://sae-l.github.io/tutor/">
+<meta property="og:url" content="{{url}}">
 <meta property="og:locale" content="{{head.05}}">
 <meta property="og:image" content="https://sae-l.github.io/tutor/assets/hero-light.png">
 <meta property="og:image:width" content="1200">
@@ -24,7 +25,7 @@
   "@type": "SoftwareApplication",
   "name": "Tutor",
   "description": "{{head.07}}",
-  "url": "https://sae-l.github.io/tutor/",
+  "url": "{{url}}",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Web",
   "inLanguage": "{{lang}}",
@@ -38,17 +39,17 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232F6F5E'/%3E%3Cpath d='M6 18 L12 6 L18 18' fill='none' stroke='%23FAFAF9' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.6 13.6h6.8' stroke='%23FAFAF9' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 /* Schriften lokal (SIL OFL, Lizenzen in fonts/): keine Anfragen an Dritte */
-@font-face { font-family: "Source Serif 4"; font-weight: 200 900; font-display: swap; src: url(fonts/source-serif-4-latin.woff2) format("woff2");
+@font-face { font-family: "Source Serif 4"; font-weight: 200 900; font-display: swap; src: url({{root}}fonts/source-serif-4-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: "Source Serif 4"; font-weight: 200 900; font-display: swap; src: url(fonts/source-serif-4-latin-ext.woff2) format("woff2");
+@font-face { font-family: "Source Serif 4"; font-weight: 200 900; font-display: swap; src: url({{root}}fonts/source-serif-4-latin-ext.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C0, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 200 800; font-display: swap; src: url(fonts/atkinson-next-latin.woff2) format("woff2");
+@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 200 800; font-display: swap; src: url({{root}}fonts/atkinson-next-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 200 800; font-display: swap; src: url(fonts/atkinson-next-latin-ext.woff2) format("woff2");
+@font-face { font-family: "Atkinson Hyperlegible Next"; font-weight: 200 800; font-display: swap; src: url({{root}}fonts/atkinson-next-latin-ext.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C0, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url(fonts/jetbrains-mono-400.woff2) format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url(fonts/jetbrains-mono-500.woff2) format("woff2"); }
-@font-face { font-family: "Noto Naskh Arabic"; font-weight: 400; font-display: swap; src: url(fonts/noto-naskh-arabic.woff2) format("woff2");
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url({{root}}fonts/jetbrains-mono-400.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url({{root}}fonts/jetbrains-mono-500.woff2) format("woff2"); }
+@font-face { font-family: "Noto Naskh Arabic"; font-weight: 400; font-display: swap; src: url({{root}}fonts/noto-naskh-arabic.woff2) format("woff2");
   unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
 :root {
   --paper: #FAFAF9;
@@ -103,7 +104,7 @@ section + section { border-top: 1px solid var(--hairline); }
 .eyebrow { font: 500 .8125rem/1 var(--mono); color: var(--pencil); margin-bottom: 1rem; display: block; }
 
 /* Header */
-.skip { position: absolute; left: 1rem; top: -4rem; z-index: 20; padding: .75rem 1rem; background: var(--accent); color: var(--paper); border-radius: .5rem; }
+.skip { position: absolute; inset-inline-start: 1rem; top: -4rem; z-index: 20; padding: .75rem 1rem; background: var(--accent); color: var(--paper); border-radius: .5rem; }
 .skip:focus { top: 1rem; color: var(--paper); }
 .skip:hover { color: var(--paper); }
 .top { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
@@ -111,6 +112,46 @@ section + section { border-top: 1px solid var(--hairline); }
 .top nav { display: flex; gap: 1.5rem; }
 .top nav a { font-family: var(--sans); color: var(--pencil); text-decoration: none; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; }
 .top nav a:hover { color: var(--ink); }
+.top nav { margin-inline-start: auto; }
+/* Page language: button opens a dialog of chips; on phones a sheet from the bottom */
+.lang-btn {
+  min-height: 44px; margin-inline-start: 1.25rem; padding: 0 .9rem; border-radius: 999px; border: 1px solid var(--hairline);
+  background: var(--sheet); color: var(--ink); font: 600 .9375rem var(--sans); cursor: pointer;
+  display: inline-flex; align-items: center; gap: .45rem; transition: border-color .2s, background .2s;
+}
+.lang-btn:hover { border-color: var(--pencil); }
+.lang-btn[aria-expanded="true"] { background: var(--wash); border-color: var(--accent); }
+.lang-btn .code { font: 500 .8125rem var(--mono); letter-spacing: .02em; }
+.lang-btn .caret { width: .5rem; height: .5rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+dialog.sheet { border: 1px solid var(--hairline); border-radius: 1.25rem; background: var(--sheet); color: var(--ink);
+  padding: 1.5rem; width: min(30rem, calc(100vw - 2rem)); box-shadow: var(--shadow); }
+dialog.sheet::backdrop { background: rgba(22,20,18,.35); }
+dialog.sheet h2 { font: 700 1.25rem var(--sans); letter-spacing: 0; margin: .5rem 0 1rem; }
+dialog.sheet .close { position: absolute; inset-inline-end: 1rem; top: 1rem; margin: 0; width: 44px; justify-content: center; padding: 0; }
+dialog.sheet ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+dialog.sheet a {
+  min-height: 56px; padding: 0 1rem; border-radius: .75rem; border: 1px solid var(--hairline); background: var(--sheet);
+  color: var(--ink); font: 500 .9375rem var(--sans); text-decoration: none;
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem; transition: background .2s, border-color .2s;
+}
+dialog.sheet a:hover { color: var(--ink); border-color: var(--pencil); }
+dialog.sheet a small { font: 400 .75rem var(--mono); color: var(--pencil); }
+dialog.sheet a[aria-current="page"] { background: var(--wash); border-color: var(--accent); }
+dialog.sheet a[aria-current="page"] small { color: var(--accent); }
+dialog.sheet a:lang(ar), dialog.sheet a:lang(fa) { font-family: "Noto Naskh Arabic", var(--sans); }
+@media (max-width: 767px) {
+  dialog.sheet { margin: auto auto 0; width: 100vw; max-width: 100vw; border-radius: 1.25rem 1.25rem 0 0; padding-bottom: 2rem; }
+}
+/* Right-to-left pages (ar, fa): Arabic script from Noto Naskh, Latin glyphs keep their fonts; maths and code stay LTR */
+:root:lang(ar), :root:lang(fa) {
+  --serif: "Source Serif 4", "Noto Naskh Arabic", ui-serif, Georgia, serif;
+  --sans: "Atkinson Hyperlegible Next", "Noto Naskh Arabic", ui-sans-serif, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", "Noto Naskh Arabic", ui-monospace, Consolas, monospace;
+}
+[dir="rtl"] .sketch-inline, [dir="rtl"] .sketch-mobile { transform: scaleX(-1); }
+[dir="rtl"] math, [dir="rtl"] code, [dir="rtl"] pre { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .top nav a::after, [dir="rtl"] .progress, [dir="rtl"] .track i { transform-origin: right; }
+[dir="rtl"] .msg-user { border-radius: .9rem .9rem .9rem .25rem; }
 
 /* Hero */
 .hero { padding-top: clamp(2rem, 6vw, 5rem); }
@@ -135,7 +176,7 @@ section + section { border-top: 1px solid var(--hairline); }
 .card { background: var(--sheet); border: 1px solid var(--hairline); border-radius: 1.25rem; box-shadow: var(--shadow); }
 .chat { padding: 1.25rem; font-size: .9688rem; margin: 0; }
 .chat-label { font: 500 .75rem var(--mono); color: var(--pencil); margin-bottom: .75rem; display: flex; justify-content: space-between; gap: 1rem; }
-.msg-user { background: var(--paper); border: 1px solid var(--hairline); border-radius: .9rem .9rem .25rem .9rem; padding: .75rem 1rem; margin: 0 0 1rem 2.5rem; }
+.msg-user { background: var(--paper); border: 1px solid var(--hairline); border-radius: .9rem .9rem .25rem .9rem; padding: .75rem 1rem; margin: 0 0 1rem; margin-inline-start: 2.5rem; }
 .msg-user .cmd { display: inline-block; margin-top: .4rem; font: 500 .8125rem var(--mono); color: var(--accent); }
 .msg-tutor .tag, .demo-out .tag { margin: 1rem 0 .3rem; line-height: 1.65; font-size: .8125rem; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
 .msg-tutor .tag:first-child { margin-top: 0; }
@@ -150,7 +191,7 @@ section + section { border-top: 1px solid var(--hairline); }
 .steps li { position: relative; padding: 1.5rem 1.5rem 0 0; border-top: 2px solid var(--hairline); }
 .steps li::before {
   counter-increment: s; content: counter(s);
-  position: absolute; top: -.85rem; left: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  position: absolute; top: -.85rem; inset-inline-start: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%;
   background: var(--paper); border: 2px solid var(--accent); color: var(--accent);
   font: 500 .75rem/1.25rem var(--mono); text-align: center;
 }
@@ -165,7 +206,7 @@ section + section { border-top: 1px solid var(--hairline); }
 .badge.neutral { background: var(--paper); color: var(--pencil); border: 1px solid var(--hairline); }
 .feature h3 { font-size: 1.5rem; margin: 1rem 0 .75rem; }
 .feature h3 code { font-size: .9em; }
-.feature ul { margin: 1rem 0 0; padding-left: 1.1rem; color: var(--pencil); }
+.feature ul { margin: 1rem 0 0; padding-inline-start: 1.1rem; color: var(--pencil); }
 .feature li { margin-bottom: .35rem; }
 .mode-list { list-style: none; margin: 0; padding: 0; }
 .mode-list li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--hairline); }
@@ -228,10 +269,10 @@ section + section { border-top: 1px solid var(--hairline); }
 .faq details { border-top: 1px solid var(--hairline); }
 .faq details:last-child { border-bottom: 1px solid var(--hairline); }
 .faq summary {
-  min-height: 44px; padding: .9rem 2rem .9rem 0; cursor: pointer; font-weight: 500; list-style: none; position: relative;
+  min-height: 44px; padding-block: .9rem; padding-inline: 0 2rem; cursor: pointer; font-weight: 500; list-style: none; position: relative;
 }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; position: absolute; right: .25rem; top: .8rem; font: 400 1.25rem var(--mono); color: var(--accent); }
+.faq summary::after { content: "+"; position: absolute; inset-inline-end: .25rem; top: .8rem; font: 400 1.25rem var(--mono); color: var(--accent); }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { color: var(--pencil); padding-bottom: 1rem; margin: 0; }
 
@@ -374,7 +415,7 @@ p, li { text-wrap: pretty; }
 .demo-task { color: var(--pencil); font-size: .9375rem; padding-bottom: .75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--hairline); }
 .demo-out .tag:first-child { margin-top: 0; }
 .demo-out p { margin: 0 0 .5rem; }
-.demo-out ol { margin: 0 0 .75rem; padding-left: 1.2rem; }
+.demo-out ol { margin: 0 0 .75rem; padding-inline-start: 1.2rem; }
 .demo-out li { margin-bottom: .3rem; }
 .demo-out math[display="block"] { margin: .35rem 0 .7rem; font-size: 1.08em; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 .demo-out math.boxed { width: fit-content; margin-inline: auto; overflow: visible; box-sizing: content-box; padding: .35rem .9rem .35rem .7rem; border: 1.5px solid var(--accent); border-radius: .5rem; }
@@ -391,9 +432,9 @@ p, li { text-wrap: pretty; }
 
 /* Setup: other platforms folded */
 .more { border-top: 1px solid var(--hairline); margin-top: 1rem; }
-.more summary { min-height: 44px; padding: .75rem 2rem .75rem 0; cursor: pointer; font-weight: 500; color: var(--ink); list-style: none; position: relative; }
+.more summary { min-height: 44px; padding-block: .75rem; padding-inline: 0 2rem; cursor: pointer; font-weight: 500; color: var(--ink); list-style: none; position: relative; }
 .more summary::-webkit-details-marker { display: none; }
-.more summary::after { content: "+"; position: absolute; right: .25rem; top: .65rem; font: 400 1.25rem var(--mono); color: var(--accent); }
+.more summary::after { content: "+"; position: absolute; inset-inline-end: .25rem; top: .65rem; font: 400 1.25rem var(--mono); color: var(--accent); }
 .more[open] summary::after { content: "−"; }
 
 /* Reveal (only with JS, only without reduced motion) */
@@ -409,21 +450,27 @@ p, li { text-wrap: pretty; }
   html { scroll-behavior: auto; }
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+/* Tablet and phone header: brand and language button in the first row, section links below */
+@media (max-width: 1023px) {
   html { scroll-padding-top: 7.5rem; }
   .top { flex-wrap: wrap; padding: .5rem 0 0; }
   /* swipeable row instead of hiding the section links */
   .top nav { width: 100%; gap: 1.25rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .top nav::-webkit-scrollbar { display: none; }
   .top nav a { flex-shrink: 0; font-size: .9375rem; }
+  .top nav { order: 2; margin-inline-start: 0; }
+  .lang-btn { order: 1; margin-inline-start: auto; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
   .hero-grid, .sec-head, .modes, .lang-grid, .setup, .faq-grid, .foot { grid-template-columns: 1fr; }
   .sketch-inline { display: none; }
   .sketch-mobile { display: block; height: 3rem; width: auto; margin: -.5rem 0 1.25rem; }
   .steps { grid-template-columns: 1fr; }
-  .steps li { border-top: 0; border-left: 2px solid var(--hairline); padding: 0 0 1.75rem 1.75rem; }
-  .steps li:first-child { border-left-color: var(--accent); }
-  .steps li::before { left: -.85rem; top: 0; }
+  .steps li { border-top: 0; border-inline-start: 2px solid var(--hairline); padding: 0; padding-block-end: 1.75rem; padding-inline-start: 1.75rem; }
+  .steps li:first-child { border-inline-start-color: var(--accent); }
+  .steps li::before { inset-inline-start: -.85rem; top: 0; }
   .steps li code { margin-top: 0; }
   .mode-list li { grid-template-columns: 6rem 1fr; }
   .evidence, .principles, .demo, .cta { grid-template-columns: 1fr; }
@@ -436,7 +483,7 @@ p, li { text-wrap: pretty; }
   .compare tbody th { grid-column: 1 / -1; width: auto; border-top: 0; padding-bottom: .25rem; }
   .compare td { width: auto; border-top: 0; padding: .5rem .75rem 1rem; font-size: .875rem; hyphens: auto; overflow-wrap: anywhere; }
   .compare td::before { content: attr(data-label); display: block; font: 500 .6875rem var(--mono); color: var(--pencil); margin-bottom: .25rem; }
-  .msg-user { margin-left: 1rem; }
+  .msg-user { margin-inline-start: 1rem; }
   .btn { width: 100%; justify-content: center; }
   .flow { display: none; }
 }
@@ -461,6 +508,10 @@ p, li { text-wrap: pretty; }
       <a href="#einrichten">{{nav.07}}</a>
       <a href="#fragen">{{nav.08}}</a>
     </nav>
+    <button class="lang-btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-dialog" aria-label="{{langbtn.01}}: {{langname}}">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="stroke:currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>
+      <span class="code">{{langcode}}</span><span class="caret"></span>
+    </button>
   </header>
 </div>
 <div class="progress" aria-hidden="true"></div>
@@ -497,21 +548,21 @@ p, li { text-wrap: pretty; }
 
       <figure class="card chat reveal" style="--d:120ms" aria-label="{{hero.14}}" lang="de">
         <div class="chat-label">{{hero.15}}</div>
-        <div class="msg-user stagger" style="--d:250ms">
+        <div class="msg-user stagger" style="--d:250ms" lang="de">
           {{hero.16}}
           <br><span class="cmd">erklär</span>
         </div>
         <div class="msg-tutor">
-          <p class="tag">{{hero.17}}</p>
+          <p class="tag" lang="de">{{hero.17}}</p>
           <p>{{hero.18}}</p>
-          <p class="tag">{{hero.19}}</p>
+          <p class="tag" lang="de">{{hero.19}}</p>
           <p>{{hero.20}}</p>
           <math display="block" aria-label="{{hero.21}}">
             <mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mtext>konst.</mtext>
           </math>
-          <p class="tag">{{hero.22}}</p>
+          <p class="tag" lang="de">{{hero.22}}</p>
           <p>{{hero.23}}</p>
-          <div class="locked">{{hero.24}}</div>
+          <div class="locked" lang="de">{{hero.24}}</div>
         </div>
       </figure>
     </div>
@@ -564,45 +615,45 @@ p, li { text-wrap: pretty; }
           <p class="note">{{ablauf.26}}</p>
         </div>
         <div class="card demo-out" aria-live="polite">
-          <p class="demo-task">{{ablauf.27}}</p>
+          <p class="demo-task" lang="de">{{ablauf.27}}</p>
           <div id="demo-text">
-            <p class="tag">{{ablauf.28}}</p><p>{{ablauf.29}}</p>
-            <p class="tag">{{hero.17}}</p><p>{{ablauf.30}}</p>
-            <p class="tag">{{hero.19}}</p><p>{{ablauf.31}}</p>
+            <p class="tag" lang="de">{{ablauf.28}}</p><p>{{ablauf.29}}</p>
+            <p class="tag" lang="de">{{hero.17}}</p><p>{{ablauf.30}}</p>
+            <p class="tag" lang="de">{{hero.19}}</p><p>{{ablauf.31}}</p>
             <math display="block" aria-label="{{ablauf.32}}"><mi>v</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mo>+</mo><mi>a</mi><mi>t</mi></math>
             <math display="block" aria-label="{{ablauf.33}}"><mi>s</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
-            <p class="tag">{{hero.22}}</p><p>{{ablauf.34}}</p>
+            <p class="tag" lang="de">{{hero.22}}</p><p>{{ablauf.34}}</p>
             <p class="locked">{{ablauf.35}}</p>
           </div>
           <template id="demo-erklaer">
-            <p class="tag">{{ablauf.28}}</p><p>{{ablauf.29}}</p>
-            <p class="tag">{{hero.17}}</p><p>{{ablauf.30}}</p>
-            <p class="tag">{{hero.19}}</p><p>{{ablauf.31}}</p>
+            <p class="tag" lang="de">{{ablauf.28}}</p><p>{{ablauf.29}}</p>
+            <p class="tag" lang="de">{{hero.17}}</p><p>{{ablauf.30}}</p>
+            <p class="tag" lang="de">{{hero.19}}</p><p>{{ablauf.31}}</p>
             <math display="block" aria-label="{{ablauf.32}}"><mi>v</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mo>+</mo><mi>a</mi><mi>t</mi></math>
             <math display="block" aria-label="{{ablauf.33}}"><mi>s</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
-            <p class="tag">{{hero.22}}</p><p>{{ablauf.34}}</p>
+            <p class="tag" lang="de">{{hero.22}}</p><p>{{ablauf.34}}</p>
             <p class="locked">{{ablauf.35}}</p>
           </template>
           <template id="demo-tipp">
-            <p class="tag">{{ablauf.14}}</p><ol><li>{{ablauf.36}}</li><li>{{ablauf.37}}</li><li>{{ablauf.38}}</li><li>{{ablauf.39}}</li><li>{{ablauf.40}}</li><li>{{ablauf.41}}</li></ol>
+            <p class="tag" lang="de">{{ablauf.59}}</p><ol><li>{{ablauf.36}}</li><li>{{ablauf.37}}</li><li>{{ablauf.38}}</li><li>{{ablauf.39}}</li><li>{{ablauf.40}}</li><li>{{ablauf.41}}</li></ol>
             <p class="locked">{{ablauf.42}}</p>
           </template>
           <template id="demo-voll">
-            <p class="tag">{{ablauf.43}}</p><p>{{ablauf.44}}</p>
+            <p class="tag" lang="de">{{ablauf.43}}</p><p>{{ablauf.44}}</p>
             <math display="block" aria-label="{{ablauf.45}}"><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><mn>72</mn><mtext> km/h</mtext><mo>=</mo><mfrac><mrow><mn>72</mn></mrow><mrow><mn>3,6</mn></mrow></mfrac><mtext> m/s</mtext><mo>=</mo><mn>20</mn><mtext> m/s</mtext></math>
             <math display="block" aria-label="{{ablauf.46}}"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mrow><mi>v</mi><mo>−</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></mrow><mrow><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mfrac><mrow><mrow><mn>0</mn><mo>−</mo><mn>20</mn><mtext> m/s</mtext></mrow></mrow><mrow><mrow><mn>16,0</mn><mtext> s</mtext></mrow></mrow></mfrac><mo>=</mo><mo>−</mo><mn>1,25</mn><mtext> m/s²</mtext></math>
             <math display="block" aria-label="{{ablauf.47}}"><mi>s</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
             <math display="block" aria-label="{{ablauf.48}}"><mi>s</mi><mo>=</mo><mn>20</mn><mtext> m/s</mtext><mo>·</mo><mn>16,0</mn><mtext> s</mtext><mo>−</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>·</mo><mn>1,25</mn><mtext> m/s²</mtext><mo>·</mo><msup><mrow><mo>(</mo><mn>16,0</mn><mtext> s</mtext><mo>)</mo></mrow><mn>2</mn></msup></math>
             <math display="block" class="boxed" aria-label="{{ablauf.49}}"><mi>s</mi><mo>=</mo><mn>320</mn><mtext> m</mtext><mo>−</mo><mn>160</mn><mtext> m</mtext><mo>=</mo><mn>160</mn><mtext> m</mtext></math>
-            <p class="tag">{{ablauf.50}}</p><p>{{ablauf.51}}</p>
+            <p class="tag" lang="de">{{ablauf.50}}</p><p>{{ablauf.51}}</p>
             <p class="locked">{{ablauf.52}}</p>
           </template>
           <template id="demo-kurz">
-            <p class="tag">{{ablauf.53}}</p>
+            <p class="tag" lang="de">{{ablauf.53}}</p>
             <math display="block" aria-label="{{ablauf.54}}"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mrow><mi>v</mi><mo>−</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></mrow><mrow><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mfrac><mrow><mrow><mn>24</mn><mtext> m/s</mtext><mo>−</mo><mn>0</mn></mrow></mrow><mrow><mrow><mn>8,0</mn><mtext> s</mtext></mrow></mrow></mfrac><mo>=</mo><mn>3,0</mn><mtext> m/s²</mtext></math>
             <math display="block" aria-label="{{ablauf.55}}"><mi>s</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
             <math display="block" class="boxed" aria-label="{{ablauf.56}}"><mi>s</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>·</mo><mn>3,0</mn><mtext> m/s²</mtext><mo>·</mo><msup><mrow><mo>(</mo><mn>8,0</mn><mtext> s</mtext><mo>)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>96</mn><mtext> m</mtext></math>
-            <p class="tag">{{ablauf.57}}</p><p>{{ablauf.58}}</p>
+            <p class="tag" lang="de">{{ablauf.57}}</p><p>{{ablauf.58}}</p>
           </template>
         </div>
       </div>
@@ -665,7 +716,7 @@ p, li { text-wrap: pretty; }
       </div>
       <div class="card sample reveal" style="--d:100ms" aria-live="polite">
         <h3 lang="de">{{hero.17}}</h3>
-        <div class="body" id="sample-text" lang="de">{{sprachen.11}}</div>
+        <div class="body" id="sample-text" lang="{{lang}}">{{sprachen.11}}</div>
         <h3 lang="de">{{sprachen.12}}</h3>
         <p class="terms-de" id="terms-de">{{sprachen.13}}</p>
         <table class="terms" id="terms" hidden>
@@ -892,6 +943,14 @@ p, li { text-wrap: pretty; }
 
 <p id="copy-status" role="status" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></p>
 
+<dialog class="sheet" id="lang-dialog" aria-labelledby="lang-dialog-h">
+  <h2 id="lang-dialog-h">{{langbtn.02}}</h2>
+  <button class="lang-btn close" type="button" aria-label="{{langbtn.03}}">✕</button>
+  <ul>
+{{langlist}}
+  </ul>
+</dialog>
+
 <script>
 document.documentElement.classList.add('js');
 
@@ -981,6 +1040,19 @@ document.querySelectorAll('.demo .chip').forEach(chip => chip.addEventListener('
   demoText.replaceChildren(document.getElementById('demo-' + chip.dataset.mode).content.cloneNode(true));
   demoText.classList.remove('swap'); void demoText.offsetWidth; demoText.classList.add('swap');
 }));
+
+// The section starts with the page language
+const pageChip = document.querySelector(`#sprachen .chip[data-lang="${document.documentElement.lang}"]`);
+pageChip.parentNode.prepend(pageChip);
+pageChip.click();
+
+// Page language: dialog with one link per language; the link keeps the section the reader is on
+const langBtn = document.querySelector('.top .lang-btn'), langDialog = document.getElementById('lang-dialog');
+langBtn.addEventListener('click', () => { langDialog.showModal(); langBtn.setAttribute('aria-expanded', 'true'); });
+langDialog.addEventListener('close', () => langBtn.setAttribute('aria-expanded', 'false'));
+langDialog.querySelector('.close').addEventListener('click', () => langDialog.close());
+langDialog.addEventListener('click', e => { if (e.target === langDialog) langDialog.close(); });
+langDialog.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { a.hash = location.hash; }));
 
 // Copy buttons; a focused button's new label is not always read aloud, so the status region repeats it
 const copyStatus = document.getElementById('copy-status');

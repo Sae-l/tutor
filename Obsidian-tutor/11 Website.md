@@ -55,11 +55,15 @@ flowchart TD
 
 In rc.3 nennt die Website **30 Modusfälle, 33 Grenzfälle und 12 Schutzregressionen**, verlinkt den öffentlichen Vault und bewahrt den Status „nicht abgenommen“. Die frühere Abweichung 32/33 ist damit in der Quelle korrigiert. Deployment und tatsächlich gelieferte Dateien separat prüfen; historische Live-Nachweise bleiben datiert.
 
+## Seitensprachen (2026-10-30, Map #96)
+
+Die Seite gibt es in de (`/tutor/`), en, tr, fr, ar und fa (`/tutor/<lang>/`), alle aus derselben Vorlage. Der Sprachknopf rechts in der Kopfzeile öffnet einen Dialog mit allen Seitensprachen und nimmt den Abschnitt mit; ar und fa sind ganz gespiegelt, MathML und Code bleiben LTR. `build.py` setzt je Sprache Schriftpfade, `canonical`, `og:url`, JSON-LD-`url` und `hreflang`. Wie im Produkt bleiben im Beispiel die Überschriften der Tutor-Antwort, der Aufgabentext und die Klausur-Lösung deutsch. Ein Test vergleicht HTML-Struktur und Zahlen jeder Sprache mit Deutsch. `node site/screenshots.mjs` fand am 2026-10-30 bei 375, 1024 und 1280 px, hell und dunkel, in keiner Sprache seitlichen Überlauf (lokale Vorschau, nicht auf Geräten). Übersetzt von Claude; die Prüfung durch den Maintainer (#101) steht aus. Regeln: `docs/DESIGN.md`, Abschnitt „Seitensprachen und Leserichtung“.
+
 ## Website später ändern
 
 1. Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html` ändern, dann `python build.py`. Eine Übersetzung ändert nur Text: `build.py` bricht ab, wenn Schlüssel, HTML-Tags, Links oder `{{version}}` von `de.json` abweichen; Deutsch als Besuchersprache und die vorhandenen Sprachbeispiele erhalten.
 2. Version, Paketlinks, Moduszahl und Prüfstatus mit README und Protokollen abgleichen.
-3. Mobilansicht, Tastaturbedienung, Kontrast, Kopieren, Links und RTL prüfen. Beim Sprachwechsel müssen deutsche Überschriften erhalten bleiben.
+3. Mobilansicht, Tastaturbedienung, Kontrast, Kopieren, Links und RTL prüfen, am einfachsten mit `node site/screenshots.mjs`. Neue Texte in alle sechs Sprachdateien eintragen. Beim Sprachwechsel müssen deutsche Überschriften erhalten bleiben.
 4. Nach dem Deployment die tatsächliche Website prüfen. Eine lokale Vorschau belegt kein erfolgreiches GitHub-Pages-Deployment.
 
 Diese Notiz erklärt und bewertet die Quelle. Website und Deployment wurden durch die Vault-Aktualisierung nicht geändert. HTTP-Ergebnis und Vergleichshashes stehen in [[Live-Nachweise.json|Live-Nachweise.json]]; eine neue Browser-, Mobil- oder Barrierefreiheitsprüfung fand nicht statt.
