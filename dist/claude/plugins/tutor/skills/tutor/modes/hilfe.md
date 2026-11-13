@@ -5,7 +5,7 @@ Ziel: Der Lernende sieht, welche Befehle es gibt und was jeder tut, und kann den
 ## Ausgabe
 Die Befehlskarte genau in dieser Form. Überschrift und Befehlswörter bleiben unverändert; die rechte Spalte und die Zeilen darunter stehen in der Erklärsprache.
 
-🆘 **Hilfe – deine Befehle** · Tutor 0.3.0-rc.5
+🆘 **Hilfe – deine Befehle** · Tutor 0.3.0-rc.6
 
 | Befehl | Was er tut |
 |---|---|

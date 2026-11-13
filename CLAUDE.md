@@ -35,7 +35,11 @@
 ## Mehrsprachige Landingpage (2026-10-30, Map #96, PR 2)
 - Seiten in de, en, tr, fr, ar, fa; ar und fa gespiegelt. Sprachknopf (Variante C aus #98) öffnet einen Dialog; `hreflang` je Seite. Übersetzt und geprüft von Claude (Saeed hat die Prüfung in #101 übergeben, keine Muttersprachprüfung); live seit 2026-10-30 (#105, 1c8ee93), alle sechs URLs geprüft. Map #96 geschlossen. Beispielüberschriften, Aufgabentext und Klausur-Lösung bleiben deutsch wie im Produkt. Tests: Struktur und Zahlen je Sprache gegen Deutsch. Belegbilder mit `node site/screenshots.mjs`. README-Verweis auf die Sprachseiten und `sitemap.xml` bewusst nicht gemacht (Out of scope in #96).
 
-## Stand v0.3.0-rc.5 (2026-10-28, aktuelle Version „Latest“)
+## Stand v0.3.0-rc.6 (2026-11-14, aktuelle Version „Latest“)
+- Korrekturen aus der Issue-Triage vom 13.11.2026: Einzelbefehl gilt nur für seine Nachricht (#95), `skizze` nur mit echten Bildern und Freikörperbild-Regeln (#110/#111/#113), `$$`-Formeln als eigene Absätze und Gleichungsnummern ohne `\tag` für ChatGPT Android (#44/#107), Version in `hilfe`. Website (Download, FAQ „Was ist neu“ in sechs Sprachen), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Pluginmanifeste, `hilfe.md` und Vault-Notizen 00/07/11/13/19 nennen rc.6. Release-Notizen `docs/releases/v0.3.0-rc.6.md`. Native Prüfung R-LS13, R-LS15, R-LS16, G08 vor „Latest“ durch den Maintainer.
+- Bekannter Fehler, nicht Teil von rc.6: In `site/i18n/fr.json` stehen seit #105 an 94 Stellen `\u0001` statt `:`, `;`, `?` oder `»` nach dem schmalen Leerzeichen; die französische Seite zeigt diese Satzzeichen nicht.
+
+## Stand v0.3.0-rc.5 (2026-10-28)
 - Korrekturen aus dem Protokoll G29/D3 (#93): Markdown-Tabelle in „Gegeben / Gesucht“, lateinische Ziffern auch auf Arabisch/Persisch, in `erklär` 🔒 nach ➡️. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13/19 nennen rc.5. Ohne bestandenes Gate, wie rc.3 und rc.4 als „Latest“. Nicht nativ geprüft; offen: blanke Sprachcodes (`fa`, `ar`).
 
 ## Stand v0.3.0-rc.4 (2026-10-28)
@@ -88,7 +92,7 @@
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
 ## Offene Punkte
-0. Stand 2026-11-13 abends: #114–#117 gemergt (Einzelbefehl #95, `skizze` mit Freikörperbild-Regeln und Plattformwegen, #44-Prüfliste, Version in `hilfe`, Verhaltens-Eval). Übergabe, Belege und nächste Schritte in `docs/planung/2026-11-13-issue-triage.md`; Bildschirmfotos zu #110/#111/#113 und Gemini-Canvas-Nachtest ausgewertet in `tests/protokolle/2026-11-13-skizze-gemini-claude.md`. Offen: günstigerer Skizzenweg (Einfüge-Seite oder SVG-Vorlagen), Secret `ANTHROPIC_API_KEY` für den Eval, native Prüfung und Release rc.6 (Entwurf `docs/releases/v0.3.0-rc.6.md`).
+0. Stand 2026-11-13 abends: #114–#117 gemergt (Einzelbefehl #95, `skizze` mit Freikörperbild-Regeln und Plattformwegen, #44-Prüfliste, Version in `hilfe`, Verhaltens-Eval). Übergabe, Belege und nächste Schritte in `docs/planung/2026-11-13-issue-triage.md`; Bildschirmfotos zu #110/#111/#113 und Gemini-Canvas-Nachtest ausgewertet in `tests/protokolle/2026-11-13-skizze-gemini-claude.md`. Offen: günstigerer Skizzenweg (Einfüge-Seite oder SVG-Vorlagen), Secret `ANTHROPIC_API_KEY` für den Eval, native Prüfung R-LS13/R-LS15/R-LS16/G08 für rc.6 (Release-PR `release/v0.3.0-rc.6`, Notizen `docs/releases/v0.3.0-rc.6.md`).
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
-2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.5 hochladen.
-3. v0.3.0-rc.5 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.4); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
+2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.6 hochladen.
+3. v0.3.0-rc.6 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.5); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.

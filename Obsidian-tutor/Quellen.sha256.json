@@ -15,7 +15,7 @@
     },
     {
       "path": "tutor/modes/hilfe.md",
-      "sha256": "d0b422155813dee7229ab6213534fbce8db5c3e4860333ee3adf385c065be017",
+      "sha256": "101f28d8dbd36e34c841de97e59d552db8e68752814131193b056a5ebaa0e57a",
       "normalization": "utf8-lf"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "15906e321f08a5f0718f8fbadc97da0c18d9835d98eadfd7c09ba675492fcd5c",
+      "sha256": "de8719e74a02581810703dcdd0d83a6c9a4447169a463af3b33ba1177f6dbb2e",
       "normalization": "utf8-lf"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "3c6e51c69d78be6f4c97131313f20f49d4801061576859afe25e7e9a2d073309",
+      "sha256": "db9ccc5ba807cb92b4a8c9b95aa76deda76ac97bb5ddff2876ec66127dc0f5af",
       "normalization": "utf8-lf"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "8b16fec2601f9d668ed192fb4dc590406fd69da21549915286af635b896e8de5",
+      "sha256": "889b8ec0d024e824d81f7ae272f6a11dc0fd774e37cf05d0485bfc86785a33d7",
       "normalization": "utf8-lf"
     },
     {
@@ -125,17 +125,17 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "1c5cc950676bbe38f19d1b1ce5ca0d50e9a1f6ebb64dc5d4ab3ef6899cbfe948",
+      "sha256": "e2097a2ec13714d7bc77801d234bb0c084218babb46b1539ec2028e3f191d6cd",
       "normalization": "utf8-lf"
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "6f42e402fd7ef86ec49b9c2bb46cd6389d72064243f04ea9eb1e20deb1d08add",
+      "sha256": "213b915eafdd2beccd8d3a2ba98777402612e00e574e746c3b3a5eeac35b39d3",
       "normalization": "utf8-lf"
     },
     {
       "path": "SECURITY.md",
-      "sha256": "b6e4f107b28082b0db50e45335989779fe8f483bb24f0ab312f344b7b77ec637",
+      "sha256": "04b74598f2f6379fa8ad9e7beee92cd2f52fad4472f892b97a033cec104f1c68",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "30548d7b47575ae484be8030296c7e8e84d1284ffabb5c9a0b954ac933540e94",
+      "sha256": "4a6a8fd0753eba52242f3dfdb9afb89834e2100de9947833b637ce3452cffe84",
       "normalization": "utf8-lf"
     },
     {
@@ -165,12 +165,12 @@
     },
     {
       "path": "docs/CHATGPT.md",
-      "sha256": "e0c73bf2712784752025233f7ce2e9d87b03d002f4973484fd1bec520563db54",
+      "sha256": "a68b4a96e1364ff74ac7047313873391d7d958456a80f6e787c457e233785be9",
       "normalization": "utf8-lf"
     },
     {
       "path": "docs/index.html",
-      "sha256": "cfb88b2cebac03a73d96760f6b4e3115e0d23b68e78424b4de8bb7b53e610330",
+      "sha256": "8465a2d99005b2b717b224113a62f01a40c14171fd2b7bea04d5de8ba2cb5bb3",
       "normalization": "utf8-lf"
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "path": "packaging/chatgpt-plugin.json",
-      "sha256": "9be2099fab09f3327c365860ca4b8bea27ca23f1bf60d08b0b765c89861794d2",
+      "sha256": "8d0454bbd42eb41931183f1cfe1095ecd2d5160573fd3c2d25f23b6759cfc163",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "e26bebb7a99a228f339ff3e61e76ffed9c7d2505bea0245197b23b6737a10b03",
+      "sha256": "3ff2c28d7dbae6d1af2fc83df982185f2e5be572f97e7a76a893362dc42b0ce6",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "83d47d39cec60facf970fefd163e4bc7201c4ec982f24088330d3725cf854a2a",
+      "sha256": "a85cf47d76119afa92c268c98947c0d748290ac7f0d725e4dbb8a01bb8053542",
       "normalization": "raw"
     },
     {
@@ -221,36 +221,36 @@
     {
       "path": "site/index.template.html",
       "normalization": "utf8-lf",
-      "sha256": "e05fcdaf7a9246957a729eeb9505975fa8fac8ba475f783c979e0792fbb2756e"
+      "sha256": "acc5747e12b9e050d9cd8f57ca693cd6440546e5296430c0dd903510dbf189d7"
     },
     {
       "path": "site/i18n/de.json",
       "normalization": "utf8-lf",
-      "sha256": "3c341beb76f013497e7b3293345a952e9172183eefb20e5f285277a1d73d2011"
+      "sha256": "9835388114569402cee8cbdeae8be53ae7b1e44c898f947aee2a8e6d7b272380"
     },
     {
       "path": "site/i18n/en.json",
-      "sha256": "27f0d5a44878fa728cbdcedae6e997cf3204a3b2a62a20db8e9cc8b761c5a15b",
+      "sha256": "fa5250d2f4a07a0d0fde5f8c187e0024157db3e69c694f695bfbb8769c5b1b73",
       "normalization": "utf8-lf"
     },
     {
       "path": "site/i18n/tr.json",
-      "sha256": "70cef8cbd2efd9904aaa2d9239284d7c1f7dcbf27a32afcab12729c3f05fc284",
+      "sha256": "3b4cb95315878bf43af91024ff1e6161f3abd7a7622f1ce8523ed2f0d7561f68",
       "normalization": "utf8-lf"
     },
     {
       "path": "site/i18n/fr.json",
-      "sha256": "69afba249c548f8ec725fe112df419e089df3fa1cf7527d3bb577b460850e76f",
+      "sha256": "341bb4f38def96902d843e7dac09740398bb23107acb3700b1e89af0f3296ad5",
       "normalization": "utf8-lf"
     },
     {
       "path": "site/i18n/ar.json",
-      "sha256": "b90c242d05d0a9950eef01eec5feef097d4d101bf7060980ae959bc17b30884c",
+      "sha256": "22b359b2d8347ef25cf06a0f4a2259f398c534308e5a2128482871eeb9730a1c",
       "normalization": "utf8-lf"
     },
     {
       "path": "site/i18n/fa.json",
-      "sha256": "8ac7fdd0bb0d2a767a70e4f099b5d868f31a8058c8de6bf8d364ee311b928663",
+      "sha256": "ed68d7bee23033a208541e9949efd50302c9a31ca91baa5ae84b64aa00d8cc51",
       "normalization": "utf8-lf"
     },
     {
