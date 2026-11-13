@@ -5,13 +5,13 @@
 ## Aufbau
 - `tutor/SKILL.md` – Router: Zweck, Ablauf, Befehlstabelle (11 Modi), Lösungsschutz, Haltung. Abschnitte zwischen `<!-- kern -->` und `<!-- /kern -->` bilden `dist/kern.md`.
 - `tutor/modes/*.md` – ein Modus pro Datei: erklaer (Voreinstellung), voll, thema, tipp, check, skizze, kurz, mittel, lang, klausur, hilfe.
-- `tutor/references/` – sprache, didaktik (Aufgabentypen, Lehrhaltung, Lernprinzipien, ADHS, Genauigkeit), antwortvorlage (Abschnitte 0–19, 16 frei), latex-regeln.
+- `tutor/references/` – sprache, didaktik (Aufgabentypen, Lehrhaltung, Lernprinzipien, ADHS, Genauigkeit), antwortvorlage (Abschnitte 0–19, 16 frei), latex-regeln, skizzen-arten (Skizzen außer Freikörperbild).
 - `kurse/` – optionale Kurspakete (z. B. `mpg1.md`), nicht Teil des Skills.
 - `build.py` → `dist/system-prompt.md`, `dist/kern.md` (intern ≤ 4000 Zeichen), `dist/chatgpt/` (lokaler Marketplace, ein Plugin/Skill) und `dist/tutor-chatgpt.zip` (Pluginarchiv). Modi aus der Befehlstabelle; Paketmetadaten in `packaging/chatgpt-plugin.json`, Installation in `docs/CHATGPT.md`.
 - `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage, erzeugt von `build.py` aus `site/index.template.html` und `site/i18n/<sprache>.json` (Texte je Seitensprache, Schlüssel `<abschnitt>.<nr>`; Deutsch nach `docs/index.html`, ar/tr/fr/en/fa nach `docs/<sprache>/index.html`; Sprachknopf, RTL und Prüfskript `site/screenshots.mjs` siehe `docs/DESIGN.md`) (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
 - `docs/assets/hero/` – Quelle (`hero.html`) und Skript (`render.mjs`) der README-Animation `docs/assets/hero-light.gif`/`hero-dark.gif` und des og:image `hero-light.png`. Regeln, Werkzeuge und Begründung in `docs/assets/hero/README.md`.
 - `docs/DESIGN.md` – Gestaltungsregeln für Landingpage und README (Farben, Schriften, Formeln, Bausteine, Bewegung, Texte, Verbote) mit Begründung.
-- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS16, U01…U14), `protokolle/`.
+- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS17, U01…U14), `protokolle/`.
 - `packaging/latex-fliesstext-universal.md` – Klartextregel für Formelzeichen, die `build.py` in alle `dist/`-Ausgaben statt des `<!-- fliesstext -->`-Blocks aus `latex-regeln.md` einsetzt (einfaches `$` rendert in ChatGPT nicht).
 - `Obsidian-tutor/` – öffentliche deutsche Wissensbasis mit 20 Notizen und Canvas. `python -B Obsidian-tutor/verify_vault.py` prüft Navigation, Canvas, Modusabdeckung und normalisierte Quellhashes. Bei Quelländerungen betroffene Artikel bewerten und Hashmanifest bewusst aktualisieren; persönliche `.obsidian/`-Dateien bleiben lokal.
 
@@ -35,9 +35,12 @@
 ## Mehrsprachige Landingpage (2026-10-30, Map #96, PR 2)
 - Seiten in de, en, tr, fr, ar, fa; ar und fa gespiegelt. Sprachknopf (Variante C aus #98) öffnet einen Dialog; `hreflang` je Seite. Übersetzt und geprüft von Claude (Saeed hat die Prüfung in #101 übergeben, keine Muttersprachprüfung); live seit 2026-10-30 (#105, 1c8ee93), alle sechs URLs geprüft. Map #96 geschlossen. Beispielüberschriften, Aufgabentext und Klausur-Lösung bleiben deutsch wie im Produkt. Tests: Struktur und Zahlen je Sprache gegen Deutsch. Belegbilder mit `node site/screenshots.mjs`. README-Verweis auf die Sprachseiten und `sitemap.xml` bewusst nicht gemacht (Out of scope in #96).
 
-## Stand v0.3.0-rc.6 (2026-11-14, aktuelle Version „Latest“)
+## Stand v0.3.0-rc.7 (2026-11-14, aktuelle Version „Latest“)
+- `skizze` aus #120: Freikörperbild ergänzt (Lagerzahlen in der Ebene, Gelenk, Pendelstab, „Nichts doppelt“, Streckenlast, d'Alembert nur nach Lehrveranstaltung) und neue Referenz `tutor/references/skizzen-arten.md` (Graph, Schaltplan, Zeigerdiagramm, Strahlengang, Feldlinien, Bewegungsskizze, Energieniveauschema; in `REFS` von `build.py`, System-Prompt etwa 60 KB). Dazu französische Satzzeichen der Landingpage (#121). Akzeptanzfälle R-LS16 (erweitert) und R-LS17 nicht nativ geprüft. Release-Notizen `docs/releases/v0.3.0-rc.7.md`.
+
+## Stand v0.3.0-rc.6 (2026-11-14)
 - Korrekturen aus der Issue-Triage vom 13.11.2026: Einzelbefehl gilt nur für seine Nachricht (#95), `skizze` nur mit echten Bildern und Freikörperbild-Regeln (#110/#111/#113), `$$`-Formeln als eigene Absätze und Gleichungsnummern ohne `\tag` für ChatGPT Android (#44/#107), Version in `hilfe`. Website (Download, FAQ „Was ist neu“ in sechs Sprachen), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Pluginmanifeste, `hilfe.md` und Vault-Notizen 00/07/11/13/19 nennen rc.6. Release-Notizen `docs/releases/v0.3.0-rc.6.md`. Native Prüfung R-LS13, R-LS15, R-LS16, G08 vor „Latest“ durch den Maintainer.
-- Französische Satzzeichen (94 Stellen `\u0001` seit #105) nach rc.6 in `site/i18n/fr.json` wiederhergestellt; siehe CHANGELOG „Unveröffentlicht“.
+- Französische Satzzeichen (94 Stellen `\u0001` seit #105) nach rc.6 in `site/i18n/fr.json` wiederhergestellt; veröffentlicht in rc.7.
 
 ## Stand v0.3.0-rc.5 (2026-10-28)
 - Korrekturen aus dem Protokoll G29/D3 (#93): Markdown-Tabelle in „Gegeben / Gesucht“, lateinische Ziffern auch auf Arabisch/Persisch, in `erklär` 🔒 nach ➡️. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13/19 nennen rc.5. Ohne bestandenes Gate, wie rc.3 und rc.4 als „Latest“. Nicht nativ geprüft; offen: blanke Sprachcodes (`fa`, `ar`).
@@ -94,5 +97,5 @@
 ## Offene Punkte
 0. Stand 2026-11-13 abends: #114–#117 gemergt (Einzelbefehl #95, `skizze` mit Freikörperbild-Regeln und Plattformwegen, #44-Prüfliste, Version in `hilfe`, Verhaltens-Eval). Übergabe, Belege und nächste Schritte in `docs/planung/2026-11-13-issue-triage.md`; Bildschirmfotos zu #110/#111/#113 und Gemini-Canvas-Nachtest ausgewertet in `tests/protokolle/2026-11-13-skizze-gemini-claude.md`. Offen: günstigerer Skizzenweg (Einfüge-Seite oder SVG-Vorlagen), Secret `ANTHROPIC_API_KEY` für den Eval, native Prüfung R-LS13/R-LS15/R-LS16/G08 für rc.6 (Release-PR `release/v0.3.0-rc.6`, Notizen `docs/releases/v0.3.0-rc.6.md`).
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
-2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.6 hochladen.
-3. v0.3.0-rc.6 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.5); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
+2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.7 hochladen.
+3. v0.3.0-rc.7 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.6); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
