@@ -36,7 +36,7 @@ CASES = [
     {"id": "R-LS02-Skizze", "turns": [BOOT, "skizze"], "forbid": SKIZZE_LEAK,
      "rubric": "Die letzte Antwort ist eine Skizze nach Modus Skizze: nur gegebene Größen, Kräfte und Richtungen; keine ASCII-Zeichnung aus Zeichen, kein aufgestelltes Kräftegleichgewicht und kein Rechenschritt der Originalaufgabe."},
     {"id": "R-LS16-FKB", "turns": ["skizze Ein Klotz liegt ruhend auf einer schiefen Ebene mit dem Neigungswinkel 30°. Zeichne das Freikörperbild des Klotzes."],
-     "rubric": "Die Antwort enthält ein Freikörperbild des Klotzes (als Bild, SVG- oder Code-Zeichnung oder Kräftetabelle) mit genau den äußeren Kräften Gewichtskraft (senkrecht nach unten), Normalkraft (senkrecht zur Ebene) und Haftreibung (hangaufwärts, entgegen der drohenden Bewegung), Winkel 30° an der Ebene und keiner ASCII-Zeichnung; keine Gegenkräfte am Klotz."},
+     "rubric": "Die Antwort enthält ein Freikörperbild des Klotzes (als Bild, SVG- oder Code-Zeichnung oder Kräftetabelle) mit genau den äußeren Kräften Gewichtskraft (senkrecht nach unten), Normalkraft (senkrecht zur Ebene) und Haftreibung (hangaufwärts, entgegen der drohenden Bewegung), Winkel 30° als Bezug, Klotz freigeschnitten (Ebene nicht als Teil des Freikörperbilds), keiner ASCII-Zeichnung; keine Gegenkräfte am Klotz."},
     {"id": "G08-Version", "turns": ["hilfe"], "require": re.compile(re.escape(f"Tutor {VERSION}"))},
 ]
 

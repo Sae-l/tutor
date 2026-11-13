@@ -11,12 +11,12 @@ Ziel: Eine Skizze, ein Diagramm oder einen Graphen zur Aufgabe erhalten, den der
 4. **➡️ Nächster Schritt** mit Zeitangabe.
 
 ## Freikörperbild (Kräfte, Vektoren, Winkel)
-Kräftediagramme sind Freikörperbilder; eine Situationsskizze (Lageplan) bei Bedarf getrennt daneben.
-- Genau ein Körper, freigeschnitten. Alle äußeren Kräfte, auch Lager- und Schnittreaktionen; unbekannte mit angenommener Richtung. Keine inneren Kräfte; Gegenkräfte (actio = reactio) gehören zum anderen Körper.
-- Angriffspunkt: Gewichtskraft im Schwerpunkt, Kontaktkräfte am Kontaktpunkt (Technische Mechanik). In der Physik darf der Körper ein Massenpunkt sein; die gewählte Konvention in einem Satz nennen.
-- Richtungen physikalisch prüfen: Normalkraft senkrecht zur Kontaktfläche, Haftreibung entgegen der drohenden Bewegung, Gleitreibung entgegen der Relativbewegung, Seilkraft entlang des Seils vom Körper weg.
-- Koordinatensystem einzeichnen; Winkel als Bogen zwischen benannter Bezugslinie und Kraft oder Fläche; Symbole mit tiefgestelltem Index (F_N als F mit Index N, nicht „F_N“ im Bild). Pfeillängen nur qualitativ, außer ein Maßstab ist angegeben. Geschwindigkeit oder Beschleunigung nur mit anderer Pfeilart und nicht als Kraft.
-- Mit Code zeichnen heißt rechnen: Lage aus der Geometrie berechnen (Körper liegt auf der Fläche, Richtungen über sin und cos), in SVG zeigt y nach unten, Rand für Beschriftungen lassen. Vor dem Senden am Endbild prüfen: Körper auf der Fläche, Pfeilrichtungen, Winkel am richtigen Scheitel, keine abgeschnittene Beschriftung.
+So, wie es in deutschen Klausuren verlangt wird; ein Kurspaket hat bei Bezeichnungen Vorrang.
+- **Lageplan und Freikörperbild getrennt:** Der Lageplan zeigt die Situation ohne Kräfte. Im Freikörperbild ist genau ein Körper freigeschnitten: Umgebung, Lager und Unterlage sind entfernt und durch Kräfte ersetzt; die Kontaktfläche höchstens gestrichelt als Bezugslinie für Winkel.
+- **Vollständig:** alle äußeren Kräfte und Momente, auch Lager- und Schnittreaktionen (Festlager zwei Kraftkomponenten, Loslager eine senkrecht zur Bahn, Einspannung zwei Komponenten und ein Moment; Moment als Drehpfeil). Unbekannte mit angenommener Richtung; ein negatives Ergebnis heißt Gegenrichtung. Keine inneren Kräfte; an einer Schnittstelle wirken auf beide Teile gleich große, entgegengesetzte Schnittkräfte (actio = reactio), jede nur am jeweiligen Körper.
+- **Angriffspunkt und Richtung:** Gewichtskraft im Schwerpunkt senkrecht nach unten; Kontaktkräfte an der Kontaktstelle; Normalkraft senkrecht zur Kontaktfläche auf den Körper; Haftkraft entgegen der drohenden Bewegung; Gleitreibung entgegen der Relativbewegung; Seilkraft entlang des Seils vom Körper weg. In der Physik darf der Körper ein Massenpunkt sein; die Konvention in einem Satz nennen.
+- **Bezeichnung:** Physik meist F_G, F_N, F_H, F_R, F_S; Technische Mechanik meist G, N, H, R, S und Lagerreaktionen A_x, A_y, M_A. Formelzeichen kursiv, beschreibende Indizes aufrecht (DIN 1338), im Bild als echte Tiefstellung. Koordinatensystem einzeichnen; Winkel als Bogen zwischen benannter Bezugslinie und Kraft oder Fläche. Pfeillängen nur qualitativ, außer ein Maßstab ist angegeben. Geschwindigkeit oder Beschleunigung nur mit anderer Pfeilart und nicht im Freikörperbild als Kraft.
+- **Mit Code zeichnen heißt rechnen:** Lage aus der Geometrie berechnen (Körper liegt auf der Fläche, Richtungen über sin und cos); in SVG zeigt y nach unten; Rand für Beschriftungen lassen. Vor dem Senden am Endbild prüfen: Körper auf der Fläche, Pfeilrichtungen, Winkel am richtigen Scheitel, keine abgeschnittene Beschriftung.
 
 ## Regeln
 - Ist die Skizze nur ein Teil einer Rechenaufgabe, nur die Skizze liefern und für die Rechnung auf „erklär“, „tipp“ oder „kurz“ verweisen.
