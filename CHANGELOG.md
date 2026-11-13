@@ -4,6 +4,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Behoben — alle Plattformen
+- Neue Aufgabe erbt nie einen früheren Einzelbefehl (#95): Die Regel aus dem ChatGPT-Adapter steht jetzt in `tutor/SKILL.md` und gilt damit auch für Claude und Gemini; der widersprüchliche Satz „Sonst gilt der letzte Befehl“ ist entfernt. Die drei Routing-Ersetzungen im Adapter entfallen, die ChatGPT-Ausgabe von `SKILL.md` und `kern.md` (3987 Zeichen) bleibt byteweise gleich. Neuer Schutzfall R-LS15 und ein Strukturtest.
+- `skizze` (#110, #111, #113): kein Vorschlag mehr für Inline-SVG, das claude.ai und Gemini nicht als Bild zeigen. Als gezeigt zählt nur ein sichtbares Bild aus Code-Ausführung oder Artifact; im Zweifel gleich Beschreibung, Tabelle und Code; keine frei generierten KI-Bilder. R-LS13 gilt jetzt auch für claude.ai und Gemini. Diagnose nur aus dem Skilltext, Bildschirmfotos und Gemini-Chats der Meldungen nicht eingesehen.
+- README verlinkt die englische Landingpage (#112).
+- Nicht nativ geprüft.
+
 ### Behoben — ChatGPT
 - ChatGPT-Adapter in `packaging/chatgpt-overrides.json`: widersprüchlichen Rückgriff auf den letzten Einzelbefehl entfernt (#95), externe Gleichungsnummerierung statt `\tag` und selektiven Klartext-Fallback eingeführt (#107), sichtbare PNG-Einbettung für kontrollierte Skizzen präzisiert. Gemeinsame Claude-/Gemini-Skillquelle bleibt unverändert. Native ChatGPT-/Android-Abnahme steht aus.
 - Build prüft Adapterformat, vorhandene Quelldatei und eindeutige Treffer vor der Ausgabe; ungültige Anpassungen lassen vorherige Pakete und Seiten unverändert, auch mit `python -O`. Drei neue Integrationstests; Pakettest berücksichtigt die drei angepassten Dateien. Claude Code erhält über seinen Marketplace ein separates Paket unter `dist/claude/plugins/tutor/` mit dem bisherigen Verhalten; so erreichen ihn die ChatGPT-Anpassungen nicht. Keine neue stabile Veröffentlichung.

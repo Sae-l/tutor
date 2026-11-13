@@ -1,18 +1,6 @@
 {
   "SKILL.md": [
     {
-      "old": "- **Auswahlreihenfolge:** persönliches `!issue` → gültiger Hilfeaufruf → Einzelbefehl → Dauermodus → automatisch Check bei eigenem Versuch bzw. Thema bei reiner Konzeptfrage → sonst Erklär. Sonst gilt der letzte Befehl; Sprache separat.",
-      "new": "- **Auswahlreihenfolge:** `!issue` → Hilfe → Einzelbefehl → Dauermodus → Check bei eigenem Versuch / Thema bei Konzeptfrage → Erklär. Neue Aufgabe: nie einen früheren Einzelbefehl erben. Sprache separat."
-    },
-    {
-      "old": "Ein Einzelbefehl gilt nur für seine Nachricht.",
-      "new": "Ein Einzelbefehl gilt nur für seine Nachricht; er ändert den Dauermodus nicht."
-    },
-    {
-      "old": "- **Folgebefehl ohne neue Aufgabe** (z. B. „tipp“ nach „lang“): gilt der zuletzt bearbeiteten Originalaufgabe, nicht der eigenen Verständnisfrage, außer der Lernende meint erkennbar die Frage.",
-      "new": "- **Folgebefehl ohne neue Aufgabe** (z. B. „tipp“ nach „lang“): gilt der zuletzt bearbeiteten Originalaufgabe, nicht der eigenen Verständnisfrage, außer der Lernende meint erkennbar die Frage. Eine neue Aufgabe ohne Befehl startet in Erklär, sofern kein Dauermodus oder automatische Wahl greift. Eine bloße Fortsetzung derselben Aufgabe ist keine neue Lösungsfreigabe. „lösung“ gilt nur dem eindeutig angeforderten Inhalt und wird nie auf eine neue Aufgabe übertragen."
-    },
-    {
       "old": "nur ASCII, Ergebnis in `\\boxed{}`;",
       "new": "nur ASCII, Ergebnis in `\\boxed{}`, Nummern außerhalb (kein `\\tag`);"
     }
@@ -33,8 +21,8 @@
   ],
   "modes/skizze.md": [
     {
-      "old": "   - **Mit Zeichen- oder Rechenwerkzeug:** bevorzugt mit kontrolliertem Code zeichnen und direkt in derselben Antwort sichtbar anzeigen; bei einfachen Skizzen kann das ein gerendertes Inline-SVG sein. Ein Datei- oder Downloadlink oder ungerenderter SVG-/HTML-Code allein ist kein Ergebnis. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen.",
-      "new": "   - **Mit Zeichen- oder Rechenwerkzeug in ChatGPT:** mit kontrolliertem Code zeichnen, als PNG rendern, das tatsächliche Endbild prüfen und direkt in derselben Antwort mit Markdown-Bildsyntax einbetten. Für lokale Bilder ein absolutes sandbox:-Ziel verwenden. SVG bei Bedarf als Zeichenquelle verwenden und vor der Ausgabe rasterisieren; roher Inline-SVG-/HTML-Code ist kein verlässlich sichtbares Bild. Ein Datei- oder Downloadlink allein genügt nicht. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen. Keine dekorativen KI-Bilder als Ersatz für exakte Zeichnungen."
+      "old": "   - **Mit Zeichen- oder Rechenwerkzeug:** mit kontrolliertem Code (z. B. matplotlib) zeichnen und das Bild direkt in derselben Antwort zeigen, etwa als Ausgabe der Code-Ausführung oder als Artifact. Gezeigt ist nur, was tatsächlich als Bild erscheint; SVG-/HTML-Code im Chat, ein Datei- oder Downloadlink oder ein Bildprompt allein ist kein Ergebnis. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen.",
+      "new": "   - **Mit Zeichen- oder Rechenwerkzeug in ChatGPT:** mit kontrolliertem Code zeichnen, als PNG rendern, das tatsächliche Endbild prüfen und direkt in derselben Antwort mit Markdown-Bildsyntax einbetten. Für lokale Bilder ein absolutes sandbox:-Ziel verwenden. SVG bei Bedarf als Zeichenquelle verwenden und vor der Ausgabe rasterisieren; roher Inline-SVG-/HTML-Code ist kein verlässlich sichtbares Bild. Ein Datei- oder Downloadlink allein genügt nicht. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen."
     }
   ]
 }
