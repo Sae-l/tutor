@@ -4,6 +4,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+## [0.3.0-rc.6] – 2026-11-14
+
 ### Behoben — `skizze` nach Bildschirmfotos vom 13.11.2026
 - Neuer Abschnitt „Freikörperbild“ in `skizze.md` nach deutscher Klausurpraxis: Lageplan und Freikörperbild getrennt, Umgebung entfernt und durch Kräfte ersetzt, Lagerreaktionen (Festlager, Loslager, Einspannung, Moment als Drehpfeil), Bezeichnungen Physik/Technische Mechanik, Formelzeichen kursiv mit aufrechtem Index (DIN 1338); ein freigeschnittener Körper, alle äußeren Kräfte, Angriffspunkt nach Konvention, physikalische Richtungsprüfung, Koordinatensystem, Winkelbogen, echte Indizes, Lage aus Geometrie berechnen und Endbild prüfen. Sichtbarer Weg je Plattform nach offiziellen Hilfeseiten (Claude-Visualisierungen nur Web/Desktop, Code-Ausführung auch mobil; ChatGPT-Python-Bilder; Gemini-Canvas mit Vorschau); kein Bildgenerator. Prototyp-SVG gerendert und geprüft. Neuer Akzeptanzfall R-LS16 und Eval-Fall. Gemini-Nachtest: Canvas zeigt Bilder, baut aber ohne Vorgabe eine teure App mit erfundenen Werten; Regel auf eine statische SVG-Datei im Canvas geschärft.
 - Gemini zeichnete eine ASCII-Skizze im Codeblock und schrieb das Kräftegleichgewicht F_Zug = F_W = k·v der Originalaufgabe darunter (Lösungsverrat). `skizze.md` verbietet jetzt Textgrafik ausdrücklich auch im Codeblock, aufgestellte Gleichungen der Aufgabe in Skizze und Begleittext und Gleichungen in der Kontrolle; ohne Bildanzeige ein Satz, wie man das Bild aus dem Code erzeugt. Neuer Eval-Fall `R-LS02-Skizze`. Protokoll `tests/protokolle/2026-11-13-skizze-gemini-claude.md` (#110, #111, #113). Nicht nativ geprüft.
