@@ -78,6 +78,7 @@ def run_case(client, system, case):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252 (no →, ², Arabic)
     if "--dry-run" in sys.argv:
         for case in CASES:
             print(case["id"], "|", " → ".join(case["turns"]))
