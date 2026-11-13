@@ -86,6 +86,7 @@
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
 ## Offene Punkte
+0. Stand 2026-11-13: Triage aller offenen Issues, Belege, Blocker und nächste Schritte in `docs/planung/2026-11-13-issue-triage.md`. PR #114 (CI grün) wartet auf Merge; Anhänge von #110/#111/#113 noch nicht gelesen.
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
 2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.5 hochladen.
 3. v0.3.0-rc.5 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.4); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.
