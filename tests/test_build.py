@@ -295,6 +295,12 @@ class BuildTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("hilfe.md", result.stderr)
 
+    def test_behaviour_eval_lists_cases_without_api(self):
+        result = subprocess.run([sys.executable, str(ROOT / "tests/eval_verhalten.py"), "--dry-run"],
+                                capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("R-LS15a", result.stdout)
+
     def test_all_languages_have_a_signal(self):
         sprache = self.read("tutor/references/sprache.md")
         hilfe = self.read("tutor/modes/hilfe.md")

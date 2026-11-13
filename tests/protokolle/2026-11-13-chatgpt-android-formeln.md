@@ -28,6 +28,17 @@ Sichttest zu #44 (Roh-LaTeX auf Android ohne `\tag`), kein Gate-Lauf.
 - Gemeldet wurde ein Link zur ChatGPT-Unterhaltung; aus der Sitzung nicht abrufbar (Netzwerkregel), daher nicht ausgewertet.
 - Nächster Test: dieselbe Eingabe mit ausdrücklich wörtlich vorgegebenen `$$ … $$`-Zeilen und eine echte `erklär`-Antwort auf eine Aufgabe mit Arabisch (RTL), wie im Fall vom 2026-11-12.
 
+### #44 – Nachtest 16:34/16:36: „Gib exakt diese vier Zeilen aus, wörtlich mit $$“
+
+| Lauf | Antwort (kopierter Text) | Darstellung in der App |
+|---|---|---|
+| mit `@Tutor` (16:34) | vier Formeln, kopiert als `\[ … \]`, jede in eigenem Absatz | alle vier gesetzt |
+| ohne Tutor (16:36) | `$$U_{\mathrm{Kreis}} = 2\pi r$$ $$A_{\mathrm{Rechteck}} = b \cdot h$$ …` – alle vier `$$`-Formeln direkt hintereinander, ohne Leerzeilen | **Rohtext**: `$$`, `\mathrm`, `\pi`, `\cdot` sichtbar |
+
+**Befund:** Der Fehler aus #44 ist reproduziert, wenn mehrere `$$`-Formeln ohne Leerzeile hintereinander in einem Absatz stehen. Steht jede Formel in einem eigenen Absatz (wie es `latex-regeln.md` Regel 1 verlangt), rendert die App. Das passt zu Berichten im OpenAI-Forum, dass eigenständige Formeln funktionieren und Formeln im Text scheitern. Vermutlich kopiert ChatGPT gesetzte Formeln als `\[ … \]`; der kopierte Text zeigt daher nicht sicher die ursprünglichen Begrenzer.
+
+**Folge:** Die Prüfliste in `latex-regeln.md` prüft jetzt ausdrücklich „jede `$$`-Formel allein in ihrem Absatz, nie zwei in einer Zeile“. Nicht geprüft: ob der Tutor-Fall vom 2026-11-12 genau diese Form hatte.
+
 ## Ergebnis
 
-Kein Gate-Fall. #44 bleibt offen.
+Kein Gate-Fall. Ursache für #44 eingegrenzt; #44 bleibt bis zu einem Nachtest mit einer echten `erklär`-Antwort offen.
