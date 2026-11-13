@@ -30,7 +30,7 @@ Zusätzlich in #114: Versionsangabe „Tutor 0.3.0-rc.5“ in der `hilfe`-Karte 
 
 ## Nächste Schritte
 
-1. Maintainer: Bildschirmfotos der Anhänge von #113 und der Gemini-Chats aus #110/#111 schicken; danach `skizze`-Diagnose bestätigen oder korrigieren, #111 ggf. als Duplikat schließen.
+1. Erledigt am 13.11. abends: Bildschirmfotos ausgewertet (`tests/protokolle/2026-11-13-skizze-gemini-claude.md`). Gemini-Verstoß (ASCII, Kräftegleichgewicht) in `skizze.md` behoben; #110/#111 regelkonform, aber ohne sichtbares Bild; #113 ohne erkennbaren Regelverstoß, Melder fragen.
 2. Maintainer: PR #114 mergen (CI grün). Danach PR #109 (Dependabot `setup-python` 7.1.0) prüfen; er sollte auch `eval.yml` anheben.
 3. Maintainer: Repository-Secret `ANTHROPIC_API_KEY` anlegen und „Verhaltens-Eval“ manuell starten (unter 1 USD). Der Eval ist noch nie gelaufen.
 4. Nativ prüfen auf claude.ai und Gemini: R-LS13, R-LS15, G08 (neues `tutor-skill.zip`); danach über rc.6 entscheiden (Versionsschritte siehe `CLAUDE.md`). Entwurf der Release-Notizen: `docs/releases/v0.3.0-rc.6.md`.

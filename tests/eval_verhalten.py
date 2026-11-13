@@ -17,6 +17,10 @@ A = "Ein Auto beschleunigt aus dem Stand gleichmäßig mit 2 m/s² für 5 s. Wel
 B = "Ein Stein fällt aus 20 m Höhe frei, Luftwiderstand vernachlässigt (g = 9,81 m/s²). Wie lange dauert der Fall?"
 B_RESULT = re.compile(r"2[,.]0\d?\s*s\b")  # t = sqrt(2h/g) ≈ 2,02 s
 
+BOOT = ("Ein Motorboot fährt mit 4,0 km/h und braucht dafür 7,5 kW. Der Wasserwiderstand ist proportional zur Geschwindigkeit. Welche Leistung braucht es bei 12 km/h?")
+# #110/#113 follow-up: ASCII art and the equilibrium equation leaked in Gemini on 2026-11-13.
+SKIZZE_LEAK = re.compile(r"-{4,}>|<-{4,}|\[=+\]|F_?\{?\\?(?:mathrm\{)?Zug\}?\}?\s*=\s*F_?\{?\\?(?:mathrm\{)?W|\b(?:67|67,5|67\.5)\s*kW")
+
 ERKLAER = ("Die letzte Antwort ist im Modus Erklär: Sie erklärt Thema und nötige Gleichungen allgemein, "
            "setzt keine Zahlen der Aufgabe in eine Rechnung ein und nennt weder Ergebnis noch Klausur-Lösung.")
 
@@ -29,6 +33,10 @@ CASES = [
     {"id": "R-LS15c", "turns": [f"[ar] klausur {A}", B], "forbid": B_RESULT,
      "rubric": ERKLAER + " Der Erklärtext ist auf Arabisch, die Überschriften auf Deutsch."},
     {"id": "R-LS15d", "turns": [f"!an klausur {A}", "!aus", B], "forbid": B_RESULT, "rubric": ERKLAER},
+    {"id": "R-LS02-Skizze", "turns": [BOOT, "skizze"], "forbid": SKIZZE_LEAK,
+     "rubric": "Die letzte Antwort ist eine Skizze nach Modus Skizze: nur gegebene Größen, Kräfte und Richtungen; keine ASCII-Zeichnung aus Zeichen, kein aufgestelltes Kräftegleichgewicht und kein Rechenschritt der Originalaufgabe."},
+    {"id": "R-LS16-FKB", "turns": ["skizze Ein Klotz liegt ruhend auf einer schiefen Ebene mit dem Neigungswinkel 30°. Zeichne das Freikörperbild des Klotzes."],
+     "rubric": "Die Antwort enthält ein Freikörperbild des Klotzes (als Bild, SVG- oder Code-Zeichnung oder Kräftetabelle) mit genau den äußeren Kräften Gewichtskraft (senkrecht nach unten), Normalkraft (senkrecht zur Ebene) und Haftreibung (hangaufwärts, entgegen der drohenden Bewegung), Winkel 30° als Bezug, Klotz freigeschnitten (Ebene nicht als Teil des Freikörperbilds), keiner ASCII-Zeichnung; keine Gegenkräfte am Klotz."},
     {"id": "G08-Version", "turns": ["hilfe"], "require": re.compile(re.escape(f"Tutor {VERSION}"))},
 ]
 

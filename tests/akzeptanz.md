@@ -101,7 +101,7 @@ In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten g
 | G32 | Auswahlfrage aus Übungsblatt („Welche Aussagen treffen zu?“) ohne Befehl → `lösung` | Thema erklärt, keine Option beurteilt; Antwort erst nach „lösung“. |
 | G33 | „Auf Arabisch: erklär“ + E-Technik-Aufgabe → nächste Aufgabe ohne Signal → „auf Deutsch“ + Aufgabe | Natürlicher ausdrücklicher Sprachwunsch wirkt wie `[ar]`, bleibt erhalten und wechselt auf Deutsch zurück; Überschriften bleiben Deutsch. |
 
-## Schutzregressionen für rc.3 (R-LS01 … R-LS15)
+## Schutzregressionen für rc.3 (R-LS01 … R-LS16)
 
 Zusätzlich zu den bisherigen Fällen auf jeder verfügbaren Zieloberfläche ausführen. **Alle noch nicht geprüft.** Bei zentralen Regeländerungen sämtliche bisherigen Fälle wiederholen. #32 bleibt bis zum dokumentierten nativen Bildtest offen. Die gemeinsame Drei-Plattform-Freigabe wird getrennt in #39 entschieden; diese Ergänzung behauptet keinen Gate-Erfolg.
 
@@ -110,7 +110,7 @@ Selbst erstellte Aufgaben; Zahlenreferenzen unabhängig nachrechnen. Bei Bildern
 | ID | Eingabe / Folge | Erwartung |
 |---|---|---|
 | R-LS01 | Ohne Befehl: „Ein Wagen fährt 4 s mit 3 m/s, dann 2 s mit 5 m/s. Welche Gesamtstrecke?“ | Erklär; weder 12 m, 10 m, 22 m noch eingesetzte Originalrechnung in irgendeinem Medium. |
-| R-LS02 | Dieselbe Rechenaufgabe → `skizze` | Nur gegebene Zeiten, Geschwindigkeiten und Richtungen; keine berechneten Strecken in Bild, Tabelle oder Code. |
+| R-LS02 | Dieselbe Rechenaufgabe → `skizze` | Nur gegebene Zeiten, Geschwindigkeiten und Richtungen; keine berechneten Strecken in Bild, Tabelle oder Code; keine ASCII-Zeichnung (auch nicht im Codeblock) und keine aufgestellte Gleichung der Aufgabe (z. B. Kräftegleichgewicht) in Skizze, Begleittext oder Kontrolle. |
 | R-LS03 | Dieselbe Aufgabe → `skizze`, Bildwerkzeug verfügbar | Endbild visuell auf Ergebnisfelder und Originalwerte prüfen. Ungeprüftes Bild zurückhalten, kontrollierte Zeichnung oder Beschreibung verwenden; keine Prüfung allein des Bildprompts. |
 | R-LS04 | `tipp` + Aufgabe → neue Aufgabe ohne Befehl; zusätzlich mit `!an tipp` wiederholen | Ohne Dauermodus Erklär, mit Dauermodus Tipp; durchgehend Schutz. |
 | R-LS05 | `[ar] tipp` + Aufgabe → `skizze` → neue Aufgabe | Arabische Erklärsprache bleibt, deutsche Überschriften; kein Lösungsverrat über Medien. |
@@ -124,6 +124,7 @@ Selbst erstellte Aufgaben; Zahlenreferenzen unabhängig nachrechnen. Bei Bildern
 | R-LS13 | Rechenaufgabe → `skizze` (#45, #110, #111, #113), auf ChatGPT Web und Android, claude.ai und Gemini | Zeichnung erscheint sichtbar als Bild in derselben Nachricht, kein SVG-/HTML-Code, bloßer Link, Bildprompt oder frei generiertes KI-Bild, ohne Rückfrage „Wo ist die Skizze?“; Inhalt wie R-LS02. Nicht einbettbar: Einschränkung genannt, Beschreibung statt Behauptung. |
 | R-LS14 | Mechanikaufgabe mit Reibung im Modus `erklär` (#44); danach „ich sehe nur $$ und Backslashes“ | (a) Rendering: Formeln gesetzt, kein sichtbarer Rohcode; nach der Meldung Unicode-Klartextformeln. (b) Notation getrennt prüfen: Formelzeichen mit Bedeutung und Einheit erklärt, Einheiten aufrecht, Dezimalkomma. Keine Zahlenlösung der Originalaufgabe. |
 | R-LS15 | `[ar] klausur` + Aufgabe A → Aufgabe B ohne Befehl; zusätzlich mit `mittel`, `lang`, `voll` statt `klausur`; dann `!an klausur` → zwei Aufgaben ohne Befehl → `!aus` → Aufgabe (#95), auf Claude, ChatGPT und Gemini | Ohne Dauermodus ist B Erklär auf Arabisch, ohne Originalergebnis; mit `!an klausur` beide Aufgaben Klausur, nach `!aus` wieder Erklär. Ein `lösung` zu A gilt nie für B. |
+| R-LS16 | `skizze`: „Ein Klotz liegt ruhend auf einer schiefen Ebene (30°). Zeichne das Freikörperbild des Klotzes.“ auf claude.ai Web und App, ChatGPT, Gemini (mit Canvas-Vorschau) | Lageplan und Freikörperbild getrennt; im Freikörperbild Klotz freigeschnitten (Ebene entfernt, höchstens gestrichelte Bezugslinie); als sichtbares Bild aus Code (Visualisierung, PNG oder Canvas) oder Tabelle plus SVG-Code; F_G senkrecht nach unten am Schwerpunkt, F_N senkrecht zur Ebene, Haftreibung hangaufwärts, Winkel als Bogen, Koordinatensystem, Formelzeichen kursiv mit aufrechtem Index, Körper liegt auf der Fläche; kein Bildgenerator, keine ASCII-Zeichnung, keine Gegenkräfte am Klotz. |
 
 ## Lernfluss und Fachkonventionen (U01 … U14)
 
