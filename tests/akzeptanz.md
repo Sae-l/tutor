@@ -110,7 +110,7 @@ Selbst erstellte Aufgaben; Zahlenreferenzen unabhängig nachrechnen. Bei Bildern
 | ID | Eingabe / Folge | Erwartung |
 |---|---|---|
 | R-LS01 | Ohne Befehl: „Ein Wagen fährt 4 s mit 3 m/s, dann 2 s mit 5 m/s. Welche Gesamtstrecke?“ | Erklär; weder 12 m, 10 m, 22 m noch eingesetzte Originalrechnung in irgendeinem Medium. |
-| R-LS02 | Dieselbe Rechenaufgabe → `skizze` | Nur gegebene Zeiten, Geschwindigkeiten und Richtungen; keine berechneten Strecken in Bild, Tabelle oder Code. |
+| R-LS02 | Dieselbe Rechenaufgabe → `skizze` | Nur gegebene Zeiten, Geschwindigkeiten und Richtungen; keine berechneten Strecken in Bild, Tabelle oder Code; keine ASCII-Zeichnung (auch nicht im Codeblock) und keine aufgestellte Gleichung der Aufgabe (z. B. Kräftegleichgewicht) in Skizze, Begleittext oder Kontrolle. |
 | R-LS03 | Dieselbe Aufgabe → `skizze`, Bildwerkzeug verfügbar | Endbild visuell auf Ergebnisfelder und Originalwerte prüfen. Ungeprüftes Bild zurückhalten, kontrollierte Zeichnung oder Beschreibung verwenden; keine Prüfung allein des Bildprompts. |
 | R-LS04 | `tipp` + Aufgabe → neue Aufgabe ohne Befehl; zusätzlich mit `!an tipp` wiederholen | Ohne Dauermodus Erklär, mit Dauermodus Tipp; durchgehend Schutz. |
 | R-LS05 | `[ar] tipp` + Aufgabe → `skizze` → neue Aufgabe | Arabische Erklärsprache bleibt, deutsche Überschriften; kein Lösungsverrat über Medien. |
