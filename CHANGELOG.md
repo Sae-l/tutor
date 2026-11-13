@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Geändert — `skizze` (Entwurf)
+- Freikörperbild ergänzt: Lagerzahlen ausdrücklich „in der Ebene“; Gelenk (zwei Kraftkomponenten, kein Moment) und Pendelstab (Kraft entlang der Stabachse, als Zug angenommen); Richtung der Haftkraft in der Technischen Mechanik frei annehmbar; neue Regel „Nichts doppelt“ (Kraft oder Komponenten, Komponenten gestrichelt; Streckenlast verteilt, Resultierende höchstens gestrichelt); Trägheitskraft nach d'Alembert nur, wenn die Lehrveranstaltung das Verfahren nutzt. Quelle: übliche TM1-Lehrbuchinhalte (z. B. Gross/Hauger/Schröder/Wall), nicht neu recherchiert. Nicht nativ geprüft.
+
 ## [0.3.0-rc.6] – 2026-11-14
 
 ### Behoben — `skizze` nach Bildschirmfotos vom 13.11.2026
