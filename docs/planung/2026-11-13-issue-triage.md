@@ -28,6 +28,12 @@ Zusätzlich in #114: Versionsangabe „Tutor 0.3.0-rc.5“ in der `hilfe`-Karte 
 - Plugin context-mode blockiert Bash, Grep und WebFetch (verlangt Node ≥ 24.15, Container hat 22). Umweg: Desktop-Commander für Shell. Node 24 liegt unter `/opt/node24`, der Austausch des System-`node` wurde vom Berechtigungsfilter abgelehnt.
 - Folge: Anhänge nur über Bildschirmfotos des Nutzers im Chat lesbar.
 
+## Stand 13.11.2026 abends (`skizze`)
+
+- PR #116: Freikörperbild-Regeln nach deutscher Klausurpraxis, Weg je Plattform, keine ASCII-Grafik, keine Gleichungen der Aufgabe. CI grün; nicht nativ geprüft.
+- Gemini-Nachtest (Protokoll `tests/protokolle/2026-11-13-skizze-gemini-claude.md`, Fälle E/F): Canvas zeigt Bilder, baut aber ohne klare Vorgabe eine teure interaktive App mit erfundenen Werten; normaler Chat zeigt SVG nicht. Regel auf „eine statische SVG-Datei im Canvas“ geschärft.
+- Ideen für einen günstigeren Weg (noch nicht entschieden): (1) kleine statische Seite auf der Projektwebsite, in die man SVG-Code einfügt und lokal sieht (kein Token-Mehraufwand, alle Plattformen); (2) feste SVG-Vorlagen für häufige Fälle (schiefe Ebene, hängende Masse, Balken mit Lagern), in die das Modell nur Winkel und Bezeichnungen einsetzt; (3) bei Gemini Canvas nur auf ausdrücklichen Wunsch.
+
 ## Nächste Schritte
 
 1. Erledigt am 13.11. abends: Bildschirmfotos ausgewertet (`tests/protokolle/2026-11-13-skizze-gemini-claude.md`). Gemini-Verstoß (ASCII, Kräftegleichgewicht) in `skizze.md` behoben; #110/#111 regelkonform, aber ohne sichtbares Bild; #113 ohne erkennbaren Regelverstoß, Melder fragen.

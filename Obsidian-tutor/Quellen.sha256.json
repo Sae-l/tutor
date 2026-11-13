@@ -40,7 +40,7 @@
     },
     {
       "path": "tutor/modes/skizze.md",
-      "sha256": "0160b9d63fe5bde8dccc676b1e29f22048f63f2bc8d2d7cb67e442256edb13b7",
+      "sha256": "f33f4d326760bcfce10d7171bedf72bb20b06973dbd8d06b921984923fe318ef",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "ea4c7d845eb505a83058a0429d671d8b920b10a91c366c820defd96ebc2cd80f",
+      "sha256": "30548d7b47575ae484be8030296c7e8e84d1284ffabb5c9a0b954ac933540e94",
       "normalization": "utf8-lf"
     },
     {
@@ -260,7 +260,7 @@
     },
     {
       "path": "packaging/chatgpt-overrides.json",
-      "sha256": "55c2c9c78308d9b6cfb01655bc5827da93551dac077b65ec8e2551f7b2959b33",
+      "sha256": "1ad3b98b0ccfca8b4705439cda12e14d6bf912cf561124ac8086af4fbd097e5d",
       "normalization": "utf8-lf"
     },
     {
