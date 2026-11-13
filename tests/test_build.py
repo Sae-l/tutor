@@ -321,7 +321,7 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(marketplace["plugins"][0]["name"], manifest["name"])
         self.assertEqual((package / marketplace["plugins"][0]["source"]["path"]).resolve(), plugin.resolve())
         sources = list((self.root / "tutor").rglob("*.md"))
-        self.assertEqual(len(sources), 16)
+        self.assertEqual(len(sources), 17)
         expected = {"plugin.json", "LICENSE", "README.md", "assets/logo.svg"}
         for source in sources:
             relative = "skills/tutor/" + source.relative_to(self.root / "tutor").as_posix()
