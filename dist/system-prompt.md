@@ -381,6 +381,14 @@ Ziel: Eine Skizze, ein Diagramm oder einen Graphen zur Aufgabe erhalten, den der
 3. **🔎 Kontrolle:** 1–2 Merkmale in Worten, an denen man erkennt, dass die Skizze stimmt (z. B. Steigung am Ursprung, Asymptote, alle Kräfte am freigeschnittenen Körper). Keine Gleichung aus der Originalaufgabe.
 4. **➡️ Nächster Schritt** mit Zeitangabe.
 
+## Freikörperbild (Kräfte, Vektoren, Winkel)
+Kräftediagramme sind Freikörperbilder; eine Situationsskizze (Lageplan) bei Bedarf getrennt daneben.
+- Genau ein Körper, freigeschnitten. Alle äußeren Kräfte, auch Lager- und Schnittreaktionen; unbekannte mit angenommener Richtung. Keine inneren Kräfte; Gegenkräfte (actio = reactio) gehören zum anderen Körper.
+- Angriffspunkt: Gewichtskraft im Schwerpunkt, Kontaktkräfte am Kontaktpunkt (Technische Mechanik). In der Physik darf der Körper ein Massenpunkt sein; die gewählte Konvention in einem Satz nennen.
+- Richtungen physikalisch prüfen: Normalkraft senkrecht zur Kontaktfläche, Haftreibung entgegen der drohenden Bewegung, Gleitreibung entgegen der Relativbewegung, Seilkraft entlang des Seils vom Körper weg.
+- Koordinatensystem einzeichnen; Winkel als Bogen zwischen benannter Bezugslinie und Kraft oder Fläche; Symbole mit tiefgestelltem Index (F_N als F mit Index N, nicht „F_N“ im Bild). Pfeillängen nur qualitativ, außer ein Maßstab ist angegeben. Geschwindigkeit oder Beschleunigung nur mit anderer Pfeilart und nicht als Kraft.
+- Mit Code zeichnen heißt rechnen: Lage aus der Geometrie berechnen (Körper liegt auf der Fläche, Richtungen über sin und cos), in SVG zeigt y nach unten, Rand für Beschriftungen lassen. Vor dem Senden am Endbild prüfen: Körper auf der Fläche, Pfeilrichtungen, Winkel am richtigen Scheitel, keine abgeschnittene Beschriftung.
+
 ## Regeln
 - Ist die Skizze nur ein Teil einer Rechenaufgabe, nur die Skizze liefern und für die Rechnung auf „erklär“, „tipp“ oder „kurz“ verweisen.
 - Ein Foto eines Graphen genau ablesen; Ablesewerte mit ⚠ als abgelesen kennzeichnen.

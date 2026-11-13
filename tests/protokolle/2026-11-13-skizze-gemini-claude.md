@@ -30,3 +30,14 @@ Ausgewertet am 2026-11-13 anhand von Bildschirmfotos, die der Maintainer im Chat
 - D: Melder von #113 nach dem erwarteten Verhalten fragen.
 - B/C: Entscheidung, ob für Gemini ein anderer sichtbarer Weg erlaubt werden soll (z. B. Gemini-Canvas); nicht geprüft.
 - Nachtest von A mit neuem Skill-Stand auf Gemini.
+
+## Nachtrag: Recherche und Prototyp (13.11.2026 abends)
+
+**Sichtbare Wege laut offiziellen Hilfeseiten:**
+- Claude: Eigene Visualisierungen im Chat nur auf Web und Desktop, in den Apps für iOS und Android nur Text ([Anthropic](https://support.claude.com/en/articles/13979539-custom-visuals-in-chat-and-cowork)). Skills setzen Code-Ausführung voraus ([Anthropic](https://support.claude.com/en/articles/12512180-use-skills-in-claude)); Code-Ausführung und Dateien gibt es auch mobil ([Anthropic](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude)).
+- ChatGPT: Python im Jupyter-Umfeld erzeugt statische Diagramme als Bild ([OpenAI](https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt)); Code Interpreter auch in der Mobil-App ([OpenAI](https://developers.openai.com/api/docs/guides/tools-code-interpreter)).
+- Gemini: Canvas erzeugt HTML und zeigt es über „Vorschau“, auch auf Android und iOS ([Google](https://support.google.com/gemini/answer/16047321?hl=en&co=GENIE.Platform%3DAndroid)); Vorschau laut Nutzerberichten nicht immer zuverlässig.
+
+**Fachbegriff und Regeln:** Freikörperbild (Freischneiden), Lageplan getrennt; ein Körper, alle äußeren Kräfte, unbekannte mit angenommener Richtung, Angriffspunkt je Konvention (Physik: Massenpunkt üblich; Technische Mechanik: Kontaktpunkt, Gewicht im Schwerpunkt).
+
+**Prototyp:** Klotz ruhend auf schiefer Ebene (30°) als SVG aus berechneten Koordinaten (Python), mit Playwright gerendert. Erster Versuch: Klotz steckte in der Ebene, F_G-Beschriftung abgeschnitten, Indizes als „_“. Zweiter Versuch geometrisch richtig, aber Haftreibung hangabwärts (physikalisch falsch für einen ruhenden Klotz). Dritter Versuch korrekt: F_G senkrecht am Schwerpunkt, F_N senkrecht zur Ebene am Kontaktpunkt, F_H hangaufwärts, Winkelbogen, Koordinatensystem; etwa 1 700 Zeichen SVG. Folge: Regeln „Lage aus der Geometrie berechnen“, „Richtungen physikalisch prüfen“ und „Endbild prüfen“ in `skizze.md`.
