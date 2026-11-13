@@ -40,7 +40,7 @@
     },
     {
       "path": "tutor/modes/skizze.md",
-      "sha256": "53daa3d4a50fbce3c38d58e4cf48d39b40cdf40fd29c9d428f670ad0d647a7a0",
+      "sha256": "15cad8973f506923a9184b8886b2f5b5254edf09470f8dc410477e7f66ac0fbc",
       "normalization": "utf8-lf"
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "6f63c1f5d30d716fe54bd7fefae4f41213d5d9394d12932f0048bb88b8061b52",
+      "sha256": "56230109e1c9b56c498e6c0e7bec9e580fa138c883c48ce3547b22d1e712b18c",
       "normalization": "utf8-lf"
     },
     {
@@ -105,12 +105,12 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "db9ccc5ba807cb92b4a8c9b95aa76deda76ac97bb5ddff2876ec66127dc0f5af",
+      "sha256": "e469ec338ffdec7e6b313ad6712b9bfd8e12a92b8e0a384de4b590cb88fda4be",
       "normalization": "utf8-lf"
     },
     {
       "path": "build.py",
-      "sha256": "762088b555f3675e0175407cb75d5a45108dcae0c14fc5fbce18300fe89aed2f",
+      "sha256": "b55398ab95d83d0e0f252fd70d06da77143a66c70ab3d03fb4ad7e3a247addf6",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "f37915dd4a42f782e70144e5d9763cf19b6eafbeff10af10d4bb54012e53817a",
+      "sha256": "e0285d05fbe91b1e52d2a88a0b3b2522f743f1431c5480434273aed41a3d1e1c",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "b34d93dc0c2826806e641455870f4aff99290d1b0c1664aeddfa78f56ca80b84",
+      "sha256": "13488a062ae42eb4d1b0d7c551a122a060efc93b441ab7a9c3389dc91da716ea",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "af27642e72d6bc54b4908a602199dea18de54201a1ef35561873ae336550fc17",
+      "sha256": "c22af4b706187ed531bd04b6c03d274d33aa395ce26d6710a13e27cfd414eeaa",
       "normalization": "raw"
     },
     {

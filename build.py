@@ -50,7 +50,7 @@ for relative, replacements in adaptations.items():
 router = texts[SKILL / "SKILL.md"].split("---", 2)[2].strip()
 MODES = re.findall(r"`modes/([a-z]+)\.md`", router)
 check(len(MODES) == len(set(MODES)) == 11, f"Befehlstabelle nennt {len(MODES)} Moduldateien statt 11")
-REFS = ("sprache", "didaktik", "antwortvorlage", "latex-regeln")
+REFS = ("sprache", "didaktik", "antwortvorlage", "latex-regeln", "skizzen-arten")
 
 files = [SKILL / "references" / f"{r}.md" for r in REFS] + [SKILL / "modes" / f"{m}.md" for m in MODES]
 for f in files:

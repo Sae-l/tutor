@@ -19,6 +19,9 @@ So, wie es in deutschen Klausuren verlangt wird; ein Kurspaket hat bei Bezeichnu
 - **Nichts doppelt:** Eine Kraft oder ihre Komponenten als volle Pfeile, nie beides; Komponenten (z. B. von F_G an der schiefen Ebene) gestrichelt oder in einer eigenen Skizze. Eine Streckenlast als verteilte Last zeichnen; ihre Resultierende im Schwerpunkt der Lastfläche höchstens gestrichelt.
 - **Mit Code zeichnen heißt rechnen:** Lage aus der Geometrie berechnen (Körper liegt auf der Fläche, Richtungen über sin und cos); in SVG zeigt y nach unten; Rand für Beschriftungen lassen. Vor dem Senden am Endbild prüfen: Körper auf der Fläche, Pfeilrichtungen, Winkel am richtigen Scheitel, keine abgeschnittene Beschriftung.
 
+## Andere Skizzenarten
+Graph, Schaltplan, Zeigerdiagramm, Strahlengang, Feldlinien, Bewegungsskizze, Energieniveauschema: den passenden Abschnitt in `references/skizzen-arten.md` anwenden.
+
 ## Regeln
 - Ist die Skizze nur ein Teil einer Rechenaufgabe, nur die Skizze liefern und für die Rechnung auf „erklär“, „tipp“ oder „kurz“ verweisen.
 - Ein Foto eines Graphen genau ablesen; Ablesewerte mit ⚠ als abgelesen kennzeichnen.
