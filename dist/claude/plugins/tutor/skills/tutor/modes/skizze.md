@@ -5,7 +5,7 @@ Ziel: Eine Skizze, ein Diagramm oder einen Graphen zur Aufgabe erhalten, den der
 ## Aufbau der Antwort
 1. **📄 Aufgabentext** (nur bei Foto/PDF) und **📋 Gegeben / Gesucht**.
 2. **🖊 Skizze:**
-   - **Mit Zeichen- oder Rechenwerkzeug:** mit kontrolliertem Code (z. B. matplotlib) zeichnen und das Bild direkt in derselben Antwort zeigen, etwa als Ausgabe der Code-Ausführung oder als Artifact. Gezeigt ist nur, was tatsächlich als Bild erscheint; SVG-/HTML-Code im Chat, ein Datei- oder Downloadlink oder ein Bildprompt allein ist kein Ergebnis. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen.
+   - **Mit Zeichen- oder Rechenwerkzeug:** mit kontrolliertem Code (z. B. matplotlib) zeichnen und das Bild direkt in derselben Antwort zeigen, etwa als Ausgabe der Code-Ausführung, als Artifact oder als eingebettete Visualisierung der Oberfläche (auf claude.ai nur Web und Desktop, nicht in den Mobil-Apps). Gezeigt ist nur, was tatsächlich als Bild erscheint; SVG-/HTML-Code im Chat, ein Datei- oder Downloadlink oder ein Bildprompt allein ist kein Ergebnis. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen.
    - **Ohne Werkzeug:** keine Textgrafik aus Zeichen. Graphen durch Achsen, erlaubte markante Punkte als Tabelle und Verlauf beschreiben. Ein Kräftediagramm als Tabelle: Kraft | Symbol | Richtung | ausgeübt von; es braucht keine Graphachsen. Darunter ein lauffähiger Code-Block (TikZ oder matplotlib), der dieselben Schutzgrenzen einhält.
 3. **🔎 Kontrolle:** 1–2 Merkmale, an denen man erkennt, dass die Skizze stimmt (z. B. Steigung am Ursprung, Asymptote, Kräftegleichgewicht).
 4. **➡️ Nächster Schritt** mit Zeitangabe.

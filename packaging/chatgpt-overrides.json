@@ -21,7 +21,7 @@
   ],
   "modes/skizze.md": [
     {
-      "old": "   - **Mit Zeichen- oder Rechenwerkzeug:** mit kontrolliertem Code (z. B. matplotlib) zeichnen und das Bild direkt in derselben Antwort zeigen, etwa als Ausgabe der Code-Ausführung oder als Artifact. Gezeigt ist nur, was tatsächlich als Bild erscheint; SVG-/HTML-Code im Chat, ein Datei- oder Downloadlink oder ein Bildprompt allein ist kein Ergebnis. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen.",
+      "old": "   - **Mit Zeichen- oder Rechenwerkzeug:** mit kontrolliertem Code (z. B. matplotlib) zeichnen und das Bild direkt in derselben Antwort zeigen, etwa als Ausgabe der Code-Ausführung, als Artifact oder als eingebettete Visualisierung der Oberfläche (auf claude.ai nur Web und Desktop, nicht in den Mobil-Apps). Gezeigt ist nur, was tatsächlich als Bild erscheint; SVG-/HTML-Code im Chat, ein Datei- oder Downloadlink oder ein Bildprompt allein ist kein Ergebnis. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen.",
       "new": "   - **Mit Zeichen- oder Rechenwerkzeug in ChatGPT:** mit kontrolliertem Code zeichnen, als PNG rendern, das tatsächliche Endbild prüfen und direkt in derselben Antwort mit Markdown-Bildsyntax einbetten. Für lokale Bilder ein absolutes sandbox:-Ziel verwenden. SVG bei Bedarf als Zeichenquelle verwenden und vor der Ausgabe rasterisieren; roher Inline-SVG-/HTML-Code ist kein verlässlich sichtbares Bild. Ein Datei- oder Downloadlink allein genügt nicht. Bei Graphen Achsen mit Größe und Einheit beschriften; bei Kräftediagrammen Kraftpfeile, Symbole und Richtungen."
     }
   ]

@@ -40,7 +40,7 @@
     },
     {
       "path": "tutor/modes/skizze.md",
-      "sha256": "b61ae9b0c8f670c7c9ffabcd7052bc5f20bd50e4f72027ccf0eda2b036d8ac4b",
+      "sha256": "2f807f20d76dc7d6047450922d0c9625b88f5887971951bd76ba7bec404e1503",
       "normalization": "utf8-lf"
     },
     {
@@ -260,7 +260,7 @@
     },
     {
       "path": "packaging/chatgpt-overrides.json",
-      "sha256": "a5a140efd8fe2f58dd51bfce8429fa46105aec12293d4e1a2405eb121f6aee74",
+      "sha256": "0f5452cbb4c31134bbf4b07034a78e475dc0ab6c5f5c73f563060cdceb560f2a",
       "normalization": "utf8-lf"
     },
     {
