@@ -16,7 +16,7 @@ Ein Lern-Tutor für Claude (und experimentell ChatGPT und Gemini) für das Studi
 
 [Landingpage](https://sae-l.github.io/tutor/) · [So lernst du damit](#so-lernst-du-damit) · [Schnellstart](#schnellstart-claude) · [Befehle](#befehle) · [Andere Plattformen](#andere-plattformen-experimentell) · [Grenzen](#stand-und-grenzen)
 
-> **In English:** A study tutor for university STEM exercises (physics, maths, electrical engineering, engineering mechanics) at German-speaking universities, packaged as a Claude Skill plus a generated plugin and system prompt for other chatbots. It explains the idea and asks guiding questions before revealing solutions, and it finds the first error in your own attempt. Answers are in German by default; Arabic, Turkish, French, English or Persian on request. The docs are in German because the target audience studies in German.
+> **In English:** A study tutor for university STEM exercises (physics, maths, electrical engineering, engineering mechanics) at German-speaking universities, packaged as a Claude Skill plus a generated plugin and system prompt for other chatbots. It explains the idea and asks guiding questions before revealing solutions, and it finds the first error in your own attempt. Answers are in German by default; Arabic, Turkish, French, English or Persian on request. The docs are in German because the target audience studies in German; an English overview is at [sae-l.github.io/tutor/en/](https://sae-l.github.io/tutor/en/).
 
 ## Was der Tutor macht
 

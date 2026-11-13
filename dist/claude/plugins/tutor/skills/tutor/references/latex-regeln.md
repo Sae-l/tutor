@@ -38,4 +38,5 @@ $$+2xy - 2xy = 0$$
 - Kein `\[` oder `\(`; im Fließtext nur Formelzeichen nach Regel 3?
 - Kein ß ä ö ü oder arabisches Zeichen zwischen `$$`?
 - Jede `$$`-Zeile hat ausgeglichene Klammern?
+- Jede `$$`-Formel allein in ihrem Absatz, Leerzeile davor und danach; nie zwei `$$`-Formeln in einer Zeile (bleibt in der ChatGPT-Android-App Rohtext, #44)?
 - Wurde Rohcode gemeldet: Klartextformeln statt `$$`?

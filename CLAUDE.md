@@ -11,12 +11,15 @@
 - `docs/KONZEPT.md` – Hintergrund und Lernprinzipien; `docs/agents/` – Tracker- und Domain-Doku für Agenten; `docs/planung/` – datierte Planungsnotizen und Recherchen. `docs/index.html` – Landingpage, erzeugt von `build.py` aus `site/index.template.html` und `site/i18n/<sprache>.json` (Texte je Seitensprache, Schlüssel `<abschnitt>.<nr>`; Deutsch nach `docs/index.html`, ar/tr/fr/en/fa nach `docs/<sprache>/index.html`; Sprachknopf, RTL und Prüfskript `site/screenshots.mjs` siehe `docs/DESIGN.md`) (GitHub Pages aus `main`, Ordner `/docs`; `.nojekyll` liefert Dateien unverändert aus; Schriften in `docs/fonts/`, keine externen Quellen einbinden).
 - `docs/assets/hero/` – Quelle (`hero.html`) und Skript (`render.mjs`) der README-Animation `docs/assets/hero-light.gif`/`hero-dark.gif` und des og:image `hero-light.png`. Regeln, Werkzeuge und Begründung in `docs/assets/hero/README.md`.
 - `docs/DESIGN.md` – Gestaltungsregeln für Landingpage und README (Farben, Schriften, Formeln, Bausteine, Bewegung, Texte, Verbote) mit Begründung.
-- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS14, U01…U14), `protokolle/`.
+- `tests/` – Strukturtests, `akzeptanz.md` (Release-Gate, M01-A…M10-C, G01…G33, ChatGPT H01…H05, R-LS01…R-LS15, U01…U14), `protokolle/`.
 - `packaging/latex-fliesstext-universal.md` – Klartextregel für Formelzeichen, die `build.py` in alle `dist/`-Ausgaben statt des `<!-- fliesstext -->`-Blocks aus `latex-regeln.md` einsetzt (einfaches `$` rendert in ChatGPT nicht).
 - `Obsidian-tutor/` – öffentliche deutsche Wissensbasis mit 20 Notizen und Canvas. `python -B Obsidian-tutor/verify_vault.py` prüft Navigation, Canvas, Modusabdeckung und normalisierte Quellhashes. Bei Quelländerungen betroffene Artikel bewerten und Hashmanifest bewusst aktualisieren; persönliche `.obsidian/`-Dateien bleiben lokal.
 
 ## Arbeitsregeln
 - ChatGPT-spezifische Korrekturen nach rc.5 (#95/#107, 2026-10-30) liegen als geprüfte Ersetzungen in `packaging/chatgpt-overrides.json`. `build.py` wendet sie vor der Erzeugung von Plugin, System-Prompt und Kern an; `tutor/` für Claude/Gemini bleibt unverändert. Bei Textänderungen dort den Adapter bewusst prüfen; kein stilles Auslassen. Nachweis und noch offene native Abnahme: `tests/protokolle/2026-10-30-chatgpt-reparatur.md`. Bisheriges Release rc.5 enthält den unveröffentlichten Patch nicht.
+- Seit 2026-11-13 steht die Einzelbefehl-Regel (#95) direkt in `tutor/SKILL.md` und gilt für alle Plattformen; `skizze.md` schlägt kein Inline-SVG mehr vor (#110/#111/#113). Im Adapter bleiben nur `\tag`, Klartext-Fallback und PNG-Einbettung. Neuer Schutzfall R-LS15. Nicht nativ geprüft.
+- Verhaltens-Eval: `python tests/eval_verhalten.py` (braucht `ANTHROPIC_API_KEY`, `--dry-run` ohne) bzw. GitHub Actions „Verhaltens-Eval“ manuell starten (Repository-Secret `ANTHROPIC_API_KEY`; kostet unter 1 USD pro Lauf). Fälle stehen in `CASES` im Skript; bei neuem Fehler dort einen Fall ergänzen. Nutzt `dist/system-prompt.md`, nicht den hochgeladenen Skill.
+- #44 eingegrenzt (2026-11-13): Mehrere `$$`-Formeln ohne Leerzeile in einem Absatz bleiben in der ChatGPT-Android-App Rohtext; jede Formel als eigener Absatz rendert. Prüfliste in `latex-regeln.md` ergänzt.
 - Der Claude-Code-Marketplace nutzt seit diesem Arbeitsstand `dist/claude/plugins/tutor/` mit dem bisherigen Verhalten; nur ChatGPT/Codex nutzt die ChatGPT-Anpassungen. Historische Aussagen zum gemeinsamen Paket weiter unten gelten für frühere Versionen.
 - Verhalten nur in `tutor/` ändern, danach `python build.py` ausführen und `dist/` mitcommitten. `dist/` wird vollständig ersetzt. Änderungen in `CHANGELOG.md` eintragen.
 - Keine generierte Datei von Hand ändern, auch nicht `docs/index.html`: Texte in `site/i18n/*.json`, Aufbau in `site/index.template.html`, danach `python build.py`. Alle Sprachdateien brauchen dieselben Schlüssel; Texte in Attributen und Skripten ohne gerade Anführungszeichen; eine Übersetzung ändert nur Text, nicht HTML-Tags, Links oder `{{version}}` (sonst bricht der Build ab). Kein Hochschul- oder Kursbezug im Skill (Test prüft das).
@@ -24,7 +27,7 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/fa nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 - Alles dokumentieren, damit eine neue Sitzung ohne Nachsuchen weiterarbeiten kann: Änderung in `CHANGELOG.md`, neuen Stand hier in `CLAUDE.md`, neue Regeln, Abläufe, Begründungen und benutzte Werkzeuge in der passenden Doku (z. B. `docs/assets/hero/README.md`, Vault-Notiz). Danach Quellhashes erneuern und `verify_vault.py` laufen lassen.
-- Neue Version als aktuell: Versionsnummer für die Website nur in `softwareVersion` in `site/index.template.html` ändern (überall sonst steht `{{version}}`), dann `python build.py`; außerdem README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
+- Neue Version als aktuell: Versionsnummer für die Website nur in `softwareVersion` in `site/index.template.html` ändern (überall sonst steht `{{version}}`), dann `python build.py`; außerdem `packaging/chatgpt-plugin.json` und die Kopfzeile in `tutor/modes/hilfe.md` („Tutor <version>“, der Build prüft die Gleichheit), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
 
 ## Mehrsprachige Landingpage (2026-10-30, Map #96, PR 2)
@@ -83,6 +86,7 @@
 - **Nicht geprüft:** echte Aufgaben in den einzelnen Modi; Formeldarstellung in Gemini und Copilot.
 
 ## Offene Punkte
+0. Stand 2026-11-13: Triage aller offenen Issues, Belege, Blocker und nächste Schritte in `docs/planung/2026-11-13-issue-triage.md`. PR #114 (CI grün) wartet auf Merge; Anhänge von #110/#111/#113 noch nicht gelesen.
 1. Akzeptanzfälle auf Claude ausführen und in `tests/protokolle/` protokollieren (Release-Gate); Bilddateien für G09, G19, G20.
 2. Alte Skill-Installationen (`tutor` v0.1, `physik-mathe-tutor`) beim Nutzer entfernen und das neue ZIP hochladen. Stand 2026-10-28: Die lokal installierte Skill ist älter als rc.3 (`erklaer.md`, `voll.md`, `latex-regeln.md` weichen ab); `tutor-skill.zip` von rc.5 hochladen.
 3. v0.3.0-rc.5 ist die aktuelle Version („Latest“, vorher v0.3.0-rc.4); neue Schutzregressionen noch nicht nativ abgenommen. #32 bleibt offen, gemeinsame Drei-Plattform-Gates in #39 sind noch zu entscheiden.

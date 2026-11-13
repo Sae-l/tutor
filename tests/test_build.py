@@ -32,7 +32,7 @@ class BuildTests(unittest.TestCase):
         # Missing application of platform adaptations used to silently ship the old rules.
         source = self.read("tutor/SKILL.md")
         (self.root / "packaging/chatgpt-overrides.json").write_text(json.dumps({
-            "SKILL.md": [{"old": "Sonst gilt der letzte Befehl; Sprache separat.",
+            "SKILL.md": [{"old": "Neue Aufgabe: nie einen früheren Einzelbefehl erben.",
                           "new": "Neue Aufgabe: Erklär; Sprache separat."}],
             "modes/skizze.md": [{"old": "# Modus Skizze", "new": "# Modus Skizze für ChatGPT"}],
         }), encoding="utf-8")
@@ -42,10 +42,22 @@ class BuildTests(unittest.TestCase):
                     "dist/chatgpt/plugins/tutor/skills/tutor/SKILL.md"):
             text = self.read(rel)
             self.assertIn("Neue Aufgabe: Erklär; Sprache separat.", text)
-            self.assertNotIn("Sonst gilt der letzte Befehl", text)
+            self.assertNotIn("nie einen früheren Einzelbefehl erben", text)
         self.assertIn("# Modus Skizze für ChatGPT", self.read("dist/system-prompt.md"))
         self.assertIn("# Modus Skizze für ChatGPT",
                       self.read("dist/chatgpt/plugins/tutor/skills/tutor/modes/skizze.md"))
+
+    def test_single_command_never_becomes_default_on_any_platform(self):
+        # #95: "Sonst gilt der letzte Befehl" let `klausur` leak into the next task.
+        self.assertEqual(self.build().returncode, 0)
+        for rel in ("tutor/SKILL.md", "dist/kern.md", "dist/system-prompt.md"):
+            text = self.read(rel)
+            self.assertNotIn("gilt der letzte Befehl", text)
+            self.assertIn("nie einen früheren Einzelbefehl erben", text)
+
+    def test_sketch_mode_does_not_suggest_inline_svg(self):
+        # #110/#111/#113: claude.ai and Gemini do not render inline SVG in a reply.
+        self.assertNotIn("Inline-SVG sein", self.read("tutor/modes/skizze.md"))
 
     def test_invalid_chatgpt_adaptations_preserve_previous_outputs(self):
         self.assertEqual(self.build().returncode, 0)
@@ -272,6 +284,22 @@ class BuildTests(unittest.TestCase):
         for flags in ((), ("-O",)):  # checks must survive python -O
             self.assertNotEqual(self.build(*flags).returncode, 0, flags)
         self.assertEqual(before, [t.read_bytes() for t in targets])
+
+    def test_help_card_version_must_match_plugin_version(self):
+        self.assertEqual(self.build().returncode, 0)
+        self.assertIn("Tutor 0.3.0-rc.5", self.read("dist/system-prompt.md"))
+        target = self.root / "packaging/chatgpt-plugin.json"
+        target.write_text(self.read("packaging/chatgpt-plugin.json").replace(
+            '"version": "0.3.0-rc.5"', '"version": "9.9.9"'), encoding="utf-8")
+        result = self.build()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("hilfe.md", result.stderr)
+
+    def test_behaviour_eval_lists_cases_without_api(self):
+        result = subprocess.run([sys.executable, str(ROOT / "tests/eval_verhalten.py"), "--dry-run"],
+                                capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("R-LS15a", result.stdout)
 
     def test_all_languages_have_a_signal(self):
         sprache = self.read("tutor/references/sprache.md")

@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-13",
   "timezone": "Europe/Berlin",
-  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt. Am 2026-10-30 Landingpage-Quelle nach site/ verlegt (Map #96, Ausgabe byteweise gleich); Notizen 05, 08, 11 und 19 angepasst. Am 2026-10-30 ChatGPT-Adapter (#95/#107) und begrenzte agentische Dialogprüfung bewertet; Notizen 07/17 ergänzt. Native Abnahme bleibt offen.",
+  "scope": "Quellen fuer v0.2.0 bewertet; am 2026-10-20 Plattformwege nach docs/planung/2026-10-20-plattform-anforderungen.md angeglichen (Gemini-Skill, Codex-Kategorie, CHATGPT.md); Verhalten seit #44/#45 unveraendert. Historische Live-Abfragen bleiben datierte Nachweise. UTF-8/LF fuer Text, Binaerdateien roh. Am 2026-10-26 nach #67/#64 (Folgebefehl, Bilder, Niveau, Fachkonventionen, U01-U06) und Landingpage-SEO neu bewertet; betroffene Notiz 02 ergaenzt. Am 2026-10-30 Landingpage-Quelle nach site/ verlegt (Map #96, Ausgabe byteweise gleich); Notizen 05, 08, 11 und 19 angepasst. Am 2026-10-30 ChatGPT-Adapter (#95/#107) und begrenzte agentische Dialogprüfung bewertet; Notizen 07/17 ergänzt. Native Abnahme bleibt offen. Am 2026-11-13 Einzelbefehl-Regel (#95) und skizze ohne Inline-SVG (#110/#111/#113) in tutor/ fuer alle Plattformen bewertet; Notizen 06, 07, 17 angepasst. Native Abnahme bleibt offen. Am 2026-11-13 zusaetzlich Versionsangabe in hilfe bewertet; keine Notiz betroffen. Am 2026-11-13 Prueflistenregel zu $$-Absaetzen (#44) bewertet; keine Notiz betroffen.",
   "files": [
     {
       "path": "tutor/modes/check.md",
@@ -15,7 +15,7 @@
     },
     {
       "path": "tutor/modes/hilfe.md",
-      "sha256": "0a67e39dd275bf68d1ab7134efefc57c31cd6577769821c06f39ffc3440892bb",
+      "sha256": "d0b422155813dee7229ab6213534fbce8db5c3e4860333ee3adf385c065be017",
       "normalization": "utf8-lf"
     },
     {
@@ -40,7 +40,7 @@
     },
     {
       "path": "tutor/modes/skizze.md",
-      "sha256": "0882537151d66cc19fc59802bdba6b6ca3c13c47397cac6d747959c4cdd8adb6",
+      "sha256": "2f807f20d76dc7d6047450922d0c9625b88f5887971951bd76ba7bec404e1503",
       "normalization": "utf8-lf"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "path": "tutor/references/latex-regeln.md",
-      "sha256": "91b4835cb6487083d686ab8a0900f6145a90f67fd77d79875e162f1d37264399",
+      "sha256": "839d2bc2949c2dbf49775fe4728f65970a8dac860d5ed9d5316183faac40e3ae",
       "normalization": "utf8-lf"
     },
     {
@@ -80,12 +80,12 @@
     },
     {
       "path": "tutor/SKILL.md",
-      "sha256": "6ae8a063f3c808f8928f6375a7fb2d9834e5b14fd9c335fc239586893df04b43",
+      "sha256": "066841b096f45e5f062f492d0b08d800f529da11cc7711fb298281d0560da0fa",
       "normalization": "utf8-lf"
     },
     {
       "path": "tests/akzeptanz.md",
-      "sha256": "e6af870750793856e93a7e39523b41d96f4256f4ab70473b971e0f7b8dceb121",
+      "sha256": "3d0f96333d55d9956f76897e9909e69b87660b08f83efb4373553d6a676b15c7",
       "normalization": "utf8-lf"
     },
     {
@@ -105,17 +105,17 @@
     },
     {
       "path": "tests/test_build.py",
-      "sha256": "60750a3813322a9bf21cb5cff09fc53302592a498c2fa0085ebe88d6f87038b3",
+      "sha256": "3c6e51c69d78be6f4c97131313f20f49d4801061576859afe25e7e9a2d073309",
       "normalization": "utf8-lf"
     },
     {
       "path": "build.py",
-      "sha256": "4cbfa36447b4f3f61bf0d23aec14f66ad1b65f57d01355ce08093ef90612c1d6",
+      "sha256": "762088b555f3675e0175407cb75d5a45108dcae0c14fc5fbce18300fe89aed2f",
       "normalization": "utf8-lf"
     },
     {
       "path": "README.md",
-      "sha256": "152f60524f203ccc76509b6854f51b41be24f5c47521e8dd5f83366b8622ff21",
+      "sha256": "8b16fec2601f9d668ed192fb4dc590406fd69da21549915286af635b896e8de5",
       "normalization": "utf8-lf"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "3771fa4a6e8d16360f70e2c39b172777f896468ea3e5fbeb18404862c10ce969",
+      "sha256": "e81296de6193bd1bbad62135f955c0c4cd8528fe70214e589923f1fc60d9ccc0",
       "normalization": "utf8-lf"
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "c009075d8175995adae9443d0207dfa2cad2ebdfe8b41b0aa3c72fc86e494f8d",
+      "sha256": "5c6ccd296efd6a63cac620ff87f43ce88deaab444d0c7d447975d8d87b77ab19",
       "normalization": "utf8-lf"
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "path": "dist/system-prompt.md",
-      "sha256": "d7e4d0270b515e16ed3c8d18ea91fa6abd85fb6adb72b9ab30a94785de43f216",
+      "sha256": "b003479e0f50d74cdf370c25bd6c26afbd6695421039033ab42633282d09fbd5",
       "normalization": "utf8-lf"
     },
     {
       "path": "dist/tutor-chatgpt.zip",
-      "sha256": "158e799d61a7fa9886bda336d6ce02244611a62f5d3bdea8a028bb6e05142530",
+      "sha256": "5cf4641df59dc83c5111913ba25373b03dddb2ea5d23e5ded6fce8d03356aca5",
       "normalization": "raw"
     },
     {
@@ -260,7 +260,7 @@
     },
     {
       "path": "packaging/chatgpt-overrides.json",
-      "sha256": "ac4665d11b39e15d0df74272d3f2693bb7fdad1c93f4cfed7e404f634b324e0b",
+      "sha256": "0f5452cbb4c31134bbf4b07034a78e475dc0ab6c5f5c73f563060cdceb560f2a",
       "normalization": "utf8-lf"
     },
     {
@@ -269,5 +269,5 @@
       "normalization": "utf8-lf"
     }
   ],
-  "base_git_head": "122a7f960b85328bfd8cba7804c34079c4b8bfa5"
+  "base_git_head": "35d0061a0946cff1e869508fac1fc97d6cc47498"
 }
