@@ -285,6 +285,16 @@ class BuildTests(unittest.TestCase):
             self.assertNotEqual(self.build(*flags).returncode, 0, flags)
         self.assertEqual(before, [t.read_bytes() for t in targets])
 
+    def test_help_card_version_must_match_plugin_version(self):
+        self.assertEqual(self.build().returncode, 0)
+        self.assertIn("Tutor 0.3.0-rc.5", self.read("dist/system-prompt.md"))
+        target = self.root / "packaging/chatgpt-plugin.json"
+        target.write_text(self.read("packaging/chatgpt-plugin.json").replace(
+            '"version": "0.3.0-rc.5"', '"version": "9.9.9"'), encoding="utf-8")
+        result = self.build()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("hilfe.md", result.stderr)
+
     def test_all_languages_have_a_signal(self):
         sprache = self.read("tutor/references/sprache.md")
         hilfe = self.read("tutor/modes/hilfe.md")

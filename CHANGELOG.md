@@ -8,6 +8,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 - Neue Aufgabe erbt nie einen früheren Einzelbefehl (#95): Die Regel aus dem ChatGPT-Adapter steht jetzt in `tutor/SKILL.md` und gilt damit auch für Claude und Gemini; der widersprüchliche Satz „Sonst gilt der letzte Befehl“ ist entfernt. Die drei Routing-Ersetzungen im Adapter entfallen, die ChatGPT-Ausgabe von `SKILL.md` und `kern.md` (3987 Zeichen) bleibt byteweise gleich. Neuer Schutzfall R-LS15 und ein Strukturtest.
 - `skizze` (#110, #111, #113): kein Vorschlag mehr für Inline-SVG, das claude.ai und Gemini nicht als Bild zeigen. Als gezeigt zählt nur ein sichtbares Bild aus Code-Ausführung oder Artifact; im Zweifel gleich Beschreibung, Tabelle und Code; keine frei generierten KI-Bilder. R-LS13 gilt jetzt auch für claude.ai und Gemini. Diagnose nur aus dem Skilltext, Bildschirmfotos und Gemini-Chats der Meldungen nicht eingesehen.
 - README verlinkt die englische Landingpage (#112).
+- `hilfe` zeigt in der Kopfzeile der Befehlskarte die installierte Version („Tutor 0.3.0-rc.5“). `build.py` bricht ab, wenn sie nicht der Pluginversion in `packaging/chatgpt-plugin.json` entspricht; neuer Test.
+- Protokoll `tests/protokolle/2026-11-13-chatgpt-android-formeln.md`: vier einfache Formeln ohne `\tag` auf ChatGPT Android mit rc.5 korrekt gesetzt; Fehler aus #44 damit nicht reproduziert, das Modell nutzte `\[ … \]` statt `$$`.
 - Nicht nativ geprüft.
 
 ### Behoben — ChatGPT

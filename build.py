@@ -102,6 +102,9 @@ check(manifest["name"] == "tutor", "Pluginname muss tutor sein")
 check(isinstance(manifest["version"], str) and re.fullmatch(
     r"(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?", manifest["version"]),
     "ungültige Pluginversion")
+# The help card names the installed version so learners can report it.
+check(f"Tutor {manifest['version']}" in texts[SKILL / "modes/hilfe.md"],
+      f"modes/hilfe.md nennt nicht die Pluginversion {manifest['version']}")
 check(isinstance(manifest["description"], str) and manifest["description"].strip(),
       "Pluginbeschreibung fehlt")
 check(manifest["license"] == "MIT" and manifest["repository"] == "https://github.com/Sae-l/tutor",

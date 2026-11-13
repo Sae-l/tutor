@@ -25,7 +25,7 @@
 - Frontmatter-`description` ohne Doppelpunkt nach Text (bricht YAML).
 - Standardsprache Deutsch; ar/tr/fr/en/fa nur per Signal. Überschriften, Aufgabentext und Klausur-Lösung immer Deutsch.
 - Alles dokumentieren, damit eine neue Sitzung ohne Nachsuchen weiterarbeiten kann: Änderung in `CHANGELOG.md`, neuen Stand hier in `CLAUDE.md`, neue Regeln, Abläufe, Begründungen und benutzte Werkzeuge in der passenden Doku (z. B. `docs/assets/hero/README.md`, Vault-Notiz). Danach Quellhashes erneuern und `verify_vault.py` laufen lassen.
-- Neue Version als aktuell: Versionsnummer für die Website nur in `softwareVersion` in `site/index.template.html` ändern (überall sonst steht `{{version}}`), dann `python build.py`; außerdem README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
+- Neue Version als aktuell: Versionsnummer für die Website nur in `softwareVersion` in `site/index.template.html` ändern (überall sonst steht `{{version}}`), dann `python build.py`; außerdem `packaging/chatgpt-plugin.json` und die Kopfzeile in `tutor/modes/hilfe.md` („Tutor <version>“, der Build prüft die Gleichheit), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Vault-Notizen 00/07/11/13 und hier nachziehen. Die README-Animation enthält absichtlich keine Versionsnummer.
 - Website und README nach dem Merge prüfen: CI und „pages build and deployment“ auf `main` grün, `https://sae-l.github.io/tutor/` zeigt die Änderung.
 
 ## Mehrsprachige Landingpage (2026-10-30, Map #96, PR 2)
