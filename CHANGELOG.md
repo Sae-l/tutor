@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Behoben — französische Landingpage
+- In `site/i18n/fr.json` standen seit #105 an 94 Stellen nach dem schmalen Leerzeichen (U+202F) das Steuerzeichen `\u0001` statt eines Satzzeichens; die Seite `/fr/` zeigte keine Doppelpunkte, Semikolons, Fragezeichen und schließenden Guillemets. Jedes Zeichen aus dem Zusammenhang und dem deutschen Text desselben Schlüssels wiederhergestellt (42 `:`, 19 `?`, 18 `;`, 15 `»`; alle `«` wieder geschlossen). Nur Text, keine Tags oder Links geändert; `docs/fr/index.html` neu erzeugt, Quellhash im Vault erneuert.
+
 ## [0.3.0-rc.6] – 2026-11-14
 
 ### Behoben — `skizze` nach Bildschirmfotos vom 13.11.2026

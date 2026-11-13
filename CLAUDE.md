@@ -37,7 +37,7 @@
 
 ## Stand v0.3.0-rc.6 (2026-11-14, aktuelle Version „Latest“)
 - Korrekturen aus der Issue-Triage vom 13.11.2026: Einzelbefehl gilt nur für seine Nachricht (#95), `skizze` nur mit echten Bildern und Freikörperbild-Regeln (#110/#111/#113), `$$`-Formeln als eigene Absätze und Gleichungsnummern ohne `\tag` für ChatGPT Android (#44/#107), Version in `hilfe`. Website (Download, FAQ „Was ist neu“ in sechs Sprachen), README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md`, Pluginmanifeste, `hilfe.md` und Vault-Notizen 00/07/11/13/19 nennen rc.6. Release-Notizen `docs/releases/v0.3.0-rc.6.md`. Native Prüfung R-LS13, R-LS15, R-LS16, G08 vor „Latest“ durch den Maintainer.
-- Bekannter Fehler, nicht Teil von rc.6: In `site/i18n/fr.json` stehen seit #105 an 94 Stellen `\u0001` statt `:`, `;`, `?` oder `»` nach dem schmalen Leerzeichen; die französische Seite zeigt diese Satzzeichen nicht.
+- Französische Satzzeichen (94 Stellen `\u0001` seit #105) nach rc.6 in `site/i18n/fr.json` wiederhergestellt; siehe CHANGELOG „Unveröffentlicht“.
 
 ## Stand v0.3.0-rc.5 (2026-10-28)
 - Korrekturen aus dem Protokoll G29/D3 (#93): Markdown-Tabelle in „Gegeben / Gesucht“, lateinische Ziffern auch auf Arabisch/Persisch, in `erklär` 🔒 nach ➡️. Website, README, `SECURITY.md`, `CONTRIBUTING.md`, `docs/CHATGPT.md` und Vault-Notizen 00/07/11/13/19 nennen rc.5. Ohne bestandenes Gate, wie rc.3 und rc.4 als „Latest“. Nicht nativ geprüft; offen: blanke Sprachcodes (`fa`, `ar`).
