@@ -74,7 +74,7 @@ In einem neuen Gespräch je Zeile testen; bei Pfeilen sind mehrere Nachrichten g
 | G05 | `!an kurz` → `!aus` + Aufgabe → eigener Versuch | Aktuell Erklär, danach automatische Check-Auswahl; Sprache bleibt erhalten. |
 | G06 | `!kurz !voll` + Aufgabe | Letzter Befehl gewinnt: Voll. |
 | G07 | `[ar] [fr]` + Aufgabe | Letztes Sprachsignal gewinnt: Französisch. |
-| G08 | `[ar] hilfe` | Arabische Befehlskarte mit Version in der Kopfzeile („Tutor 0.3.0-rc.6“ bzw. aktuelle), elf Befehlszeilen mit je einer Erklärung und die Steuerzeilen (Sprache, Dauermodus, lösung, `!issue`, Reihenfolge), keine Aufgabe lösen. |
+| G08 | `[ar] hilfe` | Arabische Befehlskarte mit Version in der Kopfzeile („Tutor 0.3.0-rc.7“ bzw. aktuelle), elf Befehlszeilen mit je einer Erklärung und die Steuerzeilen (Sprache, Dauermodus, lösung, `!issue`, Reihenfolge), keine Aufgabe lösen. |
 | G09 | `help` / `!hilfe` + Foto einer Aufgabe | Befehlskarte, Aufgabe nicht gelöst, Dauermodus unverändert. |
 | G10 | „Hilfe bei Aufgabe 3“ + Aufgabe | Keine Befehlskarte; normale Antwort im aktuellen Modus. |
 | G11 | `!an hilfe` nach `!an tipp` | Gespeicherter Tippmodus bleibt; gültige Befehle nennen. |

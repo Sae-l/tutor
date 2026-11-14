@@ -4,7 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
-### Geändert — `skizze` (Entwurf)
+## [0.3.0-rc.7] – 2026-11-14
+
+### Geändert — `skizze`
 - Freikörperbild ergänzt: Lagerzahlen ausdrücklich „in der Ebene“; Gelenk (zwei Kraftkomponenten, kein Moment) und Pendelstab (Kraft entlang der Stabachse, als Zug angenommen); Richtung der Haftkraft in der Technischen Mechanik frei annehmbar; neue Regel „Nichts doppelt“ (Kraft oder Komponenten, Komponenten gestrichelt; Streckenlast verteilt, Resultierende höchstens gestrichelt); Trägheitskraft nach d'Alembert nur, wenn die Lehrveranstaltung das Verfahren nutzt. Quelle: übliche TM1-Lehrbuchinhalte (z. B. Gross/Hauger/Schröder/Wall), nicht neu recherchiert. Nicht nativ geprüft.
 - Neue Referenz `tutor/references/skizzen-arten.md` für Skizzen außer dem Freikörperbild: Graph (Achsen nach DIN 461 ohne Klammern um die Einheit, Messwerte, p-V-Diagramm), Schaltplan (Symbole nach DIN EN 60617, Zählpfeilsysteme), Zeigerdiagramm, Strahlengang, Feldlinien, Bewegungsskizze und Energieniveauschema, jeweils mit „Prüfen“-Punkten am Endbild. `skizze.md` verweist darauf; `build.py` nimmt sie in den System-Prompt auf. Einheitenschreibweise per Webrecherche gegengeprüft (TU Darmstadt, HTW Berlin); übrige Regeln aus üblichem Lehrstoff, nicht einzeln recherchiert. Nicht nativ geprüft.
 
