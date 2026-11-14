@@ -21,6 +21,9 @@ BOOT = ("Ein Motorboot fährt mit 4,0 km/h und braucht dafür 7,5 kW. Der Wasser
 # #110/#113 follow-up: ASCII art and the equilibrium equation leaked in Gemini on 2026-11-13.
 SKIZZE_LEAK = re.compile(r"-{4,}>|<-{4,}|\[=+\]|F_?\{?\\?(?:mathrm\{)?Zug\}?\}?\s*=\s*F_?\{?\\?(?:mathrm\{)?W|\b(?:67|67,5|67\.5)\s*kW")
 
+REIHE = "Eine Spannungsquelle U = 12 V speist die Reihenschaltung von R₁ = 100 Ω und R₂ = 200 Ω. Gesucht ist U₂."
+REIHE_RESULT = re.compile(r"(?<![\d,.])8(?:[,.]0+)?\s*V\b|\b40\s*mA\b|\b0[,.]04\s*A\b")  # I = 40 mA, U₂ = 8 V
+
 ERKLAER = ("Die letzte Antwort ist im Modus Erklär: Sie erklärt Thema und nötige Gleichungen allgemein, "
            "setzt keine Zahlen der Aufgabe in eine Rechnung ein und nennt weder Ergebnis noch Klausur-Lösung.")
 
@@ -36,7 +39,9 @@ CASES = [
     {"id": "R-LS02-Skizze", "turns": [BOOT, "skizze"], "forbid": SKIZZE_LEAK,
      "rubric": "Die letzte Antwort ist eine Skizze nach Modus Skizze: nur gegebene Größen, Kräfte und Richtungen; keine ASCII-Zeichnung aus Zeichen, kein aufgestelltes Kräftegleichgewicht und kein Rechenschritt der Originalaufgabe."},
     {"id": "R-LS16-FKB", "turns": ["skizze Ein Klotz liegt ruhend auf einer schiefen Ebene mit dem Neigungswinkel 30°. Zeichne das Freikörperbild des Klotzes."],
-     "rubric": "Die Antwort enthält ein Freikörperbild des Klotzes (als Bild, SVG- oder Code-Zeichnung oder Kräftetabelle) mit genau den äußeren Kräften Gewichtskraft (senkrecht nach unten), Normalkraft (senkrecht zur Ebene) und Haftreibung (hangaufwärts, entgegen der drohenden Bewegung), Winkel 30° als Bezug, Klotz freigeschnitten (Ebene nicht als Teil des Freikörperbilds), keiner ASCII-Zeichnung; keine Gegenkräfte am Klotz."},
+     "rubric": "Die Antwort enthält ein Freikörperbild des Klotzes (als Bild, SVG- oder Code-Zeichnung oder Kräftetabelle) mit genau den äußeren Kräften Gewichtskraft (senkrecht nach unten), Normalkraft (senkrecht zur Ebene) und Haftreibung (hangaufwärts, entgegen der drohenden Bewegung), Winkel 30° als Bezug, Klotz freigeschnitten (Ebene nicht als Teil des Freikörperbilds), keiner ASCII-Zeichnung; keine Gegenkräfte am Klotz; Komponenten der Gewichtskraft höchstens gestrichelt, nie zusätzlich als volle Kraftpfeile."},
+    {"id": "R-LS17-Schaltplan", "turns": [f"skizze {REIHE}"], "forbid": REIHE_RESULT,
+     "rubric": "Die Antwort ist ein Schaltplan der Reihenschaltung (Bild, Code-Zeichnung oder Beschreibung mit Tabelle): Widerstände als Rechtecke nach DIN EN 60617 (kein Zickzack), Spannungsquelle als Kreis mit durchlaufender Leitung oder Batteriesymbol, Leitungen nur waagerecht und senkrecht, benannte Zählpfeile für U, I, U₁ und U₂, das gewählte Zählpfeilsystem in einem Satz genannt; keine ASCII-Zeichnung und kein berechneter Wert für I oder U₂."},
     {"id": "G08-Version", "turns": ["hilfe"], "require": re.compile(re.escape(f"Tutor {VERSION}"))},
 ]
 
