@@ -63,6 +63,8 @@ Erst eine Vorabversion (`v0.x.0-rc.N`), eine stabile Version erst, wenn das Rele
    gh release create v0.2.0 --verify-tag --latest --notes-file docs/releases/v0.2.0.md "$release_dir/tutor-skill.zip" "$release_dir/tutor-chatgpt.zip" "$release_dir/system-prompt.md" "$release_dir/kern.md" "$release_dir/SHA256SUMS.txt"
    ```
 
+   Der Tagger des annotierten Tags muss die noreply-Adresse des Maintainers tragen, sonst lehnt GitHub den Push ab („push declined due to email privacy restrictions“, so bei rc.7 geschehen). Ohne passende globale Git-Konfiguration: `git -c user.name="Saeed A." -c user.email="264885939+Sae-l@users.noreply.github.com" tag -a …`.
+
 Nur tatsächlich geprüfte Plattformen als geprüft aufführen.
 
 ## Offizielle Verzeichnisse
