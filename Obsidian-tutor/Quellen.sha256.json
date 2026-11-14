@@ -125,12 +125,12 @@
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "23142005ff43593b8dabbdf37dc9213a2ae6bd52c8d43a06318054666a464759",
+      "sha256": "e9a4fdd77364c2edd4b06fb297180e9ffc79beacbc6b4c7fad8949ba8e3cfe64",
       "normalization": "utf8-lf"
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "60c68b4df2045e15adc680059d5f8c7379c026c2045314644eca91ef461d9960",
+      "sha256": "ff13e17dac51213ec9cbea329e0157d83bac5690752b5b387a5ff518c25304f2",
       "normalization": "utf8-lf"
     },
     {
