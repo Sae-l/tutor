@@ -4,6 +4,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/). Ve
 
 ## [Unveröffentlicht]
 
+### Tests
+- Verhaltens-Eval: neuer Fall `R-LS17-Schaltplan` (Reihenschaltung, Muster gegen die Ergebnisse 8 V, 40 mA und 0,04 A, Bewertung der Schaltzeichen und Zählpfeile); `R-LS16-FKB` prüft zusätzlich, dass Komponenten der Gewichtskraft nicht doppelt als volle Pfeile erscheinen. Muster per Selbsttest geprüft; der Eval selbst ist noch nie gelaufen (Secret `ANTHROPIC_API_KEY` fehlt).
+
 ## [0.3.0-rc.7] – 2026-11-14
 
 ### Geändert — `skizze`
